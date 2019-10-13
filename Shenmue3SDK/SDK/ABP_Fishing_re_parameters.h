@@ -1,0 +1,330 @@
+#pragma once
+
+#include "../SDK.h"
+
+// Name: S3Demo, Version: 0.90.0
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+// Parameters
+//---------------------------------------------------------------------------
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.SetEscapeAnimRate
+struct UABP_Fishing_re_C_SetEscapeAnimRate_Params
+{
+	float                                              FishEscapeAnimRate;                                       // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EnabledCasting
+struct UABP_Fishing_re_C_EnabledCasting_Params
+{
+	bool                                               IsFarCast;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.Init
+struct UABP_Fishing_re_C_Init_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_5A01AA874B011BF0F2FE708223610090
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_5A01AA874B011BF0F2FE708223610090_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_9F1FA11143070C9DA4D5EEB8F6AFC278
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_9F1FA11143070C9DA4D5EEB8F6AFC278_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_4D40DD96488C3D16394EB494176FE16F
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_4D40DD96488C3D16394EB494176FE16F_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_CBFC4E3C45155F7A977CB4AAC358B0B8
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_CBFC4E3C45155F7A977CB4AAC358B0B8_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_F64B892C42A7717C8EEAA9BFB3863474
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_F64B892C42A7717C8EEAA9BFB3863474_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_89323228433024500C4DCD9A1472B5F2
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_89323228433024500C4DCD9A1472B5F2_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_A8A5C0FF49B13A7E56117BBE95FBF565
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_A8A5C0FF49B13A7E56117BBE95FBF565_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_0C57888B4C6B57A3F69BDFBF2590CB88
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_0C57888B4C6B57A3F69BDFBF2590CB88_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_FFF376944FA91875E5D765B0BF1254A5
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_FFF376944FA91875E5D765B0BF1254A5_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_BlendSpacePlayer_4AD43BDA48B696938885FD9E1FD835C9
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_BlendSpacePlayer_4AD43BDA48B696938885FD9E1FD835C9_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_BE646052455EFC05D442BAB12849A61D
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_BE646052455EFC05D442BAB12849A61D_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_SequencePlayer_29B902024E462AE5A7A44B8A9855F0CF
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_SequencePlayer_29B902024E462AE5A7A44B8A9855F0CF_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_C1E17FE74FDED08804B4F2A1F6D1A9D7
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_C1E17FE74FDED08804B4F2A1F6D1A9D7_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_4396144F417CE2FCCF13228B39D55BF5
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_4396144F417CE2FCCF13228B39D55BF5_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_B99C111148D77CE4E6BB4281DF4E2E1D
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_B99C111148D77CE4E6BB4281DF4E2E1D_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_9B11571D4A82D9791B9DA3812322FDD6
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_9B11571D4A82D9791B9DA3812322FDD6_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_BlendSpacePlayer_AEAFC47B4175A8608BF4BC88B69B8C16
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_BlendSpacePlayer_AEAFC47B4175A8608BF4BC88B69B8C16_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_720210BF44ABE27AFFA7CDA9AF239244
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_720210BF44ABE27AFFA7CDA9AF239244_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_74C42990462877C0A6F4BBA511DF0206
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_74C42990462877C0A6F4BBA511DF0206_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_9FE93B16484D4E30D4459D951AEA524F
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_9FE93B16484D4E30D4459D951AEA524F_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_7630025F4FB3DA61F58908B70FCBCBFF
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_7630025F4FB3DA61F58908B70FCBCBFF_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_1B9A3E7D4279115348614DA9015F9F47
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_1B9A3E7D4279115348614DA9015F9F47_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_C0F3DA0946EEDF9E5E2BB99D5FCFBAD1
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_C0F3DA0946EEDF9E5E2BB99D5FCFBAD1_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_3C9704574F3C6B018F9D27AD77F2A364
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_3C9704574F3C6B018F9D27AD77F2A364_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_A2BBA1A047BB6D3AEE3A44BED46F6C7D
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_A2BBA1A047BB6D3AEE3A44BED46F6C7D_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_C57C106245CC55071DD7FC965FEC48FD
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_C57C106245CC55071DD7FC965FEC48FD_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_1959AEAB4B17B0658C3022BC8F110C3F
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_1959AEAB4B17B0658C3022BC8F110C3F_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_18EF2629457E43FAA764BD9CCCFED1DF
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_18EF2629457E43FAA764BD9CCCFED1DF_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_B81391194D716D20C355CF8175F5018D
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_B81391194D716D20C355CF8175F5018D_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_DF47FE974D53A8FBE989E6B701CCD6F7
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_DF47FE974D53A8FBE989E6B701CCD6F7_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_52ABF08C453A4F3883A664B6D3EB655C
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_52ABF08C453A4F3883A664B6D3EB655C_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_0C8F409A479B62102A88C1BB24FD8814
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_0C8F409A479B62102A88C1BB24FD8814_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_678226A647DE0959E733079FE8AA023A
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_678226A647DE0959E733079FE8AA023A_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_61665B6D4B110F511B364BB8C5EC67E6
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_61665B6D4B110F511B364BB8C5EC67E6_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_28CC15644D59C6FD51156C81499F0098
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_28CC15644D59C6FD51156C81499F0098_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_04167A154227ED6A57A3A5B84343AE9D
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_04167A154227ED6A57A3A5B84343AE9D_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_BlendSpacePlayer_3DB6167B43CD600A393E909180B6F133
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_BlendSpacePlayer_3DB6167B43CD600A393E909180B6F133_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_A4E6630A40566C79299B19985B623726
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_A4E6630A40566C79299B19985B623726_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_95A93A5E464C680E4CE436AFC9BDF98C
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_95A93A5E464C680E4CE436AFC9BDF98C_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_D1E14C7A43FCED0FFA4781A0E86DB4D7
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_D1E14C7A43FCED0FFA4781A0E86DB4D7_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_7925B0544410CB7D17EBFF884A78709C
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_7925B0544410CB7D17EBFF884A78709C_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_657C68E44ACF0ECF1BA6D0B01986D56B
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_657C68E44ACF0ECF1BA6D0B01986D56B_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_23D912C14C9A4893130F15B3CB799514
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_TransitionResult_23D912C14C9A4893130F15B3CB799514_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_LayeredBoneBlend_ACC6CAD7465849F11D699CABB1D5E8DB
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_LayeredBoneBlend_ACC6CAD7465849F11D699CABB1D5E8DB_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_LayeredBoneBlend_76356627435667F8EB535FAF2BCB46F7
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_LayeredBoneBlend_76356627435667F8EB535FAF2BCB46F7_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_ModifyBone_295C1AD54D8BA3070E472A9E2A5F1376
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_ModifyBone_295C1AD54D8BA3070E472A9E2A5F1376_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_D76C27624BBFC4CECC7250B32BF3AE47
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_D76C27624BBFC4CECC7250B32BF3AE47_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.BlueprintUpdateAnimation
+struct UABP_Fishing_re_C_BlueprintUpdateAnimation_Params
+{
+	float*                                             DeltaTimeX;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.AnimNotify_MG_Fishing_Get_End
+struct UABP_Fishing_re_C_AnimNotify_MG_Fishing_Get_End_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.AnimNotify_MG_Fishing_Swing_After_End
+struct UABP_Fishing_re_C_AnimNotify_MG_Fishing_Swing_After_End_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.AnimNotify_MG_Fishing_Cast_End
+struct UABP_Fishing_re_C_AnimNotify_MG_Fishing_Cast_End_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.AnimNotify_MG_Fishing_Cast_Release
+struct UABP_Fishing_re_C_AnimNotify_MG_Fishing_Cast_Release_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_099C7BE048951901D9E499A7B2E99BD2
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_099C7BE048951901D9E499A7B2E99BD2_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_DF8D1C0248576F80F82A4086C0D29428
+struct UABP_Fishing_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Fishing_re_AnimGraphNode_Fabrik_DF8D1C0248576F80F82A4086C0D29428_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.ExecuteUbergraph_ABP_Fishing_re
+struct UABP_Fishing_re_C_ExecuteUbergraph_ABP_Fishing_re_Params
+{
+	int                                                EntryPoint;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.Swing_Release__DelegateSignature
+struct UABP_Fishing_re_C_Swing_Release__DelegateSignature_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.Swing_Finished__DelegateSignature
+struct UABP_Fishing_re_C_Swing_Finished__DelegateSignature_Params
+{
+};
+
+// Function ABP_Fishing_re.ABP_Fishing_re_C.Get_Finished__DelegateSignature
+struct UABP_Fishing_re_C_Get_Finished__DelegateSignature_Params
+{
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

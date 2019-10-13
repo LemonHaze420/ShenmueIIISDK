@@ -1,0 +1,81 @@
+#pragma once
+
+// Name: S3Demo, Version: 0.90.0
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+// Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass BP_S3AdventureHUD.BP_S3AdventureHUD_C
+// 0x0088 (0x0600 - 0x0578)
+class ABP_S3AdventureHUD_C : public ABP_S3HUD_Base_C
+{
+public:
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0578(0x0008) (Transient, DuplicateTransient)
+	class UChildActorComponent*                        MoneyStatus;                                              // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        PopupItem;                                                // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        MenuManager;                                              // 0x0590(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class ABP_MenuWindowManager_C*                     BP_MenuManager;                                           // 0x0598(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, IsPlainOldData)
+	class ABP_S3MemopadManager_C*                      BP_MemopadManager;                                        // 0x05A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class ABP_S3DetectAction_C*                        BP_DetectAction;                                          // 0x05A8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class ABP_PopupItem_C*                             BP_PopupItem;                                             // 0x05B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, DisableEditOnInstance, IsPlainOldData)
+	class ABP_MemoTextureDataManager_C*                BP_MemoTextureDataManager;                                // 0x05B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class UDevelopmentText_C*                          DevelopTextWidget;                                        // 0x05C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	bool                                               IsActiveKS;                                               // 0x05C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x05C9(0x0007) MISSED OFFSET
+	class ABP_money_status_C*                          BP_MoneyStatus;                                           // 0x05D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	TArray<class ABP_S3CharacterBase_C*>               ShowNameActors;                                           // 0x05D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	class ABP_HUDEnergyStatusManager_C*                BP_HUDEnergyStatusManager;                                // 0x05E8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	class UBPW_UI_Clock_C*                             ClockWidget;                                              // 0x05F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class ABP_UI_RewardWindowManager_C*                RewardNotice;                                             // 0x05F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass BP_S3AdventureHUD.BP_S3AdventureHUD_C");
+		return ptr;
+	}
+
+
+	bool ShowsClockOnPlayerBehavior(ES3PlayerBehavior Behavior);
+	void DestroyDevelopmentText();
+	void HideEyecatch();
+	void GetMenuManagerActor(class AActor** Actor);
+	void PermitDetectAction_Impl(class AActor** Actor, bool* dummy);
+	void ForbidDetectAction_Impl(class AActor** Actor, bool* dummy);
+	void PermitWindowUI_Impl(class AActor** Actor, bool* dummy);
+	void ForbidWindowUI_Impl(class AActor** Actor, bool* dummy);
+	void UpdateClockVisibility();
+	void SpawnManager();
+	void HideMoneyStatus(class AActor* Actor);
+	void ShowMoneyStatus(class AActor* Actor);
+	void GetMoneyStatus(class ABP_money_status_C** BP_MoneyStatus);
+	void ShowEyecatch(const struct FVector& Location, const struct FName& ForceId);
+	void GetMinimap2DManager(class ABP_MiniMap2DManager_C** BP_MinimapManager);
+	void ShowCharaName(class AActor* Actor, bool Visible);
+	void ChangeDetectIcon(class AActor* Actor, ES3ActionIconType Type, int Index, bool Visible);
+	void GetMemoTextureDataManager(class ABP_MemoTextureDataManager_C** BP_MemoTextureDataManager);
+	void GetPopupItem(class ABP_PopupItem_C** BP_PopupItem);
+	void GetMenuManager(class ABP_MenuWindowManager_C** MenuManager);
+	void GetMemopadManager(class ABP_S3MemopadManager_C** AsBP_S3Memopad_Manager);
+	void GetDetectAction(class ABP_S3DetectAction_C** AsBP_S3Detect_Action);
+	void UserConstructionScript();
+	void ReceiveBeginPlay();
+	void ReceiveTick(float* DeltaSeconds);
+	void ReceiveDestroyed();
+	void CastChildActor();
+	void ShowRewardNotice(ES3RewardCategory* Category);
+	void ExecuteUbergraph_BP_S3AdventureHUD(int EntryPoint);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
