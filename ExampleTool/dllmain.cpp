@@ -28,23 +28,21 @@ void Detach() {
 
 // --------------------------------------------------------------------------------
 // DLL entrypoint
-BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved){
+BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved) {
 	DisableThreadLibraryCalls(hModule);
-#ifdef _DEBUG
 	AllocConsole();
 	SetConsoleTitleA(MOD_STRING);
 	::freopen("CONOUT$", "w", stdout);
 	::freopen("CONOUT$", "w", stderr);
 	::freopen("CONIN$", "r", stdin);
-#endif
-    switch (dwReason)    {
-    case DLL_PROCESS_ATTACH:
+	switch (dwReason) {
+	case DLL_PROCESS_ATTACH:
 		if (init() == -1) return false;
-		Attach();
+		CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Attach, NULL, 0, NULL);
 		break;
-    case DLL_PROCESS_DETACH:
-		Detach();
+	case DLL_PROCESS_DETACH:
+		CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Detach, NULL, 0, NULL);
 		break;
-    }
-    return TRUE;
+	}
+	return TRUE;
 }
