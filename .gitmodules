@@ -1,0 +1,3 @@
+[submodule "Shenmue3SDK/minhook"]
+	path = Shenmue3SDK/minhook
+	url = https://github.com/TsudaKageyu/minhook
