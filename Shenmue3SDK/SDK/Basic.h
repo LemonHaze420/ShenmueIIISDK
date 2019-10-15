@@ -18,6 +18,10 @@
 #include <set>
 
 #include <Windows.h>
+#include <Psapi.h>
+
+#include "MinHook.h"
+
 #undef CreateWindow
 #undef PF_MAX
 
@@ -29,7 +33,11 @@
 
 namespace SDK
 {
-	int init();
+	int init(std::string ModuleName);
+
+	MODULEINFO GetModuleInfo();
+	bool Match(const BYTE* pData, const BYTE* bMask, const char* szMask);
+	DWORD_PTR FindPattern(DWORD_PTR dwAddress, DWORD dwLen, BYTE* bMask, const char* szMask);
 
 	/*
 		*	v1.00
@@ -45,6 +53,10 @@ namespace SDK
 		INVALID
 	};
 	DemoVersion determineDemoVersion(DWORD_PTR baseAddress);
+
+	static std::string  g_ModuleName;
+	static DWORD_PTR	g_BaseAddress;
+	static DWORD		g_Size;
 
 	template<typename Fn>
 	inline Fn GetVFunction(const void* instance, std::size_t index)
