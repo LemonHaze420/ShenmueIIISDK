@@ -89,7 +89,7 @@ namespace SDK
 
 		MH_CreateHook(reinterpret_cast<void**>(processEventAddr), ProcessEventHook, reinterpret_cast<void**>(&ProcessEventOriginal));
 		mhStatus = MH_EnableHook(reinterpret_cast<void*>(processEventAddr));
-		printf("processEventHook returned 0x%I64X\n", mhStatus);
+		printf("processEventHook returned 0x%X\n", mhStatus);
 		if (mhStatus != MH_OK) {
 			MessageBoxA(NULL, "Unable to hook ProcessEvent. Exiting.", "Shenmue 3 SDK", MB_OK);
 			return -1;

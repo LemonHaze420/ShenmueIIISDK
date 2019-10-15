@@ -52,7 +52,7 @@ namespace SDK
 		V101,
 		INVALID
 	};
-	DemoVersion determineDemoVersion(DWORD_PTR baseAddress);
+	DemoVersion determineDemoVersion();
 
 	static std::string  g_ModuleName;
 	static DWORD_PTR	g_BaseAddress;
