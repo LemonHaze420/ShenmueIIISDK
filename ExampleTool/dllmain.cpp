@@ -4,6 +4,9 @@
 
 #include "framework.h"
 
+// UObject::ProcessEvent sig: 
+// "\x48\x33\xC5\x48\x89\x85\xB0\x00\x00\x00\x4D\x8B\xF8\x45\x33\xF6\x44\x8B\x41\x0C\x48\x8B\xF2" - 0x26    
+// xor     rax, rbp (v100: 0x140979A20; v101: 0x14097B3E0)  
 // Called when DLL is attached
 void Attach() {
 	printf(MOD_STRING " attached\n");
@@ -37,7 +40,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved) {
 	::freopen("CONIN$", "r", stdin);
 	switch (dwReason) {
 	case DLL_PROCESS_ATTACH:
-		if (init() == -1) return false;
+		if (init("Shenmue3-Win64-Shipping.exe") == -1) return false;
 		CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Attach, NULL, 0, NULL);
 		break;
 	case DLL_PROCESS_DETACH:
