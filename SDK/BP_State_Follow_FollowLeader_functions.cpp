@@ -1,0 +1,189 @@
+
+#include "../SDK.h"
+
+// Name: Shenmue3, Version: 1.0.2
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+// Functions
+//---------------------------------------------------------------------------
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.GetPathfindTarget
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
+// class AActor*                  OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_State_Follow_FollowLeader_C::GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.GetPathfindTarget");
+
+	UBP_State_Follow_FollowLeader_C_GetPathfindTarget_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutLocation != nullptr)
+		*OutLocation = params.OutLocation;
+	if (OutActor != nullptr)
+		*OutActor = params.OutActor;
+}
+
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.MoveStateEnter
+// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_State_Follow_FollowLeader_C::MoveStateEnter(bool* bDummy)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.MoveStateEnter");
+
+	UBP_State_Follow_FollowLeader_C_MoveStateEnter_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bDummy != nullptr)
+		*bDummy = params.bDummy;
+}
+
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.StateEnter
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_State_Follow_FollowLeader_C::StateEnter(float Delta, bool* bProcessing)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.StateEnter");
+
+	UBP_State_Follow_FollowLeader_C_StateEnter_Params params;
+	params.Delta = Delta;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bProcessing != nullptr)
+		*bProcessing = params.bProcessing;
+}
+
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.StateUpdate
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UBP_State_Follow_FollowLeader_C::StateUpdate(float Delta, bool* bDummy)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.StateUpdate");
+
+	UBP_State_Follow_FollowLeader_C_StateUpdate_Params params;
+	params.Delta = Delta;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (bDummy != nullptr)
+		*bDummy = params.bDummy;
+}
+
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.UpdateTransitions
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_State_Follow_FollowLeader_C::UpdateTransitions(float DeltaSeconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.UpdateTransitions");
+
+	UBP_State_Follow_FollowLeader_C_UpdateTransitions_Params params;
+	params.DeltaSeconds = DeltaSeconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.CancelPath
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_State_Follow_FollowLeader_C::CancelPath()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.CancelPath");
+
+	UBP_State_Follow_FollowLeader_C_CancelPath_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.FinishPath
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_State_Follow_FollowLeader_C::FinishPath()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.FinishPath");
+
+	UBP_State_Follow_FollowLeader_C_FinishPath_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.ExecuteUbergraph_BP_State_Follow_FollowLeader
+// ()
+// Parameters:
+// int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_State_Follow_FollowLeader_C::ExecuteUbergraph_BP_State_Follow_FollowLeader(int EntryPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.ExecuteUbergraph_BP_State_Follow_FollowLeader");
+
+	UBP_State_Follow_FollowLeader_C_ExecuteUbergraph_BP_State_Follow_FollowLeader_Params params;
+	params.EntryPoint = EntryPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
