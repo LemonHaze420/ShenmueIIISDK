@@ -1,4 +1,4 @@
-# Shenmue 3 SDK
+# Shenmue III SDK
 Contains SDKs for Shenmue III, including the Backer Trial demo. Features a basic ProcessEvent hook system.
 
 ## Building
