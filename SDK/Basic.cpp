@@ -1,6 +1,7 @@
 
 #include "../SDK.h"
 #include <Windows.h>
+#include <cassert>
 
 // Name: Shenmue3, Version: 1.0.2
 
@@ -40,6 +41,9 @@ namespace SDK
 		}
 		if (!bCalledHook)
 			ProcessEventOriginal(_this, pFunction, pParms);
+#ifdef _DEBUG
+		printf("[ProcessEvent] %s\n", pFunction->GetFullName().c_str());
+#endif
 	}
 	//---------------------------------------------------------------------------
 	bool Match(const BYTE* pData, const BYTE* bMask, const char* szMask) {
@@ -70,29 +74,42 @@ namespace SDK
 		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V102), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
 			printf("Detected full game - v1.02\n"); return V102;
 		}
-		else return INVALID;
+		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V10201), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
+			printf("Detected full game - v1.02.01\n"); return V10201;
+		}
+		printf("Couldn't detect version.\n");
+		return INVALID;
 	}
 	//---------------------------------------------------------------------------
 	int init(std::string ModuleName)
 	{
+#ifdef _DEBUG
 		AllocConsole();
 		freopen("CONIN$", "r", stdin);
 		freopen("CONOUT$", "w", stdout);
 		freopen("CONOUT$", "w", stderr);
-
 		printf("Allocated console\n");
+#endif
 
-		g_ModuleName = ModuleName;
+		MODULEINFO mi	= GetModuleInfo();
+		g_ModuleName	= (ModuleName.empty() ? "Shenmue3-Win64-Shipping.exe" : ModuleName);
+		g_BaseAddress	= (DWORD_PTR)mi.lpBaseOfDll;
+		g_Size			= mi.SizeOfImage;
 
-		MODULEINFO mi = GetModuleInfo();
-		g_BaseAddress = (DWORD_PTR)mi.lpBaseOfDll;
-		g_Size = mi.SizeOfImage;
-
+		// Detect version and set offsets
 		Version ver = determineVersion();
 		auto objectsOffs = g_BaseAddress, nameOffs = g_BaseAddress;
-		if (ver == V102)	objectsOffs += GOBJECTS_OFFSET_V102, nameOffs += GNAMES_OFFSET_V102;
+		if (ver == V102 || ver == V10201)	objectsOffs += GOBJECTS_OFFSET_V102, nameOffs += GNAMES_OFFSET_V102;
 		else if (ver == INVALID) {
 			MessageBoxA(NULL, "Error detecting game version. Exiting.", "Shenmue III SDK", MB_OK);
+			return -1;
+		}
+		else if(objectsOffs == g_BaseAddress) {
+			MessageBoxA(NULL, "Invalid GObjects offset. Exiting.", "Shenmue III SDK", MB_OK);
+			return -1;
+		}
+		else if (nameOffs == g_BaseAddress) {
+			MessageBoxA(NULL, "Invalid GNames offset. Exiting.", "Shenmue III SDK", MB_OK);
 			return -1;
 		}
 
@@ -100,36 +117,39 @@ namespace SDK
 		UObject::GObjects = reinterpret_cast<SDK::FUObjectArray*>(objectsOffs);
 		FName::GNames = reinterpret_cast<SDK::TNameEntryArray*>(nameOffs);
 
-
+		// Hook base ProcessEvent func
 		DWORD_PTR processEventAddr = FindPattern((DWORD_PTR)mi.lpBaseOfDll, mi.SizeOfImage, (BYTE*)"\x48\x33\xC5\x48\x89\x85\xB0\x00\x00\x00\x4D\x8B\xF8\x45\x33\xF6\x44\x8B\x41\x0C\x48\x8B\xF2", "xxxxxxxxxxxxxxxxxxxxxxx");
 		if (processEventAddr == 0)
 			return -1;
+		else {
+			processEventAddr -= 0x26;
 
-		processEventAddr -= 0x26;
+			MH_STATUS mhStatus = MH_Initialize();
+			if (mhStatus != MH_OK) {
+				MessageBoxA(NULL, "Error initializing MinHook. Exiting.", "Shenmue 3 SDK", MB_OK);
+				return -1;
+			}
 
-		MH_STATUS mhStatus = MH_Initialize();
-		if (mhStatus != MH_OK) {
-			MessageBoxA(NULL, "Error initializing MinHook. Exiting.", "Shenmue 3 SDK", MB_OK);
-			return -1;
-		}
-
-		MH_CreateHook(reinterpret_cast<void**>(processEventAddr), ProcessEventHook, reinterpret_cast<void**>(&ProcessEventOriginal));
-		mhStatus = MH_EnableHook(reinterpret_cast<void*>(processEventAddr));
-		printf("processEventHook returned 0x%X\n", mhStatus);
-		if (mhStatus != MH_OK) {
-			MessageBoxA(NULL, "Unable to hook ProcessEvent. Exiting.", "Shenmue 3 SDK", MB_OK);
-			return -1;
-		}
-
+			MH_CreateHook(reinterpret_cast<void**>(processEventAddr), ProcessEventHook, reinterpret_cast<void**>(&ProcessEventOriginal));
+			mhStatus = MH_EnableHook(reinterpret_cast<void*>(processEventAddr));
+			printf("processEventHook returned 0x%X\n", mhStatus);
+			if (mhStatus != MH_OK) {
+				MessageBoxA(NULL, "Unable to hook ProcessEvent. Exiting.", "Shenmue 3 SDK", MB_OK);
+				return -1;
+			}
 #ifdef _DEBUG
-		printf("baseAddr      =    0x%I64X\n", g_BaseAddress);
-		printf("objectsAddr   =    0x%I64X\n", objectsOffs);
-		printf("nameAddr      =    0x%I64X\n", nameOffs);
-		printf("First GName:  '%s'\n", FName::GetGlobalNames()[0]->AnsiName);
-		printf("Second GName: '%s'\n", FName::GetGlobalNames()[1]->AnsiName);
-		printf("Initialized.\n");
+			printf("baseAddr      =    0x%I64X\n", g_BaseAddress);
+			printf("objectsAddr   =    0x%I64X\n", objectsOffs);
+			printf("nameAddr      =    0x%I64X\n", nameOffs);
+			printf("First GName:  '%s'\n", FName::GetGlobalNames()[0]->AnsiName);
+			printf("Second GName: '%s'\n", FName::GetGlobalNames()[1]->AnsiName);
+			printf("Initialized.\n");
 #endif
-
+//#ifndef _DEBUG
+			assert(FName::GetGlobalNames()[0]->AnsiName == "None");
+			assert(FName::GetGlobalNames()[1]->AnsiName == "ByteProperty");
+//#endif
+		}
 		return 1;
 	}
 //---------------------------------------------------------------------------

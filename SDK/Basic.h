@@ -5,6 +5,7 @@
 #define GOBJECTS_OFFSET_V102	0x32C9848
 #define GNAMES_OFFSET_V102		0x32C0BA0
 #define UE4_VERSTRING_V102		0x22EF8F0
+#define UE4_VERSTRING_V10201	0x22EF7F0
 
 #define WIN32_LEAN_AND_MEAN         // Exclude rarely-used stuff from Windows headers
 
@@ -28,7 +29,7 @@
 
 namespace SDK
 {
-	int init(std::string ModuleName);
+	int init(std::string ModuleName = "Shenmue3-Win64-Shipping.exe");
 
 	MODULEINFO GetModuleInfo();
 	bool Match(const BYTE* pData, const BYTE* bMask, const char* szMask);
@@ -48,9 +49,13 @@ namespace SDK
 		*	v1.02
 					Version:	1.02.00
 					Build:		02751
+		*	v1.02.01
+					Version:	1.02.01
+					Build:		02805
 	*/
 	enum Version {
 		V102,
+		V10201,
 		INVALID
 	};
 	Version determineVersion();
