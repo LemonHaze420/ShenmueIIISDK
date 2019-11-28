@@ -7,18 +7,6 @@
 // Called when DLL is attached
 void Attach() {
 	printf(MOD_STRING " attached\n");
-
-	auto buildInfoConfig = UObject::FindObject<US3BuildInfoConfig>();
-	if (buildInfoConfig) {
-		printf("=======================\nBuild Info Config\n=======================\n");
-		printf("BuildDate: %s\n",		buildInfoConfig->BuildDate.ToString().c_str());
-		printf("BuildNumber: %d\n",		buildInfoConfig->BuildNumber);
-		printf("BuildType: %s\n",		buildInfoConfig->BuildType.ToString().c_str());
-		printf("Changelist: %d\n",		buildInfoConfig->Changelist);
-		printf("Configuration: %s\n",	buildInfoConfig->Configuration.ToString().c_str());
-		printf("Platform: %s\n",		buildInfoConfig->Platform.ToString().c_str());
-		printf("=======================\n");
-	}
 }
 
 // Called when DLL is detached
@@ -37,7 +25,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 	::freopen("CONIN$", "r", stdin);
 	switch (dwReason) {
 		case DLL_PROCESS_ATTACH:
-			if (init("Shenmue3-Win64-Shipping.exe") == -1) return false;
+			if (init() == -1) return false;
 			CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Attach, NULL, 0, NULL);
 			break;
 		case DLL_PROCESS_DETACH:
