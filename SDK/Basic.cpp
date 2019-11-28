@@ -63,7 +63,7 @@ namespace SDK
 	//---------------------------------------------------------------------------
 	MODULEINFO GetModuleInfo() {
 		MODULEINFO modInfo = { 0 };
-		HMODULE hModule = GetModuleHandleA(g_ModuleName.c_str());
+		HMODULE hModule = GetModuleHandleA((g_ModuleName.empty() ? NULL : g_ModuleName.c_str()));
 		if (hModule != 0)
 			GetModuleInformation(GetCurrentProcess(), hModule, &modInfo, sizeof(MODULEINFO));
 		return modInfo;
@@ -93,7 +93,7 @@ namespace SDK
 
 		MODULEINFO mi	= GetModuleInfo();
 		g_ModuleName	= (ModuleName.empty() ? "Shenmue3-Win64-Shipping.exe" : ModuleName);
-		g_BaseAddress	= (DWORD_PTR)mi.lpBaseOfDll;
+		g_BaseAddress	= ((DWORD_PTR)mi.lpBaseOfDll == 0 ? (DWORD_PTR)GetModuleHandleA(NULL) : (DWORD_PTR)mi.lpBaseOfDll);
 		g_Size			= mi.SizeOfImage;
 
 		// Detect version and set offsets
@@ -126,7 +126,7 @@ namespace SDK
 
 			MH_STATUS mhStatus = MH_Initialize();
 			if (mhStatus != MH_OK) {
-				MessageBoxA(NULL, "Error initializing MinHook. Exiting.", "Shenmue 3 SDK", MB_OK);
+				MessageBoxA(NULL, "Error initializing MinHook. Exiting.", "Shenmue III SDK", MB_OK);
 				return -1;
 			}
 
@@ -134,9 +134,13 @@ namespace SDK
 			mhStatus = MH_EnableHook(reinterpret_cast<void*>(processEventAddr));
 			printf("processEventHook returned 0x%X\n", mhStatus);
 			if (mhStatus != MH_OK) {
-				MessageBoxA(NULL, "Unable to hook ProcessEvent. Exiting.", "Shenmue 3 SDK", MB_OK);
+				MessageBoxA(NULL, "Unable to hook ProcessEvent. Exiting.", "Shenmue III SDK", MB_OK);
 				return -1;
 			}
+
+			assert(FName::GetGlobalNames()[0]->AnsiName == "None");
+			assert(FName::GetGlobalNames()[1]->AnsiName == "ByteProperty");
+
 #ifdef _DEBUG
 			printf("baseAddr      =    0x%I64X\n", g_BaseAddress);
 			printf("objectsAddr   =    0x%I64X\n", objectsOffs);
@@ -145,10 +149,6 @@ namespace SDK
 			printf("Second GName: '%s'\n", FName::GetGlobalNames()[1]->AnsiName);
 			printf("Initialized.\n");
 #endif
-//#ifndef _DEBUG
-			assert(FName::GetGlobalNames()[0]->AnsiName == "None");
-			assert(FName::GetGlobalNames()[1]->AnsiName == "ByteProperty");
-//#endif
 		}
 		return 1;
 	}

@@ -18,11 +18,7 @@ void Detach() {
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 {
 	DisableThreadLibraryCalls(hModule);
-	AllocConsole();
 	SetConsoleTitleA(MOD_STRING);
-	::freopen("CONOUT$", "w", stdout);
-	::freopen("CONOUT$", "w", stderr);
-	::freopen("CONIN$", "r", stdin);
 	switch (dwReason) {
 		case DLL_PROCESS_ATTACH:
 			if (init() == -1) return false;

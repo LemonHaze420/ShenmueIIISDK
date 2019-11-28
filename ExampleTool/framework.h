@@ -8,3 +8,5 @@
 #include "SDK.h"
 
 using namespace SDK;
+
+extern "C" __declspec(dllexport) void v0() {};
