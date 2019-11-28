@@ -18,10 +18,21 @@ void Detach() {
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 {
 	DisableThreadLibraryCalls(hModule);
-	SetConsoleTitleA(MOD_STRING);
 	switch (dwReason) {
 		case DLL_PROCESS_ATTACH:
 			if (init() == -1) return false;
+
+			// the SDK will only create a console window if it's built in Debug config, 
+			// so allocate one as necessary here.
+		#ifndef _DEBUG
+			AllocConsole();
+			freopen("CONIN$", "r", stdin);
+			freopen("CONOUT$", "w", stdout);
+			freopen("CONOUT$", "w", stderr);
+			printf("Allocated console\n");
+		#endif
+			SetConsoleTitleA(MOD_STRING);
+
 			CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)Attach, NULL, 0, NULL);
 			break;
 		case DLL_PROCESS_DETACH:
