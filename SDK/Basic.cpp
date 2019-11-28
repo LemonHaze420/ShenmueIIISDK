@@ -118,7 +118,7 @@ namespace SDK
 		FName::GNames = reinterpret_cast<SDK::TNameEntryArray*>(nameOffs);
 
 		// Hook base ProcessEvent func
-		DWORD_PTR processEventAddr = FindPattern((DWORD_PTR)mi.lpBaseOfDll, mi.SizeOfImage, (BYTE*)"\x48\x33\xC5\x48\x89\x85\xB0\x00\x00\x00\x4D\x8B\xF8\x45\x33\xF6\x44\x8B\x41\x0C\x48\x8B\xF2", "xxxxxxxxxxxxxxxxxxxxxxx");
+		DWORD_PTR processEventAddr = FindPattern(g_BaseAddress, mi.SizeOfImage, (BYTE*)"\x48\x33\xC5\x48\x89\x85\xB0\x00\x00\x00\x4D\x8B\xF8\x45\x33\xF6\x44\x8B\x41\x0C\x48\x8B\xF2", "xxxxxxxxxxxxxxxxxxxxxxx");
 		if (processEventAddr == 0)
 			return -1;
 		else {
@@ -138,8 +138,8 @@ namespace SDK
 				return -1;
 			}
 
-			assert(FName::GetGlobalNames()[0]->AnsiName == "None");
-			assert(FName::GetGlobalNames()[1]->AnsiName == "ByteProperty");
+			assert(FName::GetGlobalNames()[0]->AnsiName != "None");
+			assert(FName::GetGlobalNames()[1]->AnsiName != "ByteProperty");
 
 #ifdef _DEBUG
 			printf("baseAddr      =    0x%I64X\n", g_BaseAddress);
