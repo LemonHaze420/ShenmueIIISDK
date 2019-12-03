@@ -38,21 +38,21 @@ public:
 
 	void SetLanguageSelector();
 	void SetSystemVolume(float Volume);
-	void Stop();
-	void PlayOrActivate();
-	void SetDisableSound(bool Disable, class AActor* Actor);
+	void STATIC_Stop();
+	void STATIC_PlayOrActivate();
+	void STATIC_SetDisableSound(bool Disable, class AActor* Actor);
 	void IsDisable(bool* Disabled);
 	void PermitPlay();
-	void SetGameTimeSelector(bool* Change);
+	void STATIC_SetGameTimeSelector(bool* Change);
 	void Replay();
 	void SetWeatherSelector(bool Bind);
-	void SetSelectorLabel();
-	void UserConstructionScript();
+	void STATIC_SetSelectorLabel();
+	void STATIC_UserConstructionScript();
 	void ChangeWeather();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_S3AtomSound(int EntryPoint);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ExecuteUbergraph_BP_S3AtomSound(int EntryPoint);
 };
 
 

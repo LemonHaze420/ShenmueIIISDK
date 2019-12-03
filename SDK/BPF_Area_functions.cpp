@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Area.BPF_Area_C.getS3AreaLightManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3AreaLightManagerComponent* AreaLightManager               (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBPF_Area_C::STATIC_getS3AreaLightManager(class UObject* __WorldContext, cl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,12 +39,12 @@ void UBPF_Area_C::STATIC_getS3AreaLightManager(class UObject* __WorldContext, cl
 
 
 // Function BPF_Area.BPF_Area_C.getS3AreaManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3AreaManager_C*     BP_S3AreaManager               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Area_C::STATIC_getS3AreaManager(class UObject* __WorldContext, class ABP_S3AreaManager_C** BP_S3AreaManager)
+void UBPF_Area_C::getS3AreaManager(class UObject* __WorldContext, class ABP_S3AreaManager_C** BP_S3AreaManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Area.BPF_Area_C.getS3AreaManager");
 

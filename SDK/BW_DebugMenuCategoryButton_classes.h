@@ -35,8 +35,8 @@ public:
 	struct FText GetText_1();
 	struct FEventReply OnMouseButtonDown_1(const struct FGeometry& MyGeometry, const struct FPointerEvent& MouseEvent);
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_BW_DebugMenuCategoryButton(int EntryPoint);
-	void OnClick__DelegateSignature(class UBW_DebugMenuCategoryButton_C* Clicked);
+	void STATIC_ExecuteUbergraph_BW_DebugMenuCategoryButton(int EntryPoint);
+	void STATIC_OnClick__DelegateSignature(class UBW_DebugMenuCategoryButton_C* Clicked);
 };
 
 

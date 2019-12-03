@@ -35,12 +35,12 @@ public:
 	}
 
 
-	void SetVisible(bool Condition);
+	void STATIC_SetVisible(bool Condition);
 	void RemoveTriangle(class AActor* Actor);
-	void DestroyTriangle();
-	void UserConstructionScript();
+	void STATIC_DestroyTriangle();
+	void STATIC_UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_MiniGameChooseTriangleSpawn(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGameChooseTriangleSpawn(int EntryPoint);
 };
 
 

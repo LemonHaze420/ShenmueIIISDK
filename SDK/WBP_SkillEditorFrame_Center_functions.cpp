@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.SetBackColor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Private, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           IsSelect                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UWBP_SkillEditorFrame_Center_C::SetBackColor(bool IsSelect)
 	params.IsSelect = IsSelect;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,17 +35,18 @@ void UWBP_SkillEditorFrame_Center_C::SetBackColor(bool IsSelect)
 
 
 // Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.GetVisibility_Background
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWBP_SkillEditorFrame_Center_C::GetVisibility_Background()
+ESlateVisibility UWBP_SkillEditorFrame_Center_C::STATIC_GetVisibility_Background()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.GetVisibility_Background");
 
 	UWBP_SkillEditorFrame_Center_C_GetVisibility_Background_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,17 +57,18 @@ ESlateVisibility UWBP_SkillEditorFrame_Center_C::GetVisibility_Background()
 
 
 // Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.GetVisibility_FrameLine
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UWBP_SkillEditorFrame_Center_C::GetVisibility_FrameLine()
+ESlateVisibility UWBP_SkillEditorFrame_Center_C::STATIC_GetVisibility_FrameLine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.GetVisibility_FrameLine");
 
 	UWBP_SkillEditorFrame_Center_C_GetVisibility_FrameLine_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +79,11 @@ ESlateVisibility UWBP_SkillEditorFrame_Center_C::GetVisibility_FrameLine()
 
 
 // Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_SkillEditorFrame_Center_C::PreConstruct(bool IsDesignTime)
+void UWBP_SkillEditorFrame_Center_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.PreConstruct");
 
@@ -88,6 +91,7 @@ void UWBP_SkillEditorFrame_Center_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,11 +100,11 @@ void UWBP_SkillEditorFrame_Center_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.ExecuteUbergraph_WBP_SkillEditorFrame_Center
-// ()
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_SkillEditorFrame_Center_C::ExecuteUbergraph_WBP_SkillEditorFrame_Center(int EntryPoint)
+void UWBP_SkillEditorFrame_Center_C::STATIC_ExecuteUbergraph_WBP_SkillEditorFrame_Center(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkillEditorFrame_Center.WBP_SkillEditorFrame_Center_C.ExecuteUbergraph_WBP_SkillEditorFrame_Center");
 
@@ -108,6 +112,7 @@ void UWBP_SkillEditorFrame_Center_C::ExecuteUbergraph_WBP_SkillEditorFrame_Cente
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

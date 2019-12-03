@@ -269,8 +269,8 @@ struct UBPW_UI_BaseWindow_C_SubSelectItem_Params
 	int                                                SubCount;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.AddSelectItem
-struct UBPW_UI_BaseWindow_C_AddSelectItem_Params
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.addSelectItem
+struct UBPW_UI_BaseWindow_C_addSelectItem_Params
 {
 	int                                                FocusItem;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                AddCount;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -315,7 +315,7 @@ struct UBPW_UI_BaseWindow_C_FocusItem_Params
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetItemList
 struct UBPW_UI_BaseWindow_C_SetItemList_Params
 {
-	TArray<struct FST_ItemList>                        ItemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FST_ItemList>                        itemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 	int                                                page;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 

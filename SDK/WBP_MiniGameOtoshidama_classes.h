@@ -29,7 +29,7 @@ public:
 
 
 	void SetVisibleButton(bool Visible);
-	void Construct();
+	void STATIC_Construct();
 	void ExecuteUbergraph_WBP_MiniGameOtoshidama(int EntryPoint);
 };
 

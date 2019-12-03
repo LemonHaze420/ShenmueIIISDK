@@ -35,8 +35,8 @@ public:
 
 
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Duck_AnimGraphNode_BlendListByEnum_3F97BCD44582ACD8DB7DA8BC89A37FCD();
-	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void ExecuteUbergraph_ABP_MiniGame_CC_Duck(int EntryPoint);
+	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
+	void STATIC_ExecuteUbergraph_ABP_MiniGame_CC_Duck(int EntryPoint);
 };
 
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_Cursor.BW_Cursor_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBW_Cursor_C::Construct()
 {
@@ -23,6 +23,7 @@ void UBW_Cursor_C::Construct()
 	UBW_Cursor_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBW_Cursor_C::Construct()
 
 
 // Function BW_Cursor.BW_Cursor_C.ExecuteUbergraph_BW_Cursor
-// ()
+// (Net, Native, NetResponse, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +44,7 @@ void UBW_Cursor_C::ExecuteUbergraph_BW_Cursor(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_NPCLead.ABP_NPCLead_C.IsReadyTalk
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UABP_NPCLead_C::IsReadyTalk()
+bool UABP_NPCLead_C::STATIC_IsReadyTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_NPCLead.ABP_NPCLead_C.IsReadyTalk");
 
@@ -35,9 +35,9 @@ bool UABP_NPCLead_C::IsReadyTalk()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.UpdateRootMotionMode
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void UABP_NPCLead_C::UpdateRootMotionMode()
+void UABP_NPCLead_C::STATIC_UpdateRootMotionMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_NPCLead.ABP_NPCLead_C.UpdateRootMotionMode");
 
@@ -52,11 +52,11 @@ void UABP_NPCLead_C::UpdateRootMotionMode()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.GetEyeRotateEmotionRate
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          EyeRotateEmotionRate           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UABP_NPCLead_C::GetEyeRotateEmotionRate(float* EyeRotateEmotionRate)
+void UABP_NPCLead_C::STATIC_GetEyeRotateEmotionRate(float* EyeRotateEmotionRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_NPCLead.ABP_NPCLead_C.GetEyeRotateEmotionRate");
 
@@ -74,15 +74,16 @@ void UABP_NPCLead_C::GetEyeRotateEmotionRate(float* EyeRotateEmotionRate)
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.InitEyeRotateEmotion
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, Public, Delegate, NetServer, NetClient, BlueprintPure)
 
-void UABP_NPCLead_C::InitEyeRotateEmotion()
+void UABP_NPCLead_C::STATIC_InitEyeRotateEmotion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_NPCLead.ABP_NPCLead_C.InitEyeRotateEmotion");
 
 	UABP_NPCLead_C_InitEyeRotateEmotion_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +92,7 @@ void UABP_NPCLead_C::InitEyeRotateEmotion()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendListByBool_FA5B5D0F4E7C2829541316858C329F85
-// (BlueprintEvent)
+// (Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendListByBool_FA5B5D0F4E7C2829541316858C329F85()
 {
@@ -108,7 +109,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_3AF8C8374B4EB99F7C57749BF5AEF8DC
-// (BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_3AF8C8374B4EB99F7C57749BF5AEF8DC()
 {
@@ -125,7 +126,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendSpacePlayer_2AA3CAD44CEF9FD792FDEA9A24E82213
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendSpacePlayer_2AA3CAD44CEF9FD792FDEA9A24E82213()
 {
@@ -142,7 +143,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_S3SpeedWarping_E51AB6FA453F77DC87EAC084C52FB8E7
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_S3SpeedWarping_E51AB6FA453F77DC87EAC084C52FB8E7()
 {
@@ -159,7 +160,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_73054C4A4E7F2DA569FD679263F8A1C2
-// (BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_73054C4A4E7F2DA569FD679263F8A1C2()
 {
@@ -176,7 +177,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_S3TwoBoneIK_8E1E821842B8E73ED279E58A2706232D
-// (BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_S3TwoBoneIK_8E1E821842B8E73ED279E58A2706232D()
 {
@@ -193,7 +194,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TwoWayBlend_C22B52BC477C62526DC76BB0CCE767F5
-// (BlueprintEvent)
+// (Net, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TwoWayBlend_C22B52BC477C62526DC76BB0CCE767F5()
 {
@@ -210,7 +211,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_F7E6BCC947E20D68DA3085B4B6F7FC89
-// (BlueprintEvent)
+// (Net, NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_F7E6BCC947E20D68DA3085B4B6F7FC89()
 {
@@ -227,7 +228,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_7C421866423F2E27F085E59865D34829
-// (BlueprintEvent)
+// (NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_7C421866423F2E27F085E59865D34829()
 {
@@ -244,7 +245,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendSpacePlayer_5DE1DD0449B521A37D670B8A02222F41
-// (BlueprintEvent)
+// (NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendSpacePlayer_5DE1DD0449B521A37D670B8A02222F41()
 {
@@ -261,7 +262,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_GroundingFootL
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_GroundingFootL()
 {
@@ -278,7 +279,7 @@ void UABP_NPCLead_C::AnimNotify_GroundingFootL()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_GroundingFootR
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_GroundingFootR()
 {
@@ -295,7 +296,7 @@ void UABP_NPCLead_C::AnimNotify_GroundingFootR()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.NotifyFootprint
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // TEnumAsByte<ENEFootType>       Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -307,6 +308,7 @@ void UABP_NPCLead_C::NotifyFootprint(TEnumAsByte<ENEFootType> Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -315,7 +317,7 @@ void UABP_NPCLead_C::NotifyFootprint(TEnumAsByte<ENEFootType> Type)
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_StopStartLeft
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_StopStartLeft()
 {
@@ -332,7 +334,7 @@ void UABP_NPCLead_C::AnimNotify_StopStartLeft()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_StopStartRight
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_StopStartRight()
 {
@@ -349,7 +351,7 @@ void UABP_NPCLead_C::AnimNotify_StopStartRight()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_StateTurnAroundLeave
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_StateTurnAroundLeave()
 {
@@ -366,7 +368,7 @@ void UABP_NPCLead_C::AnimNotify_StateTurnAroundLeave()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_StateTurnAroundEnter
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_StateTurnAroundEnter()
 {
@@ -383,7 +385,7 @@ void UABP_NPCLead_C::AnimNotify_StateTurnAroundEnter()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -395,6 +397,7 @@ void UABP_NPCLead_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	params.DeltaTimeX = DeltaTimeX;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -403,7 +406,7 @@ void UABP_NPCLead_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::BlueprintInitializeAnimation()
 {
@@ -420,7 +423,7 @@ void UABP_NPCLead_C::BlueprintInitializeAnimation()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_7015382946DC31526C0D56A3F4CB7B5B
-// (BlueprintEvent)
+// (Exec, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_7015382946DC31526C0D56A3F4CB7B5B()
 {
@@ -437,7 +440,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_B914D2154EC38D886265E9B3F485B0C2
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_B914D2154EC38D886265E9B3F485B0C2()
 {
@@ -454,7 +457,7 @@ void UABP_NPCLead_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_Ani
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.BlueprintPostEvaluateAnimation
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::BlueprintPostEvaluateAnimation()
 {
@@ -471,7 +474,7 @@ void UABP_NPCLead_C::BlueprintPostEvaluateAnimation()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_StatIdleFullyBlended
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_StatIdleFullyBlended()
 {
@@ -488,7 +491,7 @@ void UABP_NPCLead_C::AnimNotify_StatIdleFullyBlended()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_StateIdleEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_StateIdleEnd()
 {
@@ -505,7 +508,7 @@ void UABP_NPCLead_C::AnimNotify_StateIdleEnd()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.AnimNotify_StateIdleStart
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UABP_NPCLead_C::AnimNotify_StateIdleStart()
 {
@@ -522,11 +525,11 @@ void UABP_NPCLead_C::AnimNotify_StateIdleStart()
 
 
 // Function ABP_NPCLead.ABP_NPCLead_C.ExecuteUbergraph_ABP_NPCLead
-// (HasDefaults)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_NPCLead_C::ExecuteUbergraph_ABP_NPCLead(int EntryPoint)
+void UABP_NPCLead_C::STATIC_ExecuteUbergraph_ABP_NPCLead(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_NPCLead.ABP_NPCLead_C.ExecuteUbergraph_ABP_NPCLead");
 

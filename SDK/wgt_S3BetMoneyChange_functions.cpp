@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.InitData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void Uwgt_S3BetMoneyChange_C::InitData()
+void Uwgt_S3BetMoneyChange_C::STATIC_InitData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.InitData");
 
@@ -31,7 +31,7 @@ void Uwgt_S3BetMoneyChange_C::InitData()
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.SetNextData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            addFuda                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +43,7 @@ void Uwgt_S3BetMoneyChange_C::SetNextData(int addFuda)
 	params.addFuda = addFuda;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +52,7 @@ void Uwgt_S3BetMoneyChange_C::SetNextData(int addFuda)
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_S3BetMoneyChange_C::Construct()
 {
@@ -68,7 +69,7 @@ void Uwgt_S3BetMoneyChange_C::Construct()
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -90,15 +91,16 @@ void Uwgt_S3BetMoneyChange_C::Tick(const struct FGeometry& MyGeometry, float InD
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3BetMoneyChange_C::STATIC_BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
 	Uwgt_S3BetMoneyChange_C_BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,15 +109,16 @@ void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Left_K2Node_ComponentBoundEvent_0
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3BetMoneyChange_C::STATIC_BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
 	Uwgt_S3BetMoneyChange_C_BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,15 +127,16 @@ void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Top_K2Node_ComponentBoundEvent_1_
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3BetMoneyChange_C::STATIC_BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
 	Uwgt_S3BetMoneyChange_C_BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_2_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,15 +145,16 @@ void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Right_K2Node_ComponentBoundEvent_
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3BetMoneyChange_C::STATIC_BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
 	Uwgt_S3BetMoneyChange_C_BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,11 +163,11 @@ void Uwgt_S3BetMoneyChange_C::BndEvt__PushAnim_Down_K2Node_ComponentBoundEvent_3
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.ExecuteUbergraph_wgt_S3BetMoneyChange
-// (HasDefaults)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3BetMoneyChange_C::ExecuteUbergraph_wgt_S3BetMoneyChange(int EntryPoint)
+void Uwgt_S3BetMoneyChange_C::STATIC_ExecuteUbergraph_wgt_S3BetMoneyChange(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.ExecuteUbergraph_wgt_S3BetMoneyChange");
 
@@ -170,6 +175,7 @@ void Uwgt_S3BetMoneyChange_C::ExecuteUbergraph_wgt_S3BetMoneyChange(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,7 +184,7 @@ void Uwgt_S3BetMoneyChange_C::ExecuteUbergraph_wgt_S3BetMoneyChange(int EntryPoi
 
 
 // Function wgt_S3BetMoneyChange.wgt_S3BetMoneyChange_C.ED_AnimFinish__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void Uwgt_S3BetMoneyChange_C::ED_AnimFinish__DelegateSignature()
 {

@@ -27,14 +27,14 @@ public:
 	class US3WidgetToRenderTargetComponent*            S3WidgetToRenderTarget;                                   // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______2__Direction_CB3DEBB842DE3B170505139AF622A3AB;     // 0x0648(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0649(0x0007) MISSED OFFSET
-	class UTimelineComponent*                          UnknownVar01;                                           // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar01;                                          // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______1__Direction_FFBABF144E519BFC8B093F910B63891F;     // 0x0658(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x7];                                       // 0x0659(0x0007) MISSED OFFSET
-	class UTimelineComponent*						   UnknownVar02;                                           // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar02;                                          // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              _______0_FOV_1FF4F8B6467771CCB64E9BB67983957A;            // 0x0668(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_1FF4F8B6467771CCB64E9BB67983957A;     // 0x066C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x066D(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          UnknownVar03;                                             // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent* UnknownVar03;                                          // 0x0670(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              BeepRate;                                                 // 0x0678(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                BeepCount;                                                // 0x067C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                HighScore;                                                // 0x0680(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -63,26 +63,26 @@ public:
 	}
 
 
-	void MaterialInitialize();
+	void STATIC_MaterialInitialize();
 	void InitAsyncLoad(bool* dummy);
 	void FinalizeSoundPlayer();
-	void EnableBGM(bool Condition);
+	void STATIC_EnableBGM(bool Condition);
 	void InitializeSoundPlayer();
-	void FinalizeGame(bool IsHighScore, int HighScore, int LastSocre);
-	void PlayMultUp(int Mult);
-	void Load();
+	void STATIC_FinalizeGame(bool IsHighScore, int HighScore, int LastSocre);
+	void STATIC_PlayMultUp(int Mult);
+	void STATIC_Load();
 	void Save(int hi_Score, int last_score);
 	void ItemGetCheck(int* item_count1);
-	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
+	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
 	void PlayLevelUp();
-	void PlayGameOver();
+	void STATIC_PlayGameOver();
 	void PlayOneUp();
 	void FinishGame();
 	void PlayQTEFailure();
 	void PlayQTESuccess();
 	void ReplayBeep();
 	void PlayQTEBeep(bool Condition);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void UnknownFunc01();
 	void Push_D_Right();
 	void Push_D_Left();
@@ -109,20 +109,20 @@ public:
 	void LoseMiniGame();
 	void Event_PlayBGM();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void Zoom();
 	void Unzoom();
 	void EndFlashingHighScore();
 	void MapBGMStop();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
-	void ResumeMiniGame(const struct FString& ResumeKeyword);
-	void OnTalkScriptEvent(int EventNumber);
+	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
+	void STATIC_OnTalkScriptEvent(int EventNumber);
 	void CancelMiniGame();
 	void OnFinishedFadeEndGame();
 	void OnMaterialLoadEnd(const struct FString& LoadId, class UObject* LoadedObject);
-	void ExecuteUbergraph_BP_ExciteQTE3(int EntryPoint);
-	void FailFinished_Restart__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BP_ExciteQTE3(int EntryPoint);
+	void STATIC_FailFinished_Restart__DelegateSignature();
 };
 
 

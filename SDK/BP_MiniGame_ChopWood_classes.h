@@ -139,13 +139,13 @@ public:
 	}
 
 
-	void UpdateMeshWetness();
-	TArray<struct FS3DetectActionParam> GetDetectAction();
+	void STATIC_UpdateMeshWetness();
+	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
 	void SetVisibleUIButtonIcon(bool Visible);
 	class UMeshComponent* GetClothMeshComponent();
-	void InitAsyncLoad(bool* dummy);
+	void STATIC_InitAsyncLoad(bool* dummy);
 	void StopAllChopBGM();
-	void StopChopBGM(TEnumAsByte<E_MiniGame_CW_BGMType> Index);
+	void STATIC_StopChopBGM(TEnumAsByte<E_MiniGame_CW_BGMType> Index);
 	void PlayChopBGMFromCue(TEnumAsByte<E_MiniGame_CW_BGMType> Type);
 	void DecideWoodId();
 	void UpdateChopCount();
@@ -182,9 +182,9 @@ public:
 	void ReceiveBeginPlay();
 	void GameStart();
 	void AxAction();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ResetResultMenuEvent();
-	void PlayGetWoodMotion(float Angle);
+	void STATIC_PlayGetWoodMotion(float Angle);
 	void ReadyWood();
 	void SetXmoveTimeLine();
 	void GameStartEvent();

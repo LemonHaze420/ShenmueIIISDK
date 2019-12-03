@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.GetFadeTime
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetResponse, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_ActorVisibleControl_C::GetFadeTime()
+float ABP_ActorVisibleControl_C::STATIC_GetFadeTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.GetFadeTime");
 
@@ -35,7 +35,7 @@ float ABP_ActorVisibleControl_C::GetFadeTime()
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.GetCharFadeComponent
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -49,6 +49,7 @@ void ABP_ActorVisibleControl_C::GetCharFadeComponent(class AActor* Target, bool*
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,11 +63,11 @@ void ABP_ActorVisibleControl_C::GetCharFadeComponent(class AActor* Target, bool*
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.SetFadeTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ActorVisibleControl_C::SetFadeTime(float FadeTime)
+void ABP_ActorVisibleControl_C::STATIC_SetFadeTime(float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.SetFadeTime");
 
@@ -82,7 +83,7 @@ void ABP_ActorVisibleControl_C::SetFadeTime(float FadeTime)
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.AddIgnoreActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -94,6 +95,7 @@ void ABP_ActorVisibleControl_C::AddIgnoreActor(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +104,7 @@ void ABP_ActorVisibleControl_C::AddIgnoreActor(class AActor* Actor)
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.CanEndOverlapEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -124,7 +126,7 @@ void ABP_ActorVisibleControl_C::CanEndOverlapEvent(bool* CAN)
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.SetVisibleControlRadius
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          NewRadius                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -144,11 +146,11 @@ void ABP_ActorVisibleControl_C::SetVisibleControlRadius(float NewRadius)
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.SetEnbledVisibleControl
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ActorVisibleControl_C::SetEnbledVisibleControl(bool Enabled)
+void ABP_ActorVisibleControl_C::STATIC_SetEnbledVisibleControl(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.SetEnbledVisibleControl");
 
@@ -156,6 +158,7 @@ void ABP_ActorVisibleControl_C::SetEnbledVisibleControl(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,11 +167,11 @@ void ABP_ActorVisibleControl_C::SetEnbledVisibleControl(bool Enabled)
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.ShowNPC
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ActorVisibleControl_C::ShowNPC(class AActor* Actor)
+void ABP_ActorVisibleControl_C::STATIC_ShowNPC(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.ShowNPC");
 
@@ -184,7 +187,7 @@ void ABP_ActorVisibleControl_C::ShowNPC(class AActor* Actor)
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.HideNPC
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Hide                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -208,7 +211,7 @@ void ABP_ActorVisibleControl_C::HideNPC(class AActor* Actor, bool* Hide)
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 
 void ABP_ActorVisibleControl_C::UserConstructionScript()
 {
@@ -217,6 +220,7 @@ void ABP_ActorVisibleControl_C::UserConstructionScript()
 	ABP_ActorVisibleControl_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,15 +229,16 @@ void ABP_ActorVisibleControl_C::UserConstructionScript()
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_ActorVisibleControl_C::ReceiveBeginPlay()
+void ABP_ActorVisibleControl_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.ReceiveBeginPlay");
 
 	ABP_ActorVisibleControl_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,11 +247,11 @@ void ABP_ActorVisibleControl_C::ReceiveBeginPlay()
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ActorVisibleControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_ActorVisibleControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.ReceiveEndPlay");
 
@@ -254,6 +259,7 @@ void ABP_ActorVisibleControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -262,7 +268,7 @@ void ABP_ActorVisibleControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -271,7 +277,7 @@ void ABP_ActorVisibleControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_ActorVisibleControl_C::BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_ActorVisibleControl_C::STATIC_BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -292,7 +298,7 @@ void ABP_ActorVisibleControl_C::BndEvt__VisibleControlArea_K2Node_ComponentBound
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Private, Protected, Delegate, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -310,6 +316,7 @@ void ABP_ActorVisibleControl_C::BndEvt__VisibleControlArea_K2Node_ComponentBound
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -318,7 +325,7 @@ void ABP_ActorVisibleControl_C::BndEvt__VisibleControlArea_K2Node_ComponentBound
 
 
 // Function BP_ActorVisibleControl.BP_ActorVisibleControl_C.ExecuteUbergraph_BP_ActorVisibleControl
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Public, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

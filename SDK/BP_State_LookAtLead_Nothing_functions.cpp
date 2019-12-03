@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtLead_Nothing.BP_State_LookAtLead_Nothing_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtLead_Nothing_C::StateEnter(float Delta, bool* bProcessing)
+void UBP_State_LookAtLead_Nothing_C::STATIC_StateEnter(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtLead_Nothing.BP_State_LookAtLead_Nothing_C.StateEnter");
 
@@ -27,6 +27,7 @@ void UBP_State_LookAtLead_Nothing_C::StateEnter(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

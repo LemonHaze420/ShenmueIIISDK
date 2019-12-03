@@ -29,16 +29,16 @@ public:
 	}
 
 
-	void ForceAnimationUpdate(float DeltaTime);
+	void STATIC_ForceAnimationUpdate(float DeltaTime);
 	void CanAvoidance(bool* bCan);
-	struct FVector GetTargetActorEyeLocationForTraceCheck(class AActor* InActor, const struct FVector& InOwnerLocation);
-	struct FVector GetTargetActorLocationForCheck(class AActor* InActor);
+	struct FVector STATIC_GetTargetActorEyeLocationForTraceCheck(class AActor* InActor, const struct FVector& InOwnerLocation);
+	struct FVector STATIC_GetTargetActorLocationForCheck(class AActor* InActor);
 	float GetDistanceToLeaveForCheck(class AActor* TargetActor);
 	void IsAvoiddableDecide(bool* bExecution);
 	void IsShowItemCollisionCheck(const struct FVector& ActorLocation, bool* bHitCollision);
 	void AvoidableTest(const struct FVector& ActorLocation, bool bDesperate, bool* bSuccessAvoidable);
 	void IsSitMotionPlayer(TArray<class AActor*>* TargetActors, bool* bSit);
-	void IsExistShowItemTask(bool* bReturnValue);
+	void STATIC_IsExistShowItemTask(bool* bReturnValue);
 	void ProcessAvoidable(bool* bProcessed);
 	void ReceiveBeginPlay();
 	void BeginTalk();

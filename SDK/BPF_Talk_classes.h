@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void STATIC_IsCharacterReadyAC(class AActor* TargetCharacter, class UObject* __WorldContext, bool* bReady);
+	void IsCharacterReadyAC(class AActor* TargetCharacter, class UObject* __WorldContext, bool* bReady);
 	void STATIC_IsCharacterReadyTalk(class AActor* TargetCharacter, class AActor* TalkTo, class UObject* __WorldContext, bool* bReady);
-	void STATIC_getS3TalkEventManager(class UObject* __WorldContext, class ABP_TalkEventManager_C** TalkEventManager);
+	void getS3TalkEventManager(class UObject* __WorldContext, class ABP_TalkEventManager_C** TalkEventManager);
 };
 
 

@@ -32,15 +32,15 @@ public:
 
 
 	void GetShoulderInputImage(TEnumAsByte<EGamepadShoulder> Selection, class UTexture2D** Image);
-	void SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> Modifier);
-	TEnumAsByte<EShoulderButtonStyle> GetShoulderStyle();
-	void GetModifierInputImage(EBTL_HoldInputType Selection, class UTexture2D** Image);
-	void SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style);
-	void SetInputByModifierButton(EBTL_HoldInputType Modifier);
-	void SetInputByActionName(const struct FName& Selection);
-	void GetAttackInputImage(const struct FName& Selection, class UTexture2D** Graphic);
-	void Construct();
-	void ExecuteUbergraph_wgt_SkillInput(int EntryPoint);
+	void STATIC_SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> Modifier);
+	TEnumAsByte<EShoulderButtonStyle> STATIC_GetShoulderStyle();
+	void STATIC_GetModifierInputImage(EBTL_HoldInputType Selection, class UTexture2D** Image);
+	void STATIC_SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style);
+	void STATIC_SetInputByModifierButton(EBTL_HoldInputType Modifier);
+	void STATIC_SetInputByActionName(const struct FName& Selection);
+	void STATIC_GetAttackInputImage(const struct FName& Selection, class UTexture2D** Graphic);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_wgt_SkillInput(int EntryPoint);
 };
 
 

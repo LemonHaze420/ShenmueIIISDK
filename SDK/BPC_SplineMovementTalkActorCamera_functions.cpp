@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_SplineMovementTalkActorCamera.BPC_SplineMovementTalkActorCamera_C.SplineMovingProcess
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_SplineMovementTalkActorCamera_C::SplineMovingProcess(bool* Result)
+void UBPC_SplineMovementTalkActorCamera_C::STATIC_SplineMovingProcess(bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SplineMovementTalkActorCamera.BPC_SplineMovementTalkActorCamera_C.SplineMovingProcess");
 
@@ -36,7 +36,7 @@ void UBPC_SplineMovementTalkActorCamera_C::SplineMovingProcess(bool* Result)
 
 
 // Function BPC_SplineMovementTalkActorCamera.BPC_SplineMovementTalkActorCamera_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 
 void UBPC_SplineMovementTalkActorCamera_C::ReceiveBeginPlay()
 {
@@ -45,6 +45,7 @@ void UBPC_SplineMovementTalkActorCamera_C::ReceiveBeginPlay()
 	UBPC_SplineMovementTalkActorCamera_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +54,7 @@ void UBPC_SplineMovementTalkActorCamera_C::ReceiveBeginPlay()
 
 
 // Function BPC_SplineMovementTalkActorCamera.BPC_SplineMovementTalkActorCamera_C.ForceMoveSpline
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 
 void UBPC_SplineMovementTalkActorCamera_C::ForceMoveSpline()
 {
@@ -62,6 +63,7 @@ void UBPC_SplineMovementTalkActorCamera_C::ForceMoveSpline()
 	UBPC_SplineMovementTalkActorCamera_C_ForceMoveSpline_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,11 +72,11 @@ void UBPC_SplineMovementTalkActorCamera_C::ForceMoveSpline()
 
 
 // Function BPC_SplineMovementTalkActorCamera.BPC_SplineMovementTalkActorCamera_C.ExecuteUbergraph_BPC_SplineMovementTalkActorCamera
-// ()
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_SplineMovementTalkActorCamera_C::ExecuteUbergraph_BPC_SplineMovementTalkActorCamera(int EntryPoint)
+void UBPC_SplineMovementTalkActorCamera_C::STATIC_ExecuteUbergraph_BPC_SplineMovementTalkActorCamera(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SplineMovementTalkActorCamera.BPC_SplineMovementTalkActorCamera_C.ExecuteUbergraph_BPC_SplineMovementTalkActorCamera");
 

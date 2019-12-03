@@ -41,22 +41,22 @@ public:
 
 
 	void SetActiveLight(bool Enabled);
-	void ToggleActive();
+	void STATIC_ToggleActive();
 	void UpdateLightActive();
-	void CalcLightPos(const struct FVector& pelvis, struct FVector* ReturnPos);
-	void CalcLightPosition();
-	void UserConstructionScript();
-	void EndCutscene();
-	void StartCutscene();
-	void StartTalk();
-	void EndTalk();
-	void ChangeTalkCamera();
-	void UnbindEventDispacher();
-	void BindEventDispatcher();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void EndOwner(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_CalcLightPos(const struct FVector& pelvis, struct FVector* ReturnPos);
+	void STATIC_CalcLightPosition();
+	void STATIC_UserConstructionScript();
+	void STATIC_EndCutscene();
+	void STATIC_StartCutscene();
+	void STATIC_StartTalk();
+	void STATIC_EndTalk();
+	void STATIC_ChangeTalkCamera();
+	void STATIC_UnbindEventDispacher();
+	void STATIC_BindEventDispatcher();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_EndOwner(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_S3ReflectorBoardActor(int EntryPoint);
 };
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ int ABP_S3MemopadManager_C::GetPriority()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -46,6 +46,7 @@ TArray<struct FS3DetectActionParam> ABP_S3MemopadManager_C::GetDetectAction()
 	ABP_S3MemopadManager_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,11 +57,11 @@ TArray<struct FS3DetectActionParam> ABP_S3MemopadManager_C::GetDetectAction()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.CheckOpenMainEventPage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, Delegate, NetServer, Const)
 // Parameters:
 // bool                           IsOpenMainEventPage            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3MemopadManager_C::CheckOpenMainEventPage(bool* IsOpenMainEventPage)
+void ABP_S3MemopadManager_C::STATIC_CheckOpenMainEventPage(bool* IsOpenMainEventPage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.CheckOpenMainEventPage");
 
@@ -78,7 +79,7 @@ void ABP_S3MemopadManager_C::CheckOpenMainEventPage(bool* IsOpenMainEventPage)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.GetIsUnreadMainEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsUnreadMainEvent              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -89,6 +90,7 @@ void ABP_S3MemopadManager_C::GetIsUnreadMainEvent(bool* IsUnreadMainEvent)
 	ABP_S3MemopadManager_C_GetIsUnreadMainEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,11 +102,11 @@ void ABP_S3MemopadManager_C::GetIsUnreadMainEvent(bool* IsUnreadMainEvent)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.GetIsNowSubEventPage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsNowSubEventPage              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3MemopadManager_C::GetIsNowSubEventPage(bool* IsNowSubEventPage)
+void ABP_S3MemopadManager_C::STATIC_GetIsNowSubEventPage(bool* IsNowSubEventPage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.GetIsNowSubEventPage");
 
@@ -122,17 +124,18 @@ void ABP_S3MemopadManager_C::GetIsNowSubEventPage(bool* IsNowSubEventPage)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.GetIsSubEventOngoing
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Delegate, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           IsSubEventOngoing              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3MemopadManager_C::GetIsSubEventOngoing(bool* IsSubEventOngoing)
+void ABP_S3MemopadManager_C::STATIC_GetIsSubEventOngoing(bool* IsSubEventOngoing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.GetIsSubEventOngoing");
 
 	ABP_S3MemopadManager_C_GetIsSubEventOngoing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,7 +147,7 @@ void ABP_S3MemopadManager_C::GetIsSubEventOngoing(bool* IsSubEventOngoing)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.CursoFade
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           FadeIn                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -156,6 +159,7 @@ void ABP_S3MemopadManager_C::CursoFade(bool FadeIn)
 	params.FadeIn = FadeIn;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,9 +168,9 @@ void ABP_S3MemopadManager_C::CursoFade(bool FadeIn)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.InitMemoPage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ABP_S3MemopadManager_C::InitMemoPage()
+void ABP_S3MemopadManager_C::STATIC_InitMemoPage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.InitMemoPage");
 
@@ -181,7 +185,7 @@ void ABP_S3MemopadManager_C::InitMemoPage()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.CheckCanUSeMemopad
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           CanUse                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -203,9 +207,9 @@ void ABP_S3MemopadManager_C::CheckCanUSeMemopad(bool* CanUse)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetBlink
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3MemopadManager_C::SetBlink()
+void ABP_S3MemopadManager_C::STATIC_SetBlink()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetBlink");
 
@@ -219,16 +223,16 @@ void ABP_S3MemopadManager_C::SetBlink()
 }
 
 
-// Function BP_S3MemopadManager.BP_S3MemopadManager_C.isDetected
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_S3MemopadManager.BP_S3MemopadManager_C.IsDetected
+// (NetReliable, NetRequest, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
-// bool                           isDetected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsDetected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3MemopadManager_C::isDetected(bool* isDetected)
+void ABP_S3MemopadManager_C::STATIC_IsDetected(bool* IsDetected)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.isDetected");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.IsDetected");
 
-	ABP_S3MemopadManager_C_isDetected_Params params;
+	ABP_S3MemopadManager_C_IsDetected_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -236,13 +240,13 @@ void ABP_S3MemopadManager_C::isDetected(bool* isDetected)
 
 	fn->FunctionFlags = flags;
 
-	if (isDetected != nullptr)
-		*isDetected = params.isDetected;
+	if (IsDetected != nullptr)
+		*IsDetected = params.IsDetected;
 }
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C._dbg_print(memoFlags)
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Already                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -262,7 +266,7 @@ void ABP_S3MemopadManager_C::_dbg_print_memoFlags_(bool Already)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C._dbg_check(memoFlags)
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Already                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FString>         Flags                          (Parm, OutParm, ZeroConstructor)
@@ -286,7 +290,7 @@ void ABP_S3MemopadManager_C::_dbg_check_memoFlags_(bool Already, TArray<struct F
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.checkEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, NetMulticast, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           nowDisableMemopadEvent         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -307,20 +311,21 @@ void ABP_S3MemopadManager_C::checkEvent(bool* nowDisableMemopadEvent)
 }
 
 
-// Function BP_S3MemopadManager.BP_S3MemopadManager_C.setDenyFlag
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetDenyFlag
+// (Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
-// bool                           deny                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Deny                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           succes                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3MemopadManager_C::setDenyFlag(bool deny, bool* succes)
+void ABP_S3MemopadManager_C::SetDenyFlag(bool Deny, bool* succes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.setDenyFlag");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetDenyFlag");
 
-	ABP_S3MemopadManager_C_setDenyFlag_Params params;
-	params.deny = deny;
+	ABP_S3MemopadManager_C_SetDenyFlag_Params params;
+	params.Deny = Deny;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -332,7 +337,7 @@ void ABP_S3MemopadManager_C::setDenyFlag(bool deny, bool* succes)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.firstAttach
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -354,15 +359,16 @@ void ABP_S3MemopadManager_C::firstAttach(bool* Success)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C._dbgPrint(location)
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate)
 
-void ABP_S3MemopadManager_C::_dbgPrint_location_()
+void ABP_S3MemopadManager_C::STATIC__dbgPrint_location_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C._dbgPrint(location)");
 
 	ABP_S3MemopadManager_C__dbgPrint_location__Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -371,7 +377,7 @@ void ABP_S3MemopadManager_C::_dbgPrint_location_()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3MemopadManager_C::UserConstructionScript()
 {
@@ -380,6 +386,7 @@ void ABP_S3MemopadManager_C::UserConstructionScript()
 	ABP_S3MemopadManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,7 +395,7 @@ void ABP_S3MemopadManager_C::UserConstructionScript()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -408,15 +415,16 @@ void ABP_S3MemopadManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3MemopadManager_C::ReceiveBeginPlay()
+void ABP_S3MemopadManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.ReceiveBeginPlay");
 
 	ABP_S3MemopadManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -425,15 +433,16 @@ void ABP_S3MemopadManager_C::ReceiveBeginPlay()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.delayedFirstAttach
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3MemopadManager_C::delayedFirstAttach()
+void ABP_S3MemopadManager_C::STATIC_delayedFirstAttach()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.delayedFirstAttach");
 
 	ABP_S3MemopadManager_C_delayedFirstAttach_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -442,15 +451,16 @@ void ABP_S3MemopadManager_C::delayedFirstAttach()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.doCmd_FirstDetectRetain(memopadManager)
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3MemopadManager_C::doCmd_FirstDetectRetain_memopadManager_()
+void ABP_S3MemopadManager_C::STATIC_doCmd_FirstDetectRetain_memopadManager_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.doCmd_FirstDetectRetain(memopadManager)");
 
 	ABP_S3MemopadManager_C_doCmd_FirstDetectRetain_memopadManager__Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -459,15 +469,16 @@ void ABP_S3MemopadManager_C::doCmd_FirstDetectRetain_memopadManager_()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.delayedRegistCheck(detector)
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3MemopadManager_C::delayedRegistCheck_detector_()
+void ABP_S3MemopadManager_C::STATIC_delayedRegistCheck_detector_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.delayedRegistCheck(detector)");
 
 	ABP_S3MemopadManager_C_delayedRegistCheck_detector__Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -476,15 +487,16 @@ void ABP_S3MemopadManager_C::delayedRegistCheck_detector_()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.catch_onEndScreenIn
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3MemopadManager_C::catch_onEndScreenIn()
+void ABP_S3MemopadManager_C::STATIC_catch_onEndScreenIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.catch_onEndScreenIn");
 
 	ABP_S3MemopadManager_C_catch_onEndScreenIn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -493,15 +505,16 @@ void ABP_S3MemopadManager_C::catch_onEndScreenIn()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.Finalize
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3MemopadManager_C::Finalize()
+void ABP_S3MemopadManager_C::STATIC_Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.Finalize");
 
 	ABP_S3MemopadManager_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -510,7 +523,7 @@ void ABP_S3MemopadManager_C::Finalize()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_15
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -530,7 +543,7 @@ void ABP_S3MemopadManager_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_15(float
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_19
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -550,15 +563,16 @@ void ABP_S3MemopadManager_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_19(flo
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.ForceDestroy
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3MemopadManager_C::ForceDestroy()
+void ABP_S3MemopadManager_C::STATIC_ForceDestroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.ForceDestroy");
 
 	ABP_S3MemopadManager_C_ForceDestroy_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -567,7 +581,7 @@ void ABP_S3MemopadManager_C::ForceDestroy()
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -579,6 +593,7 @@ void ABP_S3MemopadManager_C::InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEve
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -587,7 +602,7 @@ void ABP_S3MemopadManager_C::InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEve
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_3
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -599,6 +614,7 @@ void ABP_S3MemopadManager_C::InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEve
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -607,7 +623,7 @@ void ABP_S3MemopadManager_C::InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEve
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.StartMemopad
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            OpenPageIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -619,6 +635,7 @@ void ABP_S3MemopadManager_C::StartMemopad(int OpenPageIndex)
 	params.OpenPageIndex = OpenPageIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -627,7 +644,7 @@ void ABP_S3MemopadManager_C::StartMemopad(int OpenPageIndex)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetEnable_CancelButton
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           bUse                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -639,6 +656,7 @@ void ABP_S3MemopadManager_C::SetEnable_CancelButton(bool bUse)
 	params.bUse = bUse;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -647,7 +665,7 @@ void ABP_S3MemopadManager_C::SetEnable_CancelButton(bool bUse)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetEnable_NewPageButton
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           Use                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -659,6 +677,7 @@ void ABP_S3MemopadManager_C::SetEnable_NewPageButton(bool Use)
 	params.Use = Use;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -667,7 +686,7 @@ void ABP_S3MemopadManager_C::SetEnable_NewPageButton(bool Use)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.InpAxisEvt_ZoomAxis_K2Node_InputAxisEvent_5
-// (BlueprintEvent)
+// (NetReliable, Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -679,6 +698,7 @@ void ABP_S3MemopadManager_C::InpAxisEvt_ZoomAxis_K2Node_InputAxisEvent_5(float A
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -687,7 +707,7 @@ void ABP_S3MemopadManager_C::InpAxisEvt_ZoomAxis_K2Node_InputAxisEvent_5(float A
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetEnable_StartEndButton
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Active_StartPage               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Active_EndPage                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -709,7 +729,7 @@ void ABP_S3MemopadManager_C::SetEnable_StartEndButton(bool Active_StartPage, boo
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -721,6 +741,7 @@ void ABP_S3MemopadManager_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -729,7 +750,7 @@ void ABP_S3MemopadManager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Native, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -741,6 +762,7 @@ void ABP_S3MemopadManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -749,7 +771,7 @@ void ABP_S3MemopadManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.ExecuteUbergraph_BP_S3MemopadManager
-// (HasDefaults)
+// (NetMulticast, Private, HasOutParms, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -769,9 +791,9 @@ void ABP_S3MemopadManager_C::ExecuteUbergraph_BP_S3MemopadManager(int EntryPoint
 
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C.ED_MemoFinish__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3MemopadManager_C::ED_MemoFinish__DelegateSignature()
+void ABP_S3MemopadManager_C::STATIC_ED_MemoFinish__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3MemopadManager.BP_S3MemopadManager_C.ED_MemoFinish__DelegateSignature");
 

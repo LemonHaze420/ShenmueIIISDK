@@ -46,7 +46,7 @@ public:
 	float                                              _______0_FOV_B763085E4A668793E8440AADBCC3DC69;            // 0x06C0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_B763085E4A668793E8440AADBCC3DC69;     // 0x06C4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x06C5(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          UnknownVar01;                                           // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar01;                                          // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               IsPlaying;                                                // 0x06D0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsEnd;                                                    // 0x06D1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               right_hit;                                                // 0x06D2(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -120,32 +120,32 @@ public:
 	}
 
 
-	void LoadScore();
-	void SaveScore();
-	void UpdateQte();
+	void STATIC_LoadScore();
+	void STATIC_SaveScore();
+	void STATIC_UpdateQte();
 	void MakeQteTriangle();
 	void RemoveQte();
-	void InitAsyncLoad(bool* dummy);
-	void DeleteScoreLightActor();
-	void CreateScoreLightActor();
+	void STATIC_InitAsyncLoad(bool* dummy);
+	void STATIC_DeleteScoreLightActor();
+	void STATIC_CreateScoreLightActor();
 	void SettingSEPlayer(bool IsDestroy);
-	void UpdatePatLight();
-	void StopPatLight();
+	void STATIC_UpdatePatLight();
+	void STATIC_StopPatLight();
 	void StartPatLight();
-	void DebugSetting();
+	void STATIC_DebugSetting();
 	void SetCarOffset();
 	void GetNowArrowRot(float* RetRot);
 	void ScoreLightAllOff();
-	void GetScoreLIghtBlinkIndex(bool ArgMy, int* RetIndex);
+	void STATIC_GetScoreLIghtBlinkIndex(bool ArgMy, int* RetIndex);
 	void UpdateDispScoreLight(bool ArgOn);
-	void ScoreCheck();
+	void STATIC_ScoreCheck();
 	void ParamSetting();
 	void ItemGetCheck(int* item_count1);
-	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
-	void CreateRootPoint();
+	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	void STATIC_CreateRootPoint();
 	void AddScore(bool InputPin, int AddNum);
-	void updateLocation();
-	void setCarRotation();
+	void STATIC_updateLocation();
+	void STATIC_setCarRotation();
 	void UserConstructionScript();
 	void UnknownFunc01();
 	void LightFlickerTimeline__FinishedFunc();
@@ -159,43 +159,43 @@ public:
 	void StartMiniGame();
 	void EndMiniGame();
 	void RestartMiniGame();
-	void BGMPlay(int Index);
-	void BGMStop(int Index);
+	void STATIC_BGMPlay(int Index);
+	void STATIC_BGMStop(int Index);
 	void Reset_Start();
 	void Reset_Info_Save();
-	void SE_LampPlay(bool IsEnemy);
+	void STATIC_SE_LampPlay(bool IsEnemy);
 	void WinMiniGame();
 	void LoseMiniGame();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void Zoom();
 	void Unzoom();
-	void BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_131(float AxisValue);
-	void Right_Stick_X(float InputPin);
+	void STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_BndEvt__LeftMoveStop_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void STATIC_BndEvt__RightMoveStop_K2Node_ComponentBoundEvent_6_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_131(float AxisValue);
+	void STATIC_Right_Stick_X(float InputPin);
 	void LightFlicker();
 	void LightStop();
 	void PushUp();
 	void PushDown();
-	void BndEvt__Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__life_check_00_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_BndEvt__Box1_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_BndEvt__life_check_00_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void RestartTick();
 	void LapsCheck();
 	void RotateArrow();
 	void Play_Use_Coin();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
-	void ResumeMiniGame(const struct FString& ResumeKeyword);
-	void OnTalkScriptEvent(int EventNumber);
+	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
+	void STATIC_OnTalkScriptEvent(int EventNumber);
 	void OnEndKihudaFlow();
 	void UsedCoin();
 	void GameStartEnd();
 	void CancelMiniGame();
 	void OnFinishedFadeEndGame();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void QteWidgetUpdate();
 	void OnEndGameOver();
 	void OnEndPerfect();

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGame_ST_Camera.BPC_MiniGame_ST_Camera_C.UpdateFollowArmCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UBPC_MiniGame_ST_Camera_C::UpdateFollowArmCamera(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

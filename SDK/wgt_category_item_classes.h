@@ -36,7 +36,7 @@ public:
 	void SetButtonSelected(bool bSelected);
 	void SetCursorEnabled(bool bEnabled);
 	void SetText(const struct FText& Text);
-	void ExecuteUbergraph_wgt_category_item(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_category_item(int EntryPoint);
 };
 
 

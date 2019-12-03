@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraAC_CraneUp_PBH_01.BP_TalkCameraAC_CraneUp_PBH_01_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_TalkCameraAC_CraneUp_PBH_01_C::UserConstructionScript()
 {
@@ -23,6 +23,7 @@ void ABP_TalkCameraAC_CraneUp_PBH_01_C::UserConstructionScript()
 	ABP_TalkCameraAC_CraneUp_PBH_01_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_TalkCameraAC_CraneUp_PBH_01_C::UserConstructionScript()
 
 
 // Function BP_TalkCameraAC_CraneUp_PBH_01.BP_TalkCameraAC_CraneUp_PBH_01_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCameraAC_CraneUp_PBH_01_C::ReceiveBeginPlay()
 {
@@ -40,6 +41,7 @@ void ABP_TalkCameraAC_CraneUp_PBH_01_C::ReceiveBeginPlay()
 	ABP_TalkCameraAC_CraneUp_PBH_01_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +50,11 @@ void ABP_TalkCameraAC_CraneUp_PBH_01_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraAC_CraneUp_PBH_01.BP_TalkCameraAC_CraneUp_PBH_01_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraAC_CraneUp_PBH_01_C::ReceiveTick(float DeltaSeconds)
+void ABP_TalkCameraAC_CraneUp_PBH_01_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_CraneUp_PBH_01.BP_TalkCameraAC_CraneUp_PBH_01_C.ReceiveTick");
 
@@ -60,6 +62,7 @@ void ABP_TalkCameraAC_CraneUp_PBH_01_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +71,7 @@ void ABP_TalkCameraAC_CraneUp_PBH_01_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraAC_CraneUp_PBH_01.BP_TalkCameraAC_CraneUp_PBH_01_C.ExecuteUbergraph_BP_TalkCameraAC_CraneUp_PBH_01
-// ()
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +83,7 @@ void ABP_TalkCameraAC_CraneUp_PBH_01_C::ExecuteUbergraph_BP_TalkCameraAC_CraneUp
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -71,18 +71,18 @@ public:
 	void Initialize();
 	void UpdateAppearWait(float DeltaSeconds);
 	void CheckWhack(bool* Hit);
-	void ChangeToNextState();
-	void ClearValue();
+	void STATIC_ChangeToNextState();
+	void STATIC_ClearValue();
 	void UpdateWhacked(float DeltaSeconds);
 	void UpdateReverse(float DeltaSeconds);
-	void UpdateAppear(float DeltaSeconds);
-	void UpDown(float DeltaSeconds, float moveSpeed, float DownLimit, bool* Reached);
+	void STATIC_UpdateAppear(float DeltaSeconds);
+	void STATIC_UpDown(float DeltaSeconds, float moveSpeed, float DownLimit, bool* Reached);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void Appear();
-	void OnEndLoad(const struct FString& LoadId, class UObject* LoadedObject);
-	void ExecuteUbergraph_BP_MiniGameMole(int EntryPoint);
+	void STATIC_OnEndLoad(const struct FString& LoadId, class UObject* LoadedObject);
+	void STATIC_ExecuteUbergraph_BP_MiniGameMole(int EntryPoint);
 	void MissDispacher__DelegateSignature();
 };
 

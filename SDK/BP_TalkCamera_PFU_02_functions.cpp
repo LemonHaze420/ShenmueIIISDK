@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_PFU_02.BP_TalkCamera_PFU_02_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_PFU_02_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_TalkCamera_PFU_02_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_PFU_02.BP_TalkCamera_PFU_02_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_PFU_02_C::ReceiveBeginPlay()
 {
@@ -48,7 +48,7 @@ void ABP_TalkCamera_PFU_02_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_PFU_02.BP_TalkCamera_PFU_02_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +60,7 @@ void ABP_TalkCamera_PFU_02_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +69,7 @@ void ABP_TalkCamera_PFU_02_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_PFU_02.BP_TalkCamera_PFU_02_C.ExecuteUbergraph_BP_TalkCamera_PFU_02
-// ()
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

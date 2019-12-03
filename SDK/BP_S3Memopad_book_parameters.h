@@ -407,7 +407,7 @@ struct ABP_S3Memopad_book_C_fade__UpdateFunc_Params
 };
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.򠪦􆖐񍳔_
-struct ABP_S3Memopad_book_C_UnknownFunc01__Params
+struct ABP_S3Memopad_book_C__UnknownFunc01__Params
 {
 };
 

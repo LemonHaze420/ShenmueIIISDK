@@ -30,8 +30,8 @@ public:
 	}
 
 
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_S3GameInstanceDebug(int EntryPoint);
 };
 

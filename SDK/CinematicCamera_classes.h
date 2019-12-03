@@ -12,31 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class CinematicCamera.CameraRig_Crane
-// 0x0030 (0x0358 - 0x0328)
-class ACameraRig_Crane : public AActor
-{
-public:
-	float                                              CranePitch;                                               // 0x0328(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CraneYaw;                                                 // 0x032C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              CraneArmLength;                                           // 0x0330(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bLockMountPitch;                                          // 0x0334(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bLockMountYaw;                                            // 0x0335(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x0336(0x0002) MISSED OFFSET
-	class USceneComponent*                             TransformComponent;                                       // 0x0338(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             CraneYawControl;                                          // 0x0340(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             CranePitchControl;                                        // 0x0348(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             CraneCameraMount;                                         // 0x0350(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Crane");
-		return ptr;
-	}
-
-};
-
-
 // Class CinematicCamera.CameraRig_Rail
 // 0x0020 (0x0348 - 0x0328)
 class ACameraRig_Rail : public AActor
@@ -114,6 +89,31 @@ public:
 	struct FString GetLensPresetName();
 	float GetHorizontalFieldOfView();
 	struct FString GetFilmbackPresetName();
+};
+
+
+// Class CinematicCamera.CameraRig_Crane
+// 0x0030 (0x0358 - 0x0328)
+class ACameraRig_Crane : public AActor
+{
+public:
+	float                                              CranePitch;                                               // 0x0328(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CraneYaw;                                                 // 0x032C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              CraneArmLength;                                           // 0x0330(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bLockMountPitch;                                          // 0x0334(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bLockMountYaw;                                            // 0x0335(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0336(0x0002) MISSED OFFSET
+	class USceneComponent*                             TransformComponent;                                       // 0x0338(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             CraneYawControl;                                          // 0x0340(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             CranePitchControl;                                        // 0x0348(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             CraneCameraMount;                                         // 0x0350(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class CinematicCamera.CameraRig_Crane");
+		return ptr;
+	}
+
 };
 
 

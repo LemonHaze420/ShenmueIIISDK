@@ -40,16 +40,16 @@ public:
 	}
 
 
-	void FollowEnd();
-	void FollowStart();
-	void SetCameraDefaultRelativeTransform(struct FTransform* trans);
-	void Update(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void SetCameraFollowTargetActor(class AActor* Actor);
-	void OnDestroyTargetActor(class AActor* DestroyedActor);
+	void STATIC_FollowEnd();
+	void STATIC_FollowStart();
+	void STATIC_SetCameraDefaultRelativeTransform(struct FTransform* trans);
+	void STATIC_Update(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_SetCameraFollowTargetActor(class AActor* Actor);
+	void STATIC_OnDestroyTargetActor(class AActor* DestroyedActor);
 	void ExecuteUbergraph_BPC_MiniGameFollowTargetCamera(int EntryPoint);
-	void OnReturnDefaultCameraRotation__DelegateSignature();
+	void STATIC_OnReturnDefaultCameraRotation__DelegateSignature();
 };
 
 

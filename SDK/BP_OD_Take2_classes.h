@@ -32,21 +32,21 @@ public:
 
 
 	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
-	int GetRewardMoney();
-	void UserConstructionScript();
-	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
-	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
-	void ResumeMiniGame(const struct FString& ResumeKeyword);
-	void OnTalkScriptEvent(int EventNumber);
+	int STATIC_GetRewardMoney();
+	void STATIC_UserConstructionScript();
+	void STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
+	void STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
+	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
+	void STATIC_OnTalkScriptEvent(int EventNumber);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void RestartMiniGame();
 	void EndMiniGame();
-	void HitCheck();
+	void STATIC_HitCheck();
 	void Otoshidama_End(bool is_success);
-	void Finalize_Check();
+	void STATIC_Finalize_Check();
 	void StartMiniGame();
-	void ExecuteUbergraph_BP_OD_Take2(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_OD_Take2(int EntryPoint);
 };
 
 

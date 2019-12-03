@@ -38,12 +38,12 @@ public:
 	}
 
 
-	void SetInsideVisible(ESlateVisibility InVisibility);
+	void STATIC_SetInsideVisible(ESlateVisibility InVisibility);
 	void SetGridScale(const struct FVector2D& Scale);
 	void InitializeGrid(bool Condition, const struct FVector2D& Scale);
-	void SetEnabledGrid(bool Enabled);
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_WBP_MenuFrameWide(int EntryPoint);
+	void STATIC_SetEnabledGrid(bool Enabled);
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_ExecuteUbergraph_WBP_MenuFrameWide(int EntryPoint);
 };
 
 

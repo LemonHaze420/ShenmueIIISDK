@@ -26,7 +26,7 @@ public:
 
 
 	void GetCameraManager(class ABP_TalkCameraManager_C** TalkCameraManager, bool* bSuccess);
-	void GetManager(class ABP_TalkEventManager_C** TalkEventManager, bool* bSuccess);
+	void STATIC_GetManager(class ABP_TalkEventManager_C** TalkEventManager, bool* bSuccess);
 };
 
 

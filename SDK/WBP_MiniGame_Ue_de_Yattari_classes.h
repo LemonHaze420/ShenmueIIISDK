@@ -27,8 +27,8 @@ public:
 	}
 
 
-	void Construct();
-	void ExecuteUbergraph_WBP_MiniGame_Ue_de_Yattari(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_WBP_MiniGame_Ue_de_Yattari(int EntryPoint);
 };
 
 

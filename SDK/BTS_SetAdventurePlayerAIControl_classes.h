@@ -26,8 +26,8 @@ public:
 	}
 
 
-	void ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ExecuteUbergraph_BTS_SetAdventurePlayerAIControl(int EntryPoint);
 };
 

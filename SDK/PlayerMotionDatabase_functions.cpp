@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.IndexMontageByInt
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class UAnimMontage*>    List                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            Int                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -40,7 +40,7 @@ void APlayerMotionDatabase_C::IndexMontageByInt(TArray<class UAnimMontage*> List
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_Event
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_PC_EventMontage> Event                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -53,6 +53,7 @@ void APlayerMotionDatabase_C::SearchMontage_Event(TEnumAsByte<EN_PC_EventMontage
 	params.Event = Event;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,7 +65,7 @@ void APlayerMotionDatabase_C::SearchMontage_Event(TEnumAsByte<EN_PC_EventMontage
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_KnockDoor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_DoorOpenType>   Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -88,13 +89,13 @@ void APlayerMotionDatabase_C::SearchMontage_KnockDoor(TEnumAsByte<EN_DoorOpenTyp
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_OpenDoor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_DoorOpenType>   Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           RightSide                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerMotionDatabase_C::SearchMontage_OpenDoor(TEnumAsByte<EN_DoorOpenType> Enum, bool RightSide, class UAnimMontage** Output)
+void APlayerMotionDatabase_C::STATIC_SearchMontage_OpenDoor(TEnumAsByte<EN_DoorOpenType> Enum, bool RightSide, class UAnimMontage** Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_OpenDoor");
 
@@ -103,6 +104,7 @@ void APlayerMotionDatabase_C::SearchMontage_OpenDoor(TEnumAsByte<EN_DoorOpenType
 	params.RightSide = RightSide;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,13 +116,13 @@ void APlayerMotionDatabase_C::SearchMontage_OpenDoor(TEnumAsByte<EN_DoorOpenType
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_TalkShow
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // TEnumAsByte<EN_SHOW_ID>        Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Crouch                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerMotionDatabase_C::SearchMontage_TalkShow(TEnumAsByte<EN_SHOW_ID> Item, bool Crouch, class UAnimMontage** Output)
+void APlayerMotionDatabase_C::STATIC_SearchMontage_TalkShow(TEnumAsByte<EN_SHOW_ID> Item, bool Crouch, class UAnimMontage** Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_TalkShow");
 
@@ -140,12 +142,12 @@ void APlayerMotionDatabase_C::SearchMontage_TalkShow(TEnumAsByte<EN_SHOW_ID> Ite
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_WalkEnd
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Right                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerMotionDatabase_C::SearchMontage_WalkEnd(bool Right, class UAnimMontage** Output)
+void APlayerMotionDatabase_C::STATIC_SearchMontage_WalkEnd(bool Right, class UAnimMontage** Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_WalkEnd");
 
@@ -153,6 +155,7 @@ void APlayerMotionDatabase_C::SearchMontage_WalkEnd(bool Right, class UAnimMonta
 	params.Right = Right;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,13 +167,13 @@ void APlayerMotionDatabase_C::SearchMontage_WalkEnd(bool Right, class UAnimMonta
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.IndexMontageByEnum
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<class UAnimMontage*>    List                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // unsigned char                  Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerMotionDatabase_C::IndexMontageByEnum(TArray<class UAnimMontage*> List, unsigned char Enum, class UAnimMontage** Output)
+void APlayerMotionDatabase_C::STATIC_IndexMontageByEnum(TArray<class UAnimMontage*> List, unsigned char Enum, class UAnimMontage** Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerMotionDatabase.PlayerMotionDatabase_C.IndexMontageByEnum");
 
@@ -190,7 +193,7 @@ void APlayerMotionDatabase_C::IndexMontageByEnum(TArray<class UAnimMontage*> Lis
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.SearchMontage_Turn
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_PC_TurnDirection10> TurnDir10                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -214,7 +217,7 @@ void APlayerMotionDatabase_C::SearchMontage_Turn(TEnumAsByte<EN_PC_TurnDirection
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.Initialize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Public, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void APlayerMotionDatabase_C::Initialize()
 {
@@ -223,6 +226,7 @@ void APlayerMotionDatabase_C::Initialize()
 	APlayerMotionDatabase_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,7 +235,7 @@ void APlayerMotionDatabase_C::Initialize()
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void APlayerMotionDatabase_C::UserConstructionScript()
 {
@@ -240,6 +244,7 @@ void APlayerMotionDatabase_C::UserConstructionScript()
 	APlayerMotionDatabase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -248,7 +253,7 @@ void APlayerMotionDatabase_C::UserConstructionScript()
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void APlayerMotionDatabase_C::ReceiveBeginPlay()
 {
@@ -265,11 +270,11 @@ void APlayerMotionDatabase_C::ReceiveBeginPlay()
 
 
 // Function PlayerMotionDatabase.PlayerMotionDatabase_C.ExecuteUbergraph_PlayerMotionDatabase
-// ()
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerMotionDatabase_C::ExecuteUbergraph_PlayerMotionDatabase(int EntryPoint)
+void APlayerMotionDatabase_C::STATIC_ExecuteUbergraph_PlayerMotionDatabase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerMotionDatabase.PlayerMotionDatabase_C.ExecuteUbergraph_PlayerMotionDatabase");
 

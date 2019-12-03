@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.SetRotateAnimMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, MulticastDelegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsHighSpeed                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_test_C::SetRotateAnimMode(bool IsHighSpeed)
+void UWBP_Fishing_test_C::STATIC_SetRotateAnimMode(bool IsHighSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.SetRotateAnimMode");
 
@@ -34,7 +34,7 @@ void UWBP_Fishing_test_C::SetRotateAnimMode(bool IsHighSpeed)
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.SetDistanceMax
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DistanceMax                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,7 +54,7 @@ void UWBP_Fishing_test_C::SetDistanceMax(float DistanceMax)
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.SetVisibleIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ButtonVisible                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           RotateVisible                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -78,17 +78,18 @@ void UWBP_Fishing_test_C::SetVisibleIcon(bool ButtonVisible, bool RotateVisible,
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.GetFishGramText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UWBP_Fishing_test_C::GetFishGramText()
+struct FText UWBP_Fishing_test_C::STATIC_GetFishGramText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.GetFishGramText");
 
 	UWBP_Fishing_test_C_GetFishGramText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,12 +100,12 @@ struct FText UWBP_Fishing_test_C::GetFishGramText()
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.SetImagePositionY
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UImage*                  ArgImage                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          ArgPosY                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_test_C::SetImagePositionY(class UImage* ArgImage, float ArgPosY)
+void UWBP_Fishing_test_C::STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.SetImagePositionY");
 
@@ -121,15 +122,16 @@ void UWBP_Fishing_test_C::SetImagePositionY(class UImage* ArgImage, float ArgPos
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.StartFishGaugeAnime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_Fishing_test_C::StartFishGaugeAnime()
+void UWBP_Fishing_test_C::STATIC_StartFishGaugeAnime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.StartFishGaugeAnime");
 
 	UWBP_Fishing_test_C_StartFishGaugeAnime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +140,7 @@ void UWBP_Fishing_test_C::StartFishGaugeAnime()
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.UpdateFishGauge
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsUpdate                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -149,6 +151,7 @@ void UWBP_Fishing_test_C::UpdateFishGauge(bool* IsUpdate)
 	UWBP_Fishing_test_C_UpdateFishGauge_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,7 +163,7 @@ void UWBP_Fishing_test_C::UpdateFishGauge(bool* IsUpdate)
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.SetDispFishGaugeAll
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ArgDisp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -172,6 +175,7 @@ void UWBP_Fishing_test_C::SetDispFishGaugeAll(bool ArgDisp)
 	params.ArgDisp = ArgDisp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,7 +184,7 @@ void UWBP_Fishing_test_C::SetDispFishGaugeAll(bool ArgDisp)
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.GetDistanceText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -201,17 +205,18 @@ struct FText UWBP_Fishing_test_C::GetDistanceText()
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.GetFishScaleText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, NetResponse, Static, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UWBP_Fishing_test_C::GetFishScaleText()
+struct FText UWBP_Fishing_test_C::STATIC_GetFishScaleText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.GetFishScaleText");
 
 	UWBP_Fishing_test_C_GetFishScaleText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,17 +227,18 @@ struct FText UWBP_Fishing_test_C::GetFishScaleText()
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.GetFishNameText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UWBP_Fishing_test_C::GetFishNameText()
+struct FText UWBP_Fishing_test_C::STATIC_GetFishNameText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.GetFishNameText");
 
 	UWBP_Fishing_test_C_GetFishNameText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,7 +249,7 @@ struct FText UWBP_Fishing_test_C::GetFishNameText()
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UWBP_Fishing_test_C::Construct()
 {
@@ -260,11 +266,11 @@ void UWBP_Fishing_test_C::Construct()
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.SetCaptcherVisible
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_test_C::SetCaptcherVisible(ESlateVisibility InVisibility)
+void UWBP_Fishing_test_C::STATIC_SetCaptcherVisible(ESlateVisibility InVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.SetCaptcherVisible");
 
@@ -272,6 +278,7 @@ void UWBP_Fishing_test_C::SetCaptcherVisible(ESlateVisibility InVisibility)
 	params.InVisibility = InVisibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,19 +286,20 @@ void UWBP_Fishing_test_C::SetCaptcherVisible(ESlateVisibility InVisibility)
 }
 
 
-// Function WBP_Fishing_test.WBP_Fishing_test_C.SetResultVisible
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_Fishing_test.WBP_Fishing_test_C.SetResultVIsible
+// (NetReliable, Exec, Native, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_test_C::SetResultVisible(ESlateVisibility InVisibility)
+void UWBP_Fishing_test_C::STATIC_SetResultVIsible(ESlateVisibility InVisibility)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.SetResultVisible");
+	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.SetResultVIsible");
 
-	UWBP_Fishing_test_C_SetResultVisible_Params params;
+	UWBP_Fishing_test_C_SetResultVIsible_Params params;
 	params.InVisibility = InVisibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -300,11 +308,11 @@ void UWBP_Fishing_test_C::SetResultVisible(ESlateVisibility InVisibility)
 
 
 // Function WBP_Fishing_test.WBP_Fishing_test_C.ExecuteUbergraph_WBP_Fishing_test
-// ()
+// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Fishing_test_C::ExecuteUbergraph_WBP_Fishing_test(int EntryPoint)
+void UWBP_Fishing_test_C::STATIC_ExecuteUbergraph_WBP_Fishing_test(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_test.WBP_Fishing_test_C.ExecuteUbergraph_WBP_Fishing_test");
 
@@ -312,6 +320,7 @@ void UWBP_Fishing_test_C::ExecuteUbergraph_WBP_Fishing_test(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

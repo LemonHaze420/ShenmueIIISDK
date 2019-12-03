@@ -33,9 +33,9 @@ public:
 
 
 	void SetupRandomParam();
-	void StateExit(float Delta, bool* bProcessing);
+	void STATIC_StateExit(float Delta, bool* bProcessing);
 	void StateUpdate(float Delta, bool* bDummy);
-	void StateEnter(float Delta, bool* bProcessing);
+	void STATIC_StateEnter(float Delta, bool* bProcessing);
 };
 
 

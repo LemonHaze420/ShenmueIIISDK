@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3ClipperManager(class UObject* __WorldContext, class ABP_Clipper_C** AsBP_Clipper);
+	void getS3ClipperManager(class UObject* __WorldContext, class ABP_Clipper_C** AsBP_Clipper);
 };
 
 

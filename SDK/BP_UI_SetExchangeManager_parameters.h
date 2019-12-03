@@ -47,8 +47,8 @@ struct ABP_UI_SetExchangeManager_C_SetExchangeChangePage_Params
 	int                                                Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MakeItemIDList
-struct ABP_UI_SetExchangeManager_C_MakeItemIDList_Params
+// Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MakeItemIdList
+struct ABP_UI_SetExchangeManager_C_MakeItemIdList_Params
 {
 };
 

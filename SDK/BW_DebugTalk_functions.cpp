@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugTalk.BW_DebugTalk_C.GetText_2
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -35,17 +35,18 @@ struct FText UBW_DebugTalk_C::GetText_2()
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.On_MenuAnchor_Script_GetMenuContent_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UWidget* UBW_DebugTalk_C::On_MenuAnchor_Script_GetMenuContent_1()
+class UWidget* UBW_DebugTalk_C::STATIC_On_MenuAnchor_Script_GetMenuContent_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.On_MenuAnchor_Script_GetMenuContent_1");
 
 	UBW_DebugTalk_C_On_MenuAnchor_Script_GetMenuContent_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +57,7 @@ class UWidget* UBW_DebugTalk_C::On_MenuAnchor_Script_GetMenuContent_1()
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.On_MenuAnchor_TextData_GetMenuContent_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -77,7 +78,7 @@ class UWidget* UBW_DebugTalk_C::On_MenuAnchor_TextData_GetMenuContent_1()
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.GetText_1
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -88,6 +89,7 @@ struct FText UBW_DebugTalk_C::GetText_1()
 	UBW_DebugTalk_C_GetText_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,7 +100,7 @@ struct FText UBW_DebugTalk_C::GetText_1()
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.SetUserFocusByChildIndex
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -118,7 +120,7 @@ void UBW_DebugTalk_C::SetUserFocusByChildIndex(int Index)
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.ResetUserFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBW_DebugTalk_C::ResetUserFocus()
 {
@@ -135,7 +137,7 @@ void UBW_DebugTalk_C::ResetUserFocus()
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.OnPreviewKeyDown
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -160,9 +162,9 @@ struct FEventReply UBW_DebugTalk_C::OnPreviewKeyDown(const struct FGeometry& MyG
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugTalk_C::Construct()
+void UBW_DebugTalk_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.Construct");
 
@@ -177,9 +179,9 @@ void UBW_DebugTalk_C::Construct()
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_50_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugTalk_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_50_OnButtonPressedEvent__DelegateSignature()
+void UBW_DebugTalk_C::STATIC_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_50_OnButtonPressedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_50_OnButtonPressedEvent__DelegateSignature");
 
@@ -194,11 +196,11 @@ void UBW_DebugTalk_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_50_OnButtonP
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_OnMenuOpenChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIsOpen                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTalk_C::BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+void UBW_DebugTalk_C::STATIC_BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_OnMenuOpenChangedEvent__DelegateSignature");
 
@@ -206,6 +208,7 @@ void UBW_DebugTalk_C::BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_
 	params.bIsOpen = bIsOpen;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -214,11 +217,11 @@ void UBW_DebugTalk_C::BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTalk_C::PreConstruct(bool IsDesignTime)
+void UBW_DebugTalk_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.PreConstruct");
 
@@ -226,6 +229,7 @@ void UBW_DebugTalk_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,9 +238,9 @@ void UBW_DebugTalk_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__Button_Script_K2Node_ComponentBoundEvent_95_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugTalk_C::BndEvt__Button_Script_K2Node_ComponentBoundEvent_95_OnButtonPressedEvent__DelegateSignature()
+void UBW_DebugTalk_C::STATIC_BndEvt__Button_Script_K2Node_ComponentBoundEvent_95_OnButtonPressedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__Button_Script_K2Node_ComponentBoundEvent_95_OnButtonPressedEvent__DelegateSignature");
 
@@ -251,11 +255,11 @@ void UBW_DebugTalk_C::BndEvt__Button_Script_K2Node_ComponentBoundEvent_95_OnButt
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_OnMenuOpenChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIsOpen                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTalk_C::BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+void UBW_DebugTalk_C::STATIC_BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_OnMenuOpenChangedEvent__DelegateSignature");
 
@@ -263,6 +267,7 @@ void UBW_DebugTalk_C::BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_O
 	params.bIsOpen = bIsOpen;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,11 +276,11 @@ void UBW_DebugTalk_C::BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_O
 
 
 // Function BW_DebugTalk.BW_DebugTalk_C.ExecuteUbergraph_BW_DebugTalk
-// ()
+// (Net, NetRequest, Exec, Native, NetResponse, Static, Public, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTalk_C::ExecuteUbergraph_BW_DebugTalk(int EntryPoint)
+void UBW_DebugTalk_C::STATIC_ExecuteUbergraph_BW_DebugTalk(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTalk.BW_DebugTalk_C.ExecuteUbergraph_BW_DebugTalk");
 
@@ -283,6 +288,7 @@ void UBW_DebugTalk_C::ExecuteUbergraph_BW_DebugTalk(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

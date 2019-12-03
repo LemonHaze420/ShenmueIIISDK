@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.GetLookAngle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Animation_C::GetLookAngle(float* Angle)
+void UBP_State_LookAtNPC_Animation_C::STATIC_GetLookAngle(float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.GetLookAngle");
 
@@ -36,11 +36,11 @@ void UBP_State_LookAtNPC_Animation_C::GetLookAngle(float* Angle)
 
 
 // Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.GetLookDistance
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Animation_C::GetLookDistance(float* Distance)
+void UBP_State_LookAtNPC_Animation_C::STATIC_GetLookDistance(float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.GetLookDistance");
 
@@ -58,12 +58,12 @@ void UBP_State_LookAtNPC_Animation_C::GetLookDistance(float* Distance)
 
 
 // Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.StateExit
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Animation_C::StateExit(float Delta, bool* bProcessing)
+void UBP_State_LookAtNPC_Animation_C::STATIC_StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.StateExit");
 
@@ -82,12 +82,12 @@ void UBP_State_LookAtNPC_Animation_C::StateExit(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.StateUpdate
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Animation_C::StateUpdate(float Delta, bool* bDummy)
+void UBP_State_LookAtNPC_Animation_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.StateUpdate");
 
@@ -106,12 +106,12 @@ void UBP_State_LookAtNPC_Animation_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Animation_C::StateEnter(float Delta, bool* bProcessing)
+void UBP_State_LookAtNPC_Animation_C::STATIC_StateEnter(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Animation.BP_State_LookAtNPC_Animation_C.StateEnter");
 

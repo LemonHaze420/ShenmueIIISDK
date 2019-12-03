@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_DebugCameraController_C::UserConstructionScript()
 {
@@ -31,11 +31,11 @@ void ABP_DebugCameraController_C::UserConstructionScript()
 
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCameraController_C::ReceiveTick(float DeltaSeconds)
+void ABP_DebugCameraController_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCameraController.BP_DebugCameraController_C.ReceiveTick");
 
@@ -51,11 +51,11 @@ void ABP_DebugCameraController_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_DebugCameraController.BP_DebugCameraController_C.ExecuteUbergraph_BP_DebugCameraController
-// (HasDefaults)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DebugCameraController_C::ExecuteUbergraph_BP_DebugCameraController(int EntryPoint)
+void ABP_DebugCameraController_C::STATIC_ExecuteUbergraph_BP_DebugCameraController(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DebugCameraController.BP_DebugCameraController_C.ExecuteUbergraph_BP_DebugCameraController");
 

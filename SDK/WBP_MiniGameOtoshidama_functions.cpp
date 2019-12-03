@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGameOtoshidama.WBP_MiniGameOtoshidama_C.SetVisibleButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,15 +34,16 @@ void UWBP_MiniGameOtoshidama_C::SetVisibleButton(bool Visible)
 
 
 // Function WBP_MiniGameOtoshidama.WBP_MiniGameOtoshidama_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UWBP_MiniGameOtoshidama_C::Construct()
+void UWBP_MiniGameOtoshidama_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameOtoshidama.WBP_MiniGameOtoshidama_C.Construct");
 
 	UWBP_MiniGameOtoshidama_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +52,7 @@ void UWBP_MiniGameOtoshidama_C::Construct()
 
 
 // Function WBP_MiniGameOtoshidama.WBP_MiniGameOtoshidama_C.ExecuteUbergraph_WBP_MiniGameOtoshidama
-// ()
+// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

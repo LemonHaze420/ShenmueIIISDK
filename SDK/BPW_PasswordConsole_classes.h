@@ -29,7 +29,7 @@ public:
 
 	void PreConstruct(bool IsDesignTime);
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_BPW_PasswordConsole(int EntryPoint);
 };
 

@@ -25,12 +25,12 @@ public:
 	}
 
 
-	void STATIC_GetSubmissionConfig(class UObject* __WorldContext, class US3SubmissionConfig** Config);
+	void GetSubmissionConfig(class UObject* __WorldContext, class US3SubmissionConfig** Config);
 	void STATIC_IsDebugStepInRange(class UObject* __WorldContext, bool* InRange);
 	void STATIC_IsDebugDisableCutscene(class UObject* __WorldContext, bool* Disable);
-	void STATIC_IsDebugDisableMainFlow(class UObject* __WorldContext, bool* Disable);
+	void IsDebugDisableMainFlow(class UObject* __WorldContext, bool* Disable);
 	void STATIC_IsDebugDisableNPC(class UObject* __WorldContext, bool* Disable);
-	void STATIC_GetDebugData(class UObject* __WorldContext, class US3DebugDataAsset** Debug_Data_Asset);
+	void GetDebugData(class UObject* __WorldContext, class US3DebugDataAsset** Debug_Data_Asset);
 };
 
 

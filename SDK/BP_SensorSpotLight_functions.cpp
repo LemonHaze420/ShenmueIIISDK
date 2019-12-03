@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SensorSpotLight.BP_SensorSpotLight_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_SensorSpotLight_C::UserConstructionScript()
+void ABP_SensorSpotLight_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SensorSpotLight.BP_SensorSpotLight_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_SensorSpotLight_C::UserConstructionScript()
 
 
 // Function BP_SensorSpotLight.BP_SensorSpotLight_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_SensorSpotLight_C::ReceiveBeginPlay()
 {
@@ -48,11 +48,11 @@ void ABP_SensorSpotLight_C::ReceiveBeginPlay()
 
 
 // Function BP_SensorSpotLight.BP_SensorSpotLight_C.ExecuteUbergraph_BP_SensorSpotLight
-// ()
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SensorSpotLight_C::ExecuteUbergraph_BP_SensorSpotLight(int EntryPoint)
+void ABP_SensorSpotLight_C::STATIC_ExecuteUbergraph_BP_SensorSpotLight(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SensorSpotLight.BP_SensorSpotLight_C.ExecuteUbergraph_BP_SensorSpotLight");
 
@@ -60,6 +60,7 @@ void ABP_SensorSpotLight_C::ExecuteUbergraph_BP_SensorSpotLight(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

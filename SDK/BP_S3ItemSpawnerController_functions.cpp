@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_S3ItemSpawnerController_C::GetPriority()
+int ABP_S3ItemSpawnerController_C::STATIC_GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetPriority");
 
@@ -35,17 +35,18 @@ int ABP_S3ItemSpawnerController_C::GetPriority()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetDetectAction
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FS3DetectActionParam> ABP_S3ItemSpawnerController_C::GetDetectAction()
+TArray<struct FS3DetectActionParam> ABP_S3ItemSpawnerController_C::STATIC_GetDetectAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetDetectAction");
 
 	ABP_S3ItemSpawnerController_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,17 +57,18 @@ TArray<struct FS3DetectActionParam> ABP_S3ItemSpawnerController_C::GetDetectActi
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetOwnSearchArea
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, Static, NetServer)
 // Parameters:
 // class ABP_SearchArea_C*        SearchArea                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemSpawnerController_C::GetOwnSearchArea(class ABP_SearchArea_C** SearchArea)
+void ABP_S3ItemSpawnerController_C::STATIC_GetOwnSearchArea(class ABP_SearchArea_C** SearchArea)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetOwnSearchArea");
 
 	ABP_S3ItemSpawnerController_C_GetOwnSearchArea_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +80,7 @@ void ABP_S3ItemSpawnerController_C::GetOwnSearchArea(class ABP_SearchArea_C** Se
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetActionSpawnerPos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -99,13 +101,13 @@ struct FVector ABP_S3ItemSpawnerController_C::GetActionSpawnerPos()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetInputDirection
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          V                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          H                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ESearchAreaDirection> Direction                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemSpawnerController_C::GetInputDirection(float V, float H, TEnumAsByte<ESearchAreaDirection>* Direction)
+void ABP_S3ItemSpawnerController_C::STATIC_GetInputDirection(float V, float H, TEnumAsByte<ESearchAreaDirection>* Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetInputDirection");
 
@@ -125,11 +127,11 @@ void ABP_S3ItemSpawnerController_C::GetInputDirection(float V, float H, TEnumAsB
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.ForceFindSpawner
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3ItemSpawner_C*     Spawner                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemSpawnerController_C::ForceFindSpawner(class ABP_S3ItemSpawner_C* Spawner)
+void ABP_S3ItemSpawnerController_C::STATIC_ForceFindSpawner(class ABP_S3ItemSpawner_C* Spawner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.ForceFindSpawner");
 
@@ -145,17 +147,18 @@ void ABP_S3ItemSpawnerController_C::ForceFindSpawner(class ABP_S3ItemSpawner_C* 
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetActionSpawner
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Static, NetServer)
 // Parameters:
 // class ABP_S3ItemSpawner_C*     ActionSpawner                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemSpawnerController_C::GetActionSpawner(class ABP_S3ItemSpawner_C** ActionSpawner)
+void ABP_S3ItemSpawnerController_C::STATIC_GetActionSpawner(class ABP_S3ItemSpawner_C** ActionSpawner)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetActionSpawner");
 
 	ABP_S3ItemSpawnerController_C_GetActionSpawner_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +170,7 @@ void ABP_S3ItemSpawnerController_C::GetActionSpawner(class ABP_S3ItemSpawner_C**
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.LockOnChange
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, NetServer)
 // Parameters:
 // float                          V                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          H                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -189,11 +192,11 @@ void ABP_S3ItemSpawnerController_C::LockOnChange(float V, float H)
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.StartAction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ContinuationFlag               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemSpawnerController_C::StartAction(bool ContinuationFlag)
+void ABP_S3ItemSpawnerController_C::STATIC_StartAction(bool ContinuationFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.StartAction");
 
@@ -209,7 +212,7 @@ void ABP_S3ItemSpawnerController_C::StartAction(bool ContinuationFlag)
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.CalcCameraTransform
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class ABP_S3ItemSpawner_C*     Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -229,12 +232,12 @@ void ABP_S3ItemSpawnerController_C::CalcCameraTransform(class ABP_S3ItemSpawner_
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.SetSearchStep
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class US3SearchComponent*      SearchComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           bUseFadeEvent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ItemSpawnerController_C::SetSearchStep(class US3SearchComponent* SearchComponent, bool bUseFadeEvent)
+void ABP_S3ItemSpawnerController_C::STATIC_SetSearchStep(class US3SearchComponent* SearchComponent, bool bUseFadeEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.SetSearchStep");
 
@@ -251,7 +254,7 @@ void ABP_S3ItemSpawnerController_C::SetSearchStep(class US3SearchComponent* Sear
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.SetSearchComponent
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3ItemSpawner_C*     Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -271,7 +274,7 @@ void ABP_S3ItemSpawnerController_C::SetSearchComponent(class ABP_S3ItemSpawner_C
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.InitSearchArea
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3ItemSpawnerController_C::InitSearchArea()
 {
@@ -288,7 +291,7 @@ void ABP_S3ItemSpawnerController_C::InitSearchArea()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.NextTargetCheck
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3ItemSpawner_C*     NextTarget                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -313,7 +316,7 @@ void ABP_S3ItemSpawnerController_C::NextTargetCheck(bool* Result, class ABP_S3It
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.SwitchTarget
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3ItemSpawner_C*     NewTarget                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -335,7 +338,7 @@ void ABP_S3ItemSpawnerController_C::SwitchTarget(class ABP_S3ItemSpawner_C** New
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetListSize
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Native, Event, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Size                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -346,6 +349,7 @@ void ABP_S3ItemSpawnerController_C::GetListSize(int* Size)
 	ABP_S3ItemSpawnerController_C_GetListSize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -357,15 +361,16 @@ void ABP_S3ItemSpawnerController_C::GetListSize(int* Size)
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3ItemSpawnerController_C::UserConstructionScript()
+void ABP_S3ItemSpawnerController_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.UserConstructionScript");
 
 	ABP_S3ItemSpawnerController_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -374,7 +379,7 @@ void ABP_S3ItemSpawnerController_C::UserConstructionScript()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_2
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -394,7 +399,7 @@ void ABP_S3ItemSpawnerController_C::InpActEvt_SearchRightButton_K2Node_InputActi
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.GetItem
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class US3SearchComponent*      SearchComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -414,9 +419,9 @@ void ABP_S3ItemSpawnerController_C::GetItem(class US3SearchComponent* SearchComp
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.SearchEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ItemSpawnerController_C::SearchEnd()
+void ABP_S3ItemSpawnerController_C::STATIC_SearchEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.SearchEnd");
 
@@ -431,9 +436,9 @@ void ABP_S3ItemSpawnerController_C::SearchEnd()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ItemSpawnerController_C::ReceiveBeginPlay()
+void ABP_S3ItemSpawnerController_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.ReceiveBeginPlay");
 
@@ -448,7 +453,7 @@ void ABP_S3ItemSpawnerController_C::ReceiveBeginPlay()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -468,9 +473,9 @@ void ABP_S3ItemSpawnerController_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.Event_InputEnabled
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ItemSpawnerController_C::Event_InputEnabled()
+void ABP_S3ItemSpawnerController_C::STATIC_Event_InputEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.Event_InputEnabled");
 
@@ -485,9 +490,9 @@ void ABP_S3ItemSpawnerController_C::Event_InputEnabled()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.Event_DisableInputTransCamera
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ItemSpawnerController_C::Event_DisableInputTransCamera()
+void ABP_S3ItemSpawnerController_C::STATIC_Event_DisableInputTransCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.Event_DisableInputTransCamera");
 
@@ -502,7 +507,7 @@ void ABP_S3ItemSpawnerController_C::Event_DisableInputTransCamera()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.InpAxisEvt_ZoomPanVertical_K2Node_InputAxisEvent_1
-// (BlueprintEvent)
+// (Net, NetRequest, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -522,7 +527,7 @@ void ABP_S3ItemSpawnerController_C::InpAxisEvt_ZoomPanVertical_K2Node_InputAxisE
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxisEvent_27
-// (BlueprintEvent)
+// (NetRequest, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -542,9 +547,9 @@ void ABP_S3ItemSpawnerController_C::InpAxisEvt_ZoomPanHorizontal_K2Node_InputAxi
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.Event_FadeOnAction
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ItemSpawnerController_C::Event_FadeOnAction()
+void ABP_S3ItemSpawnerController_C::STATIC_Event_FadeOnAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.Event_FadeOnAction");
 
@@ -559,7 +564,7 @@ void ABP_S3ItemSpawnerController_C::Event_FadeOnAction()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.AddItemSpawner
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AS3ItemSpawner*          ItemSpawner                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -579,7 +584,7 @@ void ABP_S3ItemSpawnerController_C::AddItemSpawner(class AS3ItemSpawner* ItemSpa
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.RemoveItemSpawner
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AS3ItemSpawner*          ItemSpawner                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -599,15 +604,16 @@ void ABP_S3ItemSpawnerController_C::RemoveItemSpawner(class AS3ItemSpawner* Item
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.OnFinishFadeInOnUseFade
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ItemSpawnerController_C::OnFinishFadeInOnUseFade()
+void ABP_S3ItemSpawnerController_C::STATIC_OnFinishFadeInOnUseFade()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.OnFinishFadeInOnUseFade");
 
 	ABP_S3ItemSpawnerController_C_OnFinishFadeInOnUseFade_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -616,7 +622,7 @@ void ABP_S3ItemSpawnerController_C::OnFinishFadeInOnUseFade()
 
 
 // Function BP_S3ItemSpawnerController.BP_S3ItemSpawnerController_C.ExecuteUbergraph_BP_S3ItemSpawnerController
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

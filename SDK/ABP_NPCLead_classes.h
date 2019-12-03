@@ -83,10 +83,10 @@ public:
 	}
 
 
-	bool IsReadyTalk();
-	void UpdateRootMotionMode();
-	void GetEyeRotateEmotionRate(float* EyeRotateEmotionRate);
-	void InitEyeRotateEmotion();
+	bool STATIC_IsReadyTalk();
+	void STATIC_UpdateRootMotionMode();
+	void STATIC_GetEyeRotateEmotionRate(float* EyeRotateEmotionRate);
+	void STATIC_InitEyeRotateEmotion();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendListByBool_FA5B5D0F4E7C2829541316858C329F85();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_TransitionResult_3AF8C8374B4EB99F7C57749BF5AEF8DC();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_NPCLead_AnimGraphNode_BlendSpacePlayer_2AA3CAD44CEF9FD792FDEA9A24E82213();
@@ -112,7 +112,7 @@ public:
 	void AnimNotify_StatIdleFullyBlended();
 	void AnimNotify_StateIdleEnd();
 	void AnimNotify_StateIdleStart();
-	void ExecuteUbergraph_ABP_NPCLead(int EntryPoint);
+	void STATIC_ExecuteUbergraph_ABP_NPCLead(int EntryPoint);
 };
 
 

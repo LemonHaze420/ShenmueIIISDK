@@ -46,7 +46,7 @@ public:
 
 
 	void CalculateBaseRelativeTransform(struct FTransform* OutTransform);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 };
 
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_NPC.BPF_NPC_C.BPF_TeleportFollowSHE
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Back                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Side                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -40,7 +40,7 @@ void UBPF_NPC_C::STATIC_BPF_TeleportFollowSHE(float Back, float Side, bool Rotat
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_IsLeadActive
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Event, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -53,6 +53,7 @@ bool UBPF_NPC_C::STATIC_BPF_IsLeadActive(class UObject* __WorldContext)
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,7 +64,7 @@ bool UBPF_NPC_C::STATIC_BPF_IsLeadActive(class UObject* __WorldContext)
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_IsLeadCompleted
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -86,7 +87,7 @@ bool UBPF_NPC_C::STATIC_BPF_IsLeadCompleted(class UObject* __WorldContext)
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_StartNPCLeadEvent
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FDataTableRowHandle     TableRow                       (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -101,6 +102,7 @@ void UBPF_NPC_C::STATIC_BPF_StartNPCLeadEvent(const struct FDataTableRowHandle& 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,7 +114,7 @@ void UBPF_NPC_C::STATIC_BPF_StartNPCLeadEvent(const struct FDataTableRowHandle& 
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_SpawnFollowSHE
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // float                          Back                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Side                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -130,6 +132,7 @@ void UBPF_NPC_C::STATIC_BPF_SpawnFollowSHE(float Back, float Side, bool Rotate_t
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +141,7 @@ void UBPF_NPC_C::STATIC_BPF_SpawnFollowSHE(float Back, float Side, bool Rotate_t
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_QueryTagCharaName2NpcActorNew
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -153,6 +156,7 @@ void UBPF_NPC_C::STATIC_BPF_QueryTagCharaName2NpcActorNew(const struct FName& Ch
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,7 +168,7 @@ void UBPF_NPC_C::STATIC_BPF_QueryTagCharaName2NpcActorNew(const struct FName& Ch
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_QueryPlayerNearNpcNew
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  NpcActorRef                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -178,6 +182,7 @@ void UBPF_NPC_C::STATIC_BPF_QueryPlayerNearNpcNew(class UObject* __WorldContext,
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,14 +196,14 @@ void UBPF_NPC_C::STATIC_BPF_QueryPlayerNearNpcNew(class UObject* __WorldContext,
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_NPC_GetMiniGameIdsTable
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // int                            RowIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FNPCMiniGameManagerIds  Out_Row                        (Parm, OutParm)
 
-void UBPF_NPC_C::STATIC_BPF_NPC_GetMiniGameIdsTable(int RowIndex, class UObject* __WorldContext, bool* bSuccess, struct FNPCMiniGameManagerIds* Out_Row)
+void UBPF_NPC_C::BPF_NPC_GetMiniGameIdsTable(int RowIndex, class UObject* __WorldContext, bool* bSuccess, struct FNPCMiniGameManagerIds* Out_Row)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_NPC.BPF_NPC_C.BPF_NPC_GetMiniGameIdsTable");
 
@@ -220,13 +225,13 @@ void UBPF_NPC_C::STATIC_BPF_NPC_GetMiniGameIdsTable(int RowIndex, class UObject*
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_NPC_ConvertScriptStateIDFromName
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // int                            ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Name                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_NPC_C::STATIC_BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObject* __WorldContext, struct FName* Name)
+void UBPF_NPC_C::BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObject* __WorldContext, struct FName* Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_NPC.BPF_NPC_C.BPF_NPC_ConvertScriptStateIDFromName");
 
@@ -235,6 +240,7 @@ void UBPF_NPC_C::STATIC_BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObje
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -246,12 +252,12 @@ void UBPF_NPC_C::STATIC_BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObje
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_NPC_GetVisibleTalkIconStates
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<TEnumAsByte<ELocomotionState>> States                         (Parm, OutParm, ZeroConstructor)
 
-void UBPF_NPC_C::STATIC_BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States)
+void UBPF_NPC_C::BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_NPC.BPF_NPC_C.BPF_NPC_GetVisibleTalkIconStates");
 
@@ -259,6 +265,7 @@ void UBPF_NPC_C::STATIC_BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldC
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -270,7 +277,7 @@ void UBPF_NPC_C::STATIC_BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldC
 
 
 // Function BPF_NPC.BPF_NPC_C.BPF_NPC_GetCanNotTalkTurnAcoundStates
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<TEnumAsByte<ELocomotionState>> States                         (Parm, OutParm, ZeroConstructor)
@@ -283,6 +290,7 @@ void UBPF_NPC_C::STATIC_BPF_NPC_GetCanNotTalkTurnAcoundStates(class UObject* __W
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

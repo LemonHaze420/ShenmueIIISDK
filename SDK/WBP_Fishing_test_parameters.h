@@ -93,8 +93,8 @@ struct UWBP_Fishing_test_C_SetCaptcherVisible_Params
 	ESlateVisibility                                   InVisibility;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function WBP_Fishing_test.WBP_Fishing_test_C.SetResultVisible
-struct UWBP_Fishing_test_C_SetResultVisible_Params
+// Function WBP_Fishing_test.WBP_Fishing_test_C.SetResultVIsible
+struct UWBP_Fishing_test_C_SetResultVIsible_Params
 {
 	ESlateVisibility                                   InVisibility;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

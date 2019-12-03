@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_EventAttention.WBP_EventAttention_C.PlayFadeArrowAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_EventAttention_C::PlayFadeArrowAnim()
+void UWBP_EventAttention_C::STATIC_PlayFadeArrowAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_EventAttention.WBP_EventAttention_C.PlayFadeArrowAnim");
 
 	UWBP_EventAttention_C_PlayFadeArrowAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UWBP_EventAttention_C::PlayFadeArrowAnim()
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.ForceEnabledDirectionArrow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void UWBP_EventAttention_C::ForceEnabledDirectionArrow()
 {
@@ -40,6 +41,7 @@ void UWBP_EventAttention_C::ForceEnabledDirectionArrow()
 	UWBP_EventAttention_C_ForceEnabledDirectionArrow_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void UWBP_EventAttention_C::ForceEnabledDirectionArrow()
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.ReverseArrow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 
 void UWBP_EventAttention_C::ReverseArrow()
 {
@@ -57,6 +59,7 @@ void UWBP_EventAttention_C::ReverseArrow()
 	UWBP_EventAttention_C_ReverseArrow_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,11 +68,11 @@ void UWBP_EventAttention_C::ReverseArrow()
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.SetCenterCursorVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visibility                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_EventAttention_C::SetCenterCursorVisible(bool Visibility)
+void UWBP_EventAttention_C::STATIC_SetCenterCursorVisible(bool Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_EventAttention.WBP_EventAttention_C.SetCenterCursorVisible");
 
@@ -77,6 +80,7 @@ void UWBP_EventAttention_C::SetCenterCursorVisible(bool Visibility)
 	params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,7 +89,7 @@ void UWBP_EventAttention_C::SetCenterCursorVisible(bool Visibility)
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.SetArrowAlpha
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          BaseAlpha                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ZoomAlpha                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -107,7 +111,7 @@ void UWBP_EventAttention_C::SetArrowAlpha(float BaseAlpha, float ZoomAlpha)
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.SetArrowPosition
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          OffsetRate                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -127,7 +131,7 @@ void UWBP_EventAttention_C::SetArrowPosition(float OffsetRate)
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.UpdateVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -139,6 +143,7 @@ void UWBP_EventAttention_C::UpdateVisible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,11 +152,11 @@ void UWBP_EventAttention_C::UpdateVisible(bool Visible)
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.UpdateDirectionArrow
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FName>           VisibleArrowName               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UWBP_EventAttention_C::UpdateDirectionArrow(TArray<struct FName>* VisibleArrowName)
+void UWBP_EventAttention_C::STATIC_UpdateDirectionArrow(TArray<struct FName>* VisibleArrowName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_EventAttention.WBP_EventAttention_C.UpdateDirectionArrow");
 
@@ -169,11 +174,11 @@ void UWBP_EventAttention_C::UpdateDirectionArrow(TArray<struct FName>* VisibleAr
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_EventAttention_C::PreConstruct(bool IsDesignTime)
+void UWBP_EventAttention_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_EventAttention.WBP_EventAttention_C.PreConstruct");
 
@@ -181,6 +186,7 @@ void UWBP_EventAttention_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,15 +195,16 @@ void UWBP_EventAttention_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, NetServer)
 
-void UWBP_EventAttention_C::Construct()
+void UWBP_EventAttention_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_EventAttention.WBP_EventAttention_C.Construct");
 
 	UWBP_EventAttention_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -206,11 +213,11 @@ void UWBP_EventAttention_C::Construct()
 
 
 // Function WBP_EventAttention.WBP_EventAttention_C.ExecuteUbergraph_WBP_EventAttention
-// ()
+// (NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_EventAttention_C::ExecuteUbergraph_WBP_EventAttention(int EntryPoint)
+void UWBP_EventAttention_C::STATIC_ExecuteUbergraph_WBP_EventAttention(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_EventAttention.WBP_EventAttention_C.ExecuteUbergraph_WBP_EventAttention");
 
@@ -218,6 +225,7 @@ void UWBP_EventAttention_C::ExecuteUbergraph_WBP_EventAttention(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

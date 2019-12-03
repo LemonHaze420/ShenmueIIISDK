@@ -28,6 +28,9 @@ public:
 
 
 	void UserConstructionScript();
+	void OnLoaded_9E4864764EFCA0265AE1019EAE208EFC(class UObject* Loaded);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_SkillDisplayScene_Battle_MatchPlayer(int EntryPoint);
 };
 
 

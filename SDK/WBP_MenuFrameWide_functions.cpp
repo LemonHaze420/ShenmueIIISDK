@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.SetInsideVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrameWide_C::SetInsideVisible(ESlateVisibility InVisibility)
+void UWBP_MenuFrameWide_C::STATIC_SetInsideVisible(ESlateVisibility InVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.SetInsideVisible");
 
@@ -34,7 +34,7 @@ void UWBP_MenuFrameWide_C::SetInsideVisible(ESlateVisibility InVisibility)
 
 
 // Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.SetGridScale
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -46,6 +46,7 @@ void UWBP_MenuFrameWide_C::SetGridScale(const struct FVector2D& Scale)
 	params.Scale = Scale;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +55,7 @@ void UWBP_MenuFrameWide_C::SetGridScale(const struct FVector2D& Scale)
 
 
 // Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.InitializeGrid
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -76,11 +77,11 @@ void UWBP_MenuFrameWide_C::InitializeGrid(bool Condition, const struct FVector2D
 
 
 // Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.SetEnabledGrid
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, Public, NetServer)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrameWide_C::SetEnabledGrid(bool Enabled)
+void UWBP_MenuFrameWide_C::STATIC_SetEnabledGrid(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.SetEnabledGrid");
 
@@ -88,6 +89,7 @@ void UWBP_MenuFrameWide_C::SetEnabledGrid(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,11 +98,11 @@ void UWBP_MenuFrameWide_C::SetEnabledGrid(bool Enabled)
 
 
 // Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrameWide_C::PreConstruct(bool IsDesignTime)
+void UWBP_MenuFrameWide_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.PreConstruct");
 
@@ -116,11 +118,11 @@ void UWBP_MenuFrameWide_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.ExecuteUbergraph_WBP_MenuFrameWide
-// ()
+// (Net, NetReliable, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrameWide_C::ExecuteUbergraph_WBP_MenuFrameWide(int EntryPoint)
+void UWBP_MenuFrameWide_C::STATIC_ExecuteUbergraph_WBP_MenuFrameWide(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrameWide.WBP_MenuFrameWide_C.ExecuteUbergraph_WBP_MenuFrameWide");
 

@@ -65,31 +65,31 @@ public:
 	}
 
 
-	void CheckNeedRun(bool* NeedRun);
-	void SetMiniGameMode(bool Enabled);
+	void STATIC_CheckNeedRun(bool* NeedRun);
+	void STATIC_SetMiniGameMode(bool Enabled);
 	bool IsReSpawnable();
 	void UpdateRunningSE();
-	void EnableUpdateSerchCatch();
+	void STATIC_EnableUpdateSerchCatch();
 	void UpdateEnableSearchCatch(float DeltaSeconds);
 	void UnEnableChicken();
-	void EnableChicken(bool RunStart);
-	void GetPlayRate(int ID, float* Rate);
+	void STATIC_EnableChicken(bool RunStart);
+	void STATIC_GetPlayRate(int ID, float* Rate);
 	void GetFarMoveIdFromPlayer(int* MoveId);
 	void GetCurrentState(TEnumAsByte<E_MiniGame_CC_ChickenState>* State);
-	void InitializeWalk();
-	void InitializeRun();
+	void STATIC_InitializeWalk();
+	void STATIC_InitializeRun();
 	void GetNearMoveId(int* MoveId);
-	void UpdateDebug(float DeltaSeconds);
+	void STATIC_UpdateDebug(float DeltaSeconds);
 	void GetEnableMoveId(TArray<int>* IdList);
 	void InitializeMove();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void BndEvt__SearchPlayerCollision_K2Node_ComponentBoundEvent_42_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__SearchCatchCollision_K2Node_ComponentBoundEvent_43_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ChangeGameTimeEvent(ES3DayTimeEvent EventType);
-	void ExecuteUbergraph_BP_MiniGame_CC_Chicken(int EntryPoint);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ChangeGameTimeEvent(ES3DayTimeEvent EventType);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_CC_Chicken(int EntryPoint);
 };
 
 

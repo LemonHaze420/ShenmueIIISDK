@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BG_Chobu_StoneTrimStairs_Rails.BP_BG_Chobu_StoneTrimStairs_Rails_C.CalculateBaseRelativeTransform
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FTransform              OutTransform                   (Parm, OutParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_BG_Chobu_StoneTrimStairs_Rails_C::CalculateBaseRelativeTransform(struct
 	ABP_BG_Chobu_StoneTrimStairs_Rails_C_CalculateBaseRelativeTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,9 +37,9 @@ void ABP_BG_Chobu_StoneTrimStairs_Rails_C::CalculateBaseRelativeTransform(struct
 
 
 // Function BP_BG_Chobu_StoneTrimStairs_Rails.BP_BG_Chobu_StoneTrimStairs_Rails_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, Public, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_BG_Chobu_StoneTrimStairs_Rails_C::UserConstructionScript()
+void ABP_BG_Chobu_StoneTrimStairs_Rails_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BG_Chobu_StoneTrimStairs_Rails.BP_BG_Chobu_StoneTrimStairs_Rails_C.UserConstructionScript");
 

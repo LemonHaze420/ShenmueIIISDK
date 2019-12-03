@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_getS3AreaLightManager(class UObject* __WorldContext, class US3AreaLightManagerComponent** AreaLightManager);
-	void STATIC_getS3AreaManager(class UObject* __WorldContext, class ABP_S3AreaManager_C** BP_S3AreaManager);
+	void getS3AreaManager(class UObject* __WorldContext, class ABP_S3AreaManager_C** BP_S3AreaManager);
 };
 
 

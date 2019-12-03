@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.Set Mode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_DressMode_SelectMode> Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPW_UI_DressMode_Button_C::Set_Mode(TEnumAsByte<EN_DressMode_SelectMode> M
 
 
 // Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.SetFocusAndSelect
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsFocus                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSelect                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -56,11 +56,11 @@ void UBPW_UI_DressMode_Button_C::SetFocusAndSelect(bool IsFocus, bool IsSelect)
 
 
 // Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.SetImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTexture2D*              Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_Button_C::SetImage(class UTexture2D* Texture)
+void UBPW_UI_DressMode_Button_C::STATIC_SetImage(class UTexture2D* Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Button.BPW_UI_DressMode_Button_C.SetImage");
 

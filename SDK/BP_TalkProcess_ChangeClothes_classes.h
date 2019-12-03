@@ -31,10 +31,10 @@ public:
 	}
 
 
-	void GetTargetCharacters(const struct FName& CharaName, TArray<class AS3Character*>* Characters);
+	void STATIC_GetTargetCharacters(const struct FName& CharaName, TArray<class AS3Character*>* Characters);
 	void Activate();
-	void Finish(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
-	void ExecuteUbergraph_BP_TalkProcess_ChangeClothes(int EntryPoint);
+	void STATIC_Finish(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
+	void STATIC_ExecuteUbergraph_BP_TalkProcess_ChangeClothes(int EntryPoint);
 };
 
 

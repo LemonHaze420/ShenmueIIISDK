@@ -59,18 +59,18 @@ public:
 	}
 
 
-	void SetBackRealTimeSecondsForQTESlow(float NewTime);
+	void STATIC_SetBackRealTimeSecondsForQTESlow(float NewTime);
 	float GetQTESlowPlayRate();
-	bool IsQTESlowPlaying();
+	bool STATIC_IsQTESlowPlaying();
 	void StartQTEInputSafeSlow(float RestLength, float QTEInAnimLength, float QTEOutAnimLength);
-	void EndSequence();
+	void STATIC_EndSequence();
 	bool IsExistQTEInSequence(struct FST_old_QTEMultiTypeSequence* QTESequence);
 	bool DebugIsEnabledToSkip();
-	void CountQTEInputTimer(float* AfterTimer);
-	void FindQTESequenceFromLevelSequence(class ULevelSequence* LevelSequence, int* Index);
+	void STATIC_CountQTEInputTimer(float* AfterTimer);
+	void STATIC_FindQTESequenceFromLevelSequence(class ULevelSequence* LevelSequence, int* Index);
 	void NotifyInputKey(const struct FKey& InputedKey);
-	bool GetLastQTEResult();
-	void GetLastQTEFreeCommandResult(bool* IsSuccess, struct FST_old_BattleQTEExperimentFreeCommand* FreeCommand);
+	bool STATIC_GetLastQTEResult();
+	void STATIC_GetLastQTEFreeCommandResult(bool* IsSuccess, struct FST_old_BattleQTEExperimentFreeCommand* FreeCommand);
 	void UpdateLastQTEFreeCommand();
 	bool IsInQTE();
 	void ResetLastQTEFailed();
@@ -80,8 +80,8 @@ public:
 	void EndFunctionQTE();
 	void GetResultQTE(bool* Result);
 	void ClearResultQTE();
-	void PrepareQTE();
-	void InputQTE(const struct FKey& InputedKey);
+	void STATIC_PrepareQTE();
+	void STATIC_InputQTE(const struct FKey& InputedKey);
 	void InputEndQTE();
 	void InputStartQTE();
 	void SetupNextLevelSequecne(bool QTEResult);
@@ -90,7 +90,7 @@ public:
 	void SetupSequence(int QTESequenceIndex);
 	void Retry();
 	void UpdatePlayingSequenceToRetry();
-	bool IsExistQTEInCurrent();
+	bool STATIC_IsExistQTEInCurrent();
 	void UpdatePlayingIntervalSequence();
 	bool IsExistNextLevelSequence();
 	void EndIntervalSequence();
@@ -106,10 +106,10 @@ public:
 	void InpActEvt_QTE_Bottom_K2Node_InputActionEvent_11(const struct FKey& Key);
 	void InpActEvt_QTE_Left_K2Node_InputActionEvent_10(const struct FKey& Key);
 	void InpActEvt_QTE_Right_K2Node_InputActionEvent_9(const struct FKey& Key);
-	void Event_InputStart();
-	void Event_InputEnd();
-	void ReceiveTick(float DeltaSeconds);
-	void OnFinishedLevelSequencePlayer(class ULevelSequencePlayer* LevelSequencePlayer);
+	void STATIC_Event_InputStart();
+	void STATIC_Event_InputEnd();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_OnFinishedLevelSequencePlayer(class ULevelSequencePlayer* LevelSequencePlayer);
 	void ExecuteUbergraph_BP_old_QTEMultiTypeCutscenePlayer(int EntryPoint);
 };
 

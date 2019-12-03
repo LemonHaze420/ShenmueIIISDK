@@ -65,20 +65,20 @@ public:
 	void updateDate();
 	void checkHour(int Time_hour_, int* ChangeHour);
 	void updateDatas_logo_(class UTexture* LogoImage);
-	void updateDatas_text2_(const struct FText& main1, const struct FText& sub1, const struct FText& main2, const struct FText& sub2);
-	void updateDatas_text1_(const struct FText& Main, const struct FText& sub);
+	void STATIC_updateDatas_text2_(const struct FText& main1, const struct FText& sub1, const struct FText& main2, const struct FText& sub2);
+	void STATIC_updateDatas_text1_(const struct FText& Main, const struct FText& sub);
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
 	void fadeOut_Event_text1_(bool fadeFlag);
 	void fadeOut_Event_text2_(bool fadeFlag);
 	void fadeOut_Event_logo_(bool fadeFlag);
-	void fade_Event(bool Visible, bool fadeFlag);
-	void ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade);
+	void STATIC_fade_Event(bool Visible, bool fadeFlag);
+	void STATIC_ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade);
 	void ShowEyecatchText2(const struct FText& MainTitle1, const struct FText& SubTitle1, const struct FText& MainTitle2, const struct FText& SubTitle2, bool bUseFade);
-	void ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade);
+	void STATIC_ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade);
 	void HideEyecatch(bool bUseFade);
-	void ExecuteUbergraph_wgt_eyecatch(int EntryPoint);
-	void onFadeFinish_out___DelegateSignature();
-	void onFadeFinish_in___DelegateSignature();
+	void STATIC_ExecuteUbergraph_wgt_eyecatch(int EntryPoint);
+	void STATIC_onFadeFinish_out___DelegateSignature();
+	void STATIC_onFadeFinish_in___DelegateSignature();
 };
 
 

@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.GetPathfindTarget
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
 // class AActor*                  OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_FollowLeader_C::GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor)
+void UBP_State_Follow_FollowLeader_C::STATIC_GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.GetPathfindTarget");
 
@@ -39,11 +39,11 @@ void UBP_State_Follow_FollowLeader_C::GetPathfindTarget(struct FVector* OutLocat
 
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.MoveStateEnter
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_FollowLeader_C::MoveStateEnter(bool* bDummy)
+void UBP_State_Follow_FollowLeader_C::STATIC_MoveStateEnter(bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.MoveStateEnter");
 
@@ -61,7 +61,7 @@ void UBP_State_Follow_FollowLeader_C::MoveStateEnter(bool* bDummy)
 
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, NetClient)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -85,12 +85,12 @@ void UBP_State_Follow_FollowLeader_C::StateEnter(float Delta, bool* bProcessing)
 
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.StateUpdate
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_FollowLeader_C::StateUpdate(float Delta, bool* bDummy)
+void UBP_State_Follow_FollowLeader_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.StateUpdate");
 
@@ -98,6 +98,7 @@ void UBP_State_Follow_FollowLeader_C::StateUpdate(float Delta, bool* bDummy)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +110,7 @@ void UBP_State_Follow_FollowLeader_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.UpdateTransitions
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,6 +122,7 @@ void UBP_State_Follow_FollowLeader_C::UpdateTransitions(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,9 +131,9 @@ void UBP_State_Follow_FollowLeader_C::UpdateTransitions(float DeltaSeconds)
 
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.CancelPath
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBP_State_Follow_FollowLeader_C::CancelPath()
+void UBP_State_Follow_FollowLeader_C::STATIC_CancelPath()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.CancelPath");
 
@@ -146,9 +148,9 @@ void UBP_State_Follow_FollowLeader_C::CancelPath()
 
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.FinishPath
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBP_State_Follow_FollowLeader_C::FinishPath()
+void UBP_State_Follow_FollowLeader_C::STATIC_FinishPath()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.FinishPath");
 
@@ -163,11 +165,11 @@ void UBP_State_Follow_FollowLeader_C::FinishPath()
 
 
 // Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.ExecuteUbergraph_BP_State_Follow_FollowLeader
-// ()
+// (NetReliable, NetResponse, Static, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_FollowLeader_C::ExecuteUbergraph_BP_State_Follow_FollowLeader(int EntryPoint)
+void UBP_State_Follow_FollowLeader_C::STATIC_ExecuteUbergraph_BP_State_Follow_FollowLeader(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_FollowLeader.BP_State_Follow_FollowLeader_C.ExecuteUbergraph_BP_State_Follow_FollowLeader");
 

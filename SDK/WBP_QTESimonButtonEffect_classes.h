@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void SetButtonImage(class UTexture2D* Image);
+	void STATIC_SetButtonImage(class UTexture2D* Image);
 	void PlayInstruction();
-	void Reset();
+	void STATIC_Reset();
 };
 
 

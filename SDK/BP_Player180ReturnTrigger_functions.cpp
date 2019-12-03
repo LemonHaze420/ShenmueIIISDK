@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.TestPlayerState
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintEvent)
 // Parameters:
 // bool                           Normal                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::TestPlayerState(bool* Normal)
+void ABP_Player180ReturnTrigger_C::STATIC_TestPlayerState(bool* Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.TestPlayerState");
 
 	ABP_Player180ReturnTrigger_C_TestPlayerState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +37,11 @@ void ABP_Player180ReturnTrigger_C::TestPlayerState(bool* Normal)
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.SetEventStatus
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           bStartEvent                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::SetEventStatus(bool bStartEvent)
+void ABP_Player180ReturnTrigger_C::STATIC_SetEventStatus(bool bStartEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.SetEventStatus");
 
@@ -48,6 +49,7 @@ void ABP_Player180ReturnTrigger_C::SetEventStatus(bool bStartEvent)
 	params.bStartEvent = bStartEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +58,7 @@ void ABP_Player180ReturnTrigger_C::SetEventStatus(bool bStartEvent)
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.CanActionByBehaviorState
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Native, Public, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -67,6 +69,7 @@ bool ABP_Player180ReturnTrigger_C::CanActionByBehaviorState()
 	ABP_Player180ReturnTrigger_C_CanActionByBehaviorState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +80,7 @@ bool ABP_Player180ReturnTrigger_C::CanActionByBehaviorState()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.IsSubtitleDone
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Public, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -88,6 +91,7 @@ bool ABP_Player180ReturnTrigger_C::IsSubtitleDone()
 	ABP_Player180ReturnTrigger_C_IsSubtitleDone_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,7 +102,7 @@ bool ABP_Player180ReturnTrigger_C::IsSubtitleDone()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.CheckCanBack
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FVector                 HitLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           Back                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -122,11 +126,11 @@ void ABP_Player180ReturnTrigger_C::CheckCanBack(const struct FVector& HitLocatio
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.PlayAction
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::PlayAction(bool* Success)
+void ABP_Player180ReturnTrigger_C::STATIC_PlayAction(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.PlayAction");
 
@@ -144,13 +148,13 @@ void ABP_Player180ReturnTrigger_C::PlayAction(bool* Success)
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.GetPlaybackDir
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ImpactDir                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 NormalDir                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 PlaybackDIr                    (Parm, OutParm, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::GetPlaybackDir(const struct FVector& ImpactDir, const struct FVector& NormalDir, struct FVector* PlaybackDIr)
+void ABP_Player180ReturnTrigger_C::STATIC_GetPlaybackDir(const struct FVector& ImpactDir, const struct FVector& NormalDir, struct FVector* PlaybackDIr)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.GetPlaybackDir");
 
@@ -170,15 +174,16 @@ void ABP_Player180ReturnTrigger_C::GetPlaybackDir(const struct FVector& ImpactDi
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.PlayAnimation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, Private, Protected, Delegate, NetClient, DLLImport)
 
-void ABP_Player180ReturnTrigger_C::PlayAnimation()
+void ABP_Player180ReturnTrigger_C::STATIC_PlayAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.PlayAnimation");
 
 	ABP_Player180ReturnTrigger_C_PlayAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,12 +192,12 @@ void ABP_Player180ReturnTrigger_C::PlayAnimation()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.GetTextWithRandom
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            SubtitleIndex                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Text_Label                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::GetTextWithRandom(int SubtitleIndex, struct FName* Text_Label)
+void ABP_Player180ReturnTrigger_C::STATIC_GetTextWithRandom(int SubtitleIndex, struct FName* Text_Label)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.GetTextWithRandom");
 
@@ -211,7 +216,7 @@ void ABP_Player180ReturnTrigger_C::GetTextWithRandom(int SubtitleIndex, struct F
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ExistNextText
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Exist                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -222,6 +227,7 @@ void ABP_Player180ReturnTrigger_C::ExistNextText(bool* Exist)
 	ABP_Player180ReturnTrigger_C_ExistNextText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,7 +239,7 @@ void ABP_Player180ReturnTrigger_C::ExistNextText(bool* Exist)
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.StartSubtitle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Player180ReturnTrigger_C::StartSubtitle()
 {
@@ -250,7 +256,7 @@ void ABP_Player180ReturnTrigger_C::StartSubtitle()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_Player180ReturnTrigger_C::UserConstructionScript()
 {
@@ -267,7 +273,7 @@ void ABP_Player180ReturnTrigger_C::UserConstructionScript()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, NetResponse, Static, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -276,7 +282,7 @@ void ABP_Player180ReturnTrigger_C::UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_Player180ReturnTrigger_C::STATIC_BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -297,11 +303,11 @@ void ABP_Player180ReturnTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBo
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, Native, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::ReceiveTick(float DeltaSeconds)
+void ABP_Player180ReturnTrigger_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ReceiveTick");
 
@@ -309,6 +315,7 @@ void ABP_Player180ReturnTrigger_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -317,15 +324,16 @@ void ABP_Player180ReturnTrigger_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.OnSubtitlePlayFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Player180ReturnTrigger_C::OnSubtitlePlayFinished()
+void ABP_Player180ReturnTrigger_C::STATIC_OnSubtitlePlayFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.OnSubtitlePlayFinished");
 
 	ABP_Player180ReturnTrigger_C_OnSubtitlePlayFinished_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -334,7 +342,7 @@ void ABP_Player180ReturnTrigger_C::OnSubtitlePlayFinished()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Native, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -352,6 +360,7 @@ void ABP_Player180ReturnTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBo
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -360,15 +369,16 @@ void ABP_Player180ReturnTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBo
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Player180ReturnTrigger_C::ReceiveBeginPlay()
+void ABP_Player180ReturnTrigger_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ReceiveBeginPlay");
 
 	ABP_Player180ReturnTrigger_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -377,11 +387,11 @@ void ABP_Player180ReturnTrigger_C::ReceiveBeginPlay()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_Player180ReturnTrigger_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ReceiveEndPlay");
 
@@ -389,6 +399,7 @@ void ABP_Player180ReturnTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -397,15 +408,16 @@ void ABP_Player180ReturnTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.OnEnterStepAndTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Player180ReturnTrigger_C::OnEnterStepAndTime()
+void ABP_Player180ReturnTrigger_C::STATIC_OnEnterStepAndTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.OnEnterStepAndTime");
 
 	ABP_Player180ReturnTrigger_C_OnEnterStepAndTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -414,15 +426,16 @@ void ABP_Player180ReturnTrigger_C::OnEnterStepAndTime()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.OnExitStepAndTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Player180ReturnTrigger_C::OnExitStepAndTime()
+void ABP_Player180ReturnTrigger_C::STATIC_OnExitStepAndTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.OnExitStepAndTime");
 
 	ABP_Player180ReturnTrigger_C_OnExitStepAndTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -431,11 +444,11 @@ void ABP_Player180ReturnTrigger_C::OnExitStepAndTime()
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.SetShouldBeObstacle
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::SetShouldBeObstacle(bool Value)
+void ABP_Player180ReturnTrigger_C::STATIC_SetShouldBeObstacle(bool Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.SetShouldBeObstacle");
 
@@ -443,6 +456,7 @@ void ABP_Player180ReturnTrigger_C::SetShouldBeObstacle(bool Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -451,11 +465,11 @@ void ABP_Player180ReturnTrigger_C::SetShouldBeObstacle(bool Value)
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ExecuteUbergraph_BP_Player180ReturnTrigger
-// (HasDefaults)
+// (NetReliable, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Player180ReturnTrigger_C::ExecuteUbergraph_BP_Player180ReturnTrigger(int EntryPoint)
+void ABP_Player180ReturnTrigger_C::STATIC_ExecuteUbergraph_BP_Player180ReturnTrigger(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.ExecuteUbergraph_BP_Player180ReturnTrigger");
 
@@ -471,15 +485,16 @@ void ABP_Player180ReturnTrigger_C::ExecuteUbergraph_BP_Player180ReturnTrigger(in
 
 
 // Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.EndTurnAround__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable)
 
-void ABP_Player180ReturnTrigger_C::EndTurnAround__DelegateSignature()
+void ABP_Player180ReturnTrigger_C::STATIC_EndTurnAround__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Player180ReturnTrigger.BP_Player180ReturnTrigger_C.EndTurnAround__DelegateSignature");
 
 	ABP_Player180ReturnTrigger_C_EndTurnAround__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

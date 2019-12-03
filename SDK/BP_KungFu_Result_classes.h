@@ -36,10 +36,10 @@ public:
 	}
 
 
-	void ConstructWidget();
+	void STATIC_ConstructWidget();
 	void UserConstructionScript();
-	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void OnWidgetAnimationFinished();
 	void StartClose();
 	void ReceiveBeginPlay();

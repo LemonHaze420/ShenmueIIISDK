@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_ScreenFade.BPW_ScreenFade_C.GetFadeColor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           bIgnoreOpacity                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            ColorAndOpacity                (Parm, OutParm, IsPlainOldData)
 
-void UBPW_ScreenFade_C::GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* ColorAndOpacity)
+void UBPW_ScreenFade_C::STATIC_GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* ColorAndOpacity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ScreenFade.BPW_ScreenFade_C.GetFadeColor");
 
@@ -38,11 +38,11 @@ void UBPW_ScreenFade_C::GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* C
 
 
 // Function BPW_ScreenFade.BPW_ScreenFade_C.SetFadeColor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, MulticastDelegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // struct FLinearColor            FadeColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPW_ScreenFade_C::SetFadeColor(const struct FLinearColor& FadeColor)
+void UBPW_ScreenFade_C::STATIC_SetFadeColor(const struct FLinearColor& FadeColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ScreenFade.BPW_ScreenFade_C.SetFadeColor");
 

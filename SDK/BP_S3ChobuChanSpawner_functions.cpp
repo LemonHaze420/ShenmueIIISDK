@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.GetRandomScript
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ struct FName ABP_S3ChobuChanSpawner_C::GetRandomScript()
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.IsLooking
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Look                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ChobuChanSpawner_C::IsLooking(bool* Look)
+void ABP_S3ChobuChanSpawner_C::STATIC_IsLooking(bool* Look)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.IsLooking");
 
@@ -57,7 +57,7 @@ void ABP_S3ChobuChanSpawner_C::IsLooking(bool* Look)
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetMulticast, MulticastDelegate, Private, Protected, Delegate)
 
 void ABP_S3ChobuChanSpawner_C::UserConstructionScript()
 {
@@ -74,7 +74,7 @@ void ABP_S3ChobuChanSpawner_C::UserConstructionScript()
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.UniqueActionOnFind
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3ChobuChanSpawner_C::UniqueActionOnFind()
 {
@@ -83,6 +83,7 @@ void ABP_S3ChobuChanSpawner_C::UniqueActionOnFind()
 	ABP_S3ChobuChanSpawner_C_UniqueActionOnFind_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +92,7 @@ void ABP_S3ChobuChanSpawner_C::UniqueActionOnFind()
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.ForceFindSelf
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3ChobuChanSpawner_C::ForceFindSelf()
 {
@@ -100,6 +101,7 @@ void ABP_S3ChobuChanSpawner_C::ForceFindSelf()
 	ABP_S3ChobuChanSpawner_C_ForceFindSelf_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,11 +110,11 @@ void ABP_S3ChobuChanSpawner_C::ForceFindSelf()
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.SetEnabledHelp
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ChobuChanSpawner_C::SetEnabledHelp(bool Condition)
+void ABP_S3ChobuChanSpawner_C::STATIC_SetEnabledHelp(bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.SetEnabledHelp");
 
@@ -120,6 +122,7 @@ void ABP_S3ChobuChanSpawner_C::SetEnabledHelp(bool Condition)
 	params.Condition = Condition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -128,7 +131,7 @@ void ABP_S3ChobuChanSpawner_C::SetEnabledHelp(bool Condition)
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.UpdateEffect
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Current                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -142,6 +145,7 @@ void ABP_S3ChobuChanSpawner_C::UpdateEffect(float Value, bool Current)
 	params.Current = Current;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,7 +154,7 @@ void ABP_S3ChobuChanSpawner_C::UpdateEffect(float Value, bool Current)
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.CreateEffect
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3ChobuChanSpawner_C::CreateEffect()
 {
@@ -159,6 +163,7 @@ void ABP_S3ChobuChanSpawner_C::CreateEffect()
 	ABP_S3ChobuChanSpawner_C_CreateEffect_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +172,7 @@ void ABP_S3ChobuChanSpawner_C::CreateEffect()
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3ChobuChanSpawner_C::ReceiveBeginPlay()
 {
@@ -176,6 +181,7 @@ void ABP_S3ChobuChanSpawner_C::ReceiveBeginPlay()
 	ABP_S3ChobuChanSpawner_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -184,7 +190,7 @@ void ABP_S3ChobuChanSpawner_C::ReceiveBeginPlay()
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.FindEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3ChobuChanSpawner_C::FindEvent()
 {
@@ -193,6 +199,7 @@ void ABP_S3ChobuChanSpawner_C::FindEvent()
 	ABP_S3ChobuChanSpawner_C_FindEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,7 +208,7 @@ void ABP_S3ChobuChanSpawner_C::FindEvent()
 
 
 // Function BP_S3ChobuChanSpawner.BP_S3ChobuChanSpawner_C.ExecuteUbergraph_BP_S3ChobuChanSpawner
-// ()
+// (Native, NetMulticast, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -213,6 +220,7 @@ void ABP_S3ChobuChanSpawner_C::ExecuteUbergraph_BP_S3ChobuChanSpawner(int EntryP
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AttachmentHaveItem.BP_AttachmentHaveItem_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 
-void ABP_AttachmentHaveItem_C::UserConstructionScript()
+void ABP_AttachmentHaveItem_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttachmentHaveItem.BP_AttachmentHaveItem_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_AttachmentHaveItem_C::UserConstructionScript()
 
 
 // Function BP_AttachmentHaveItem.BP_AttachmentHaveItem_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_AttachmentHaveItem_C::ReceiveBeginPlay()
 {
@@ -40,6 +40,7 @@ void ABP_AttachmentHaveItem_C::ReceiveBeginPlay()
 	ABP_AttachmentHaveItem_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +49,11 @@ void ABP_AttachmentHaveItem_C::ReceiveBeginPlay()
 
 
 // Function BP_AttachmentHaveItem.BP_AttachmentHaveItem_C.ExecuteUbergraph_BP_AttachmentHaveItem
-// ()
+// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttachmentHaveItem_C::ExecuteUbergraph_BP_AttachmentHaveItem(int EntryPoint)
+void ABP_AttachmentHaveItem_C::STATIC_ExecuteUbergraph_BP_AttachmentHaveItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttachmentHaveItem.BP_AttachmentHaveItem_C.ExecuteUbergraph_BP_AttachmentHaveItem");
 

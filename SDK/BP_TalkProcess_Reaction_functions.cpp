@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Reaction.BP_TalkProcess_Reaction_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBP_TalkProcess_Reaction_C::Activate()
 {
@@ -23,6 +23,7 @@ void UBP_TalkProcess_Reaction_C::Activate()
 	UBP_TalkProcess_Reaction_C_Activate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBP_TalkProcess_Reaction_C::Activate()
 
 
 // Function BP_TalkProcess_Reaction.BP_TalkProcess_Reaction_C.ExecuteUbergraph_BP_TalkProcess_Reaction
-// ()
+// (Net, NetReliable, NetRequest, Native, Event, Protected, Delegate, HasDefaults, NetClient)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +44,7 @@ void UBP_TalkProcess_Reaction_C::ExecuteUbergraph_BP_TalkProcess_Reaction(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

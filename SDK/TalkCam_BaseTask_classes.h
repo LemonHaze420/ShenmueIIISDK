@@ -27,15 +27,15 @@ public:
 	}
 
 
-	void IsFull(int mask, bool* Result);
-	void IsClose(int mask, bool* Result);
-	void IsBust(int mask, bool* Result);
-	void IsShoulderCut(int mask, bool* Result);
-	void isPair(int mask, bool* Result);
-	void IsFar(int mask, bool* Result);
-	void IsHorizontal(int mask, bool* Result);
+	void STATIC_IsFull(int mask, bool* Result);
+	void STATIC_IsClose(int mask, bool* Result);
+	void STATIC_IsBust(int mask, bool* Result);
+	void STATIC_IsShoulderCut(int mask, bool* Result);
+	void STATIC_isPair(int mask, bool* Result);
+	void STATIC_IsFar(int mask, bool* Result);
+	void STATIC_IsHorizontal(int mask, bool* Result);
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
-	void ExecuteUbergraph_TalkCam_BaseTask(int EntryPoint);
+	void STATIC_ExecuteUbergraph_TalkCam_BaseTask(int EntryPoint);
 };
 
 

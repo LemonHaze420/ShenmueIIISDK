@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_SetFlag.BTT_SetFlag_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Native, Static, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_SetFlag_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_SetFlag_C::STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_SetFlag.BTT_SetFlag_C.ReceiveExecuteAI");
 
@@ -28,6 +28,7 @@ void UBTT_SetFlag_C::ReceiveExecuteAI(class AAIController* OwnerController, clas
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +37,11 @@ void UBTT_SetFlag_C::ReceiveExecuteAI(class AAIController* OwnerController, clas
 
 
 // Function BTT_SetFlag.BTT_SetFlag_C.ExecuteUbergraph_BTT_SetFlag
-// ()
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_SetFlag_C::ExecuteUbergraph_BTT_SetFlag(int EntryPoint)
+void UBTT_SetFlag_C::STATIC_ExecuteUbergraph_BTT_SetFlag(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_SetFlag.BTT_SetFlag_C.ExecuteUbergraph_BTT_SetFlag");
 

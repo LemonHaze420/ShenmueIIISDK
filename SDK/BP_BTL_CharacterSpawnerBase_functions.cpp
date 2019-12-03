@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.isPlayer
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Delegate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_BTL_CharacterSpawnerBase_C::isPlayer()
+bool ABP_BTL_CharacterSpawnerBase_C::STATIC_isPlayer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.isPlayer");
 
 	ABP_BTL_CharacterSpawnerBase_C_isPlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,17 +36,18 @@ bool ABP_BTL_CharacterSpawnerBase_C::isPlayer()
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.IsEnabled
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, Public, Delegate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_BTL_CharacterSpawnerBase_C::IsEnabled()
+bool ABP_BTL_CharacterSpawnerBase_C::STATIC_IsEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.IsEnabled");
 
 	ABP_BTL_CharacterSpawnerBase_C_IsEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +58,7 @@ bool ABP_BTL_CharacterSpawnerBase_C::IsEnabled()
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.GetSpawnInfo
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 Outer                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBTL_Launch_NPC_C*       LaunchInfo                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -69,6 +71,7 @@ void ABP_BTL_CharacterSpawnerBase_C::GetSpawnInfo(class UObject* Outer, class UB
 	params.Outer = Outer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,11 +83,11 @@ void ABP_BTL_CharacterSpawnerBase_C::GetSpawnInfo(class UObject* Outer, class UB
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.GetID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FName                   Identifier                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BTL_CharacterSpawnerBase_C::GetID(struct FName* Identifier)
+void ABP_BTL_CharacterSpawnerBase_C::STATIC_GetID(struct FName* Identifier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.GetID");
 
@@ -102,7 +105,7 @@ void ABP_BTL_CharacterSpawnerBase_C::GetID(struct FName* Identifier)
 
 
 // Function BP_BTL_CharacterSpawnerBase.BP_BTL_CharacterSpawnerBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BTL_CharacterSpawnerBase_C::UserConstructionScript()
 {
@@ -111,6 +114,7 @@ void ABP_BTL_CharacterSpawnerBase_C::UserConstructionScript()
 	ABP_BTL_CharacterSpawnerBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

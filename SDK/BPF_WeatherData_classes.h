@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void STATIC_GetRainNavData(class UObject* __WorldContext, class AS3RainNavData** NavData);
-	void STATIC_GetWeatherData(class UObject* __WorldContext, class US3WeatherDataAsset** WeatherData);
+	void GetRainNavData(class UObject* __WorldContext, class AS3RainNavData** NavData);
+	void GetWeatherData(class UObject* __WorldContext, class US3WeatherDataAsset** WeatherData);
 };
 
 

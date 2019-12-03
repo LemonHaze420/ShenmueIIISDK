@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.SetAchievementName
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable)
 // Parameters:
 // struct FString                 AchievementName                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -26,6 +26,7 @@ void UBP_S3AchievementWidget_C::SetAchievementName(const struct FString& Achieve
 	params.AchievementName = AchievementName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UBP_S3AchievementWidget_C::SetAchievementName(const struct FString& Achieve
 
 
 // Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
 void UBP_S3AchievementWidget_C::Construct()
 {
@@ -43,6 +44,7 @@ void UBP_S3AchievementWidget_C::Construct()
 	UBP_S3AchievementWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,11 +53,11 @@ void UBP_S3AchievementWidget_C::Construct()
 
 
 // Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.ExecuteUbergraph_BP_S3AchievementWidget
-// ()
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3AchievementWidget_C::ExecuteUbergraph_BP_S3AchievementWidget(int EntryPoint)
+void UBP_S3AchievementWidget_C::STATIC_ExecuteUbergraph_BP_S3AchievementWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AchievementWidget.BP_S3AchievementWidget_C.ExecuteUbergraph_BP_S3AchievementWidget");
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_TurnAround_ScheduleNPC2.BPC_TurnAround_ScheduleNPC2_C.CanTurnAround
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void UBPC_TurnAround_ScheduleNPC2_C::CanTurnAround(bool* bCan)
 	UBPC_TurnAround_ScheduleNPC2_C_CanTurnAround_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +37,11 @@ void UBPC_TurnAround_ScheduleNPC2_C::CanTurnAround(bool* bCan)
 
 
 // Function BPC_TurnAround_ScheduleNPC2.BPC_TurnAround_ScheduleNPC2_C.TryPostTeleportTurnaround
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bTeleported                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_ScheduleNPC2_C::TryPostTeleportTurnaround(bool bTeleported)
+void UBPC_TurnAround_ScheduleNPC2_C::STATIC_TryPostTeleportTurnaround(bool bTeleported)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_ScheduleNPC2.BPC_TurnAround_ScheduleNPC2_C.TryPostTeleportTurnaround");
 
@@ -56,11 +57,11 @@ void UBPC_TurnAround_ScheduleNPC2_C::TryPostTeleportTurnaround(bool bTeleported)
 
 
 // Function BPC_TurnAround_ScheduleNPC2.BPC_TurnAround_ScheduleNPC2_C.ExecuteUbergraph_BPC_TurnAround_ScheduleNPC2
-// ()
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_ScheduleNPC2_C::ExecuteUbergraph_BPC_TurnAround_ScheduleNPC2(int EntryPoint)
+void UBPC_TurnAround_ScheduleNPC2_C::STATIC_ExecuteUbergraph_BPC_TurnAround_ScheduleNPC2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_ScheduleNPC2.BPC_TurnAround_ScheduleNPC2_C.ExecuteUbergraph_BPC_TurnAround_ScheduleNPC2");
 
@@ -68,6 +69,7 @@ void UBPC_TurnAround_ScheduleNPC2_C::ExecuteUbergraph_BPC_TurnAround_ScheduleNPC
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

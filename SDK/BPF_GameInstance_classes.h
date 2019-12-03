@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3GameInstance(class UObject* __WorldContext, class UBP_S3GameInstance_C** BP_S3GameInstance);
+	void getS3GameInstance(class UObject* __WorldContext, class UBP_S3GameInstance_C** BP_S3GameInstance);
 };
 
 

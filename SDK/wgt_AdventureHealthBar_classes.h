@@ -28,8 +28,8 @@ public:
 	}
 
 
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_AdventureHealthBar(int EntryPoint);
 };
 

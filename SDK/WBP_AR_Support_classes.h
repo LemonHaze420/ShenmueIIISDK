@@ -46,15 +46,15 @@ public:
 	}
 
 
-	void GetPushCountRate(int Index, float* Output);
-	void UpdateFillRatio();
+	void STATIC_GetPushCountRate(int Index, float* Output);
+	void STATIC_UpdateFillRatio();
 	void ChangeButtonIcon(TEnumAsByte<EN_padSwitch> ButtonType);
 	void Count_Check();
-	void AddPushCount(bool Add);
+	void STATIC_AddPushCount(bool Add);
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Reset();
-	void SetEnabledSupportUI(bool Visible);
+	void STATIC_SetEnabledSupportUI(bool Visible);
 	void ExecuteUbergraph_WBP_AR_Support(int EntryPoint);
 	void CountChange__DelegateSignature(int Count);
 	void CountMAX__DelegateSignature();

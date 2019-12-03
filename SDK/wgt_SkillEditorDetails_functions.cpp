@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.SetSkillLibrary
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UBTL_CommandLibrary_C*   SkillLibrary                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,11 +34,11 @@ void Uwgt_SkillEditorDetails_C::SetSkillLibrary(class UBTL_CommandLibrary_C* Ski
 
 
 // Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.SetDefaultFrameVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditorDetails_C::SetDefaultFrameVisible(bool Visible)
+void Uwgt_SkillEditorDetails_C::STATIC_SetDefaultFrameVisible(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.SetDefaultFrameVisible");
 
@@ -54,7 +54,7 @@ void Uwgt_SkillEditorDetails_C::SetDefaultFrameVisible(bool Visible)
 
 
 // Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.SetDescriptionText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -66,6 +66,7 @@ void Uwgt_SkillEditorDetails_C::SetDescriptionText(const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +75,11 @@ void Uwgt_SkillEditorDetails_C::SetDescriptionText(const struct FText& Text)
 
 
 // Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.SetItem_TableIndex
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditorDetails_C::SetItem_TableIndex(int Index)
+void Uwgt_SkillEditorDetails_C::STATIC_SetItem_TableIndex(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.SetItem_TableIndex");
 
@@ -86,6 +87,7 @@ void Uwgt_SkillEditorDetails_C::SetItem_TableIndex(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +96,7 @@ void Uwgt_SkillEditorDetails_C::SetItem_TableIndex(int Index)
 
 
 // Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void Uwgt_SkillEditorDetails_C::Construct()
 {
@@ -103,6 +105,7 @@ void Uwgt_SkillEditorDetails_C::Construct()
 	Uwgt_SkillEditorDetails_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,7 +114,7 @@ void Uwgt_SkillEditorDetails_C::Construct()
 
 
 // Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -131,11 +134,11 @@ void Uwgt_SkillEditorDetails_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.ExecuteUbergraph_wgt_SkillEditorDetails
-// ()
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditorDetails_C::ExecuteUbergraph_wgt_SkillEditorDetails(int EntryPoint)
+void Uwgt_SkillEditorDetails_C::STATIC_ExecuteUbergraph_wgt_SkillEditorDetails(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorDetails.wgt_SkillEditorDetails_C.ExecuteUbergraph_wgt_SkillEditorDetails");
 
@@ -143,6 +146,7 @@ void Uwgt_SkillEditorDetails_C::ExecuteUbergraph_wgt_SkillEditorDetails(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

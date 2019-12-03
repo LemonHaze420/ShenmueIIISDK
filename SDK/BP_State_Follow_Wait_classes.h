@@ -29,8 +29,8 @@ public:
 	}
 
 
-	bool FindNearbyRoadLocation(struct FVector* ProjectedLocation);
-	void StateEnter(float Delta, bool* bProcessing);
+	bool STATIC_FindNearbyRoadLocation(struct FVector* ProjectedLocation);
+	void STATIC_StateEnter(float Delta, bool* bProcessing);
 	void StateExit(float Delta, bool* bProcessing);
 	void StateUpdate(float Delta, bool* bDummy);
 	void UpdateTransitions(float DeltaSeconds);

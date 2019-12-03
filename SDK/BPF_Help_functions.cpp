@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Help.BPF_Help_C.GetS3HelpManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3HelpManager_C*     newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBPF_Help_C::STATIC_GetS3HelpManager(class UObject* __WorldContext, class A
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -29,9 +29,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_AttentionPoint(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_AttentionPoint(int EntryPoint);
 };
 
 

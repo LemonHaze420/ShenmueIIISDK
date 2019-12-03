@@ -12,6 +12,21 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum S3NPC.ES3NPCMovingState
+enum class ES3NPCMovingState : uint8_t
+{
+	ES3NPCMovingState__VE_Regular  = 0,
+	ES3NPCMovingState__VE_Washing  = 1,
+	ES3NPCMovingState__VE_CleanUp  = 2,
+	ES3NPCMovingState__VE_Cow      = 3,
+	ES3NPCMovingState__VE_Draw     = 4,
+	ES3NPCMovingState__VE_Livestock = 5,
+	ES3NPCMovingState__VE_Rake     = 6,
+	ES3NPCMovingState__VE_Shopping = 7,
+	ES3NPCMovingState__VE_MAX      = 8
+};
+
+
 // Enum S3NPC.ERotationAnimSelector
 enum class ERotationAnimSelector : uint8_t
 {
@@ -25,21 +40,6 @@ enum class ERotationAnimSelector : uint8_t
 	ERotationAnimSelector__VE_Left90 = 7,
 	ERotationAnimSelector__VE_Left45 = 8,
 	ERotationAnimSelector__VE_MAX  = 9
-};
-
-
-// Enum S3NPC.ES3NPCMovingState
-enum class ES3NPCMovingState : uint8_t
-{
-	ES3NPCMovingState__VE_Regular  = 0,
-	ES3NPCMovingState__VE_Washing  = 1,
-	ES3NPCMovingState__VE_CleanUp  = 2,
-	ES3NPCMovingState__VE_Cow      = 3,
-	ES3NPCMovingState__VE_Draw     = 4,
-	ES3NPCMovingState__VE_Livestock = 5,
-	ES3NPCMovingState__VE_Rake     = 6,
-	ES3NPCMovingState__VE_Shopping = 7,
-	ES3NPCMovingState__VE_MAX      = 8
 };
 
 
@@ -75,6 +75,23 @@ struct FNPCRelationshipTableRowBase : public FTableRowBase
 	float                                              Interests;                                                // 0x002C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct S3NPC.POIListStruct
+// 0x0018
+struct FPOIListStruct
+{
+	TArray<class AS3NPCPOIBase*>                       POILists;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              StartTime;                                                // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              EndTime;                                                  // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct S3NPC.POIListWithGameplayTagsStruct
+// 0x0030
+struct FPOIListWithGameplayTagsStruct
+{
+	struct FGameplayTagContainer                       IDTags;                                                   // 0x0000(0x0020) (Edit, BlueprintVisible)
+	TArray<struct FPOIListStruct>                      CharacterPOILists;                                        // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+};
+
 // ScriptStruct S3NPC.S3NPCAttachmentStruct
 // 0x0028
 struct FS3NPCAttachmentStruct
@@ -104,6 +121,19 @@ struct FTargetListTableRowBase : public FTableRowBase
 	float                                              fEndTime;                                                 // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct S3NPC.S3NPCSpawnerStruct
+// 0x0040
+struct FS3NPCSpawnerStruct
+{
+	class UClass*                                      NPC_Class;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AS3NPCSpawnPointBase*                        SpawnPoint;                                               // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AS3NPCPOITargetListManagerBase*              POITargetPointListArray;                                  // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bUsePOITargetPointList;                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bUseSpline;                                               // 0x0019(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x001A(0x0006) MISSED OFFSET
+	struct FGameplayTagContainer                       GroupTags;                                                // 0x0020(0x0020) (Edit, BlueprintVisible)
+};
+
 // ScriptStruct S3NPC.S3NPCRegionStruct
 // 0x0010
 struct FS3NPCRegionStruct
@@ -129,36 +159,6 @@ struct FS3NPCScheduleSplineStruct
 	class AS3NPCSplineActorBase*                       ScheduleSplineActor;                                      // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              StartTime;                                                // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              EndTime;                                                  // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct S3NPC.S3NPCSpawnerStruct
-// 0x0040
-struct FS3NPCSpawnerStruct
-{
-	class UClass*                                      NPC_Class;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AS3NPCSpawnPointBase*                        SpawnPoint;                                               // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AS3NPCPOITargetListManagerBase*              POITargetPointListArray;                                  // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bUsePOITargetPointList;                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseSpline;                                               // 0x0019(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x001A(0x0006) MISSED OFFSET
-	struct FGameplayTagContainer                       GroupTags;                                                // 0x0020(0x0020) (Edit, BlueprintVisible)
-};
-
-// ScriptStruct S3NPC.POIListStruct
-// 0x0018
-struct FPOIListStruct
-{
-	TArray<class AS3NPCPOIBase*>                       POILists;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              StartTime;                                                // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              EndTime;                                                  // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct S3NPC.POIListWithGameplayTagsStruct
-// 0x0030
-struct FPOIListWithGameplayTagsStruct
-{
-	struct FGameplayTagContainer                       IDTags;                                                   // 0x0000(0x0020) (Edit, BlueprintVisible)
-	TArray<struct FPOIListStruct>                      CharacterPOILists;                                        // 0x0020(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct S3NPC.S3POITimeTableStruct

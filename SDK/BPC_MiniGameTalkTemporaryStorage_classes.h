@@ -31,12 +31,12 @@ public:
 
 
 	void AddAcquiredMoney(int Acquired);
-	void GetTotalMoney(int* Money);
+	void STATIC_GetTotalMoney(int* Money);
 	void GetPreGameResult(bool* bSuccess, TEnumAsByte<E_MiniGameResult>* Result);
-	void GetTotalNumberOfResult(TEnumAsByte<E_MiniGameResult> Result, int* TotalCount);
-	void GetContinuousResultNumber(TEnumAsByte<E_MiniGameResult> Result, int* Count);
-	void GetContinuousPlayCount(int* PlayCount);
-	void Finalize();
+	void STATIC_GetTotalNumberOfResult(TEnumAsByte<E_MiniGameResult> Result, int* TotalCount);
+	void STATIC_GetContinuousResultNumber(TEnumAsByte<E_MiniGameResult> Result, int* Count);
+	void STATIC_GetContinuousPlayCount(int* PlayCount);
+	void STATIC_Finalize();
 	void Initialize();
 	void BindMiniGameEvents(class ABP_MiniGameBase_C* MiniGame);
 	void UnbindMiniGameEvents(class ABP_MiniGameBase_C* MiniGame);
@@ -46,7 +46,7 @@ public:
 	void OnDrawMiniGame(class ABP_MiniGameBase_C* SelfMiniGame);
 	void OnStartMiniGame(class ABP_MiniGameBase_C* SelfMiniGame);
 	void OnRestartMiniGame(class ABP_MiniGameBase_C* SelfMiniGame);
-	void ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_MiniGameTalkTemporaryStorage(int EntryPoint);
 };
 
 

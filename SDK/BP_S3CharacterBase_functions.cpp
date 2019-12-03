@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.IsTalking
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ bool ABP_S3CharacterBase_C::IsTalking()
 	ABP_S3CharacterBase_C_IsTalking_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ bool ABP_S3CharacterBase_C::IsTalking()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetEnableIK
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bIKEnabled                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -57,12 +58,12 @@ void ABP_S3CharacterBase_C::GetEnableIK(bool* bIKEnabled)
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.SetEnableIK
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bInIKEnabled                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3CharacterBase_C::SetEnableIK(bool bInIKEnabled, bool* dummy)
+void ABP_S3CharacterBase_C::STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CharacterBase.BP_S3CharacterBase_C.SetEnableIK");
 
@@ -70,6 +71,7 @@ void ABP_S3CharacterBase_C::SetEnableIK(bool bInIKEnabled, bool* dummy)
 	params.bInIKEnabled = bInIKEnabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,17 +83,18 @@ void ABP_S3CharacterBase_C::SetEnableIK(bool bInIKEnabled, bool* dummy)
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileHandedness
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<ES3HandednessType> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<ES3HandednessType> ABP_S3CharacterBase_C::GetProfileHandedness()
+TEnumAsByte<ES3HandednessType> ABP_S3CharacterBase_C::STATIC_GetProfileHandedness()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileHandedness");
 
 	ABP_S3CharacterBase_C_GetProfileHandedness_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +105,7 @@ TEnumAsByte<ES3HandednessType> ABP_S3CharacterBase_C::GetProfileHandedness()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.ReturnOutOfWorld
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -113,6 +116,7 @@ bool ABP_S3CharacterBase_C::ReturnOutOfWorld()
 	ABP_S3CharacterBase_C_ReturnOutOfWorld_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,7 +127,7 @@ bool ABP_S3CharacterBase_C::ReturnOutOfWorld()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.IsInShelter
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Sheltered                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -145,17 +149,18 @@ void ABP_S3CharacterBase_C::IsInShelter(bool* Sheltered)
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileCharaName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString ABP_S3CharacterBase_C::GetProfileCharaName()
+struct FString ABP_S3CharacterBase_C::STATIC_GetProfileCharaName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileCharaName");
 
 	ABP_S3CharacterBase_C_GetProfileCharaName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +171,7 @@ struct FString ABP_S3CharacterBase_C::GetProfileCharaName()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileDisplayName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 Display_Name                   (Parm, OutParm, ZeroConstructor)
 // struct FString                 Display_Rubi                   (Parm, OutParm, ZeroConstructor)
@@ -179,6 +184,7 @@ void ABP_S3CharacterBase_C::GetProfileDisplayName(struct FString* Display_Name, 
 	ABP_S3CharacterBase_C_GetProfileDisplayName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,17 +200,18 @@ void ABP_S3CharacterBase_C::GetProfileDisplayName(struct FString* Display_Name, 
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileGender
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<ES3CharacterGender> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<ES3CharacterGender> ABP_S3CharacterBase_C::GetProfileGender()
+TEnumAsByte<ES3CharacterGender> ABP_S3CharacterBase_C::STATIC_GetProfileGender()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileGender");
 
 	ABP_S3CharacterBase_C_GetProfileGender_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,17 +222,18 @@ TEnumAsByte<ES3CharacterGender> ABP_S3CharacterBase_C::GetProfileGender()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileWeight
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_S3CharacterBase_C::GetProfileWeight()
+int ABP_S3CharacterBase_C::STATIC_GetProfileWeight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileWeight");
 
 	ABP_S3CharacterBase_C_GetProfileWeight_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,17 +244,18 @@ int ABP_S3CharacterBase_C::GetProfileWeight()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileHeight
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_S3CharacterBase_C::GetProfileHeight()
+float ABP_S3CharacterBase_C::STATIC_GetProfileHeight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileHeight");
 
 	ABP_S3CharacterBase_C_GetProfileHeight_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -257,17 +266,18 @@ float ABP_S3CharacterBase_C::GetProfileHeight()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileAge
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_S3CharacterBase_C::GetProfileAge()
+int ABP_S3CharacterBase_C::STATIC_GetProfileAge()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfileAge");
 
 	ABP_S3CharacterBase_C_GetProfileAge_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,7 +288,7 @@ int ABP_S3CharacterBase_C::GetProfileAge()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.GetProfile
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FS3CharacterProfile     Profile                        (Parm, OutParm)
 
@@ -300,7 +310,7 @@ void ABP_S3CharacterBase_C::GetProfile(struct FS3CharacterProfile* Profile)
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.DestroyComponentByTag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UClass*                  ComponentClass                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Tag                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -314,6 +324,7 @@ void ABP_S3CharacterBase_C::DestroyComponentByTag(class UClass* ComponentClass, 
 	params.Tag = Tag;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -322,7 +333,7 @@ void ABP_S3CharacterBase_C::DestroyComponentByTag(class UClass* ComponentClass, 
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3CharacterBase_C::UserConstructionScript()
 {
@@ -331,6 +342,7 @@ void ABP_S3CharacterBase_C::UserConstructionScript()
 	ABP_S3CharacterBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,7 +351,7 @@ void ABP_S3CharacterBase_C::UserConstructionScript()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.OnTalkStart
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -359,7 +371,7 @@ void ABP_S3CharacterBase_C::OnTalkStart(class US3TalkComponent* TalkComponent)
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.OnTalkFinished
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -373,6 +385,7 @@ void ABP_S3CharacterBase_C::OnTalkFinished(class US3TalkComponent* TalkComponent
 	params.interrupted = interrupted;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -381,7 +394,7 @@ void ABP_S3CharacterBase_C::OnTalkFinished(class US3TalkComponent* TalkComponent
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.Screen_Player
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3CharacterBase_C::Screen_Player()
 {
@@ -398,7 +411,7 @@ void ABP_S3CharacterBase_C::Screen_Player()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.Screen_NPC
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3CharacterBase_C::Screen_NPC()
 {
@@ -415,7 +428,7 @@ void ABP_S3CharacterBase_C::Screen_NPC()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Event, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -435,7 +448,7 @@ void ABP_S3CharacterBase_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Event, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3CharacterBase_C::ReceiveBeginPlay()
 {
@@ -452,7 +465,7 @@ void ABP_S3CharacterBase_C::ReceiveBeginPlay()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.TagCharaCheck
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3CharacterBase_C::TagCharaCheck()
 {
@@ -461,6 +474,7 @@ void ABP_S3CharacterBase_C::TagCharaCheck()
 	ABP_S3CharacterBase_C_TagCharaCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -469,7 +483,7 @@ void ABP_S3CharacterBase_C::TagCharaCheck()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.LoadFaceAnimAsset
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3CharacterBase_C::LoadFaceAnimAsset()
 {
@@ -478,6 +492,7 @@ void ABP_S3CharacterBase_C::LoadFaceAnimAsset()
 	ABP_S3CharacterBase_C_LoadFaceAnimAsset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -486,7 +501,7 @@ void ABP_S3CharacterBase_C::LoadFaceAnimAsset()
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.SetFaceAnimData
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3FaceAnimDataAsset*    InFaceMontageData              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -498,6 +513,7 @@ void ABP_S3CharacterBase_C::SetFaceAnimData(class US3FaceAnimDataAsset* InFaceMo
 	params.InFaceMontageData = InFaceMontageData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -506,7 +522,7 @@ void ABP_S3CharacterBase_C::SetFaceAnimData(class US3FaceAnimDataAsset* InFaceMo
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.StartCharaFadeOut
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -528,7 +544,7 @@ void ABP_S3CharacterBase_C::StartCharaFadeOut(class AActor* Executor, float Fade
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.StartCharaFadeIn
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -542,6 +558,7 @@ void ABP_S3CharacterBase_C::StartCharaFadeIn(class AActor* Executor, float FadeT
 	params.FadeTime = FadeTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -550,7 +567,7 @@ void ABP_S3CharacterBase_C::StartCharaFadeIn(class AActor* Executor, float FadeT
 
 
 // Function BP_S3CharacterBase.BP_S3CharacterBase_C.ExecuteUbergraph_BP_S3CharacterBase
-// (HasDefaults)
+// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -562,6 +579,7 @@ void ABP_S3CharacterBase_C::ExecuteUbergraph_BP_S3CharacterBase(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

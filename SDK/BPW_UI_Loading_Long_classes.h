@@ -51,16 +51,16 @@ public:
 	}
 
 
-	void ChangeFontType();
-	void CheckHiddenMirror();
+	void STATIC_ChangeFontType();
+	void STATIC_CheckHiddenMirror();
 	bool SetLoadingType(ES3LoadingType Type);
 	void SetDebugIndex(int Index);
 	class US3LoadingProgressImage* GetProgressBarImage();
 	void SetCharaData(int Index, class UImage* Image, class UTextBlock* Description, class UTextBlock* Name);
-	void SetTexture();
+	void STATIC_SetTexture();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_BPW_UI_Loading_Long(int EntryPoint);
-	void MirrorRotation__DelegateSignature();
+	void STATIC_MirrorRotation__DelegateSignature();
 };
 
 

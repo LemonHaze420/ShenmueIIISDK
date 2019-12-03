@@ -34,7 +34,7 @@ public:
 	void StartResult(const struct FText& JobTargetOriginalText, const struct FText& JobTargetLocalizeText, const struct FText& EarningsOriginalText, const struct FText& EarningsLocalizeText, int JobTargetNum, int EarningsNum, class UTexture2D* TargetTexture, class USoundAtomCue* JobSE, class USoundAtomCue* ResultSE);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_MiniGameJobResult(int EntryPoint);
-	void OnEndResultDispacher__DelegateSignature();
+	void STATIC_OnEndResultDispacher__DelegateSignature();
 };
 
 

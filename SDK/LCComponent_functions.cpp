@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function LCComponent.LCComponent_C.TryDefaultInit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Private, NetServer, BlueprintEvent, BlueprintPure)
 
 void ULCComponent_C::TryDefaultInit()
 {
@@ -23,6 +23,7 @@ void ULCComponent_C::TryDefaultInit()
 	ULCComponent_C_TryDefaultInit_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ULCComponent_C::TryDefaultInit()
 
 
 // Function LCComponent.LCComponent_C.ChangeState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<ELocomotionState>  ArgState                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -51,7 +52,7 @@ void ULCComponent_C::ChangeState(TEnumAsByte<ELocomotionState> ArgState)
 
 
 // Function LCComponent.LCComponent_C.Init
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Private, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ACharacter*              Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -71,7 +72,7 @@ void ULCComponent_C::Init(class ACharacter* Character)
 
 
 // Function LCComponent.LCComponent_C.TickFunc
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSec                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -83,6 +84,7 @@ void ULCComponent_C::TickFunc(float DeltaSec)
 	params.DeltaSec = DeltaSec;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +93,7 @@ void ULCComponent_C::TickFunc(float DeltaSec)
 
 
 // Function LCComponent.LCComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ULCComponent_C::ReceiveBeginPlay()
 {
@@ -108,11 +110,11 @@ void ULCComponent_C::ReceiveBeginPlay()
 
 
 // Function LCComponent.LCComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULCComponent_C::ReceiveTick(float DeltaSeconds)
+void ULCComponent_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LCComponent.LCComponent_C.ReceiveTick");
 
@@ -120,6 +122,7 @@ void ULCComponent_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -128,11 +131,11 @@ void ULCComponent_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function LCComponent.LCComponent_C.ExecuteUbergraph_LCComponent
-// ()
+// (Net, Exec, Native, Event, Static, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ULCComponent_C::ExecuteUbergraph_LCComponent(int EntryPoint)
+void ULCComponent_C::STATIC_ExecuteUbergraph_LCComponent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function LCComponent.LCComponent_C.ExecuteUbergraph_LCComponent");
 
@@ -140,6 +143,7 @@ void ULCComponent_C::ExecuteUbergraph_LCComponent(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

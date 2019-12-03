@@ -31,21 +31,21 @@ public:
 
 	void UpdateAnimationState();
 	void PlayStartForceFeedback();
-	void DebugQTEForceSuccessUpdateInternal();
+	void STATIC_DebugQTEForceSuccessUpdateInternal();
 	bool CanStartCountInputLimitTime();
-	float GetLengthBeforeCountInputLimitTime();
-	struct FName GetCurrentSuccessAction();
+	float STATIC_GetLengthBeforeCountInputLimitTime();
+	struct FName STATIC_GetCurrentSuccessAction();
 	void PlayInputFailedAnimation();
 	void PlayInputSuccessAnimation();
-	void SetupQTE(TArray<struct FName>* InInputActions);
+	void STATIC_SetupQTE(TArray<struct FName>* InInputActions);
 	bool IsPlayingInAnimation();
-	void PlayTimeUpFailedAnimation();
+	void STATIC_PlayTimeUpFailedAnimation();
 	void PlayInAnimation();
-	void SetTimeGaugeRate(float InGaugeRate);
+	void STATIC_SetTimeGaugeRate(float InGaugeRate);
 	void ExecuteInputAction(const struct FName& InInputAction);
-	void Reset();
+	void STATIC_Reset();
 	void Finalize();
-	void Initialize();
+	void STATIC_Initialize();
 };
 
 

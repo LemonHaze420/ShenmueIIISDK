@@ -28,10 +28,10 @@ public:
 	}
 
 
-	void Reset();
+	void STATIC_Reset();
 	void IncrementSuccessCount();
-	void AddPoint(int Add, int* Total);
-	void ExecuteUbergraph_BPC_MIniGame_ST_GameScore(int EntryPoint);
+	void STATIC_AddPoint(int Add, int* Total);
+	void STATIC_ExecuteUbergraph_BPC_MIniGame_ST_GameScore(int EntryPoint);
 };
 
 

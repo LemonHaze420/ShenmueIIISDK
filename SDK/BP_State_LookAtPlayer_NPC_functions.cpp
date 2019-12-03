@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtPlayer_NPC.BP_State_LookAtPlayer_NPC_C.GetInteractActor
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // int                            InIndex                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtPlayer_NPC_C::GetInteractActor(int InIndex, class AActor** Actor)
+void UBP_State_LookAtPlayer_NPC_C::STATIC_GetInteractActor(int InIndex, class AActor** Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtPlayer_NPC.BP_State_LookAtPlayer_NPC_C.GetInteractActor");
 
@@ -38,12 +38,12 @@ void UBP_State_LookAtPlayer_NPC_C::GetInteractActor(int InIndex, class AActor** 
 
 
 // Function BP_State_LookAtPlayer_NPC.BP_State_LookAtPlayer_NPC_C.StateExit
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtPlayer_NPC_C::StateExit(float Delta, bool* bProcessing)
+void UBP_State_LookAtPlayer_NPC_C::STATIC_StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtPlayer_NPC.BP_State_LookAtPlayer_NPC_C.StateExit");
 
@@ -51,6 +51,7 @@ void UBP_State_LookAtPlayer_NPC_C::StateExit(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +63,7 @@ void UBP_State_LookAtPlayer_NPC_C::StateExit(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtPlayer_NPC.BP_State_LookAtPlayer_NPC_C.StateEnter
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -75,6 +76,7 @@ void UBP_State_LookAtPlayer_NPC_C::StateEnter(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,7 +88,7 @@ void UBP_State_LookAtPlayer_NPC_C::StateEnter(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtPlayer_NPC.BP_State_LookAtPlayer_NPC_C.StateUpdate
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -99,6 +101,7 @@ void UBP_State_LookAtPlayer_NPC_C::StateUpdate(float Delta, bool* bDummy)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

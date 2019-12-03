@@ -27,8 +27,8 @@ public:
 	}
 
 
-	void SetResultAnimation(class UAnimationAsset* NewAnimToPlay);
-	void UserConstructionScript();
+	void STATIC_SetResultAnimation(class UAnimationAsset* NewAnimToPlay);
+	void STATIC_UserConstructionScript();
 };
 
 

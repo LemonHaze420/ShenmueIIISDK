@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC_Talk.BP_State_LookAtNPC_Talk_C.CheckBody
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 
 void UBP_State_LookAtNPC_Talk_C::CheckBody()
 {
@@ -31,12 +31,12 @@ void UBP_State_LookAtNPC_Talk_C::CheckBody()
 
 
 // Function BP_State_LookAtNPC_Talk.BP_State_LookAtNPC_Talk_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Talk_C::StateEnter(float Delta, bool* bProcessing)
+void UBP_State_LookAtNPC_Talk_C::STATIC_StateEnter(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Talk.BP_State_LookAtNPC_Talk_C.StateEnter");
 
@@ -44,6 +44,7 @@ void UBP_State_LookAtNPC_Talk_C::StateEnter(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void UBP_State_LookAtNPC_Talk_C::StateEnter(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtNPC_Talk.BP_State_LookAtNPC_Talk_C.StateExit
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)

@@ -35,19 +35,19 @@ public:
 	}
 
 
-	void ButtonSelect(bool Select);
-	void SetButtonImage(bool Auto);
-	void GetSelectedSkillItem_Int_(int* ItemIntID);
-	void SetFocus(bool Focus);
+	void STATIC_ButtonSelect(bool Select);
+	void STATIC_SetButtonImage(bool Auto);
+	void STATIC_GetSelectedSkillItem_Int_(int* ItemIntID);
+	void STATIC_SetFocus(bool Focus);
 	void GetSelectedSkillItem_Name_(struct FName* ItemLabel);
-	void GetSelectedIndex(int* Index);
+	void STATIC_GetSelectedIndex(int* Index);
 	void SetItemDisplayNames(TArray<struct FName>* Skills);
-	void ClearSelection();
-	void MoveSelection(bool Add);
+	void STATIC_ClearSelection();
+	void STATIC_MoveSelection(bool Add);
 	void SelectSlot(int SelectedSlotIndex);
-	void PreConstruct(bool IsDesignTime);
-	void Construct();
-	void ExecuteUbergraph_wgt_SkillEditor_SetPanel(int EntryPoint);
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_wgt_SkillEditor_SetPanel(int EntryPoint);
 };
 
 

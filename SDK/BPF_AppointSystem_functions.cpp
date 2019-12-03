@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_AppointSystem.BPF_AppointSystem_C.GetS3AppointSystemManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Event, Static, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_AppointSystemManager_C* newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)

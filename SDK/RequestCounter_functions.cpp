@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function RequestCounter.RequestCounter_C.CreateDebugString
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString URequestCounter_C::CreateDebugString()
+struct FString URequestCounter_C::STATIC_CreateDebugString()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.CreateDebugString");
 
@@ -35,9 +35,9 @@ struct FString URequestCounter_C::CreateDebugString()
 
 
 // Function RequestCounter.RequestCounter_C.Clean
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void URequestCounter_C::Clean()
+void URequestCounter_C::STATIC_Clean()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.Clean");
 
@@ -52,7 +52,7 @@ void URequestCounter_C::Clean()
 
 
 // Function RequestCounter.RequestCounter_C.HasRequestsFast
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // bool                           bHasRequests                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -74,11 +74,11 @@ void URequestCounter_C::HasRequestsFast(bool* bHasRequests)
 
 
 // Function RequestCounter.RequestCounter_C.HasRequests
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bHasRequests                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void URequestCounter_C::HasRequests(bool* bHasRequests)
+void URequestCounter_C::STATIC_HasRequests(bool* bHasRequests)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.HasRequests");
 
@@ -96,12 +96,12 @@ void URequestCounter_C::HasRequests(bool* bHasRequests)
 
 
 // Function RequestCounter.RequestCounter_C.RemoveRequester
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bNewlyRemoved                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void URequestCounter_C::RemoveRequester(class UObject* Requester, bool* bNewlyRemoved)
+void URequestCounter_C::STATIC_RemoveRequester(class UObject* Requester, bool* bNewlyRemoved)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.RemoveRequester");
 
@@ -109,6 +109,7 @@ void URequestCounter_C::RemoveRequester(class UObject* Requester, bool* bNewlyRe
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,12 +121,12 @@ void URequestCounter_C::RemoveRequester(class UObject* Requester, bool* bNewlyRe
 
 
 // Function RequestCounter.RequestCounter_C.AddRequester
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bnewlyAdded                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void URequestCounter_C::AddRequester(class UObject* Requester, bool* bnewlyAdded)
+void URequestCounter_C::STATIC_AddRequester(class UObject* Requester, bool* bnewlyAdded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.AddRequester");
 
@@ -133,6 +134,7 @@ void URequestCounter_C::AddRequester(class UObject* Requester, bool* bnewlyAdded
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,15 +146,16 @@ void URequestCounter_C::AddRequester(class UObject* Requester, bool* bnewlyAdded
 
 
 // Function RequestCounter.RequestCounter_C.OnLastRequestRemove__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void URequestCounter_C::OnLastRequestRemove__DelegateSignature()
+void URequestCounter_C::STATIC_OnLastRequestRemove__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.OnLastRequestRemove__DelegateSignature");
 
 	URequestCounter_C_OnLastRequestRemove__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,15 +164,16 @@ void URequestCounter_C::OnLastRequestRemove__DelegateSignature()
 
 
 // Function RequestCounter.RequestCounter_C.OnFirstRequestAdd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void URequestCounter_C::OnFirstRequestAdd__DelegateSignature()
+void URequestCounter_C::STATIC_OnFirstRequestAdd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function RequestCounter.RequestCounter_C.OnFirstRequestAdd__DelegateSignature");
 
 	URequestCounter_C_OnFirstRequestAdd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -35,14 +35,14 @@ public:
 	void SetRequestOwner(class AActor* Actor);
 	class AActor* GetRequestOwner();
 	bool IsDataLevelSet();
-	void StartListLevelLoad(TArray<struct FName>* NeedLevels);
+	void STATIC_StartListLevelLoad(TArray<struct FName>* NeedLevels);
 	void FinishLevelStreaming(const struct FName& ID);
 	void StreamDataLevel(const struct FName& Level);
 	void UnloadLevels();
 	void FinishedUnloadLevel();
 	void UnloadDataLevelOnly();
 	void StartStreaming(TArray<struct FName>* NeedLevels);
-	void ExecuteUbergraph_BPC_EventLevelStreaming(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_EventLevelStreaming(int EntryPoint);
 	void OnFinishListLoad__DelegateSignature();
 	void OnFinishUnload__DelegateSignature();
 	void OnFinishDataLoad__DelegateSignature();

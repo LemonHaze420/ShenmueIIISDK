@@ -29,9 +29,9 @@ public:
 	}
 
 
-	void EnableDebugTalkScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_MiniGameDebugStandaloneTalkScript(int EntryPoint);
+	void STATIC_EnableDebugTalkScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BPC_MiniGameDebugStandaloneTalkScript(int EntryPoint);
 };
 
 

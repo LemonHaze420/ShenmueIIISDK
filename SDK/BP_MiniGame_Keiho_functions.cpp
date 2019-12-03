@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.GetClothMeshComponent
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -35,15 +35,16 @@ class UMeshComponent* ABP_MiniGame_Keiho_C::GetClothMeshComponent()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateRotateAngle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, Const)
 
-void ABP_MiniGame_Keiho_C::UpdateRotateAngle()
+void ABP_MiniGame_Keiho_C::STATIC_UpdateRotateAngle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateRotateAngle");
 
 	ABP_MiniGame_Keiho_C_UpdateRotateAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,7 +53,7 @@ void ABP_MiniGame_Keiho_C::UpdateRotateAngle()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InitAsyncLoad
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -74,11 +75,11 @@ void ABP_MiniGame_Keiho_C::InitAsyncLoad(bool* dummy)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // bool                           InRange                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::UpdateSE(bool InRange)
+void ABP_MiniGame_Keiho_C::STATIC_UpdateSE(bool InRange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateSE");
 
@@ -94,7 +95,7 @@ void ABP_MiniGame_Keiho_C::UpdateSE(bool InRange)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateKungFuAccumulation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          StickRot                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -106,6 +107,7 @@ void ABP_MiniGame_Keiho_C::UpdateKungFuAccumulation(float StickRot)
 	params.StickRot = StickRot;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,12 +116,12 @@ void ABP_MiniGame_Keiho_C::UpdateKungFuAccumulation(float StickRot)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.GetPlayLabel
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, NetMulticast, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // TEnumAsByte<E_MiniGame_MahoPartnerState> State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   labelName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName)
+void ABP_MiniGame_Keiho_C::STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.GetPlayLabel");
 
@@ -138,11 +140,11 @@ void ABP_MiniGame_Keiho_C::GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState>
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.SetNPCVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // bool                           InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::SetNPCVisible(bool InputPin)
+void ABP_MiniGame_Keiho_C::STATIC_SetNPCVisible(bool InputPin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.SetNPCVisible");
 
@@ -158,7 +160,7 @@ void ABP_MiniGame_Keiho_C::SetNPCVisible(bool InputPin)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdatePartnerAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, Private, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          PowerRate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,7 +180,7 @@ void ABP_MiniGame_Keiho_C::UpdatePartnerAnim(float PowerRate)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.GetDistanceFromCenter
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -191,6 +193,7 @@ float ABP_MiniGame_Keiho_C::GetDistanceFromCenter(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,15 +204,16 @@ float ABP_MiniGame_Keiho_C::GetDistanceFromCenter(float Value)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateAddValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, Const)
 
-void ABP_MiniGame_Keiho_C::UpdateAddValue()
+void ABP_MiniGame_Keiho_C::STATIC_UpdateAddValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateAddValue");
 
 	ABP_MiniGame_Keiho_C_UpdateAddValue_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -218,7 +222,7 @@ void ABP_MiniGame_Keiho_C::UpdateAddValue()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateDrawLine
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Public, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -238,7 +242,7 @@ void ABP_MiniGame_Keiho_C::UpdateDrawLine(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.SpawnInputControlActor
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -259,7 +263,7 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_Keiho_C::SpawnInputControlActor()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UpdateRyoMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Delegate, HasOutParms, HasDefaults, Const)
 
 void ABP_MiniGame_Keiho_C::UpdateRyoMove()
 {
@@ -268,6 +272,7 @@ void ABP_MiniGame_Keiho_C::UpdateRyoMove()
 	ABP_MiniGame_Keiho_C_UpdateRyoMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -276,7 +281,7 @@ void ABP_MiniGame_Keiho_C::UpdateRyoMove()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_MiniGame_Keiho_C::UserConstructionScript()
 {
@@ -293,7 +298,7 @@ void ABP_MiniGame_Keiho_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Timeline_InitPartnerCollision__FinishedFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::Timeline_InitPartnerCollision__FinishedFunc()
 {
@@ -310,7 +315,7 @@ void ABP_MiniGame_Keiho_C::Timeline_InitPartnerCollision__FinishedFunc()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Timeline_InitPartnerCollision__UpdateFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::Timeline_InitPartnerCollision__UpdateFunc()
 {
@@ -327,7 +332,7 @@ void ABP_MiniGame_Keiho_C::Timeline_InitPartnerCollision__UpdateFunc()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Event_FootPrintL
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::Event_FootPrintL()
 {
@@ -344,7 +349,7 @@ void ABP_MiniGame_Keiho_C::Event_FootPrintL()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::StartMiniGame()
 {
@@ -353,6 +358,7 @@ void ABP_MiniGame_Keiho_C::StartMiniGame()
 	ABP_MiniGame_Keiho_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -361,7 +367,7 @@ void ABP_MiniGame_Keiho_C::StartMiniGame()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Event_FootPrintR
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::Event_FootPrintR()
 {
@@ -378,7 +384,7 @@ void ABP_MiniGame_Keiho_C::Event_FootPrintR()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Event_RyoUpdateFade
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::Event_RyoUpdateFade()
 {
@@ -395,7 +401,7 @@ void ABP_MiniGame_Keiho_C::Event_RyoUpdateFade()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.ClothesChangedCC
-// (BlueprintCallable, BlueprintEvent)
+// (NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -417,7 +423,7 @@ void ABP_MiniGame_Keiho_C::ClothesChangedCC(const TScriptInterface<class US3Clot
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InitPartnerCollision
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::InitPartnerCollision()
 {
@@ -434,7 +440,7 @@ void ABP_MiniGame_Keiho_C::InitPartnerCollision()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::ReceiveBeginPlay()
 {
@@ -443,6 +449,7 @@ void ABP_MiniGame_Keiho_C::ReceiveBeginPlay()
 	ABP_MiniGame_Keiho_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -451,11 +458,11 @@ void ABP_MiniGame_Keiho_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_Keiho_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.ReceiveTick");
 
@@ -463,6 +470,7 @@ void ABP_MiniGame_Keiho_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -471,11 +479,11 @@ void ABP_MiniGame_Keiho_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputRightStickHorizontal
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::InputRightStickHorizontal(float Value)
+void ABP_MiniGame_Keiho_C::STATIC_InputRightStickHorizontal(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputRightStickHorizontal");
 
@@ -491,11 +499,11 @@ void ABP_MiniGame_Keiho_C::InputRightStickHorizontal(float Value)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputRightStickVertical
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::InputRightStickVertical(float Value)
+void ABP_MiniGame_Keiho_C::STATIC_InputRightStickVertical(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputRightStickVertical");
 
@@ -511,7 +519,7 @@ void ABP_MiniGame_Keiho_C::InputRightStickVertical(float Value)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.StartGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::StartGame()
 {
@@ -528,11 +536,11 @@ void ABP_MiniGame_Keiho_C::StartGame()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputLeftStickVertical
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          InputLeftVertical              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::InputLeftStickVertical(float InputLeftVertical)
+void ABP_MiniGame_Keiho_C::STATIC_InputLeftStickVertical(float InputLeftVertical)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputLeftStickVertical");
 
@@ -548,11 +556,11 @@ void ABP_MiniGame_Keiho_C::InputLeftStickVertical(float InputLeftVertical)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputLeftStickHorizontal
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          InputLeftHorizontal            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::InputLeftStickHorizontal(float InputLeftHorizontal)
+void ABP_MiniGame_Keiho_C::STATIC_InputLeftStickHorizontal(float InputLeftHorizontal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.InputLeftStickHorizontal");
 
@@ -568,7 +576,7 @@ void ABP_MiniGame_Keiho_C::InputLeftStickHorizontal(float InputLeftHorizontal)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.AfterFadeInEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::AfterFadeInEvent()
 {
@@ -585,7 +593,7 @@ void ABP_MiniGame_Keiho_C::AfterFadeInEvent()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Event_StopRyoMoveForTurn
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::Event_StopRyoMoveForTurn()
 {
@@ -602,11 +610,11 @@ void ABP_MiniGame_Keiho_C::Event_StopRyoMoveForTurn()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Event_OnChangeAnimState
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGame_MahoPartnerState> State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::Event_OnChangeAnimState(TEnumAsByte<E_MiniGame_MahoPartnerState> State)
+void ABP_MiniGame_Keiho_C::STATIC_Event_OnChangeAnimState(TEnumAsByte<E_MiniGame_MahoPartnerState> State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Event_OnChangeAnimState");
 
@@ -622,11 +630,11 @@ void ABP_MiniGame_Keiho_C::Event_OnChangeAnimState(TEnumAsByte<E_MiniGame_MahoPa
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.SetKungFuDifficulty
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_Keiho_C::SetKungFuDifficulty(int Level)
+void ABP_MiniGame_Keiho_C::STATIC_SetKungFuDifficulty(int Level)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.SetKungFuDifficulty");
 
@@ -634,6 +642,7 @@ void ABP_MiniGame_Keiho_C::SetKungFuDifficulty(int Level)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -642,7 +651,7 @@ void ABP_MiniGame_Keiho_C::SetKungFuDifficulty(int Level)
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.TimeUpEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::TimeUpEvent()
 {
@@ -659,7 +668,7 @@ void ABP_MiniGame_Keiho_C::TimeUpEvent()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::EndMiniGame()
 {
@@ -668,6 +677,7 @@ void ABP_MiniGame_Keiho_C::EndMiniGame()
 	ABP_MiniGame_Keiho_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -676,7 +686,7 @@ void ABP_MiniGame_Keiho_C::EndMiniGame()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.OnTimeUp
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::OnTimeUp()
 {
@@ -693,7 +703,7 @@ void ABP_MiniGame_Keiho_C::OnTimeUp()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.PlayScriptRabel
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGame_Keiho_C::PlayScriptRabel()
 {
@@ -710,7 +720,7 @@ void ABP_MiniGame_Keiho_C::PlayScriptRabel()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.Event_OpenHelp
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_Keiho_C::Event_OpenHelp()
 {
@@ -719,6 +729,7 @@ void ABP_MiniGame_Keiho_C::Event_OpenHelp()
 	ABP_MiniGame_Keiho_C_Event_OpenHelp_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -727,7 +738,7 @@ void ABP_MiniGame_Keiho_C::Event_OpenHelp()
 
 
 // Function BP_MiniGame_Keiho.BP_MiniGame_Keiho_C.ExecuteUbergraph_BP_MiniGame_Keiho
-// (HasDefaults)
+// (NetReliable, NetRequest, Event, NetResponse, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -39,7 +39,7 @@ public:
 
 
 	void Trace();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_NPCDebugTrace(int EntryPoint);
 };

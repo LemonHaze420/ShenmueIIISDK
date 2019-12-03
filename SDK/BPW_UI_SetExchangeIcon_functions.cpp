@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ResetScroll
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_SetExchangeIcon_C::ResetScroll()
 {
@@ -23,6 +23,7 @@ void UBPW_UI_SetExchangeIcon_C::ResetScroll()
 	UBPW_UI_SetExchangeIcon_C_ResetScroll_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void UBPW_UI_SetExchangeIcon_C::ResetScroll()
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ScrollSetName
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UBPW_UI_SetExchangeIcon_C::ScrollSetName()
+void UBPW_UI_SetExchangeIcon_C::STATIC_ScrollSetName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ScrollSetName");
 
@@ -48,7 +49,7 @@ void UBPW_UI_SetExchangeIcon_C::ScrollSetName()
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ChangeInventoryType
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_UI_SetExchangeIcon_C::ChangeInventoryType()
 {
@@ -65,7 +66,7 @@ void UBPW_UI_SetExchangeIcon_C::ChangeInventoryType()
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.CanExchange
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Exchange                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -85,7 +86,7 @@ void UBPW_UI_SetExchangeIcon_C::CanExchange(bool Exchange)
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.GetItemID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ItemId                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -107,7 +108,7 @@ void UBPW_UI_SetExchangeIcon_C::GetItemID(int* ItemId)
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.GetName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 Name                           (Parm, OutParm, ZeroConstructor)
 
@@ -129,11 +130,11 @@ void UBPW_UI_SetExchangeIcon_C::GetName(struct FString* Name)
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.FocusIcon
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           IsSelect                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_SetExchangeIcon_C::FocusIcon(bool IsSelect)
+void UBPW_UI_SetExchangeIcon_C::STATIC_FocusIcon(bool IsSelect)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.FocusIcon");
 
@@ -141,6 +142,7 @@ void UBPW_UI_SetExchangeIcon_C::FocusIcon(bool IsSelect)
 	params.IsSelect = IsSelect;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +151,7 @@ void UBPW_UI_SetExchangeIcon_C::FocusIcon(bool IsSelect)
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.GetDescription
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 Description                    (Parm, OutParm, ZeroConstructor)
 
@@ -171,7 +173,7 @@ void UBPW_UI_SetExchangeIcon_C::GetDescription(struct FString* Description)
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.SetData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -193,12 +195,12 @@ void UBPW_UI_SetExchangeIcon_C::SetData(int ItemId, const struct FString& Name)
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Event, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_SetExchangeIcon_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_UI_SetExchangeIcon_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.Tick");
 
@@ -215,7 +217,7 @@ void UBPW_UI_SetExchangeIcon_C::Tick(const struct FGeometry& MyGeometry, float I
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -227,6 +229,7 @@ void UBPW_UI_SetExchangeIcon_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,11 +238,11 @@ void UBPW_UI_SetExchangeIcon_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ExecuteUbergraph_BPW_UI_SetExchangeIcon
-// (HasDefaults)
+// (NetRequest, Native, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_SetExchangeIcon_C::ExecuteUbergraph_BPW_UI_SetExchangeIcon(int EntryPoint)
+void UBPW_UI_SetExchangeIcon_C::STATIC_ExecuteUbergraph_BPW_UI_SetExchangeIcon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_SetExchangeIcon.BPW_UI_SetExchangeIcon_C.ExecuteUbergraph_BPW_UI_SetExchangeIcon");
 
@@ -247,6 +250,7 @@ void UBPW_UI_SetExchangeIcon_C::ExecuteUbergraph_BPW_UI_SetExchangeIcon(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

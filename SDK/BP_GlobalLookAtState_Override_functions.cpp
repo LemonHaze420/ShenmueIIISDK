@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GlobalLookAtState_Override.BP_GlobalLookAtState_Override_C.StateUpdate
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GlobalLookAtState_Override_C::StateUpdate(float Delta, bool* bDummy)
+void UBP_GlobalLookAtState_Override_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GlobalLookAtState_Override.BP_GlobalLookAtState_Override_C.StateUpdate");
 

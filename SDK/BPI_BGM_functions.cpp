@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_BGM.BPI_BGM_C.GetBGM
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USoundAtomCue*           BGM                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void UBPI_BGM_C::GetBGM(class USoundAtomCue** BGM)
 	UBPI_BGM_C_GetBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

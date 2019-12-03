@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.UpdateClosestSplinePoint
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UBTT_PlayerFollow_MoveToSpline_C::UpdateClosestSplinePoint()
+void UBTT_PlayerFollow_MoveToSpline_C::STATIC_UpdateClosestSplinePoint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.UpdateClosestSplinePoint");
 
@@ -31,7 +31,7 @@ void UBTT_PlayerFollow_MoveToSpline_C::UpdateClosestSplinePoint()
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.UpdateClosestSplineDistance
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBTT_PlayerFollow_MoveToSpline_C::UpdateClosestSplineDistance()
 {
@@ -48,15 +48,16 @@ void UBTT_PlayerFollow_MoveToSpline_C::UpdateClosestSplineDistance()
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.StopPathing
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void UBTT_PlayerFollow_MoveToSpline_C::StopPathing()
+void UBTT_PlayerFollow_MoveToSpline_C::STATIC_StopPathing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.StopPathing");
 
 	UBTT_PlayerFollow_MoveToSpline_C_StopPathing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +66,7 @@ void UBTT_PlayerFollow_MoveToSpline_C::StopPathing()
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.Finish
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // bool                           Success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -85,12 +86,12 @@ void UBTT_PlayerFollow_MoveToSpline_C::Finish(bool Success)
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.IsPlayerInSpline
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Buffer                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTT_PlayerFollow_MoveToSpline_C::IsPlayerInSpline(float Buffer)
+bool UBTT_PlayerFollow_MoveToSpline_C::STATIC_IsPlayerInSpline(float Buffer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.IsPlayerInSpline");
 
@@ -108,7 +109,7 @@ bool UBTT_PlayerFollow_MoveToSpline_C::IsPlayerInSpline(float Buffer)
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.OnFail_227D29014046C8BB113903BF06DFD651
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -128,7 +129,7 @@ void UBTT_PlayerFollow_MoveToSpline_C::OnFail_227D29014046C8BB113903BF06DFD651(T
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.OnSuccess_227D29014046C8BB113903BF06DFD651
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -148,12 +149,12 @@ void UBTT_PlayerFollow_MoveToSpline_C::OnSuccess_227D29014046C8BB113903BF06DFD65
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.ReceiveAbortAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_MoveToSpline_C::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayerFollow_MoveToSpline_C::STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.ReceiveAbortAI");
 
@@ -170,7 +171,7 @@ void UBTT_PlayerFollow_MoveToSpline_C::ReceiveAbortAI(class AAIController* Owner
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -194,7 +195,7 @@ void UBTT_PlayerFollow_MoveToSpline_C::ReceiveTickAI(class AAIController* OwnerC
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.WaitAndRepath
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBTT_PlayerFollow_MoveToSpline_C::WaitAndRepath()
 {
@@ -211,7 +212,7 @@ void UBTT_PlayerFollow_MoveToSpline_C::WaitAndRepath()
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -233,7 +234,7 @@ void UBTT_PlayerFollow_MoveToSpline_C::ReceiveExecuteAI(class AAIController* Own
 
 
 // Function BTT_PlayerFollow_MoveToSpline.BTT_PlayerFollow_MoveToSpline_C.ExecuteUbergraph_BTT_PlayerFollow_MoveToSpline
-// ()
+// (Net, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

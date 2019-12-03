@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtLead.BP_State_LookAtLead_C.IsInitializeState
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,15 +36,16 @@ void UBP_State_LookAtLead_C::IsInitializeState(bool* bSuccess)
 
 
 // Function BP_State_LookAtLead.BP_State_LookAtLead_C.StateOnInitialize
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBP_State_LookAtLead_C::StateOnInitialize()
+void UBP_State_LookAtLead_C::STATIC_StateOnInitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtLead.BP_State_LookAtLead_C.StateOnInitialize");
 
 	UBP_State_LookAtLead_C_StateOnInitialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +54,7 @@ void UBP_State_LookAtLead_C::StateOnInitialize()
 
 
 // Function BP_State_LookAtLead.BP_State_LookAtLead_C.ExecuteUbergraph_BP_State_LookAtLead
-// ()
+// (NetRequest, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

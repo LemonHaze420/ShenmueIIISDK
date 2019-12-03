@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.ConvertDisplayTextArray
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FString>         BaseTextArray                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -41,7 +41,7 @@ TArray<struct FString> ABP_SecondarySubtitlePlayer_C::ConvertDisplayTextArray(co
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.GetSubtitleCharaNameString
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   InCharaName                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -64,15 +64,16 @@ struct FString ABP_SecondarySubtitlePlayer_C::GetSubtitleCharaNameString(const s
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.Stop
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_SecondarySubtitlePlayer_C::Stop()
+void ABP_SecondarySubtitlePlayer_C::STATIC_Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.Stop");
 
 	ABP_SecondarySubtitlePlayer_C_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,13 +82,13 @@ void ABP_SecondarySubtitlePlayer_C::Stop()
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.Play
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SecondarySubtitlePlayer_C::Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName)
+void ABP_SecondarySubtitlePlayer_C::STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.Play");
 
@@ -97,6 +98,7 @@ void ABP_SecondarySubtitlePlayer_C::Play(const struct FName& Label, ES3TextPathT
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,7 +107,7 @@ void ABP_SecondarySubtitlePlayer_C::Play(const struct FName& Label, ES3TextPathT
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.SetSubtitlesWidgetVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -117,6 +119,7 @@ void ABP_SecondarySubtitlePlayer_C::SetSubtitlesWidgetVisible(bool IsVisible)
 	params.IsVisible = IsVisible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,7 +128,7 @@ void ABP_SecondarySubtitlePlayer_C::SetSubtitlesWidgetVisible(bool IsVisible)
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.FinalizeSubtitlesWidget
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_SecondarySubtitlePlayer_C::FinalizeSubtitlesWidget()
 {
@@ -142,9 +145,9 @@ void ABP_SecondarySubtitlePlayer_C::FinalizeSubtitlesWidget()
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.CreateSubtitlesWidget
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_SecondarySubtitlePlayer_C::CreateSubtitlesWidget()
+void ABP_SecondarySubtitlePlayer_C::STATIC_CreateSubtitlesWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.CreateSubtitlesWidget");
 
@@ -159,7 +162,7 @@ void ABP_SecondarySubtitlePlayer_C::CreateSubtitlesWidget()
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SecondarySubtitlePlayer_C::UserConstructionScript()
 {
@@ -168,6 +171,7 @@ void ABP_SecondarySubtitlePlayer_C::UserConstructionScript()
 	ABP_SecondarySubtitlePlayer_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,7 +180,7 @@ void ABP_SecondarySubtitlePlayer_C::UserConstructionScript()
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_SecondarySubtitlePlayer_C::ReceiveBeginPlay()
 {
@@ -193,11 +197,11 @@ void ABP_SecondarySubtitlePlayer_C::ReceiveBeginPlay()
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SecondarySubtitlePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_SecondarySubtitlePlayer_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.ReceiveEndPlay");
 
@@ -205,6 +209,7 @@ void ABP_SecondarySubtitlePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,7 +218,7 @@ void ABP_SecondarySubtitlePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 
 
 // Function BP_SecondarySubtitlePlayer.BP_SecondarySubtitlePlayer_C.ExecuteUbergraph_BP_SecondarySubtitlePlayer
-// ()
+// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

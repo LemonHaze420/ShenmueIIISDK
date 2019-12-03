@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.InitLastButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugAutoConversationList_C::InitLastButton()
+void UBW_DebugAutoConversationList_C::STATIC_InitLastButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.InitLastButton");
 
 	UBW_DebugAutoConversationList_C_InitLastButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBW_DebugAutoConversationList_C::InitLastButton()
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.CheckGotoCategory
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            NewIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -54,7 +55,7 @@ bool UBW_DebugAutoConversationList_C::CheckGotoCategory(int NewIndex)
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.UpdateFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBW_DebugAutoConversationList_C::UpdateFocus()
 {
@@ -63,6 +64,7 @@ void UBW_DebugAutoConversationList_C::UpdateFocus()
 	UBW_DebugAutoConversationList_C_UpdateFocus_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +73,7 @@ void UBW_DebugAutoConversationList_C::UpdateFocus()
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.OnKeyDown
-// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -96,7 +98,7 @@ struct FEventReply UBW_DebugAutoConversationList_C::OnKeyDown(const struct FGeom
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.SetFocusToCategory
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBW_DebugAutoConversationList_C::SetFocusToCategory()
 {
@@ -113,11 +115,11 @@ void UBW_DebugAutoConversationList_C::SetFocusToCategory()
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.SetFocusToItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugAutoConversationList_C::SetFocusToItem(int Index)
+void UBW_DebugAutoConversationList_C::STATIC_SetFocusToItem(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.SetFocusToItem");
 
@@ -133,13 +135,13 @@ void UBW_DebugAutoConversationList_C::SetFocusToItem(int Index)
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.OnPreviewKeyDown
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBW_DebugAutoConversationList_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UBW_DebugAutoConversationList_C::STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.OnPreviewKeyDown");
 
@@ -148,6 +150,7 @@ struct FEventReply UBW_DebugAutoConversationList_C::OnPreviewKeyDown(const struc
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,15 +161,16 @@ struct FEventReply UBW_DebugAutoConversationList_C::OnPreviewKeyDown(const struc
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.UpdateCutsceneList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugAutoConversationList_C::UpdateCutsceneList()
+void UBW_DebugAutoConversationList_C::STATIC_UpdateCutsceneList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.UpdateCutsceneList");
 
 	UBW_DebugAutoConversationList_C_UpdateCutsceneList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,15 +179,16 @@ void UBW_DebugAutoConversationList_C::UpdateCutsceneList()
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.BuildCutsceneList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBW_DebugAutoConversationList_C::BuildCutsceneList()
+void UBW_DebugAutoConversationList_C::STATIC_BuildCutsceneList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.BuildCutsceneList");
 
 	UBW_DebugAutoConversationList_C_BuildCutsceneList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,15 +197,16 @@ void UBW_DebugAutoConversationList_C::BuildCutsceneList()
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugAutoConversationList_C::Construct()
+void UBW_DebugAutoConversationList_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.Construct");
 
 	UBW_DebugAutoConversationList_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,7 +215,7 @@ void UBW_DebugAutoConversationList_C::Construct()
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.BndEvt__CheckBoxUseAnother_K2Node_ComponentBoundEvent_159_OnCheckBoxComponentStateChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -221,6 +227,7 @@ void UBW_DebugAutoConversationList_C::BndEvt__CheckBoxUseAnother_K2Node_Componen
 	params.bIsChecked = bIsChecked;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,15 +236,16 @@ void UBW_DebugAutoConversationList_C::BndEvt__CheckBoxUseAnother_K2Node_Componen
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.BndEvt__LastButton_K2Node_ComponentBoundEvent_225_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugAutoConversationList_C::BndEvt__LastButton_K2Node_ComponentBoundEvent_225_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugAutoConversationList_C::STATIC_BndEvt__LastButton_K2Node_ComponentBoundEvent_225_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.BndEvt__LastButton_K2Node_ComponentBoundEvent_225_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugAutoConversationList_C_BndEvt__LastButton_K2Node_ComponentBoundEvent_225_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -246,15 +254,16 @@ void UBW_DebugAutoConversationList_C::BndEvt__LastButton_K2Node_ComponentBoundEv
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.BndEvt__S3Button_2_K2Node_ComponentBoundEvent_271_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugAutoConversationList_C::BndEvt__S3Button_2_K2Node_ComponentBoundEvent_271_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugAutoConversationList_C::STATIC_BndEvt__S3Button_2_K2Node_ComponentBoundEvent_271_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.BndEvt__S3Button_2_K2Node_ComponentBoundEvent_271_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugAutoConversationList_C_BndEvt__S3Button_2_K2Node_ComponentBoundEvent_271_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -263,11 +272,11 @@ void UBW_DebugAutoConversationList_C::BndEvt__S3Button_2_K2Node_ComponentBoundEv
 
 
 // Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.ExecuteUbergraph_BW_DebugAutoConversationList
-// ()
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugAutoConversationList_C::ExecuteUbergraph_BW_DebugAutoConversationList(int EntryPoint)
+void UBW_DebugAutoConversationList_C::STATIC_ExecuteUbergraph_BW_DebugAutoConversationList(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugAutoConversationList.BW_DebugAutoConversationList_C.ExecuteUbergraph_BW_DebugAutoConversationList");
 

@@ -38,7 +38,7 @@ public:
 	}
 
 
-	void OnFootFall(const struct FVector& FootLocation, const struct FRotator& FootRotation, TEnumAsByte<ENEFootType> FootType, class UFootprintComponent_C* FootprintComponent);
+	void STATIC_OnFootFall(const struct FVector& FootLocation, const struct FRotator& FootRotation, TEnumAsByte<ENEFootType> FootType, class UFootprintComponent_C* FootprintComponent);
 };
 
 

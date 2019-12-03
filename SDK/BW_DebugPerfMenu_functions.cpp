@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugPerfMenu.BW_DebugPerfMenu_C.BuildMenu
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugPerfMenu_C::BuildMenu()
+void UBW_DebugPerfMenu_C::STATIC_BuildMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenu.BW_DebugPerfMenu_C.BuildMenu");
 
 	UBW_DebugPerfMenu_C_BuildMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void UBW_DebugPerfMenu_C::BuildMenu()
 
 
 // Function BW_DebugPerfMenu.BW_DebugPerfMenu_C.SetInitialFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugPerfMenu_C::SetInitialFocus()
+void UBW_DebugPerfMenu_C::STATIC_SetInitialFocus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenu.BW_DebugPerfMenu_C.SetInitialFocus");
 
 	UBW_DebugPerfMenu_C_SetInitialFocus_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void UBW_DebugPerfMenu_C::SetInitialFocus()
 
 
 // Function BW_DebugPerfMenu.BW_DebugPerfMenu_C.OnLevelClicked
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ULevelStreaming*         Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +62,7 @@ void UBW_DebugPerfMenu_C::OnLevelClicked(class ULevelStreaming* Level)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +71,7 @@ void UBW_DebugPerfMenu_C::OnLevelClicked(class ULevelStreaming* Level)
 
 
 // Function BW_DebugPerfMenu.BW_DebugPerfMenu_C.ExecuteUbergraph_BW_DebugPerfMenu
-// ()
+// (Net, MulticastDelegate, Public, Private, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

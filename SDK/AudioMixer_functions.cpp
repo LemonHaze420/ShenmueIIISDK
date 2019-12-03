@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function AudioMixer.SynthComponent.Stop
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void USynthComponent::Stop()
 {
@@ -23,7 +23,6 @@ void USynthComponent::Stop()
 	USynthComponent_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -32,7 +31,7 @@ void USynthComponent::Stop()
 
 
 // Function AudioMixer.SynthComponent.Start
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void USynthComponent::Start()
 {
@@ -41,7 +40,6 @@ void USynthComponent::Start()
 	USynthComponent_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -50,7 +48,7 @@ void USynthComponent::Start()
 
 
 // Function AudioMixer.SynthComponent.SetVolumeMultiplier
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          VolumeMultiplier               (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -62,7 +60,6 @@ void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
 	params.VolumeMultiplier = VolumeMultiplier;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +68,7 @@ void USynthComponent::SetVolumeMultiplier(float VolumeMultiplier)
 
 
 // Function AudioMixer.SynthComponent.SetSubmixSend
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundSubmix*            Submix                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          SendLevel                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -85,7 +82,6 @@ void USynthComponent::SetSubmixSend(class USoundSubmix* Submix, float SendLevel)
 	params.SendLevel = SendLevel;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +90,7 @@ void USynthComponent::SetSubmixSend(class USoundSubmix* Submix, float SendLevel)
 
 
 // Function AudioMixer.SynthComponent.IsPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -105,7 +101,6 @@ bool USynthComponent::IsPlaying()
 	USynthComponent_IsPlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,8 +110,28 @@ bool USynthComponent::IsPlaying()
 }
 
 
+// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
+// ()
+// Parameters:
+// struct FSubmixEffectDynamicsProcessorSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
+
+void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& InSettings)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings");
+
+	USubmixEffectDynamicsProcessorPreset_SetSettings_Params params;
+	params.InSettings = InSettings;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // EAudioRecordingExportType      ExportType                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -126,7 +141,7 @@ bool USynthComponent::IsPlaying()
 // class USoundWave*              ExistingSoundWaveToOverwrite   (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundWave*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class USoundWave* UAudioMixerBlueprintLibrary::STATIC_StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const struct FString& Name, const struct FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite)
+class USoundWave* UAudioMixerBlueprintLibrary::StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const struct FString& Name, const struct FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StopRecordingOutput");
 
@@ -139,7 +154,6 @@ class USoundWave* UAudioMixerBlueprintLibrary::STATIC_StopRecordingOutput(class 
 	params.ExistingSoundWaveToOverwrite = ExistingSoundWaveToOverwrite;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,13 +164,13 @@ class USoundWave* UAudioMixerBlueprintLibrary::STATIC_StopRecordingOutput(class 
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ExpectedDuration               (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundSubmix*            SubmixToRecord                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAudioMixerBlueprintLibrary::STATIC_StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord)
+void UAudioMixerBlueprintLibrary::StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.StartRecordingOutput");
 
@@ -166,7 +180,6 @@ void UAudioMixerBlueprintLibrary::STATIC_StartRecordingOutput(class UObject* Wor
 	params.SubmixToRecord = SubmixToRecord;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,14 +188,14 @@ void UAudioMixerBlueprintLibrary::STATIC_StartRecordingOutput(class UObject* Wor
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            EntryIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bBypassed                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAudioMixerBlueprintLibrary::STATIC_SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex, bool bBypassed)
+void UAudioMixerBlueprintLibrary::SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex, bool bBypassed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.SetBypassSourceEffectChainEntry");
 
@@ -193,7 +206,6 @@ void UAudioMixerBlueprintLibrary::STATIC_SetBypassSourceEffectChainEntry(class U
 	params.bBypassed = bBypassed;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,13 +214,13 @@ void UAudioMixerBlueprintLibrary::STATIC_SetBypassSourceEffectChainEntry(class U
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSourceEffectFromPresetChain
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            EntryIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAudioMixerBlueprintLibrary::STATIC_RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex)
+void UAudioMixerBlueprintLibrary::RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveSourceEffectFromPresetChain");
 
@@ -218,7 +230,6 @@ void UAudioMixerBlueprintLibrary::STATIC_RemoveSourceEffectFromPresetChain(class
 	params.EntryIndex = EntryIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,12 +238,12 @@ void UAudioMixerBlueprintLibrary::STATIC_RemoveSourceEffectFromPresetChain(class
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundEffectSubmixPreset* SubmixEffectPreset             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAudioMixerBlueprintLibrary::STATIC_RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
+void UAudioMixerBlueprintLibrary::RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.RemoveMasterSubmixEffect");
 
@@ -241,7 +252,6 @@ void UAudioMixerBlueprintLibrary::STATIC_RemoveMasterSubmixEffect(class UObject*
 	params.SubmixEffectPreset = SubmixEffectPreset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,13 +260,13 @@ void UAudioMixerBlueprintLibrary::STATIC_RemoveMasterSubmixEffect(class UObject*
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.GetNumberOfEntriesInSourceEffectChain
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UAudioMixerBlueprintLibrary::STATIC_GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain)
+int UAudioMixerBlueprintLibrary::GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.GetNumberOfEntriesInSourceEffectChain");
 
@@ -265,7 +275,6 @@ int UAudioMixerBlueprintLibrary::STATIC_GetNumberOfEntriesInSourceEffectChain(cl
 	params.PresetChain = PresetChain;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -276,11 +285,11 @@ int UAudioMixerBlueprintLibrary::STATIC_GetNumberOfEntriesInSourceEffectChain(cl
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAudioMixerBlueprintLibrary::STATIC_ClearMasterSubmixEffects(class UObject* WorldContextObject)
+void UAudioMixerBlueprintLibrary::ClearMasterSubmixEffects(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.ClearMasterSubmixEffects");
 
@@ -288,7 +297,6 @@ void UAudioMixerBlueprintLibrary::STATIC_ClearMasterSubmixEffects(class UObject*
 	params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -297,13 +305,13 @@ void UAudioMixerBlueprintLibrary::STATIC_ClearMasterSubmixEffects(class UObject*
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddSourceEffectToPresetChain
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundEffectSourcePresetChain* PresetChain                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FSourceEffectChainEntry Entry                          (Parm, IsPlainOldData)
 
-void UAudioMixerBlueprintLibrary::STATIC_AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry)
+void UAudioMixerBlueprintLibrary::AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddSourceEffectToPresetChain");
 
@@ -313,7 +321,6 @@ void UAudioMixerBlueprintLibrary::STATIC_AddSourceEffectToPresetChain(class UObj
 	params.Entry = Entry;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -322,12 +329,12 @@ void UAudioMixerBlueprintLibrary::STATIC_AddSourceEffectToPresetChain(class UObj
 
 
 // Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundEffectSubmixPreset* SubmixEffectPreset             (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAudioMixerBlueprintLibrary::STATIC_AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
+void UAudioMixerBlueprintLibrary::AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.AudioMixerBlueprintLibrary.AddMasterSubmixEffect");
 
@@ -336,28 +343,6 @@ void UAudioMixerBlueprintLibrary::STATIC_AddMasterSubmixEffect(class UObject* Wo
 	params.SubmixEffectPreset = SubmixEffectPreset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FSubmixEffectDynamicsProcessorSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
-
-void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& InSettings)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function AudioMixer.SubmixEffectDynamicsProcessorPreset.SetSettings");
-
-	USubmixEffectDynamicsProcessorPreset_SetSettings_Params params;
-	params.InSettings = InSettings;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -366,7 +351,7 @@ void USubmixEffectDynamicsProcessorPreset::SetSettings(const struct FSubmixEffec
 
 
 // Function AudioMixer.SubmixEffectSubmixEQPreset.SetSettings
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FSubmixEffectSubmixEQSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
 
@@ -378,7 +363,6 @@ void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQ
 	params.InSettings = InSettings;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -387,7 +371,7 @@ void USubmixEffectSubmixEQPreset::SetSettings(const struct FSubmixEffectSubmixEQ
 
 
 // Function AudioMixer.SubmixEffectReverbPreset.SetSettingsWithReverbEffect
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UReverbEffect*           InReverbEffect                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          WetLevel                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
@@ -401,7 +385,6 @@ void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(class UReverbEffect*
 	params.WetLevel = WetLevel;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -410,7 +393,7 @@ void USubmixEffectReverbPreset::SetSettingsWithReverbEffect(class UReverbEffect*
 
 
 // Function AudioMixer.SubmixEffectReverbPreset.SetSettings
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FSubmixEffectReverbSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
 
@@ -422,7 +405,6 @@ void USubmixEffectReverbPreset::SetSettings(const struct FSubmixEffectReverbSett
 	params.InSettings = InSettings;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -49,14 +49,14 @@ public:
 
 
 	void SetPhoto(int Index, const struct FName& Name, class UTexture* Texture, float IsMaterialRender);
-	void SetPageTexture(int IndexR, int IndexF);
-	void SetTextMesh(int Index, const struct FName& Name, class UTexture* Texture, bool Turning, int page);
-	void CanReady();
+	void STATIC_SetPageTexture(int IndexR, int IndexF);
+	void STATIC_SetTextMesh(int Index, const struct FName& Name, class UTexture* Texture, bool turning, int page);
+	void STATIC_CanReady();
 	void SetTurnState(TEnumAsByte<EN_memopadTurntype> Turn, bool LastPage);
 	void Initialize(bool CoverFlg, bool bRight);
 	void EndAnim();
 	void GetTurnState(TEnumAsByte<EN_memopadTurntype>* State);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ViewPage();
 	void ReceiveTick(float DeltaSeconds);

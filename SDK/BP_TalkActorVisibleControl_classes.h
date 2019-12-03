@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void CanEndOverlapEvent(bool* CAN);
+	void STATIC_CanEndOverlapEvent(bool* CAN);
 	void CanHideNPC(class AActor* Actor, bool* CAN);
-	void UpdateHideNPC();
+	void STATIC_UpdateHideNPC();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);

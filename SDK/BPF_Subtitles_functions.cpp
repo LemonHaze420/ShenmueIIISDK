@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Subtitles.BPF_Subtitles_C.SetOutlineColor
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FSlateFontInfo          InFontInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FLinearColor            Color                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -42,7 +42,7 @@ void UBPF_Subtitles_C::STATIC_SetOutlineColor(const struct FSlateFontInfo& InFon
 
 
 // Function BPF_Subtitles.BPF_Subtitles_C.InitialFont
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, MulticastDelegate, Private, Protected, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // class UMaterialInstanceDynamic* DMI                            (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FSlateFontInfo          InFontInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)

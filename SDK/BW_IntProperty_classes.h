@@ -46,18 +46,18 @@ public:
 	}
 
 
-	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	struct FEventReply STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	float GetFloatForSpinBox();
-	void ClampNewValue(float InValue, float* OutValue);
-	void SetIntParameterValue(int NewValue);
+	void STATIC_ClampNewValue(float InValue, float* OutValue);
+	void STATIC_SetIntParameterValue(int NewValue);
 	int GetIntParameterValue();
-	struct FText GetParameterName();
-	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
+	struct FText STATIC_GetParameterName();
+	void STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void GetMinMax();
-	void Construct();
+	void STATIC_GetMinMax();
+	void STATIC_Construct();
 	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
-	void PropertyChanged();
+	void STATIC_PropertyChanged();
 	void ExecuteUbergraph_BW_IntProperty(int EntryPoint);
 	void FloatPropertyChanged__DelegateSignature();
 };

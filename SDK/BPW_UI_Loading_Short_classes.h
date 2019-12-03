@@ -45,9 +45,9 @@ public:
 
 	void ChangeFontColor(class UTextBlock* Text);
 	void StartFade(bool In);
-	void Construct();
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_BPW_UI_Loading_Short(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_UI_Loading_Short(int EntryPoint);
 	void OnFinishFadeOut__DelegateSignature();
 };
 

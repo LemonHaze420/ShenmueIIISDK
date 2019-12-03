@@ -38,14 +38,14 @@ public:
 	}
 
 
-	void isBusy(bool* Result);
-	TEnumAsByte<ECarouselRotate> GetDirectionFromString(const struct FText& Text, bool Reverse);
+	void STATIC_IsBusy(bool* Result);
+	TEnumAsByte<ECarouselRotate> STATIC_GetDirectionFromString(const struct FText& Text, bool Reverse);
 	void RotateExec();
 	void RequestRotate(TEnumAsByte<ECarouselRotate> Direction);
-	void CreateActorList();
-	void ReceiveBeginPlay();
+	void STATIC_CreateActorList();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_Carousel(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_Carousel(int EntryPoint);
 };
 
 

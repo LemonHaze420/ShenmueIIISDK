@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTESimonButton.WBP_QTESimonButton_C.SetButtonImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTexture2D*              Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UWBP_QTESimonButton_C::SetButtonImage(class UTexture2D* Image)
 	params.Image = Image;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,9 +35,9 @@ void UWBP_QTESimonButton_C::SetButtonImage(class UTexture2D* Image)
 
 
 // Function WBP_QTESimonButton.WBP_QTESimonButton_C.PlayInput
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTESimonButton_C::PlayInput()
+void UWBP_QTESimonButton_C::STATIC_PlayInput()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESimonButton.WBP_QTESimonButton_C.PlayInput");
 
@@ -51,9 +52,9 @@ void UWBP_QTESimonButton_C::PlayInput()
 
 
 // Function WBP_QTESimonButton.WBP_QTESimonButton_C.PlayInstruction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTESimonButton_C::PlayInstruction()
+void UWBP_QTESimonButton_C::STATIC_PlayInstruction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESimonButton.WBP_QTESimonButton_C.PlayInstruction");
 
@@ -68,15 +69,16 @@ void UWBP_QTESimonButton_C::PlayInstruction()
 
 
 // Function WBP_QTESimonButton.WBP_QTESimonButton_C.Reset
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTESimonButton_C::Reset()
+void UWBP_QTESimonButton_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESimonButton.WBP_QTESimonButton_C.Reset");
 
 	UWBP_QTESimonButton_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

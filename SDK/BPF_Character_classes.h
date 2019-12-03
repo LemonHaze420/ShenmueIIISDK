@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_GetACCharacters(class UObject* __WorldContext, TArray<class ABP_S3_ACCharacter_C*>* Character);
-	void STATIC_TeleportForceAnim(class ACharacter* Character, const struct FVector& DestLocation, const struct FRotator& DestRotation, float ForceAnimTime, class UObject* __WorldContext);
+	void TeleportForceAnim(class ACharacter* Character, const struct FVector& DestLocation, const struct FRotator& DestRotation, float ForceAnimTime, class UObject* __WorldContext);
 	void STATIC_CalcFootprint(class UFootprintComponent_C* FootprintComponent, class USkeletalMeshComponent* MeshComponent, TEnumAsByte<ENEFootType> Type, class UObject* __WorldContext);
 };
 

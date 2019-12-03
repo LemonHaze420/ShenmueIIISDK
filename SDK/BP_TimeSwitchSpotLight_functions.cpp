@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.isLightOnTimezone
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Light                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_TimeSwitchSpotLight_C::isLightOnTimezone(bool* Light)
 	ABP_TimeSwitchSpotLight_C_isLightOnTimezone_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,9 +37,9 @@ void ABP_TimeSwitchSpotLight_C::isLightOnTimezone(bool* Light)
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TimeSwitchSpotLight_C::UserConstructionScript()
+void ABP_TimeSwitchSpotLight_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.UserConstructionScript");
 
@@ -53,7 +54,7 @@ void ABP_TimeSwitchSpotLight_C::UserConstructionScript()
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.Timeline__FinishedFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TimeSwitchSpotLight_C::Timeline__FinishedFunc()
 {
@@ -62,6 +63,7 @@ void ABP_TimeSwitchSpotLight_C::Timeline__FinishedFunc()
 	ABP_TimeSwitchSpotLight_C_Timeline__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +72,7 @@ void ABP_TimeSwitchSpotLight_C::Timeline__FinishedFunc()
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.Timeline__UpdateFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TimeSwitchSpotLight_C::Timeline__UpdateFunc()
 {
@@ -79,6 +81,7 @@ void ABP_TimeSwitchSpotLight_C::Timeline__UpdateFunc()
 	ABP_TimeSwitchSpotLight_C_Timeline__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +90,7 @@ void ABP_TimeSwitchSpotLight_C::Timeline__UpdateFunc()
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TimeSwitchSpotLight_C::ReceiveBeginPlay()
 {
@@ -96,6 +99,7 @@ void ABP_TimeSwitchSpotLight_C::ReceiveBeginPlay()
 	ABP_TimeSwitchSpotLight_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,11 +108,11 @@ void ABP_TimeSwitchSpotLight_C::ReceiveBeginPlay()
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.DayTimeEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TimeSwitchSpotLight_C::DayTimeEvent(ES3DayTimeEvent EventType)
+void ABP_TimeSwitchSpotLight_C::STATIC_DayTimeEvent(ES3DayTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.DayTimeEvent");
 
@@ -116,6 +120,7 @@ void ABP_TimeSwitchSpotLight_C::DayTimeEvent(ES3DayTimeEvent EventType)
 	params.EventType = EventType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,11 +129,11 @@ void ABP_TimeSwitchSpotLight_C::DayTimeEvent(ES3DayTimeEvent EventType)
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.ShopTimeEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3ShopTimeEvent               EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TimeSwitchSpotLight_C::ShopTimeEvent(ES3ShopTimeEvent EventType)
+void ABP_TimeSwitchSpotLight_C::STATIC_ShopTimeEvent(ES3ShopTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.ShopTimeEvent");
 
@@ -136,6 +141,7 @@ void ABP_TimeSwitchSpotLight_C::ShopTimeEvent(ES3ShopTimeEvent EventType)
 	params.EventType = EventType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,11 +150,11 @@ void ABP_TimeSwitchSpotLight_C::ShopTimeEvent(ES3ShopTimeEvent EventType)
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.catch_onTimeJump
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          jumpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TimeSwitchSpotLight_C::catch_onTimeJump(float jumpTime)
+void ABP_TimeSwitchSpotLight_C::STATIC_catch_onTimeJump(float jumpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.catch_onTimeJump");
 
@@ -156,6 +162,7 @@ void ABP_TimeSwitchSpotLight_C::catch_onTimeJump(float jumpTime)
 	params.jumpTime = jumpTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,7 +171,7 @@ void ABP_TimeSwitchSpotLight_C::catch_onTimeJump(float jumpTime)
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.ToggleLight
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TimeSwitchSpotLight_C::ToggleLight()
 {
@@ -181,11 +188,11 @@ void ABP_TimeSwitchSpotLight_C::ToggleLight()
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.OnSetLightEnable
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bNewLightEnable                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TimeSwitchSpotLight_C::OnSetLightEnable(bool bNewLightEnable)
+void ABP_TimeSwitchSpotLight_C::STATIC_OnSetLightEnable(bool bNewLightEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.OnSetLightEnable");
 
@@ -193,6 +200,7 @@ void ABP_TimeSwitchSpotLight_C::OnSetLightEnable(bool bNewLightEnable)
 	params.bNewLightEnable = bNewLightEnable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,7 +209,7 @@ void ABP_TimeSwitchSpotLight_C::OnSetLightEnable(bool bNewLightEnable)
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.OnSetLightCastShadow
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bNewLightCastShadow            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -213,6 +221,7 @@ void ABP_TimeSwitchSpotLight_C::OnSetLightCastShadow(bool bNewLightCastShadow)
 	params.bNewLightCastShadow = bNewLightCastShadow;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,7 +230,7 @@ void ABP_TimeSwitchSpotLight_C::OnSetLightCastShadow(bool bNewLightCastShadow)
 
 
 // Function BP_TimeSwitchSpotLight.BP_TimeSwitchSpotLight_C.ExecuteUbergraph_BP_TimeSwitchSpotLight
-// ()
+// (Net, NetRequest, Exec, Event, NetMulticast, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

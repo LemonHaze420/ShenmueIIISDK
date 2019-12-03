@@ -54,11 +54,11 @@ public:
 
 	void CheckFlag(int FlagID, int EnavleMin, int EnableMax, bool* Result);
 	void CheckStep(int MinStep, int MaxStep, bool* Result);
-	void GetDirection(bool* Positive_direction, float* Impact_dot_Arrow);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ExecuteUbergraph_BP_ForcedAttentionTrg(int EntryPoint);
+	void STATIC_GetDirection(bool* Positive_direction, float* Impact_dot_Arrow);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_ExecuteUbergraph_BP_ForcedAttentionTrg(int EntryPoint);
 };
 
 

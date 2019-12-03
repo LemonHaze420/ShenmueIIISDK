@@ -32,7 +32,7 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_AnisotropicFlare(int EntryPoint);
 };

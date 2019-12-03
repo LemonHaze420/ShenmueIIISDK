@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MemoTextureDataManager.BP_MemoTextureDataManager_C.GetTextureData
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Offset                         (Parm, OutParm, IsPlainOldData)
 // class UTexture*                TextureReference               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MemoTextureDataManager_C::GetTextureData(const struct FName& Label, struct FVector2D* Offset, class UTexture** TextureReference)
+void ABP_MemoTextureDataManager_C::STATIC_GetTextureData(const struct FName& Label, struct FVector2D* Offset, class UTexture** TextureReference)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoTextureDataManager.BP_MemoTextureDataManager_C.GetTextureData");
 
@@ -41,7 +41,7 @@ void ABP_MemoTextureDataManager_C::GetTextureData(const struct FName& Label, str
 
 
 // Function BP_MemoTextureDataManager.BP_MemoTextureDataManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MemoTextureDataManager_C::UserConstructionScript()
 {

@@ -12,6 +12,21 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
+// Class AppleImageUtils.AppleImageInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAppleImageInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AppleImageUtils.AppleImageInterface");
+		return ptr;
+	}
+
+};
+
+
 // Class AppleImageUtils.AppleImageUtilsBaseAsyncTaskBlueprintProxy
 // 0x0060 (0x0088 - 0x0028)
 class UAppleImageUtilsBaseAsyncTaskBlueprintProxy : public UObject
@@ -31,25 +46,10 @@ public:
 	}
 
 
-	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* STATIC_CreateProxyObjectForConvertToTIFF(class UTexture* SourceImage, bool bWantColor, bool bUseGpu);
-	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* STATIC_CreateProxyObjectForConvertToPNG(class UTexture* SourceImage, bool bWantColor, bool bUseGpu);
-	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* STATIC_CreateProxyObjectForConvertToJPEG(class UTexture* SourceImage, int Quality, bool bWantColor, bool bUseGpu);
-	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* STATIC_CreateProxyObjectForConvertToHEIF(class UTexture* SourceImage, int Quality, bool bWantColor, bool bUseGpu);
-};
-
-
-// Class AppleImageUtils.AppleImageInterface
-// 0x0000 (0x0028 - 0x0028)
-class UAppleImageInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AppleImageUtils.AppleImageInterface");
-		return ptr;
-	}
-
+	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToTIFF(class UTexture* SourceImage, bool bWantColor, bool bUseGpu);
+	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToPNG(class UTexture* SourceImage, bool bWantColor, bool bUseGpu);
+	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToJPEG(class UTexture* SourceImage, int Quality, bool bWantColor, bool bUseGpu);
+	class UAppleImageUtilsBaseAsyncTaskBlueprintProxy* CreateProxyObjectForConvertToHEIF(class UTexture* SourceImage, int Quality, bool bWantColor, bool bUseGpu);
 };
 
 

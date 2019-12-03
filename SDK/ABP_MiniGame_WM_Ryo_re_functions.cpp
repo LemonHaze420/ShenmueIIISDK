@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_BlendSpacePlayer_CFFE93D24228543E52D83C8FF436CC11
-// (BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void UABP_MiniGame_WM_Ryo_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_BlendSpacePlayer_CFFE93D24228543E52D83C8FF436CC11()
 {
@@ -31,9 +31,9 @@ void UABP_MiniGame_WM_Ryo_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_
 
 
 // Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198
-// (BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void UABP_MiniGame_WM_Ryo_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198()
+void UABP_MiniGame_WM_Ryo_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re_AnimGraphNode_ModifyBone_33D580484AD91E2C5402079A80B61198");
 
@@ -48,7 +48,7 @@ void UABP_MiniGame_WM_Ryo_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_
 
 
 // Function ABP_MiniGame_WM_Ryo_re.ABP_MiniGame_WM_Ryo_re_C.ExecuteUbergraph_ABP_MiniGame_WM_Ryo_re
-// ()
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Protected, NetClient)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_ProgressController.BW_ProgressController_C.SetEventStep
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            NewStep                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_ProgressController_C::SetEventStep(int NewStep)
+void UBW_ProgressController_C::STATIC_SetEventStep(int NewStep)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ProgressController.BW_ProgressController_C.SetEventStep");
 
@@ -34,13 +34,13 @@ void UBW_ProgressController_C::SetEventStep(int NewStep)
 
 
 // Function BW_ProgressController.BW_ProgressController_C.ValueCommitted
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USpinBox*                SpinBox                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       Method                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_ProgressController_C::ValueCommitted(class USpinBox* SpinBox, float Value, TEnumAsByte<ETextCommit> Method)
+void UBW_ProgressController_C::STATIC_ValueCommitted(class USpinBox* SpinBox, float Value, TEnumAsByte<ETextCommit> Method)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ProgressController.BW_ProgressController_C.ValueCommitted");
 
@@ -58,12 +58,12 @@ void UBW_ProgressController_C::ValueCommitted(class USpinBox* SpinBox, float Val
 
 
 // Function BW_ProgressController.BW_ProgressController_C.CheckFocus
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USpinBox*                SpinBox                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBW_ProgressController_C::CheckFocus(class USpinBox* SpinBox, bool* Result)
+void UBW_ProgressController_C::STATIC_CheckFocus(class USpinBox* SpinBox, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ProgressController.BW_ProgressController_C.CheckFocus");
 
@@ -82,7 +82,7 @@ void UBW_ProgressController_C::CheckFocus(class USpinBox* SpinBox, bool* Result)
 
 
 // Function BW_ProgressController.BW_ProgressController_C.OnAnalogValueChanged
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FAnalogInputEvent       InAnalogInputEvent             (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -107,7 +107,7 @@ struct FEventReply UBW_ProgressController_C::OnAnalogValueChanged(const struct F
 
 
 // Function BW_ProgressController.BW_ProgressController_C.JointValue_Short
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::JointValue_Short()
 {
@@ -116,6 +116,7 @@ void UBW_ProgressController_C::JointValue_Short()
 	UBW_ProgressController_C_JointValue_Short_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +125,7 @@ void UBW_ProgressController_C::JointValue_Short()
 
 
 // Function BW_ProgressController.BW_ProgressController_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -146,7 +147,7 @@ void UBW_ProgressController_C::Tick(const struct FGeometry& MyGeometry, float In
 
 
 // Function BW_ProgressController.BW_ProgressController_C.ChangeStep_Short
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::ChangeStep_Short()
 {
@@ -155,6 +156,7 @@ void UBW_ProgressController_C::ChangeStep_Short()
 	UBW_ProgressController_C_ChangeStep_Short_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -163,7 +165,7 @@ void UBW_ProgressController_C::ChangeStep_Short()
 
 
 // Function BW_ProgressController.BW_ProgressController_C.ChangeLevel
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::ChangeLevel()
 {
@@ -172,6 +174,7 @@ void UBW_ProgressController_C::ChangeLevel()
 	UBW_ProgressController_C_ChangeLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,7 +183,7 @@ void UBW_ProgressController_C::ChangeLevel()
 
 
 // Function BW_ProgressController.BW_ProgressController_C.ChangeLanguage
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::ChangeLanguage()
 {
@@ -189,6 +192,7 @@ void UBW_ProgressController_C::ChangeLanguage()
 	UBW_ProgressController_C_ChangeLanguage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -197,7 +201,7 @@ void UBW_ProgressController_C::ChangeLanguage()
 
 
 // Function BW_ProgressController.BW_ProgressController_C.BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -219,7 +223,7 @@ void UBW_ProgressController_C::BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_
 
 
 // Function BW_ProgressController.BW_ProgressController_C.BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -241,7 +245,7 @@ void UBW_ProgressController_C::BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67
 
 
 // Function BW_ProgressController.BW_ProgressController_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::Construct()
 {
@@ -258,7 +262,7 @@ void UBW_ProgressController_C::Construct()
 
 
 // Function BW_ProgressController.BW_ProgressController_C.BndEvt__HakkasonButton_K2Node_ComponentBoundEvent_71_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::BndEvt__HakkasonButton_K2Node_ComponentBoundEvent_71_OnButtonClickedEvent__DelegateSignature()
 {
@@ -275,7 +279,7 @@ void UBW_ProgressController_C::BndEvt__HakkasonButton_K2Node_ComponentBoundEvent
 
 
 // Function BW_ProgressController.BW_ProgressController_C.BndEvt__ChobuButton_K2Node_ComponentBoundEvent_90_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::BndEvt__ChobuButton_K2Node_ComponentBoundEvent_90_OnButtonClickedEvent__DelegateSignature()
 {
@@ -292,7 +296,7 @@ void UBW_ProgressController_C::BndEvt__ChobuButton_K2Node_ComponentBoundEvent_90
 
 
 // Function BW_ProgressController.BW_ProgressController_C.ChangeStep
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::ChangeStep()
 {
@@ -309,7 +313,7 @@ void UBW_ProgressController_C::ChangeStep()
 
 
 // Function BW_ProgressController.BW_ProgressController_C.ChangeVoiceLanguage
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_ProgressController_C::ChangeVoiceLanguage()
 {
@@ -326,7 +330,7 @@ void UBW_ProgressController_C::ChangeVoiceLanguage()
 
 
 // Function BW_ProgressController.BW_ProgressController_C.ExecuteUbergraph_BW_ProgressController
-// (HasDefaults)
+// (NetReliable, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

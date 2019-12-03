@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.StartTalkClipper
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ClipperData                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_SubtitlePlayer_C::StartTalkClipper(const struct FName& CharaName, struct FString* ClipperData)
+void ABP_SubtitlePlayer_C::STATIC_StartTalkClipper(const struct FName& CharaName, struct FString* ClipperData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.StartTalkClipper");
 
@@ -38,9 +38,9 @@ void ABP_SubtitlePlayer_C::StartTalkClipper(const struct FName& CharaName, struc
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.UpdateDelayPlayVoice
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_SubtitlePlayer_C::UpdateDelayPlayVoice()
+void ABP_SubtitlePlayer_C::STATIC_UpdateDelayPlayVoice()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.UpdateDelayPlayVoice");
 
@@ -55,7 +55,7 @@ void ABP_SubtitlePlayer_C::UpdateDelayPlayVoice()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.RemoveDelayVoiceData
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     InSoundPlayer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,6 +67,7 @@ void ABP_SubtitlePlayer_C::RemoveDelayVoiceData(class ABP_S3SoundPlayer_C* InSou
 	params.InSoundPlayer = InSoundPlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,11 +76,11 @@ void ABP_SubtitlePlayer_C::RemoveDelayVoiceData(class ABP_S3SoundPlayer_C* InSou
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.AddDelayVoiceData
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     InSoundPlayer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::AddDelayVoiceData(class ABP_S3SoundPlayer_C* InSoundPlayer)
+void ABP_SubtitlePlayer_C::STATIC_AddDelayVoiceData(class ABP_S3SoundPlayer_C* InSoundPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.AddDelayVoiceData");
 
@@ -87,6 +88,7 @@ void ABP_SubtitlePlayer_C::AddDelayVoiceData(class ABP_S3SoundPlayer_C* InSoundP
 	params.InSoundPlayer = InSoundPlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,11 +97,11 @@ void ABP_SubtitlePlayer_C::AddDelayVoiceData(class ABP_S3SoundPlayer_C* InSoundP
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetLeavePreviousVoice
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           InLeave                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::SetLeavePreviousVoice(bool InLeave)
+void ABP_SubtitlePlayer_C::STATIC_SetLeavePreviousVoice(bool InLeave)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetLeavePreviousVoice");
 
@@ -115,7 +117,7 @@ void ABP_SubtitlePlayer_C::SetLeavePreviousVoice(bool InLeave)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.UnbindOnSubVoiceAudioFinished
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     InSoundPlayer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -135,7 +137,7 @@ void ABP_SubtitlePlayer_C::UnbindOnSubVoiceAudioFinished(class ABP_S3SoundPlayer
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.BindOnSubVoiceAudioFinished
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     InSoundPlayer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -155,11 +157,11 @@ void ABP_SubtitlePlayer_C::BindOnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.OnSubVoiceAudioFinished
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     InSoundPlayer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::OnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* InSoundPlayer)
+void ABP_SubtitlePlayer_C::STATIC_OnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* InSoundPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.OnSubVoiceAudioFinished");
 
@@ -167,6 +169,7 @@ void ABP_SubtitlePlayer_C::OnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* In
 	params.InSoundPlayer = InSoundPlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,9 +178,9 @@ void ABP_SubtitlePlayer_C::OnSubVoiceAudioFinished(class ABP_S3SoundPlayer_C* In
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.EndAllVoicePlaying
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::EndAllVoicePlaying()
+void ABP_SubtitlePlayer_C::STATIC_EndAllVoicePlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.EndAllVoicePlaying");
 
@@ -192,11 +195,11 @@ void ABP_SubtitlePlayer_C::EndAllVoicePlaying()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.EndSubVoicePlaying
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     InSoundPlayer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::EndSubVoicePlaying(class ABP_S3SoundPlayer_C* InSoundPlayer)
+void ABP_SubtitlePlayer_C::STATIC_EndSubVoicePlaying(class ABP_S3SoundPlayer_C* InSoundPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.EndSubVoicePlaying");
 
@@ -204,6 +207,7 @@ void ABP_SubtitlePlayer_C::EndSubVoicePlaying(class ABP_S3SoundPlayer_C* InSound
 	params.InSoundPlayer = InSoundPlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,15 +216,16 @@ void ABP_SubtitlePlayer_C::EndSubVoicePlaying(class ABP_S3SoundPlayer_C* InSound
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ConvertCurrentVoicePlayerToSub
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::ConvertCurrentVoicePlayerToSub()
+void ABP_SubtitlePlayer_C::STATIC_ConvertCurrentVoicePlayerToSub()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ConvertCurrentVoicePlayerToSub");
 
 	ABP_SubtitlePlayer_C_ConvertCurrentVoicePlayerToSub_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,11 +234,11 @@ void ABP_SubtitlePlayer_C::ConvertCurrentVoicePlayerToSub()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetPlayTimeMin
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // float                          NewTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::SetPlayTimeMin(float NewTime)
+void ABP_SubtitlePlayer_C::STATIC_SetPlayTimeMin(float NewTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetPlayTimeMin");
 
@@ -249,7 +254,7 @@ void ABP_SubtitlePlayer_C::SetPlayTimeMin(float NewTime)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.CheckAutoStop
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -269,11 +274,11 @@ void ABP_SubtitlePlayer_C::CheckAutoStop(float DeltaTime)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.IsVoicePlaying
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           Playing                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::IsVoicePlaying(bool* Playing)
+void ABP_SubtitlePlayer_C::STATIC_IsVoicePlaying(bool* Playing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.IsVoicePlaying");
 
@@ -291,11 +296,11 @@ void ABP_SubtitlePlayer_C::IsVoicePlaying(bool* Playing)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetPlayVolume
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          NewVolume                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::SetPlayVolume(float NewVolume)
+void ABP_SubtitlePlayer_C::STATIC_SetPlayVolume(float NewVolume)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetPlayVolume");
 
@@ -311,11 +316,11 @@ void ABP_SubtitlePlayer_C::SetPlayVolume(float NewVolume)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.GetVoicePlayer
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     VoicePlayer                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::GetVoicePlayer(class ABP_S3SoundPlayer_C** VoicePlayer)
+void ABP_SubtitlePlayer_C::STATIC_GetVoicePlayer(class ABP_S3SoundPlayer_C** VoicePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.GetVoicePlayer");
 
@@ -333,11 +338,11 @@ void ABP_SubtitlePlayer_C::GetVoicePlayer(class ABP_S3SoundPlayer_C** VoicePlaye
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetCurrentPlayingTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // float                          CurrentPlayingTime             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::SetCurrentPlayingTime(float CurrentPlayingTime)
+void ABP_SubtitlePlayer_C::STATIC_SetCurrentPlayingTime(float CurrentPlayingTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetCurrentPlayingTime");
 
@@ -353,11 +358,11 @@ void ABP_SubtitlePlayer_C::SetCurrentPlayingTime(float CurrentPlayingTime)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetIsAutoStopFlag
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           bFlag                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::SetIsAutoStopFlag(bool bFlag)
+void ABP_SubtitlePlayer_C::STATIC_SetIsAutoStopFlag(bool bFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetIsAutoStopFlag");
 
@@ -373,11 +378,11 @@ void ABP_SubtitlePlayer_C::SetIsAutoStopFlag(bool bFlag)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetIsPlayingFlag
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           bFlag                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::SetIsPlayingFlag(bool bFlag)
+void ABP_SubtitlePlayer_C::STATIC_SetIsPlayingFlag(bool bFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetIsPlayingFlag");
 
@@ -393,11 +398,11 @@ void ABP_SubtitlePlayer_C::SetIsPlayingFlag(bool bFlag)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.GetSubtitlesWidget
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UUMG_Subtitles_C*        SubtitlesWidget                (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::GetSubtitlesWidget(class UUMG_Subtitles_C** SubtitlesWidget)
+void ABP_SubtitlePlayer_C::STATIC_GetSubtitlesWidget(class UUMG_Subtitles_C** SubtitlesWidget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.GetSubtitlesWidget");
 
@@ -415,7 +420,7 @@ void ABP_SubtitlePlayer_C::GetSubtitlesWidget(class UUMG_Subtitles_C** Subtitles
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.CalcPlayTimeMin
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -427,6 +432,7 @@ void ABP_SubtitlePlayer_C::CalcPlayTimeMin(const struct FString& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -435,11 +441,11 @@ void ABP_SubtitlePlayer_C::CalcPlayTimeMin(const struct FString& Text)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.IsPlaying
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SubtitlePlayer_C::IsPlaying()
+bool ABP_SubtitlePlayer_C::STATIC_IsPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.IsPlaying");
 
@@ -456,12 +462,12 @@ bool ABP_SubtitlePlayer_C::IsPlaying()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.GetSubtitleSpeakerID
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::GetSubtitleSpeakerID(const struct FName& CharaName, struct FName* ID)
+void ABP_SubtitlePlayer_C::STATIC_GetSubtitleSpeakerID(const struct FName& CharaName, struct FName* ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.GetSubtitleSpeakerID");
 
@@ -480,7 +486,7 @@ void ABP_SubtitlePlayer_C::GetSubtitleSpeakerID(const struct FName& CharaName, s
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.GetSubtitleChara
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_TalkCharacterType> Chara                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -504,7 +510,7 @@ void ABP_SubtitlePlayer_C::GetSubtitleChara(const struct FName& CharaName, TEnum
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.Stop
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
 void ABP_SubtitlePlayer_C::Stop()
 {
@@ -521,14 +527,14 @@ void ABP_SubtitlePlayer_C::Stop()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.Play
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, Public, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsAutoStop                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop)
+void ABP_SubtitlePlayer_C::STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.Play");
 
@@ -539,6 +545,7 @@ void ABP_SubtitlePlayer_C::Play(const struct FName& Label, ES3TextPathType Type,
 	params.IsAutoStop = IsAutoStop;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -547,7 +554,7 @@ void ABP_SubtitlePlayer_C::Play(const struct FName& Label, ES3TextPathType Type,
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.EndVoicePlaying
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_SubtitlePlayer_C::EndVoicePlaying()
 {
@@ -564,7 +571,7 @@ void ABP_SubtitlePlayer_C::EndVoicePlaying()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.PlayVoice
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // class UObject*                 VoiceData                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -584,11 +591,11 @@ void ABP_SubtitlePlayer_C::PlayVoice(class UObject* VoiceData)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.CreateVoicePlayer
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::CreateVoicePlayer(class USoundAtomCue* Cue)
+void ABP_SubtitlePlayer_C::STATIC_CreateVoicePlayer(class USoundAtomCue* Cue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.CreateVoicePlayer");
 
@@ -596,6 +603,7 @@ void ABP_SubtitlePlayer_C::CreateVoicePlayer(class USoundAtomCue* Cue)
 	params.Cue = Cue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -604,11 +612,11 @@ void ABP_SubtitlePlayer_C::CreateVoicePlayer(class USoundAtomCue* Cue)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetSubtitlesWidgetVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::SetSubtitlesWidgetVisible(bool IsVisible)
+void ABP_SubtitlePlayer_C::STATIC_SetSubtitlesWidgetVisible(bool IsVisible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.SetSubtitlesWidgetVisible");
 
@@ -624,9 +632,9 @@ void ABP_SubtitlePlayer_C::SetSubtitlesWidgetVisible(bool IsVisible)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.FinalizeSubtitlesWidget
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::FinalizeSubtitlesWidget()
+void ABP_SubtitlePlayer_C::STATIC_FinalizeSubtitlesWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.FinalizeSubtitlesWidget");
 
@@ -641,7 +649,7 @@ void ABP_SubtitlePlayer_C::FinalizeSubtitlesWidget()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.CreateSubtitlesWidget
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SubtitlePlayer_C::CreateSubtitlesWidget()
 {
@@ -650,6 +658,7 @@ void ABP_SubtitlePlayer_C::CreateSubtitlesWidget()
 	ABP_SubtitlePlayer_C_CreateSubtitlesWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -658,9 +667,9 @@ void ABP_SubtitlePlayer_C::CreateSubtitlesWidget()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::UserConstructionScript()
+void ABP_SubtitlePlayer_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.UserConstructionScript");
 
@@ -675,9 +684,9 @@ void ABP_SubtitlePlayer_C::UserConstructionScript()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::ReceiveBeginPlay()
+void ABP_SubtitlePlayer_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ReceiveBeginPlay");
 
@@ -692,11 +701,11 @@ void ABP_SubtitlePlayer_C::ReceiveBeginPlay()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::ReceiveTick(float DeltaSeconds)
+void ABP_SubtitlePlayer_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ReceiveTick");
 
@@ -704,6 +713,7 @@ void ABP_SubtitlePlayer_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -712,9 +722,9 @@ void ABP_SubtitlePlayer_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.BindOnVoiceAudioFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::BindOnVoiceAudioFinished()
+void ABP_SubtitlePlayer_C::STATIC_BindOnVoiceAudioFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.BindOnVoiceAudioFinished");
 
@@ -729,9 +739,9 @@ void ABP_SubtitlePlayer_C::BindOnVoiceAudioFinished()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.UnbindOnVoiceAudioFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::UnbindOnVoiceAudioFinished()
+void ABP_SubtitlePlayer_C::STATIC_UnbindOnVoiceAudioFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.UnbindOnVoiceAudioFinished");
 
@@ -746,11 +756,11 @@ void ABP_SubtitlePlayer_C::UnbindOnVoiceAudioFinished()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.OnVoiceAudioFinished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     SoundPlayer                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::OnVoiceAudioFinished(class ABP_S3SoundPlayer_C* SoundPlayer)
+void ABP_SubtitlePlayer_C::STATIC_OnVoiceAudioFinished(class ABP_S3SoundPlayer_C* SoundPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.OnVoiceAudioFinished");
 
@@ -758,6 +768,7 @@ void ABP_SubtitlePlayer_C::OnVoiceAudioFinished(class ABP_S3SoundPlayer_C* Sound
 	params.SoundPlayer = SoundPlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -766,9 +777,9 @@ void ABP_SubtitlePlayer_C::OnVoiceAudioFinished(class ABP_S3SoundPlayer_C* Sound
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.sePlay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::sePlay()
+void ABP_SubtitlePlayer_C::STATIC_sePlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.sePlay");
 
@@ -783,9 +794,9 @@ void ABP_SubtitlePlayer_C::sePlay()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.bindSePlay
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_SubtitlePlayer_C::bindSePlay()
+void ABP_SubtitlePlayer_C::STATIC_bindSePlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.bindSePlay");
 
@@ -800,11 +811,11 @@ void ABP_SubtitlePlayer_C::bindSePlay()
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubtitlePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_SubtitlePlayer_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ReceiveEndPlay");
 
@@ -812,6 +823,7 @@ void ABP_SubtitlePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -820,7 +832,7 @@ void ABP_SubtitlePlayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.ExecuteUbergraph_BP_SubtitlePlayer
-// (HasDefaults)
+// (Net, NetReliable, Exec, Event, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -840,7 +852,7 @@ void ABP_SubtitlePlayer_C::ExecuteUbergraph_BP_SubtitlePlayer(int EntryPoint)
 
 
 // Function BP_SubtitlePlayer.BP_SubtitlePlayer_C.OnEndSubtitle__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_SubtitlePlayer_C::OnEndSubtitle__DelegateSignature()
 {
@@ -849,6 +861,7 @@ void ABP_SubtitlePlayer_C::OnEndSubtitle__DelegateSignature()
 	ABP_SubtitlePlayer_C_OnEndSubtitle__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

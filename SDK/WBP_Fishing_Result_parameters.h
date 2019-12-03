@@ -52,8 +52,8 @@ struct UWBP_Fishing_Result_C_GetFishNameText_Params
 	struct FText                                       ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVisible
-struct UWBP_Fishing_Result_C_SetResultVisible_Params
+// Function WBP_Fishing_Result.WBP_Fishing_Result_C.SetResultVIsible
+struct UWBP_Fishing_Result_C_SetResultVIsible_Params
 {
 	ESlateVisibility                                   InVisibility;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               IsException;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

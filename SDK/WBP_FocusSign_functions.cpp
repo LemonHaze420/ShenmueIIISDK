@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_FocusSign.WBP_FocusSign_C.SetIsReadyVisibleOff
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Private, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsReady                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UWBP_FocusSign_C::SetIsReadyVisibleOff(bool IsReady)
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.IsEnabledOff
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -56,7 +56,7 @@ void UWBP_FocusSign_C::IsEnabledOff(bool* Enabled)
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.SetOutSide
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsOutSide                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,6 +68,7 @@ void UWBP_FocusSign_C::SetOutSide(bool IsOutSide)
 	params.IsOutSide = IsOutSide;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,7 +77,7 @@ void UWBP_FocusSign_C::SetOutSide(bool IsOutSide)
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.CalcOpacity
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Public, Protected, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Opacity                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -97,16 +98,17 @@ void UWBP_FocusSign_C::CalcOpacity(float* Opacity)
 }
 
 
-// Function WBP_FocusSign.WBP_FocusSign_C.updateOpacity
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_FocusSign.WBP_FocusSign_C.UpdateOpacity
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_FocusSign_C::updateOpacity()
+void UWBP_FocusSign_C::STATIC_UpdateOpacity()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WBP_FocusSign.WBP_FocusSign_C.updateOpacity");
+	static auto fn = UObject::FindObject<UFunction>("Function WBP_FocusSign.WBP_FocusSign_C.UpdateOpacity");
 
-	UWBP_FocusSign_C_updateOpacity_Params params;
+	UWBP_FocusSign_C_UpdateOpacity_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +117,7 @@ void UWBP_FocusSign_C::updateOpacity()
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.SetInterpOpacity
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -141,7 +143,7 @@ void UWBP_FocusSign_C::SetInterpOpacity(float Target, class UImage* Image, bool*
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.SetVisibleState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetMulticast, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -153,6 +155,7 @@ void UWBP_FocusSign_C::SetVisibleState(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +164,7 @@ void UWBP_FocusSign_C::SetVisibleState(bool Visible)
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.SetCornersPos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintPure)
 
 void UWBP_FocusSign_C::SetCornersPos()
 {
@@ -178,7 +181,7 @@ void UWBP_FocusSign_C::SetCornersPos()
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.UpdateFocusRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          FocusRate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -190,6 +193,7 @@ void UWBP_FocusSign_C::UpdateFocusRate(float FocusRate)
 	params.FocusRate = FocusRate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -198,7 +202,7 @@ void UWBP_FocusSign_C::UpdateFocusRate(float FocusRate)
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -212,6 +216,7 @@ void UWBP_FocusSign_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,11 +225,11 @@ void UWBP_FocusSign_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_FocusSign_C::PreConstruct(bool IsDesignTime)
+void UWBP_FocusSign_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_FocusSign.WBP_FocusSign_C.PreConstruct");
 
@@ -240,7 +245,7 @@ void UWBP_FocusSign_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_FocusSign.WBP_FocusSign_C.ExecuteUbergraph_WBP_FocusSign
-// (HasDefaults)
+// (Event, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

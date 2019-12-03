@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.CalcAndMoveCameraToSafeLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_DefaultTalkCamera_C::CalcAndMoveCameraToSafeLocation()
 {
@@ -31,7 +31,7 @@ void ABP_DefaultTalkCamera_C::CalcAndMoveCameraToSafeLocation()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.CutOffNearBlur
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_DefaultTalkCamera_C::CutOffNearBlur()
 {
@@ -40,6 +40,7 @@ void ABP_DefaultTalkCamera_C::CutOffNearBlur()
 	ABP_DefaultTalkCamera_C_CutOffNearBlur_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +49,7 @@ void ABP_DefaultTalkCamera_C::CutOffNearBlur()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.GetLookTargetSocketLocation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Native, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InSocketName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -61,6 +62,7 @@ struct FVector ABP_DefaultTalkCamera_C::GetLookTargetSocketLocation(const struct
 	params.InSocketName = InSocketName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,11 +73,11 @@ struct FVector ABP_DefaultTalkCamera_C::GetLookTargetSocketLocation(const struct
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.CalcFinalDistance
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          FinishCameraDistance           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DefaultTalkCamera_C::CalcFinalDistance(float* FinishCameraDistance)
+void ABP_DefaultTalkCamera_C::STATIC_CalcFinalDistance(float* FinishCameraDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.CalcFinalDistance");
 
@@ -93,17 +95,18 @@ void ABP_DefaultTalkCamera_C::CalcFinalDistance(float* FinishCameraDistance)
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.CalcFinalSpin
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FRotator                FinalSpin                      (Parm, OutParm, IsPlainOldData)
 
-void ABP_DefaultTalkCamera_C::CalcFinalSpin(struct FRotator* FinalSpin)
+void ABP_DefaultTalkCamera_C::STATIC_CalcFinalSpin(struct FRotator* FinalSpin)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.CalcFinalSpin");
 
 	ABP_DefaultTalkCamera_C_CalcFinalSpin_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +118,7 @@ void ABP_DefaultTalkCamera_C::CalcFinalSpin(struct FRotator* FinalSpin)
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.UpdateComponent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_DefaultTalkCamera_C::UpdateComponent()
 {
@@ -124,6 +127,7 @@ void ABP_DefaultTalkCamera_C::UpdateComponent()
 	ABP_DefaultTalkCamera_C_UpdateComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +136,7 @@ void ABP_DefaultTalkCamera_C::UpdateComponent()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.GetCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UCameraComponent*        Camera                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -143,6 +147,7 @@ void ABP_DefaultTalkCamera_C::GetCamera(class UCameraComponent** Camera)
 	ABP_DefaultTalkCamera_C_GetCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,12 +159,12 @@ void ABP_DefaultTalkCamera_C::GetCamera(class UCameraComponent** Camera)
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.GetForwardVector
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMeshComponent*  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 Forward                        (Parm, OutParm, IsPlainOldData)
 
-void ABP_DefaultTalkCamera_C::GetForwardVector(class USkeletalMeshComponent* Target, struct FVector* Forward)
+void ABP_DefaultTalkCamera_C::STATIC_GetForwardVector(class USkeletalMeshComponent* Target, struct FVector* Forward)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.GetForwardVector");
 
@@ -178,7 +183,7 @@ void ABP_DefaultTalkCamera_C::GetForwardVector(class USkeletalMeshComponent* Tar
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.AdjustRotationFromDistance
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          DistanceRatio                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -204,7 +209,7 @@ void ABP_DefaultTalkCamera_C::AdjustRotationFromDistance(const struct FRotator& 
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.AdjustCameraDistance
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          CharacterHalfDistance          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          CameraDistance                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -230,11 +235,11 @@ void ABP_DefaultTalkCamera_C::AdjustCameraDistance(float CharacterHalfDistance, 
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.GetLockPointDepthOffset
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 DepthOffset                    (Parm, OutParm, IsPlainOldData)
 
-void ABP_DefaultTalkCamera_C::GetLockPointDepthOffset(struct FVector* DepthOffset)
+void ABP_DefaultTalkCamera_C::STATIC_GetLockPointDepthOffset(struct FVector* DepthOffset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.GetLockPointDepthOffset");
 
@@ -252,7 +257,7 @@ void ABP_DefaultTalkCamera_C::GetLockPointDepthOffset(struct FVector* DepthOffse
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.GetLockPointOffset
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 LockPointOffset                (Parm, OutParm, IsPlainOldData)
 
@@ -274,9 +279,9 @@ void ABP_DefaultTalkCamera_C::GetLockPointOffset(struct FVector* LockPointOffset
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.SetSkeletalMeshFromTalkActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_DefaultTalkCamera_C::SetSkeletalMeshFromTalkActor()
+void ABP_DefaultTalkCamera_C::STATIC_SetSkeletalMeshFromTalkActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.SetSkeletalMeshFromTalkActor");
 
@@ -291,7 +296,7 @@ void ABP_DefaultTalkCamera_C::SetSkeletalMeshFromTalkActor()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.Movement_DollyZoom
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -311,7 +316,7 @@ void ABP_DefaultTalkCamera_C::Movement_DollyZoom(float DeltaSeconds)
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.Movement_FovZoom
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -323,6 +328,7 @@ void ABP_DefaultTalkCamera_C::Movement_FovZoom(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -331,11 +337,11 @@ void ABP_DefaultTalkCamera_C::Movement_FovZoom(float DeltaSeconds)
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.Movement_Spin
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DefaultTalkCamera_C::Movement_Spin(float DeltaSeconds)
+void ABP_DefaultTalkCamera_C::STATIC_Movement_Spin(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.Movement_Spin");
 
@@ -351,13 +357,13 @@ void ABP_DefaultTalkCamera_C::Movement_Spin(float DeltaSeconds)
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.Rotater + Rotater
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Static, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FRotator                Rotator_A                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Rotator_B                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Rotator                        (Parm, OutParm, IsPlainOldData)
 
-void ABP_DefaultTalkCamera_C::Rotater___Rotater(const struct FRotator& Rotator_A, const struct FRotator& Rotator_B, struct FRotator* Rotator)
+void ABP_DefaultTalkCamera_C::STATIC_Rotater___Rotater(const struct FRotator& Rotator_A, const struct FRotator& Rotator_B, struct FRotator* Rotator)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.Rotater + Rotater");
 
@@ -377,7 +383,7 @@ void ABP_DefaultTalkCamera_C::Rotater___Rotater(const struct FRotator& Rotator_A
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.StartupSettingsCaseLookPair
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, Public, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_DefaultTalkCamera_C::StartupSettingsCaseLookPair()
 {
@@ -386,6 +392,7 @@ void ABP_DefaultTalkCamera_C::StartupSettingsCaseLookPair()
 	ABP_DefaultTalkCamera_C_StartupSettingsCaseLookPair_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -394,9 +401,9 @@ void ABP_DefaultTalkCamera_C::StartupSettingsCaseLookPair()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.StartupSettingsCaseLookAlone
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_DefaultTalkCamera_C::StartupSettingsCaseLookAlone()
+void ABP_DefaultTalkCamera_C::STATIC_StartupSettingsCaseLookAlone()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.StartupSettingsCaseLookAlone");
 
@@ -411,7 +418,7 @@ void ABP_DefaultTalkCamera_C::StartupSettingsCaseLookAlone()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_DefaultTalkCamera_C::UserConstructionScript()
 {
@@ -420,6 +427,7 @@ void ABP_DefaultTalkCamera_C::UserConstructionScript()
 	ABP_DefaultTalkCamera_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -428,7 +436,7 @@ void ABP_DefaultTalkCamera_C::UserConstructionScript()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_DefaultTalkCamera_C::ReceiveBeginPlay()
 {
@@ -437,6 +445,7 @@ void ABP_DefaultTalkCamera_C::ReceiveBeginPlay()
 	ABP_DefaultTalkCamera_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -445,12 +454,12 @@ void ABP_DefaultTalkCamera_C::ReceiveBeginPlay()
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.ChangeTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class AActor*>          NewTarget                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          lerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DefaultTalkCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
+void ABP_DefaultTalkCamera_C::STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.ChangeTarget");
 
@@ -459,6 +468,7 @@ void ABP_DefaultTalkCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, floa
 	params.lerpTime = lerpTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -467,7 +477,7 @@ void ABP_DefaultTalkCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, floa
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -487,7 +497,7 @@ void ABP_DefaultTalkCamera_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_DefaultTalkCamera.BP_DefaultTalkCamera_C.ExecuteUbergraph_BP_DefaultTalkCamera
-// ()
+// (Net, NetResponse, Public, Private, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

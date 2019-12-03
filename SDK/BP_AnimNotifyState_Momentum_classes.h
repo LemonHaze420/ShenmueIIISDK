@@ -17,7 +17,8 @@ namespace SDK
 class UBP_AnimNotifyState_Momentum_C : public UBP_AnimNotifyState_Base_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
+	float                                              RotateLimitRatio;                                         // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,7 +27,8 @@ public:
 	}
 
 
-	struct FString GetNotifyName();
+	struct FString STATIC_GetNotifyName();
+	void GetNotifyID(struct FName* NotifyID);
 };
 
 

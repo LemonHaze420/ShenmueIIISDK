@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void Uwgt_S3HelpCategory_C::Construct()
+void Uwgt_S3HelpCategory_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.Construct");
 
 	Uwgt_S3HelpCategory_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void Uwgt_S3HelpCategory_C::Construct()
 
 
 // Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.ExecuteUbergraph_wgt_S3HelpCategory
-// (HasDefaults)
+// (Net, NetRequest, Exec, Event, Static, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3HelpCategory_C::ExecuteUbergraph_wgt_S3HelpCategory(int EntryPoint)
+void Uwgt_S3HelpCategory_C::STATIC_ExecuteUbergraph_wgt_S3HelpCategory(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3HelpCategory.wgt_S3HelpCategory_C.ExecuteUbergraph_wgt_S3HelpCategory");
 

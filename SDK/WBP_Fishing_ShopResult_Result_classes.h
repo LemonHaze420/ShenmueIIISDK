@@ -42,13 +42,13 @@ public:
 	}
 
 
-	void UpdateLocalizeText();
+	void STATIC_UpdateLocalizeText();
 	struct FText Get_EarningsText();
 	struct FText Get_ExploitsText();
 	struct FText GetLocalizeFishNameText();
-	struct FText GetFishGramText();
-	void SetImagePositionY(class UImage* ArgImage, float ArgPosY);
-	struct FText GetGenText();
+	struct FText STATIC_GetFishGramText();
+	void STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY);
+	struct FText STATIC_GetGenText();
 	struct FText GetFishNameText();
 	void Construct();
 	void ExecuteUbergraph_WBP_Fishing_ShopResult_Result(int EntryPoint);

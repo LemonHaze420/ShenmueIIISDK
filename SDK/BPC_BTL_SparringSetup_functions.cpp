@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_BTL_SparringSetup.BPC_BTL_SparringSetup_C.GetShowSimon
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetResponse, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_BTL_SparringSetup_C::GetShowSimon()
+bool UBPC_BTL_SparringSetup_C::STATIC_GetShowSimon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BTL_SparringSetup.BPC_BTL_SparringSetup_C.GetShowSimon");
 
 	UBPC_BTL_SparringSetup_C_GetShowSimon_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

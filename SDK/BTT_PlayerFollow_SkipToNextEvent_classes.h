@@ -32,10 +32,10 @@ public:
 
 	void CalcTeleportLocation(class AActor* Character, class ABP_NPCLeadManager_C* LeaderAI, struct FVector* DestLocation, struct FRotator* DestRotation);
 	void CalcNextMoveLocation(class AActor* Character, class ABP_NPCLeadManager_C* LeaderAI, float DeltaSeconds, float Speed, struct FVector* DestLocation, struct FRotator* DestRotation, bool* IsEnd);
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void EndFailure();
 	void StartPanicTeleport();
-	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ExecuteUbergraph_BTT_PlayerFollow_SkipToNextEvent(int EntryPoint);
 };
 

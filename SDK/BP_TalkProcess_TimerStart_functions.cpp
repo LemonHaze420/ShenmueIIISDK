@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_TimerStart.BP_TalkProcess_TimerStart_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBP_TalkProcess_TimerStart_C::Activate()
 {
@@ -31,11 +31,11 @@ void UBP_TalkProcess_TimerStart_C::Activate()
 
 
 // Function BP_TalkProcess_TimerStart.BP_TalkProcess_TimerStart_C.ExecuteUbergraph_BP_TalkProcess_TimerStart
-// ()
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_TimerStart_C::ExecuteUbergraph_BP_TalkProcess_TimerStart(int EntryPoint)
+void UBP_TalkProcess_TimerStart_C::STATIC_ExecuteUbergraph_BP_TalkProcess_TimerStart(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_TimerStart.BP_TalkProcess_TimerStart_C.ExecuteUbergraph_BP_TalkProcess_TimerStart");
 

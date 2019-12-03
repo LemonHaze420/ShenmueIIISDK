@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_Breakout.BP_AnimNotify_Breakout_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_Breakout_C::GetNotifyName()
+struct FString UBP_AnimNotify_Breakout_C::STATIC_GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_Breakout.BP_AnimNotify_Breakout_C.GetNotifyName");
 
 	UBP_AnimNotify_Breakout_C_GetNotifyName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,13 +36,13 @@ struct FString UBP_AnimNotify_Breakout_C::GetNotifyName()
 
 
 // Function BP_AnimNotify_Breakout.BP_AnimNotify_Breakout_C.Received_Notify
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_AnimNotify_Breakout_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+bool UBP_AnimNotify_Breakout_C::STATIC_Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_Breakout.BP_AnimNotify_Breakout_C.Received_Notify");
 
@@ -50,6 +51,7 @@ bool UBP_AnimNotify_Breakout_C::Received_Notify(class USkeletalMeshComponent* Me
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

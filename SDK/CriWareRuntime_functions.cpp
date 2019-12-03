@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function CriWareRuntime.AtomAsrRack.SetEffectBypass
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 BusName                        (Parm, ZeroConstructor)
 // struct FString                 EffectName                     (Parm, ZeroConstructor)
@@ -30,7 +30,6 @@ void UAtomAsrRack::SetEffectBypass(const struct FString& BusName, const struct F
 	params.Bypasses = Bypasses;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +38,7 @@ void UAtomAsrRack::SetEffectBypass(const struct FString& BusName, const struct F
 
 
 // Function CriWareRuntime.AtomAsrRack.SetBusVolumeByName
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 BusName                        (Parm, ZeroConstructor)
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -53,7 +52,6 @@ void UAtomAsrRack::SetBusVolumeByName(const struct FString& BusName, float Volum
 	params.Volume = Volume;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +60,7 @@ void UAtomAsrRack::SetBusVolumeByName(const struct FString& BusName, float Volum
 
 
 // Function CriWareRuntime.AtomAsrRack.SetBusSendLevelByName
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 SourceBusName                  (Parm, ZeroConstructor)
 // struct FString                 DestBusName                    (Parm, ZeroConstructor)
@@ -78,7 +76,6 @@ void UAtomAsrRack::SetBusSendLevelByName(const struct FString& SourceBusName, co
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,18 +84,17 @@ void UAtomAsrRack::SetBusSendLevelByName(const struct FString& SourceBusName, co
 
 
 // Function CriWareRuntime.AtomAsrRack.GetDefaultAsrRack
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAtomAsrRack*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAtomAsrRack* UAtomAsrRack::STATIC_GetDefaultAsrRack()
+class UAtomAsrRack* UAtomAsrRack::GetDefaultAsrRack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomAsrRack.GetDefaultAsrRack");
 
 	UAtomAsrRack_GetDefaultAsrRack_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +105,7 @@ class UAtomAsrRack* UAtomAsrRack::STATIC_GetDefaultAsrRack()
 
 
 // Function CriWareRuntime.AtomAsrRack.GetBusAnalyzerInfo
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 DspBusName                     (Parm, ZeroConstructor)
 // int                            num_channels                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -126,7 +122,6 @@ bool UAtomAsrRack::GetBusAnalyzerInfo(const struct FString& DspBusName, int* num
 	params.DspBusName = DspBusName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,12 +141,12 @@ bool UAtomAsrRack::GetBusAnalyzerInfo(const struct FString& DspBusName, int* num
 
 
 // Function CriWareRuntime.AtomAsrRack.GetAsrRack
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            AsrRackId                      (Parm, ZeroConstructor, IsPlainOldData)
 // class UAtomAsrRack*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAtomAsrRack* UAtomAsrRack::STATIC_GetAsrRack(int AsrRackId)
+class UAtomAsrRack* UAtomAsrRack::GetAsrRack(int AsrRackId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomAsrRack.GetAsrRack");
 
@@ -159,7 +154,6 @@ class UAtomAsrRack* UAtomAsrRack::STATIC_GetAsrRack(int AsrRackId)
 	params.AsrRackId = AsrRackId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,7 +164,7 @@ class UAtomAsrRack* UAtomAsrRack::STATIC_GetAsrRack(int AsrRackId)
 
 
 // Function CriWareRuntime.AtomAsrRack.DetachDspBusSetting
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UAtomAsrRack::DetachDspBusSetting()
 {
@@ -179,7 +173,6 @@ void UAtomAsrRack::DetachDspBusSetting()
 	UAtomAsrRack_DetachDspBusSetting_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,7 +181,7 @@ void UAtomAsrRack::DetachDspBusSetting()
 
 
 // Function CriWareRuntime.AtomAsrRack.AttachDspBusSetting
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 SettingName                    (Parm, ZeroConstructor)
 
@@ -200,7 +193,6 @@ void UAtomAsrRack::AttachDspBusSetting(const struct FString& SettingName)
 	params.SettingName = SettingName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,7 +201,7 @@ void UAtomAsrRack::AttachDspBusSetting(const struct FString& SettingName)
 
 
 // Function CriWareRuntime.AtomAsrRack.ApplyDspBusSnapshot
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 SnapshotName                   (Parm, ZeroConstructor)
 // int                            Milliseconds                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -223,364 +215,15 @@ void UAtomAsrRack::ApplyDspBusSnapshot(const struct FString& SnapshotName, int M
 	params.Milliseconds = Milliseconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.AtomCategory.StopByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-
-void UAtomCategory::STATIC_StopByName(const struct FString& CategoryName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.StopByName");
-
-	UAtomCategory_StopByName_Params params;
-	params.CategoryName = CategoryName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.AtomCategory.SetVolumeByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAtomCategory::STATIC_SetVolumeByName(const struct FString& CategoryName, float Volume)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.SetVolumeByName");
-
-	UAtomCategory_SetVolumeByName_Params params;
-	params.CategoryName = CategoryName;
-	params.Volume = Volume;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.AtomCategory.SetAisacControlByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// struct FString                 AisacName                      (Parm, ZeroConstructor)
-// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAtomCategory::STATIC_SetAisacControlByName(const struct FString& CategoryName, const struct FString& AisacName, float Value)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.SetAisacControlByName");
-
-	UAtomCategory_SetAisacControlByName_Params params;
-	params.CategoryName = CategoryName;
-	params.AisacName = AisacName;
-	params.Value = Value;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.AtomCategory.ResetAllAisacControlByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAtomCategory::STATIC_ResetAllAisacControlByName(const struct FString& CategoryName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.ResetAllAisacControlByName");
-
-	UAtomCategory_ResetAllAisacControlByName_Params params;
-	params.CategoryName = CategoryName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.ResetAllAisacControlById
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAtomCategory::STATIC_ResetAllAisacControlById(int CategoryId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.ResetAllAisacControlById");
-
-	UAtomCategory_ResetAllAisacControlById_Params params;
-	params.CategoryId = CategoryId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.PauseByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// bool                           bPause                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAtomCategory::STATIC_PauseByName(const struct FString& CategoryName, bool bPause)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.PauseByName");
-
-	UAtomCategory_PauseByName_Params params;
-	params.CategoryName = CategoryName;
-	params.bPause = bPause;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.AtomCategory.IsPausedByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAtomCategory::STATIC_IsPausedByName(const struct FString& CategoryName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.IsPausedByName");
-
-	UAtomCategory_IsPausedByName_Params params;
-	params.CategoryName = CategoryName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.GetVolumeByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAtomCategory::STATIC_GetVolumeByName(const struct FString& CategoryName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetVolumeByName");
-
-	UAtomCategory_GetVolumeByName_Params params;
-	params.CategoryName = CategoryName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UAtomCategory::STATIC_GetNumAttachedAisacsByName(const struct FString& CategoryName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsByName");
-
-	UAtomCategory_GetNumAttachedAisacsByName_Params params;
-	params.CategoryName = CategoryName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsById
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UAtomCategory::STATIC_GetNumAttachedAisacsById(int CategoryId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsById");
-
-	UAtomCategory_GetNumAttachedAisacsById_Params params;
-	params.CategoryId = CategoryId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueByName
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// struct FString                 AisacControlName               (Parm, ZeroConstructor)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAtomCategory::STATIC_GetCurrentAisacControlValueByName(const struct FString& CategoryName, const struct FString& AisacControlName)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueByName");
-
-	UAtomCategory_GetCurrentAisacControlValueByName_Params params;
-	params.CategoryName = CategoryName;
-	params.AisacControlName = AisacControlName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueById
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AisacControlId                 (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UAtomCategory::STATIC_GetCurrentAisacControlValueById(int CategoryId, int AisacControlId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueById");
-
-	UAtomCategory_GetCurrentAisacControlValueById_Params params;
-	params.CategoryId = CategoryId;
-	params.AisacControlId = AisacControlId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoByName
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FString                 CategoryName                   (Parm, ZeroConstructor)
-// int                            AisacAttachedIndex             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsSuccess                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FAtomAisacInfo          AisacInfo                      (Parm, OutParm)
-
-void UAtomCategory::STATIC_GetAttachedAisacInfoByName(const struct FString& CategoryName, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoByName");
-
-	UAtomCategory_GetAttachedAisacInfoByName_Params params;
-	params.CategoryName = CategoryName;
-	params.AisacAttachedIndex = AisacAttachedIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (IsSuccess != nullptr)
-		*IsSuccess = params.IsSuccess;
-	if (AisacInfo != nullptr)
-		*AisacInfo = params.AisacInfo;
-}
-
-
-// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoById
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            AisacAttachedIndex             (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           IsSuccess                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FAtomAisacInfo          AisacInfo                      (Parm, OutParm)
-
-void UAtomCategory::STATIC_GetAttachedAisacInfoById(int CategoryId, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoById");
-
-	UAtomCategory_GetAttachedAisacInfoById_Params params;
-	params.CategoryId = CategoryId;
-	params.AisacAttachedIndex = AisacAttachedIndex;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (IsSuccess != nullptr)
-		*IsSuccess = params.IsSuccess;
-	if (AisacInfo != nullptr)
-		*AisacInfo = params.AisacInfo;
 }
 
 
 // Function CriWareRuntime.AtomComponent.Stop
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UAtomComponent::Stop()
 {
@@ -589,7 +232,6 @@ void UAtomComponent::Stop()
 	UAtomComponent_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -598,7 +240,7 @@ void UAtomComponent::Stop()
 
 
 // Function CriWareRuntime.AtomComponent.SetVolume
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -610,7 +252,6 @@ void UAtomComponent::SetVolume(float Volume)
 	params.Volume = Volume;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -619,7 +260,7 @@ void UAtomComponent::SetVolume(float Volume)
 
 
 // Function CriWareRuntime.AtomComponent.SetSoundObject
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAtomSoundObject*        SoundObject                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -631,7 +272,6 @@ void UAtomComponent::SetSoundObject(class UAtomSoundObject* SoundObject)
 	params.SoundObject = SoundObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -640,7 +280,7 @@ void UAtomComponent::SetSoundObject(class UAtomSoundObject* SoundObject)
 
 
 // Function CriWareRuntime.AtomComponent.SetSound
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomCue*           NewSound                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -652,7 +292,6 @@ void UAtomComponent::SetSound(class USoundAtomCue* NewSound)
 	params.NewSound = NewSound;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -661,7 +300,7 @@ void UAtomComponent::SetSound(class USoundAtomCue* NewSound)
 
 
 // Function CriWareRuntime.AtomComponent.SetSelectorLabel
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 Selector                       (Parm, ZeroConstructor)
 // struct FString                 Label                          (Parm, ZeroConstructor)
@@ -675,7 +314,6 @@ void UAtomComponent::SetSelectorLabel(const struct FString& Selector, const stru
 	params.Label = Label;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -684,7 +322,7 @@ void UAtomComponent::SetSelectorLabel(const struct FString& Selector, const stru
 
 
 // Function CriWareRuntime.AtomComponent.SetPitchMultiplier
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          NewPitchMultiplier             (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -696,7 +334,6 @@ void UAtomComponent::SetPitchMultiplier(float NewPitchMultiplier)
 	params.NewPitchMultiplier = NewPitchMultiplier;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -705,7 +342,7 @@ void UAtomComponent::SetPitchMultiplier(float NewPitchMultiplier)
 
 
 // Function CriWareRuntime.AtomComponent.SetPitch
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          Pitch                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -717,7 +354,6 @@ void UAtomComponent::SetPitch(float Pitch)
 	params.Pitch = Pitch;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -726,7 +362,7 @@ void UAtomComponent::SetPitch(float Pitch)
 
 
 // Function CriWareRuntime.AtomComponent.SetNextBlockIndex
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            BlockIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -738,7 +374,6 @@ void UAtomComponent::SetNextBlockIndex(int BlockIndex)
 	params.BlockIndex = BlockIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -747,11 +382,11 @@ void UAtomComponent::SetNextBlockIndex(int BlockIndex)
 
 
 // Function CriWareRuntime.AtomComponent.SetDefaultAttenuationEnable
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAtomComponent::STATIC_SetDefaultAttenuationEnable(bool bEnable)
+void UAtomComponent::SetDefaultAttenuationEnable(bool bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomComponent.SetDefaultAttenuationEnable");
 
@@ -759,7 +394,6 @@ void UAtomComponent::STATIC_SetDefaultAttenuationEnable(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -768,7 +402,7 @@ void UAtomComponent::STATIC_SetDefaultAttenuationEnable(bool bEnable)
 
 
 // Function CriWareRuntime.AtomComponent.SetBusSendLevelOffsetByName
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 BusName                        (Parm, ZeroConstructor)
 // float                          LevelOffset                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -782,7 +416,6 @@ void UAtomComponent::SetBusSendLevelOffsetByName(const struct FString& BusName, 
 	params.LevelOffset = LevelOffset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -791,7 +424,7 @@ void UAtomComponent::SetBusSendLevelOffsetByName(const struct FString& BusName, 
 
 
 // Function CriWareRuntime.AtomComponent.SetBusSendLevelOffset
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            BusId                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          LevelOffset                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -805,7 +438,6 @@ void UAtomComponent::SetBusSendLevelOffset(int BusId, float LevelOffset)
 	params.LevelOffset = LevelOffset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -814,7 +446,7 @@ void UAtomComponent::SetBusSendLevelOffset(int BusId, float LevelOffset)
 
 
 // Function CriWareRuntime.AtomComponent.SetBusSendLevelByName
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 BusName                        (Parm, ZeroConstructor)
 // float                          Level                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -828,7 +460,6 @@ void UAtomComponent::SetBusSendLevelByName(const struct FString& BusName, float 
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -837,7 +468,7 @@ void UAtomComponent::SetBusSendLevelByName(const struct FString& BusName, float 
 
 
 // Function CriWareRuntime.AtomComponent.SetBusSendLevel
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            BusId                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Level                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -851,7 +482,6 @@ void UAtomComponent::SetBusSendLevel(int BusId, float Level)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -860,7 +490,7 @@ void UAtomComponent::SetBusSendLevel(int BusId, float Level)
 
 
 // Function CriWareRuntime.AtomComponent.SetAsrRackID
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            asr_rack_id                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -872,7 +502,6 @@ void UAtomComponent::SetAsrRackID(int asr_rack_id)
 	params.asr_rack_id = asr_rack_id;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -881,7 +510,7 @@ void UAtomComponent::SetAsrRackID(int asr_rack_id)
 
 
 // Function CriWareRuntime.AtomComponent.SetAisacByName
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 ControlName                    (Parm, ZeroConstructor)
 // float                          ControlValue                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -895,7 +524,6 @@ void UAtomComponent::SetAisacByName(const struct FString& ControlName, float Con
 	params.ControlValue = ControlValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -904,7 +532,7 @@ void UAtomComponent::SetAisacByName(const struct FString& ControlName, float Con
 
 
 // Function CriWareRuntime.AtomComponent.Play
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          StartTime                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -916,7 +544,6 @@ void UAtomComponent::Play(float StartTime)
 	params.StartTime = StartTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -925,7 +552,7 @@ void UAtomComponent::Play(float StartTime)
 
 
 // Function CriWareRuntime.AtomComponent.Pause
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bPause                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -937,7 +564,6 @@ void UAtomComponent::Pause(bool bPause)
 	params.bPause = bPause;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -946,7 +572,7 @@ void UAtomComponent::Pause(bool bPause)
 
 
 // DelegateFunction CriWareRuntime.AtomComponent.OnAudioFinished__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 
 void UAtomComponent::OnAudioFinished__DelegateSignature()
 {
@@ -963,7 +589,7 @@ void UAtomComponent::OnAudioFinished__DelegateSignature()
 
 
 // Function CriWareRuntime.AtomComponent.IsPlaying
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -974,7 +600,6 @@ bool UAtomComponent::IsPlaying()
 	UAtomComponent_IsPlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -985,7 +610,7 @@ bool UAtomComponent::IsPlaying()
 
 
 // Function CriWareRuntime.AtomComponent.IsPaused
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -996,7 +621,6 @@ bool UAtomComponent::IsPaused()
 	UAtomComponent_IsPaused_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1007,7 +631,7 @@ bool UAtomComponent::IsPaused()
 
 
 // Function CriWareRuntime.AtomComponent.GetTime
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1018,7 +642,6 @@ float UAtomComponent::GetTime()
 	UAtomComponent_GetTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1029,7 +652,7 @@ float UAtomComponent::GetTime()
 
 
 // Function CriWareRuntime.AtomComponent.GetStatus
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // EAtomComponentStatus           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1040,7 +663,6 @@ EAtomComponentStatus UAtomComponent::GetStatus()
 	UAtomComponent_GetStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1051,7 +673,7 @@ EAtomComponentStatus UAtomComponent::GetStatus()
 
 
 // Function CriWareRuntime.AtomComponent.GetSequencePosition
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1062,7 +684,6 @@ float UAtomComponent::GetSequencePosition()
 	UAtomComponent_GetSequencePosition_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1073,7 +694,7 @@ float UAtomComponent::GetSequencePosition()
 
 
 // Function CriWareRuntime.AtomComponent.GetNumQueuedSounds
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1084,7 +705,6 @@ int UAtomComponent::GetNumQueuedSounds()
 	UAtomComponent_GetNumQueuedSounds_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1095,18 +715,17 @@ int UAtomComponent::GetNumQueuedSounds()
 
 
 // Function CriWareRuntime.AtomComponent.GetDefaultAttenuationEnable
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAtomComponent::STATIC_GetDefaultAttenuationEnable()
+bool UAtomComponent::GetDefaultAttenuationEnable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomComponent.GetDefaultAttenuationEnable");
 
 	UAtomComponent_GetDefaultAttenuationEnable_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1117,7 +736,7 @@ bool UAtomComponent::STATIC_GetDefaultAttenuationEnable()
 
 
 // Function CriWareRuntime.AtomComponent.GetCueName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -1128,7 +747,6 @@ struct FString UAtomComponent::GetCueName()
 	UAtomComponent_GetCueName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1139,7 +757,7 @@ struct FString UAtomComponent::GetCueName()
 
 
 // Function CriWareRuntime.AtomComponent.GetAtomComponentID
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1150,7 +768,6 @@ int UAtomComponent::GetAtomComponentID()
 	UAtomComponent_GetAtomComponentID_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1161,7 +778,7 @@ int UAtomComponent::GetAtomComponentID()
 
 
 // Function CriWareRuntime.AtomComponent.FadeOut
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          FadeOutDuration                (Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeVolumeLevel                (Parm, ZeroConstructor, IsPlainOldData)
@@ -1175,7 +792,6 @@ void UAtomComponent::FadeOut(float FadeOutDuration, float FadeVolumeLevel)
 	params.FadeVolumeLevel = FadeVolumeLevel;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1184,7 +800,7 @@ void UAtomComponent::FadeOut(float FadeOutDuration, float FadeVolumeLevel)
 
 
 // Function CriWareRuntime.AtomComponent.FadeIn
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          FadeInDuration                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeVolumeLevel                (Parm, ZeroConstructor, IsPlainOldData)
@@ -1200,7 +816,6 @@ void UAtomComponent::FadeIn(float FadeInDuration, float FadeVolumeLevel, float S
 	params.StartTime = StartTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1209,7 +824,7 @@ void UAtomComponent::FadeIn(float FadeInDuration, float FadeVolumeLevel, float S
 
 
 // Function CriWareRuntime.AtomComponent.EnqueueSound
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomCue*           NewSound                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1221,7 +836,6 @@ void UAtomComponent::EnqueueSound(class USoundAtomCue* NewSound)
 	params.NewSound = NewSound;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1230,11 +844,11 @@ void UAtomComponent::EnqueueSound(class USoundAtomCue* NewSound)
 
 
 // Function CriWareRuntime.AtomComponent.DestroyComponentByID
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            TargetID                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAtomComponent::STATIC_DestroyComponentByID(int TargetID)
+void UAtomComponent::DestroyComponentByID(int TargetID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomComponent.DestroyComponentByID");
 
@@ -1242,7 +856,6 @@ void UAtomComponent::STATIC_DestroyComponentByID(int TargetID)
 	params.TargetID = TargetID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1251,7 +864,7 @@ void UAtomComponent::STATIC_DestroyComponentByID(int TargetID)
 
 
 // DelegateFunction CriWareRuntime.AtomCueSheetLoaderComponent.OnLoadError__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 
 void UAtomCueSheetLoaderComponent::OnLoadError__DelegateSignature()
 {
@@ -1268,7 +881,7 @@ void UAtomCueSheetLoaderComponent::OnLoadError__DelegateSignature()
 
 
 // DelegateFunction CriWareRuntime.AtomCueSheetLoaderComponent.OnLoadCompleted__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 
 void UAtomCueSheetLoaderComponent::OnLoadCompleted__DelegateSignature()
 {
@@ -1285,7 +898,7 @@ void UAtomCueSheetLoaderComponent::OnLoadCompleted__DelegateSignature()
 
 
 // DelegateFunction CriWareRuntime.AtomCueSheetLoaderComponent.OnAtomCueSheetLoaded__DelegateSignature
-// (Public, Delegate)
+// ()
 // Parameters:
 // class USoundAtomCueSheet*      Loaded                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1305,13 +918,13 @@ void UAtomCueSheetLoaderComponent::OnAtomCueSheetLoaded__DelegateSignature(class
 
 
 // Function CriWareRuntime.AtomCueSheetLoaderComponent.LoadAtomCueSheet
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FScriptDelegate         OnLoaded                       (Parm, ZeroConstructor)
 // struct FLatentActionInfo       LatentInfo                     (Parm)
 
-void UAtomCueSheetLoaderComponent::STATIC_LoadAtomCueSheet(class UObject* WorldContextObject, const struct FScriptDelegate& OnLoaded, const struct FLatentActionInfo& LatentInfo)
+void UAtomCueSheetLoaderComponent::LoadAtomCueSheet(class UObject* WorldContextObject, const struct FScriptDelegate& OnLoaded, const struct FLatentActionInfo& LatentInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCueSheetLoaderComponent.LoadAtomCueSheet");
 
@@ -1321,7 +934,6 @@ void UAtomCueSheetLoaderComponent::STATIC_LoadAtomCueSheet(class UObject* WorldC
 	params.LatentInfo = LatentInfo;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1330,7 +942,7 @@ void UAtomCueSheetLoaderComponent::STATIC_LoadAtomCueSheet(class UObject* WorldC
 
 
 // Function CriWareRuntime.AtomCueSheetLoaderComponent.Load
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UAtomCueSheetLoaderComponent::Load()
 {
@@ -1339,7 +951,6 @@ void UAtomCueSheetLoaderComponent::Load()
 	UAtomCueSheetLoaderComponent_Load_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1348,7 +959,7 @@ void UAtomCueSheetLoaderComponent::Load()
 
 
 // Function CriWareRuntime.AtomCueSheetLoaderComponent.GetStatus
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // EAtomCueSheetLoaderComponentStatus ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1359,7 +970,6 @@ EAtomCueSheetLoaderComponentStatus UAtomCueSheetLoaderComponent::GetStatus()
 	UAtomCueSheetLoaderComponent_GetStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1370,7 +980,7 @@ EAtomCueSheetLoaderComponentStatus UAtomCueSheetLoaderComponent::GetStatus()
 
 
 // Function CriWareRuntime.AtomCueSheetLoaderComponent.GetAtomCueSheet
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomCueSheet*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1381,7 +991,6 @@ class USoundAtomCueSheet* UAtomCueSheetLoaderComponent::GetAtomCueSheet()
 	UAtomCueSheetLoaderComponent_GetAtomCueSheet_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1391,8 +1000,342 @@ class USoundAtomCueSheet* UAtomCueSheetLoaderComponent::GetAtomCueSheet()
 }
 
 
+// Function CriWareRuntime.AtomCategory.StopByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+
+void UAtomCategory::StopByName(const struct FString& CategoryName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.StopByName");
+
+	UAtomCategory_StopByName_Params params;
+	params.CategoryName = CategoryName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.AtomCategory.SetVolumeByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAtomCategory::SetVolumeByName(const struct FString& CategoryName, float Volume)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.SetVolumeByName");
+
+	UAtomCategory_SetVolumeByName_Params params;
+	params.CategoryName = CategoryName;
+	params.Volume = Volume;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.AtomCategory.SetAisacControlByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// struct FString                 AisacName                      (Parm, ZeroConstructor)
+// float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAtomCategory::SetAisacControlByName(const struct FString& CategoryName, const struct FString& AisacName, float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.SetAisacControlByName");
+
+	UAtomCategory_SetAisacControlByName_Params params;
+	params.CategoryName = CategoryName;
+	params.AisacName = AisacName;
+	params.Value = Value;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.AtomCategory.ResetAllAisacControlByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAtomCategory::ResetAllAisacControlByName(const struct FString& CategoryName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.ResetAllAisacControlByName");
+
+	UAtomCategory_ResetAllAisacControlByName_Params params;
+	params.CategoryName = CategoryName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.ResetAllAisacControlById
+// ()
+// Parameters:
+// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAtomCategory::ResetAllAisacControlById(int CategoryId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.ResetAllAisacControlById");
+
+	UAtomCategory_ResetAllAisacControlById_Params params;
+	params.CategoryId = CategoryId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.PauseByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// bool                           bPause                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAtomCategory::PauseByName(const struct FString& CategoryName, bool bPause)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.PauseByName");
+
+	UAtomCategory_PauseByName_Params params;
+	params.CategoryName = CategoryName;
+	params.bPause = bPause;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.AtomCategory.IsPausedByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAtomCategory::IsPausedByName(const struct FString& CategoryName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.IsPausedByName");
+
+	UAtomCategory_IsPausedByName_Params params;
+	params.CategoryName = CategoryName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.GetVolumeByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAtomCategory::GetVolumeByName(const struct FString& CategoryName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetVolumeByName");
+
+	UAtomCategory_GetVolumeByName_Params params;
+	params.CategoryName = CategoryName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UAtomCategory::GetNumAttachedAisacsByName(const struct FString& CategoryName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsByName");
+
+	UAtomCategory_GetNumAttachedAisacsByName_Params params;
+	params.CategoryName = CategoryName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsById
+// ()
+// Parameters:
+// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UAtomCategory::GetNumAttachedAisacsById(int CategoryId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetNumAttachedAisacsById");
+
+	UAtomCategory_GetNumAttachedAisacsById_Params params;
+	params.CategoryId = CategoryId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// struct FString                 AisacControlName               (Parm, ZeroConstructor)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAtomCategory::GetCurrentAisacControlValueByName(const struct FString& CategoryName, const struct FString& AisacControlName)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueByName");
+
+	UAtomCategory_GetCurrentAisacControlValueByName_Params params;
+	params.CategoryName = CategoryName;
+	params.AisacControlName = AisacControlName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueById
+// ()
+// Parameters:
+// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            AisacControlId                 (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UAtomCategory::GetCurrentAisacControlValueById(int CategoryId, int AisacControlId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetCurrentAisacControlValueById");
+
+	UAtomCategory_GetCurrentAisacControlValueById_Params params;
+	params.CategoryId = CategoryId;
+	params.AisacControlId = AisacControlId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoByName
+// ()
+// Parameters:
+// struct FString                 CategoryName                   (Parm, ZeroConstructor)
+// int                            AisacAttachedIndex             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsSuccess                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FAtomAisacInfo          AisacInfo                      (Parm, OutParm)
+
+void UAtomCategory::GetAttachedAisacInfoByName(const struct FString& CategoryName, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoByName");
+
+	UAtomCategory_GetAttachedAisacInfoByName_Params params;
+	params.CategoryName = CategoryName;
+	params.AisacAttachedIndex = AisacAttachedIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (IsSuccess != nullptr)
+		*IsSuccess = params.IsSuccess;
+	if (AisacInfo != nullptr)
+		*AisacInfo = params.AisacInfo;
+}
+
+
+// Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoById
+// ()
+// Parameters:
+// int                            CategoryId                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            AisacAttachedIndex             (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           IsSuccess                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// struct FAtomAisacInfo          AisacInfo                      (Parm, OutParm)
+
+void UAtomCategory::GetAttachedAisacInfoById(int CategoryId, int AisacAttachedIndex, bool* IsSuccess, struct FAtomAisacInfo* AisacInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomCategory.GetAttachedAisacInfoById");
+
+	UAtomCategory_GetAttachedAisacInfoById_Params params;
+	params.CategoryId = CategoryId;
+	params.AisacAttachedIndex = AisacAttachedIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (IsSuccess != nullptr)
+		*IsSuccess = params.IsSuccess;
+	if (AisacInfo != nullptr)
+		*AisacInfo = params.AisacInfo;
+}
+
+
 // DelegateFunction CriWareRuntime.AtomDeviceWatcher.OnDeviceUpdated__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 
 void UAtomDeviceWatcher::OnDeviceUpdated__DelegateSignature()
 {
@@ -1409,7 +1352,7 @@ void UAtomDeviceWatcher::OnDeviceUpdated__DelegateSignature()
 
 
 // Function CriWareRuntime.AtomDeviceWatcher.GetDeviceName
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -1420,7 +1363,6 @@ struct FString UAtomDeviceWatcher::GetDeviceName()
 	UAtomDeviceWatcher_GetDeviceName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1431,7 +1373,7 @@ struct FString UAtomDeviceWatcher::GetDeviceName()
 
 
 // Function CriWareRuntime.AtomDeviceWatcher.GetDeviceChannelCount
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1442,7 +1384,6 @@ int UAtomDeviceWatcher::GetDeviceChannelCount()
 	UAtomDeviceWatcher_GetDeviceChannelCount_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1453,12 +1394,12 @@ int UAtomDeviceWatcher::GetDeviceChannelCount()
 
 
 // Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FAtomProfileItem> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FAtomProfileItem> UAtomProfileData::STATIC_CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject)
+TArray<struct FAtomProfileItem> UAtomProfileData::CriWareAdx2ProfileDataUpdate(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataUpdate");
 
@@ -1466,7 +1407,6 @@ TArray<struct FAtomProfileItem> UAtomProfileData::STATIC_CriWareAdx2ProfileDataU
 	params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1477,14 +1417,14 @@ TArray<struct FAtomProfileItem> UAtomProfileData::STATIC_CriWareAdx2ProfileDataU
 
 
 // Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<struct FAtomProfileItem> original_item                  (Parm, ZeroConstructor)
 // EAtomProfileSortType           sort_type                      (Parm, ZeroConstructor, IsPlainOldData)
 // EAtomSortOrderType             order_type                     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FAtomProfileItem> sorted_item                    (Parm, OutParm, ZeroConstructor)
 
-void UAtomProfileData::STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item)
+void UAtomProfileData::CriWareAdx2ProfileDataSort(TArray<struct FAtomProfileItem> original_item, EAtomProfileSortType sort_type, EAtomSortOrderType order_type, TArray<struct FAtomProfileItem>* sorted_item)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomProfileData.CriWareAdx2ProfileDataSort");
 
@@ -1494,7 +1434,6 @@ void UAtomProfileData::STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProf
 	params.order_type = order_type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1506,12 +1445,12 @@ void UAtomProfileData::STATIC_CriWareAdx2ProfileDataSort(TArray<struct FAtomProf
 
 
 // Function CriWareRuntime.AtomSpectrumAnalyzer.GetLevelsDB
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // float                          display_range                  (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<float>                  spectra                        (Parm, OutParm, ZeroConstructor)
 
-void UAtomSpectrumAnalyzer::STATIC_GetLevelsDB(float display_range, TArray<float>* spectra)
+void UAtomSpectrumAnalyzer::GetLevelsDB(float display_range, TArray<float>* spectra)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomSpectrumAnalyzer.GetLevelsDB");
 
@@ -1519,7 +1458,6 @@ void UAtomSpectrumAnalyzer::STATIC_GetLevelsDB(float display_range, TArray<float
 	params.display_range = display_range;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1531,18 +1469,17 @@ void UAtomSpectrumAnalyzer::STATIC_GetLevelsDB(float display_range, TArray<float
 
 
 // Function CriWareRuntime.AtomSpectrumAnalyzer.GetLevels
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<float>                  spectra                        (Parm, OutParm, ZeroConstructor)
 
-void UAtomSpectrumAnalyzer::STATIC_GetLevels(TArray<float>* spectra)
+void UAtomSpectrumAnalyzer::GetLevels(TArray<float>* spectra)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomSpectrumAnalyzer.GetLevels");
 
 	UAtomSpectrumAnalyzer_GetLevels_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1554,13 +1491,13 @@ void UAtomSpectrumAnalyzer::STATIC_GetLevels(TArray<float>* spectra)
 
 
 // Function CriWareRuntime.AtomSpectrumAnalyzer.CreateDspSpectra
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAtomAsrRack*            asr_rack                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 bus_name                       (Parm, ZeroConstructor)
 // int                            num_bands                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAtomSpectrumAnalyzer::STATIC_CreateDspSpectra(class UAtomAsrRack* asr_rack, const struct FString& bus_name, int num_bands)
+void UAtomSpectrumAnalyzer::CreateDspSpectra(class UAtomAsrRack* asr_rack, const struct FString& bus_name, int num_bands)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomSpectrumAnalyzer.CreateDspSpectra");
 
@@ -1570,7 +1507,95 @@ void UAtomSpectrumAnalyzer::STATIC_CreateDspSpectra(class UAtomAsrRack* asr_rack
 	params.num_bands = num_bands;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.CriFsBinderComponent.Stop
+// ()
+
+void UCriFsBinderComponent::Stop()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriFsBinderComponent.Stop");
+
+	UCriFsBinderComponent_Stop_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindError__DelegateSignature
+// ()
+
+void UCriFsBinderComponent::OnBindError__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindError__DelegateSignature");
+
+	UCriFsBinderComponent_OnBindError__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindCompleted__DelegateSignature
+// ()
+
+void UCriFsBinderComponent::OnBindCompleted__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>("DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindCompleted__DelegateSignature");
+
+	UCriFsBinderComponent_OnBindCompleted__DelegateSignature_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.CriFsBinderComponent.GetStatus
+// ()
+// Parameters:
+// ECriFsBinderStatus             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+ECriFsBinderStatus UCriFsBinderComponent::GetStatus()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriFsBinderComponent.GetStatus");
+
+	UCriFsBinderComponent_GetStatus_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.CriFsBinderComponent.Bind
+// ()
+
+void UCriFsBinderComponent::Bind()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriFsBinderComponent.Bind");
+
+	UCriFsBinderComponent_Bind_Params params;
+
+	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1579,16 +1604,15 @@ void UAtomSpectrumAnalyzer::STATIC_CreateDspSpectra(class UAtomAsrRack* asr_rack
 
 
 // Function CriWareRuntime.AtomStatics.StopAllSounds
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 
-void UAtomStatics::STATIC_StopAllSounds()
+void UAtomStatics::StopAllSounds()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.StopAllSounds");
 
 	UAtomStatics_StopAllSounds_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1597,7 +1621,7 @@ void UAtomStatics::STATIC_StopAllSounds()
 
 
 // Function CriWareRuntime.AtomStatics.SpawnSoundAttached
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomCue*           Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 // class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1614,7 +1638,7 @@ void UAtomStatics::STATIC_StopAllSounds()
 // bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UAtomComponent*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy)
+class UAtomComponent* UAtomStatics::SpawnSoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<EAttachLocation> LocationType, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.SpawnSoundAttached");
 
@@ -1634,7 +1658,6 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAttached(class USoundAtomCu
 	params.bAutoDestroy = bAutoDestroy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1645,7 +1668,7 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAttached(class USoundAtomCu
 
 
 // Function CriWareRuntime.AtomStatics.SpawnSoundAtLocation
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Sound                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -1659,7 +1682,7 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAttached(class USoundAtomCu
 // bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UAtomComponent*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy)
+class UAtomComponent* UAtomStatics::SpawnSoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings, bool bAutoDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.SpawnSoundAtLocation");
 
@@ -1676,7 +1699,6 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAtLocation(class UObject* W
 	params.bAutoDestroy = bAutoDestroy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1687,7 +1709,7 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAtLocation(class UObject* W
 
 
 // Function CriWareRuntime.AtomStatics.SpawnSound2D
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Sound                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -1697,7 +1719,7 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSoundAtLocation(class UObject* W
 // bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UAtomComponent*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UAtomComponent* UAtomStatics::STATIC_SpawnSound2D(class UObject* WorldContextObject, class USoundAtomCue* Sound, float PitchMultiplier, float StartTime, bool bPersistAcrossLevelTransition, bool bAutoDestroy)
+class UAtomComponent* UAtomStatics::SpawnSound2D(class UObject* WorldContextObject, class USoundAtomCue* Sound, float PitchMultiplier, float StartTime, bool bPersistAcrossLevelTransition, bool bAutoDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.SpawnSound2D");
 
@@ -1710,7 +1732,6 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSound2D(class UObject* WorldCont
 	params.bAutoDestroy = bAutoDestroy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1721,7 +1742,7 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSound2D(class UObject* WorldCont
 
 
 // Function CriWareRuntime.AtomStatics.PlaySoundForAnimNotify
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomCue*           Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 // class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1733,7 +1754,7 @@ class UAtomComponent* UAtomStatics::STATIC_SpawnSound2D(class UObject* WorldCont
 // float                          StartTime                      (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAttenuation*       AttenuationSettings            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAtomStatics::STATIC_PlaySoundForAnimNotify(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
+void UAtomStatics::PlaySoundForAnimNotify(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.PlaySoundForAnimNotify");
 
@@ -1749,7 +1770,6 @@ void UAtomStatics::STATIC_PlaySoundForAnimNotify(class USoundAtomCue* Sound, cla
 	params.AttenuationSettings = AttenuationSettings;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1758,7 +1778,7 @@ void UAtomStatics::STATIC_PlaySoundForAnimNotify(class USoundAtomCue* Sound, cla
 
 
 // Function CriWareRuntime.AtomStatics.PlaySoundAttached
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomCue*           Sound                          (Parm, ZeroConstructor, IsPlainOldData)
 // class USceneComponent*         AttachToComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -1771,7 +1791,7 @@ void UAtomStatics::STATIC_PlaySoundForAnimNotify(class USoundAtomCue* Sound, cla
 // class USoundAttenuation*       AttenuationSettings            (Parm, ZeroConstructor, IsPlainOldData)
 // class UAtomComponent*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UAtomComponent* UAtomStatics::STATIC_PlaySoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
+class UAtomComponent* UAtomStatics::PlaySoundAttached(class USoundAtomCue* Sound, class USceneComponent* AttachToComponent, const struct FName& AttachPointName, const struct FVector& Location, bool bStopWhenAttachedToDestroyed, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.PlaySoundAttached");
 
@@ -1787,7 +1807,6 @@ class UAtomComponent* UAtomStatics::STATIC_PlaySoundAttached(class USoundAtomCue
 	params.AttenuationSettings = AttenuationSettings;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1798,7 +1817,7 @@ class UAtomComponent* UAtomStatics::STATIC_PlaySoundAttached(class USoundAtomCue
 
 
 // Function CriWareRuntime.AtomStatics.PlaySoundAtLocation
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Sound                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -1810,7 +1829,7 @@ class UAtomComponent* UAtomStatics::STATIC_PlaySoundAttached(class USoundAtomCue
 // class USoundAttenuation*       AttenuationSettings            (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundConcurrency*       ConcurrencySettings            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAtomStatics::STATIC_PlaySoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
+void UAtomStatics::PlaySoundAtLocation(class UObject* WorldContextObject, class USoundAtomCue* Sound, const struct FVector& Location, const struct FRotator& Rotation, float VolumeMultiplier, float PitchMultiplier, float StartTime, class USoundAttenuation* AttenuationSettings, class USoundConcurrency* ConcurrencySettings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.PlaySoundAtLocation");
 
@@ -1826,7 +1845,6 @@ void UAtomStatics::STATIC_PlaySoundAtLocation(class UObject* WorldContextObject,
 	params.ConcurrencySettings = ConcurrencySettings;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1835,11 +1853,11 @@ void UAtomStatics::STATIC_PlaySoundAtLocation(class UObject* WorldContextObject,
 
 
 // Function CriWareRuntime.AtomStatics.PauseAudioOutput
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bPause                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAtomStatics::STATIC_PauseAudioOutput(bool bPause)
+void UAtomStatics::PauseAudioOutput(bool bPause)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.PauseAudioOutput");
 
@@ -1847,7 +1865,6 @@ void UAtomStatics::STATIC_PauseAudioOutput(bool bPause)
 	params.bPause = bPause;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1856,12 +1873,12 @@ void UAtomStatics::STATIC_PauseAudioOutput(bool bPause)
 
 
 // Function CriWareRuntime.AtomStatics.LoadAtomConfig
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomConfig*        AcfObject                      (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UAtomStatics::STATIC_LoadAtomConfig(class USoundAtomConfig* AcfObject)
+bool UAtomStatics::LoadAtomConfig(class USoundAtomConfig* AcfObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.LoadAtomConfig");
 
@@ -1869,7 +1886,6 @@ bool UAtomStatics::STATIC_LoadAtomConfig(class USoundAtomConfig* AcfObject)
 	params.AcfObject = AcfObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1880,13 +1896,13 @@ bool UAtomStatics::STATIC_LoadAtomConfig(class USoundAtomConfig* AcfObject)
 
 
 // Function CriWareRuntime.AtomStatics.CreateRootedAtomComponent
-// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAutoDestroy                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UAtomComponent*          ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UAtomComponent* UAtomStatics::STATIC_CreateRootedAtomComponent(class UObject* WorldContextObject, bool bAutoDestroy)
+class UAtomComponent* UAtomStatics::CreateRootedAtomComponent(class UObject* WorldContextObject, bool bAutoDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomStatics.CreateRootedAtomComponent");
 
@@ -1895,140 +1911,17 @@ class UAtomComponent* UAtomStatics::STATIC_CreateRootedAtomComponent(class UObje
 	params.bAutoDestroy = bAutoDestroy;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.AtomTriggerTableFunctionLibrary.GetDataTableRowFromName
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UDataTable*              Table                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   RowName                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FAtomTriggerRow         OutRow                         (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UAtomTriggerTableFunctionLibrary::STATIC_GetDataTableRowFromName(class UDataTable* Table, const struct FName& RowName, struct FAtomTriggerRow* OutRow)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomTriggerTableFunctionLibrary.GetDataTableRowFromName");
-
-	UAtomTriggerTableFunctionLibrary_GetDataTableRowFromName_Params params;
-	params.Table = Table;
-	params.RowName = RowName;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutRow != nullptr)
-		*OutRow = params.OutRow;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.CriFsBinderComponent.Stop
-// (Final, Native, Public, BlueprintCallable)
-
-void UCriFsBinderComponent::Stop()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriFsBinderComponent.Stop");
-
-	UCriFsBinderComponent_Stop_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindError__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
-
-void UCriFsBinderComponent::OnBindError__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindError__DelegateSignature");
-
-	UCriFsBinderComponent_OnBindError__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindCompleted__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
-
-void UCriFsBinderComponent::OnBindCompleted__DelegateSignature()
-{
-	static auto fn = UObject::FindObject<UFunction>("DelegateFunction CriWareRuntime.CriFsBinderComponent.OnBindCompleted__DelegateSignature");
-
-	UCriFsBinderComponent_OnBindCompleted__DelegateSignature_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.CriFsBinderComponent.GetStatus
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// ECriFsBinderStatus             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-ECriFsBinderStatus UCriFsBinderComponent::GetStatus()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriFsBinderComponent.GetStatus");
-
-	UCriFsBinderComponent_GetStatus_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.CriFsBinderComponent.Bind
-// (Final, Native, Public, BlueprintCallable)
-
-void UCriFsBinderComponent::Bind()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriFsBinderComponent.Bind");
-
-	UCriFsBinderComponent_Bind_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // DelegateFunction CriWareRuntime.CriFsLoaderComponent.OnLoadError__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 
 void UCriFsLoaderComponent::OnLoadError__DelegateSignature()
 {
@@ -2045,7 +1938,7 @@ void UCriFsLoaderComponent::OnLoadError__DelegateSignature()
 
 
 // DelegateFunction CriWareRuntime.CriFsLoaderComponent.OnLoadCompleted__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 
 void UCriFsLoaderComponent::OnLoadCompleted__DelegateSignature()
 {
@@ -2062,7 +1955,7 @@ void UCriFsLoaderComponent::OnLoadCompleted__DelegateSignature()
 
 
 // Function CriWareRuntime.CriFsLoaderComponent.Load
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UCriFsLoaderComponent::Load()
 {
@@ -2071,7 +1964,6 @@ void UCriFsLoaderComponent::Load()
 	UCriFsLoaderComponent_Load_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2080,7 +1972,7 @@ void UCriFsLoaderComponent::Load()
 
 
 // Function CriWareRuntime.CriFsLoaderComponent.GetStatus
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // ECriFsLoaderStatus             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2091,7 +1983,6 @@ ECriFsLoaderStatus UCriFsLoaderComponent::GetStatus()
 	UCriFsLoaderComponent_GetStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2102,7 +1993,7 @@ ECriFsLoaderStatus UCriFsLoaderComponent::GetStatus()
 
 
 // Function CriWareRuntime.CriFsLoaderComponent.GetDataArray
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<unsigned char>          ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
@@ -2113,7 +2004,6 @@ TArray<unsigned char> UCriFsLoaderComponent::GetDataArray()
 	UCriFsLoaderComponent_GetDataArray_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2124,12 +2014,12 @@ TArray<unsigned char> UCriFsLoaderComponent::GetDataArray()
 
 
 // Function CriWareRuntime.CriWareFunctionLibrary.SetSpeakerAngleArray
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // ECriWareSpeakerSystem          SpeakerSystem                  (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<float>                  Angles                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UCriWareFunctionLibrary::STATIC_SetSpeakerAngleArray(ECriWareSpeakerSystem SpeakerSystem, TArray<float> Angles)
+void UCriWareFunctionLibrary::SetSpeakerAngleArray(ECriWareSpeakerSystem SpeakerSystem, TArray<float> Angles)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriWareFunctionLibrary.SetSpeakerAngleArray");
 
@@ -2138,7 +2028,6 @@ void UCriWareFunctionLibrary::STATIC_SetSpeakerAngleArray(ECriWareSpeakerSystem 
 	params.Angles = Angles;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2147,12 +2036,12 @@ void UCriWareFunctionLibrary::STATIC_SetSpeakerAngleArray(ECriWareSpeakerSystem 
 
 
 // Function CriWareRuntime.CriWareFunctionLibrary.SetGlobalLabelToSelectorByName
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 SelectorName                   (Parm, ZeroConstructor)
 // struct FString                 labelName                      (Parm, ZeroConstructor)
 
-void UCriWareFunctionLibrary::STATIC_SetGlobalLabelToSelectorByName(const struct FString& SelectorName, const struct FString& labelName)
+void UCriWareFunctionLibrary::SetGlobalLabelToSelectorByName(const struct FString& SelectorName, const struct FString& labelName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriWareFunctionLibrary.SetGlobalLabelToSelectorByName");
 
@@ -2161,7 +2050,6 @@ void UCriWareFunctionLibrary::STATIC_SetGlobalLabelToSelectorByName(const struct
 	params.labelName = labelName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2170,12 +2058,12 @@ void UCriWareFunctionLibrary::STATIC_SetGlobalLabelToSelectorByName(const struct
 
 
 // Function CriWareRuntime.CriWareFunctionLibrary.SetGameVariableByName
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 GameVariableName               (Parm, ZeroConstructor)
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCriWareFunctionLibrary::STATIC_SetGameVariableByName(const struct FString& GameVariableName, float Value)
+void UCriWareFunctionLibrary::SetGameVariableByName(const struct FString& GameVariableName, float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriWareFunctionLibrary.SetGameVariableByName");
 
@@ -2184,7 +2072,6 @@ void UCriWareFunctionLibrary::STATIC_SetGameVariableByName(const struct FString&
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2193,11 +2080,11 @@ void UCriWareFunctionLibrary::STATIC_SetGameVariableByName(const struct FString&
 
 
 // Function CriWareRuntime.CriWareFunctionLibrary.SetAllPauseFlagMana
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bPause                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCriWareFunctionLibrary::STATIC_SetAllPauseFlagMana(bool bPause)
+void UCriWareFunctionLibrary::SetAllPauseFlagMana(bool bPause)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.CriWareFunctionLibrary.SetAllPauseFlagMana");
 
@@ -2205,7 +2092,6 @@ void UCriWareFunctionLibrary::STATIC_SetAllPauseFlagMana(bool bPause)
 	params.bPause = bPause;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2213,8 +2099,100 @@ void UCriWareFunctionLibrary::STATIC_SetAllPauseFlagMana(bool bPause)
 }
 
 
+// Function CriWareRuntime.AtomTriggerTableFunctionLibrary.GetDataTableRowFromName
+// ()
+// Parameters:
+// class UDataTable*              Table                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   RowName                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAtomTriggerRow         OutRow                         (Parm, OutParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAtomTriggerTableFunctionLibrary::GetDataTableRowFromName(class UDataTable* Table, const struct FName& RowName, struct FAtomTriggerRow* OutRow)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.AtomTriggerTableFunctionLibrary.GetDataTableRowFromName");
+
+	UAtomTriggerTableFunctionLibrary_GetDataTableRowFromName_Params params;
+	params.Table = Table;
+	params.RowName = RowName;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutRow != nullptr)
+		*OutRow = params.OutRow;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.FileManaMovie.SetFilePath
+// ()
+// Parameters:
+// struct FString                 Path                           (Parm, ZeroConstructor)
+
+void UFileManaMovie::SetFilePath(const struct FString& Path)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.FileManaMovie.SetFilePath");
+
+	UFileManaMovie_SetFilePath_Params params;
+	params.Path = Path;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.DataManaMovie.SetDataArray
+// ()
+// Parameters:
+// TArray<unsigned char>          InDataArray                    (Parm, OutParm, ZeroConstructor)
+
+void UDataManaMovie::SetDataArray(TArray<unsigned char>* InDataArray)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.DataManaMovie.SetDataArray");
+
+	UDataManaMovie_SetDataArray_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (InDataArray != nullptr)
+		*InDataArray = params.InDataArray;
+}
+
+
+// Function CriWareRuntime.DataManaMovie.GetDataArray
+// ()
+// Parameters:
+// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<unsigned char> UDataManaMovie::GetDataArray()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.DataManaMovie.GetDataArray");
+
+	UDataManaMovie_GetDataArray_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function CriWareRuntime.ManaComponent.ToIndex
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -2227,7 +2205,6 @@ bool UManaComponent::ToIndex(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2238,7 +2215,7 @@ bool UManaComponent::ToIndex(int Index)
 
 
 // Function CriWareRuntime.ManaComponent.StopAndWaitCompletion
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UManaComponent::StopAndWaitCompletion()
 {
@@ -2247,7 +2224,6 @@ void UManaComponent::StopAndWaitCompletion()
 	UManaComponent_StopAndWaitCompletion_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2256,7 +2232,7 @@ void UManaComponent::StopAndWaitCompletion()
 
 
 // Function CriWareRuntime.ManaComponent.Stop
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UManaComponent::Stop()
 {
@@ -2265,7 +2241,6 @@ void UManaComponent::Stop()
 	UManaComponent_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2274,7 +2249,7 @@ void UManaComponent::Stop()
 
 
 // Function CriWareRuntime.ManaComponent.SetVolume
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2286,7 +2261,6 @@ void UManaComponent::SetVolume(float Volume)
 	params.Volume = Volume;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2295,7 +2269,7 @@ void UManaComponent::SetVolume(float Volume)
 
 
 // Function CriWareRuntime.ManaComponent.SetTexture
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UManaTexture*            Texture                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2307,7 +2281,6 @@ void UManaComponent::SetTexture(class UManaTexture* Texture)
 	params.Texture = Texture;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2316,7 +2289,7 @@ void UManaComponent::SetTexture(class UManaTexture* Texture)
 
 
 // Function CriWareRuntime.ManaComponent.SetSubVolume
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2328,7 +2301,6 @@ void UManaComponent::SetSubVolume(float Volume)
 	params.Volume = Volume;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2337,7 +2309,7 @@ void UManaComponent::SetSubVolume(float Volume)
 
 
 // Function CriWareRuntime.ManaComponent.SetSubAudioTrack
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Track                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2349,7 +2321,6 @@ void UManaComponent::SetSubAudioTrack(int Track)
 	params.Track = Track;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2358,7 +2329,7 @@ void UManaComponent::SetSubAudioTrack(int Track)
 
 
 // Function CriWareRuntime.ManaComponent.SetPlaybackTimer
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // EManaPlaybackTimer             InPlaybackTimer                (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2370,7 +2341,6 @@ void UManaComponent::SetPlaybackTimer(EManaPlaybackTimer InPlaybackTimer)
 	params.InPlaybackTimer = InPlaybackTimer;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2379,7 +2349,7 @@ void UManaComponent::SetPlaybackTimer(EManaPlaybackTimer InPlaybackTimer)
 
 
 // Function CriWareRuntime.ManaComponent.SetFile
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 MovieFilePath                  (Parm, ZeroConstructor)
 
@@ -2391,7 +2361,6 @@ void UManaComponent::SetFile(const struct FString& MovieFilePath)
 	params.MovieFilePath = MovieFilePath;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2400,7 +2369,7 @@ void UManaComponent::SetFile(const struct FString& MovieFilePath)
 
 
 // Function CriWareRuntime.ManaComponent.SetExtraVolume
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          Volume                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2412,7 +2381,6 @@ void UManaComponent::SetExtraVolume(float Volume)
 	params.Volume = Volume;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2421,7 +2389,7 @@ void UManaComponent::SetExtraVolume(float Volume)
 
 
 // Function CriWareRuntime.ManaComponent.SetExtraAudioTrack
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Track                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2433,7 +2401,6 @@ void UManaComponent::SetExtraAudioTrack(int Track)
 	params.Track = Track;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2442,7 +2409,7 @@ void UManaComponent::SetExtraAudioTrack(int Track)
 
 
 // Function CriWareRuntime.ManaComponent.SetCachedData
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<unsigned char>          DataArray                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -2454,7 +2421,6 @@ void UManaComponent::SetCachedData(TArray<unsigned char> DataArray)
 	params.DataArray = DataArray;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2463,7 +2429,7 @@ void UManaComponent::SetCachedData(TArray<unsigned char> DataArray)
 
 
 // Function CriWareRuntime.ManaComponent.SetAudioTrack
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Track                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2475,7 +2441,6 @@ void UManaComponent::SetAudioTrack(int Track)
 	params.Track = Track;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2484,7 +2449,7 @@ void UManaComponent::SetAudioTrack(int Track)
 
 
 // Function CriWareRuntime.ManaComponent.SeekToPosition
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            FrameNumber                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2496,7 +2461,6 @@ void UManaComponent::SeekToPosition(int FrameNumber)
 	params.FrameNumber = FrameNumber;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2505,7 +2469,7 @@ void UManaComponent::SeekToPosition(int FrameNumber)
 
 
 // Function CriWareRuntime.ManaComponent.ResetCachedData
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UManaComponent::ResetCachedData()
 {
@@ -2514,7 +2478,6 @@ void UManaComponent::ResetCachedData()
 	UManaComponent_ResetCachedData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2523,7 +2486,7 @@ void UManaComponent::ResetCachedData()
 
 
 // Function CriWareRuntime.ManaComponent.Previous
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2534,7 +2497,6 @@ bool UManaComponent::Previous()
 	UManaComponent_Previous_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2545,7 +2507,7 @@ bool UManaComponent::Previous()
 
 
 // Function CriWareRuntime.ManaComponent.PreparePlaylistIndex
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2557,7 +2519,6 @@ void UManaComponent::PreparePlaylistIndex(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2566,7 +2527,7 @@ void UManaComponent::PreparePlaylistIndex(int Index)
 
 
 // Function CriWareRuntime.ManaComponent.Prepare
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UManaComponent::Prepare()
 {
@@ -2575,7 +2536,6 @@ void UManaComponent::Prepare()
 	UManaComponent_Prepare_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2584,7 +2544,7 @@ void UManaComponent::Prepare()
 
 
 // Function CriWareRuntime.ManaComponent.Play
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UManaComponent::Play()
 {
@@ -2593,7 +2553,6 @@ void UManaComponent::Play()
 	UManaComponent_Play_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2602,7 +2561,7 @@ void UManaComponent::Play()
 
 
 // Function CriWareRuntime.ManaComponent.Pause
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bPause                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2614,7 +2573,6 @@ void UManaComponent::Pause(bool bPause)
 	params.bPause = bPause;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2623,7 +2581,7 @@ void UManaComponent::Pause(bool bPause)
 
 
 // DelegateFunction CriWareRuntime.ManaComponent.OnSubtitleChanged__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 // Parameters:
 // struct FText                   Subtitle                       (Parm)
 
@@ -2643,7 +2601,7 @@ void UManaComponent::OnSubtitleChanged__DelegateSignature(const struct FText& Su
 
 
 // DelegateFunction CriWareRuntime.ManaComponent.OnStatusChanged__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 // Parameters:
 // EManaComponentStatus           Status                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UManaComponent*          ManaComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -2665,7 +2623,7 @@ void UManaComponent::OnStatusChanged__DelegateSignature(EManaComponentStatus Sta
 
 
 // DelegateFunction CriWareRuntime.ManaComponent.OnRequestData__DelegateSignature
-// (Public, Delegate)
+// ()
 // Parameters:
 // class UManaComponent*          ManaComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -2685,7 +2643,7 @@ void UManaComponent::OnRequestData__DelegateSignature(class UManaComponent* Mana
 
 
 // DelegateFunction CriWareRuntime.ManaComponent.OnEventPoint__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
+// ()
 // Parameters:
 // struct FManaEventPointInfo     EventPointInfo                 (Parm)
 
@@ -2705,7 +2663,7 @@ void UManaComponent::OnEventPoint__DelegateSignature(const struct FManaEventPoin
 
 
 // Function CriWareRuntime.ManaComponent.Next
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2716,7 +2674,6 @@ bool UManaComponent::Next()
 	UManaComponent_Next_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2727,7 +2684,7 @@ bool UManaComponent::Next()
 
 
 // Function CriWareRuntime.ManaComponent.Loop
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bInLoop                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2739,7 +2696,6 @@ void UManaComponent::Loop(bool bInLoop)
 	params.bInLoop = bInLoop;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2748,7 +2704,7 @@ void UManaComponent::Loop(bool bInLoop)
 
 
 // Function CriWareRuntime.ManaComponent.IsReady
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2759,7 +2715,6 @@ bool UManaComponent::IsReady()
 	UManaComponent_IsReady_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2770,7 +2725,7 @@ bool UManaComponent::IsReady()
 
 
 // Function CriWareRuntime.ManaComponent.IsPreparing
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2781,7 +2736,6 @@ bool UManaComponent::IsPreparing()
 	UManaComponent_IsPreparing_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2792,7 +2746,7 @@ bool UManaComponent::IsPreparing()
 
 
 // Function CriWareRuntime.ManaComponent.IsPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2803,7 +2757,6 @@ bool UManaComponent::IsPlaying()
 	UManaComponent_IsPlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2814,7 +2767,7 @@ bool UManaComponent::IsPlaying()
 
 
 // Function CriWareRuntime.ManaComponent.IsPaused
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2825,7 +2778,6 @@ bool UManaComponent::IsPaused()
 	UManaComponent_IsPaused_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2836,7 +2788,7 @@ bool UManaComponent::IsPaused()
 
 
 // Function CriWareRuntime.ManaComponent.IsLooping
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2847,7 +2799,6 @@ bool UManaComponent::IsLooping()
 	UManaComponent_IsLooping_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2858,7 +2809,7 @@ bool UManaComponent::IsLooping()
 
 
 // Function CriWareRuntime.ManaComponent.GetVolume
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2869,7 +2820,6 @@ float UManaComponent::GetVolume()
 	UManaComponent_GetVolume_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2880,7 +2830,7 @@ float UManaComponent::GetVolume()
 
 
 // Function CriWareRuntime.ManaComponent.GetTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2891,7 +2841,6 @@ float UManaComponent::GetTime()
 	UManaComponent_GetTime_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2902,7 +2851,7 @@ float UManaComponent::GetTime()
 
 
 // Function CriWareRuntime.ManaComponent.GetTexture
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // class UManaTexture*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2913,7 +2862,6 @@ class UManaTexture* UManaComponent::GetTexture()
 	UManaComponent_GetTexture_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2924,7 +2872,7 @@ class UManaTexture* UManaComponent::GetTexture()
 
 
 // Function CriWareRuntime.ManaComponent.GetSubVolume
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2935,7 +2883,6 @@ float UManaComponent::GetSubVolume()
 	UManaComponent_GetSubVolume_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2946,7 +2893,7 @@ float UManaComponent::GetSubVolume()
 
 
 // Function CriWareRuntime.ManaComponent.GetStatus
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // EManaComponentStatus           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2957,7 +2904,6 @@ EManaComponentStatus UManaComponent::GetStatus()
 	UManaComponent_GetStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2968,7 +2914,7 @@ EManaComponentStatus UManaComponent::GetStatus()
 
 
 // Function CriWareRuntime.ManaComponent.GetSource
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // class UManaMovie*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2979,7 +2925,6 @@ class UManaMovie* UManaComponent::GetSource()
 	UManaComponent_GetSource_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2990,7 +2935,7 @@ class UManaMovie* UManaComponent::GetSource()
 
 
 // Function CriWareRuntime.ManaComponent.GetFrameNumber
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3001,7 +2946,6 @@ int UManaComponent::GetFrameNumber()
 	UManaComponent_GetFrameNumber_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3012,7 +2956,7 @@ int UManaComponent::GetFrameNumber()
 
 
 // Function CriWareRuntime.ManaComponent.GetExtraVolume
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3023,7 +2967,6 @@ float UManaComponent::GetExtraVolume()
 	UManaComponent_GetExtraVolume_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3034,7 +2977,7 @@ float UManaComponent::GetExtraVolume()
 
 
 // Function CriWareRuntime.ManaComponent.EnableSubtitles
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3046,7 +2989,6 @@ void UManaComponent::EnableSubtitles(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3055,7 +2997,7 @@ void UManaComponent::EnableSubtitles(bool bEnable)
 
 
 // Function CriWareRuntime.ManaComponent.EnableSeamless
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bEnable                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3067,7 +3009,6 @@ void UManaComponent::EnableSeamless(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3076,7 +3017,7 @@ void UManaComponent::EnableSeamless(bool bEnable)
 
 
 // Function CriWareRuntime.ManaComponent.ChangeSubtitlesEncoding
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // EManaSubtitlesEncoding         Encoding                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3088,7 +3029,6 @@ void UManaComponent::ChangeSubtitlesEncoding(EManaSubtitlesEncoding Encoding)
 	params.Encoding = Encoding;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3097,7 +3037,7 @@ void UManaComponent::ChangeSubtitlesEncoding(EManaSubtitlesEncoding Encoding)
 
 
 // Function CriWareRuntime.ManaComponent.ChangeSubtitlesChannel
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Channel                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3109,82 +3049,15 @@ void UManaComponent::ChangeSubtitlesChannel(int Channel)
 	params.Channel = Channel;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.FileManaMovie.SetFilePath
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 Path                           (Parm, ZeroConstructor)
-
-void UFileManaMovie::SetFilePath(const struct FString& Path)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.FileManaMovie.SetFilePath");
-
-	UFileManaMovie_SetFilePath_Params params;
-	params.Path = Path;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.DataManaMovie.SetDataArray
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<unsigned char>          InDataArray                    (Parm, OutParm, ZeroConstructor)
-
-void UDataManaMovie::SetDataArray(TArray<unsigned char>* InDataArray)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.DataManaMovie.SetDataArray");
-
-	UDataManaMovie_SetDataArray_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (InDataArray != nullptr)
-		*InDataArray = params.InDataArray;
-}
-
-
-// Function CriWareRuntime.DataManaMovie.GetDataArray
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<unsigned char>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<unsigned char> UDataManaMovie::GetDataArray()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.DataManaMovie.GetDataArray");
-
-	UDataManaMovie_GetDataArray_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
 // Function CriWareRuntime.ManaPlaylist.RemoveAt
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3196,7 +3069,6 @@ void UManaPlaylist::RemoveAt(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3205,7 +3077,7 @@ void UManaPlaylist::RemoveAt(int Index)
 
 
 // Function CriWareRuntime.ManaPlaylist.Remove
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UManaMovie*              ManaMovie                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3217,7 +3089,6 @@ void UManaPlaylist::Remove(class UManaMovie* ManaMovie)
 	params.ManaMovie = ManaMovie;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3226,7 +3097,7 @@ void UManaPlaylist::Remove(class UManaMovie* ManaMovie)
 
 
 // Function CriWareRuntime.ManaPlaylist.Num
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3237,7 +3108,6 @@ int UManaPlaylist::Num()
 	UManaPlaylist_Num_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3248,7 +3118,7 @@ int UManaPlaylist::Num()
 
 
 // Function CriWareRuntime.ManaPlaylist.IsSeamless
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3259,7 +3129,6 @@ bool UManaPlaylist::IsSeamless()
 	UManaPlaylist_IsSeamless_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3270,7 +3139,7 @@ bool UManaPlaylist::IsSeamless()
 
 
 // Function CriWareRuntime.ManaPlaylist.IsMixedTypes
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3281,7 +3150,6 @@ bool UManaPlaylist::IsMixedTypes()
 	UManaPlaylist_IsMixedTypes_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3292,7 +3160,7 @@ bool UManaPlaylist::IsMixedTypes()
 
 
 // Function CriWareRuntime.ManaPlaylist.IsAlpha
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3303,7 +3171,6 @@ bool UManaPlaylist::IsAlpha()
 	UManaPlaylist_IsAlpha_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3314,7 +3181,7 @@ bool UManaPlaylist::IsAlpha()
 
 
 // Function CriWareRuntime.ManaPlaylist.Insert
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UManaMovie*              ManaMovie                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -3328,7 +3195,6 @@ void UManaPlaylist::Insert(class UManaMovie* ManaMovie, int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3337,7 +3203,7 @@ void UManaPlaylist::Insert(class UManaMovie* ManaMovie, int Index)
 
 
 // Function CriWareRuntime.ManaPlaylist.GetRandom
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // int                            InOutIndex                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UManaMovie*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -3349,7 +3215,6 @@ class UManaMovie* UManaPlaylist::GetRandom(int* InOutIndex)
 	UManaPlaylist_GetRandom_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3363,7 +3228,7 @@ class UManaMovie* UManaPlaylist::GetRandom(int* InOutIndex)
 
 
 // Function CriWareRuntime.ManaPlaylist.GetPrevious
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // int                            InOutIndex                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UManaMovie*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -3375,7 +3240,6 @@ class UManaMovie* UManaPlaylist::GetPrevious(int* InOutIndex)
 	UManaPlaylist_GetPrevious_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3389,7 +3253,7 @@ class UManaMovie* UManaPlaylist::GetPrevious(int* InOutIndex)
 
 
 // Function CriWareRuntime.ManaPlaylist.GetNext
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // int                            InOutIndex                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UManaMovie*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -3401,7 +3265,6 @@ class UManaMovie* UManaPlaylist::GetNext(int* InOutIndex)
 	UManaPlaylist_GetNext_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3415,7 +3278,7 @@ class UManaMovie* UManaPlaylist::GetNext(int* InOutIndex)
 
 
 // Function CriWareRuntime.ManaPlaylist.Get
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UManaMovie*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -3428,7 +3291,6 @@ class UManaMovie* UManaPlaylist::Get(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3439,7 +3301,7 @@ class UManaMovie* UManaPlaylist::Get(int Index)
 
 
 // Function CriWareRuntime.ManaPlaylist.Add
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UManaMovie*              ManaMovie                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3451,7 +3313,6 @@ void UManaPlaylist::Add(class UManaMovie* ManaMovie)
 	params.ManaMovie = ManaMovie;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3460,7 +3321,7 @@ void UManaPlaylist::Add(class UManaMovie* ManaMovie)
 
 
 // Function CriWareRuntime.ManaTexture.SetMovieSource
-// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UManaSource*             InSource                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3472,64 +3333,19 @@ void UManaTexture::SetMovieSource(class UManaSource* InSource)
 	params.InSource = InSource;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function CriWareRuntime.SoundAtomCue.GetUserData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-struct FString USoundAtomCue::GetUserData()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCue.GetUserData");
-
-	USoundAtomCue_GetUserData_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function CriWareRuntime.SoundAtomCue.GetLength
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int USoundAtomCue::GetLength()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCue.GetLength");
-
-	USoundAtomCue_GetLength_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.ReleaseAcb
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   AcbName                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void USoundAtomCueSheet::STATIC_ReleaseAcb(const struct FName& AcbName)
+void USoundAtomCueSheet::ReleaseAcb(const struct FName& AcbName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCueSheet.ReleaseAcb");
 
@@ -3537,7 +3353,6 @@ void USoundAtomCueSheet::STATIC_ReleaseAcb(const struct FName& AcbName)
 	params.AcbName = AcbName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3546,12 +3361,12 @@ void USoundAtomCueSheet::STATIC_ReleaseAcb(const struct FName& AcbName)
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.LoadAtomCueSheet
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USoundAtomCueSheet*      CueSheet                       (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCueSheet*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class USoundAtomCueSheet* USoundAtomCueSheet::STATIC_LoadAtomCueSheet(class USoundAtomCueSheet* CueSheet)
+class USoundAtomCueSheet* USoundAtomCueSheet::LoadAtomCueSheet(class USoundAtomCueSheet* CueSheet)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCueSheet.LoadAtomCueSheet");
 
@@ -3559,7 +3374,6 @@ class USoundAtomCueSheet* USoundAtomCueSheet::STATIC_LoadAtomCueSheet(class USou
 	params.CueSheet = CueSheet;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3570,12 +3384,12 @@ class USoundAtomCueSheet* USoundAtomCueSheet::STATIC_LoadAtomCueSheet(class USou
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.LoadAcb
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   AcbName                        (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCueSheet*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class USoundAtomCueSheet* USoundAtomCueSheet::STATIC_LoadAcb(const struct FName& AcbName)
+class USoundAtomCueSheet* USoundAtomCueSheet::LoadAcb(const struct FName& AcbName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCueSheet.LoadAcb");
 
@@ -3583,7 +3397,6 @@ class USoundAtomCueSheet* USoundAtomCueSheet::STATIC_LoadAcb(const struct FName&
 	params.AcbName = AcbName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3594,7 +3407,7 @@ class USoundAtomCueSheet* USoundAtomCueSheet::STATIC_LoadAcb(const struct FName&
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.IsLoaded
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3605,7 +3418,6 @@ bool USoundAtomCueSheet::IsLoaded()
 	USoundAtomCueSheet_IsLoaded_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3616,7 +3428,7 @@ bool USoundAtomCueSheet::IsLoaded()
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.GetAtomCueByName
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 CueName                        (Parm, ZeroConstructor)
 // class USoundAtomCue*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -3629,7 +3441,6 @@ class USoundAtomCue* USoundAtomCueSheet::GetAtomCueByName(const struct FString& 
 	params.CueName = CueName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3640,7 +3451,7 @@ class USoundAtomCue* USoundAtomCueSheet::GetAtomCueByName(const struct FString& 
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.GetAtomCueByIndex
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            CueIndex                       (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -3653,7 +3464,6 @@ class USoundAtomCue* USoundAtomCueSheet::GetAtomCueByIndex(int CueIndex)
 	params.CueIndex = CueIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3664,7 +3474,7 @@ class USoundAtomCue* USoundAtomCueSheet::GetAtomCueByIndex(int CueIndex)
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.GetAtomCueById
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            CueId                          (Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -3677,7 +3487,6 @@ class USoundAtomCue* USoundAtomCueSheet::GetAtomCueById(int CueId)
 	params.CueId = CueId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3688,16 +3497,15 @@ class USoundAtomCue* USoundAtomCueSheet::GetAtomCueById(int CueId)
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.DetachDspBusSetting
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 
-void USoundAtomCueSheet::STATIC_DetachDspBusSetting()
+void USoundAtomCueSheet::DetachDspBusSetting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCueSheet.DetachDspBusSetting");
 
 	USoundAtomCueSheet_DetachDspBusSetting_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3706,11 +3514,11 @@ void USoundAtomCueSheet::STATIC_DetachDspBusSetting()
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.AttachDspBusSetting
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 SettingName                    (Parm, ZeroConstructor)
 
-void USoundAtomCueSheet::STATIC_AttachDspBusSetting(const struct FString& SettingName)
+void USoundAtomCueSheet::AttachDspBusSetting(const struct FString& SettingName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCueSheet.AttachDspBusSetting");
 
@@ -3718,7 +3526,6 @@ void USoundAtomCueSheet::STATIC_AttachDspBusSetting(const struct FString& Settin
 	params.SettingName = SettingName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3727,12 +3534,12 @@ void USoundAtomCueSheet::STATIC_AttachDspBusSetting(const struct FString& Settin
 
 
 // Function CriWareRuntime.SoundAtomCueSheet.ApplyDspBusSnapshot
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 SnapshotName                   (Parm, ZeroConstructor)
 // int                            Milliseconds                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void USoundAtomCueSheet::STATIC_ApplyDspBusSnapshot(const struct FString& SnapshotName, int Milliseconds)
+void USoundAtomCueSheet::ApplyDspBusSnapshot(const struct FString& SnapshotName, int Milliseconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCueSheet.ApplyDspBusSnapshot");
 
@@ -3741,11 +3548,52 @@ void USoundAtomCueSheet::STATIC_ApplyDspBusSnapshot(const struct FString& Snapsh
 	params.Milliseconds = Milliseconds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function CriWareRuntime.SoundAtomCue.GetUserData
+// ()
+// Parameters:
+// struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+struct FString USoundAtomCue::GetUserData()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCue.GetUserData");
+
+	USoundAtomCue_GetUserData_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function CriWareRuntime.SoundAtomCue.GetLength
+// ()
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int USoundAtomCue::GetLength()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function CriWareRuntime.SoundAtomCue.GetLength");
+
+	USoundAtomCue_GetLength_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 

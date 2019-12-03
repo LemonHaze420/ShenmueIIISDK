@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_category_item.wgt_category_item_C.Selected
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void Uwgt_category_item_C::Selected(bool Condition)
 
 
 // Function wgt_category_item.wgt_category_item_C.SetEnabledCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,7 +54,7 @@ void Uwgt_category_item_C::SetEnabledCursor(bool Enabled)
 
 
 // Function wgt_category_item.wgt_category_item_C.SetName
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 name_jp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 name_eng                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -70,6 +70,7 @@ void Uwgt_category_item_C::SetName(const struct FString& name_jp, const struct F
 	params.str_col = str_col;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +79,7 @@ void Uwgt_category_item_C::SetName(const struct FString& name_jp, const struct F
 
 
 // Function wgt_category_item.wgt_category_item_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void Uwgt_category_item_C::Construct()
 {
@@ -95,7 +96,7 @@ void Uwgt_category_item_C::Construct()
 
 
 // Function wgt_category_item.wgt_category_item_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -117,7 +118,7 @@ void Uwgt_category_item_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 
 
 // Function wgt_category_item.wgt_category_item_C.SetButtonSelected
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bSelected                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -129,6 +130,7 @@ void Uwgt_category_item_C::SetButtonSelected(bool bSelected)
 	params.bSelected = bSelected;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +139,7 @@ void Uwgt_category_item_C::SetButtonSelected(bool bSelected)
 
 
 // Function wgt_category_item.wgt_category_item_C.SetCursorEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -149,6 +151,7 @@ void Uwgt_category_item_C::SetCursorEnabled(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,7 +160,7 @@ void Uwgt_category_item_C::SetCursorEnabled(bool bEnabled)
 
 
 // Function wgt_category_item.wgt_category_item_C.SetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -169,6 +172,7 @@ void Uwgt_category_item_C::SetText(const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -177,11 +181,11 @@ void Uwgt_category_item_C::SetText(const struct FText& Text)
 
 
 // Function wgt_category_item.wgt_category_item_C.ExecuteUbergraph_wgt_category_item
-// (HasDefaults)
+// (Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_category_item_C::ExecuteUbergraph_wgt_category_item(int EntryPoint)
+void Uwgt_category_item_C::STATIC_ExecuteUbergraph_wgt_category_item(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_category_item.wgt_category_item_C.ExecuteUbergraph_wgt_category_item");
 
@@ -189,6 +193,7 @@ void Uwgt_category_item_C::ExecuteUbergraph_wgt_category_item(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

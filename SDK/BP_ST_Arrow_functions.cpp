@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.EnabledSplineMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,11 +34,11 @@ void ABP_ST_Arrow_C::EnabledSplineMesh(bool Enabled)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetArrowNumRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetArrowNumRate(float Value)
+void ABP_ST_Arrow_C::STATIC_SetArrowNumRate(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetArrowNumRate");
 
@@ -54,7 +54,7 @@ void ABP_ST_Arrow_C::SetArrowNumRate(float Value)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetArrowMaskSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, Public, Delegate, BlueprintCallable)
 // Parameters:
 // struct FVector2D               InSize                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -66,6 +66,7 @@ void ABP_ST_Arrow_C::SetArrowMaskSize(const struct FVector2D& InSize)
 	params.InSize = InSize;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +75,11 @@ void ABP_ST_Arrow_C::SetArrowMaskSize(const struct FVector2D& InSize)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetHorizonTaperedScale
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, Public, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetHorizonTaperedScale(float Rate)
+void ABP_ST_Arrow_C::STATIC_SetHorizonTaperedScale(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetHorizonTaperedScale");
 
@@ -86,6 +87,7 @@ void ABP_ST_Arrow_C::SetHorizonTaperedScale(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,11 +96,11 @@ void ABP_ST_Arrow_C::SetHorizonTaperedScale(float Rate)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetMaxAlpha
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          MaxAlpha                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetMaxAlpha(float MaxAlpha)
+void ABP_ST_Arrow_C::STATIC_SetMaxAlpha(float MaxAlpha)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetMaxAlpha");
 
@@ -114,22 +116,23 @@ void ABP_ST_Arrow_C::SetMaxAlpha(float MaxAlpha)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Velocity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Gravity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::Reset(float Velocity, float degree, float Gravity)
+void ABP_ST_Arrow_C::STATIC_Reset(float Velocity, float Degree, float Gravity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.Reset");
 
 	ABP_ST_Arrow_C_Reset_Params params;
 	params.Velocity = Velocity;
-	params.degree = degree;
+	params.Degree = Degree;
 	params.Gravity = Gravity;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,11 +141,11 @@ void ABP_ST_Arrow_C::Reset(float Velocity, float degree, float Gravity)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetReverseRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetReverseRate(float Rate)
+void ABP_ST_Arrow_C::STATIC_SetReverseRate(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetReverseRate");
 
@@ -150,6 +153,7 @@ void ABP_ST_Arrow_C::SetReverseRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,11 +162,11 @@ void ABP_ST_Arrow_C::SetReverseRate(float Rate)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetArrowLength
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetArrowLength(float Length)
+void ABP_ST_Arrow_C::STATIC_SetArrowLength(float Length)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetArrowLength");
 
@@ -178,9 +182,9 @@ void ABP_ST_Arrow_C::SetArrowLength(float Length)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 
-void ABP_ST_Arrow_C::Initialize()
+void ABP_ST_Arrow_C::STATIC_Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.Initialize");
 
@@ -195,11 +199,11 @@ void ABP_ST_Arrow_C::Initialize()
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.UpdateVisibleArrow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::UpdateVisibleArrow(float DeltaSeconds)
+void ABP_ST_Arrow_C::STATIC_UpdateVisibleArrow(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.UpdateVisibleArrow");
 
@@ -207,6 +211,7 @@ void ABP_ST_Arrow_C::UpdateVisibleArrow(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,7 +220,7 @@ void ABP_ST_Arrow_C::UpdateVisibleArrow(float DeltaSeconds)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetVisibleArrow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -227,6 +232,7 @@ void ABP_ST_Arrow_C::SetVisibleArrow(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -235,11 +241,11 @@ void ABP_ST_Arrow_C::SetVisibleArrow(bool Visible)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetGradationPower
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Power                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetGradationPower(float Power)
+void ABP_ST_Arrow_C::STATIC_SetGradationPower(float Power)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetGradationPower");
 
@@ -255,7 +261,7 @@ void ABP_ST_Arrow_C::SetGradationPower(float Power)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetGradationSpeed
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -275,22 +281,23 @@ void ABP_ST_Arrow_C::SetGradationSpeed(float Speed)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetSplinePos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Velocity                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Gravity                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetSplinePos(float Velocity, float degree, float Gravity)
+void ABP_ST_Arrow_C::STATIC_SetSplinePos(float Velocity, float Degree, float Gravity)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetSplinePos");
 
 	ABP_ST_Arrow_C_SetSplinePos_Params params;
 	params.Velocity = Velocity;
-	params.degree = degree;
+	params.Degree = Degree;
 	params.Gravity = Gravity;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,12 +306,12 @@ void ABP_ST_Arrow_C::SetSplinePos(float Velocity, float degree, float Gravity)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.GetXYZ
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 
-void ABP_ST_Arrow_C::GetXYZ(float Time, struct FVector* Location)
+void ABP_ST_Arrow_C::STATIC_GetXYZ(float Time, struct FVector* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.GetXYZ");
 
@@ -312,6 +319,7 @@ void ABP_ST_Arrow_C::GetXYZ(float Time, struct FVector* Location)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -323,12 +331,12 @@ void ABP_ST_Arrow_C::GetXYZ(float Time, struct FVector* Location)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.GetHeight
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Height                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::GetHeight(float Time, float* Height)
+void ABP_ST_Arrow_C::STATIC_GetHeight(float Time, float* Height)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.GetHeight");
 
@@ -336,6 +344,7 @@ void ABP_ST_Arrow_C::GetHeight(float Time, float* Height)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,12 +356,12 @@ void ABP_ST_Arrow_C::GetHeight(float Time, float* Height)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.getDistance
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::getDistance(float Time, float* Distance)
+void ABP_ST_Arrow_C::STATIC_getDistance(float Time, float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.getDistance");
 
@@ -371,9 +380,9 @@ void ABP_ST_Arrow_C::getDistance(float Time, float* Distance)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_ST_Arrow_C::UserConstructionScript()
+void ABP_ST_Arrow_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.UserConstructionScript");
 
@@ -388,9 +397,9 @@ void ABP_ST_Arrow_C::UserConstructionScript()
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_ST_Arrow_C::ReceiveBeginPlay()
+void ABP_ST_Arrow_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.ReceiveBeginPlay");
 
@@ -405,11 +414,11 @@ void ABP_ST_Arrow_C::ReceiveBeginPlay()
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Native, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::ReceiveTick(float DeltaSeconds)
+void ABP_ST_Arrow_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.ReceiveTick");
 
@@ -417,6 +426,7 @@ void ABP_ST_Arrow_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -425,11 +435,11 @@ void ABP_ST_Arrow_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.SetRenderTargetTickEnabled
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::SetRenderTargetTickEnabled(bool bEnabled)
+void ABP_ST_Arrow_C::STATIC_SetRenderTargetTickEnabled(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.SetRenderTargetTickEnabled");
 
@@ -445,11 +455,11 @@ void ABP_ST_Arrow_C::SetRenderTargetTickEnabled(bool bEnabled)
 
 
 // Function BP_ST_Arrow.BP_ST_Arrow_C.ExecuteUbergraph_BP_ST_Arrow
-// ()
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ST_Arrow_C::ExecuteUbergraph_BP_ST_Arrow(int EntryPoint)
+void ABP_ST_Arrow_C::STATIC_ExecuteUbergraph_BP_ST_Arrow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ST_Arrow.BP_ST_Arrow_C.ExecuteUbergraph_BP_ST_Arrow");
 
@@ -457,6 +467,7 @@ void ABP_ST_Arrow_C::ExecuteUbergraph_BP_ST_Arrow(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

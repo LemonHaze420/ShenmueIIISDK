@@ -27,7 +27,7 @@ public:
 	struct FScriptMulticastDelegate                    ED_DecideMaxBet;                                          // 0x0368(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    ED_DecideCancel;                                          // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    ED_PostDecideBet;                                         // 0x0388(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	bool                                               isActionButtonExec;                                       // 0x0398(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsActionButtonExec;                                       // 0x0398(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0399(0x0007) MISSED OFFSET
 	struct FScriptMulticastDelegate                    ED_PostDecideReturn;                                      // 0x03A0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    ED_PreDecideBet;                                          // 0x03B0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
@@ -47,22 +47,22 @@ public:
 	}
 
 
-	int GetPriority();
-	TArray<struct FS3DetectActionParam> GetDetectAction();
+	int STATIC_GetPriority();
+	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
 	void GetPlayCount(int* PlayCount);
 	void GetBetMoney(int* BetMoney);
 	void UserConstructionScript();
-	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
-	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
-	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
-	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float AxisValue);
-	void DecideDetectAction(ES3ActionIconType Type);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
+	void STATIC_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float AxisValue);
+	void STATIC_DecideDetectAction(ES3ActionIconType Type);
 	void EndBet();
-	void ExecuteUbergraph_BP_BetMoneyManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_BetMoneyManager(int EntryPoint);
 	void ED_PreDecideReturn__DelegateSignature();
 	void ED_PreDecideBet__DelegateSignature();
 	void ED_PostDecideReturn__DelegateSignature();

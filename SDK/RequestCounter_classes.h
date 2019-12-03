@@ -28,14 +28,14 @@ public:
 	}
 
 
-	struct FString CreateDebugString();
-	void Clean();
+	struct FString STATIC_CreateDebugString();
+	void STATIC_Clean();
 	void HasRequestsFast(bool* bHasRequests);
-	void HasRequests(bool* bHasRequests);
-	void RemoveRequester(class UObject* Requester, bool* bNewlyRemoved);
-	void AddRequester(class UObject* Requester, bool* bnewlyAdded);
-	void OnLastRequestRemove__DelegateSignature();
-	void OnFirstRequestAdd__DelegateSignature();
+	void STATIC_HasRequests(bool* bHasRequests);
+	void STATIC_RemoveRequester(class UObject* Requester, bool* bNewlyRemoved);
+	void STATIC_AddRequester(class UObject* Requester, bool* bnewlyAdded);
+	void STATIC_OnLastRequestRemove__DelegateSignature();
+	void STATIC_OnFirstRequestAdd__DelegateSignature();
 };
 
 

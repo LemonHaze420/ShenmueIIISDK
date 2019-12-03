@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.IsEnabledForceTimeOfDay
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ bool ABP_CutsceneForceTimeOfDayHolder_C::IsEnabledForceTimeOfDay()
 
 
 // Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.GetForceTimeOfDayValue
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, NetResponse, Static, Delegate, NetServer)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_CutsceneForceTimeOfDayHolder_C::GetForceTimeOfDayValue()
+float ABP_CutsceneForceTimeOfDayHolder_C::STATIC_GetForceTimeOfDayValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.GetForceTimeOfDayValue");
 
@@ -56,7 +56,7 @@ float ABP_CutsceneForceTimeOfDayHolder_C::GetForceTimeOfDayValue()
 
 
 // Function BP_CutsceneForceTimeOfDayHolder.BP_CutsceneForceTimeOfDayHolder_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_CutsceneForceTimeOfDayHolder_C::UserConstructionScript()
 {

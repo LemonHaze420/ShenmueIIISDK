@@ -51,24 +51,24 @@ public:
 	}
 
 
-	void GetNextCutChangeTime(float* CutChangeTIme);
+	void STATIC_GetNextCutChangeTime(float* CutChangeTIme);
 	void PrintCameraInfo(const struct FST_AutoCameraAnalizedInfo& CameraInfo);
 	void SetCurrentCamera(const struct FST_AutoCameraAnalizedInfo& Info);
 	void GetCurrentCamera(struct FST_AutoCameraAnalizedInfo* ret);
 	void GetAllCamera(TArray<struct FST_AutoCameraAnalizedInfo>* AnalizedInfo, bool* Result);
 	void CalcNextCameraCut();
 	void IsSimilarToCurrentCamera(const struct FST_AutoCameraAnalizedInfo& CameraInfo, bool* Result);
-	void WhetherToChangeCamera(const struct FName& LookTargetCharacterID, bool* Result);
+	void STATIC_WhetherToChangeCamera(const struct FName& LookTargetCharacterID, bool* Result);
 	void GetSelectedCameras(bool* Result, TArray<struct FST_AutoCameraSelectedResult>* SelectedCameras);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void OnCameraChanged();
 	void OnBeginTalkEvent();
 	void OnEndTalkEvent();
-	void OnSkipTalkTask(float SkipTaskDuration);
+	void STATIC_OnSkipTalkTask(float SkipTaskDuration);
 	void OnInputQuestDebugKey();
-	void ExecuteUbergraph_BP_AutoTalkCameraDirector(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_AutoTalkCameraDirector(int EntryPoint);
 };
 
 

@@ -32,14 +32,14 @@ public:
 
 
 	void AttachActor(class AActor* AttachTarget);
-	void StopCutScenePlayerByTag(const struct FName& Tag);
+	void STATIC_StopCutScenePlayerByTag(const struct FName& Tag);
 	void StopCutScenePlayer();
-	void FindCutScenePlayerByTag(const struct FName& Tag, class ABP_CutscenePlayer_C** CutscenePlayer);
+	void STATIC_FindCutScenePlayerByTag(const struct FName& Tag, class ABP_CutscenePlayer_C** CutscenePlayer);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ResetTransform();
-	void SetVisibleAllCutsceneActors(bool bNewHidden);
-	void SetInfiniteTransform();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ResetTransform();
+	void STATIC_SetVisibleAllCutsceneActors(bool bNewHidden);
+	void STATIC_SetInfiniteTransform();
 	void ExecuteUbergraph_BP_MoveCutsceneRoot(int EntryPoint);
 };
 

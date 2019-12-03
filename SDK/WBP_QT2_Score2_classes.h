@@ -34,14 +34,14 @@ public:
 	}
 
 
-	void SetEnabled(bool bEnabled);
+	void STATIC_SetEnabled(bool bEnabled);
 	void GetTextArray(TArray<class UTextBlock*>* Array);
 	void Set_Text_New(const struct FText& Text);
-	void SetVisibleScore(bool Visible);
-	void SetVisibleText(bool Visible);
+	void STATIC_SetVisibleScore(bool Visible);
+	void STATIC_SetVisibleText(bool Visible);
 	void SetText(const struct FText& Text, bool NotNumber);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_WBP_QT2_Score2(int EntryPoint);
 };
 

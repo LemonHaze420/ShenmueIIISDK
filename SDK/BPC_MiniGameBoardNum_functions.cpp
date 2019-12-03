@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameBoardNum.BPC_MiniGameBoardNum_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 
 void UBPC_MiniGameBoardNum_C::Update()
 {
@@ -31,11 +31,11 @@ void UBPC_MiniGameBoardNum_C::Update()
 
 
 // Function BPC_MiniGameBoardNum.BPC_MiniGameBoardNum_C.SetNumber
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Number                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameBoardNum_C::SetNumber(int Number)
+void UBPC_MiniGameBoardNum_C::STATIC_SetNumber(int Number)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBoardNum.BPC_MiniGameBoardNum_C.SetNumber");
 
@@ -43,6 +43,7 @@ void UBPC_MiniGameBoardNum_C::SetNumber(int Number)
 	params.Number = Number;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +52,7 @@ void UBPC_MiniGameBoardNum_C::SetNumber(int Number)
 
 
 // Function BPC_MiniGameBoardNum.BPC_MiniGameBoardNum_C.SetList
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<class UStaticMeshComponent*> MeshList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class UMaterialInstanceDynamic*> MaterialList                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -63,6 +64,7 @@ void UBPC_MiniGameBoardNum_C::SetList(TArray<class UStaticMeshComponent*>* MeshL
 	UBPC_MiniGameBoardNum_C_SetList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,15 +78,16 @@ void UBPC_MiniGameBoardNum_C::SetList(TArray<class UStaticMeshComponent*>* MeshL
 
 
 // Function BPC_MiniGameBoardNum.BPC_MiniGameBoardNum_C.InitializeMesh
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UBPC_MiniGameBoardNum_C::InitializeMesh()
+void UBPC_MiniGameBoardNum_C::STATIC_InitializeMesh()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBoardNum.BPC_MiniGameBoardNum_C.InitializeMesh");
 
 	UBPC_MiniGameBoardNum_C_InitializeMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

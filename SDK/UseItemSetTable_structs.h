@@ -24,7 +24,7 @@ struct FUseItemSetTable
 	bool                                               consume_flag_19_F302777F410051166F4347AEC1552A34;         // 0x0029(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x6];                                       // 0x002A(0x0006) MISSED OFFSET
 	struct FString                                     returnStr_7_DA75BCC14AC205A6499D918E396AC9FB;             // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     UnknownVar01;                                             // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     UnknownVar01;                                                   // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

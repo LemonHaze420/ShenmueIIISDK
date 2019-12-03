@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.CheckStreetFight
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -39,7 +39,7 @@ void UBP_TalkProcess_Bet_C::CheckStreetFight(bool* Success, int* Price)
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.OnBetCancel
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBP_TalkProcess_Bet_C::OnBetCancel()
 {
@@ -56,7 +56,7 @@ void UBP_TalkProcess_Bet_C::OnBetCancel()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.OnBet
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBP_TalkProcess_Bet_C::OnBet()
 {
@@ -73,7 +73,7 @@ void UBP_TalkProcess_Bet_C::OnBet()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.WasEnteredBet
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBP_TalkProcess_Bet_C::WasEnteredBet()
 {
@@ -90,7 +90,7 @@ void UBP_TalkProcess_Bet_C::WasEnteredBet()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.CreateBetUI
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            bet                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            maxbet                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -108,6 +108,7 @@ void UBP_TalkProcess_Bet_C::CreateBetUI(int bet, int maxbet, int FluctuationValu
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +117,7 @@ void UBP_TalkProcess_Bet_C::CreateBetUI(int bet, int maxbet, int FluctuationValu
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.Finalize
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBP_TalkProcess_Bet_C::Finalize()
 {
@@ -133,7 +134,7 @@ void UBP_TalkProcess_Bet_C::Finalize()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.Activate
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBP_TalkProcess_Bet_C::Activate()
 {
@@ -150,11 +151,11 @@ void UBP_TalkProcess_Bet_C::Activate()
 
 
 // Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.ExecuteUbergraph_BP_TalkProcess_Bet
-// (HasDefaults)
+// (Static, NetMulticast, Private, Delegate, DLLImport, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Bet_C::ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint)
+void UBP_TalkProcess_Bet_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Bet.BP_TalkProcess_Bet_C.ExecuteUbergraph_BP_TalkProcess_Bet");
 

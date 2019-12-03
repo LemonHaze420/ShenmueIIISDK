@@ -51,7 +51,7 @@ struct ABP_Fishing_Arrow_C_GetWaterAndArrowIntersectPos_Params
 struct ABP_Fishing_Arrow_C_Reset_Params
 {
 	float                                              Velocity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Gravity;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -100,7 +100,7 @@ struct ABP_Fishing_Arrow_C_SetGradationSpeed_Params
 struct ABP_Fishing_Arrow_C_SetSplinePos_Params
 {
 	float                                              Velocity;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Gravity;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 

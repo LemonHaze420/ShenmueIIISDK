@@ -41,7 +41,7 @@ public:
 	void Timeline_0__FinishedFunc();
 	void Timeline_0__UpdateFunc();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_FootPrintDecal(int EntryPoint);
+	void STATIC_ExecuteUbergraph_FootPrintDecal(int EntryPoint);
 };
 
 

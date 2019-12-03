@@ -40,29 +40,29 @@ public:
 
 
 	void InitForStrength(TEnumAsByte<EN_DoorGuideStrength> Str);
-	void GetAlternateWeightBasedOnDir(const struct FVector2D& Location, const struct FVector2D& Direction, float* Scaler);
-	void CheckLOS(const struct FVector& From, bool* OutLOS);
+	void STATIC_GetAlternateWeightBasedOnDir(const struct FVector2D& Location, const struct FVector2D& Direction, float* Scaler);
+	void STATIC_CheckLOS(const struct FVector& From, bool* OutLOS);
 	void CalcHintSizeInDir(const struct FVector& InLocation, const struct FVector& InSideDirection, const struct FVector& InBackDirection, float InMaxDistance, float InTestBackDistance, float InTestIntervalDistance, float* OutDistance);
 	void AutoConfigureSteeringHint();
-	void InitAllPoints();
-	void CheckInsideBoundingBox(const struct FVector& Location, bool* bIsInside);
-	void InitBoundingBox();
-	void CalculateSteer(const struct FVector& Location, const struct FVector& InputDirection, struct FVector* OutDirection, float* Strength, float* Priority);
+	void STATIC_InitAllPoints();
+	void STATIC_CheckInsideBoundingBox(const struct FVector& Location, bool* bIsInside);
+	void STATIC_InitBoundingBox();
+	void STATIC_CalculateSteer(const struct FVector& Location, const struct FVector& InputDirection, struct FVector* OutDirection, float* Strength, float* Priority);
 	void CalcSteeringTarget(const struct FVector2D& Location, struct FVector2D* Target);
-	void CalcDistanceDoorframeToPoint(const struct FVector2D& Point, float* Distance);
+	void STATIC_CalcDistanceDoorframeToPoint(const struct FVector2D& Point, float* Distance);
 	void DistancePointToLineSegment(const struct FVector2D& P, const struct FVector2D& LS2, const struct FVector2D& LS1, float* Distance);
 	void InAngleRangeCC(float Angle, const struct FVector2D& Range, bool* bIsIn, float* Weight);
-	void GetSteerAmountAngleMethod(const struct FVector2D& Location, const struct FVector2D& Direction, float* Steer);
+	void STATIC_GetSteerAmountAngleMethod(const struct FVector2D& Location, const struct FVector2D& Direction, float* Steer);
 	void GetWorldSpaceAngle(float Component, float* World);
-	void GetHeadingAngleFromDirection(const struct FVector2D& Direction, float* Angle);
+	void STATIC_GetHeadingAngleFromDirection(const struct FVector2D& Direction, float* Angle);
 	void GetComponentSpaceAngle(float World, float* Component);
 	void GetHeadingAngleFromLocations(const struct FVector2D& FromLocation, const struct FVector2D& ToLocation, float* Degrees);
-	void CalculateAngleRange(const struct FVector2D& Location, struct FVector2D* AngleRangeCW);
+	void STATIC_CalculateAngleRange(const struct FVector2D& Location, struct FVector2D* AngleRangeCW);
 	void IntersectsSegment(const struct FVector2D& Location, const struct FVector2D& Direction, const struct FVector2D& A, const struct FVector2D& B, bool* bIntersects);
-	void CalcScalerBasedOnDistance(float Distance, float* Scaler);
+	void STATIC_CalcScalerBasedOnDistance(float Distance, float* Scaler);
 	void IsOnRelevantSide(const struct FVector2D& Location, bool* bRelevantSide);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_DoorSteeringHint(int EntryPoint);
 };
 

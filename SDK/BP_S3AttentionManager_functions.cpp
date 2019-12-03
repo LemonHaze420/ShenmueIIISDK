@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.IsContainActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class AActor*                  CheckActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Contain                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void ABP_S3AttentionManager_C::IsContainActor(class AActor* CheckActor, bool* Co
 
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.CollectActors
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Delegate, NetClient, Const)
 
 void ABP_S3AttentionManager_C::CollectActors()
 {
@@ -47,6 +47,7 @@ void ABP_S3AttentionManager_C::CollectActors()
 	ABP_S3AttentionManager_C_CollectActors_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void ABP_S3AttentionManager_C::CollectActors()
 
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.SetSetting
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetClient, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -67,6 +68,7 @@ void ABP_S3AttentionManager_C::SetSetting(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,7 +77,7 @@ void ABP_S3AttentionManager_C::SetSetting(class AActor* Actor)
 
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Delegate, HasOutParms, HasDefaults, Const)
 
 void ABP_S3AttentionManager_C::UserConstructionScript()
 {
@@ -84,6 +86,7 @@ void ABP_S3AttentionManager_C::UserConstructionScript()
 	ABP_S3AttentionManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,9 +95,9 @@ void ABP_S3AttentionManager_C::UserConstructionScript()
 
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_S3AttentionManager_C::ReceiveBeginPlay()
+void ABP_S3AttentionManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionManager.BP_S3AttentionManager_C.ReceiveBeginPlay");
 
@@ -109,9 +112,9 @@ void ABP_S3AttentionManager_C::ReceiveBeginPlay()
 
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.PlayBGMFromCue
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_S3AttentionManager_C::PlayBGMFromCue()
+void ABP_S3AttentionManager_C::STATIC_PlayBGMFromCue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionManager.BP_S3AttentionManager_C.PlayBGMFromCue");
 
@@ -126,11 +129,11 @@ void ABP_S3AttentionManager_C::PlayBGMFromCue()
 
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.Event_OnChangePlayerCtrl
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionManager_C::Event_OnChangePlayerCtrl(class APlayerController* PlayerController)
+void ABP_S3AttentionManager_C::STATIC_Event_OnChangePlayerCtrl(class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionManager.BP_S3AttentionManager_C.Event_OnChangePlayerCtrl");
 
@@ -138,6 +141,7 @@ void ABP_S3AttentionManager_C::Event_OnChangePlayerCtrl(class APlayerController*
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,7 +150,7 @@ void ABP_S3AttentionManager_C::Event_OnChangePlayerCtrl(class APlayerController*
 
 
 // Function BP_S3AttentionManager.BP_S3AttentionManager_C.ExecuteUbergraph_BP_S3AttentionManager
-// ()
+// (NetReliable, NetResponse, NetMulticast, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

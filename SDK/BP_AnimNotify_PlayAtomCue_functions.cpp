@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_PlayAtomCue.BP_AnimNotify_PlayAtomCue_C.CanPlay
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Event, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_AnimNotify_PlayAtomCue_C::CanPlay(bool* CAN)
+void UBP_AnimNotify_PlayAtomCue_C::STATIC_CanPlay(bool* CAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_PlayAtomCue.BP_AnimNotify_PlayAtomCue_C.CanPlay");
 
@@ -36,7 +36,7 @@ void UBP_AnimNotify_PlayAtomCue_C::CanPlay(bool* CAN)
 
 
 // Function BP_AnimNotify_PlayAtomCue.BP_AnimNotify_PlayAtomCue_C.SetSelectorLabel
-// (Public, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Event, MulticastDelegate, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UAtomComponent*          Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -48,6 +48,7 @@ void UBP_AnimNotify_PlayAtomCue_C::SetSelectorLabel(class UAtomComponent* Compon
 	params.Component = Component;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +57,7 @@ void UBP_AnimNotify_PlayAtomCue_C::SetSelectorLabel(class UAtomComponent* Compon
 
 
 // Function BP_AnimNotify_PlayAtomCue.BP_AnimNotify_PlayAtomCue_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -77,7 +78,7 @@ struct FString UBP_AnimNotify_PlayAtomCue_C::GetNotifyName()
 
 
 // Function BP_AnimNotify_PlayAtomCue.BP_AnimNotify_PlayAtomCue_C.Received_Notify
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

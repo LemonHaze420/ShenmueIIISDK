@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NPCManager.BP_NPCManager_C.IsDebugDisableNPC
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Private, Delegate, HasOutParms, HasDefaults, NetValidate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ bool ABP_NPCManager_C::IsDebugDisableNPC()
 	ABP_NPCManager_C_IsDebugDisableNPC_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ bool ABP_NPCManager_C::IsDebugDisableNPC()
 
 
 // Function BP_NPCManager.BP_NPCManager_C.InitializeNPC
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class AS3Character*            Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3NPCDefinition*        NPCDef                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -57,7 +58,7 @@ void ABP_NPCManager_C::InitializeNPC(class AS3Character* Character, class US3NPC
 
 
 // Function BP_NPCManager.BP_NPCManager_C.SetUpTagCharaComponent
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_ScheduleNPC_C*       TargetNPC                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3NPCDefinition*        NPCDef                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -79,7 +80,7 @@ void ABP_NPCManager_C::SetUpTagCharaComponent(class ABP_ScheduleNPC_C* TargetNPC
 
 
 // Function BP_NPCManager.BP_NPCManager_C.SetUpTalkComponents
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, Delegate, NetClient, NetValidate)
 // Parameters:
 // class ABP_ScheduleNPC_C*       TargetNPC                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3NPCDefinition*        NPCDef                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -101,7 +102,7 @@ void ABP_NPCManager_C::SetUpTalkComponents(class ABP_ScheduleNPC_C* TargetNPC, c
 
 
 // Function BP_NPCManager.BP_NPCManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 
 void ABP_NPCManager_C::UserConstructionScript()
 {
@@ -118,7 +119,7 @@ void ABP_NPCManager_C::UserConstructionScript()
 
 
 // Function BP_NPCManager.BP_NPCManager_C.BlueprintInitializeNPC
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Private, Delegate, HasOutParms, HasDefaults, NetValidate)
 // Parameters:
 // class AS3Character*            NewNPC                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AS3NPCController*        NewAI                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -134,6 +135,7 @@ void ABP_NPCManager_C::BlueprintInitializeNPC(class AS3Character* NewNPC, class 
 	params.NPCDef = NPCDef;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,11 +144,11 @@ void ABP_NPCManager_C::BlueprintInitializeNPC(class AS3Character* NewNPC, class 
 
 
 // Function BP_NPCManager.BP_NPCManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_NPCManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCManager.BP_NPCManager_C.ReceiveTick");
 
@@ -162,7 +164,7 @@ void ABP_NPCManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_NPCManager.BP_NPCManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
 void ABP_NPCManager_C::ReceiveBeginPlay()
 {
@@ -171,6 +173,7 @@ void ABP_NPCManager_C::ReceiveBeginPlay()
 	ABP_NPCManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,11 +182,11 @@ void ABP_NPCManager_C::ReceiveBeginPlay()
 
 
 // Function BP_NPCManager.BP_NPCManager_C.ExecuteUbergraph_BP_NPCManager
-// ()
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCManager_C::ExecuteUbergraph_BP_NPCManager(int EntryPoint)
+void ABP_NPCManager_C::STATIC_ExecuteUbergraph_BP_NPCManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCManager.BP_NPCManager_C.ExecuteUbergraph_BP_NPCManager");
 
@@ -191,6 +194,7 @@ void ABP_NPCManager_C::ExecuteUbergraph_BP_NPCManager(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

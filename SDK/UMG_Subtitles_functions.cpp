@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function UMG_Subtitles.UMG_Subtitles_C.isLocalizeChina
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           China                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void UUMG_Subtitles_C::isLocalizeChina(bool* China)
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.ForceAllDisp
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 
 void UUMG_Subtitles_C::ForceAllDisp()
 {
@@ -53,7 +53,7 @@ void UUMG_Subtitles_C::ForceAllDisp()
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.SetPlayRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          NewRate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -65,6 +65,7 @@ void UUMG_Subtitles_C::SetPlayRate(float NewRate)
 	params.NewRate = NewRate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +74,7 @@ void UUMG_Subtitles_C::SetPlayRate(float NewRate)
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.SetIsVoice
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsVoice                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -93,7 +94,7 @@ void UUMG_Subtitles_C::SetIsVoice(bool IsVoice)
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.CreateSubtitleWidgetInfo
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, NetClient, Const)
 // Parameters:
 // TArray<struct FString>         TextArray                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FST_RubyInfo>    RubyInfoArray                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -122,7 +123,7 @@ void UUMG_Subtitles_C::CreateSubtitleWidgetInfo(float TotalTime, int TotalString
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.UpdateDisplay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FString                 Body0                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 Body1                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -152,11 +153,11 @@ void UUMG_Subtitles_C::UpdateDisplay(const struct FString& Body0, const struct F
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.GetClipperElapsedTimeAlpha
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // float                          Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UUMG_Subtitles_C::GetClipperElapsedTimeAlpha(float* Time)
+void UUMG_Subtitles_C::STATIC_GetClipperElapsedTimeAlpha(float* Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.GetClipperElapsedTimeAlpha");
 
@@ -174,11 +175,11 @@ void UUMG_Subtitles_C::GetClipperElapsedTimeAlpha(float* Time)
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.GetClipperTime
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // float                          Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UUMG_Subtitles_C::GetClipperTime(float* Time)
+void UUMG_Subtitles_C::STATIC_GetClipperTime(float* Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.GetClipperTime");
 
@@ -196,9 +197,9 @@ void UUMG_Subtitles_C::GetClipperTime(float* Time)
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void UUMG_Subtitles_C::Construct()
+void UUMG_Subtitles_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.Construct");
 
@@ -213,12 +214,12 @@ void UUMG_Subtitles_C::Construct()
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUMG_Subtitles_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UUMG_Subtitles_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.Tick");
 
@@ -235,7 +236,7 @@ void UUMG_Subtitles_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTim
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.DrawSubtitles
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_TalkCharacterType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FString>         TextArray                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -261,9 +262,9 @@ void UUMG_Subtitles_C::DrawSubtitles(TEnumAsByte<EN_TalkCharacterType> Type, TAr
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.Clear
-// (BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void UUMG_Subtitles_C::Clear()
+void UUMG_Subtitles_C::STATIC_Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.Clear");
 
@@ -278,15 +279,16 @@ void UUMG_Subtitles_C::Clear()
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.UpdateSubtitleFeedingDisplay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void UUMG_Subtitles_C::UpdateSubtitleFeedingDisplay()
+void UUMG_Subtitles_C::STATIC_UpdateSubtitleFeedingDisplay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.UpdateSubtitleFeedingDisplay");
 
 	UUMG_Subtitles_C_UpdateSubtitleFeedingDisplay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -295,15 +297,16 @@ void UUMG_Subtitles_C::UpdateSubtitleFeedingDisplay()
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.SoundPlay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void UUMG_Subtitles_C::SoundPlay()
+void UUMG_Subtitles_C::STATIC_SoundPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.SoundPlay");
 
 	UUMG_Subtitles_C_SoundPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -312,7 +315,7 @@ void UUMG_Subtitles_C::SoundPlay()
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.ExecuteUbergraph_UMG_Subtitles
-// (HasDefaults)
+// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -332,9 +335,9 @@ void UUMG_Subtitles_C::ExecuteUbergraph_UMG_Subtitles(int EntryPoint)
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.onPlayTalkSE__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, Public, Private, Protected, NetClient, Const)
 
-void UUMG_Subtitles_C::onPlayTalkSE__DelegateSignature()
+void UUMG_Subtitles_C::STATIC_onPlayTalkSE__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.onPlayTalkSE__DelegateSignature");
 
@@ -349,9 +352,9 @@ void UUMG_Subtitles_C::onPlayTalkSE__DelegateSignature()
 
 
 // Function UMG_Subtitles.UMG_Subtitles_C.onFinishWaitDestructor__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, Public, Private, Protected, NetClient, Const)
 
-void UUMG_Subtitles_C::onFinishWaitDestructor__DelegateSignature()
+void UUMG_Subtitles_C::STATIC_onFinishWaitDestructor__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_Subtitles.UMG_Subtitles_C.onFinishWaitDestructor__DelegateSignature");
 

@@ -38,9 +38,9 @@ public:
 
 
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_MiniGame_QteTriangleLowerRight(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_QteTriangleLowerRight(int EntryPoint);
 };
 
 

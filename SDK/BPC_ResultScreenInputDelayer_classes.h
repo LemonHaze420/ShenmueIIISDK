@@ -36,11 +36,11 @@ public:
 
 	void SetInputEnabled(bool bValue);
 	void DelayInput(float Delay, class UBPW_UI_GeneralWindow_Button_C* Button);
-	void NotifyAnimationComplete();
+	void STATIC_NotifyAnimationComplete();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BPC_ResultScreenInputDelayer(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_ResultScreenInputDelayer(int EntryPoint);
 	void OnDisableInput__DelegateSignature();
-	void OnEnableInput__DelegateSignature();
+	void STATIC_OnEnableInput__DelegateSignature();
 };
 
 

@@ -35,9 +35,9 @@ public:
 
 
 	void Update();
-	void SetNumber(int Number);
+	void STATIC_SetNumber(int Number);
 	void SetList(TArray<class UStaticMeshComponent*>* MeshList, TArray<class UMaterialInstanceDynamic*>* MaterialList);
-	void InitializeMesh();
+	void STATIC_InitializeMesh();
 };
 
 

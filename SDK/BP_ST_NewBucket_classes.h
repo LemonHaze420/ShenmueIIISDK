@@ -52,23 +52,23 @@ public:
 
 	void GetGiftName(struct FName* Name);
 	void ClearStones();
-	void IsInStone(class ABP_MiniGame_ThrowObjectBase_C* Stone, bool* bResult);
-	void FindStone(class ABP_MiniGame_ThrowObjectBase_C* Stone, bool* bResult);
+	void STATIC_IsInStone(class ABP_MiniGame_ThrowObjectBase_C* Stone, bool* bResult);
+	void STATIC_FindStone(class ABP_MiniGame_ThrowObjectBase_C* Stone, bool* bResult);
 	void UserConstructionScript();
-	void RestartMiniGame();
-	void BndEvt__Mesh_Target_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void ResetImpactPoint();
-	void BndEvt__Capsule_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_RestartMiniGame();
+	void STATIC_BndEvt__Mesh_Target_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void STATIC_ResetImpactPoint();
+	void STATIC_BndEvt__Capsule_Collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__Capsule_Collision_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void ReceiveBeginPlay();
-	void DrawMiniGame();
-	void LoseMiniGame();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_DrawMiniGame();
+	void STATIC_LoseMiniGame();
 	void ReceiveTick(float DeltaSeconds);
-	void WinMiniGame();
-	void FallBottom();
-	void EndMiniGame();
-	void StartMiniGame();
-	void ExecuteUbergraph_BP_ST_NewBucket(int EntryPoint);
+	void STATIC_WinMiniGame();
+	void STATIC_FallBottom();
+	void STATIC_EndMiniGame();
+	void STATIC_StartMiniGame();
+	void STATIC_ExecuteUbergraph_BP_ST_NewBucket(int EntryPoint);
 };
 
 

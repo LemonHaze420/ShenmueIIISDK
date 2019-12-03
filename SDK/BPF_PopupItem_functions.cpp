@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_PopupItem.BPF_PopupItem_C.getS3PopupItem
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_PopupItem_C*         BP_PopupItem                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBPF_PopupItem_C::STATIC_getS3PopupItem(class UObject* __WorldContext, clas
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

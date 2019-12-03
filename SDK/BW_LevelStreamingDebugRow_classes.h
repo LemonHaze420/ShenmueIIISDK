@@ -34,8 +34,8 @@ public:
 	}
 
 
-	struct FText Get_LoadTimeWidget_Text();
-	struct FText Get_VisibilityTime_Text();
+	struct FText STATIC_Get_LoadTimeWidget_Text();
+	struct FText STATIC_Get_VisibilityTime_Text();
 	struct FText Get_LevelName_Text();
 	struct FSlateColor Get_LevelName_ColorAndOpacity();
 };

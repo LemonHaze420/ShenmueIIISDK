@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_Follow_UsePOI.BP_State_Follow_UsePOI_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBP_State_Follow_UsePOI_C::StateEnter(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,12 +39,12 @@ void UBP_State_Follow_UsePOI_C::StateEnter(float Delta, bool* bProcessing)
 
 
 // Function BP_State_Follow_UsePOI.BP_State_Follow_UsePOI_C.StateUpdate
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_UsePOI_C::StateUpdate(float Delta, bool* bDummy)
+void UBP_State_Follow_UsePOI_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_UsePOI.BP_State_Follow_UsePOI_C.StateUpdate");
 
@@ -62,11 +63,11 @@ void UBP_State_Follow_UsePOI_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_Follow_UsePOI.BP_State_Follow_UsePOI_C.UpdateTransitions
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_UsePOI_C::UpdateTransitions(float DeltaSeconds)
+void UBP_State_Follow_UsePOI_C::STATIC_UpdateTransitions(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_UsePOI.BP_State_Follow_UsePOI_C.UpdateTransitions");
 
@@ -74,6 +75,7 @@ void UBP_State_Follow_UsePOI_C::UpdateTransitions(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +84,7 @@ void UBP_State_Follow_UsePOI_C::UpdateTransitions(float DeltaSeconds)
 
 
 // Function BP_State_Follow_UsePOI.BP_State_Follow_UsePOI_C.ExecuteUbergraph_BP_State_Follow_UsePOI
-// ()
+// (NetRequest, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

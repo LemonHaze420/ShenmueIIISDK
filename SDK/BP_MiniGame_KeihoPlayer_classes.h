@@ -31,10 +31,10 @@ public:
 	}
 
 
-	void SetEnabled(bool Enabled);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_MiniGame_KeihoPlayer(int EntryPoint);
+	void STATIC_SetEnabled(bool Enabled);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_MiniGame_KeihoPlayer(int EntryPoint);
 };
 
 

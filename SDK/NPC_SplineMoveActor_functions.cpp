@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetNextAvailableWaitPointIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            StartSearch                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,6 +27,7 @@ int ANPC_SplineMoveActor_C::GetNextAvailableWaitPointIndex(int StartSearch)
 	params.StartSearch = StartSearch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,17 +38,18 @@ int ANPC_SplineMoveActor_C::GetNextAvailableWaitPointIndex(int StartSearch)
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetFirstAvailableWaitPointIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ANPC_SplineMoveActor_C::GetFirstAvailableWaitPointIndex()
+int ANPC_SplineMoveActor_C::STATIC_GetFirstAvailableWaitPointIndex()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetFirstAvailableWaitPointIndex");
 
 	ANPC_SplineMoveActor_C_GetFirstAvailableWaitPointIndex_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +60,7 @@ int ANPC_SplineMoveActor_C::GetFirstAvailableWaitPointIndex()
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetStartLocationAndRotation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, OutParm, IsPlainOldData)
@@ -83,7 +85,7 @@ void ANPC_SplineMoveActor_C::GetStartLocationAndRotation(struct FVector* Locatio
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.TryStartWaitPointEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -96,6 +98,7 @@ void ANPC_SplineMoveActor_C::TryStartWaitPointEvent(int Index, bool* Success)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,12 +110,12 @@ void ANPC_SplineMoveActor_C::TryStartWaitPointEvent(int Index, bool* Success)
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetWaitPointActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_NPCLeadWaitPointEvent_C* Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ANPC_SplineMoveActor_C::GetWaitPointActor(int Index, class ABP_NPCLeadWaitPointEvent_C** Actor)
+void ANPC_SplineMoveActor_C::STATIC_GetWaitPointActor(int Index, class ABP_NPCLeadWaitPointEvent_C** Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetWaitPointActor");
 
@@ -131,7 +134,7 @@ void ANPC_SplineMoveActor_C::GetWaitPointActor(int Index, class ABP_NPCLeadWaitP
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetWidthAtSplineDistance
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetMulticast, Private, Protected, NetClient, Const)
 // Parameters:
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Width                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -155,12 +158,12 @@ void ANPC_SplineMoveActor_C::GetWidthAtSplineDistance(float Distance, float* Wid
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetWaitPointSplineDistance
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Const)
 // Parameters:
 // int                            PointIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Next                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ANPC_SplineMoveActor_C::GetWaitPointSplineDistance(int PointIndex, float* Next)
+void ANPC_SplineMoveActor_C::STATIC_GetWaitPointSplineDistance(int PointIndex, float* Next)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetWaitPointSplineDistance");
 
@@ -179,7 +182,7 @@ void ANPC_SplineMoveActor_C::GetWaitPointSplineDistance(int PointIndex, float* N
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetLocationAtDistance
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Protected, NetClient, Const)
 // Parameters:
 // float                          InDistance                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
@@ -203,12 +206,12 @@ void ANPC_SplineMoveActor_C::GetLocationAtDistance(float InDistance, struct FVec
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.FindDistanceClosestToLocation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          OutDistance                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ANPC_SplineMoveActor_C::FindDistanceClosestToLocation(const struct FVector& InLocation, float* OutDistance)
+void ANPC_SplineMoveActor_C::STATIC_FindDistanceClosestToLocation(const struct FVector& InLocation, float* OutDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.FindDistanceClosestToLocation");
 
@@ -227,13 +230,13 @@ void ANPC_SplineMoveActor_C::FindDistanceClosestToLocation(const struct FVector&
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetNearLength
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, Private, Protected, NetClient, Const)
 // Parameters:
 // struct FVector                 pos                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 NearPos                        (Parm, OutParm, IsPlainOldData)
 // float                          NearLength                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ANPC_SplineMoveActor_C::GetNearLength(const struct FVector& pos, struct FVector* NearPos, float* NearLength)
+void ANPC_SplineMoveActor_C::STATIC_GetNearLength(const struct FVector& pos, struct FVector* NearPos, float* NearLength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetNearLength");
 
@@ -241,6 +244,7 @@ void ANPC_SplineMoveActor_C::GetNearLength(const struct FVector& pos, struct FVe
 	params.pos = pos;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,7 +258,7 @@ void ANPC_SplineMoveActor_C::GetNearLength(const struct FVector& pos, struct FVe
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.InitSplinePoint
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 
 void ANPC_SplineMoveActor_C::InitSplinePoint()
 {
@@ -271,14 +275,14 @@ void ANPC_SplineMoveActor_C::InitSplinePoint()
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetCurrentLocationAndRotation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // float                          NowLength                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 // float                          MaxLength                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          RotZ                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ANPC_SplineMoveActor_C::GetCurrentLocationAndRotation(float NowLength, struct FVector* Location, float* MaxLength, float* RotZ)
+void ANPC_SplineMoveActor_C::STATIC_GetCurrentLocationAndRotation(float NowLength, struct FVector* Location, float* MaxLength, float* RotZ)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.GetCurrentLocationAndRotation");
 
@@ -286,6 +290,7 @@ void ANPC_SplineMoveActor_C::GetCurrentLocationAndRotation(float NowLength, stru
 	params.NowLength = NowLength;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -301,7 +306,7 @@ void ANPC_SplineMoveActor_C::GetCurrentLocationAndRotation(float NowLength, stru
 
 
 // Function NPC_SplineMoveActor.NPC_SplineMoveActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ANPC_SplineMoveActor_C::UserConstructionScript()
 {

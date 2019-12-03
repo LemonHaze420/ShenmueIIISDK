@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void STATIC_getS3CutsceneTimeScheduleManager(class UObject* __WorldContext, class ABP_CutsceneTimeScheduleManager_C** newParam);
-	void STATIC_getS3CutsceneManager(class UObject* __WorldContext, class ABP_CutsceneManager_C** CutsceneManager);
+	void getS3CutsceneTimeScheduleManager(class UObject* __WorldContext, class ABP_CutsceneTimeScheduleManager_C** newParam);
+	void getS3CutsceneManager(class UObject* __WorldContext, class ABP_CutsceneManager_C** CutsceneManager);
 };
 
 

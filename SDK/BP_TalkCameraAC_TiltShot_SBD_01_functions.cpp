@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraAC_TiltShot_SBD_01.BP_TalkCameraAC_TiltShot_SBD_01_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TalkCameraAC_TiltShot_SBD_01_C::UserConstructionScript()
 {
@@ -23,6 +23,7 @@ void ABP_TalkCameraAC_TiltShot_SBD_01_C::UserConstructionScript()
 	ABP_TalkCameraAC_TiltShot_SBD_01_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_TalkCameraAC_TiltShot_SBD_01_C::UserConstructionScript()
 
 
 // Function BP_TalkCameraAC_TiltShot_SBD_01.BP_TalkCameraAC_TiltShot_SBD_01_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCameraAC_TiltShot_SBD_01_C::ReceiveBeginPlay()
 {
@@ -48,11 +49,11 @@ void ABP_TalkCameraAC_TiltShot_SBD_01_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraAC_TiltShot_SBD_01.BP_TalkCameraAC_TiltShot_SBD_01_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraAC_TiltShot_SBD_01_C::ReceiveTick(float DeltaSeconds)
+void ABP_TalkCameraAC_TiltShot_SBD_01_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_TiltShot_SBD_01.BP_TalkCameraAC_TiltShot_SBD_01_C.ReceiveTick");
 
@@ -60,6 +61,7 @@ void ABP_TalkCameraAC_TiltShot_SBD_01_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,11 +70,11 @@ void ABP_TalkCameraAC_TiltShot_SBD_01_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraAC_TiltShot_SBD_01.BP_TalkCameraAC_TiltShot_SBD_01_C.ExecuteUbergraph_BP_TalkCameraAC_TiltShot_SBD_01
-// ()
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraAC_TiltShot_SBD_01_C::ExecuteUbergraph_BP_TalkCameraAC_TiltShot_SBD_01(int EntryPoint)
+void ABP_TalkCameraAC_TiltShot_SBD_01_C::STATIC_ExecuteUbergraph_BP_TalkCameraAC_TiltShot_SBD_01(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_TiltShot_SBD_01.BP_TalkCameraAC_TiltShot_SBD_01_C.ExecuteUbergraph_BP_TalkCameraAC_TiltShot_SBD_01");
 
@@ -80,6 +82,7 @@ void ABP_TalkCameraAC_TiltShot_SBD_01_C::ExecuteUbergraph_BP_TalkCameraAC_TiltSh
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.SetDetectIconMaterialParams
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UMaterialInstanceDynamic* Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageDetectAction_C::STATIC_SetDetectIconMaterialParams(class UMaterialInstanceDynamic* Material, ES3ActionIconType Type, class UObject* __WorldContext)
+void UBPF_ImageDetectAction_C::SetDetectIconMaterialParams(class UMaterialInstanceDynamic* Material, ES3ActionIconType Type, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.SetDetectIconMaterialParams");
 
@@ -38,7 +38,7 @@ void UBPF_ImageDetectAction_C::STATIC_SetDetectIconMaterialParams(class UMateria
 
 
 // Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDetectActionConfirm
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -51,6 +51,7 @@ class UTexture2D* UBPF_ImageDetectAction_C::STATIC_GetDetectActionConfirm(class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,13 +62,13 @@ class UTexture2D* UBPF_ImageDetectAction_C::STATIC_GetDetectActionConfirm(class 
 
 
 // Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDeviceBindingIcon
-// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3PadButtonIndex              Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Texture                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageDetectAction_C::STATIC_GetDeviceBindingIcon(ES3PadButtonIndex Index, class UObject* __WorldContext, class UTexture2D** Texture)
+void UBPF_ImageDetectAction_C::GetDeviceBindingIcon(ES3PadButtonIndex Index, class UObject* __WorldContext, class UTexture2D** Texture)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDeviceBindingIcon");
 
@@ -76,6 +77,7 @@ void UBPF_ImageDetectAction_C::STATIC_GetDeviceBindingIcon(ES3PadButtonIndex Ind
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +89,7 @@ void UBPF_ImageDetectAction_C::STATIC_GetDeviceBindingIcon(ES3PadButtonIndex Ind
 
 
 // Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.DetectIconIdxToFaceButtonIdx
-// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Absolute                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -105,6 +107,7 @@ ES3PadButtonIndex UBPF_ImageDetectAction_C::STATIC_DetectIconIdxToFaceButtonIdx(
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,14 +121,14 @@ ES3PadButtonIndex UBPF_ImageDetectAction_C::STATIC_DetectIconIdxToFaceButtonIdx(
 
 
 // Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDetectIconBase
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ButtonIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Absolute                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture*                IconBase                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ImageDetectAction_C::STATIC_GetDetectIconBase(int ButtonIndex, bool Absolute, class UObject* __WorldContext, class UTexture** IconBase)
+void UBPF_ImageDetectAction_C::GetDetectIconBase(int ButtonIndex, bool Absolute, class UObject* __WorldContext, class UTexture** IconBase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDetectIconBase");
 
@@ -135,6 +138,7 @@ void UBPF_ImageDetectAction_C::STATIC_GetDetectIconBase(int ButtonIndex, bool Ab
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,12 +150,12 @@ void UBPF_ImageDetectAction_C::STATIC_GetDetectIconBase(int ButtonIndex, bool Ab
 
 
 // Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDetectButtonBase
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UTexture2D*>      TexArray                       (Parm, OutParm, ZeroConstructor)
 
-void UBPF_ImageDetectAction_C::STATIC_GetDetectButtonBase(class UObject* __WorldContext, TArray<class UTexture2D*>* TexArray)
+void UBPF_ImageDetectAction_C::GetDetectButtonBase(class UObject* __WorldContext, TArray<class UTexture2D*>* TexArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDetectButtonBase");
 
@@ -170,14 +174,14 @@ void UBPF_ImageDetectAction_C::STATIC_GetDetectButtonBase(class UObject* __World
 
 
 // Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDetectActionIcon
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture*                Icon                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               FlipSize                       (Parm, OutParm, IsPlainOldData)
 
-void UBPF_ImageDetectAction_C::STATIC_GetDetectActionIcon(ES3ActionIconType Type, class UObject* __WorldContext, class UTexture** Icon, struct FVector2D* FlipSize)
+void UBPF_ImageDetectAction_C::GetDetectActionIcon(ES3ActionIconType Type, class UObject* __WorldContext, class UTexture** Icon, struct FVector2D* FlipSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ImageDetectAction.BPF_ImageDetectAction_C.GetDetectActionIcon");
 

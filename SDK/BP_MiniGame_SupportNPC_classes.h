@@ -47,19 +47,19 @@ public:
 	}
 
 
-	void FlatteningMorph();
+	void STATIC_FlatteningMorph();
 	void IsPlayingLabelVoice(bool* Playing);
-	void GetActionData(bool IsSuccess, bool Just, bool Unbeli, struct FST_MG_SupportNPCAction* Data);
-	void SetLookAtLocation(const struct FVector& LookAtLocation);
+	void STATIC_GetActionData(bool IsSuccess, bool Just, bool Unbeli, struct FST_MG_SupportNPCAction* Data);
+	void STATIC_SetLookAtLocation(const struct FVector& LookAtLocation);
 	void UpdateClipper();
-	void PlayScript(const struct FName& Label, const struct FName& CharaName);
+	void STATIC_PlayScript(const struct FName& Label, const struct FName& CharaName);
 	void SetMesh(class USkeletalMesh* NewMesh);
-	void ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
-	void SetEnabled(bool Enabled);
-	void UserConstructionScript();
+	void STATIC_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
+	void STATIC_SetEnabled(bool Enabled);
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void Event_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_Event_ChangeState(bool IsSuccess, bool IsJust, bool IsUnbeli);
 	void ExecuteUbergraph_BP_MiniGame_SupportNPC(int EntryPoint);
 };
 

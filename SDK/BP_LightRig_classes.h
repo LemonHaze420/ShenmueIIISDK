@@ -87,24 +87,24 @@ public:
 
 
 	void GetMainLightIntensity(float* Intensity);
-	void ClampShadowBias();
-	void CreateDMI(class UPrimitiveComponent* StaticMesh, int ElementIndex);
-	void PreviewLights(bool bPreviewLightsInEditor);
+	void STATIC_ClampShadowBias();
+	void STATIC_CreateDMI(class UPrimitiveComponent* StaticMesh, int ElementIndex);
+	void STATIC_PreviewLights(bool bPreviewLightsInEditor);
 	void MakeEdgeLightArrays();
 	bool IsEdgeLightInUse(int Count, bool Use);
-	void PrintEdgeDebugInfo(const struct FVector& Location, const struct FVector& Location2);
+	void STATIC_PrintEdgeDebugInfo(const struct FVector& Location, const struct FVector& Location2);
 	struct FVector MakeArrayStartPointLocation(float Spacing, int LightCount, struct FTransform* Transform);
 	void CreateEdgeLights();
-	void SetNewEdgeLightZHeight(const struct FTransform& InputTransform, struct FTransform* OutputTransform);
+	void STATIC_SetNewEdgeLightZHeight(const struct FTransform& InputTransform, struct FTransform* OutputTransform);
 	void UseCeilingHeightForEdgeLightTransforms();
 	void AddMidFillLights();
 	void AddCentreMesh();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void OnSetLightEnable(bool bNewLightEnable);
-	void UpdateIntensityRate();
-	void InitialDisable();
+	void STATIC_UpdateIntensityRate();
+	void STATIC_InitialDisable();
 	void ExecuteUbergraph_BP_LightRig(int EntryPoint);
 };
 

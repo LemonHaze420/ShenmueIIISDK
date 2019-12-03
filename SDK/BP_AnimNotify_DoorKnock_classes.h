@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void GetDoorActor(class USkeletalMeshComponent* Mesh, class AS3GimmickOpenDoor** DoorActor);
+	void STATIC_GetDoorActor(class USkeletalMeshComponent* Mesh, class AS3GimmickOpenDoor** DoorActor);
 	void GetSound(class AS3GimmickOpenDoor* Door, class USoundAtomCue** Sound);
 	struct FString GetNotifyName();
 };

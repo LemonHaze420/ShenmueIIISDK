@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_SkillBar.BPW_SkillBar_C.SetTextOutlineSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Size                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SkillBar_C::SetTextOutlineSize(int Size)
+void UBPW_SkillBar_C::STATIC_SetTextOutlineSize(int Size)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SkillBar.BPW_SkillBar_C.SetTextOutlineSize");
 
@@ -34,12 +34,12 @@ void UBPW_SkillBar_C::SetTextOutlineSize(int Size)
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.SetOutlineSize
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UTextBlock*              Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Outline_Size                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SkillBar_C::SetOutlineSize(class UTextBlock* Target, int Outline_Size)
+void UBPW_SkillBar_C::STATIC_SetOutlineSize(class UTextBlock* Target, int Outline_Size)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SkillBar.BPW_SkillBar_C.SetOutlineSize");
 
@@ -48,6 +48,7 @@ void UBPW_SkillBar_C::SetOutlineSize(class UTextBlock* Target, int Outline_Size)
 	params.Outline_Size = Outline_Size;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +57,7 @@ void UBPW_SkillBar_C::SetOutlineSize(class UTextBlock* Target, int Outline_Size)
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.SetGaugeRatio
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Private, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Ratio                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,6 +69,7 @@ void UBPW_SkillBar_C::SetGaugeRatio(float Ratio)
 	params.Ratio = Ratio;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +78,11 @@ void UBPW_SkillBar_C::SetGaugeRatio(float Ratio)
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.LerpLevelUpDisplay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          N                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SkillBar_C::LerpLevelUpDisplay(float N)
+void UBPW_SkillBar_C::STATIC_LerpLevelUpDisplay(float N)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SkillBar.BPW_SkillBar_C.LerpLevelUpDisplay");
 
@@ -96,11 +98,11 @@ void UBPW_SkillBar_C::LerpLevelUpDisplay(float N)
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.SetLevelUpData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_SparringResultLevelUpData LevelUpData                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_SkillBar_C::SetLevelUpData(const struct FST_SparringResultLevelUpData& LevelUpData)
+void UBPW_SkillBar_C::STATIC_SetLevelUpData(const struct FST_SparringResultLevelUpData& LevelUpData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SkillBar.BPW_SkillBar_C.SetLevelUpData");
 
@@ -108,6 +110,7 @@ void UBPW_SkillBar_C::SetLevelUpData(const struct FST_SparringResultLevelUpData&
 	params.LevelUpData = LevelUpData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +119,7 @@ void UBPW_SkillBar_C::SetLevelUpData(const struct FST_SparringResultLevelUpData&
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.ShowLevel
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          NextLevelRatio                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -132,6 +135,7 @@ void UBPW_SkillBar_C::ShowLevel(int Level, float NextLevelRatio, int Max)
 	params.Max = Max;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +144,7 @@ void UBPW_SkillBar_C::ShowLevel(int Level, float NextLevelRatio, int Max)
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void UBPW_SkillBar_C::Construct()
 {
@@ -149,6 +153,7 @@ void UBPW_SkillBar_C::Construct()
 	UBPW_SkillBar_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,11 +162,11 @@ void UBPW_SkillBar_C::Construct()
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SkillBar_C::PreConstruct(bool IsDesignTime)
+void UBPW_SkillBar_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SkillBar.BPW_SkillBar_C.PreConstruct");
 
@@ -169,6 +174,7 @@ void UBPW_SkillBar_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -177,7 +183,7 @@ void UBPW_SkillBar_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.ExecuteUbergraph_BPW_SkillBar
-// (HasDefaults)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -197,7 +203,7 @@ void UBPW_SkillBar_C::ExecuteUbergraph_BPW_SkillBar(int EntryPoint)
 
 
 // Function BPW_SkillBar.BPW_SkillBar_C.OnAnimLevelUp__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_SkillBar_C::OnAnimLevelUp__DelegateSignature()
 {

@@ -51,16 +51,16 @@ public:
 	}
 
 
-	void RegisterSteering(class AActor* RegisterActor);
+	void STATIC_RegisterSteering(class AActor* RegisterActor);
 	void RegisterWithPlayer(bool Register);
-	void SnapPointsToGround();
+	void STATIC_SnapPointsToGround();
 	void EvaluateStrengthCurve(class UCurveFloat* Curve, float InTime, float* Strength);
-	void InitSpline();
+	void STATIC_InitSpline();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void BndEvt__DefaultTrigger_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__DefaultTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_Player_SplineMoveActor(int EntryPoint);
 };
 

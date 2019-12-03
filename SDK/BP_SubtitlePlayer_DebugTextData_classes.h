@@ -33,8 +33,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop);
+	void STATIC_UserConstructionScript();
+	void STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, bool IsAutoStop);
 	void ExecuteUbergraph_BP_SubtitlePlayer_DebugTextData(int EntryPoint);
 };
 

@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Cutscene.BPF_Cutscene_C.getS3CutsceneTimeScheduleManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_CutsceneTimeScheduleManager_C* newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Cutscene_C::STATIC_getS3CutsceneTimeScheduleManager(class UObject* __WorldContext, class ABP_CutsceneTimeScheduleManager_C** newParam)
+void UBPF_Cutscene_C::getS3CutsceneTimeScheduleManager(class UObject* __WorldContext, class ABP_CutsceneTimeScheduleManager_C** newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Cutscene.BPF_Cutscene_C.getS3CutsceneTimeScheduleManager");
 
@@ -38,12 +38,12 @@ void UBPF_Cutscene_C::STATIC_getS3CutsceneTimeScheduleManager(class UObject* __W
 
 
 // Function BPF_Cutscene.BPF_Cutscene_C.getS3CutsceneManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetResponse, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_CutsceneManager_C*   CutsceneManager                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Cutscene_C::STATIC_getS3CutsceneManager(class UObject* __WorldContext, class ABP_CutsceneManager_C** CutsceneManager)
+void UBPF_Cutscene_C::getS3CutsceneManager(class UObject* __WorldContext, class ABP_CutsceneManager_C** CutsceneManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Cutscene.BPF_Cutscene_C.getS3CutsceneManager");
 
@@ -51,6 +51,7 @@ void UBPF_Cutscene_C::STATIC_getS3CutsceneManager(class UObject* __WorldContext,
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

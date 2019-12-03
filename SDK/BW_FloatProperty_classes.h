@@ -49,17 +49,17 @@ public:
 
 	void ClampNewValue(float InValue, float* OutValue);
 	struct FEventReply OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent);
-	void SetFloatParameterValue(float NewValue, bool CallDispatcher);
-	float GetFloatParameterValue();
+	void STATIC_SetFloatParameterValue(float NewValue, bool CallDispatcher);
+	float STATIC_GetFloatParameterValue();
 	struct FText GetParameterName();
-	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
+	void STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void GetMinMax();
 	void Construct();
 	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
 	void PropertyChanged();
 	void ExecuteUbergraph_BW_FloatProperty(int EntryPoint);
-	void FloatPropertyChanged__DelegateSignature();
+	void STATIC_FloatPropertyChanged__DelegateSignature();
 };
 
 

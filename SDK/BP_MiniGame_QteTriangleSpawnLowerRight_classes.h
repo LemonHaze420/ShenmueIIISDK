@@ -40,12 +40,12 @@ public:
 	}
 
 
-	void SetVisible(bool Condition);
+	void STATIC_SetVisible(bool Condition);
 	void RemoveTriangle(class AActor* Actor);
-	void DestroyTriangle();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_DestroyTriangle();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_MiniGame_QteTriangleSpawnLowerRight(int EntryPoint);
 };
 

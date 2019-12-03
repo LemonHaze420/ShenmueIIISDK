@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.GetMapCenterLocation
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               Location                       (Parm, OutParm, IsPlainOldData)
 
-void UWBP_MiniMap2D_C::GetMapCenterLocation(struct FVector2D* Location)
+void UWBP_MiniMap2D_C::STATIC_GetMapCenterLocation(struct FVector2D* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniMap2D.WBP_MiniMap2D_C.GetMapCenterLocation");
 
 	UWBP_MiniMap2D_C_GetMapCenterLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void UWBP_MiniMap2D_C::GetMapCenterLocation(struct FVector2D* Location)
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.GetPlayerCharYaw
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ReturnYaw                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -58,7 +59,7 @@ void UWBP_MiniMap2D_C::GetPlayerCharYaw(float* ReturnYaw)
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.IsFollowPlayerCharMode
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -79,11 +80,11 @@ bool UWBP_MiniMap2D_C::IsFollowPlayerCharMode()
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.GetTargetYaw
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnYaw                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniMap2D_C::GetTargetYaw(float* ReturnYaw)
+void UWBP_MiniMap2D_C::STATIC_GetTargetYaw(float* ReturnYaw)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniMap2D.WBP_MiniMap2D_C.GetTargetYaw");
 
@@ -101,7 +102,7 @@ void UWBP_MiniMap2D_C::GetTargetYaw(float* ReturnYaw)
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.SetMinimapMaskTexture
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UTexture*                Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,11 +122,11 @@ void UWBP_MiniMap2D_C::SetMinimapMaskTexture(class UTexture* Value)
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.ZoomMinimap
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, NetServer)
 // Parameters:
 // bool                           Zoom                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniMap2D_C::ZoomMinimap(bool Zoom)
+void UWBP_MiniMap2D_C::STATIC_ZoomMinimap(bool Zoom)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniMap2D.WBP_MiniMap2D_C.ZoomMinimap");
 
@@ -141,7 +142,7 @@ void UWBP_MiniMap2D_C::ZoomMinimap(bool Zoom)
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.SetMinimapTexture
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, Delegate, NetServer)
 // Parameters:
 // class UTexture*                newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -153,6 +154,7 @@ void UWBP_MiniMap2D_C::SetMinimapTexture(class UTexture* newParam)
 	params.newParam = newParam;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,9 +163,9 @@ void UWBP_MiniMap2D_C::SetMinimapTexture(class UTexture* newParam)
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Private, NetServer, BlueprintEvent, BlueprintPure)
 
-void UWBP_MiniMap2D_C::Initialize()
+void UWBP_MiniMap2D_C::STATIC_Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniMap2D.WBP_MiniMap2D_C.Initialize");
 
@@ -178,15 +180,16 @@ void UWBP_MiniMap2D_C::Initialize()
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.UpdateMiniMap
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, HasOutParms, NetClient, BlueprintPure)
 
-void UWBP_MiniMap2D_C::UpdateMiniMap()
+void UWBP_MiniMap2D_C::STATIC_UpdateMiniMap()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniMap2D.WBP_MiniMap2D_C.UpdateMiniMap");
 
 	UWBP_MiniMap2D_C_UpdateMiniMap_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,11 +198,11 @@ void UWBP_MiniMap2D_C::UpdateMiniMap()
 
 
 // Function WBP_MiniMap2D.WBP_MiniMap2D_C.FadeMinimap
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsHidden                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniMap2D_C::FadeMinimap(bool IsHidden)
+void UWBP_MiniMap2D_C::STATIC_FadeMinimap(bool IsHidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniMap2D.WBP_MiniMap2D_C.FadeMinimap");
 
@@ -207,6 +210,7 @@ void UWBP_MiniMap2D_C::FadeMinimap(bool IsHidden)
 	params.IsHidden = IsHidden;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

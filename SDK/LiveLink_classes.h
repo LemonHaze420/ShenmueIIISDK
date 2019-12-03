@@ -25,25 +25,95 @@ public:
 	}
 
 
-	void STATIC_TransformNames(struct FSubjectFrameHandle* SubjectFrameHandle, TArray<struct FName>* TransformNames);
-	void STATIC_TransformName(struct FLiveLinkTransform* LiveLinkTransform, struct FName* Name);
-	bool STATIC_RequestShutdown(struct FLiveLinkSourceHandle* SourceHandle);
-	void STATIC_ParentBoneSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform);
-	int STATIC_NumberOfTransforms(struct FSubjectFrameHandle* SubjectFrameHandle);
-	bool STATIC_IsSourceStillValid(struct FLiveLinkSourceHandle* SourceHandle);
-	bool STATIC_HasParent(struct FLiveLinkTransform* LiveLinkTransform);
-	void STATIC_GetTransformByName(const struct FName& TransformName, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform);
-	void STATIC_GetTransformByIndex(int TransformIndex, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform);
-	struct FText STATIC_GetSourceType(struct FLiveLinkSourceHandle* SourceHandle);
-	struct FText STATIC_GetSourceStatus(struct FLiveLinkSourceHandle* SourceHandle);
-	struct FText STATIC_GetSourceMachineName(struct FLiveLinkSourceHandle* SourceHandle);
-	void STATIC_GetRootTransform(struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform);
-	void STATIC_GetParent(struct FLiveLinkTransform* LiveLinkTransform, struct FLiveLinkTransform* Parent);
-	void STATIC_GetMetadata(struct FSubjectFrameHandle* SubjectFrameHandle, struct FSubjectMetadata* MetaData);
-	void STATIC_GetCurves(struct FSubjectFrameHandle* SubjectFrameHandle, TMap<struct FName, float>* Curves);
-	void STATIC_GetChildren(struct FLiveLinkTransform* LiveLinkTransform, TArray<struct FLiveLinkTransform>* Children);
-	void STATIC_ComponentSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform);
-	int STATIC_ChildCount(struct FLiveLinkTransform* LiveLinkTransform);
+	void TransformNames(struct FSubjectFrameHandle* SubjectFrameHandle, TArray<struct FName>* TransformNames);
+	void TransformName(struct FLiveLinkTransform* LiveLinkTransform, struct FName* Name);
+	bool RequestShutdown(struct FLiveLinkSourceHandle* SourceHandle);
+	void ParentBoneSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform);
+	int NumberOfTransforms(struct FSubjectFrameHandle* SubjectFrameHandle);
+	bool IsSourceStillValid(struct FLiveLinkSourceHandle* SourceHandle);
+	bool HasParent(struct FLiveLinkTransform* LiveLinkTransform);
+	void GetTransformByName(const struct FName& TransformName, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform);
+	void GetTransformByIndex(int TransformIndex, struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform);
+	struct FText GetSourceType(struct FLiveLinkSourceHandle* SourceHandle);
+	struct FText GetSourceStatus(struct FLiveLinkSourceHandle* SourceHandle);
+	struct FText GetSourceMachineName(struct FLiveLinkSourceHandle* SourceHandle);
+	void GetRootTransform(struct FSubjectFrameHandle* SubjectFrameHandle, struct FLiveLinkTransform* LiveLinkTransform);
+	void GetParent(struct FLiveLinkTransform* LiveLinkTransform, struct FLiveLinkTransform* Parent);
+	void GetMetadata(struct FSubjectFrameHandle* SubjectFrameHandle, struct FSubjectMetadata* MetaData);
+	void GetCurves(struct FSubjectFrameHandle* SubjectFrameHandle, TMap<struct FName, float>* Curves);
+	void GetChildren(struct FLiveLinkTransform* LiveLinkTransform, TArray<struct FLiveLinkTransform>* Children);
+	void ComponentSpaceTransform(struct FLiveLinkTransform* LiveLinkTransform, struct FTransform* Transform);
+	int ChildCount(struct FLiveLinkTransform* LiveLinkTransform);
+};
+
+
+// Class LiveLink.LiveLinkInstance
+// 0x0000 (0x0360 - 0x0360)
+class ULiveLinkInstance : public UAnimInstance
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkInstance");
+		return ptr;
+	}
+
+};
+
+
+// Class LiveLink.LiveLinkRetargetAsset
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkRetargetAsset : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkRetargetAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class LiveLink.LiveLinkMessageBusFinder
+// 0x0058 (0x0080 - 0x0028)
+class ULiveLinkMessageBusFinder : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkMessageBusFinder");
+		return ptr;
+	}
+
+
+	void GetAvailableProviders(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, float Duration, TArray<struct FProviderPollResult>* AvailableProviders);
+	class ULiveLinkMessageBusFinder* ConstructMessageBusFinder();
+	void ConnectToProvider(struct FProviderPollResult* Provider, struct FLiveLinkSourceHandle* SourceHandle);
+};
+
+
+// Class LiveLink.LiveLinkRemapAsset
+// 0x00A8 (0x00D0 - 0x0028)
+class ULiveLinkRemapAsset : public ULiveLinkRetargetAsset
+{
+public:
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkRemapAsset");
+		return ptr;
+	}
+
+
+	void RemapCurveElements(TMap<struct FName, float>* CurveItems);
+	struct FName GetRemappedCurveName(const struct FName& CurveName);
+	struct FName GetRemappedBoneName(const struct FName& BoneName);
 };
 
 
@@ -84,76 +154,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class LiveLink.LiveLinkInstance
-// 0x0000 (0x0360 - 0x0360)
-class ULiveLinkInstance : public UAnimInstance
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkInstance");
-		return ptr;
-	}
-
-};
-
-
-// Class LiveLink.LiveLinkMessageBusFinder
-// 0x0058 (0x0080 - 0x0028)
-class ULiveLinkMessageBusFinder : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkMessageBusFinder");
-		return ptr;
-	}
-
-
-	void GetAvailableProviders(class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo, float Duration, TArray<struct FProviderPollResult>* AvailableProviders);
-	class ULiveLinkMessageBusFinder* STATIC_ConstructMessageBusFinder();
-	void STATIC_ConnectToProvider(struct FProviderPollResult* Provider, struct FLiveLinkSourceHandle* SourceHandle);
-};
-
-
-// Class LiveLink.LiveLinkRetargetAsset
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkRetargetAsset : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkRetargetAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class LiveLink.LiveLinkRemapAsset
-// 0x00A8 (0x00D0 - 0x0028)
-class ULiveLinkRemapAsset : public ULiveLinkRetargetAsset
-{
-public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LiveLink.LiveLinkRemapAsset");
-		return ptr;
-	}
-
-
-	void RemapCurveElements(TMap<struct FName, float>* CurveItems);
-	struct FName GetRemappedCurveName(const struct FName& CurveName);
-	struct FName GetRemappedBoneName(const struct FName& BoneName);
 };
 
 

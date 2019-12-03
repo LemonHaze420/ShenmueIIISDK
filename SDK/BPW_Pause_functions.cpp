@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_Pause.BPW_Pause_C.DrawBuildInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 
-void UBPW_Pause_C::DrawBuildInfo()
+void UBPW_Pause_C::STATIC_DrawBuildInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_Pause.BPW_Pause_C.DrawBuildInfo");
 
@@ -31,15 +31,16 @@ void UBPW_Pause_C::DrawBuildInfo()
 
 
 // Function BPW_Pause.BPW_Pause_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
-void UBPW_Pause_C::Construct()
+void UBPW_Pause_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_Pause.BPW_Pause_C.Construct");
 
 	UBPW_Pause_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +49,11 @@ void UBPW_Pause_C::Construct()
 
 
 // Function BPW_Pause.BPW_Pause_C.ExecuteUbergraph_BPW_Pause
-// ()
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_Pause_C::ExecuteUbergraph_BPW_Pause(int EntryPoint)
+void UBPW_Pause_C::STATIC_ExecuteUbergraph_BPW_Pause(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_Pause.BPW_Pause_C.ExecuteUbergraph_BPW_Pause");
 
@@ -60,6 +61,7 @@ void UBPW_Pause_C::ExecuteUbergraph_BPW_Pause(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

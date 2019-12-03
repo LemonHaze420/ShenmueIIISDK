@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugBattleListText.BW_DebugBattleListText_C.SetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, NetClient, Const)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBW_DebugBattleListText_C::SetText(const struct FText& Text)
+void UBW_DebugBattleListText_C::STATIC_SetText(const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleListText.BW_DebugBattleListText_C.SetText");
 
@@ -26,6 +26,7 @@ void UBW_DebugBattleListText_C::SetText(const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UBW_DebugBattleListText_C::SetText(const struct FText& Text)
 
 
 // Function BW_DebugBattleListText.BW_DebugBattleListText_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,11 +55,11 @@ void UBW_DebugBattleListText_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_DebugBattleListText.BW_DebugBattleListText_C.ExecuteUbergraph_BW_DebugBattleListText
-// ()
+// (Net, NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugBattleListText_C::ExecuteUbergraph_BW_DebugBattleListText(int EntryPoint)
+void UBW_DebugBattleListText_C::STATIC_ExecuteUbergraph_BW_DebugBattleListText(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleListText.BW_DebugBattleListText_C.ExecuteUbergraph_BW_DebugBattleListText");
 

@@ -34,7 +34,7 @@ public:
 
 	void EndIdle(int* IdleVariation);
 	void UpdateIdle(float DeltaSeconds, int* IdleVariation);
-	void StartIdle(int* IdleVariation);
+	void STATIC_StartIdle(int* IdleVariation);
 };
 
 

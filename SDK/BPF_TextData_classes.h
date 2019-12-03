@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void STATIC_GetS3TextItemName(const struct FString& ItemId, class UObject* __WorldContext, struct FText* ItemName);
-	void STATIC_getS3TextDataManager(class UObject* __WorldContext, class UBP_TextDataManager_C** TextDataManager);
+	void GetS3TextItemName(const struct FString& ItemId, class UObject* __WorldContext, struct FText* ItemName);
+	void getS3TextDataManager(class UObject* __WorldContext, class UBP_TextDataManager_C** TextDataManager);
 };
 
 

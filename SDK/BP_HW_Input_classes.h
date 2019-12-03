@@ -27,10 +27,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key);
-	void InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue);
+	void STATIC_UserConstructionScript();
+	void STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key);
+	void STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue);
 	void ExecuteUbergraph_BP_HW_Input(int EntryPoint);
 };
 

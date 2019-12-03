@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.SetVisibleIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,9 +34,9 @@ void UWBP_MiniGameMoveIcon_C::SetVisibleIcon(bool Visible)
 
 
 // Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_MiniGameMoveIcon_C::Construct()
+void UWBP_MiniGameMoveIcon_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.Construct");
 
@@ -51,11 +51,11 @@ void UWBP_MiniGameMoveIcon_C::Construct()
 
 
 // Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.ExecuteUbergraph_WBP_MiniGameMoveIcon
-// ()
+// (Native, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameMoveIcon_C::ExecuteUbergraph_WBP_MiniGameMoveIcon(int EntryPoint)
+void UWBP_MiniGameMoveIcon_C::STATIC_ExecuteUbergraph_WBP_MiniGameMoveIcon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameMoveIcon.WBP_MiniGameMoveIcon_C.ExecuteUbergraph_WBP_MiniGameMoveIcon");
 
@@ -63,6 +63,7 @@ void UWBP_MiniGameMoveIcon_C::ExecuteUbergraph_WBP_MiniGameMoveIcon(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

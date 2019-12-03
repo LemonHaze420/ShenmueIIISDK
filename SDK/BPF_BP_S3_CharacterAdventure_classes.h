@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_Get_BP_S3_CharacterAdventure(class UObject* __WorldContext, class ABP_S3_Character_Adventure_C** Character, bool* IsValid);
+	void Get_BP_S3_CharacterAdventure(class UObject* __WorldContext, class ABP_S3_Character_Adventure_C** Character, bool* IsValid);
 };
 
 

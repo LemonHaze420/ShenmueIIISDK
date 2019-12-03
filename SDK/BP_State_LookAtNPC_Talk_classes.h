@@ -26,7 +26,7 @@ public:
 
 
 	void CheckBody();
-	void StateEnter(float Delta, bool* bProcessing);
+	void STATIC_StateEnter(float Delta, bool* bProcessing);
 	void StateExit(float Delta, bool* bProcessing);
 };
 

@@ -48,8 +48,8 @@ public:
 	void PlayTimeCountSE();
 	float GetInAnimationLength();
 	void Update(float DeltaSeconds);
-	void SetUseRealTime(bool UseRealTime);
-	bool IsInQTE();
+	void STATIC_SetUseRealTime(bool UseRealTime);
+	bool STATIC_IsInQTE();
 	void GetInputSuccessKey(int Index, TArray<struct FKey>* SuccessKey);
 	void InstructionStartFunction(float InInputLimitTime, TArray<struct FName>* SuccessAction);
 	void ClearResult();
@@ -61,7 +61,7 @@ public:
 	void GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BPC_old_QTECommandComponent(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_old_QTECommandComponent(int EntryPoint);
 	void ButtonDown__DelegateSignature(bool Succeed);
 	void End__DelegateSignature();
 	void Success__DelegateSignature();

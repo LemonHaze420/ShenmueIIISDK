@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_UDSController.BW_UDSController_C.SetupRainControllerBindings
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 
-void UBW_UDSController_C::SetupRainControllerBindings()
+void UBW_UDSController_C::STATIC_SetupRainControllerBindings()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_UDSController.BW_UDSController_C.SetupRainControllerBindings");
 
@@ -31,7 +31,7 @@ void UBW_UDSController_C::SetupRainControllerBindings()
 
 
 // Function BW_UDSController.BW_UDSController_C.GetText_1
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -42,6 +42,7 @@ struct FText UBW_UDSController_C::GetText_1()
 	UBW_UDSController_C_GetText_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,7 +53,7 @@ struct FText UBW_UDSController_C::GetText_1()
 
 
 // Function BW_UDSController.BW_UDSController_C.UpdateGameTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::UpdateGameTime()
 {
@@ -69,11 +70,11 @@ void UBW_UDSController_C::UpdateGameTime()
 
 
 // Function BW_UDSController.BW_UDSController_C.GetSpeedButtonText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_UDSController_C::GetSpeedButtonText()
+struct FText UBW_UDSController_C::STATIC_GetSpeedButtonText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_UDSController.BW_UDSController_C.GetSpeedButtonText");
 
@@ -90,7 +91,7 @@ struct FText UBW_UDSController_C::GetSpeedButtonText()
 
 
 // Function BW_UDSController.BW_UDSController_C.WeatherTypeChanged
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::WeatherTypeChanged()
 {
@@ -107,7 +108,7 @@ void UBW_UDSController_C::WeatherTypeChanged()
 
 
 // Function BW_UDSController.BW_UDSController_C.CloudDensityChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::CloudDensityChanged()
 {
@@ -124,7 +125,7 @@ void UBW_UDSController_C::CloudDensityChanged()
 
 
 // Function BW_UDSController.BW_UDSController_C.MoonPhaseChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::MoonPhaseChanged()
 {
@@ -141,7 +142,7 @@ void UBW_UDSController_C::MoonPhaseChanged()
 
 
 // Function BW_UDSController.BW_UDSController_C.CloudShadowChanged
-// (BlueprintCallable, BlueprintEvent)
+// (NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::CloudShadowChanged()
 {
@@ -158,7 +159,7 @@ void UBW_UDSController_C::CloudShadowChanged()
 
 
 // Function BW_UDSController.BW_UDSController_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::Construct()
 {
@@ -175,7 +176,7 @@ void UBW_UDSController_C::Construct()
 
 
 // Function BW_UDSController.BW_UDSController_C.BoolPropertyChanged_Event_2
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BoolPropertyChanged_Event_2()
 {
@@ -184,6 +185,7 @@ void UBW_UDSController_C::BoolPropertyChanged_Event_2()
 	UBW_UDSController_C_BoolPropertyChanged_Event_2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,7 +194,7 @@ void UBW_UDSController_C::BoolPropertyChanged_Event_2()
 
 
 // Function BW_UDSController.BW_UDSController_C.FloatPropertyChanged_Event_1
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::FloatPropertyChanged_Event_1()
 {
@@ -201,6 +203,7 @@ void UBW_UDSController_C::FloatPropertyChanged_Event_1()
 	UBW_UDSController_C_FloatPropertyChanged_Event_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,7 +212,7 @@ void UBW_UDSController_C::FloatPropertyChanged_Event_1()
 
 
 // Function BW_UDSController.BW_UDSController_C.FloatPropertyChanged_Event_2
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::FloatPropertyChanged_Event_2()
 {
@@ -218,6 +221,7 @@ void UBW_UDSController_C::FloatPropertyChanged_Event_2()
 	UBW_UDSController_C_FloatPropertyChanged_Event_2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,15 +230,16 @@ void UBW_UDSController_C::FloatPropertyChanged_Event_2()
 
 
 // Function BW_UDSController.BW_UDSController_C.񣌘򠳾񍯐�0�0_1
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_UDSController.BW_UDSController_C.񣌘򠳾񍯐�0�0_1");
 
-	UBW_UDSController_C_UnknownFunc01_1_Params params;
+	UBW_UDSController_C__UnknownFunc01_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -243,7 +248,7 @@ void UBW_UDSController_C::UnknownFunc01()
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__MorningButton_K2Node_ComponentBoundEvent_351_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__MorningButton_K2Node_ComponentBoundEvent_351_OnButtonClickedEvent__DelegateSignature()
 {
@@ -252,6 +257,7 @@ void UBW_UDSController_C::BndEvt__MorningButton_K2Node_ComponentBoundEvent_351_O
 	UBW_UDSController_C_BndEvt__MorningButton_K2Node_ComponentBoundEvent_351_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -260,9 +266,9 @@ void UBW_UDSController_C::BndEvt__MorningButton_K2Node_ComponentBoundEvent_351_O
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__NoonButton_K2Node_ComponentBoundEvent_365_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_UDSController_C::BndEvt__NoonButton_K2Node_ComponentBoundEvent_365_OnButtonClickedEvent__DelegateSignature()
+void UBW_UDSController_C::STATIC_BndEvt__NoonButton_K2Node_ComponentBoundEvent_365_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_UDSController.BW_UDSController_C.BndEvt__NoonButton_K2Node_ComponentBoundEvent_365_OnButtonClickedEvent__DelegateSignature");
 
@@ -277,7 +283,7 @@ void UBW_UDSController_C::BndEvt__NoonButton_K2Node_ComponentBoundEvent_365_OnBu
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__EveningButton_K2Node_ComponentBoundEvent_380_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Exec, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__EveningButton_K2Node_ComponentBoundEvent_380_OnButtonClickedEvent__DelegateSignature()
 {
@@ -294,7 +300,7 @@ void UBW_UDSController_C::BndEvt__EveningButton_K2Node_ComponentBoundEvent_380_O
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__NightButton_K2Node_ComponentBoundEvent_396_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Exec, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__NightButton_K2Node_ComponentBoundEvent_396_OnButtonClickedEvent__DelegateSignature()
 {
@@ -311,7 +317,7 @@ void UBW_UDSController_C::BndEvt__NightButton_K2Node_ComponentBoundEvent_396_OnB
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__SpeedButton_K2Node_ComponentBoundEvent_413_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__SpeedButton_K2Node_ComponentBoundEvent_413_OnButtonClickedEvent__DelegateSignature()
 {
@@ -328,7 +334,7 @@ void UBW_UDSController_C::BndEvt__SpeedButton_K2Node_ComponentBoundEvent_413_OnB
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__StopButton_K2Node_ComponentBoundEvent_335_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__StopButton_K2Node_ComponentBoundEvent_335_OnButtonClickedEvent__DelegateSignature()
 {
@@ -345,7 +351,7 @@ void UBW_UDSController_C::BndEvt__StopButton_K2Node_ComponentBoundEvent_335_OnBu
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__20Button_K2Node_ComponentBoundEvent_596_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__20Button_K2Node_ComponentBoundEvent_596_OnButtonClickedEvent__DelegateSignature()
 {
@@ -362,7 +368,7 @@ void UBW_UDSController_C::BndEvt__20Button_K2Node_ComponentBoundEvent_596_OnButt
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__40Button_K2Node_ComponentBoundEvent_616_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__40Button_K2Node_ComponentBoundEvent_616_OnButtonClickedEvent__DelegateSignature()
 {
@@ -379,7 +385,7 @@ void UBW_UDSController_C::BndEvt__40Button_K2Node_ComponentBoundEvent_616_OnButt
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__60Button_K2Node_ComponentBoundEvent_637_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__60Button_K2Node_ComponentBoundEvent_637_OnButtonClickedEvent__DelegateSignature()
 {
@@ -396,7 +402,7 @@ void UBW_UDSController_C::BndEvt__60Button_K2Node_ComponentBoundEvent_637_OnButt
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__90Button_K2Node_ComponentBoundEvent_659_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__90Button_K2Node_ComponentBoundEvent_659_OnButtonClickedEvent__DelegateSignature()
 {
@@ -413,7 +419,7 @@ void UBW_UDSController_C::BndEvt__90Button_K2Node_ComponentBoundEvent_659_OnButt
 
 
 // Function BW_UDSController.BW_UDSController_C.BndEvt__110Button_K2Node_ComponentBoundEvent_682_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::BndEvt__110Button_K2Node_ComponentBoundEvent_682_OnButtonClickedEvent__DelegateSignature()
 {
@@ -430,7 +436,7 @@ void UBW_UDSController_C::BndEvt__110Button_K2Node_ComponentBoundEvent_682_OnBut
 
 
 // Function BW_UDSController.BW_UDSController_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -444,6 +450,7 @@ void UBW_UDSController_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -452,12 +459,12 @@ void UBW_UDSController_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 
 // Function BW_UDSController.BW_UDSController_C.CustomEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_UDSController_C::CustomEvent(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBW_UDSController_C::STATIC_CustomEvent(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_UDSController.BW_UDSController_C.CustomEvent");
 
@@ -474,7 +481,7 @@ void UBW_UDSController_C::CustomEvent(const struct FGeometry& MyGeometry, float 
 
 
 // Function BW_UDSController.BW_UDSController_C.ChangeDate
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_UDSController_C::ChangeDate()
 {
@@ -491,7 +498,7 @@ void UBW_UDSController_C::ChangeDate()
 
 
 // Function BW_UDSController.BW_UDSController_C.ExecuteUbergraph_BW_UDSController
-// (HasDefaults)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -31,7 +31,7 @@ public:
 	}
 
 
-	void SetItemData(class UStaticMesh* NewMesh);
+	void STATIC_SetItemData(class UStaticMesh* NewMesh);
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_ItemViewer_ViewItem(int EntryPoint);

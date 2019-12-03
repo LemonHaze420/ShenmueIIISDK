@@ -26,7 +26,7 @@ public:
 	}
 
 
-	void TestUpdateTextFromReplaceString(TArray<struct FName>* Labels);
+	void STATIC_TestUpdateTextFromReplaceString(TArray<struct FName>* Labels);
 	void UpdateText(TArray<struct FName>* Labels);
 };
 

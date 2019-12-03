@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
-// (Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // struct FString                 Match                          (Parm, ZeroConstructor)
 // bool                           bDidBecomeActive               (Parm, ZeroConstructor, IsPlainOldData)
@@ -36,7 +36,7 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const struct FString& Match, 
 
 
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
-// (Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // struct FString                 Match                          (Parm, ZeroConstructor)
 

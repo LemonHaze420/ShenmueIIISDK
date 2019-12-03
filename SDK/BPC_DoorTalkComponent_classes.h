@@ -29,12 +29,12 @@ public:
 	}
 
 
-	void getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
-	void ReceiveBeginPlay();
-	void RunDoorTalk();
-	void FinishDoorTalk();
-	void CustomEvent_2(int Index);
-	void ExecuteUbergraph_BPC_DoorTalkComponent(int EntryPoint);
+	void GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_RunDoorTalk();
+	void STATIC_FinishDoorTalk();
+	void STATIC_CustomEvent_2(int Index);
+	void STATIC_ExecuteUbergraph_BPC_DoorTalkComponent(int EntryPoint);
 };
 
 

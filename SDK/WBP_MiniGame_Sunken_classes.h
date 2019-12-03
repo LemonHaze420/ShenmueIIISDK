@@ -33,12 +33,12 @@ public:
 	}
 
 
-	void PlayUnbeliAnim();
-	void PlayExcellentAnim();
-	void SetLocalizeText(const struct FText& ExcellentText, const struct FText& UnbelievableText);
+	void STATIC_PlayUnbeliAnim();
+	void STATIC_PlayExcellentAnim();
+	void STATIC_SetLocalizeText(const struct FText& ExcellentText, const struct FText& UnbelievableText);
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_WBP_MiniGame_Sunken(int EntryPoint);
+	void STATIC_ExecuteUbergraph_WBP_MiniGame_Sunken(int EntryPoint);
 };
 
 

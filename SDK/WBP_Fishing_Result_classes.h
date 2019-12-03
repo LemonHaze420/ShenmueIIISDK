@@ -54,9 +54,9 @@ public:
 	void SetImagePositionY(class UImage* ArgImage, float ArgPosY);
 	struct FText GetFishScaleText();
 	struct FText GetFishNameText();
-	void SetResultVisible(ESlateVisibility InVisibility, bool IsException);
+	void SetResultVIsible(ESlateVisibility InVisibility, bool IsException);
 	void Construct();
-	void ExecuteUbergraph_WBP_Fishing_Result(int EntryPoint);
+	void STATIC_ExecuteUbergraph_WBP_Fishing_Result(int EntryPoint);
 };
 
 

@@ -45,34 +45,34 @@ public:
 
 
 	void IsNextStock(const struct FName& CheckId, bool* bAvailable);
-	void GetPopupInfoByID(int PopupId, bool* bSuccess, struct FST_PopupItemInfo* Info, int* ArrayIndex);
+	void STATIC_GetPopupInfoByID(int PopupId, bool* bSuccess, struct FST_PopupItemInfo* Info, int* ArrayIndex);
 	void CanPopupUI(bool* bCan);
 	void IsCheckBet(const struct FName& CheckId, bool* bAvailable);
-	void IsCheckMoney(const struct FName& CheckId, bool* bAvailable);
+	void STATIC_IsCheckMoney(const struct FName& CheckId, bool* bAvailable);
 	void ForceHidePopup();
-	void ShowPopupItem(const struct FName& ItemId, float WaitTime, bool bDisableAutoHide, bool bApplyData, int* PopupId);
-	void HidePopup(int PopupId);
+	void STATIC_ShowPopupItem(const struct FName& ItemId, float WaitTime, bool bDisableAutoHide, bool bApplyData, int* PopupId);
+	void STATIC_HidePopup(int PopupId);
 	void FinishUI();
-	void StartPopup();
-	void StepWaitForEndEvent();
-	void StepShowUI();
-	void StepWaitTimeCheck();
+	void STATIC_StartPopup();
+	void STATIC_StepWaitForEndEvent();
+	void STATIC_StepShowUI();
+	void STATIC_StepWaitTimeCheck();
 	void StepStackCheck();
-	void IsCheckItemId(const struct FName& CheckId, bool* bAvailable);
+	void STATIC_IsCheckItemId(const struct FName& CheckId, bool* bAvailable);
 	void IncrementPopupId(int* PopupId);
 	void ShowPopupMoney(int IncreaseOrDecreaseMoney, float WaitTime, bool bDisableAutoHide, TEnumAsByte<EN_ValueType> ValueType, int* PopupId);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void SetupItemUI(const struct FName& ItemId, bool bAutoClose, int Quantity, bool bApplyData);
 	void SetupMoneyUI(int HaveMoney, int IncreaseOrDecreaseMoney, bool bAutoClose, TEnumAsByte<EN_ValueType> ValueType);
-	void OnClosedItemNameDisp();
-	void OnFinishedUI();
-	void ClearHandle_OnFinishedUI();
-	void Evt_StartAnmEnd();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_PopupItem(int EntryPoint);
-	void OnFinishedPopupDispatcher__DelegateSignature(int PopupId);
-	void OnAllFinishedPopupDispatcher__DelegateSignature();
+	void STATIC_OnClosedItemNameDisp();
+	void STATIC_OnFinishedUI();
+	void STATIC_ClearHandle_OnFinishedUI();
+	void STATIC_Evt_StartAnmEnd();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_PopupItem(int EntryPoint);
+	void STATIC_OnFinishedPopupDispatcher__DelegateSignature(int PopupId);
+	void STATIC_OnAllFinishedPopupDispatcher__DelegateSignature();
 };
 
 

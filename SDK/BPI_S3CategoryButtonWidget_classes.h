@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void SetButtonSelected(bool bSelected);
-	void SetCursorEnabled(bool bEnabled);
-	void SetText(const struct FText& Text);
+	void STATIC_SetButtonSelected(bool bSelected);
+	void STATIC_SetCursorEnabled(bool bEnabled);
+	void STATIC_SetText(const struct FText& Text);
 };
 
 

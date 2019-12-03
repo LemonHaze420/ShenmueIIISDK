@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_Carousel.BP_Carousel_C.isBusy
-struct UBP_Carousel_C_isBusy_Params
+// Function BP_Carousel.BP_Carousel_C.IsBusy
+struct UBP_Carousel_C_IsBusy_Params
 {
 	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

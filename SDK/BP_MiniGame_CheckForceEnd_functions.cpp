@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_CheckForceEnd.BP_MiniGame_CheckForceEnd_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MiniGame_CheckForceEnd_C::UserConstructionScript()
+void ABP_MiniGame_CheckForceEnd_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CheckForceEnd.BP_MiniGame_CheckForceEnd_C.UserConstructionScript");
 
 	ABP_MiniGame_CheckForceEnd_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_MiniGame_CheckForceEnd_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_CheckForceEnd.BP_MiniGame_CheckForceEnd_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetResponse, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -51,9 +52,9 @@ void ABP_MiniGame_CheckForceEnd_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CheckForceEnd.BP_MiniGame_CheckForceEnd_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_CheckForceEnd_C::ReceiveBeginPlay()
+void ABP_MiniGame_CheckForceEnd_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CheckForceEnd.BP_MiniGame_CheckForceEnd_C.ReceiveBeginPlay");
 
@@ -68,7 +69,7 @@ void ABP_MiniGame_CheckForceEnd_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_CheckForceEnd.BP_MiniGame_CheckForceEnd_C.ExecuteUbergraph_BP_MiniGame_CheckForceEnd
-// ()
+// (NetReliable, Exec, Event, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

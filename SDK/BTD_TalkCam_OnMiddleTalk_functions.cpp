@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTD_TalkCam_OnMiddleTalk.BTD_TalkCam_OnMiddleTalk_C.PerformConditionCheck
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  OwnerActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTD_TalkCam_OnMiddleTalk_C::PerformConditionCheck(class AActor* OwnerActor)
+bool UBTD_TalkCam_OnMiddleTalk_C::STATIC_PerformConditionCheck(class AActor* OwnerActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTD_TalkCam_OnMiddleTalk.BTD_TalkCam_OnMiddleTalk_C.PerformConditionCheck");
 
@@ -27,6 +27,7 @@ bool UBTD_TalkCam_OnMiddleTalk_C::PerformConditionCheck(class AActor* OwnerActor
 	params.OwnerActor = OwnerActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

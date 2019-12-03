@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Color.BPF_Color_C.GetPlatformButtonColor_ByIndex
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, NetMulticast, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3PadButtonIndex              Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            Color                          (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Color_C::STATIC_GetPlatformButtonColor_ByIndex(ES3PadButtonIndex Index, class UObject* __WorldContext, struct FLinearColor* Color)
+void UBPF_Color_C::GetPlatformButtonColor_ByIndex(ES3PadButtonIndex Index, class UObject* __WorldContext, struct FLinearColor* Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Color.BPF_Color_C.GetPlatformButtonColor_ByIndex");
 
@@ -40,7 +40,7 @@ void UBPF_Color_C::STATIC_GetPlatformButtonColor_ByIndex(ES3PadButtonIndex Index
 
 
 // Function BPF_Color.BPF_Color_C.GetTalkFontColor
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_TalkCharacterType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           SRGB                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -49,7 +49,7 @@ void UBPF_Color_C::STATIC_GetPlatformButtonColor_ByIndex(ES3PadButtonIndex Index
 // struct FLinearColor            GlowColor                      (Parm, OutParm, IsPlainOldData)
 // struct FLinearColor            OutlineColor                   (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Color_C::STATIC_GetTalkFontColor(TEnumAsByte<EN_TalkCharacterType> Type, bool SRGB, class UObject* __WorldContext, struct FLinearColor* foreColor, struct FLinearColor* GlowColor, struct FLinearColor* OutlineColor)
+void UBPF_Color_C::GetTalkFontColor(TEnumAsByte<EN_TalkCharacterType> Type, bool SRGB, class UObject* __WorldContext, struct FLinearColor* foreColor, struct FLinearColor* GlowColor, struct FLinearColor* OutlineColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Color.BPF_Color_C.GetTalkFontColor");
 
@@ -59,6 +59,7 @@ void UBPF_Color_C::STATIC_GetTalkFontColor(TEnumAsByte<EN_TalkCharacterType> Typ
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +75,7 @@ void UBPF_Color_C::STATIC_GetTalkFontColor(TEnumAsByte<EN_TalkCharacterType> Typ
 
 
 // Function BPF_Color.BPF_Color_C.GetTalkFontColorSRGB
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_TalkCharacterType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -83,7 +84,7 @@ void UBPF_Color_C::STATIC_GetTalkFontColor(TEnumAsByte<EN_TalkCharacterType> Typ
 // struct FLinearColor            OutlineColor                   (Parm, OutParm, IsPlainOldData)
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Color_C::STATIC_GetTalkFontColorSRGB(TEnumAsByte<EN_TalkCharacterType> Type, class UObject* __WorldContext, struct FLinearColor* foreColor, struct FLinearColor* GlowColor, struct FLinearColor* OutlineColor, bool* Found)
+void UBPF_Color_C::GetTalkFontColorSRGB(TEnumAsByte<EN_TalkCharacterType> Type, class UObject* __WorldContext, struct FLinearColor* foreColor, struct FLinearColor* GlowColor, struct FLinearColor* OutlineColor, bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Color.BPF_Color_C.GetTalkFontColorSRGB");
 
@@ -109,7 +110,7 @@ void UBPF_Color_C::STATIC_GetTalkFontColorSRGB(TEnumAsByte<EN_TalkCharacterType>
 
 
 // Function BPF_Color.BPF_Color_C.GetTalkFontColorLinear
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_TalkCharacterType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -117,7 +118,7 @@ void UBPF_Color_C::STATIC_GetTalkFontColorSRGB(TEnumAsByte<EN_TalkCharacterType>
 // struct FLinearColor            GlowColor                      (Parm, OutParm, IsPlainOldData)
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Color_C::STATIC_GetTalkFontColorLinear(TEnumAsByte<EN_TalkCharacterType> Type, class UObject* __WorldContext, struct FLinearColor* foreColor, struct FLinearColor* GlowColor, bool* Found)
+void UBPF_Color_C::GetTalkFontColorLinear(TEnumAsByte<EN_TalkCharacterType> Type, class UObject* __WorldContext, struct FLinearColor* foreColor, struct FLinearColor* GlowColor, bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Color.BPF_Color_C.GetTalkFontColorLinear");
 
@@ -141,7 +142,7 @@ void UBPF_Color_C::STATIC_GetTalkFontColorLinear(TEnumAsByte<EN_TalkCharacterTyp
 
 
 // Function BPF_Color.BPF_Color_C.GetPlatformButtonColor
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            ButtonA                        (Parm, OutParm, IsPlainOldData)
@@ -149,7 +150,7 @@ void UBPF_Color_C::STATIC_GetTalkFontColorLinear(TEnumAsByte<EN_TalkCharacterTyp
 // struct FLinearColor            ButtonX                        (Parm, OutParm, IsPlainOldData)
 // struct FLinearColor            ButtonY                        (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Color_C::STATIC_GetPlatformButtonColor(class UObject* __WorldContext, struct FLinearColor* ButtonA, struct FLinearColor* ButtonB, struct FLinearColor* ButtonX, struct FLinearColor* ButtonY)
+void UBPF_Color_C::GetPlatformButtonColor(class UObject* __WorldContext, struct FLinearColor* ButtonA, struct FLinearColor* ButtonB, struct FLinearColor* ButtonX, struct FLinearColor* ButtonY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Color.BPF_Color_C.GetPlatformButtonColor");
 
@@ -157,6 +158,7 @@ void UBPF_Color_C::STATIC_GetPlatformButtonColor(class UObject* __WorldContext, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -174,7 +176,7 @@ void UBPF_Color_C::STATIC_GetPlatformButtonColor(class UObject* __WorldContext, 
 
 
 // Function BPF_Color.BPF_Color_C.GetButtonColor
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, NetResponse, Static, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // ES3Platform                    Platform                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

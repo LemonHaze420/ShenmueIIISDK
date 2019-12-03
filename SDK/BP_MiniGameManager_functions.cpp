@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.AddFortuneCount
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_MiniGameManager_C::AddFortuneCount()
 {
@@ -23,6 +23,7 @@ void ABP_MiniGameManager_C::AddFortuneCount()
 	ABP_MiniGameManager_C_AddFortuneCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void ABP_MiniGameManager_C::AddFortuneCount()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.DisableCheckFishingSuspendTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Public, NetServer, DLLImport, Const)
 
-void ABP_MiniGameManager_C::DisableCheckFishingSuspendTime()
+void ABP_MiniGameManager_C::STATIC_DisableCheckFishingSuspendTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.DisableCheckFishingSuspendTime");
 
 	ABP_MiniGameManager_C_DisableCheckFishingSuspendTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +50,11 @@ void ABP_MiniGameManager_C::DisableCheckFishingSuspendTime()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.SetEnabledPlayFishing
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, Const)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::SetEnabledPlayFishing(bool bEnabled)
+void ABP_MiniGameManager_C::STATIC_SetEnabledPlayFishing(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.SetEnabledPlayFishing");
 
@@ -60,6 +62,7 @@ void ABP_MiniGameManager_C::SetEnabledPlayFishing(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,17 +71,18 @@ void ABP_MiniGameManager_C::SetEnabledPlayFishing(bool bEnabled)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetEnabledPlayFishing
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // bool                           bEnabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::GetEnabledPlayFishing(bool* bEnabled)
+void ABP_MiniGameManager_C::STATIC_GetEnabledPlayFishing(bool* bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetEnabledPlayFishing");
 
 	ABP_MiniGameManager_C_GetEnabledPlayFishing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +94,7 @@ void ABP_MiniGameManager_C::GetEnabledPlayFishing(bool* bEnabled)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.DestroyChooseActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_MiniGameManager_C::DestroyChooseActor()
 {
@@ -107,9 +111,9 @@ void ABP_MiniGameManager_C::DestroyChooseActor()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.InitializeMiniGameProgress
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameManager_C::InitializeMiniGameProgress()
+void ABP_MiniGameManager_C::STATIC_InitializeMiniGameProgress()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.InitializeMiniGameProgress");
 
@@ -124,7 +128,7 @@ void ABP_MiniGameManager_C::InitializeMiniGameProgress()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.SetCurrentMiniGame
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // class ABP_MiniGameBase_C*      MiniGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -136,6 +140,7 @@ void ABP_MiniGameManager_C::SetCurrentMiniGame(class ABP_MiniGameBase_C* MiniGam
 	params.MiniGame = MiniGame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,11 +149,11 @@ void ABP_MiniGameManager_C::SetCurrentMiniGame(class ABP_MiniGameBase_C* MiniGam
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetForkMovePlaceFlag
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::GetForkMovePlaceFlag(int* OutValue)
+void ABP_MiniGameManager_C::STATIC_GetForkMovePlaceFlag(int* OutValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetForkMovePlaceFlag");
 
@@ -166,7 +171,7 @@ void ABP_MiniGameManager_C::GetForkMovePlaceFlag(int* OutValue)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.ToggleForkCCBMovePlace
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_MiniGameManager_C::ToggleForkCCBMovePlace()
 {
@@ -175,6 +180,7 @@ void ABP_MiniGameManager_C::ToggleForkCCBMovePlace()
 	ABP_MiniGameManager_C_ToggleForkCCBMovePlace_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,7 +189,7 @@ void ABP_MiniGameManager_C::ToggleForkCCBMovePlace()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetForkNextProgress
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGame_ForkJobResult> Job                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -196,6 +202,7 @@ void ABP_MiniGameManager_C::GetForkNextProgress(TEnumAsByte<E_MiniGame_ForkJobRe
 	params.Job = Job;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -207,7 +214,7 @@ void ABP_MiniGameManager_C::GetForkNextProgress(TEnumAsByte<E_MiniGame_ForkJobRe
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetDailyAppearCCBNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -229,11 +236,11 @@ void ABP_MiniGameManager_C::GetDailyAppearCCBNum(int* OutValue)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.AddDailyAppearCCBNum
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            AddNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::AddDailyAppearCCBNum(int AddNum)
+void ABP_MiniGameManager_C::STATIC_AddDailyAppearCCBNum(int AddNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.AddDailyAppearCCBNum");
 
@@ -249,12 +256,12 @@ void ABP_MiniGameManager_C::AddDailyAppearCCBNum(int AddNum)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetCCBGameData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_ForkJobResult> Job                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    Data                           (Parm, OutParm, ZeroConstructor)
 
-void ABP_MiniGameManager_C::GetCCBGameData(TEnumAsByte<E_MiniGame_ForkJobResult> Job, TArray<int>* Data)
+void ABP_MiniGameManager_C::STATIC_GetCCBGameData(TEnumAsByte<E_MiniGame_ForkJobResult> Job, TArray<int>* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetCCBGameData");
 
@@ -262,6 +269,7 @@ void ABP_MiniGameManager_C::GetCCBGameData(TEnumAsByte<E_MiniGame_ForkJobResult>
 	params.Job = Job;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -273,7 +281,7 @@ void ABP_MiniGameManager_C::GetCCBGameData(TEnumAsByte<E_MiniGame_ForkJobResult>
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetAvailableCCBGameDataNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_ForkJobResult> Job                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            IgnoreNum                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -302,7 +310,7 @@ void ABP_MiniGameManager_C::GetAvailableCCBGameDataNum(TEnumAsByte<E_MiniGame_Fo
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetCCBGameDataNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameCCBattlePlace> Place                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            CabinetNumber                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -317,6 +325,7 @@ void ABP_MiniGameManager_C::GetCCBGameDataNum(TEnumAsByte<E_MiniGameCCBattlePlac
 	params.CabinetNumber = CabinetNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -328,14 +337,14 @@ void ABP_MiniGameManager_C::GetCCBGameDataNum(TEnumAsByte<E_MiniGameCCBattlePlac
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.SetCCBGameDataNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGame_ForkJobResult> Job                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            GameDataNum                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    DataList                       (Parm, OutParm, ZeroConstructor)
 
-void ABP_MiniGameManager_C::SetCCBGameDataNum(TEnumAsByte<E_MiniGame_ForkJobResult> Job, int GameDataNum, int SetIndex, TArray<int>* DataList)
+void ABP_MiniGameManager_C::STATIC_SetCCBGameDataNum(TEnumAsByte<E_MiniGame_ForkJobResult> Job, int GameDataNum, int SetIndex, TArray<int>* DataList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.SetCCBGameDataNum");
 
@@ -356,7 +365,7 @@ void ABP_MiniGameManager_C::SetCCBGameDataNum(TEnumAsByte<E_MiniGame_ForkJobResu
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetWinCount
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // ES3MiniGameCategory            Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMiniGamePurpose>  Purpose                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -371,6 +380,7 @@ void ABP_MiniGameManager_C::GetWinCount(ES3MiniGameCategory Category, TEnumAsByt
 	params.Purpose = Purpose;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -382,7 +392,7 @@ void ABP_MiniGameManager_C::GetWinCount(ES3MiniGameCategory Category, TEnumAsByt
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetSpecialPlayerMesh
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // class USkeletalMesh*           Mesh                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -393,6 +403,7 @@ void ABP_MiniGameManager_C::GetSpecialPlayerMesh(class USkeletalMesh** Mesh)
 	ABP_MiniGameManager_C_GetSpecialPlayerMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -404,7 +415,7 @@ void ABP_MiniGameManager_C::GetSpecialPlayerMesh(class USkeletalMesh** Mesh)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.SetSpecialPlayerMesh
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USkeletalMesh*           SpecialPlayerMesh              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           Mesh                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -417,6 +428,7 @@ void ABP_MiniGameManager_C::SetSpecialPlayerMesh(class USkeletalMesh* SpecialPla
 	params.SpecialPlayerMesh = SpecialPlayerMesh;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -428,15 +440,16 @@ void ABP_MiniGameManager_C::SetSpecialPlayerMesh(class USkeletalMesh* SpecialPla
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.StopBGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, Const)
 
-void ABP_MiniGameManager_C::StopBGM()
+void ABP_MiniGameManager_C::STATIC_StopBGM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.StopBGM");
 
 	ABP_MiniGameManager_C_StopBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -445,13 +458,13 @@ void ABP_MiniGameManager_C::StopBGM()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetCCBTargetNumList
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Static, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGameCCBattlePlace> Place                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    OutValues                      (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_MiniGameManager_C::GetCCBTargetNumList(TEnumAsByte<E_MiniGameCCBattlePlace> Place, TArray<int>* OutValues)
+bool ABP_MiniGameManager_C::STATIC_GetCCBTargetNumList(TEnumAsByte<E_MiniGameCCBattlePlace> Place, TArray<int>* OutValues)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetCCBTargetNumList");
 
@@ -472,17 +485,18 @@ bool ABP_MiniGameManager_C::GetCCBTargetNumList(TEnumAsByte<E_MiniGameCCBattlePl
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetDayCount
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::GetDayCount(int* Count)
+void ABP_MiniGameManager_C::STATIC_GetDayCount(int* Count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetDayCount");
 
 	ABP_MiniGameManager_C_GetDayCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -494,7 +508,7 @@ void ABP_MiniGameManager_C::GetDayCount(int* Count)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateDayCount
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Change                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -505,6 +519,7 @@ void ABP_MiniGameManager_C::UpdateDayCount(bool* Change)
 	ABP_MiniGameManager_C_UpdateDayCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -516,13 +531,13 @@ void ABP_MiniGameManager_C::UpdateDayCount(bool* Change)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateCCBattleResult
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, Protected, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameCCBattlePlace> CheckPlace                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ClearNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Clear                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::UpdateCCBattleResult(TEnumAsByte<E_MiniGameCCBattlePlace> CheckPlace, int ClearNumber, bool* Clear)
+void ABP_MiniGameManager_C::STATIC_UpdateCCBattleResult(TEnumAsByte<E_MiniGameCCBattlePlace> CheckPlace, int ClearNumber, bool* Clear)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateCCBattleResult");
 
@@ -542,7 +557,7 @@ void ABP_MiniGameManager_C::UpdateCCBattleResult(TEnumAsByte<E_MiniGameCCBattleP
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateCCBattleSettings
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameCCBattlePlace> Place                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -562,14 +577,14 @@ void ABP_MiniGameManager_C::UpdateCCBattleSettings(TEnumAsByte<E_MiniGameCCBattl
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.AddMiniGameProgress
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // struct FName                   Key                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // int                            AddValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3MiniGameCategory            Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::AddMiniGameProgress(const struct FName& Key, int AddValue, ES3MiniGameCategory Category, int* Value)
+void ABP_MiniGameManager_C::STATIC_AddMiniGameProgress(const struct FName& Key, int AddValue, ES3MiniGameCategory Category, int* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.AddMiniGameProgress");
 
@@ -590,7 +605,7 @@ void ABP_MiniGameManager_C::AddMiniGameProgress(const struct FName& Key, int Add
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.AddForkNextProgress
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_ForkJobResult> JobType                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AddValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -604,6 +619,7 @@ void ABP_MiniGameManager_C::AddForkNextProgress(TEnumAsByte<E_MiniGame_ForkJobRe
 	params.AddValue = AddValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -612,15 +628,16 @@ void ABP_MiniGameManager_C::AddForkNextProgress(TEnumAsByte<E_MiniGame_ForkJobRe
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateForkLiftResult
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 
-void ABP_MiniGameManager_C::UpdateForkLiftResult()
+void ABP_MiniGameManager_C::STATIC_UpdateForkLiftResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateForkLiftResult");
 
 	ABP_MiniGameManager_C_UpdateForkLiftResult_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -629,7 +646,7 @@ void ABP_MiniGameManager_C::UpdateForkLiftResult()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateWinRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 
 void ABP_MiniGameManager_C::UpdateWinRate()
 {
@@ -646,7 +663,7 @@ void ABP_MiniGameManager_C::UpdateWinRate()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameAllWinRate
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<E_MiniGameGambleType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Fortune                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -678,11 +695,11 @@ void ABP_MiniGameManager_C::GetMiniGameAllWinRate(TEnumAsByte<E_MiniGameGambleTy
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetGambleKifudaAccumulate
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_MiniGameManager_C::GetGambleKifudaAccumulate()
+int ABP_MiniGameManager_C::STATIC_GetGambleKifudaAccumulate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetGambleKifudaAccumulate");
 
@@ -699,7 +716,7 @@ int ABP_MiniGameManager_C::GetGambleKifudaAccumulate()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.AddGambleKifudaAccumulate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            AddValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -711,6 +728,7 @@ void ABP_MiniGameManager_C::AddGambleKifudaAccumulate(int AddValue)
 	params.AddValue = AddValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -719,14 +737,14 @@ void ABP_MiniGameManager_C::AddGambleKifudaAccumulate(int AddValue)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameWinRate
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, NetMulticast, Public, Private, Protected, Delegate)
 // Parameters:
 // TEnumAsByte<E_MiniGameGambleType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Fortune                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<E_MiniGameGambleWinRate> RateType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::GetMiniGameWinRate(TEnumAsByte<E_MiniGameGambleType> Type, bool Fortune, TEnumAsByte<E_MiniGameGambleWinRate> RateType, float* Rate)
+void ABP_MiniGameManager_C::STATIC_GetMiniGameWinRate(TEnumAsByte<E_MiniGameGambleType> Type, bool Fortune, TEnumAsByte<E_MiniGameGambleWinRate> RateType, float* Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameWinRate");
 
@@ -747,7 +765,7 @@ void ABP_MiniGameManager_C::GetMiniGameWinRate(TEnumAsByte<E_MiniGameGambleType>
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.SetMiniGameWinRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameGambleType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -773,15 +791,16 @@ void ABP_MiniGameManager_C::SetMiniGameWinRate(TEnumAsByte<E_MiniGameGambleType>
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateMiniGameGlobalFlag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGameManager_C::UpdateMiniGameGlobalFlag()
+void ABP_MiniGameManager_C::STATIC_UpdateMiniGameGlobalFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateMiniGameGlobalFlag");
 
 	ABP_MiniGameManager_C_UpdateMiniGameGlobalFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -790,13 +809,13 @@ void ABP_MiniGameManager_C::UpdateMiniGameGlobalFlag()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateFortuneProgress
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsNumberFortune                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsEnabledFortune               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            FortuneNum                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::UpdateFortuneProgress(bool IsNumberFortune, bool* IsEnabledFortune, int* FortuneNum)
+void ABP_MiniGameManager_C::STATIC_UpdateFortuneProgress(bool IsNumberFortune, bool* IsEnabledFortune, int* FortuneNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateFortuneProgress");
 
@@ -817,14 +836,14 @@ void ABP_MiniGameManager_C::UpdateFortuneProgress(bool IsNumberFortune, bool* Is
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.IsEnabledFortune
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsNumberFortune                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsEnabled                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            FlagIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            FortuneNum                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::IsEnabledFortune(bool IsNumberFortune, bool* IsEnabled, int* FlagIndex, int* FortuneNum)
+void ABP_MiniGameManager_C::STATIC_IsEnabledFortune(bool IsNumberFortune, bool* IsEnabled, int* FlagIndex, int* FortuneNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.IsEnabledFortune");
 
@@ -847,12 +866,12 @@ void ABP_MiniGameManager_C::IsEnabledFortune(bool IsNumberFortune, bool* IsEnabl
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.PlayBGM
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   BGMID                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Play                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::PlayBGM(const struct FName& BGMID, bool* Play)
+void ABP_MiniGameManager_C::STATIC_PlayBGM(const struct FName& BGMID, bool* Play)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.PlayBGM");
 
@@ -871,17 +890,18 @@ void ABP_MiniGameManager_C::PlayBGM(const struct FName& BGMID, bool* Play)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.StartFishingShopResult
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, Const)
 // Parameters:
 // TArray<struct FST_Fishing_ResultFishData> result_fish_array              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_MiniGameManager_C::StartFishingShopResult(TArray<struct FST_Fishing_ResultFishData>* result_fish_array)
+void ABP_MiniGameManager_C::STATIC_StartFishingShopResult(TArray<struct FST_Fishing_ResultFishData>* result_fish_array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.StartFishingShopResult");
 
 	ABP_MiniGameManager_C_StartFishingShopResult_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -893,7 +913,7 @@ void ABP_MiniGameManager_C::StartFishingShopResult(TArray<struct FST_Fishing_Res
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.InitializeFishing
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGameManager_C::InitializeFishing()
 {
@@ -910,15 +930,16 @@ void ABP_MiniGameManager_C::InitializeFishing()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.FinalizeFishing
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, Const)
 
-void ABP_MiniGameManager_C::FinalizeFishing()
+void ABP_MiniGameManager_C::STATIC_FinalizeFishing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.FinalizeFishing");
 
 	ABP_MiniGameManager_C_FinalizeFishing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -927,7 +948,7 @@ void ABP_MiniGameManager_C::FinalizeFishing()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.CreateFishingManager
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport)
 // Parameters:
 // TArray<int>                    RentalItemID                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -938,6 +959,7 @@ void ABP_MiniGameManager_C::CreateFishingManager(TArray<int>* RentalItemID)
 	ABP_MiniGameManager_C_CreateFishingManager_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -949,9 +971,9 @@ void ABP_MiniGameManager_C::CreateFishingManager(TArray<int>* RentalItemID)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.CheckBGM
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameManager_C::CheckBGM()
+void ABP_MiniGameManager_C::STATIC_CheckBGM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.CheckBGM");
 
@@ -966,11 +988,11 @@ void ABP_MiniGameManager_C::CheckBGM()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameActorID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::GetMiniGameActorID(struct FName* ID)
+void ABP_MiniGameManager_C::STATIC_GetMiniGameActorID(struct FName* ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameActorID");
 
@@ -988,11 +1010,11 @@ void ABP_MiniGameManager_C::GetMiniGameActorID(struct FName* ID)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.CheckFishing
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Jump                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::CheckFishing(bool Jump)
+void ABP_MiniGameManager_C::STATIC_CheckFishing(bool Jump)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.CheckFishing");
 
@@ -1008,7 +1030,7 @@ void ABP_MiniGameManager_C::CheckFishing(bool Jump)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateFortuneTellingFlag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGameManager_C::UpdateFortuneTellingFlag()
 {
@@ -1025,11 +1047,11 @@ void ABP_MiniGameManager_C::UpdateFortuneTellingFlag()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameGachaID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   PlayGachaID                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::GetMiniGameGachaID(struct FName* PlayGachaID)
+void ABP_MiniGameManager_C::STATIC_GetMiniGameGachaID(struct FName* PlayGachaID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameGachaID");
 
@@ -1047,7 +1069,7 @@ void ABP_MiniGameManager_C::GetMiniGameGachaID(struct FName* PlayGachaID)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetCurrentMiniGameValueType
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_ValueType>      Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1069,11 +1091,11 @@ void ABP_MiniGameManager_C::GetCurrentMiniGameValueType(TEnumAsByte<EN_ValueType
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.ExecuteMiniGameResultEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, NetServer, DLLImport, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGameResult>  Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameResult> Result)
+void ABP_MiniGameManager_C::STATIC_ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.ExecuteMiniGameResultEvent");
 
@@ -1081,6 +1103,7 @@ void ABP_MiniGameManager_C::ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameRes
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1089,12 +1112,12 @@ void ABP_MiniGameManager_C::ExecuteMiniGameResultEvent(TEnumAsByte<E_MiniGameRes
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.CanvertMiniGameCategory
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3MiniGameCategory            Category                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::CanvertMiniGameCategory(int Index, ES3MiniGameCategory* Category)
+void ABP_MiniGameManager_C::STATIC_CanvertMiniGameCategory(int Index, ES3MiniGameCategory* Category)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.CanvertMiniGameCategory");
 
@@ -1113,9 +1136,9 @@ void ABP_MiniGameManager_C::CanvertMiniGameCategory(int Index, ES3MiniGameCatego
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.FinalizeTalkMiniGame
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGameManager_C::FinalizeTalkMiniGame()
+void ABP_MiniGameManager_C::STATIC_FinalizeTalkMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.FinalizeTalkMiniGame");
 
@@ -1130,7 +1153,7 @@ void ABP_MiniGameManager_C::FinalizeTalkMiniGame()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameControlledByMiniGame
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameBase_C*      MiniGameBase                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1142,6 +1165,7 @@ void ABP_MiniGameManager_C::GetMiniGameControlledByMiniGame(class ABP_MiniGameBa
 	ABP_MiniGameManager_C_GetMiniGameControlledByMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1155,7 +1179,7 @@ void ABP_MiniGameManager_C::GetMiniGameControlledByMiniGame(class ABP_MiniGameBa
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetMiniGameControlledByActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1166,6 +1190,7 @@ void ABP_MiniGameManager_C::GetMiniGameControlledByActor(class AActor** Actor)
 	ABP_MiniGameManager_C_GetMiniGameControlledByActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1177,7 +1202,7 @@ void ABP_MiniGameManager_C::GetMiniGameControlledByActor(class AActor** Actor)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.GetMinGamePrice
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            MinPrice                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class ABP_MiniGameBase_C*      Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1202,7 +1227,7 @@ void ABP_MiniGameManager_C::GetMinGamePrice(int* MinPrice, class ABP_MiniGameBas
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.ResetValue
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetClient, DLLImport)
 
 void ABP_MiniGameManager_C::ResetValue()
 {
@@ -1211,6 +1236,7 @@ void ABP_MiniGameManager_C::ResetValue()
 	ABP_MiniGameManager_C_ResetValue_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1219,11 +1245,11 @@ void ABP_MiniGameManager_C::ResetValue()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.IsProcessingMiniGame
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::IsProcessingMiniGame(bool* bProcessing)
+void ABP_MiniGameManager_C::STATIC_IsProcessingMiniGame(bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.IsProcessingMiniGame");
 
@@ -1241,7 +1267,7 @@ void ABP_MiniGameManager_C::IsProcessingMiniGame(bool* bProcessing)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.InitializeTalkMiniGame
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGameManager_C::InitializeTalkMiniGame()
 {
@@ -1258,12 +1284,12 @@ void ABP_MiniGameManager_C::InitializeTalkMiniGame()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.SpawnMiniGameChooseActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // bool                           ManualCamera                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_MiniGameChoose_C*    ChooseActor                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::SpawnMiniGameChooseActor(bool ManualCamera, class ABP_MiniGameChoose_C** ChooseActor)
+void ABP_MiniGameManager_C::STATIC_SpawnMiniGameChooseActor(bool ManualCamera, class ABP_MiniGameChoose_C** ChooseActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.SpawnMiniGameChooseActor");
 
@@ -1282,7 +1308,7 @@ void ABP_MiniGameManager_C::SpawnMiniGameChooseActor(bool ManualCamera, class AB
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::UserConstructionScript()
 {
@@ -1291,6 +1317,7 @@ void ABP_MiniGameManager_C::UserConstructionScript()
 	ABP_MiniGameManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1299,11 +1326,11 @@ void ABP_MiniGameManager_C::UserConstructionScript()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnDestroyedChooseActor
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // class AActor*                  DestroyedActor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::OnDestroyedChooseActor(class AActor* DestroyedActor)
+void ABP_MiniGameManager_C::STATIC_OnDestroyedChooseActor(class AActor* DestroyedActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.OnDestroyedChooseActor");
 
@@ -1311,6 +1338,7 @@ void ABP_MiniGameManager_C::OnDestroyedChooseActor(class AActor* DestroyedActor)
 	params.DestroyedActor = DestroyedActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1319,11 +1347,11 @@ void ABP_MiniGameManager_C::OnDestroyedChooseActor(class AActor* DestroyedActor)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.BindChooseActor
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // class ABP_MiniGameChoose_C*    MiniGameChoose                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::BindChooseActor(class ABP_MiniGameChoose_C* MiniGameChoose)
+void ABP_MiniGameManager_C::STATIC_BindChooseActor(class ABP_MiniGameChoose_C* MiniGameChoose)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.BindChooseActor");
 
@@ -1331,6 +1359,7 @@ void ABP_MiniGameManager_C::BindChooseActor(class ABP_MiniGameChoose_C* MiniGame
 	params.MiniGameChoose = MiniGameChoose;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1339,12 +1368,12 @@ void ABP_MiniGameManager_C::BindChooseActor(class ABP_MiniGameChoose_C* MiniGame
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnChangedFlag
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::OnChangedFlag(int ArrayIndex, int SetFlags)
+void ABP_MiniGameManager_C::STATIC_OnChangedFlag(int ArrayIndex, int SetFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.OnChangedFlag");
 
@@ -1353,6 +1382,7 @@ void ABP_MiniGameManager_C::OnChangedFlag(int ArrayIndex, int SetFlags)
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1361,7 +1391,7 @@ void ABP_MiniGameManager_C::OnChangedFlag(int ArrayIndex, int SetFlags)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.BindGameInstanceFlagEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::BindGameInstanceFlagEvent()
 {
@@ -1378,7 +1408,7 @@ void ABP_MiniGameManager_C::BindGameInstanceFlagEvent()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UnbindGameInstanceFlagEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::UnbindGameInstanceFlagEvent()
 {
@@ -1395,7 +1425,7 @@ void ABP_MiniGameManager_C::UnbindGameInstanceFlagEvent()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnCancelChooseMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::OnCancelChooseMiniGame()
 {
@@ -1412,11 +1442,11 @@ void ABP_MiniGameManager_C::OnCancelChooseMiniGame()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnChooseMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // class AActor*                  ChooseActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::OnChooseMiniGame(class AActor* ChooseActor)
+void ABP_MiniGameManager_C::STATIC_OnChooseMiniGame(class AActor* ChooseActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.OnChooseMiniGame");
 
@@ -1432,7 +1462,7 @@ void ABP_MiniGameManager_C::OnChooseMiniGame(class AActor* ChooseActor)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::ReceiveBeginPlay()
 {
@@ -1449,7 +1479,7 @@ void ABP_MiniGameManager_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnTalkStartEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::OnTalkStartEvent()
 {
@@ -1466,7 +1496,7 @@ void ABP_MiniGameManager_C::OnTalkStartEvent()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnTalkEndEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::OnTalkEndEvent()
 {
@@ -1483,11 +1513,11 @@ void ABP_MiniGameManager_C::OnTalkEndEvent()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnScriptResumeMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // struct FString                 ResumeKeydword                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_MiniGameManager_C::OnScriptResumeMiniGame(const struct FString& ResumeKeydword)
+void ABP_MiniGameManager_C::STATIC_OnScriptResumeMiniGame(const struct FString& ResumeKeydword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.OnScriptResumeMiniGame");
 
@@ -1495,6 +1525,7 @@ void ABP_MiniGameManager_C::OnScriptResumeMiniGame(const struct FString& ResumeK
 	params.ResumeKeydword = ResumeKeydword;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1503,11 +1534,11 @@ void ABP_MiniGameManager_C::OnScriptResumeMiniGame(const struct FString& ResumeK
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnStartMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            MiniGameRuleIndex              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::OnStartMiniGame(int MiniGameRuleIndex)
+void ABP_MiniGameManager_C::STATIC_OnStartMiniGame(int MiniGameRuleIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.OnStartMiniGame");
 
@@ -1515,6 +1546,7 @@ void ABP_MiniGameManager_C::OnStartMiniGame(int MiniGameRuleIndex)
 	params.MiniGameRuleIndex = MiniGameRuleIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1523,11 +1555,11 @@ void ABP_MiniGameManager_C::OnStartMiniGame(int MiniGameRuleIndex)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.TimeJump
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          jumpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::TimeJump(float jumpTime)
+void ABP_MiniGameManager_C::STATIC_TimeJump(float jumpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.TimeJump");
 
@@ -1535,6 +1567,7 @@ void ABP_MiniGameManager_C::TimeJump(float jumpTime)
 	params.jumpTime = jumpTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1543,11 +1576,11 @@ void ABP_MiniGameManager_C::TimeJump(float jumpTime)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.PlayFishingShopAC
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            ResultRank                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::PlayFishingShopAC(int ResultRank)
+void ABP_MiniGameManager_C::STATIC_PlayFishingShopAC(int ResultRank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.PlayFishingShopAC");
 
@@ -1555,6 +1588,7 @@ void ABP_MiniGameManager_C::PlayFishingShopAC(int ResultRank)
 	params.ResultRank = ResultRank;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1563,7 +1597,7 @@ void ABP_MiniGameManager_C::PlayFishingShopAC(int ResultRank)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.ResetFishingTimeLimit
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::ResetFishingTimeLimit()
 {
@@ -1580,7 +1614,7 @@ void ABP_MiniGameManager_C::ResetFishingTimeLimit()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.FinishLoad
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::FinishLoad()
 {
@@ -1597,7 +1631,7 @@ void ABP_MiniGameManager_C::FinishLoad()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnEndMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::OnEndMiniGame()
 {
@@ -1614,7 +1648,7 @@ void ABP_MiniGameManager_C::OnEndMiniGame()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.LoadedCueSheet
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::LoadedCueSheet()
 {
@@ -1631,11 +1665,11 @@ void ABP_MiniGameManager_C::LoadedCueSheet()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGameManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameManager.BP_MiniGameManager_C.ReceiveEndPlay");
 
@@ -1643,6 +1677,7 @@ void ABP_MiniGameManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRe
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1651,7 +1686,7 @@ void ABP_MiniGameManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRe
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.UpdateMiniGameWinRate
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::UpdateMiniGameWinRate()
 {
@@ -1668,7 +1703,7 @@ void ABP_MiniGameManager_C::UpdateMiniGameWinRate()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.ExecuteUbergraph_BP_MiniGameManager
-// ()
+// (Exec, Native, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1680,6 +1715,7 @@ void ABP_MiniGameManager_C::ExecuteUbergraph_BP_MiniGameManager(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1688,7 +1724,7 @@ void ABP_MiniGameManager_C::ExecuteUbergraph_BP_MiniGameManager(int EntryPoint)
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnChangeDay__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::OnChangeDay__DelegateSignature()
 {
@@ -1697,6 +1733,7 @@ void ABP_MiniGameManager_C::OnChangeDay__DelegateSignature()
 	ABP_MiniGameManager_C_OnChangeDay__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1705,7 +1742,7 @@ void ABP_MiniGameManager_C::OnChangeDay__DelegateSignature()
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnClearCCB__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGameCCBattlePlace> Place                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1717,6 +1754,7 @@ void ABP_MiniGameManager_C::OnClearCCB__DelegateSignature(TEnumAsByte<E_MiniGame
 	params.Place = Place;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1725,7 +1763,7 @@ void ABP_MiniGameManager_C::OnClearCCB__DelegateSignature(TEnumAsByte<E_MiniGame
 
 
 // Function BP_MiniGameManager.BP_MiniGameManager_C.OnChangeMiniGameFlags__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_MiniGameManager_C::OnChangeMiniGameFlags__DelegateSignature()
 {
@@ -1734,6 +1772,7 @@ void ABP_MiniGameManager_C::OnChangeMiniGameFlags__DelegateSignature()
 	ABP_MiniGameManager_C_OnChangeMiniGameFlags__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

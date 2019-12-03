@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.SetNameAndPrice
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // struct FText                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   Price                          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -36,11 +36,11 @@ void UBPW_UI_RentalButton_C::SetNameAndPrice(const struct FText& Name, const str
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.SelectButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Select                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_RentalButton_C::SelectButton(bool Select)
+void UBPW_UI_RentalButton_C::STATIC_SelectButton(bool Select)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.SelectButton");
 
@@ -56,7 +56,7 @@ void UBPW_UI_RentalButton_C::SelectButton(bool Select)
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.FocusButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           Focus                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,6 +68,7 @@ void UBPW_UI_RentalButton_C::FocusButton(bool Focus)
 	params.Focus = Focus;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,7 +77,7 @@ void UBPW_UI_RentalButton_C::FocusButton(bool Focus)
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_RentalButton_C::Construct()
 {
@@ -93,7 +94,7 @@ void UBPW_UI_RentalButton_C::Construct()
 
 
 // Function BPW_UI_RentalButton.BPW_UI_RentalButton_C.ExecuteUbergraph_BPW_UI_RentalButton
-// ()
+// (Net, Native, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -105,6 +106,7 @@ void UBPW_UI_RentalButton_C::ExecuteUbergraph_BPW_UI_RentalButton(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

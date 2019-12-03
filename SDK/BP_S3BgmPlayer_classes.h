@@ -42,21 +42,21 @@ public:
 	void Restart();
 	void GetSound(class USoundAtomCue** AtomCue);
 	void GetCueName(struct FString* Name);
-	void SetPitch(float Pitch);
+	void STATIC_SetPitch(float Pitch);
 	void StopOnly(bool Reset);
-	void Pause();
-	void Stop(bool Reset, bool* Destroy);
-	void PlayFromStart();
+	void STATIC_Pause();
+	void STATIC_Stop(bool Reset, bool* Destroy);
+	void STATIC_PlayFromStart();
 	void Destroy();
 	void IsValidCue(bool* Valid);
 	void IsPlaying(bool* Playing);
 	void Play();
 	void SetVolume(float Volume);
-	void SetSound(class USoundAtomCue* Sound, bool* succes);
+	void STATIC_SetSound(class USoundAtomCue* Sound, bool* succes);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_S3BgmPlayer(int EntryPoint);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_S3BgmPlayer(int EntryPoint);
 };
 
 

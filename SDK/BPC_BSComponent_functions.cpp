@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_BSComponent.BPC_BSComponent_C.IntToGameTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          GameTime                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void UBPC_BSComponent_C::IntToGameTime(int Value, float* GameTime)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.ParseCurrentStepBsSchedule
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, NetServer)
 
 void UBPC_BSComponent_C::ParseCurrentStepBsSchedule()
 {
@@ -55,11 +55,11 @@ void UBPC_BSComponent_C::ParseCurrentStepBsSchedule()
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.ResetEventCount
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            newEventCount                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::ResetEventCount(int newEventCount)
+void UBPC_BSComponent_C::STATIC_ResetEventCount(int newEventCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.ResetEventCount");
 
@@ -75,11 +75,11 @@ void UBPC_BSComponent_C::ResetEventCount(int newEventCount)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.EventOnEnd
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::EventOnEnd(bool interrupted)
+void UBPC_BSComponent_C::STATIC_EventOnEnd(bool interrupted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.EventOnEnd");
 
@@ -95,13 +95,13 @@ void UBPC_BSComponent_C::EventOnEnd(bool interrupted)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.StringToGameTime
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 Time_String_                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           IsNumeric                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          GameTime                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::StringToGameTime(const struct FString& Time_String_, bool* IsNumeric, float* GameTime)
+void UBPC_BSComponent_C::STATIC_StringToGameTime(const struct FString& Time_String_, bool* IsNumeric, float* GameTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.StringToGameTime");
 
@@ -109,6 +109,7 @@ void UBPC_BSComponent_C::StringToGameTime(const struct FString& Time_String_, bo
 	params.Time_String_ = Time_String_;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,7 +123,7 @@ void UBPC_BSComponent_C::StringToGameTime(const struct FString& Time_String_, bo
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, NetServer)
 
 void UBPC_BSComponent_C::ReceiveBeginPlay()
 {
@@ -131,6 +132,7 @@ void UBPC_BSComponent_C::ReceiveBeginPlay()
 	UBPC_BSComponent_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,7 +141,7 @@ void UBPC_BSComponent_C::ReceiveBeginPlay()
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.OnStartBS
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, NetServer)
 
 void UBPC_BSComponent_C::OnStartBS()
 {
@@ -148,6 +150,7 @@ void UBPC_BSComponent_C::OnStartBS()
 	UBPC_BSComponent_C_OnStartBS_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,11 +159,11 @@ void UBPC_BSComponent_C::OnStartBS()
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.InitializeBSTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class US3TalkDataListBase*     TalkDataList                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::InitializeBSTalk(class US3TalkDataListBase* TalkDataList)
+void UBPC_BSComponent_C::STATIC_InitializeBSTalk(class US3TalkDataListBase* TalkDataList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.InitializeBSTalk");
 
@@ -176,11 +179,11 @@ void UBPC_BSComponent_C::InitializeBSTalk(class US3TalkDataListBase* TalkDataLis
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.OnStepChanged
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::OnStepChanged(int SetSteps)
+void UBPC_BSComponent_C::STATIC_OnStepChanged(int SetSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.OnStepChanged");
 
@@ -196,11 +199,11 @@ void UBPC_BSComponent_C::OnStepChanged(int SetSteps)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.OnBsEnableScheduleEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          receiveTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::OnBsEnableScheduleEvent(float receiveTime)
+void UBPC_BSComponent_C::STATIC_OnBsEnableScheduleEvent(float receiveTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.OnBsEnableScheduleEvent");
 
@@ -216,11 +219,11 @@ void UBPC_BSComponent_C::OnBsEnableScheduleEvent(float receiveTime)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.OnBsCountScheduleEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          receiveTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::OnBsCountScheduleEvent(float receiveTime)
+void UBPC_BSComponent_C::STATIC_OnBsCountScheduleEvent(float receiveTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.OnBsCountScheduleEvent");
 
@@ -236,11 +239,11 @@ void UBPC_BSComponent_C::OnBsCountScheduleEvent(float receiveTime)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.OnReceiveTimeEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EventIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::OnReceiveTimeEvent(int EventIndex)
+void UBPC_BSComponent_C::STATIC_OnReceiveTimeEvent(int EventIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.OnReceiveTimeEvent");
 
@@ -256,11 +259,11 @@ void UBPC_BSComponent_C::OnReceiveTimeEvent(int EventIndex)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_BSComponent_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.ReceiveEndPlay");
 
@@ -276,11 +279,11 @@ void UBPC_BSComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.ExecuteUbergraph_BPC_BSComponent
-// (HasDefaults)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BSComponent_C::ExecuteUbergraph_BPC_BSComponent(int EntryPoint)
+void UBPC_BSComponent_C::STATIC_ExecuteUbergraph_BPC_BSComponent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BSComponent.BPC_BSComponent_C.ExecuteUbergraph_BPC_BSComponent");
 
@@ -296,7 +299,7 @@ void UBPC_BSComponent_C::ExecuteUbergraph_BPC_BSComponent(int EntryPoint)
 
 
 // Function BPC_BSComponent.BPC_BSComponent_C.OnEndTalkEvent__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

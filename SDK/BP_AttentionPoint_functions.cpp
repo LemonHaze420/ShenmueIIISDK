@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AttentionPoint.BP_AttentionPoint_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_AttentionPoint_C::UserConstructionScript()
+void ABP_AttentionPoint_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionPoint.BP_AttentionPoint_C.UserConstructionScript");
 
 	ABP_AttentionPoint_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_AttentionPoint_C::UserConstructionScript()
 
 
 // Function BP_AttentionPoint.BP_AttentionPoint_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_AttentionPoint_C::ReceiveBeginPlay()
 {
@@ -40,6 +41,7 @@ void ABP_AttentionPoint_C::ReceiveBeginPlay()
 	ABP_AttentionPoint_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +50,11 @@ void ABP_AttentionPoint_C::ReceiveBeginPlay()
 
 
 // Function BP_AttentionPoint.BP_AttentionPoint_C.ExecuteUbergraph_BP_AttentionPoint
-// (HasDefaults)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttentionPoint_C::ExecuteUbergraph_BP_AttentionPoint(int EntryPoint)
+void ABP_AttentionPoint_C::STATIC_ExecuteUbergraph_BP_AttentionPoint(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionPoint.BP_AttentionPoint_C.ExecuteUbergraph_BP_AttentionPoint");
 
@@ -60,6 +62,7 @@ void ABP_AttentionPoint_C::ExecuteUbergraph_BP_AttentionPoint(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

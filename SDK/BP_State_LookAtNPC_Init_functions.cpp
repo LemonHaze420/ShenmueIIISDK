@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC_Init.BP_State_LookAtNPC_Init_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Init_C::StateEnter(float Delta, bool* bProcessing)
+void UBP_State_LookAtNPC_Init_C::STATIC_StateEnter(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Init.BP_State_LookAtNPC_Init_C.StateEnter");
 

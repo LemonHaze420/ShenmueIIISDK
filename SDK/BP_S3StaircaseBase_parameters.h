@@ -125,7 +125,7 @@ struct ABP_S3StaircaseBase_C_GetNextStepStopLocation_Params
 struct ABP_S3StaircaseBase_C_GetAngleInClimbDirection_Params
 {
 	struct FVector                                     InDirection;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-	bool                                               IsUp;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               isUp;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              OutAngle;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

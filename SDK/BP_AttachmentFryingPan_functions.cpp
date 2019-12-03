@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AttachmentFryingPan.BP_AttachmentFryingPan_C.CreateSmoke
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetClient, NetValidate)
 
 void ABP_AttachmentFryingPan_C::CreateSmoke()
 {
@@ -31,7 +31,7 @@ void ABP_AttachmentFryingPan_C::CreateSmoke()
 
 
 // Function BP_AttachmentFryingPan.BP_AttachmentFryingPan_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, DLLImport, NetValidate)
 
 void ABP_AttachmentFryingPan_C::UserConstructionScript()
 {
@@ -48,9 +48,9 @@ void ABP_AttachmentFryingPan_C::UserConstructionScript()
 
 
 // Function BP_AttachmentFryingPan.BP_AttachmentFryingPan_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void ABP_AttachmentFryingPan_C::ReceiveBeginPlay()
+void ABP_AttachmentFryingPan_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttachmentFryingPan.BP_AttachmentFryingPan_C.ReceiveBeginPlay");
 
@@ -65,7 +65,7 @@ void ABP_AttachmentFryingPan_C::ReceiveBeginPlay()
 
 
 // Function BP_AttachmentFryingPan.BP_AttachmentFryingPan_C.ExecuteUbergraph_BP_AttachmentFryingPan
-// ()
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetClient, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

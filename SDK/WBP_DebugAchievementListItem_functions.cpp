@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugAchievementListItem.WBP_DebugAchievementListItem_C.SetFocusToButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UWBP_DebugAchievementListItem_C::SetFocusToButton()
+void UWBP_DebugAchievementListItem_C::STATIC_SetFocusToButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievementListItem.WBP_DebugAchievementListItem_C.SetFocusToButton");
 
 	UWBP_DebugAchievementListItem_C_SetFocusToButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void UWBP_DebugAchievementListItem_C::SetFocusToButton()
 
 
 // Function WBP_DebugAchievementListItem.WBP_DebugAchievementListItem_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugAchievementListItem_C::Construct()
+void UWBP_DebugAchievementListItem_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievementListItem.WBP_DebugAchievementListItem_C.Construct");
 
@@ -48,9 +49,9 @@ void UWBP_DebugAchievementListItem_C::Construct()
 
 
 // Function WBP_DebugAchievementListItem.WBP_DebugAchievementListItem_C.BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugAchievementListItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature()
+void UWBP_DebugAchievementListItem_C::STATIC_BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievementListItem.WBP_DebugAchievementListItem_C.BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature");
 
@@ -65,7 +66,7 @@ void UWBP_DebugAchievementListItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_
 
 
 // Function WBP_DebugAchievementListItem.WBP_DebugAchievementListItem_C.ExecuteUbergraph_WBP_DebugAchievementListItem
-// (HasDefaults)
+// (NetMulticast, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

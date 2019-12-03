@@ -36,7 +36,7 @@ public:
 
 
 	void Update();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_PCGroundSensor(int EntryPoint);
 };
 

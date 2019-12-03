@@ -67,13 +67,13 @@ public:
 	}
 
 
-	void SetIdleSequencePlayRate(float PlayRate);
+	void STATIC_SetIdleSequencePlayRate(float PlayRate);
 	void SetEyeCloseBlend(float Value);
 	bool IsIdle();
 	void GetCurrentIdleRatio(float* CurrentIdleRatio);
 	void UpdateElapsedTime(float InputPin);
-	void Initialize();
-	void SetAnimData(class UAnimSequenceBase* AnimPunchImpact, class UAnimSequenceBase* AnimPunchIdle, class UAnimSequenceBase* AnimReturn, float IdleSequencePlayRate, float PunchPlayRate);
+	void STATIC_Initialize();
+	void STATIC_SetAnimData(class UAnimSequenceBase* AnimPunchImpact, class UAnimSequenceBase* AnimPunchIdle, class UAnimSequenceBase* AnimReturn, float IdleSequencePlayRate, float PunchPlayRate);
 	void IsPunch(bool* bPunch);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Sunken_AnimGraphNode_SequencePlayer_C74B94404D472843971E329619833DA1();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Sunken_AnimGraphNode_SequencePlayer_F487C94E413F6AEE1C8F98B2B2343752();
@@ -84,13 +84,13 @@ public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Sunken_AnimGraphNode_LayeredBoneBlend_701B519046BD4CA6C06B13AD286B66A5();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Sunken_AnimGraphNode_TransitionResult_5DA748424A14038F907AAAA229D1F70E();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Sunken_AnimGraphNode_TransitionResult_1A0318E6466B55B60ED7AE9F6C1502D2();
-	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
 	void BlueprintBeginPlay();
 	void AnimNotify_TransEndReturnFromPunch();
 	void AnimNotify_TransEndIdleFromReturn();
 	void AnimNotify_TransStartIdleFromReturn();
 	void AnimNotify_MoveStart();
-	void ExecuteUbergraph_ABP_MiniGame_Sunken(int EntryPoint);
+	void STATIC_ExecuteUbergraph_ABP_MiniGame_Sunken(int EntryPoint);
 	void Dispatcher_PunchEnd__DelegateSignature();
 };
 

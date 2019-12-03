@@ -31,7 +31,7 @@ public:
 
 
 	void Construct();
-	void ExecuteUbergraph_UI_TestExit(int EntryPoint);
+	void STATIC_ExecuteUbergraph_UI_TestExit(int EntryPoint);
 };
 
 

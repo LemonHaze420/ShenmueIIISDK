@@ -39,16 +39,16 @@ public:
 	}
 
 
-	void SetPropertyValue(unsigned char Byte, bool CallDispatcher);
+	void STATIC_SetPropertyValue(unsigned char Byte, bool CallDispatcher);
 	void GetPropertyValue(unsigned char* Byte);
 	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	struct FText GetParameterName();
+	struct FText STATIC_GetParameterName();
 	void Construct();
-	void BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void STATIC_BndEvt__EnumComboBox_K2Node_ComponentBoundEvent_294_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void SetStartingValue();
 	void PropertyChanged();
-	void ExecuteUbergraph_BW_EnumProperty(int EntryPoint);
-	void EnumPropertyChanged__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BW_EnumProperty(int EntryPoint);
+	void STATIC_EnumPropertyChanged__DelegateSignature();
 };
 
 

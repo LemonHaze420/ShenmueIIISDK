@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.SetIconImageSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector2D               DesiredSize                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UWBP_MiniGameCommon_C::SetIconImageSize(const struct FVector2D& DesiredSize
 	params.DesiredSize = DesiredSize;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UWBP_MiniGameCommon_C::SetIconImageSize(const struct FVector2D& DesiredSize
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.SetVisibleButtonIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,6 +47,7 @@ void UWBP_MiniGameCommon_C::SetVisibleButtonIcon(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +56,7 @@ void UWBP_MiniGameCommon_C::SetVisibleButtonIcon(bool Visible)
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -68,6 +70,7 @@ void UWBP_MiniGameCommon_C::Tick(const struct FGeometry& MyGeometry, float InDel
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,15 +79,16 @@ void UWBP_MiniGameCommon_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 
-void UWBP_MiniGameCommon_C::Construct()
+void UWBP_MiniGameCommon_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.Construct");
 
 	UWBP_MiniGameCommon_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,11 +97,11 @@ void UWBP_MiniGameCommon_C::Construct()
 
 
 // Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.ExecuteUbergraph_WBP_MiniGameCommon
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameCommon_C::ExecuteUbergraph_WBP_MiniGameCommon(int EntryPoint)
+void UWBP_MiniGameCommon_C::STATIC_ExecuteUbergraph_WBP_MiniGameCommon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameCommon.WBP_MiniGameCommon_C.ExecuteUbergraph_WBP_MiniGameCommon");
 
@@ -105,6 +109,7 @@ void UWBP_MiniGameCommon_C::ExecuteUbergraph_WBP_MiniGameCommon(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

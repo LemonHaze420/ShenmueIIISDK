@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_GeneralWindow_Image.BPW_UI_GeneralWindow_Image_C.SetData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FVector2D               Size                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UBPW_UI_GeneralWindow_Image_C::SetData(const struct FVector2D& Size)
 	params.Size = Size;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

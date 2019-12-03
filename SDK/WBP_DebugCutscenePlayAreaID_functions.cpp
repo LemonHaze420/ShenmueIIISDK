@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugCutscenePlayAreaID.WBP_DebugCutscenePlayAreaID_C.UpdateText
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
 
 void UWBP_DebugCutscenePlayAreaID_C::UpdateText()
 {
@@ -31,11 +31,11 @@ void UWBP_DebugCutscenePlayAreaID_C::UpdateText()
 
 
 // Function WBP_DebugCutscenePlayAreaID.WBP_DebugCutscenePlayAreaID_C.SetCutsceneID
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   InCutsceneID                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_DebugCutscenePlayAreaID_C::SetCutsceneID(const struct FName& InCutsceneID)
+void UWBP_DebugCutscenePlayAreaID_C::STATIC_SetCutsceneID(const struct FName& InCutsceneID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugCutscenePlayAreaID.WBP_DebugCutscenePlayAreaID_C.SetCutsceneID");
 
@@ -43,6 +43,7 @@ void UWBP_DebugCutscenePlayAreaID_C::SetCutsceneID(const struct FName& InCutscen
 	params.InCutsceneID = InCutsceneID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

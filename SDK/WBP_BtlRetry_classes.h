@@ -38,16 +38,16 @@ public:
 	}
 
 
-	void SetTextByLabel(class UTextBlock* TextWidget, const struct FName& Label, ES3TextPathType Type, bool* Valid);
+	void STATIC_SetTextByLabel(class UTextBlock* TextWidget, const struct FName& Label, ES3TextPathType Type, bool* Valid);
 	void SetImageVisibilty(const struct FName& TextID);
 	void SetAllOpacity(float Delta);
-	void PushEvent();
+	void STATIC_PushEvent();
 	void ChangeLocationText(const struct FName& UI_Text_ID);
 	void GetTargetText(const struct FName& UI_Text_ID, ES3TextPathType Type, struct FText* TargetText, bool* Null_Error);
 	void ChangeText(const struct FName& UI_Text_ID);
-	void Construct();
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_BtlRetry(int EntryPoint);
 };
 

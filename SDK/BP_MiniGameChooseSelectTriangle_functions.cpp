@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.DestroyTriangle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_MiniGameChooseSelectTriangle_C::DestroyTriangle()
 {
@@ -23,6 +23,7 @@ void ABP_MiniGameChooseSelectTriangle_C::DestroyTriangle()
 	ABP_MiniGameChooseSelectTriangle_C_DestroyTriangle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,12 +32,12 @@ void ABP_MiniGameChooseSelectTriangle_C::DestroyTriangle()
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.SetLocationAndRotation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UCameraComponent*        Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_MiniGameChooseSelectTriangle_C::SetLocationAndRotation(class AActor* TargetActor, class UCameraComponent* Camera)
+void ABP_MiniGameChooseSelectTriangle_C::STATIC_SetLocationAndRotation(class AActor* TargetActor, class UCameraComponent* Camera)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.SetLocationAndRotation");
 
@@ -53,7 +54,7 @@ void ABP_MiniGameChooseSelectTriangle_C::SetLocationAndRotation(class AActor* Ta
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.UpdateVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -65,6 +66,7 @@ void ABP_MiniGameChooseSelectTriangle_C::UpdateVisible(int InputPin)
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +75,7 @@ void ABP_MiniGameChooseSelectTriangle_C::UpdateVisible(int InputPin)
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.SetMiniGameLastIndex
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            MiniGameLastIndex              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -93,15 +95,16 @@ void ABP_MiniGameChooseSelectTriangle_C::SetMiniGameLastIndex(int MiniGameLastIn
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGameChooseSelectTriangle_C::UserConstructionScript()
+void ABP_MiniGameChooseSelectTriangle_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.UserConstructionScript");
 
 	ABP_MiniGameChooseSelectTriangle_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,9 +113,9 @@ void ABP_MiniGameChooseSelectTriangle_C::UserConstructionScript()
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameChooseSelectTriangle_C::ReceiveBeginPlay()
+void ABP_MiniGameChooseSelectTriangle_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveBeginPlay");
 
@@ -127,11 +130,11 @@ void ABP_MiniGameChooseSelectTriangle_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChooseSelectTriangle_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGameChooseSelectTriangle_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ReceiveEndPlay");
 
@@ -147,7 +150,7 @@ void ABP_MiniGameChooseSelectTriangle_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReas
 
 
 // Function BP_MiniGameChooseSelectTriangle.BP_MiniGameChooseSelectTriangle_C.ExecuteUbergraph_BP_MiniGameChooseSelectTriangle
-// (HasDefaults)
+// (Net, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

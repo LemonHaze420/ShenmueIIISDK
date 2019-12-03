@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_TurnAroundBreakout.BP_AnimNotify_TurnAroundBreakout_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_TurnAroundBreakout_C::GetNotifyName()
+struct FString UBP_AnimNotify_TurnAroundBreakout_C::STATIC_GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_TurnAroundBreakout.BP_AnimNotify_TurnAroundBreakout_C.GetNotifyName");
 
@@ -35,7 +35,7 @@ struct FString UBP_AnimNotify_TurnAroundBreakout_C::GetNotifyName()
 
 
 // Function BP_AnimNotify_TurnAroundBreakout.BP_AnimNotify_TurnAroundBreakout_C.Received_Notify
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, Exec, Native, NetMulticast, Private, Protected, NetClient, NetValidate)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -50,6 +50,7 @@ bool UBP_AnimNotify_TurnAroundBreakout_C::Received_Notify(class USkeletalMeshCom
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_AddressPage_1.wgt_AddressPage_0_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void Uwgt_AddressPage_0_C::Construct()
 {
@@ -23,6 +23,7 @@ void Uwgt_AddressPage_0_C::Construct()
 	Uwgt_AddressPage_0_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void Uwgt_AddressPage_0_C::Construct()
 
 
 // Function wgt_AddressPage_1.wgt_AddressPage_0_C.PushButton
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FVector2D               positiopn                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -51,7 +52,7 @@ void Uwgt_AddressPage_0_C::PushButton(const struct FVector2D& positiopn)
 
 
 // Function wgt_AddressPage_1.wgt_AddressPage_0_C.SetPageIndex
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -71,11 +72,11 @@ void Uwgt_AddressPage_0_C::SetPageIndex(int PageIndex)
 
 
 // Function wgt_AddressPage_1.wgt_AddressPage_0_C.ExecuteUbergraph_wgt_AddressPage_1
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_AddressPage_0_C::ExecuteUbergraph_wgt_AddressPage_1(int EntryPoint)
+void Uwgt_AddressPage_0_C::STATIC_ExecuteUbergraph_wgt_AddressPage_1(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_AddressPage_1.wgt_AddressPage_0_C.ExecuteUbergraph_wgt_AddressPage_1");
 
@@ -83,6 +84,7 @@ void Uwgt_AddressPage_0_C::ExecuteUbergraph_wgt_AddressPage_1(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

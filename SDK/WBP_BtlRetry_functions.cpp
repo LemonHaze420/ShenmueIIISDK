@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.SetTextByLabel
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTextBlock*              TextWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Valid                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_BtlRetry_C::SetTextByLabel(class UTextBlock* TextWidget, const struct FName& Label, ES3TextPathType Type, bool* Valid)
+void UWBP_BtlRetry_C::STATIC_SetTextByLabel(class UTextBlock* TextWidget, const struct FName& Label, ES3TextPathType Type, bool* Valid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_BtlRetry.WBP_BtlRetry_C.SetTextByLabel");
 
@@ -31,6 +31,7 @@ void UWBP_BtlRetry_C::SetTextByLabel(class UTextBlock* TextWidget, const struct 
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,7 +43,7 @@ void UWBP_BtlRetry_C::SetTextByLabel(class UTextBlock* TextWidget, const struct 
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.SetImageVisibilty
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   TextID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -62,7 +63,7 @@ void UWBP_BtlRetry_C::SetImageVisibilty(const struct FName& TextID)
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.SetAllOpacity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -82,15 +83,16 @@ void UWBP_BtlRetry_C::SetAllOpacity(float Delta)
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.PushEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UWBP_BtlRetry_C::PushEvent()
+void UWBP_BtlRetry_C::STATIC_PushEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_BtlRetry.WBP_BtlRetry_C.PushEvent");
 
 	UWBP_BtlRetry_C_PushEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,7 +101,7 @@ void UWBP_BtlRetry_C::PushEvent()
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.ChangeLocationText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   UI_Text_ID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -111,6 +113,7 @@ void UWBP_BtlRetry_C::ChangeLocationText(const struct FName& UI_Text_ID)
 	params.UI_Text_ID = UI_Text_ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,7 +122,7 @@ void UWBP_BtlRetry_C::ChangeLocationText(const struct FName& UI_Text_ID)
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.GetTargetText
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   UI_Text_ID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -135,6 +138,7 @@ void UWBP_BtlRetry_C::GetTargetText(const struct FName& UI_Text_ID, ES3TextPathT
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,7 +152,7 @@ void UWBP_BtlRetry_C::GetTargetText(const struct FName& UI_Text_ID, ES3TextPathT
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.ChangeText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   UI_Text_ID                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -168,9 +172,9 @@ void UWBP_BtlRetry_C::ChangeText(const struct FName& UI_Text_ID)
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UWBP_BtlRetry_C::Construct()
+void UWBP_BtlRetry_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_BtlRetry.WBP_BtlRetry_C.Construct");
 
@@ -185,7 +189,7 @@ void UWBP_BtlRetry_C::Construct()
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, Public, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -199,6 +203,7 @@ void UWBP_BtlRetry_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -207,11 +212,11 @@ void UWBP_BtlRetry_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_BtlRetry_C::PreConstruct(bool IsDesignTime)
+void UWBP_BtlRetry_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_BtlRetry.WBP_BtlRetry_C.PreConstruct");
 
@@ -219,6 +224,7 @@ void UWBP_BtlRetry_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,7 +233,7 @@ void UWBP_BtlRetry_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_BtlRetry.WBP_BtlRetry_C.ExecuteUbergraph_WBP_BtlRetry
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -239,6 +245,7 @@ void UWBP_BtlRetry_C::ExecuteUbergraph_WBP_BtlRetry(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

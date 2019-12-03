@@ -25,11 +25,11 @@ public:
 	}
 
 
-	void STATIC_GetS3PostProcessAnimInstance(class AActor* Actor, class UObject* __WorldContext, class US3PostProcessAnimInstance** AnimInstance);
+	void GetS3PostProcessAnimInstance(class AActor* Actor, class UObject* __WorldContext, class US3PostProcessAnimInstance** AnimInstance);
 	void STATIC_ChangeMaterial(class USkeletalMeshComponent* Component, EClothPartsType Type, class UMaterialInterface* Material, class UObject* __WorldContext);
 	void STATIC_SetDisablePostProcessPhysics(class USkeletalMeshComponent* Component, bool Disable, class UObject* __WorldContext);
 	void STATIC_GetFaceSubAnimInstance(class USkeletalMeshComponent* Component, class UObject* __WorldContext, class USubABP_CharacterBase_C** SubABP);
-	void STATIC_TryGetSocketLocation(class USceneComponent* Target, const struct FName& InSocketName, class UObject* __WorldContext, bool* Result, struct FVector* Location);
+	void TryGetSocketLocation(class USceneComponent* Target, const struct FName& InSocketName, class UObject* __WorldContext, bool* Result, struct FVector* Location);
 };
 
 

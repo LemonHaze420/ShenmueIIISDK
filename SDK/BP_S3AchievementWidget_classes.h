@@ -31,7 +31,7 @@ public:
 
 	void SetAchievementName(const struct FString& AchievementName);
 	void Construct();
-	void ExecuteUbergraph_BP_S3AchievementWidget(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_S3AchievementWidget(int EntryPoint);
 };
 
 

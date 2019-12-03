@@ -33,8 +33,8 @@ public:
 	}
 
 
-	void GetInteractActor(int InIndex, class AActor** Actor);
-	void StateExit(float Delta, bool* bProcessing);
+	void STATIC_GetInteractActor(int InIndex, class AActor** Actor);
+	void STATIC_StateExit(float Delta, bool* bProcessing);
 	void StateEnter(float Delta, bool* bProcessing);
 	void StateUpdate(float Delta, bool* bDummy);
 };

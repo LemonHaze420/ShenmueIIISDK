@@ -47,10 +47,10 @@ public:
 	}
 
 
-	void SetForegroundVisible(bool Visible);
+	void STATIC_SetForegroundVisible(bool Visible);
 	void SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color);
 	void SetBackgroundTexture(class UTexture2D* Background);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_OrbRingMeter(int EntryPoint);
 };
 

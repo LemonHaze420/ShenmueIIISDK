@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function FlareWidget.FlareWidget_C.ForceVisiblityOff
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UFlareWidget_C::ForceVisiblityOff()
+void UFlareWidget_C::STATIC_ForceVisiblityOff()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FlareWidget.FlareWidget_C.ForceVisiblityOff");
 
@@ -31,11 +31,11 @@ void UFlareWidget_C::ForceVisiblityOff()
 
 
 // Function FlareWidget.FlareWidget_C.Get_FlareImage_Brush_1
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSlateBrush UFlareWidget_C::Get_FlareImage_Brush_1()
+struct FSlateBrush UFlareWidget_C::STATIC_Get_FlareImage_Brush_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FlareWidget.FlareWidget_C.Get_FlareImage_Brush_1");
 
@@ -52,7 +52,7 @@ struct FSlateBrush UFlareWidget_C::Get_FlareImage_Brush_1()
 
 
 // Function FlareWidget.FlareWidget_C.OcclusionOpacityUpdate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
 void UFlareWidget_C::OcclusionOpacityUpdate()
 {
@@ -69,7 +69,7 @@ void UFlareWidget_C::OcclusionOpacityUpdate()
 
 
 // Function FlareWidget.FlareWidget_C.Initialize
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          OffsetAmount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ParentLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -133,12 +133,12 @@ void UFlareWidget_C::Initialize(float OffsetAmount, const struct FVector& Parent
 
 
 // Function FlareWidget.FlareWidget_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UFlareWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UFlareWidget_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FlareWidget.FlareWidget_C.Tick");
 
@@ -147,6 +147,7 @@ void UFlareWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,7 +156,7 @@ void UFlareWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 
 
 // Function FlareWidget.FlareWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void UFlareWidget_C::Construct()
 {
@@ -164,6 +165,7 @@ void UFlareWidget_C::Construct()
 	UFlareWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -172,12 +174,12 @@ void UFlareWidget_C::Construct()
 
 
 // Function FlareWidget.FlareWidget_C.ChangePlayerBehavior
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3PlayerBehavior              NewId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PlayerBehavior              OldId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UFlareWidget_C::ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
+void UFlareWidget_C::STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function FlareWidget.FlareWidget_C.ChangePlayerBehavior");
 
@@ -186,6 +188,7 @@ void UFlareWidget_C::ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBeha
 	params.OldId = OldId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,7 +197,7 @@ void UFlareWidget_C::ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBeha
 
 
 // Function FlareWidget.FlareWidget_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void UFlareWidget_C::Destruct()
 {
@@ -211,7 +214,7 @@ void UFlareWidget_C::Destruct()
 
 
 // Function FlareWidget.FlareWidget_C.ExecuteUbergraph_FlareWidget
-// (HasDefaults)
+// (NetMulticast, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -231,7 +234,7 @@ void UFlareWidget_C::ExecuteUbergraph_FlareWidget(int EntryPoint)
 
 
 // Function FlareWidget.FlareWidget_C.NewEventDispatcher_0__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 
 void UFlareWidget_C::NewEventDispatcher_0__DelegateSignature()
 {

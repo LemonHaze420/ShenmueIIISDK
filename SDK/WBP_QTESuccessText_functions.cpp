@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTESuccessText.WBP_QTESuccessText_C.SetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_QTESuccessText_C::SetText(const struct FText& Text)
+void UWBP_QTESuccessText_C::STATIC_SetText(const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESuccessText.WBP_QTESuccessText_C.SetText");
 
@@ -26,6 +26,7 @@ void UWBP_QTESuccessText_C::SetText(const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,11 +35,11 @@ void UWBP_QTESuccessText_C::SetText(const struct FText& Text)
 
 
 // Function WBP_QTESuccessText.WBP_QTESuccessText_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTESuccessText_C::PreConstruct(bool IsDesignTime)
+void UWBP_QTESuccessText_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESuccessText.WBP_QTESuccessText_C.PreConstruct");
 
@@ -46,6 +47,7 @@ void UWBP_QTESuccessText_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +56,11 @@ void UWBP_QTESuccessText_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_QTESuccessText.WBP_QTESuccessText_C.ExecuteUbergraph_WBP_QTESuccessText
-// (HasDefaults)
+// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTESuccessText_C::ExecuteUbergraph_WBP_QTESuccessText(int EntryPoint)
+void UWBP_QTESuccessText_C::STATIC_ExecuteUbergraph_WBP_QTESuccessText(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESuccessText.WBP_QTESuccessText_C.ExecuteUbergraph_WBP_QTESuccessText");
 

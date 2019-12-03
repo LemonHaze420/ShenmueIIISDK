@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SortSkillsForPractice.BP_SortSkillsForPractice_C.Compare
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // struct FName                   A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   B                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -29,6 +29,7 @@ bool UBP_SortSkillsForPractice_C::Compare(const struct FName& A, const struct FN
 	params.B = B;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

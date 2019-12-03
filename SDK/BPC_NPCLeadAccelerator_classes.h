@@ -34,13 +34,13 @@ public:
 
 
 	void SetSpeedInstant(float Speed);
-	void GetTargetSpeed(float* TargetSpeed);
-	float ClampSpeed(float Value);
-	float MapToSpeedRange(float Value, float InRangeA, float InRangeB);
-	void SetTargetSpeed(float TargetSpeed);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void Reset();
+	void STATIC_GetTargetSpeed(float* TargetSpeed);
+	float STATIC_ClampSpeed(float Value);
+	float STATIC_MapToSpeedRange(float Value, float InRangeA, float InRangeB);
+	void STATIC_SetTargetSpeed(float TargetSpeed);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_Reset();
 	void ExecuteUbergraph_BPC_NPCLeadAccelerator(int EntryPoint);
 };
 

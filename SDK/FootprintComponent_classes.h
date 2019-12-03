@@ -47,20 +47,20 @@ public:
 	}
 
 
-	class UFootprintTypeBase_C* GetLastFootprintType();
-	void CanCheck(bool* CAN);
+	class UFootprintTypeBase_C* STATIC_GetLastFootprintType();
+	void STATIC_CanCheck(bool* CAN);
 	bool BoxTraceGround(const struct FVector& Start, const struct FVector& End, const struct FRotator& Orientation, struct FHitResult* OutHit);
 	void ChooseCue(class USoundAtomCue** Cue);
-	bool TraceGround(const struct FVector& Location, struct FHitResult* OutHit);
-	void IsRainy(bool* Rainy, float* Rate);
+	bool STATIC_TraceGround(const struct FVector& Location, struct FHitResult* OutHit);
+	void STATIC_IsRainy(bool* Rainy, float* Rate);
 	void PlayFootprintAtomCue(const struct FVector& Location, const struct FString& SelectorLabel, bool ApplyRain, const struct FString& OverlapRainLabel);
-	void SpawnParticles(const struct FVector& Location, const struct FRotator& Rotation, class UParticleSystem* ParticleSystem);
-	void SpawnDecal(const struct FVector& Location, float Rotation, const struct FVector& Size, class UMaterialInterface* Material, float LifeSpan, float OriginalOpacity);
-	void OnFootprintTypeChange(class UFootprintTypeBase_C* OldType, class UFootprintTypeBase_C* NewType);
-	void GetFootprintTypeFromPhysicalMaterial(class UPhysicalMaterial* PhysicalMaterial, class UFootprintTypeBase_C** FootprintType);
-	void OnFootFall(const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<ENEFootType> FootType);
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_SpawnParticles(const struct FVector& Location, const struct FRotator& Rotation, class UParticleSystem* ParticleSystem);
+	void STATIC_SpawnDecal(const struct FVector& Location, float Rotation, const struct FVector& Size, class UMaterialInterface* Material, float LifeSpan, float OriginalOpacity);
+	void STATIC_OnFootprintTypeChange(class UFootprintTypeBase_C* OldType, class UFootprintTypeBase_C* NewType);
+	void STATIC_GetFootprintTypeFromPhysicalMaterial(class UPhysicalMaterial* PhysicalMaterial, class UFootprintTypeBase_C** FootprintType);
+	void STATIC_OnFootFall(const struct FVector& Location, const struct FRotator& Rotation, TEnumAsByte<ENEFootType> FootType);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_FootprintComponent(int EntryPoint);
 };
 

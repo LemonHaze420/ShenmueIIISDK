@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugReward.BW_DebugReward_C.UpdateRewardState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent)
 
 void UBW_DebugReward_C::UpdateRewardState()
 {
@@ -23,6 +23,7 @@ void UBW_DebugReward_C::UpdateRewardState()
 	UBW_DebugReward_C_UpdateRewardState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void UBW_DebugReward_C::UpdateRewardState()
 
 
 // Function BW_DebugReward.BW_DebugReward_C.ChangeCheck
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UCheckBox*               CheckBox                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_DebugReward_C::ChangeCheck(class UCheckBox* CheckBox)
+void UBW_DebugReward_C::STATIC_ChangeCheck(class UCheckBox* CheckBox)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.ChangeCheck");
 
@@ -43,6 +44,7 @@ void UBW_DebugReward_C::ChangeCheck(class UCheckBox* CheckBox)
 	params.CheckBox = CheckBox;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +53,7 @@ void UBW_DebugReward_C::ChangeCheck(class UCheckBox* CheckBox)
 
 
 // Function BW_DebugReward.BW_DebugReward_C.SetBackerId
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -63,6 +65,7 @@ void UBW_DebugReward_C::SetBackerId(const struct FName& ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +74,7 @@ void UBW_DebugReward_C::SetBackerId(const struct FName& ID)
 
 
 // Function BW_DebugReward.BW_DebugReward_C.ShowBackerId
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -82,6 +85,7 @@ struct FText UBW_DebugReward_C::ShowBackerId()
 	UBW_DebugReward_C_ShowBackerId_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +96,7 @@ struct FText UBW_DebugReward_C::ShowBackerId()
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__BackerTextBox_K2Node_ComponentBoundEvent_133_OnEditableTextBoxCommittedEvent__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -114,12 +118,12 @@ void UBW_DebugReward_C::BndEvt__BackerTextBox_K2Node_ComponentBoundEvent_133_OnE
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__PresetId_K2Node_ComponentBoundEvent_101_OnEditableTextBoxCommittedEvent__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugReward_C::BndEvt__PresetId_K2Node_ComponentBoundEvent_101_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
+void UBW_DebugReward_C::STATIC_BndEvt__PresetId_K2Node_ComponentBoundEvent_101_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__PresetId_K2Node_ComponentBoundEvent_101_OnEditableTextBoxCommittedEvent__DelegateSignature");
 
@@ -136,15 +140,16 @@ void UBW_DebugReward_C::BndEvt__PresetId_K2Node_ComponentBoundEvent_101_OnEditab
 
 
 // Function BW_DebugReward.BW_DebugReward_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::Construct()
+void UBW_DebugReward_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.Construct");
 
 	UBW_DebugReward_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,15 +158,16 @@ void UBW_DebugReward_C::Construct()
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_62_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_62_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_62_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_62_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugReward_C_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_62_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -170,15 +176,16 @@ void UBW_DebugReward_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_62_OnButto
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__JacketButton_K2Node_ComponentBoundEvent_1139_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__JacketButton_K2Node_ComponentBoundEvent_1139_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__JacketButton_K2Node_ComponentBoundEvent_1139_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__JacketButton_K2Node_ComponentBoundEvent_1139_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugReward_C_BndEvt__JacketButton_K2Node_ComponentBoundEvent_1139_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,15 +194,16 @@ void UBW_DebugReward_C::BndEvt__JacketButton_K2Node_ComponentBoundEvent_1139_OnB
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__GachaButton_K2Node_ComponentBoundEvent_1188_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__GachaButton_K2Node_ComponentBoundEvent_1188_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__GachaButton_K2Node_ComponentBoundEvent_1188_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__GachaButton_K2Node_ComponentBoundEvent_1188_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugReward_C_BndEvt__GachaButton_K2Node_ComponentBoundEvent_1188_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,15 +212,16 @@ void UBW_DebugReward_C::BndEvt__GachaButton_K2Node_ComponentBoundEvent_1188_OnBu
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__Toy1Button_K2Node_ComponentBoundEvent_1237_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__Toy1Button_K2Node_ComponentBoundEvent_1237_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__Toy1Button_K2Node_ComponentBoundEvent_1237_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__Toy1Button_K2Node_ComponentBoundEvent_1237_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugReward_C_BndEvt__Toy1Button_K2Node_ComponentBoundEvent_1237_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,15 +230,16 @@ void UBW_DebugReward_C::BndEvt__Toy1Button_K2Node_ComponentBoundEvent_1237_OnBut
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__ToyAllButton_K2Node_ComponentBoundEvent_1286_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__ToyAllButton_K2Node_ComponentBoundEvent_1286_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__ToyAllButton_K2Node_ComponentBoundEvent_1286_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__ToyAllButton_K2Node_ComponentBoundEvent_1286_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugReward_C_BndEvt__ToyAllButton_K2Node_ComponentBoundEvent_1286_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -238,9 +248,9 @@ void UBW_DebugReward_C::BndEvt__ToyAllButton_K2Node_ComponentBoundEvent_1286_OnB
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__AdvanceButton_K2Node_ComponentBoundEvent_1362_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__AdvanceButton_K2Node_ComponentBoundEvent_1362_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__AdvanceButton_K2Node_ComponentBoundEvent_1362_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__AdvanceButton_K2Node_ComponentBoundEvent_1362_OnButtonClickedEvent__DelegateSignature");
 
@@ -255,9 +265,9 @@ void UBW_DebugReward_C::BndEvt__AdvanceButton_K2Node_ComponentBoundEvent_1362_On
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__SpecialPButton_K2Node_ComponentBoundEvent_1411_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__SpecialPButton_K2Node_ComponentBoundEvent_1411_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__SpecialPButton_K2Node_ComponentBoundEvent_1411_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__SpecialPButton_K2Node_ComponentBoundEvent_1411_OnButtonClickedEvent__DelegateSignature");
 
@@ -272,9 +282,9 @@ void UBW_DebugReward_C::BndEvt__SpecialPButton_K2Node_ComponentBoundEvent_1411_O
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__SpecialHButton_K2Node_ComponentBoundEvent_1460_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__SpecialHButton_K2Node_ComponentBoundEvent_1460_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__SpecialHButton_K2Node_ComponentBoundEvent_1460_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__SpecialHButton_K2Node_ComponentBoundEvent_1460_OnButtonClickedEvent__DelegateSignature");
 
@@ -289,9 +299,9 @@ void UBW_DebugReward_C::BndEvt__SpecialHButton_K2Node_ComponentBoundEvent_1460_O
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__ArcaneButton_K2Node_ComponentBoundEvent_1509_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__ArcaneButton_K2Node_ComponentBoundEvent_1509_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__ArcaneButton_K2Node_ComponentBoundEvent_1509_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__ArcaneButton_K2Node_ComponentBoundEvent_1509_OnButtonClickedEvent__DelegateSignature");
 
@@ -306,9 +316,9 @@ void UBW_DebugReward_C::BndEvt__ArcaneButton_K2Node_ComponentBoundEvent_1509_OnB
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__RodButton_K2Node_ComponentBoundEvent_1558_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__RodButton_K2Node_ComponentBoundEvent_1558_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__RodButton_K2Node_ComponentBoundEvent_1558_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__RodButton_K2Node_ComponentBoundEvent_1558_OnButtonClickedEvent__DelegateSignature");
 
@@ -323,9 +333,9 @@ void UBW_DebugReward_C::BndEvt__RodButton_K2Node_ComponentBoundEvent_1558_OnButt
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__PictureButton_K2Node_ComponentBoundEvent_1607_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__PictureButton_K2Node_ComponentBoundEvent_1607_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__PictureButton_K2Node_ComponentBoundEvent_1607_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__PictureButton_K2Node_ComponentBoundEvent_1607_OnButtonClickedEvent__DelegateSignature");
 
@@ -340,9 +350,9 @@ void UBW_DebugReward_C::BndEvt__PictureButton_K2Node_ComponentBoundEvent_1607_On
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__OtoshidamaButton_K2Node_ComponentBoundEvent_1656_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__OtoshidamaButton_K2Node_ComponentBoundEvent_1656_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__OtoshidamaButton_K2Node_ComponentBoundEvent_1656_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__OtoshidamaButton_K2Node_ComponentBoundEvent_1656_OnButtonClickedEvent__DelegateSignature");
 
@@ -357,9 +367,9 @@ void UBW_DebugReward_C::BndEvt__OtoshidamaButton_K2Node_ComponentBoundEvent_1656
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__FlowerButton_K2Node_ComponentBoundEvent_1705_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__FlowerButton_K2Node_ComponentBoundEvent_1705_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__FlowerButton_K2Node_ComponentBoundEvent_1705_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__FlowerButton_K2Node_ComponentBoundEvent_1705_OnButtonClickedEvent__DelegateSignature");
 
@@ -374,9 +384,9 @@ void UBW_DebugReward_C::BndEvt__FlowerButton_K2Node_ComponentBoundEvent_1705_OnB
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__FudaButton_K2Node_ComponentBoundEvent_1754_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__FudaButton_K2Node_ComponentBoundEvent_1754_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__FudaButton_K2Node_ComponentBoundEvent_1754_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__FudaButton_K2Node_ComponentBoundEvent_1754_OnButtonClickedEvent__DelegateSignature");
 
@@ -391,9 +401,9 @@ void UBW_DebugReward_C::BndEvt__FudaButton_K2Node_ComponentBoundEvent_1754_OnBut
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__DiceButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__DiceButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__DiceButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__DiceButton_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
@@ -408,9 +418,9 @@ void UBW_DebugReward_C::BndEvt__DiceButton_K2Node_ComponentBoundEvent_0_OnButton
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__ChibiButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__ChibiButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__ChibiButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__ChibiButton_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
@@ -425,9 +435,9 @@ void UBW_DebugReward_C::BndEvt__ChibiButton_K2Node_ComponentBoundEvent_1_OnButto
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__Chibi2Button_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__Chibi2Button_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__Chibi2Button_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__Chibi2Button_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
@@ -442,9 +452,9 @@ void UBW_DebugReward_C::BndEvt__Chibi2Button_K2Node_ComponentBoundEvent_2_OnButt
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__HandButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__HandButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__HandButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__HandButton_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature");
 
@@ -459,9 +469,9 @@ void UBW_DebugReward_C::BndEvt__HandButton_K2Node_ComponentBoundEvent_3_OnButton
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__GuestButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__GuestButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__GuestButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__GuestButton_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature");
 
@@ -476,9 +486,9 @@ void UBW_DebugReward_C::BndEvt__GuestButton_K2Node_ComponentBoundEvent_4_OnButto
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__FreeButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__FreeButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__FreeButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__FreeButton_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature");
 
@@ -493,9 +503,9 @@ void UBW_DebugReward_C::BndEvt__FreeButton_K2Node_ComponentBoundEvent_5_OnButton
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__TravellerButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__TravellerButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__TravellerButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__TravellerButton_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature");
 
@@ -510,9 +520,9 @@ void UBW_DebugReward_C::BndEvt__TravellerButton_K2Node_ComponentBoundEvent_6_OnB
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__BattleButton_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__BattleButton_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__BattleButton_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__BattleButton_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature");
 
@@ -527,9 +537,9 @@ void UBW_DebugReward_C::BndEvt__BattleButton_K2Node_ComponentBoundEvent_7_OnButt
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__YataiButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__YataiButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__YataiButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__YataiButton_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature");
 
@@ -544,9 +554,9 @@ void UBW_DebugReward_C::BndEvt__YataiButton_K2Node_ComponentBoundEvent_8_OnButto
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__FaceButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__FaceButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__FaceButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__FaceButton_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature");
 
@@ -561,9 +571,9 @@ void UBW_DebugReward_C::BndEvt__FaceButton_K2Node_ComponentBoundEvent_9_OnButton
 
 
 // Function BW_DebugReward.BW_DebugReward_C.BndEvt__ResetButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugReward_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugReward_C::STATIC_BndEvt__ResetButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugReward.BW_DebugReward_C.BndEvt__ResetButton_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature");
 
@@ -578,7 +588,7 @@ void UBW_DebugReward_C::BndEvt__ResetButton_K2Node_ComponentBoundEvent_10_OnButt
 
 
 // Function BW_DebugReward.BW_DebugReward_C.ExecuteUbergraph_BW_DebugReward
-// (HasDefaults)
+// (Exec, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -590,6 +600,7 @@ void UBW_DebugReward_C::ExecuteUbergraph_BW_DebugReward(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

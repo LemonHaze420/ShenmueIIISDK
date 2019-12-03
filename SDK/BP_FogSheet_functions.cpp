@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_FogSheet.BP_FogSheet_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 
-void ABP_FogSheet_C::UserConstructionScript()
+void ABP_FogSheet_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FogSheet.BP_FogSheet_C.UserConstructionScript");
 

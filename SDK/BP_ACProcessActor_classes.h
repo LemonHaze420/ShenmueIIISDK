@@ -40,8 +40,8 @@ public:
 
 
 	void CheckPrepare(bool* Complete);
-	void Finalize();
-	void CheckLeadCharacter();
+	void STATIC_Finalize();
+	void STATIC_CheckLeadCharacter();
 	bool LoadLevels();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
@@ -49,7 +49,7 @@ public:
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void HideLoading();
 	void LevelLoaded(const struct FName& ID);
-	void ExecuteUbergraph_BP_ACProcessActor(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_ACProcessActor(int EntryPoint);
 	void OnStartPlay__DelegateSignature();
 };
 

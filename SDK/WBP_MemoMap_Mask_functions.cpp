@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoMap_Mask.WBP_MemoMap_Mask_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MemoMap_Mask_C::PreConstruct(bool IsDesignTime)
+void UWBP_MemoMap_Mask_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoMap_Mask.WBP_MemoMap_Mask_C.PreConstruct");
 
@@ -34,7 +34,7 @@ void UWBP_MemoMap_Mask_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_MemoMap_Mask.WBP_MemoMap_Mask_C.ExecuteUbergraph_WBP_MemoMap_Mask
-// ()
+// (NetReliable, Exec, Native, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,6 +46,7 @@ void UWBP_MemoMap_Mask_C::ExecuteUbergraph_WBP_MemoMap_Mask(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

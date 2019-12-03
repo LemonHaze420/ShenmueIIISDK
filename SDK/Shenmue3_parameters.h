@@ -114,6 +114,44 @@ struct UEventMiniGameTask_IsSetupLabelIndex_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Shenmue3.GachaFunctionLibrary.SetGachaDataTable
+struct UGachaFunctionLibrary_SetGachaDataTable_Params
+{
+	class UDataTable*                                  GachaItemTable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.GachaFunctionLibrary.PlayGacha
+struct UGachaFunctionLibrary_PlayGacha_Params
+{
+	struct FName                                       GachaId;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FS3GachaItem                                Out;                                                      // (Parm, OutParm)
+	bool                                               IsRare;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.GachaFunctionLibrary.LoadGachaDataTable
+struct UGachaFunctionLibrary_LoadGachaDataTable_Params
+{
+	struct FString                                     GachaItemTableName;                                       // (Parm, ZeroConstructor)
+};
+
+// Function Shenmue3.GachaFunctionLibrary.IsLoadGachaDataTable
+struct UGachaFunctionLibrary_IsLoadGachaDataTable_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.KsSelectTask.SetSelectKeywordIndex
+struct UKsSelectTask_SetSelectKeywordIndex_Params
+{
+	int                                                new_index;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.TalkScript.Init
+struct UTalkScript_Init_Params
+{
+};
+
 // Function Shenmue3.ExpressionFunctionLibrary.Replace
 struct UExpressionFunctionLibrary_Replace_Params
 {
@@ -226,79 +264,6 @@ struct UExpressionFunctionLibrary_EvaluateAllFlags_Params
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
-// Function Shenmue3.GachaFunctionLibrary.SetGachaDataTable
-struct UGachaFunctionLibrary_SetGachaDataTable_Params
-{
-	class UDataTable*                                  GachaItemTable;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.GachaFunctionLibrary.PlayGacha
-struct UGachaFunctionLibrary_PlayGacha_Params
-{
-	struct FName                                       GachaId;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FS3GachaItem                                Out;                                                      // (Parm, OutParm)
-	bool                                               IsRare;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.GachaFunctionLibrary.LoadGachaDataTable
-struct UGachaFunctionLibrary_LoadGachaDataTable_Params
-{
-	struct FString                                     GachaItemTableName;                                       // (Parm, ZeroConstructor)
-};
-
-// Function Shenmue3.GachaFunctionLibrary.IsLoadGachaDataTable
-struct UGachaFunctionLibrary_IsLoadGachaDataTable_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.KsSelectTask.SetSelectKeywordIndex
-struct UKsSelectTask_SetSelectKeywordIndex_Params
-{
-	int                                                new_index;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.TalkScript.Init
-struct UTalkScript_Init_Params
-{
-};
-
-// Function Shenmue3.MG_ODDataTable.MG_ODOutputTextFile
-struct UMG_ODDataTable_MG_ODOutputTextFile_Params
-{
-	struct FString                                     Filename;                                                 // (Parm, ZeroConstructor)
-	struct FString                                     outputFolderName;                                         // (Parm, ZeroConstructor)
-	struct FString                                     outStr;                                                   // (Parm, ZeroConstructor)
-};
-
-// Function Shenmue3.MG_ODDataTable.GetODDataTableRowFromName
-struct UMG_ODDataTable_GetODDataTableRowFromName_Params
-{
-	class UScriptStruct*                               _struct;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	class UDataTable*                                  _table;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       _row_name;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Value;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.MGForkliftRCFunctionLibrary.SetVehicleWheelOffset
-struct UMGForkliftRCFunctionLibrary_SetVehicleWheelOffset_Params
-{
-	class UWheeledVehicleMovementComponent*            wheel_vehicle_movement_component;                         // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<struct FVector>                             Offset;                                                   // (Parm, ZeroConstructor)
-	int                                                Size;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.MGForkliftRCFunctionLibrary.GetRowByNameCowDataTable
-struct UMGForkliftRCFunctionLibrary_GetRowByNameCowDataTable_Params
-{
-	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FMGForkliftRCCowTableRowBase                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
 // Function Shenmue3.MG_WMData.IsEnableMole
 struct UMG_WMData_IsEnableMole_Params
 {
@@ -327,6 +292,41 @@ struct UMG_WMData_GetMoleNum_Params
 {
 	int                                                RoundNum;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.MGForkliftRCFunctionLibrary.SetVehicleWheelOffset
+struct UMGForkliftRCFunctionLibrary_SetVehicleWheelOffset_Params
+{
+	class UWheeledVehicleMovementComponent*            wheel_vehicle_movement_component;                         // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FVector>                             Offset;                                                   // (Parm, ZeroConstructor)
+	int                                                Size;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.MGForkliftRCFunctionLibrary.GetRowByNameCowDataTable
+struct UMGForkliftRCFunctionLibrary_GetRowByNameCowDataTable_Params
+{
+	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FMGForkliftRCCowTableRowBase                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Shenmue3.MG_ODDataTable.MG_ODOutputTextFile
+struct UMG_ODDataTable_MG_ODOutputTextFile_Params
+{
+	struct FString                                     Filename;                                                 // (Parm, ZeroConstructor)
+	struct FString                                     outputFolderName;                                         // (Parm, ZeroConstructor)
+	struct FString                                     outStr;                                                   // (Parm, ZeroConstructor)
+};
+
+// Function Shenmue3.MG_ODDataTable.GetODDataTableRowFromName
+struct UMG_ODDataTable_GetODDataTableRowFromName_Params
+{
+	class UScriptStruct*                               _struct;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	class UDataTable*                                  _table;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       _row_name;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Value;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.ResultMiniGameTask.NextSelectWin
@@ -413,25 +413,6 @@ struct US3_BRallyAwardSystem_GetAnnouncementQueue_Params
 
 // Function Shenmue3.S3_BRallyAwardSystem.ClearAnnouncement
 struct US3_BRallyAwardSystem_ClearAnnouncement_Params
-{
-};
-
-// Function Shenmue3.S3_ExclamationComponent.SearchSpecificCue
-struct US3_ExclamationComponent_SearchSpecificCue_Params
-{
-	struct FString                                     CueName;                                                  // (Parm, ZeroConstructor)
-	class USoundAtomCue*                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3_ExclamationComponent.ListCuesByType
-struct US3_ExclamationComponent_ListCuesByType_Params
-{
-	struct FString                                     Type;                                                     // (Parm, ZeroConstructor)
-	TArray<class USoundAtomCue*>                       Cues;                                                     // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function Shenmue3.S3_ExclamationComponent.InitializeCueSheet
-struct US3_ExclamationComponent_InitializeCueSheet_Params
 {
 };
 
@@ -1505,6 +1486,25 @@ struct US3AchievementManager_AddAchievementCount_Params
 	int                                                AddNum;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Shenmue3.S3_ExclamationComponent.SearchSpecificCue
+struct US3_ExclamationComponent_SearchSpecificCue_Params
+{
+	struct FString                                     CueName;                                                  // (Parm, ZeroConstructor)
+	class USoundAtomCue*                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3_ExclamationComponent.ListCuesByType
+struct US3_ExclamationComponent_ListCuesByType_Params
+{
+	struct FString                                     Type;                                                     // (Parm, ZeroConstructor)
+	TArray<class USoundAtomCue*>                       Cues;                                                     // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3_ExclamationComponent.InitializeCueSheet
+struct US3_ExclamationComponent_InitializeCueSheet_Params
+{
+};
+
 // Function Shenmue3.S3PlayerControllerBase.UpdateKeyBinding
 struct AS3PlayerControllerBase_UpdateKeyBinding_Params
 {
@@ -2347,29 +2347,6 @@ struct US3AnimNotify_PlayAtomCue_PlaySoundEditor_Params
 	class UAtomComponent*                              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
-// Function Shenmue3.S3AreaFunctionLibrary.IsInValidStreamingArea
-struct US3AreaFunctionLibrary_IsInValidStreamingArea_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3AreaFunctionLibrary.GetLevelEnum
-struct US3AreaFunctionLibrary_GetLevelEnum_Params
-{
-	struct FString                                     LevelName;                                                // (Parm, ZeroConstructor)
-	bool                                               Detail;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	ES3Where                                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3AreaFunctionLibrary.GetCurrentLevelEnum
-struct US3AreaFunctionLibrary_GetCurrentLevelEnum_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Detail;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	ES3Where                                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Shenmue3.S3AreaJumpBase.SetYesterdayPraceLocationRotation
 struct US3AreaJumpBase_SetYesterdayPraceLocationRotation_Params
 {
@@ -2401,34 +2378,27 @@ struct US3AreaJumpBase_GetIsJumpYesterdayPrace_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3AreaLightManagerComponent.GetCertainRangeSpotLightList
-struct US3AreaLightManagerComponent_GetCertainRangeSpotLightList_Params
+// Function Shenmue3.S3AreaFunctionLibrary.IsInValidStreamingArea
+struct US3AreaFunctionLibrary_IsInValidStreamingArea_Params
 {
-	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
-	float                                              SphereRadius;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<class AS3SpotLight*>                        OutSpotLightList;                                         // (Parm, OutParm, ZeroConstructor)
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3AreaLightManagerComponent.GetCertainRangePointLightList
-struct US3AreaLightManagerComponent_GetCertainRangePointLightList_Params
+// Function Shenmue3.S3AreaFunctionLibrary.GetLevelEnum
+struct US3AreaFunctionLibrary_GetLevelEnum_Params
 {
-	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
-	float                                              SphereRadius;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<class AS3PointLight*>                       OutPointLightList;                                        // (Parm, OutParm, ZeroConstructor)
+	struct FString                                     LevelName;                                                // (Parm, ZeroConstructor)
+	bool                                               Detail;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	ES3Where                                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3AreaLightManagerComponent.GetAreaSpotLightList
-struct US3AreaLightManagerComponent_GetAreaSpotLightList_Params
+// Function Shenmue3.S3AreaFunctionLibrary.GetCurrentLevelEnum
+struct US3AreaFunctionLibrary_GetCurrentLevelEnum_Params
 {
-	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
-	TArray<class AS3SpotLight*>                        OutSpotLightList;                                         // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function Shenmue3.S3AreaLightManagerComponent.GetAreaPointLightList
-struct US3AreaLightManagerComponent_GetAreaPointLightList_Params
-{
-	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
-	TArray<class AS3PointLight*>                       OutPointLightList;                                        // (Parm, OutParm, ZeroConstructor)
+	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Detail;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	ES3Where                                           ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3AreaManager.S3UnloadLevels
@@ -2518,8 +2488,43 @@ struct AS3AreaManager_AddVolume_Params
 	class AS3AreaVolume*                               Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Shenmue3.S3AreaLightManagerComponent.GetCertainRangeSpotLightList
+struct US3AreaLightManagerComponent_GetCertainRangeSpotLightList_Params
+{
+	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
+	float                                              SphereRadius;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AS3SpotLight*>                        OutSpotLightList;                                         // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3AreaLightManagerComponent.GetCertainRangePointLightList
+struct US3AreaLightManagerComponent_GetCertainRangePointLightList_Params
+{
+	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
+	float                                              SphereRadius;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AS3PointLight*>                       OutPointLightList;                                        // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3AreaLightManagerComponent.GetAreaSpotLightList
+struct US3AreaLightManagerComponent_GetAreaSpotLightList_Params
+{
+	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
+	TArray<class AS3SpotLight*>                        OutSpotLightList;                                         // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3AreaLightManagerComponent.GetAreaPointLightList
+struct US3AreaLightManagerComponent_GetAreaPointLightList_Params
+{
+	struct FVector                                     WorldLocation;                                            // (ConstParm, Parm, IsPlainOldData)
+	TArray<class AS3PointLight*>                       OutPointLightList;                                        // (Parm, OutParm, ZeroConstructor)
+};
+
 // Function Shenmue3.S3AreaVolume.RegisterManager
 struct AS3AreaVolume_RegisterManager_Params
+{
+};
+
+// Function Shenmue3.S3AssetCullDistanceVolume.OnGraphicPresetChanged
+struct AS3AssetCullDistanceVolume_OnGraphicPresetChanged_Params
 {
 };
 
@@ -2556,11 +2561,6 @@ struct US3AssetChunkManager_GetChunkIdFromLocation_Params
 	ES3AssetChunkId                                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3AssetCullDistanceVolume.OnGraphicPresetChanged
-struct AS3AssetCullDistanceVolume_OnGraphicPresetChanged_Params
-{
-};
-
 // Function Shenmue3.S3AttentionComponent.SetFinishedActionEvent
 struct US3AttentionComponent_SetFinishedActionEvent_Params
 {
@@ -2575,22 +2575,6 @@ struct US3AttentionComponent_SetEnabledBackerEvent_Params
 
 // Function Shenmue3.S3AttentionComponent.GetEnabledBackerEvent
 struct US3AttentionComponent_GetEnabledBackerEvent_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BattleRallyManager.ShowRewardResult
-struct AS3BattleRallyManager_ShowRewardResult_Params
-{
-};
-
-// Function Shenmue3.S3BattleRallyManager.ClearInventoryItems
-struct AS3BattleRallyManager_ClearInventoryItems_Params
-{
-};
-
-// Function Shenmue3.S3BattleRallyManager.CheckRewardAnnouncement
-struct AS3BattleRallyManager_CheckRewardAnnouncement_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
@@ -2809,6 +2793,12 @@ struct US3BattleStatsManager_Debug_SetAttackLevel_Params
 	int                                                TargetLevel;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Shenmue3.S3BellTowerGimmick.GetClothCharaName
+struct AS3BellTowerGimmick_GetClothCharaName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Shenmue3.S3BgmArea.OnActorEndOverlapImpl
 struct AS3BgmArea_OnActorEndOverlapImpl_Params
 {
@@ -2829,69 +2819,20 @@ struct AS3BgmArea_GetSourceInfo_Params
 	struct FS3BgmAreaSourceInfo                        ReturnValue;                                              // (Parm, OutParm, ReturnParm)
 };
 
-// Function Shenmue3.S3BgmManager.Stop
-struct AS3BgmManager_Stop_Params
+// Function Shenmue3.S3BattleRallyManager.ShowRewardResult
+struct AS3BattleRallyManager_ShowRewardResult_Params
 {
-	struct FName                                       ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BattleRallyManager.ClearInventoryItems
+struct AS3BattleRallyManager_ClearInventoryItems_Params
+{
+};
+
+// Function Shenmue3.S3BattleRallyManager.CheckRewardAnnouncement
+struct AS3BattleRallyManager_CheckRewardAnnouncement_Params
+{
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BgmManager.SetTalkVolume
-struct AS3BgmManager_SetTalkVolume_Params
-{
-	bool                                               bReset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BgmManager.SetDisableFadePause
-struct AS3BgmManager_SetDisableFadePause_Params
-{
-	bool                                               bDisable;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BgmManager.Restart
-struct AS3BgmManager_Restart_Params
-{
-};
-
-// Function Shenmue3.S3BgmManager.PlayFromPlayer
-struct AS3BgmManager_PlayFromPlayer_Params
-{
-	class AS3BgmPlayer*                                BgmPlayer;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              StartTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BgmManager.PlayFromCue
-struct AS3BgmManager_PlayFromCue_Params
-{
-	class UObject*                                     Cue;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	EBgmPriority                                       Priority;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               AutoDestroy;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              StartTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	class AS3BgmPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BgmManager.Pause
-struct AS3BgmManager_Pause_Params
-{
-};
-
-// Function Shenmue3.S3BgmManager.OnEndTouchArea
-struct AS3BgmManager_OnEndTouchArea_Params
-{
-	class AS3BgmArea*                                  AreaActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BgmManager.OnBeginTouchArea
-struct AS3BgmManager_OnBeginTouchArea_Params
-{
-	class AS3BgmArea*                                  AreaActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BgmManager.OnAreaBgmChanged
-struct AS3BgmManager_OnAreaBgmChanged_Params
-{
-	class AS3BgmArea*                                  area;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shenmue3.S3BlueprintFunctionLibrary.ZSortArr_text
@@ -3801,12 +3742,6 @@ struct US3BlueprintFunctionLibrary_CalculateMontageRootMotionAlignment_Params
 	struct FTransform                                  ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3BellTowerGimmick.GetClothCharaName
-struct AS3BellTowerGimmick_GetClothCharaName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Shenmue3.S3GameMode.StartPause
 struct AS3GameMode_StartPause_Params
 {
@@ -3939,6 +3874,71 @@ struct AS3GameMode_ClearS3Pause_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Shenmue3.S3BgmManager.Stop
+struct AS3BgmManager_Stop_Params
+{
+	struct FName                                       ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BgmManager.SetTalkVolume
+struct AS3BgmManager_SetTalkVolume_Params
+{
+	bool                                               bReset;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BgmManager.SetDisableFadePause
+struct AS3BgmManager_SetDisableFadePause_Params
+{
+	bool                                               bDisable;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BgmManager.Restart
+struct AS3BgmManager_Restart_Params
+{
+};
+
+// Function Shenmue3.S3BgmManager.PlayFromPlayer
+struct AS3BgmManager_PlayFromPlayer_Params
+{
+	class AS3BgmPlayer*                                BgmPlayer;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              StartTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BgmManager.PlayFromCue
+struct AS3BgmManager_PlayFromCue_Params
+{
+	class UObject*                                     Cue;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ID;                                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	EBgmPriority                                       Priority;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               AutoDestroy;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              StartTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class AS3BgmPlayer*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BgmManager.Pause
+struct AS3BgmManager_Pause_Params
+{
+};
+
+// Function Shenmue3.S3BgmManager.OnEndTouchArea
+struct AS3BgmManager_OnEndTouchArea_Params
+{
+	class AS3BgmArea*                                  AreaActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BgmManager.OnBeginTouchArea
+struct AS3BgmManager_OnBeginTouchArea_Params
+{
+	class AS3BgmArea*                                  AreaActor;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BgmManager.OnAreaBgmChanged
+struct AS3BgmManager_OnAreaBgmChanged_Params
+{
+	class AS3BgmArea*                                  area;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Shenmue3.S3BootGameMode.ShowDialog
 struct AS3BootGameMode_ShowDialog_Params
 {
@@ -3949,34 +3949,6 @@ struct AS3BootGameMode_ShowDialog_Params
 // Function Shenmue3.S3BootGameMode.LoginPlatform
 struct AS3BootGameMode_LoginPlatform_Params
 {
-};
-
-// Function Shenmue3.S3BRallyCourseCSPlayer.TryPlaceCSAlongSpline
-struct AS3BRallyCourseCSPlayer_TryPlaceCSAlongSpline_Params
-{
-	class ACharacter*                                  Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	class USplineComponent*                            spline;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FBTL_BRallyCourseCutsceneData               CutsceneData;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
-	TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     OutLocation;                                              // (Parm, OutParm, IsPlainOldData)
-	struct FRotator                                    OutRotator;                                               // (Parm, OutParm, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BRallyCourseCSPlayer.EstimateGroundLocation
-struct AS3BRallyCourseCSPlayer_EstimateGroundLocation_Params
-{
-	class ACharacter*                                  ContextPawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     StartLocation;                                            // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3BRallyTrophyData.TryUnlockAchievements
-struct US3BRallyTrophyData_TryUnlockAchievements_Params
-{
-	class US3AchievementManager*                       AchievementManager;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     NewlyUnlocked;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<class UObject*>                             AllUnlocked;                                              // (Parm, ZeroConstructor)
 };
 
 // Function Shenmue3.S3TalkComponentBase.UnLoadTalkScript
@@ -4058,6 +4030,34 @@ struct US3TalkComponentBase_CanTalk_Params
 {
 	bool                                               Sight;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BRallyCourseCSPlayer.TryPlaceCSAlongSpline
+struct AS3BRallyCourseCSPlayer_TryPlaceCSAlongSpline_Params
+{
+	class ACharacter*                                  Pawn;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class USplineComponent*                            spline;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FBTL_BRallyCourseCutsceneData               CutsceneData;                                             // (ConstParm, Parm, OutParm, ReferenceParm)
+	TEnumAsByte<ETraceTypeQuery>                       TraceChannel;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     OutLocation;                                              // (Parm, OutParm, IsPlainOldData)
+	struct FRotator                                    OutRotator;                                               // (Parm, OutParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BRallyCourseCSPlayer.EstimateGroundLocation
+struct AS3BRallyCourseCSPlayer_EstimateGroundLocation_Params
+{
+	class ACharacter*                                  ContextPawn;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     StartLocation;                                            // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3BRallyTrophyData.TryUnlockAchievements
+struct US3BRallyTrophyData_TryUnlockAchievements_Params
+{
+	class US3AchievementManager*                       AchievementManager;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     NewlyUnlocked;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class UObject*>                             AllUnlocked;                                              // (Parm, ZeroConstructor)
 };
 
 // Function Shenmue3.S3BSComponent.SetEventCountByScript
@@ -4143,12 +4143,6 @@ struct AS3CameraFadeCollisionActor_FadeInAll_Params
 {
 };
 
-// Function Shenmue3.S3CharacterPawn.GetClothCharaName
-struct AS3CharacterPawn_GetClothCharaName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Shenmue3.S3CharacterPhasingComponent.StopIgnoring_ByReference
 struct US3CharacterPhasingComponent_StopIgnoring_ByReference_Params
 {
@@ -4210,6 +4204,73 @@ struct US3CharacterSensorComponentBase_CreateSensors_Params
 
 // Function Shenmue3.S3CharacterSensorComponentBase.ClearSensors
 struct US3CharacterSensorComponentBase_ClearSensors_Params
+{
+};
+
+// Function Shenmue3.S3CharacterPawn.GetClothCharaName
+struct AS3CharacterPawn_GetClothCharaName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CharaLightingActor.UpdateLightingParamater
+struct AS3CharaLightingActor_UpdateLightingParamater_Params
+{
+	struct FS3CharaLightingContainer                   Container;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
+};
+
+// Function Shenmue3.S3CharaLightingActor.UpdateCastShadows
+struct AS3CharaLightingActor_UpdateCastShadows_Params
+{
+	struct FVector                                     CameraLocation;                                           // (Parm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CharaLightingActor.SetupLighting
+struct AS3CharaLightingActor_SetupLighting_Params
+{
+};
+
+// Function Shenmue3.S3CharaLightingActor.SetLightVisibility
+struct AS3CharaLightingActor_SetLightVisibility_Params
+{
+	bool                                               bVisibility;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CharaLightingActor.ResetCacheTargetLocationFlag
+struct AS3CharaLightingActor_ResetCacheTargetLocationFlag_Params
+{
+};
+
+// Function Shenmue3.S3CharaLightingActor.OverrideCacheTargetLocation
+struct AS3CharaLightingActor_OverrideCacheTargetLocation_Params
+{
+	struct FTransform                                  WorldTransform;                                           // (Parm, IsPlainOldData)
+	struct FVector                                     ForwardVector;                                            // (Parm, IsPlainOldData)
+	struct FVector                                     UpVector;                                                 // (Parm, IsPlainOldData)
+	struct FVector                                     RightVector;                                              // (Parm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CharaLightingActor.GetTargetSceneComponent
+struct AS3CharaLightingActor_GetTargetSceneComponent_Params
+{
+	class USceneComponent*                             ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CharaLightingActor.GetTargetActorSocketTransform
+struct AS3CharaLightingActor_GetTargetActorSocketTransform_Params
+{
+	struct FTransform                                  OutTransform;                                             // (Parm, OutParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CharaLightingActor.GetCharaLightingManager
+struct AS3CharaLightingActor_GetCharaLightingManager_Params
+{
+	class AS3CharaLightingManager*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CharaLightingActor.DrawLightingDebugLine
+struct AS3CharaLightingActor_DrawLightingDebugLine_Params
 {
 };
 
@@ -4404,67 +4465,6 @@ struct AS3CharaLightingManager_AddLightsInBuilding_Params
 	class AActor*                                      TargetBuilding;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	class AS3PointLight*                               Point;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class AS3SpotLight*                                Spot;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CharaLightingActor.UpdateLightingParamater
-struct AS3CharaLightingActor_UpdateLightingParamater_Params
-{
-	struct FS3CharaLightingContainer                   Container;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
-};
-
-// Function Shenmue3.S3CharaLightingActor.UpdateCastShadows
-struct AS3CharaLightingActor_UpdateCastShadows_Params
-{
-	struct FVector                                     CameraLocation;                                           // (Parm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CharaLightingActor.SetupLighting
-struct AS3CharaLightingActor_SetupLighting_Params
-{
-};
-
-// Function Shenmue3.S3CharaLightingActor.SetLightVisibility
-struct AS3CharaLightingActor_SetLightVisibility_Params
-{
-	bool                                               bVisibility;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CharaLightingActor.ResetCacheTargetLocationFlag
-struct AS3CharaLightingActor_ResetCacheTargetLocationFlag_Params
-{
-};
-
-// Function Shenmue3.S3CharaLightingActor.OverrideCacheTargetLocation
-struct AS3CharaLightingActor_OverrideCacheTargetLocation_Params
-{
-	struct FTransform                                  WorldTransform;                                           // (Parm, IsPlainOldData)
-	struct FVector                                     ForwardVector;                                            // (Parm, IsPlainOldData)
-	struct FVector                                     UpVector;                                                 // (Parm, IsPlainOldData)
-	struct FVector                                     RightVector;                                              // (Parm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CharaLightingActor.GetTargetSceneComponent
-struct AS3CharaLightingActor_GetTargetSceneComponent_Params
-{
-	class USceneComponent*                             ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CharaLightingActor.GetTargetActorSocketTransform
-struct AS3CharaLightingActor_GetTargetActorSocketTransform_Params
-{
-	struct FTransform                                  OutTransform;                                             // (Parm, OutParm, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CharaLightingActor.GetCharaLightingManager
-struct AS3CharaLightingActor_GetCharaLightingManager_Params
-{
-	class AS3CharaLightingManager*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CharaLightingActor.DrawLightingDebugLine
-struct AS3CharaLightingActor_DrawLightingDebugLine_Params
-{
 };
 
 // Function Shenmue3.S3CheatManager.UnlockAchievement
@@ -4862,13 +4862,6 @@ struct AS3Clipper_CheckChara_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3ClipperLibrary.ConvertClipperVolume
-struct US3ClipperLibrary_ConvertClipperVolume_Params
-{
-	int                                                Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Shenmue3.S3ClipperMultiSampler.UpdateSamples
 struct US3ClipperMultiSampler_UpdateSamples_Params
 {
@@ -4904,12 +4897,6 @@ struct US3ClipperMultiSampler_GetLoudestId_Params
 // Function Shenmue3.S3ClipperMultiSampler.Clear
 struct US3ClipperMultiSampler_Clear_Params
 {
-};
-
-// Function Shenmue3.S3ClothInterface.GetClothMeshComponent
-struct US3ClothInterface_GetClothMeshComponent_Params
-{
-	class UMeshComponent*                              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Shenmue3.S3ClipperReader.SetVolumeInterpretor
@@ -4994,6 +4981,12 @@ struct US3ClipperReader_GetFrame_Params
 {
 	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3ClothInterface.GetClothMeshComponent
+struct US3ClothInterface_GetClothMeshComponent_Params
+{
+	class UMeshComponent*                              ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Shenmue3.S3ClothManager.UpdateClothParts
@@ -5177,6 +5170,29 @@ struct AS3CutscenePlayer_EndCutscene_Params
 {
 };
 
+// Function Shenmue3.S3CutsceneSkeletalMeshActor.SetupMesh
+struct AS3CutsceneSkeletalMeshActor_SetupMesh_Params
+{
+};
+
+// Function Shenmue3.S3CutsceneSkeletalMeshActor.GetTagCharaName
+struct AS3CutsceneSkeletalMeshActor_GetTagCharaName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CutsceneSkeletalMeshActor.GetConvertedCharaName
+struct AS3CutsceneSkeletalMeshActor_GetConvertedCharaName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3CutsceneSkeletalMeshActor.GetClothCharaName
+struct AS3CutsceneSkeletalMeshActor_GetClothCharaName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Shenmue3.S3CutsceneManager.UnloadCutsceneLevel
 struct AS3CutsceneManager_UnloadCutsceneLevel_Params
 {
@@ -5304,11 +5320,6 @@ struct AS3DebugCameraController_GetOriginalPlayer_Params
 	class UPlayer*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3DebugMenu.CloseDebugMenu
-struct US3DebugMenu_CloseDebugMenu_Params
-{
-};
-
 // Function Shenmue3.S3DerivedPlayerLevel.GetMaxLevelDelta
 struct US3DerivedPlayerLevel_GetMaxLevelDelta_Params
 {
@@ -5368,151 +5379,9 @@ struct US3DerivedPlayerLevel_Configure_Params
 	int                                                InEarnableLevels;                                         // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3DetectAction.UpdateOverlapActors
-struct AS3DetectAction_UpdateOverlapActors_Params
+// Function Shenmue3.S3DebugMenu.CloseDebugMenu
+struct US3DebugMenu_CloseDebugMenu_Params
 {
-};
-
-// Function Shenmue3.S3DetectAction.UpdateButton
-struct AS3DetectAction_UpdateButton_Params
-{
-};
-
-// Function Shenmue3.S3DetectAction.UpdateBSActors
-struct AS3DetectAction_UpdateBSActors_Params
-{
-};
-
-// Function Shenmue3.S3DetectAction.UnregisterOverlapActor
-struct AS3DetectAction_UnregisterOverlapActor_Params
-{
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.UnregisterDetectActor
-struct AS3DetectAction_UnregisterDetectActor_Params
-{
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.RegisterOverlapActor
-struct AS3DetectAction_RegisterOverlapActor_Params
-{
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.RegisterDetectActor
-struct AS3DetectAction_RegisterDetectActor_Params
-{
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.PermitIconAll
-struct AS3DetectAction_PermitIconAll_Params
-{
-	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.PermitIcon
-struct AS3DetectAction_PermitIcon_Params
-{
-	TArray<ES3ActionIconType>                          Icons;                                                    // (Parm, ZeroConstructor)
-	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.PermitActionSensor
-struct AS3DetectAction_PermitActionSensor_Params
-{
-	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.OnStartBS
-struct AS3DetectAction_OnStartBS_Params
-{
-	class AS3Character*                                TalkableActor;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.OnEndPlay_ForbidActor
-struct AS3DetectAction_OnEndPlay_ForbidActor_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.OnEndPlay_DetectActor
-struct AS3DetectAction_OnEndPlay_DetectActor_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.IsRegisterDetectActor
-struct AS3DetectAction_IsRegisterDetectActor_Params
-{
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.IsDetectTarget
-struct AS3DetectAction_IsDetectTarget_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              PlayerDistance;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.IsActionSensorEnabled
-struct AS3DetectAction_IsActionSensorEnabled_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.IsActionGlobalForbidden
-struct AS3DetectAction_IsActionGlobalForbidden_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.IsActionForbidden
-struct AS3DetectAction_IsActionForbidden_Params
-{
-	ES3ActionIconType                                  Icon;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               IgnoreGlobal;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.GetDefaultButtonIndex
-struct AS3DetectAction_GetDefaultButtonIndex_Params
-{
-	ES3ActionIconType                                  Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.ForbidIcon
-struct AS3DetectAction_ForbidIcon_Params
-{
-	TArray<ES3ActionIconType>                          Icons;                                                    // (Parm, ZeroConstructor)
-	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.ForbidActionSensor
-struct AS3DetectAction_ForbidActionSensor_Params
-{
-	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.FindStackIndex
-struct AS3DetectAction_FindStackIndex_Params
-{
-	struct FS3DetectActionParam                        InParam;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3DetectAction.CanStartBS
-struct AS3DetectAction_CanStartBS_Params
-{
-	class AS3Character*                                Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3DetectActionInterface.GetPriority
@@ -5531,29 +5400,6 @@ struct US3DetectActionInterface_GetDetectAction_Params
 struct US3DetectActionInterface_DecideDetectAction_Params
 {
 	ES3ActionIconType                                  Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CutsceneSkeletalMeshActor.SetupMesh
-struct AS3CutsceneSkeletalMeshActor_SetupMesh_Params
-{
-};
-
-// Function Shenmue3.S3CutsceneSkeletalMeshActor.GetTagCharaName
-struct AS3CutsceneSkeletalMeshActor_GetTagCharaName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CutsceneSkeletalMeshActor.GetConvertedCharaName
-struct AS3CutsceneSkeletalMeshActor_GetConvertedCharaName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3CutsceneSkeletalMeshActor.GetClothCharaName
-struct AS3CutsceneSkeletalMeshActor_GetClothCharaName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3DevelopBlueprintFunctionLibrary.TeleportToNPC
@@ -5712,6 +5558,153 @@ struct US3DevelopBlueprintFunctionLibrary_DisableVirtualPlatformOverride_Params
 {
 };
 
+// Function Shenmue3.S3DetectAction.UpdateOverlapActors
+struct AS3DetectAction_UpdateOverlapActors_Params
+{
+};
+
+// Function Shenmue3.S3DetectAction.UpdateButton
+struct AS3DetectAction_UpdateButton_Params
+{
+};
+
+// Function Shenmue3.S3DetectAction.UpdateBSActors
+struct AS3DetectAction_UpdateBSActors_Params
+{
+};
+
+// Function Shenmue3.S3DetectAction.UnregisterOverlapActor
+struct AS3DetectAction_UnregisterOverlapActor_Params
+{
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.UnregisterDetectActor
+struct AS3DetectAction_UnregisterDetectActor_Params
+{
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.RegisterOverlapActor
+struct AS3DetectAction_RegisterOverlapActor_Params
+{
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.RegisterDetectActor
+struct AS3DetectAction_RegisterDetectActor_Params
+{
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.PermitIconAll
+struct AS3DetectAction_PermitIconAll_Params
+{
+	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.PermitIcon
+struct AS3DetectAction_PermitIcon_Params
+{
+	TArray<ES3ActionIconType>                          Icons;                                                    // (Parm, ZeroConstructor)
+	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.PermitActionSensor
+struct AS3DetectAction_PermitActionSensor_Params
+{
+	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.OnStartBS
+struct AS3DetectAction_OnStartBS_Params
+{
+	class AS3Character*                                TalkableActor;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.OnEndPlay_ForbidActor
+struct AS3DetectAction_OnEndPlay_ForbidActor_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.OnEndPlay_DetectActor
+struct AS3DetectAction_OnEndPlay_DetectActor_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.IsRegisterDetectActor
+struct AS3DetectAction_IsRegisterDetectActor_Params
+{
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.IsDetectTarget
+struct AS3DetectAction_IsDetectTarget_Params
+{
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              PlayerDistance;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.IsActionSensorEnabled
+struct AS3DetectAction_IsActionSensorEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.IsActionGlobalForbidden
+struct AS3DetectAction_IsActionGlobalForbidden_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.IsActionForbidden
+struct AS3DetectAction_IsActionForbidden_Params
+{
+	ES3ActionIconType                                  Icon;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               IgnoreGlobal;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.GetDefaultButtonIndex
+struct AS3DetectAction_GetDefaultButtonIndex_Params
+{
+	ES3ActionIconType                                  Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.ForbidIcon
+struct AS3DetectAction_ForbidIcon_Params
+{
+	TArray<ES3ActionIconType>                          Icons;                                                    // (Parm, ZeroConstructor)
+	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.ForbidActionSensor
+struct AS3DetectAction_ForbidActionSensor_Params
+{
+	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.FindStackIndex
+struct AS3DetectAction_FindStackIndex_Params
+{
+	struct FS3DetectActionParam                        InParam;                                                  // (ConstParm, Parm, OutParm, ReferenceParm)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3DetectAction.CanStartBS
+struct AS3DetectAction_CanStartBS_Params
+{
+	class AS3Character*                                Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Shenmue3.S3DoorFunctionLibrary.GetDoorData2
 struct US3DoorFunctionLibrary_GetDoorData2_Params
 {
@@ -5797,6 +5790,37 @@ struct US3UserWidget_ChooseFontFacetype_Params
 {
 	struct FSlateFontInfo                              InFont;                                                   // (Parm)
 	struct FSlateFontInfo                              ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Shenmue3.S3EyecatchWidget.ShowEyecatchTexture
+struct US3EyecatchWidget_ShowEyecatchTexture_Params
+{
+	class UTexture*                                    LogoImage;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3EyecatchWidget.ShowEyecatchText2
+struct US3EyecatchWidget_ShowEyecatchText2_Params
+{
+	struct FText                                       MainTitle1;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FText                                       SubTitle1;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FText                                       MainTitle2;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FText                                       SubTitle2;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3EyecatchWidget.ShowEyecatch
+struct US3EyecatchWidget_ShowEyecatch_Params
+{
+	struct FText                                       MainTitle;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FText                                       Subtitle;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3EyecatchWidget.HideEyecatch
+struct US3EyecatchWidget_HideEyecatch_Params
+{
+	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shenmue3.S3FaceAnimInstance.UpdateCharacterName
@@ -5911,20 +5935,6 @@ struct US3FaceAnimInstance_CalcClipper_Params
 {
 };
 
-// Function Shenmue3.S3FaceLegacyAnimInstance.UpdateClipperFlag
-struct US3FaceLegacyAnimInstance_UpdateClipperFlag_Params
-{
-};
-
-// Function Shenmue3.S3FaceLegacyAnimInstance.GetClipperRate
-struct US3FaceLegacyAnimInstance_GetClipperRate_Params
-{
-	bool                                               bConditionOpenFlag;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Rate;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function Shenmue3.S3FadeCharacterCapsule.SetUseWhitelist
 struct US3FadeCharacterCapsule_SetUseWhitelist_Params
 {
@@ -5963,18 +5973,25 @@ struct US3FadeCharacterCapsule_AddToWhitelist_Params
 	class ACharacter*                                  Character;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3FadeMaterialDataAsset.MakeFadeMaterial
-struct US3FadeMaterialDataAsset_MakeFadeMaterial_Params
+// Function Shenmue3.S3ClipperLibrary.ConvertClipperVolume
+struct US3ClipperLibrary_ConvertClipperVolume_Params
 {
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          Source;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	int                                                Volume;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3FindSecretRoom.GetClothCharaName
-struct AS3FindSecretRoom_GetClothCharaName_Params
+// Function Shenmue3.S3FaceLegacyAnimInstance.UpdateClipperFlag
+struct US3FaceLegacyAnimInstance_UpdateClipperFlag_Params
 {
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3FaceLegacyAnimInstance.GetClipperRate
+struct US3FaceLegacyAnimInstance_GetClipperRate_Params
+{
+	bool                                               bConditionOpenFlag;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Rate;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaTimeX;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3FrameworkLibrary.GetS3TextDataManagerNative
@@ -6194,133 +6211,18 @@ struct US3FrameworkLibrary_GetS3AchievementManagerNative_Params
 	class US3AchievementManager*                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3GameTimeManager.UpdateTlGametime
-struct AS3GameTimeManager_UpdateTlGametime_Params
+// Function Shenmue3.S3FindSecretRoom.GetClothCharaName
+struct AS3FindSecretRoom_GetClothCharaName_Params
 {
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3GameTimeManager.UpdateNextDay
-struct AS3GameTimeManager_UpdateNextDay_Params
+// Function Shenmue3.S3FadeMaterialDataAsset.MakeFadeMaterial
+struct US3FadeMaterialDataAsset_MakeFadeMaterial_Params
 {
-};
-
-// Function Shenmue3.S3GameTimeManager.UpdateCurrentGameTimeShop
-struct AS3GameTimeManager_UpdateCurrentGameTimeShop_Params
-{
-};
-
-// Function Shenmue3.S3GameTimeManager.UpdateCurrentGameTimeDay
-struct AS3GameTimeManager_UpdateCurrentGameTimeDay_Params
-{
-};
-
-// Function Shenmue3.S3GameTimeManager.UpdateCurrentGameTimeCustom
-struct AS3GameTimeManager_UpdateCurrentGameTimeCustom_Params
-{
-	float                                              OldGameTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.StopGameTime
-struct AS3GameTimeManager_StopGameTime_Params
-{
-	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.StartGameTime
-struct AS3GameTimeManager_StartGameTime_Params
-{
-	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.SetGameTime
-struct AS3GameTimeManager_SetGameTime_Params
-{
-	float                                              NewGameTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bUpdateNextDay;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.SetGameDateTime
-struct AS3GameTimeManager_SetGameDateTime_Params
-{
-	struct FDateTime                                   NewDate;                                                  // (Parm)
-};
-
-// Function Shenmue3.S3GameTimeManager.SetDeltaTimeBias
-struct AS3GameTimeManager_SetDeltaTimeBias_Params
-{
-	float                                              InDeltaTimeBias;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.ReleaseForceStopTime
-struct AS3GameTimeManager_ReleaseForceStopTime_Params
-{
-};
-
-// Function Shenmue3.S3GameTimeManager.registCustomTimeEvent
-struct AS3GameTimeManager_registCustomTimeEvent_Params
-{
-	float                                              Time;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                registIndex;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.IsStopGameTime
-struct AS3GameTimeManager_IsStopGameTime_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.InitDataTime
-struct AS3GameTimeManager_InitDataTime_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.GetGameDateTime
-struct AS3GameTimeManager_GetGameDateTime_Params
-{
-	struct FDateTime                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function Shenmue3.S3GameTimeManager.GetEventTimeShop
-struct AS3GameTimeManager_GetEventTimeShop_Params
-{
-	ES3ShopTimeEvent                                   InEventType;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.GetEventTimeDay
-struct AS3GameTimeManager_GetEventTimeDay_Params
-{
-	ES3DayTimeEvent                                    InEventType;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.DetectTimeEventPositon
-struct AS3GameTimeManager_DetectTimeEventPositon_Params
-{
-	int                                                cateId;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Time;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Index;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameTimeManager.DetectCustomEventPositon
-struct AS3GameTimeManager_DetectCustomEventPositon_Params
-{
-	float                                              NewTime;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              OldTime;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<int>                                        Indexes;                                                  // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function Shenmue3.S3GameTimeManager.AppendGameTime
-struct AS3GameTimeManager_AppendGameTime_Params
-{
-	float                                              DeltaGameTime;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bUpdateNextDay;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3GameViewportClient.ShowTitleSafeAreaMinimum
-struct US3GameViewportClient_ShowTitleSafeAreaMinimum_Params
-{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          Source;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3GimmickChair.OnChanged
@@ -6400,35 +6302,9 @@ struct AS3GimmickChair_EntryManager_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3EyecatchWidget.ShowEyecatchTexture
-struct US3EyecatchWidget_ShowEyecatchTexture_Params
+// Function Shenmue3.S3GameViewportClient.ShowTitleSafeAreaMinimum
+struct US3GameViewportClient_ShowTitleSafeAreaMinimum_Params
 {
-	class UTexture*                                    LogoImage;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3EyecatchWidget.ShowEyecatchText2
-struct US3EyecatchWidget_ShowEyecatchText2_Params
-{
-	struct FText                                       MainTitle1;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FText                                       SubTitle1;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FText                                       MainTitle2;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FText                                       SubTitle2;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3EyecatchWidget.ShowEyecatch
-struct US3EyecatchWidget_ShowEyecatch_Params
-{
-	struct FText                                       MainTitle;                                                // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FText                                       Subtitle;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3EyecatchWidget.HideEyecatch
-struct US3EyecatchWidget_HideEyecatch_Params
-{
-	bool                                               bUseFade;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shenmue3.S3GimmickManager.GetSpotLights
@@ -6585,6 +6461,29 @@ struct AS3HintTalkManager_CreateKey_Params
 struct AS3HintTalkManager_AgeToIndex_Params
 {
 	int                                                Age;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GraphicSettingsManager.Init
+struct US3GraphicSettingsManager_Init_Params
+{
+};
+
+// Function Shenmue3.S3GraphicSettingsManager.GetMaxShowNPC
+struct US3GraphicSettingsManager_GetMaxShowNPC_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GraphicSettingsManager.GetMaxLoadedNPC
+struct US3GraphicSettingsManager_GetMaxLoadedNPC_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GraphicSettingsManager.GetMaxCastShadowLights
+struct US3GraphicSettingsManager_GetMaxCastShadowLights_Params
+{
 	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -6804,32 +6703,6 @@ struct US3InputDeviceManager_IsGamepadAttached_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3InteractionComponent.SetBoxExtent
-struct US3InteractionComponent_SetBoxExtent_Params
-{
-	struct FVector                                     InBoxExtent;                                              // (Parm, IsPlainOldData)
-	bool                                               bUpdateOverlaps;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3InteractionComponent.GetUnscaledBoxExtent
-struct US3InteractionComponent_GetUnscaledBoxExtent_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3InteractionComponent.GetScaledBoxExtent
-struct US3InteractionComponent_GetScaledBoxExtent_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3InteractionComponent.CaptureMovement
-struct US3InteractionComponent_CaptureMovement_Params
-{
-	class AS3PlayerController*                         PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bCaptureMovement;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function Shenmue3.S3ItemFunctionLibrary.ShouldShowListItemDetails
 struct US3ItemFunctionLibrary_ShouldShowListItemDetails_Params
 {
@@ -6962,27 +6835,30 @@ struct US3ItemFunctionLibrary_DisableItemCacheData_Params
 	class UObject*                                     WorldContextObject;                                       // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3GraphicSettingsManager.Init
-struct US3GraphicSettingsManager_Init_Params
+// Function Shenmue3.S3InteractionComponent.SetBoxExtent
+struct US3InteractionComponent_SetBoxExtent_Params
 {
+	struct FVector                                     InBoxExtent;                                              // (Parm, IsPlainOldData)
+	bool                                               bUpdateOverlaps;                                          // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3GraphicSettingsManager.GetMaxShowNPC
-struct US3GraphicSettingsManager_GetMaxShowNPC_Params
+// Function Shenmue3.S3InteractionComponent.GetUnscaledBoxExtent
+struct US3InteractionComponent_GetUnscaledBoxExtent_Params
 {
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3GraphicSettingsManager.GetMaxLoadedNPC
-struct US3GraphicSettingsManager_GetMaxLoadedNPC_Params
+// Function Shenmue3.S3InteractionComponent.GetScaledBoxExtent
+struct US3InteractionComponent_GetScaledBoxExtent_Params
 {
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3GraphicSettingsManager.GetMaxCastShadowLights
-struct US3GraphicSettingsManager_GetMaxCastShadowLights_Params
+// Function Shenmue3.S3InteractionComponent.CaptureMovement
+struct US3InteractionComponent_CaptureMovement_Params
 {
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class AS3PlayerController*                         PlayerController;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bCaptureMovement;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shenmue3.S3ItemManager.GetItemNum
@@ -7050,6 +6926,186 @@ struct AS3ItemSpawnerManager_AddItemSpawner_Params
 struct AS3ItemSpawnerManager_AddDelayedInitializeSpawner_Params
 {
 	class AS3ItemSpawner*                              ItemSpawner;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3KartPawnBase.GetClothCharaName
+struct AS3KartPawnBase_GetClothCharaName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.UpdateTlGametime
+struct AS3GameTimeManager_UpdateTlGametime_Params
+{
+};
+
+// Function Shenmue3.S3GameTimeManager.UpdateNextDay
+struct AS3GameTimeManager_UpdateNextDay_Params
+{
+};
+
+// Function Shenmue3.S3GameTimeManager.UpdateCurrentGameTimeShop
+struct AS3GameTimeManager_UpdateCurrentGameTimeShop_Params
+{
+};
+
+// Function Shenmue3.S3GameTimeManager.UpdateCurrentGameTimeDay
+struct AS3GameTimeManager_UpdateCurrentGameTimeDay_Params
+{
+};
+
+// Function Shenmue3.S3GameTimeManager.UpdateCurrentGameTimeCustom
+struct AS3GameTimeManager_UpdateCurrentGameTimeCustom_Params
+{
+	float                                              OldGameTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.StopGameTime
+struct AS3GameTimeManager_StopGameTime_Params
+{
+	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.StartGameTime
+struct AS3GameTimeManager_StartGameTime_Params
+{
+	class AActor*                                      Executor;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.SetGameTime
+struct AS3GameTimeManager_SetGameTime_Params
+{
+	float                                              NewGameTime;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bUpdateNextDay;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.SetGameDateTime
+struct AS3GameTimeManager_SetGameDateTime_Params
+{
+	struct FDateTime                                   NewDate;                                                  // (Parm)
+};
+
+// Function Shenmue3.S3GameTimeManager.SetDeltaTimeBias
+struct AS3GameTimeManager_SetDeltaTimeBias_Params
+{
+	float                                              InDeltaTimeBias;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.ReleaseForceStopTime
+struct AS3GameTimeManager_ReleaseForceStopTime_Params
+{
+};
+
+// Function Shenmue3.S3GameTimeManager.registCustomTimeEvent
+struct AS3GameTimeManager_registCustomTimeEvent_Params
+{
+	float                                              Time;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                registIndex;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.IsStopGameTime
+struct AS3GameTimeManager_IsStopGameTime_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.InitDataTime
+struct AS3GameTimeManager_InitDataTime_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.GetGameDateTime
+struct AS3GameTimeManager_GetGameDateTime_Params
+{
+	struct FDateTime                                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Shenmue3.S3GameTimeManager.GetEventTimeShop
+struct AS3GameTimeManager_GetEventTimeShop_Params
+{
+	ES3ShopTimeEvent                                   InEventType;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.GetEventTimeDay
+struct AS3GameTimeManager_GetEventTimeDay_Params
+{
+	ES3DayTimeEvent                                    InEventType;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.DetectTimeEventPositon
+struct AS3GameTimeManager_DetectTimeEventPositon_Params
+{
+	int                                                cateId;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Time;                                                     // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Index;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3GameTimeManager.DetectCustomEventPositon
+struct AS3GameTimeManager_DetectCustomEventPositon_Params
+{
+	float                                              NewTime;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              OldTime;                                                  // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        Indexes;                                                  // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3GameTimeManager.AppendGameTime
+struct AS3GameTimeManager_AppendGameTime_Params
+{
+	float                                              DeltaGameTime;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bUpdateNextDay;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3KeyConfigFunctionLibrary.RemoveActionMapping
+struct US3KeyConfigFunctionLibrary_RemoveActionMapping_Params
+{
+	struct FName                                       ActionName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FKey                                        Key;                                                      // (Parm)
+	class UPlayerInput*                                PlayerInput;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FInputActionKeyMapping>              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3KeyConfigFunctionLibrary.IsKeyGamepadInput
+struct US3KeyConfigFunctionLibrary_IsKeyGamepadInput_Params
+{
+	struct FKey                                        Key;                                                      // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3KeyConfigFunctionLibrary.GetUIInputDevice
+struct US3KeyConfigFunctionLibrary_GetUIInputDevice_Params
+{
+	class UObject*                                     WorldContext;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	ES3InputDeviceModel                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3KeyConfigFunctionLibrary.AddActionMapping
+struct US3KeyConfigFunctionLibrary_AddActionMapping_Params
+{
+	struct FName                                       ActionName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FKey                                        Key;                                                      // (Parm)
+	class UPlayerInput*                                PlayerInput;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FInputActionKeyMapping>              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3KismetPlayerLibrary.GetAxisZ
+struct US3KismetPlayerLibrary_GetAxisZ_Params
+{
+	struct FVector                                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3KismetPlayerLibrary.GetAxisY
+struct US3KismetPlayerLibrary_GetAxisY_Params
+{
+	struct FVector                                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3KismetPlayerLibrary.GetAxisX
+struct US3KismetPlayerLibrary_GetAxisX_Params
+{
+	struct FVector                                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3KismetMathLibrary.Vector2DLengthSquared
@@ -7189,24 +7245,6 @@ struct US3KismetMathLibrary_Add_RotatorRotator_Params
 	struct FRotator                                    ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3KismetPlayerLibrary.GetAxisZ
-struct US3KismetPlayerLibrary_GetAxisZ_Params
-{
-	struct FVector                                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3KismetPlayerLibrary.GetAxisY
-struct US3KismetPlayerLibrary_GetAxisY_Params
-{
-	struct FVector                                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3KismetPlayerLibrary.GetAxisX
-struct US3KismetPlayerLibrary_GetAxisX_Params
-{
-	struct FVector                                     ReturnValue;                                              // (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, IsPlainOldData)
-};
-
 // Function Shenmue3.S3LiveStreamingManager.SetEnableStreaming
 struct US3LiveStreamingManager_SetEnableStreaming_Params
 {
@@ -7228,44 +7266,6 @@ struct US3LiveStreamingManager_OnGameStepChanged_Params
 struct US3LiveStreamingManager_GetGameInstance_Params
 {
 	class US3GameInstance*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3KartPawnBase.GetClothCharaName
-struct AS3KartPawnBase_GetClothCharaName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3KeyConfigFunctionLibrary.RemoveActionMapping
-struct US3KeyConfigFunctionLibrary_RemoveActionMapping_Params
-{
-	struct FName                                       ActionName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FKey                                        Key;                                                      // (Parm)
-	class UPlayerInput*                                PlayerInput;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FInputActionKeyMapping>              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3KeyConfigFunctionLibrary.IsKeyGamepadInput
-struct US3KeyConfigFunctionLibrary_IsKeyGamepadInput_Params
-{
-	struct FKey                                        Key;                                                      // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3KeyConfigFunctionLibrary.GetUIInputDevice
-struct US3KeyConfigFunctionLibrary_GetUIInputDevice_Params
-{
-	class UObject*                                     WorldContext;                                             // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	ES3InputDeviceModel                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3KeyConfigFunctionLibrary.AddActionMapping
-struct US3KeyConfigFunctionLibrary_AddActionMapping_Params
-{
-	struct FName                                       ActionName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FKey                                        Key;                                                      // (Parm)
-	class UPlayerInput*                                PlayerInput;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FInputActionKeyMapping>              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Shenmue3.S3LoadingFlipBookImage.SetFlipBookAnimFlg
@@ -7410,6 +7410,29 @@ struct US3LookAtFSMComponent_CopyPreModifyLookAtRangeParamater_Params
 struct US3LookAtFSMComponent_ClearTargetActorDelay_Params
 {
 	float                                              DelayTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MemopadPageWidget.SetSlotHiddenFlag
+struct US3MemopadPageWidget_SetSlotHiddenFlag_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               flag;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MemopadPageWidget.SetSlotContent
+struct US3MemopadPageWidget_SetSlotContent_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class US3MemopadTextWidget*                        Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MemopadPageWidget.AddPhoto
+struct US3MemopadPageWidget_AddPhoto_Params
+{
+	class UTexture2D*                                  Texture;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector2D                                   ScreenPosition;                                           // (Parm, IsPlainOldData)
+	struct FVector2D                                   ScreenSize;                                               // (Parm, IsPlainOldData)
+	class UCanvasPanelSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 // Function Shenmue3.S3MemoFlagManager.SetTabFlagUnread
@@ -7570,29 +7593,6 @@ struct US3MemoFlagManager_AddMemoSubEventOrder_Params
 	int                                                MemoId;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3MemopadPageWidget.SetSlotHiddenFlag
-struct US3MemopadPageWidget_SetSlotHiddenFlag_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               flag;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MemopadPageWidget.SetSlotContent
-struct US3MemopadPageWidget_SetSlotContent_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	class US3MemopadTextWidget*                        Widget;                                                   // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MemopadPageWidget.AddPhoto
-struct US3MemopadPageWidget_AddPhoto_Params
-{
-	class UTexture2D*                                  Texture;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ScreenPosition;                                           // (Parm, IsPlainOldData)
-	struct FVector2D                                   ScreenSize;                                               // (Parm, IsPlainOldData)
-	class UCanvasPanelSlot*                            ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
 // Function Shenmue3.S3MemoTextureDataManagerBase.GetMemoTextureDataObjectByLabel
 struct AS3MemoTextureDataManagerBase_GetMemoTextureDataObjectByLabel_Params
 {
@@ -7643,166 +7643,6 @@ struct AS3MiniGameBase_ClearTalkScriptLoadTimer_Params
 struct AS3MiniGameCharacter_GetClothCharaName_Params
 {
 	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.RemoveDelayFromWidget
-struct US3MiniGameFunctionLibrary_RemoveDelayFromWidget_Params
-{
-	class UUserWidget*                                 pUserWidget;                                              // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.RemoveDelayFromComponent
-struct US3MiniGameFunctionLibrary_RemoveDelayFromComponent_Params
-{
-	class USceneComponent*                             Component;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.RemoveDelayFromActor
-struct US3MiniGameFunctionLibrary_RemoveDelayFromActor_Params
-{
-	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.OutputPunchResult
-struct US3MiniGameFunctionLibrary_OutputPunchResult_Params
-{
-	Enum_QTETitlePlayList                              PlaylistItem;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<Enum_QTETitlePlayList>                      InPlayList;                                               // (Parm, ZeroConstructor)
-	TArray<Enum_QTETitlePlayList>                      OutPlaylist;                                              // (Parm, OutParm, ZeroConstructor)
-	TArray<struct FQTECommandCheckStruct>              InCommandStructArray;                                     // (Parm, ZeroConstructor)
-	TArray<struct FQTECommandCheckStruct>              OutCommandStructArray;                                    // (Parm, OutParm, ZeroConstructor)
-	bool                                               bNeedPlaySequencer;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               bHitSuccessfully;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.OutputCSVData
-struct US3MiniGameFunctionLibrary_OutputCSVData_Params
-{
-	struct FString                                     Filename;                                                 // (Parm, ZeroConstructor)
-	struct FString                                     outputFolderName;                                         // (Parm, ZeroConstructor)
-	struct FString                                     outStr;                                                   // (Parm, ZeroConstructor)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameQTECommandsTable
-struct US3MiniGameFunctionLibrary_GetRowByNameQTECommandsTable_Params
-{
-	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FQTETitleCommandTableRowBase                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameODGiftTable
-struct US3MiniGameFunctionLibrary_GetRowByNameODGiftTable_Params
-{
-	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FODGiftDataTableRowBase                     ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameMiniGameNPCLinkData
-struct US3MiniGameFunctionLibrary_GetRowByNameMiniGameNPCLinkData_Params
-{
-	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FGameplayTag                                NPC;                                                      // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               bOutResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FS3MiniGameNPCLinkData                      OutData;                                                  // (Parm, OutParm)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameCMDataTable
-struct US3MiniGameFunctionLibrary_GetRowByNameCMDataTable_Params
-{
-	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FCupMagicDataTableRowBase                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameAnimalRaceSpeedTable
-struct US3MiniGameFunctionLibrary_GetRowByNameAnimalRaceSpeedTable_Params
-{
-	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	struct FAnimalRaceSpeedTableRowBase                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetRandomValueInRange
-struct US3MiniGameFunctionLibrary_GetRandomValueInRange_Params
-{
-	float                                              Min;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Max;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetRandomIntValueInRange
-struct US3MiniGameFunctionLibrary_GetRandomIntValueInRange_Params
-{
-	int                                                Min;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Max;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetLastScoreKey
-struct US3MiniGameFunctionLibrary_GetLastScoreKey_Params
-{
-	class AS3MiniGameBase*                             MiniGame;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.GetHighScoreKey
-struct US3MiniGameFunctionLibrary_GetHighScoreKey_Params
-{
-	class AS3MiniGameBase*                             MiniGame;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameFunctionLibrary.CalculateTotalScore
-struct US3MiniGameFunctionLibrary_CalculateTotalScore_Params
-{
-	int                                                HitScore;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                Combo;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ComboScore;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ComboMaxScore;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameManager.UpdateMiniGameWinRate
-struct AS3MiniGameManager_UpdateMiniGameWinRate_Params
-{
-};
-
-// Function Shenmue3.S3MiniGameManager.RemoveMiniGameActor
-struct AS3MiniGameManager_RemoveMiniGameActor_Params
-{
-	class AS3MiniGameBase*                             Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameManager.RemoveDelayedInitializeActor
-struct AS3MiniGameManager_RemoveDelayedInitializeActor_Params
-{
-	class AS3MiniGameBase*                             Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameManager.GetMiniGameActorByTagCharaName
-struct AS3MiniGameManager_GetMiniGameActorByTagCharaName_Params
-{
-	struct FName                                       TagCharaName;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	class AS3MiniGameBase*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3MiniGameManager.GetCharacterLinkMiniGames
-struct AS3MiniGameManager_GetCharacterLinkMiniGames_Params
-{
-	class AActor*                                      TargetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<class AActor*>                              MiniGameActors;                                           // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function Shenmue3.S3MiniGameManager.AddMiniGameActor
-struct AS3MiniGameManager_AddMiniGameActor_Params
-{
-	class AS3MiniGameBase*                             Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shenmue3.S3MiniGameProgressManager.SetupMiniGameProgressInfoArray
@@ -7953,22 +7793,127 @@ struct US3MiniGameProgressManager_CreateProgressSaveDataArray_Params
 	TArray<struct FS3MiniGameProgressSaveData>         OutSaveDataArray;                                         // (Parm, OutParm, ZeroConstructor)
 };
 
-// Function Shenmue3.S3MovementModeRequestHandler.UnrequestMovementMode
-struct US3MovementModeRequestHandler_UnrequestMovementMode_Params
+// Function Shenmue3.S3MiniGameFunctionLibrary.RemoveDelayFromWidget
+struct US3MiniGameFunctionLibrary_RemoveDelayFromWidget_Params
 {
-	class UObject*                                     Requester;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UUserWidget*                                 pUserWidget;                                              // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
-// Function Shenmue3.S3MovementModeRequestHandler.RequestMovementMode
-struct US3MovementModeRequestHandler_RequestMovementMode_Params
+// Function Shenmue3.S3MiniGameFunctionLibrary.RemoveDelayFromComponent
+struct US3MiniGameFunctionLibrary_RemoveDelayFromComponent_Params
 {
-	class UObject*                                     Requester;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EMovementMode>                         Mode;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Component;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
-// Function Shenmue3.S3MovementModeRequestHandler.CheckInvalidUProperties
-struct US3MovementModeRequestHandler_CheckInvalidUProperties_Params
+// Function Shenmue3.S3MiniGameFunctionLibrary.RemoveDelayFromActor
+struct US3MiniGameFunctionLibrary_RemoveDelayFromActor_Params
 {
+	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.OutputPunchResult
+struct US3MiniGameFunctionLibrary_OutputPunchResult_Params
+{
+	Enum_QTETitlePlayList                              PlaylistItem;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<Enum_QTETitlePlayList>                      InPlayList;                                               // (Parm, ZeroConstructor)
+	TArray<Enum_QTETitlePlayList>                      OutPlaylist;                                              // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FQTECommandCheckStruct>              InCommandStructArray;                                     // (Parm, ZeroConstructor)
+	TArray<struct FQTECommandCheckStruct>              OutCommandStructArray;                                    // (Parm, OutParm, ZeroConstructor)
+	bool                                               bNeedPlaySequencer;                                       // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               bHitSuccessfully;                                         // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.OutputCSVData
+struct US3MiniGameFunctionLibrary_OutputCSVData_Params
+{
+	struct FString                                     Filename;                                                 // (Parm, ZeroConstructor)
+	struct FString                                     outputFolderName;                                         // (Parm, ZeroConstructor)
+	struct FString                                     outStr;                                                   // (Parm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameQTECommandsTable
+struct US3MiniGameFunctionLibrary_GetRowByNameQTECommandsTable_Params
+{
+	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FQTETitleCommandTableRowBase                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameODGiftTable
+struct US3MiniGameFunctionLibrary_GetRowByNameODGiftTable_Params
+{
+	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FODGiftDataTableRowBase                     ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameMiniGameNPCLinkData
+struct US3MiniGameFunctionLibrary_GetRowByNameMiniGameNPCLinkData_Params
+{
+	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FGameplayTag                                NPC;                                                      // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               bOutResult;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FS3MiniGameNPCLinkData                      OutData;                                                  // (Parm, OutParm)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameCMDataTable
+struct US3MiniGameFunctionLibrary_GetRowByNameCMDataTable_Params
+{
+	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FCupMagicDataTableRowBase                   ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetRowByNameAnimalRaceSpeedTable
+struct US3MiniGameFunctionLibrary_GetRowByNameAnimalRaceSpeedTable_Params
+{
+	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       pName;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Result;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	struct FAnimalRaceSpeedTableRowBase                ReturnValue;                                              // (Parm, OutParm, ReturnParm)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetRandomValueInRange
+struct US3MiniGameFunctionLibrary_GetRandomValueInRange_Params
+{
+	float                                              Min;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Max;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetRandomIntValueInRange
+struct US3MiniGameFunctionLibrary_GetRandomIntValueInRange_Params
+{
+	int                                                Min;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Max;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetLastScoreKey
+struct US3MiniGameFunctionLibrary_GetLastScoreKey_Params
+{
+	class AS3MiniGameBase*                             MiniGame;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.GetHighScoreKey
+struct US3MiniGameFunctionLibrary_GetHighScoreKey_Params
+{
+	class AS3MiniGameBase*                             MiniGame;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameFunctionLibrary.CalculateTotalScore
+struct US3MiniGameFunctionLibrary_CalculateTotalScore_Params
+{
+	int                                                HitScore;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                Combo;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ComboScore;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ComboMaxScore;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3NarrowPassageActor.RequestIgnoreCollision
@@ -7997,6 +7942,24 @@ struct AS3NarrowPassageActor_OnOverlapBegin_Params
 	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bFromSweep;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FHitResult                                  SweepResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MovementModeRequestHandler.UnrequestMovementMode
+struct US3MovementModeRequestHandler_UnrequestMovementMode_Params
+{
+	class UObject*                                     Requester;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MovementModeRequestHandler.RequestMovementMode
+struct US3MovementModeRequestHandler_RequestMovementMode_Params
+{
+	class UObject*                                     Requester;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EMovementMode>                         Mode;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MovementModeRequestHandler.CheckInvalidUProperties
+struct US3MovementModeRequestHandler_CheckInvalidUProperties_Params
+{
 };
 
 // Function Shenmue3.S3NavigationFunctionLibrary.TestPathExists
@@ -8039,10 +8002,18 @@ struct AS3NavLink_Stairs_SetStairParam_Params
 	float                                              ext;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3NavLinkCustomComponent.IsNavLinkEnabled
-struct US3NavLinkCustomComponent_IsNavLinkEnabled_Params
+// Function Shenmue3.S3NPCAnimDataAsset.GetFaceMontagesInstance
+struct US3NPCAnimDataAsset_GetFaceMontagesInstance_Params
 {
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	class UObject*                                     Outer;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Name;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FS3FaceMontageData                          Data;                                                     // (Parm, OutParm)
+};
+
+// Function Shenmue3.S3NPCAnimDataAsset.GetFaceMontages
+struct US3NPCAnimDataAsset_GetFaceMontages_Params
+{
+	TArray<struct FS3FaceMontageData>                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function Shenmue3.S3NPCAnimInstance.UpdateTraceLocation
@@ -8476,18 +8447,41 @@ struct US3NPCAnimInstance_AnimationCompleteBegin_Params
 	bool                                               bAnimSequenceA;                                           // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3NPCAnimDataAsset.GetFaceMontagesInstance
-struct US3NPCAnimDataAsset_GetFaceMontagesInstance_Params
+// Function Shenmue3.S3MiniGameManager.UpdateMiniGameWinRate
+struct AS3MiniGameManager_UpdateMiniGameWinRate_Params
 {
-	class UObject*                                     Outer;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Name;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FS3FaceMontageData                          Data;                                                     // (Parm, OutParm)
 };
 
-// Function Shenmue3.S3NPCAnimDataAsset.GetFaceMontages
-struct US3NPCAnimDataAsset_GetFaceMontages_Params
+// Function Shenmue3.S3MiniGameManager.RemoveMiniGameActor
+struct AS3MiniGameManager_RemoveMiniGameActor_Params
 {
-	TArray<struct FS3FaceMontageData>                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+	class AS3MiniGameBase*                             Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameManager.RemoveDelayedInitializeActor
+struct AS3MiniGameManager_RemoveDelayedInitializeActor_Params
+{
+	class AS3MiniGameBase*                             Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameManager.GetMiniGameActorByTagCharaName
+struct AS3MiniGameManager_GetMiniGameActorByTagCharaName_Params
+{
+	struct FName                                       TagCharaName;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class AS3MiniGameBase*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3MiniGameManager.GetCharacterLinkMiniGames
+struct AS3MiniGameManager_GetCharacterLinkMiniGames_Params
+{
+	class AActor*                                      TargetActor;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class AActor*>                              MiniGameActors;                                           // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3MiniGameManager.AddMiniGameActor
+struct AS3MiniGameManager_AddMiniGameActor_Params
+{
+	class AS3MiniGameBase*                             Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shenmue3.S3NPCAttachmentActor.SetMeshVisibility
@@ -9335,72 +9329,10 @@ struct AS3PlayerCameraManager_ChangedCameraState_Params
 	ECameraState                                       NewState;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3PlayerInput.UpdateKeyBinding
-struct US3PlayerInput_UpdateKeyBinding_Params
+// Function Shenmue3.S3NavLinkCustomComponent.IsNavLinkEnabled
+struct US3NavLinkCustomComponent_IsNavLinkEnabled_Params
 {
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.SetExecCountPerformMovement
-struct US3PlayerMovementComponent_SetExecCountPerformMovement_Params
-{
-	int                                                Count;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.PauseAvoidance
-struct US3PlayerMovementComponent_PauseAvoidance_Params
-{
-	bool                                               IsPaused;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.GetVelocityTarget
-struct US3PlayerMovementComponent_GetVelocityTarget_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.GetRequestedVelocity
-struct US3PlayerMovementComponent_GetRequestedVelocity_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.GetNPCAnimRotateMode
-struct US3PlayerMovementComponent_GetNPCAnimRotateMode_Params
-{
-	TEnumAsByte<ENPCAnimRotateMode>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.GetNPCAnimMoveMode
-struct US3PlayerMovementComponent_GetNPCAnimMoveMode_Params
-{
-	TEnumAsByte<ENPCAnimMoveMode>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.GetForwardVelocityProjection
-struct US3PlayerMovementComponent_GetForwardVelocityProjection_Params
-{
-	struct FVector                                     Original;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.GetEffectiveNPCAnimRotateMode
-struct US3PlayerMovementComponent_GetEffectiveNPCAnimRotateMode_Params
-{
-	TEnumAsByte<ENPCAnimRotateMode>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.GetEffectiveNPCAnimMoveMode
-struct US3PlayerMovementComponent_GetEffectiveNPCAnimMoveMode_Params
-{
-	TEnumAsByte<ENPCAnimMoveMode>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3PlayerMovementComponent.CalculateDeltaLocationForDeltaRotation
-struct US3PlayerMovementComponent_CalculateDeltaLocationForDeltaRotation_Params
-{
-	float                                              FromYawDegrees;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ToYawDegrees;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3PlayerExpCollection.SetAttributePoints
@@ -9524,6 +9456,74 @@ struct US3PlayerExpCollection_AddAttributePointRatio_Params
 {
 	struct FName                                       Key;                                                      // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              Ratio;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerInput.UpdateKeyBinding
+struct US3PlayerInput_UpdateKeyBinding_Params
+{
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.SetExecCountPerformMovement
+struct US3PlayerMovementComponent_SetExecCountPerformMovement_Params
+{
+	int                                                Count;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.PauseAvoidance
+struct US3PlayerMovementComponent_PauseAvoidance_Params
+{
+	bool                                               IsPaused;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.GetVelocityTarget
+struct US3PlayerMovementComponent_GetVelocityTarget_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.GetRequestedVelocity
+struct US3PlayerMovementComponent_GetRequestedVelocity_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.GetNPCAnimRotateMode
+struct US3PlayerMovementComponent_GetNPCAnimRotateMode_Params
+{
+	TEnumAsByte<ENPCAnimRotateMode>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.GetNPCAnimMoveMode
+struct US3PlayerMovementComponent_GetNPCAnimMoveMode_Params
+{
+	TEnumAsByte<ENPCAnimMoveMode>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.GetForwardVelocityProjection
+struct US3PlayerMovementComponent_GetForwardVelocityProjection_Params
+{
+	struct FVector                                     Original;                                                 // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.GetEffectiveNPCAnimRotateMode
+struct US3PlayerMovementComponent_GetEffectiveNPCAnimRotateMode_Params
+{
+	TEnumAsByte<ENPCAnimRotateMode>                    ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.GetEffectiveNPCAnimMoveMode
+struct US3PlayerMovementComponent_GetEffectiveNPCAnimMoveMode_Params
+{
+	TEnumAsByte<ENPCAnimMoveMode>                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3PlayerMovementComponent.CalculateDeltaLocationForDeltaRotation
+struct US3PlayerMovementComponent_CalculateDeltaLocationForDeltaRotation_Params
+{
+	float                                              FromYawDegrees;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ToYawDegrees;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3PlayerObstacleSensorComponent.CheckForNPCObstacles
@@ -9697,6 +9697,13 @@ struct AS3RainManager_NavigationRaincast_Params
 struct AS3RainManager_GetNavData_Params
 {
 	class ANavigationData*                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3SaveGame.GetEventFlag
+struct US3SaveGame_GetEventFlag_Params
+{
+	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3SaveLoadManager.ShowNotInstallDLCDialog
@@ -9910,13 +9917,6 @@ struct US3SaveLoadManager_ApplyIniSaveData_Params
 struct AS3SceneAndWidgetCapture2D_OnInterpToggle_Params
 {
 	bool                                               bEnable;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3SaveGame.GetEventFlag
-struct US3SaveGame_GetEventFlag_Params
-{
-	int                                                Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3SearchArea.ToggleCamera
@@ -10644,6 +10644,12 @@ struct US3StatusManager_AddRedemptionPoint_Params
 	int                                                AddPoint;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function Shenmue3.S3SubmissionConfig.SetDemoType
+struct US3SubmissionConfig_SetDemoType_Params
+{
+	ES3DemoType                                        NewType;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Shenmue3.S3StopAnimMetaData.SetYawMinMax
 struct US3StopAnimMetaData_SetYawMinMax_Params
 {
@@ -10690,10 +10696,27 @@ struct AS3StreetFightTrigger_GetNextFighter_Params
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
-// Function Shenmue3.S3SubmissionConfig.SetDemoType
-struct US3SubmissionConfig_SetDemoType_Params
+// Function Shenmue3.S3TalkAvoidanceComponent.MakeRadialLocations
+struct US3TalkAvoidanceComponent_MakeRadialLocations_Params
 {
-	ES3DemoType                                        NewType;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              BaseDistance;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                DistanceDiv;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              MaxAngle;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                AngleDiv;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>                             OutLocations;                                             // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3TalkAvoidanceComponent.MakeCircularSurroundLocations
+struct US3TalkAvoidanceComponent_MakeCircularSurroundLocations_Params
+{
+	class ACharacter*                                  SurroundChar;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>                             OutLocations;                                             // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3TalkAvoidanceComponent.IsDebugDrawingEnabled
+struct US3TalkAvoidanceComponent_IsDebugDrawingEnabled_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3SystemManager.UpdateKeyConfig
@@ -10841,12 +10864,6 @@ struct US3SystemManager_AddRewardPassword_Params
 {
 	struct FName                                       Password;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3TalkCameraManagerBase.SetGameCameraCutThisFrame
-struct AS3TalkCameraManagerBase_SetGameCameraCutThisFrame_Params
-{
-	bool                                               newParam;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function Shenmue3.S3TalkComponent.IsValidMiniGame
@@ -11095,6 +11112,12 @@ struct AS3TalkEventManagerBase_ActivateEvent_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Shenmue3.S3TalkCameraManagerBase.SetGameCameraCutThisFrame
+struct AS3TalkCameraManagerBase_SetGameCameraCutThisFrame_Params
+{
+	bool                                               newParam;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function Shenmue3.S3TalkEventManagerFunctionLibrary.TalkEvent_IsJoinTalk
 struct US3TalkEventManagerFunctionLibrary_TalkEvent_IsJoinTalk_Params
 {
@@ -11142,35 +11165,6 @@ struct US3TalkEventManagerFunctionLibrary_BreakInt32Range_Params
 	int                                                LowerValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ERangeBoundTypes>                      UpperType;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                UpperValue;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3TalkInterface.Screen_Player
-struct US3TalkInterface_Screen_Player_Params
-{
-};
-
-// Function Shenmue3.S3TalkInterface.Screen_NPC
-struct US3TalkInterface_Screen_NPC_Params
-{
-};
-
-// Function Shenmue3.S3TalkInterface.OnTalkStart
-struct US3TalkInterface_OnTalkStart_Params
-{
-	class US3TalkComponent*                            TalkComponent;                                            // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function Shenmue3.S3TalkInterface.OnTalkFinished
-struct US3TalkInterface_OnTalkFinished_Params
-{
-	class US3TalkComponent*                            TalkComponent;                                            // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               interrupted;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3TalkInterface.IsTalking
-struct US3TalkInterface_IsTalking_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function Shenmue3.S3TalkScriptManager.SetProgressIndex
@@ -11286,115 +11280,39 @@ struct US3TalkScriptManager_AddACPlayCount_Params
 	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
 };
 
-// Function Shenmue3.S3TalkAvoidanceComponent.MakeRadialLocations
-struct US3TalkAvoidanceComponent_MakeRadialLocations_Params
+// Function Shenmue3.S3TalkInterface.Screen_Player
+struct US3TalkInterface_Screen_Player_Params
 {
-	float                                              BaseDistance;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                DistanceDiv;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              MaxAngle;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                AngleDiv;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVector>                             OutLocations;                                             // (Parm, OutParm, ZeroConstructor)
 };
 
-// Function Shenmue3.S3TalkAvoidanceComponent.MakeCircularSurroundLocations
-struct US3TalkAvoidanceComponent_MakeCircularSurroundLocations_Params
+// Function Shenmue3.S3TalkInterface.Screen_NPC
+struct US3TalkInterface_Screen_NPC_Params
 {
-	class ACharacter*                                  SurroundChar;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVector>                             OutLocations;                                             // (Parm, OutParm, ZeroConstructor)
 };
 
-// Function Shenmue3.S3TalkAvoidanceComponent.IsDebugDrawingEnabled
-struct US3TalkAvoidanceComponent_IsDebugDrawingEnabled_Params
+// Function Shenmue3.S3TalkInterface.OnTalkStart
+struct US3TalkInterface_OnTalkStart_Params
+{
+	class US3TalkComponent*                            TalkComponent;                                            // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function Shenmue3.S3TalkInterface.OnTalkFinished
+struct US3TalkInterface_OnTalkFinished_Params
+{
+	class US3TalkComponent*                            TalkComponent;                                            // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               interrupted;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3TalkInterface.IsTalking
+struct US3TalkInterface_IsTalking_Params
 {
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function Shenmue3.S3TextDataLibrary.StringLengthConvertTime
-struct US3TextDataLibrary_StringLengthConvertTime_Params
-{
-	struct FString                                     S;                                                        // (Parm, ZeroConstructor)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3TextDataLibrary.ShouldSplitTextData
-struct US3TextDataLibrary_ShouldSplitTextData_Params
-{
-	struct FString                                     Path;                                                     // (Parm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3TextDataLibrary.RemoveRuby
-struct US3TextDataLibrary_RemoveRuby_Params
-{
-	struct FString                                     CheckString;                                              // (Parm, ZeroConstructor)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.GetVoiceLanguageCueSheetPostfix
-struct US3TextDataLibrary_GetVoiceLanguageCueSheetPostfix_Params
+// Function Shenmue3.S3TextDataTalk.GetClipperString
+struct US3TextDataTalk_GetClipperString_Params
 {
 	ES3VoiceLanguage                                   VoiceLanguage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.GetVoiceLanguageAbbreviation
-struct US3TextDataLibrary_GetVoiceLanguageAbbreviation_Params
-{
-	ES3VoiceLanguage                                   VoiceLanguage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.GetVoiceAssetPath
-struct US3TextDataLibrary_GetVoiceAssetPath_Params
-{
-	ES3TextPathType                                    Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.GetTextDataAssets
-struct US3TextDataLibrary_GetTextDataAssets_Params
-{
-	ES3TextPathType                                    PathType;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	ES3Locale                                          Locale;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     LabelKeyword;                                             // (Parm, ZeroConstructor)
-	TArray<class US3TextDataAsset*>                    OutAssets;                                                // (Parm, OutParm, ZeroConstructor)
-};
-
-// Function Shenmue3.S3TextDataLibrary.GetTextDataAssetPath
-struct US3TextDataLibrary_GetTextDataAssetPath_Params
-{
-	ES3TextPathType                                    Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.GetSplitAssetName
-struct US3TextDataLibrary_GetSplitAssetName_Params
-{
-	struct FString                                     Label;                                                    // (Parm, ZeroConstructor)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.GetLocaleAbbreviation
-struct US3TextDataLibrary_GetLocaleAbbreviation_Params
-{
-	ES3Locale                                          Locale;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.ConvertFullWidthCharacter
-struct US3TextDataLibrary_ConvertFullWidthCharacter_Params
-{
-	struct FString                                     ConvertString;                                            // (Parm, ZeroConstructor)
-	ES3Locale                                          Locale;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function Shenmue3.S3TextDataLibrary.AddSimpleLineBreak
-struct US3TextDataLibrary_AddSimpleLineBreak_Params
-{
-	struct FString                                     SourceString;                                             // (Parm, ZeroConstructor)
-	int                                                MinLengthToBreak;                                         // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              MinRatio;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
@@ -11535,6 +11453,95 @@ struct US3TextDataManagerBase_DisableCacheData_Params
 {
 };
 
+// Function Shenmue3.S3TextDataLibrary.StringLengthConvertTime
+struct US3TextDataLibrary_StringLengthConvertTime_Params
+{
+	struct FString                                     S;                                                        // (Parm, ZeroConstructor)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3TextDataLibrary.ShouldSplitTextData
+struct US3TextDataLibrary_ShouldSplitTextData_Params
+{
+	struct FString                                     Path;                                                     // (Parm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3TextDataLibrary.RemoveRuby
+struct US3TextDataLibrary_RemoveRuby_Params
+{
+	struct FString                                     CheckString;                                              // (Parm, ZeroConstructor)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.GetVoiceLanguageCueSheetPostfix
+struct US3TextDataLibrary_GetVoiceLanguageCueSheetPostfix_Params
+{
+	ES3VoiceLanguage                                   VoiceLanguage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.GetVoiceLanguageAbbreviation
+struct US3TextDataLibrary_GetVoiceLanguageAbbreviation_Params
+{
+	ES3VoiceLanguage                                   VoiceLanguage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.GetVoiceAssetPath
+struct US3TextDataLibrary_GetVoiceAssetPath_Params
+{
+	ES3TextPathType                                    Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.GetTextDataAssets
+struct US3TextDataLibrary_GetTextDataAssets_Params
+{
+	ES3TextPathType                                    PathType;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	ES3Locale                                          Locale;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     LabelKeyword;                                             // (Parm, ZeroConstructor)
+	TArray<class US3TextDataAsset*>                    OutAssets;                                                // (Parm, OutParm, ZeroConstructor)
+};
+
+// Function Shenmue3.S3TextDataLibrary.GetTextDataAssetPath
+struct US3TextDataLibrary_GetTextDataAssetPath_Params
+{
+	ES3TextPathType                                    Type;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.GetSplitAssetName
+struct US3TextDataLibrary_GetSplitAssetName_Params
+{
+	struct FString                                     Label;                                                    // (Parm, ZeroConstructor)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.GetLocaleAbbreviation
+struct US3TextDataLibrary_GetLocaleAbbreviation_Params
+{
+	ES3Locale                                          Locale;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.ConvertFullWidthCharacter
+struct US3TextDataLibrary_ConvertFullWidthCharacter_Params
+{
+	struct FString                                     ConvertString;                                            // (Parm, ZeroConstructor)
+	ES3Locale                                          Locale;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function Shenmue3.S3TextDataLibrary.AddSimpleLineBreak
+struct US3TextDataLibrary_AddSimpleLineBreak_Params
+{
+	struct FString                                     SourceString;                                             // (Parm, ZeroConstructor)
+	int                                                MinLengthToBreak;                                         // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              MinRatio;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function Shenmue3.S3TimeSwitchSpotLight.UpdateLight
 struct AS3TimeSwitchSpotLight_UpdateLight_Params
 {
@@ -11612,6 +11619,39 @@ struct AS3WalkOnlyTrigger_GetEnable_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Shenmue3.S3WaveActor.SnapAttachedActorsToWave
+struct AS3WaveActor_SnapAttachedActorsToWave_Params
+{
+};
+
+// Function Shenmue3.S3WaveActor.ProjectPointToWave
+struct AS3WaveActor_ProjectPointToWave_Params
+{
+	struct FVector                                     Location;                                                 // (ConstParm, Parm, IsPlainOldData)
+	bool                                               bZOnly;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function Shenmue3.S3WaveActor.ExitArea
+struct AS3WaveActor_ExitArea_Params
+{
+	class UPrimitiveComponent*                         OverlappedComponent;                                      // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function Shenmue3.S3WaveActor.EnterArea
+struct AS3WaveActor_EnterArea_Params
+{
+	class UPrimitiveComponent*                         OverlappedComp;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AActor*                                      Other;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bFromSweep;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FHitResult                                  SweepResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+};
+
 // Function Shenmue3.S3WeatherDataAsset.GetDefaultHour
 struct US3WeatherDataAsset_GetDefaultHour_Params
 {
@@ -11686,39 +11726,6 @@ struct US3WetnessComponent_EnableAutomaticShelterUpdate_Params
 	bool                                               bValue;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function Shenmue3.S3WaveActor.SnapAttachedActorsToWave
-struct AS3WaveActor_SnapAttachedActorsToWave_Params
-{
-};
-
-// Function Shenmue3.S3WaveActor.ProjectPointToWave
-struct AS3WaveActor_ProjectPointToWave_Params
-{
-	struct FVector                                     Location;                                                 // (ConstParm, Parm, IsPlainOldData)
-	bool                                               bZOnly;                                                   // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3WaveActor.ExitArea
-struct AS3WaveActor_ExitArea_Params
-{
-	class UPrimitiveComponent*                         OverlappedComponent;                                      // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      OtherActor;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function Shenmue3.S3WaveActor.EnterArea
-struct AS3WaveActor_EnterArea_Params
-{
-	class UPrimitiveComponent*                         OverlappedComp;                                           // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      Other;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         OtherComp;                                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	int                                                OtherBodyIndex;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bFromSweep;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FHitResult                                  SweepResult;                                              // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-};
-
 // Function Shenmue3.S3WheeledVehicle.SetLinearDriveVelocity
 struct AS3WheeledVehicle_SetLinearDriveVelocity_Params
 {
@@ -11751,6 +11758,13 @@ struct AS3WheeledVehicle_GetLinearDrivePosition_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function Shenmue3.S3WidgetToRenderTargetComponent.DrawWidgetToRenderTarget
+struct US3WidgetToRenderTargetComponent_DrawWidgetToRenderTarget_Params
+{
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function Shenmue3.ScriptFunctionLibrary.GetNPCDefinition
 struct UScriptFunctionLibrary_GetNPCDefinition_Params
 {
@@ -11765,13 +11779,6 @@ struct UScriptFunctionLibrary_CreateTaskWithClass_Params
 	class UObject*                                     Outer;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      ObjectClass;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     TaskClass;                                                // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function Shenmue3.S3WidgetToRenderTargetComponent.DrawWidgetToRenderTarget
-struct US3WidgetToRenderTargetComponent_DrawWidgetToRenderTarget_Params
-{
-	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
@@ -11837,13 +11844,6 @@ struct UTalkEventProcessBase_Finalize_Params
 // Function Shenmue3.TalkEventProcessBase.Activate
 struct UTalkEventProcessBase_Activate_Params
 {
-};
-
-// Function Shenmue3.S3TextDataTalk.GetClipperString
-struct US3TextDataTalk_GetClipperString_Params
-{
-	ES3VoiceLanguage                                   VoiceLanguage;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 }

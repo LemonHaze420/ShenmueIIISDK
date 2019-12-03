@@ -30,7 +30,7 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Attachment_Sausage8_AnimGraphNode_SequencePlayer_0DBFD8644696856D2FD246B8AA2661CC();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Attachment_Sausage8_AnimGraphNode_SequencePlayer_0DBFD8644696856D2FD246B8AA2661CC();
 	void ExecuteUbergraph_ABP_Attachment_Sausage8(int EntryPoint);
 };
 

@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.Disable_StickIn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3actionSelect_C::Disable_StickIn()
+void ABP_S3actionSelect_C::STATIC_Disable_StickIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.Disable_StickIn");
 
@@ -31,9 +31,9 @@ void ABP_S3actionSelect_C::Disable_StickIn()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_TimeOver
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3actionSelect_C::doCmd_TimeOver()
+void ABP_S3actionSelect_C::STATIC_doCmd_TimeOver()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_TimeOver");
 
@@ -48,20 +48,21 @@ void ABP_S3actionSelect_C::doCmd_TimeOver()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.degreeToPadinput
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetMulticast, Delegate, NetServer, NetClient, Const)
 // Parameters:
-// float                          degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Degree                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_padSwitch>      Input                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           isInput                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::degreeToPadinput(float degree, TEnumAsByte<EN_padSwitch>* Input, bool* isInput)
+void ABP_S3actionSelect_C::degreeToPadinput(float Degree, TEnumAsByte<EN_padSwitch>* Input, bool* isInput)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.degreeToPadinput");
 
 	ABP_S3actionSelect_C_degreeToPadinput_Params params;
-	params.degree = degree;
+	params.Degree = Degree;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,7 +76,7 @@ void ABP_S3actionSelect_C::degreeToPadinput(float degree, TEnumAsByte<EN_padSwit
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_cancelTimer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_S3actionSelect_C::doCmd_cancelTimer()
 {
@@ -84,6 +85,7 @@ void ABP_S3actionSelect_C::doCmd_cancelTimer()
 	ABP_S3actionSelect_C_doCmd_cancelTimer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +94,7 @@ void ABP_S3actionSelect_C::doCmd_cancelTimer()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.catch_onTimeover
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::catch_onTimeover()
 {
@@ -109,11 +111,11 @@ void ABP_S3actionSelect_C::catch_onTimeover()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_pauseTimer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           Pause                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::doCmd_pauseTimer(bool Pause)
+void ABP_S3actionSelect_C::STATIC_doCmd_pauseTimer(bool Pause)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_pauseTimer");
 
@@ -121,6 +123,7 @@ void ABP_S3actionSelect_C::doCmd_pauseTimer(bool Pause)
 	params.Pause = Pause;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,11 +132,11 @@ void ABP_S3actionSelect_C::doCmd_pauseTimer(bool Pause)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_startTimer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::doCmd_startTimer(float Time)
+void ABP_S3actionSelect_C::STATIC_doCmd_startTimer(float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_startTimer");
 
@@ -141,6 +144,7 @@ void ABP_S3actionSelect_C::doCmd_startTimer(float Time)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,12 +153,12 @@ void ABP_S3actionSelect_C::doCmd_startTimer(float Time)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_sendInput
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_padSwitch>      Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           press                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::doCmd_sendInput(TEnumAsByte<EN_padSwitch> Button, bool press)
+void ABP_S3actionSelect_C::STATIC_doCmd_sendInput(TEnumAsByte<EN_padSwitch> Button, bool press)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_sendInput");
 
@@ -171,12 +175,12 @@ void ABP_S3actionSelect_C::doCmd_sendInput(TEnumAsByte<EN_padSwitch> Button, boo
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_setText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3actionSelect_C::doCmd_setText(int Index, const struct FText& Text)
+void ABP_S3actionSelect_C::STATIC_doCmd_setText(int Index, const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_setText");
 
@@ -193,7 +197,7 @@ void ABP_S3actionSelect_C::doCmd_setText(int Index, const struct FText& Text)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_changeText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -207,6 +211,7 @@ void ABP_S3actionSelect_C::doCmd_changeText(int Index, const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,12 +220,12 @@ void ABP_S3actionSelect_C::doCmd_changeText(int Index, const struct FText& Text)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_addItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3actionSelect_C::doCmd_addItem(int Index, const struct FText& Text)
+void ABP_S3actionSelect_C::STATIC_doCmd_addItem(int Index, const struct FText& Text)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_addItem");
 
@@ -229,6 +234,7 @@ void ABP_S3actionSelect_C::doCmd_addItem(int Index, const struct FText& Text)
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -237,15 +243,16 @@ void ABP_S3actionSelect_C::doCmd_addItem(int Index, const struct FText& Text)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_cancelSelection
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3actionSelect_C::doCmd_cancelSelection()
+void ABP_S3actionSelect_C::STATIC_doCmd_cancelSelection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_cancelSelection");
 
 	ABP_S3actionSelect_C_doCmd_cancelSelection_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,15 +261,16 @@ void ABP_S3actionSelect_C::doCmd_cancelSelection()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_startSelection
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3actionSelect_C::doCmd_startSelection()
+void ABP_S3actionSelect_C::STATIC_doCmd_startSelection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.doCmd_startSelection");
 
 	ABP_S3actionSelect_C_doCmd_startSelection_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,7 +279,7 @@ void ABP_S3actionSelect_C::doCmd_startSelection()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.catch_onEndFinishSelection
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 
 void ABP_S3actionSelect_C::catch_onEndFinishSelection()
 {
@@ -288,7 +296,7 @@ void ABP_S3actionSelect_C::catch_onEndFinishSelection()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.catch_onEndStartSelection
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::catch_onEndStartSelection()
 {
@@ -305,11 +313,11 @@ void ABP_S3actionSelect_C::catch_onEndStartSelection()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.catch_onSelected
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::catch_onSelected(int Index)
+void ABP_S3actionSelect_C::STATIC_catch_onSelected(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.catch_onSelected");
 
@@ -317,6 +325,7 @@ void ABP_S3actionSelect_C::catch_onSelected(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,15 +334,16 @@ void ABP_S3actionSelect_C::catch_onSelected(int Index)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_S3actionSelect_C::UserConstructionScript()
+void ABP_S3actionSelect_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.UserConstructionScript");
 
 	ABP_S3actionSelect_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -342,11 +352,11 @@ void ABP_S3actionSelect_C::UserConstructionScript()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3actionSelect_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_S3actionSelect_C::STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8");
 
@@ -354,6 +364,7 @@ void ABP_S3actionSelect_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -362,11 +373,11 @@ void ABP_S3actionSelect_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3actionSelect_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_S3actionSelect_C::STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7");
 
@@ -374,6 +385,7 @@ void ABP_S3actionSelect_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -382,11 +394,11 @@ void ABP_S3actionSelect_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6
-// (BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3actionSelect_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_S3actionSelect_C::STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6");
 
@@ -394,6 +406,7 @@ void ABP_S3actionSelect_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(co
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -402,11 +415,11 @@ void ABP_S3actionSelect_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(co
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5
-// (BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3actionSelect_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_S3actionSelect_C::STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5");
 
@@ -414,6 +427,7 @@ void ABP_S3actionSelect_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -422,11 +436,11 @@ void ABP_S3actionSelect_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_S3actionSelect_C::STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1");
 
@@ -442,11 +456,11 @@ void ABP_S3actionSelect_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float 
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue)
+void ABP_S3actionSelect_C::STATIC_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2");
 
@@ -462,7 +476,7 @@ void ABP_S3actionSelect_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float Ax
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::ReceiveBeginPlay()
 {
@@ -479,7 +493,7 @@ void ABP_S3actionSelect_C::ReceiveBeginPlay()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.OnPressedUp
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::OnPressedUp()
 {
@@ -496,7 +510,7 @@ void ABP_S3actionSelect_C::OnPressedUp()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.OnPressedLeft
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::OnPressedLeft()
 {
@@ -513,7 +527,7 @@ void ABP_S3actionSelect_C::OnPressedLeft()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.OnPressedRight
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::OnPressedRight()
 {
@@ -530,7 +544,7 @@ void ABP_S3actionSelect_C::OnPressedRight()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.OnPressedDown
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::OnPressedDown()
 {
@@ -547,7 +561,7 @@ void ABP_S3actionSelect_C::OnPressedDown()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.OnAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::OnAnimationFinished()
 {
@@ -564,11 +578,11 @@ void ABP_S3actionSelect_C::OnAnimationFinished()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3actionSelect_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.ReceiveEndPlay");
 
@@ -576,6 +590,7 @@ void ABP_S3actionSelect_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -584,11 +599,11 @@ void ABP_S3actionSelect_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::ReceiveTick(float DeltaSeconds)
+void ABP_S3actionSelect_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.ReceiveTick");
 
@@ -596,6 +611,7 @@ void ABP_S3actionSelect_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -604,7 +620,7 @@ void ABP_S3actionSelect_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.EvtSizeSetEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3actionSelect_C::EvtSizeSetEnd()
 {
@@ -621,7 +637,7 @@ void ABP_S3actionSelect_C::EvtSizeSetEnd()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.ExecuteUbergraph_BP_S3actionSelect
-// (HasDefaults)
+// (Net, NetMulticast, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -641,9 +657,9 @@ void ABP_S3actionSelect_C::ExecuteUbergraph_BP_S3actionSelect(int EntryPoint)
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.onTimerover__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient, Const)
 
-void ABP_S3actionSelect_C::onTimerover__DelegateSignature()
+void ABP_S3actionSelect_C::STATIC_onTimerover__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.onTimerover__DelegateSignature");
 
@@ -658,9 +674,9 @@ void ABP_S3actionSelect_C::onTimerover__DelegateSignature()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.command_startSelection__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient, Const)
 
-void ABP_S3actionSelect_C::command_startSelection__DelegateSignature()
+void ABP_S3actionSelect_C::STATIC_command_startSelection__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.command_startSelection__DelegateSignature");
 
@@ -675,9 +691,9 @@ void ABP_S3actionSelect_C::command_startSelection__DelegateSignature()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.onEndStartSelection__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient, Const)
 
-void ABP_S3actionSelect_C::onEndStartSelection__DelegateSignature()
+void ABP_S3actionSelect_C::STATIC_onEndStartSelection__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.onEndStartSelection__DelegateSignature");
 
@@ -692,11 +708,11 @@ void ABP_S3actionSelect_C::onEndStartSelection__DelegateSignature()
 
 
 // Function BP_S3actionSelect.BP_S3actionSelect_C.onSelected__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3actionSelect_C::onSelected__DelegateSignature(int Index)
+void ABP_S3actionSelect_C::STATIC_onSelected__DelegateSignature(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3actionSelect.BP_S3actionSelect_C.onSelected__DelegateSignature");
 

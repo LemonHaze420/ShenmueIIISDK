@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.GetSequence
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_MiniGameBase_C*      MiniGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ULevelSequence*          GetSequence                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class ULevelSequence*          LookSequence                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameGetKihudaFlow_C::GetSequence(class ABP_MiniGameBase_C* MiniGame, class ULevelSequence** GetSequence, class ULevelSequence** LookSequence)
+void UBPC_MiniGameGetKihudaFlow_C::STATIC_GetSequence(class ABP_MiniGameBase_C* MiniGame, class ULevelSequence** GetSequence, class ULevelSequence** LookSequence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.GetSequence");
 
@@ -28,6 +28,7 @@ void UBPC_MiniGameGetKihudaFlow_C::GetSequence(class ABP_MiniGameBase_C* MiniGam
 	params.MiniGame = MiniGame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -41,7 +42,7 @@ void UBPC_MiniGameGetKihudaFlow_C::GetSequence(class ABP_MiniGameBase_C* MiniGam
 
 
 // Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.StartGetKihudaFlow
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FTransform              OffsetRelativeTrans            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           IsGetMoreTicket                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -63,9 +64,9 @@ void UBPC_MiniGameGetKihudaFlow_C::StartGetKihudaFlow(const struct FTransform& O
 
 
 // Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.OnFinishedActorFlow
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBPC_MiniGameGetKihudaFlow_C::OnFinishedActorFlow()
+void UBPC_MiniGameGetKihudaFlow_C::STATIC_OnFinishedActorFlow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.OnFinishedActorFlow");
 
@@ -80,7 +81,7 @@ void UBPC_MiniGameGetKihudaFlow_C::OnFinishedActorFlow()
 
 
 // Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.ExecuteUbergraph_BPC_MiniGameGetKihudaFlow
-// (HasDefaults)
+// (Exec, Native, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -92,6 +93,7 @@ void UBPC_MiniGameGetKihudaFlow_C::ExecuteUbergraph_BPC_MiniGameGetKihudaFlow(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,15 +102,16 @@ void UBPC_MiniGameGetKihudaFlow_C::ExecuteUbergraph_BPC_MiniGameGetKihudaFlow(in
 
 
 // Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.OnEndComponentFlow__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPC_MiniGameGetKihudaFlow_C::OnEndComponentFlow__DelegateSignature()
+void UBPC_MiniGameGetKihudaFlow_C::STATIC_OnEndComponentFlow__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameGetKihudaFlow.BPC_MiniGameGetKihudaFlow_C.OnEndComponentFlow__DelegateSignature");
 
 	UBPC_MiniGameGetKihudaFlow_C_OnEndComponentFlow__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

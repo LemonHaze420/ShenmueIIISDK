@@ -57,9 +57,9 @@ public:
 
 
 	void InitializeChickenImage();
-	void AddChickenProgress();
-	void SetCircleProgress(float Progress);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_AddChickenProgress();
+	void STATIC_SetCircleProgress(float Progress);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void Construct();
 	void ExecuteUbergraph_WBP_MiniGame_CC(int EntryPoint);
 };

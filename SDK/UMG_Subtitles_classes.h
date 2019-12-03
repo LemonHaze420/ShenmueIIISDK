@@ -48,17 +48,17 @@ public:
 	void SetIsVoice(bool IsVoice);
 	void CreateSubtitleWidgetInfo(float TotalTime, int TotalStringNum, TArray<struct FString>* TextArray, TArray<struct FST_RubyInfo>* RubyInfoArray);
 	void UpdateDisplay(const struct FString& Body0, const struct FString& Body1, const struct FST_RubyInfo& RubyInfo0, const struct FST_RubyInfo& RubyInfo1, const struct FLinearColor& SubtitleColor, const struct FLinearColor& OutlineColor);
-	void GetClipperElapsedTimeAlpha(float* Time);
-	void GetClipperTime(float* Time);
-	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_GetClipperElapsedTimeAlpha(float* Time);
+	void STATIC_GetClipperTime(float* Time);
+	void STATIC_Construct();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void DrawSubtitles(TEnumAsByte<EN_TalkCharacterType> Type, TArray<struct FString> TextArray, TArray<struct FST_RubyInfo> RubyInfoArray, const struct FString& Text);
-	void Clear();
-	void UpdateSubtitleFeedingDisplay();
-	void SoundPlay();
+	void STATIC_Clear();
+	void STATIC_UpdateSubtitleFeedingDisplay();
+	void STATIC_SoundPlay();
 	void ExecuteUbergraph_UMG_Subtitles(int EntryPoint);
-	void onPlayTalkSE__DelegateSignature();
-	void onFinishWaitDestructor__DelegateSignature();
+	void STATIC_onPlayTalkSE__DelegateSignature();
+	void STATIC_onFinishWaitDestructor__DelegateSignature();
 };
 
 

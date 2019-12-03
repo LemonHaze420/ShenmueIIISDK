@@ -43,11 +43,11 @@ public:
 	float                                              _______1_StartAnimation_EF8A9FB941319A27239E7DBE68118300; // 0x03E0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______1__Direction_EF8A9FB941319A27239E7DBE68118300;     // 0x03E4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x03E5(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          UnknownVar01;                                           // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar01;                                          // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              _______0_cv_loc_z_BE8233C546C12613E4B38BB9D9BA6E76;       // 0x03F0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______0__Direction_BE8233C546C12613E4B38BB9D9BA6E76;     // 0x03F4(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x03F5(0x0003) MISSED OFFSET
-	class UTimelineComponent* UnknownVar02;                                           // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar02;                                          // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              fade_cv_loc_z_C110FCD04B072CBAE08CF8B5238DB168;           // 0x0400(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    fade__Direction_C110FCD04B072CBAE08CF8B5238DB168;         // 0x0404(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0405(0x0003) MISSED OFFSET
@@ -86,7 +86,7 @@ public:
 	unsigned char                                      UnknownData10[0x2];                                       // 0x04EE(0x0002) MISSED OFFSET
 	float                                              PressTime;                                                // 0x04F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              NextPageInterval;                                         // 0x04F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              IntervalTime;                                             // 0x04F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              IntervalTIme;                                             // 0x04F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              PushGameTime;                                             // 0x04FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsNextAnim;                                               // 0x0500(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsBackAnim;                                               // 0x0501(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -133,7 +133,7 @@ public:
 	struct FVector2D                                   Pos2;                                                     // 0x0618(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
 	struct FVector2D                                   sizw2;                                                    // 0x0620(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
 	class UBW_DispMemopad_C*                           DispMemopad;                                              // 0x0628(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TArray<class ABP_S3Memopad_ring_w_C*>              ring;                                                     // 0x0630(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
+	TArray<class ABP_S3Memopad_ring_w_C*>              Ring;                                                     // 0x0630(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance)
 	TEnumAsByte<ECameraZoomState>                      ZoomState;                                                // 0x0640(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData18[0x3];                                       // 0x0641(0x0003) MISSED OFFSET
 	int                                                LastPage;                                                 // 0x0644(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -191,90 +191,90 @@ public:
 	void GetPageInterval(float* PageInterval);
 	void GetSubEvntListLength(int* Length);
 	void CheckFirstOpenPage();
-	void SetOpenMainEventPage();
-	void CheckSkipSubEvent();
+	void STATIC_SetOpenMainEventPage();
+	void STATIC_CheckSkipSubEvent();
 	void CheckSameSpread();
-	void DeleteSubEventList();
-	void GetNowOpenPageIndex(int* NowOpenPage);
+	void STATIC_DeleteSubEventList();
+	void STATIC_GetNowOpenPageIndex(int* NowOpenPage);
 	void CheckSubEventPage();
 	void CheckOngoingSubEvent();
-	void CheckUnreadTab();
+	void STATIC_CheckUnreadTab();
 	void CheckSubEvntFlg();
-	void IsPageAnimation(bool* AnimationNow);
-	void StartMotivationMove(bool Button);
-	bool CheckMotivationMovePage();
+	void STATIC_IsPageAnimation(bool* AnimationNow);
+	void STATIC_StartMotivationMove(bool Button);
+	bool STATIC_CheckMotivationMovePage();
 	void IsActiveOpenNewPageButton(bool* Active);
-	void NextPageContinueTurning(bool bRight);
-	void ChangeCurrentMapPage(int page, int* ReturnPage);
+	void STATIC_NextPageContinueTurning(bool bRight);
+	void STATIC_ChangeCurrentMapPage(int page, int* ReturnPage);
 	void GetContinueTurnPageTexture(class UTexture** Texture);
 	void CheckPageDataValid(int PageIndex, bool* DataValid);
-	void InitTab();
-	void IsActiveStartEndPage(bool* ActiveStart, bool* ActiveEnd);
+	void STATIC_InitTab();
+	void STATIC_IsActiveStartEndPage(bool* ActiveStart, bool* ActiveEnd);
 	void GetLastPage();
-	void SetAlready(int page);
+	void STATIC_SetAlready(int page);
 	void SetCaptureMempPAdPart();
-	void SetText(int page, class UTextureRenderTarget2D* RenderF, class UTextureRenderTarget2D* RenderR, class ABP_S3Memopad_page_C* PageF, class ABP_S3Memopad_page_C* PageR, float LastUpdateDelayTime);
-	void SetPhoto(class UTextureRenderTarget2D* RenderTexture, class UTexture* Photo, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoodinatePosition, const struct FVector2D& CoodinateSize, float Rotation, const struct FVector2D& PivotPoint, bool Right, int Index, class ABP_S3Memopad_page_C* page);
-	void SetMapTexture(class UTextureRenderTarget2D* RenderTarget_Left, class UTextureRenderTarget2D* RenderTarget_Right, class ABP_S3Memopad_page_C* Page_Left, class ABP_S3Memopad_page_C* Page_Right, bool Right);
-	void SetPageCountMax(int targetPage);
+	void STATIC_SetText(int page, class UTextureRenderTarget2D* RenderF, class UTextureRenderTarget2D* RenderR, class ABP_S3Memopad_page_C* PageF, class ABP_S3Memopad_page_C* PageR, float LastUpdateDelayTime);
+	void STATIC_SetPhoto(class UTextureRenderTarget2D* RenderTexture, class UTexture* Photo, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoodinatePosition, const struct FVector2D& CoodinateSize, float Rotation, const struct FVector2D& PivotPoint, bool Right, int Index, class ABP_S3Memopad_page_C* page);
+	void STATIC_SetMapTexture(class UTextureRenderTarget2D* RenderTarget_Left, class UTextureRenderTarget2D* RenderTarget_Right, class ABP_S3Memopad_page_C* Page_Left, class ABP_S3Memopad_page_C* Page_Right, bool Right);
+	void STATIC_SetPageCountMax(int targetPage);
 	void GetOpenPageIndex(int targetPage, int* OpenPage);
-	void SetNextTabIndex(bool UpPush, bool* IsNextTab);
+	void STATIC_SetNextTabIndex(bool UpPush, bool* IsNextTab);
 	void CheckTabVisible();
 	void GetLastMemoNoInPage(int PageNo, int* MemoNo);
 	void CheckButton();
 	void IsActiveOpenMotivationPageButton(bool* Active);
-	void GetPageTextureRFIndex(int* PageR, int* PageF);
+	void STATIC_GetPageTextureRFIndex(int* PageR, int* PageF);
 	void StopAllActor();
 	void TabCheck(int page, int* TagIndex);
-	void GetPageData();
+	void STATIC_GetPageData();
 	void GetIsAnimation(bool* isAnim);
-	void GetRenderItem(bool IsLast, class UTextureRenderTarget2D** Texture_1, class UTextureRenderTarget2D** Texture_2, int* Index);
-	void SetPageStatus();
-	void CheckCoverAnim(float DeltaTime);
-	void SetCoverAnim(class ABP_S3Memopad_page_C* page, float WaitTime, int AnimId, bool Reverse);
+	void STATIC_GetRenderItem(bool IsLast, class UTextureRenderTarget2D** Texture_1, class UTextureRenderTarget2D** Texture_2, int* Index);
+	void STATIC_SetPageStatus();
+	void STATIC_CheckCoverAnim(float DeltaTime);
+	void STATIC_SetCoverAnim(class ABP_S3Memopad_page_C* page, float WaitTime, int AnimId, bool Reverse);
 	void SetCoverOffset(class UChildActorComponent* Component, float Offset);
 	void AddPage(bool bRight, TArray<class ABP_S3Memopad_page_C*>* PageArray, class ABP_S3Memopad_page_C** page);
-	void NextPage(bool bRight, bool IsLast);
+	void STATIC_NextPage(bool bRight, bool IsLast);
 	void TurnedPage(class ABP_S3Memopad_page_C* page, bool LastPage);
-	void CloseBook(bool Finish);
-	void OpenBook();
+	void STATIC_CloseBook(bool Finish);
+	void STATIC_OpenBook();
 	void CreateBook();
-	void doCmd_screenOut();
+	void STATIC_doCmd_screenOut();
 	void UserConstructionScript();
-	void tl_PageMove1__FinishedFunc();
-	void tl_PageMove1__UpdateFunc();
-	void tl_PageMove2__FinishedFunc();
-	void tl_PageMove2__UpdateFunc();
-	void fade__FinishedFunc();
-	void fade__UpdateFunc();
-	void UnknownFunc01();
-	void InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKeyEvent_2(const struct FKey& Key);
-	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_20(const struct FKey& Key);
-	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_19(const struct FKey& Key);
-	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18(const struct FKey& Key);
-	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17(const struct FKey& Key);
-	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key);
-	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key);
-	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14(const struct FKey& Key);
-	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13(const struct FKey& Key);
-	void InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12(const struct FKey& Key);
-	void InpActEvt_MenuPageRight_K2Node_InputActionEvent_11(const struct FKey& Key);
-	void ReceiveBeginPlay();
-	void doCmd_screenIn();
-	void ReceiveDestroyed();
-	void ReceiveTick(float DeltaSeconds);
-	void PlayCoverAnim(const struct FMemopadCoverAnim& Info);
-	void NextPageLeft();
-	void NextPageRight();
-	void Destroy();
-	void BackTab();
-	void NextTab();
-	void SetTabSize();
-	void InitPageTexture();
-	void PushNewPage(bool IsR2);
-	void PushPageEndButton();
-	void PushPageStartButton();
-	void PermissionDetectIcon();
+	void STATIC_tl_PageMove1__FinishedFunc();
+	void STATIC_tl_PageMove1__UpdateFunc();
+	void STATIC_tl_PageMove2__FinishedFunc();
+	void STATIC_tl_PageMove2__UpdateFunc();
+	void STATIC_fade__FinishedFunc();
+	void STATIC_fade__UpdateFunc();
+	void STATIC__UnknownFunc01();
+	void STATIC_InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_20(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_19(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13(const struct FKey& Key);
+	void STATIC_InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12(const struct FKey& Key);
+	void STATIC_InpActEvt_MenuPageRight_K2Node_InputActionEvent_11(const struct FKey& Key);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_doCmd_screenIn();
+	void STATIC_ReceiveDestroyed();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_PlayCoverAnim(const struct FMemopadCoverAnim& Info);
+	void STATIC_NextPageLeft();
+	void STATIC_NextPageRight();
+	void STATIC_Destroy();
+	void STATIC_BackTab();
+	void STATIC_NextTab();
+	void STATIC_SetTabSize();
+	void STATIC_InitPageTexture();
+	void STATIC_PushNewPage(bool IsR2);
+	void STATIC_PushPageEndButton();
+	void STATIC_PushPageStartButton();
+	void STATIC_PermissionDetectIcon();
 	void OnPageUpdateEnd(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_S3Memopad_book(int EntryPoint);
 	void DoUseStartEndPageButton__DelegateSignature(bool Active_StartPage, bool Active_EndPage);

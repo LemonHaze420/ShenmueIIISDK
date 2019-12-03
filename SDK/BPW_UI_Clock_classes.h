@@ -31,14 +31,14 @@ public:
 	}
 
 
-	void SetDifficultyImage(TEnumAsByte<EBattleDifficulty> Difficulty);
-	void SetMaterialTime(const struct FDateTime& InDateTime);
-	void GetForceVisibilityOperation(bool* ForceVisibilityOperation);
+	void STATIC_SetDifficultyImage(TEnumAsByte<EBattleDifficulty> Difficulty);
+	void STATIC_SetMaterialTime(const struct FDateTime& InDateTime);
+	void STATIC_GetForceVisibilityOperation(bool* ForceVisibilityOperation);
 	void SetClockVisibility(bool Visible);
-	void SetForceVisibilityOperation(bool ForceOperation);
-	void Construct();
+	void STATIC_SetForceVisibilityOperation(bool ForceOperation);
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_BPW_UI_Clock(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_UI_Clock(int EntryPoint);
 };
 
 

@@ -27,7 +27,7 @@ struct ABP_S3actionSelect_C_doCmd_TimeOver_Params
 // Function BP_S3actionSelect.BP_S3actionSelect_C.degreeToPadinput
 struct ABP_S3actionSelect_C_degreeToPadinput_Params
 {
-	float                                              degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Degree;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EN_padSwitch>                          Input;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	bool                                               isInput;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };

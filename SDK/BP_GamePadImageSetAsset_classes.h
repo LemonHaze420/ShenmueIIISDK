@@ -43,7 +43,7 @@ public:
 	void GetFaceButtonImageSetNoDefault(TEnumAsByte<EFaceButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET);
 	class UBP_GamePadShoulderSetAsset_C* GetShoulderImageSet(TEnumAsByte<EShoulderButtonStyle> Selection);
 	void GetDPadImageSet(TEnumAsByte<EDpadButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET);
-	void GetFaceButtonImageSet(TEnumAsByte<EFaceButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET);
+	void STATIC_GetFaceButtonImageSet(TEnumAsByte<EFaceButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET);
 };
 
 

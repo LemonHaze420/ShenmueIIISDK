@@ -39,10 +39,10 @@ public:
 	}
 
 
-	float GetLoopStartPoint(class UAnimMontage* Montage, TEnumAsByte<EM_LeftOrRight> Foot);
+	float STATIC_GetLoopStartPoint(class UAnimMontage* Montage, TEnumAsByte<EM_LeftOrRight> Foot);
 	class UAnimMontage* GetStopMotion(bool DirUp, bool Right);
-	class UAnimMontage* GetStartMotion(bool DirUp, bool Right);
-	void GetLoopMotion(bool DirUp, bool Run, class UAnimMontage** Montage);
+	class UAnimMontage* STATIC_GetStartMotion(bool DirUp, bool Right);
+	void STATIC_GetLoopMotion(bool DirUp, bool Run, class UAnimMontage** Montage);
 };
 
 

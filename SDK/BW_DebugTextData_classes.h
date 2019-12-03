@@ -18,7 +18,7 @@ class UBW_DebugTextData_C : public UUserWidget
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0208(0x0008) (Transient, DuplicateTransient)
-	class UImage*                                      Bg;                                                       // 0x0210(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	class UImage*                                      bg;                                                       // 0x0210(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UButton*                                     Button_2;                                                 // 0x0218(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UButton*                                     Button_Run;                                               // 0x0220(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UTextBlock*                                  CurrentTextdataIndex;                                     // 0x0228(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
@@ -50,9 +50,9 @@ public:
 	}
 
 
-	bool IsUseStepFilterPath();
-	bool Get_DataListComboBox_bIsEnabled_1();
-	void GetEventStepToString(struct FString* Result);
+	bool STATIC_IsUseStepFilterPath();
+	bool STATIC_Get_DataListComboBox_bIsEnabled_1();
+	void STATIC_GetEventStepToString(struct FString* Result);
 	void IncrementTextDataIndex();
 	void IsUseEventStepFilter(bool* bUseFilter);
 	void Value_Committed(class USpinBox* InputPin, float NewValue, TEnumAsByte<ETextCommit> Method);
@@ -60,22 +60,22 @@ public:
 	struct FText Get_TextBlock_4_Text_1();
 	struct FText Get_CurrentTextdataIndex_Text_1();
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Destruct();
 	void BndEvt__PathTypeProperty_K2Node_ComponentBoundEvent_175_EnumPropertyChanged__DelegateSignature();
 	void BndEvt__LocaleProperty_K2Node_ComponentBoundEvent_184_EnumPropertyChanged__DelegateSignature();
 	void UpdateTextDataAssets();
-	void BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void STATIC_BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void BndEvt__Button_0_K2Node_ComponentBoundEvent_43_OnButtonPressedEvent__DelegateSignature();
 	void BndEvt__Button_1_K2Node_ComponentBoundEvent_261_OnButtonPressedEvent__DelegateSignature();
 	void Finalize();
 	void PlaySubtitlePlayer();
 	void OnChangeStep();
-	void BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
-	void BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
-	void BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void STATIC_BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
+	void STATIC_BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
+	void STATIC_BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void UpdatePullDownTextDataList();
-	void ExecuteUbergraph_BW_DebugTextData(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BW_DebugTextData(int EntryPoint);
 };
 
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.MoveCamera
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USceneComponent*         Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USceneComponent*         Current                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -43,15 +43,16 @@ struct FRotator ABP_MiniGameChoose_Otoshidama_C::MoveCamera(class USceneComponen
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGameChoose_Otoshidama_C::UserConstructionScript()
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.UserConstructionScript");
 
 	ABP_MiniGameChoose_Otoshidama_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,11 +61,11 @@ void ABP_MiniGameChoose_Otoshidama_C::UserConstructionScript()
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Right_K2Node_InputActionEvent_20
-// (BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Right_K2Node_InputActionEvent_20(const struct FKey& Key)
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_20(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Right_K2Node_InputActionEvent_20");
 
@@ -72,6 +73,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Right_K2Node_InputActionEvent
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +82,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Right_K2Node_InputActionEvent
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Left_K2Node_InputActionEvent_19
-// (BlueprintEvent)
+// (Net, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -100,11 +102,11 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Left_K2Node_InputActionEvent_
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_18
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_18(const struct FKey& Key)
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_18(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_18");
 
@@ -120,11 +122,11 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_LeftStickLeft_K2Node_InputAct
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_17
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_17(const struct FKey& Key)
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_17(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_17");
 
@@ -140,11 +142,11 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_LeftStickRight_K2Node_InputAc
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Top_K2Node_InputActionEvent_16
-// (BlueprintEvent)
+// (Net, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct FKey& Key)
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Top_K2Node_InputActionEvent_16");
 
@@ -152,6 +154,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Top_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,11 +163,11 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Top_K2Node_InputActionEvent_1
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Top_K2Node_InputActionEvent_15
-// (BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Top_K2Node_InputActionEvent_15(const struct FKey& Key)
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_15(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Top_K2Node_InputActionEvent_15");
 
@@ -172,6 +175,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Top_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,7 +184,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Top_K2Node_InputActionEvent_1
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_14
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -192,6 +196,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Bottom_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,7 +205,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Bottom_K2Node_InputActionEven
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_13
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -212,6 +217,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Bottom_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,7 +226,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_Bottom_K2Node_InputActionEven
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -240,7 +246,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_ButtonLeft_K2Node_InputAction
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -252,6 +258,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_ButtonLeft_K2Node_InputAction
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -260,15 +267,16 @@ void ABP_MiniGameChoose_Otoshidama_C::InpActEvt_MG_ButtonLeft_K2Node_InputAction
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.Input Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_MiniGameChoose_Otoshidama_C::Input_Update()
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_Input_Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.Input Update");
 
 	ABP_MiniGameChoose_Otoshidama_C_Input_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -277,7 +285,7 @@ void ABP_MiniGameChoose_Otoshidama_C::Input_Update()
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -297,7 +305,7 @@ void ABP_MiniGameChoose_Otoshidama_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxis
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -309,6 +317,7 @@ void ABP_MiniGameChoose_Otoshidama_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -317,7 +326,7 @@ void ABP_MiniGameChoose_Otoshidama_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MiniGameChoose_Otoshidama_C::ReceiveBeginPlay()
 {
@@ -334,7 +343,7 @@ void ABP_MiniGameChoose_Otoshidama_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -346,6 +355,7 @@ void ABP_MiniGameChoose_Otoshidama_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +364,7 @@ void ABP_MiniGameChoose_Otoshidama_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.InitializeMoneyInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MiniGameChoose_Otoshidama_C::InitializeMoneyInfo()
 {
@@ -371,15 +381,16 @@ void ABP_MiniGameChoose_Otoshidama_C::InitializeMoneyInfo()
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.EndFadeOut
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_MiniGameChoose_Otoshidama_C::EndFadeOut()
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_EndFadeOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.EndFadeOut");
 
 	ABP_MiniGameChoose_Otoshidama_C_EndFadeOut_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,11 +399,11 @@ void ABP_MiniGameChoose_Otoshidama_C::EndFadeOut()
 
 
 // Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.ExecuteUbergraph_BP_MiniGameChoose_Otoshidama
-// (HasDefaults)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChoose_Otoshidama_C::ExecuteUbergraph_BP_MiniGameChoose_Otoshidama(int EntryPoint)
+void ABP_MiniGameChoose_Otoshidama_C::STATIC_ExecuteUbergraph_BP_MiniGameChoose_Otoshidama(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChoose_Otoshidama.BP_MiniGameChoose_Otoshidama_C.ExecuteUbergraph_BP_MiniGameChoose_Otoshidama");
 
@@ -400,6 +411,7 @@ void ABP_MiniGameChoose_Otoshidama_C::ExecuteUbergraph_BP_MiniGameChoose_Otoshid
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

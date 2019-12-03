@@ -48,25 +48,25 @@ public:
 	}
 
 
-	void RefreshLayoutStringLen(int StrLen, int Threshold);
-	void RefreshLayout(int Layout);
-	void ReanchorWidget(class UWidget* Widget, struct FAnchorData* AnchorData);
-	void SetLayout(int LayoutType);
-	void CacheWidgetAchorData(class UWidget* Widget, struct FAnchorData* AnchorData);
+	void STATIC_RefreshLayoutStringLen(int StrLen, int Threshold);
+	void STATIC_RefreshLayout(int Layout);
+	void STATIC_ReanchorWidget(class UWidget* Widget, struct FAnchorData* AnchorData);
+	void STATIC_SetLayout(int LayoutType);
+	void STATIC_CacheWidgetAchorData(class UWidget* Widget, struct FAnchorData* AnchorData);
 	void GetActiveSkillLibrary(class UBTL_CommandLibrary_C** SkillLibrary, bool* IsValid);
 	void SetSkillLibrary(class UBTL_CommandLibrary_C* SkillLibrary);
 	void ShowSkillLevel(const struct FName& Skill);
 	void SetSkillLevel(int Level, float NextProgress, int MaxLevel);
 	void SetSkill(const struct FName& ItemId, const struct FText& SkillName);
 	void SetSkillName(const struct FText& Title, ES3Locale Language);
-	void ShowSkillCommand(const struct FName& Item);
-	void SetRenderTex(class UTextureRenderTarget2D* RenderTex);
-	void StopMotion();
+	void STATIC_ShowSkillCommand(const struct FName& Item);
+	void STATIC_SetRenderTex(class UTextureRenderTarget2D* RenderTex);
+	void STATIC_StopMotion();
 	void PlayItemMotion(const struct FName& ItemId);
-	void Construct();
-	void Destruct();
-	void PreConstruct(bool IsDesignTime);
-	void BndEvt__wgt_BTL_MontagePlayer_K2Node_ComponentBoundEvent_0_OnSceneCapture__DelegateSignature();
+	void STATIC_Construct();
+	void STATIC_Destruct();
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_BndEvt__wgt_BTL_MontagePlayer_K2Node_ComponentBoundEvent_0_OnSceneCapture__DelegateSignature();
 	void ExecuteUbergraph_wgt_BattleSkillDisplay(int EntryPoint);
 };
 

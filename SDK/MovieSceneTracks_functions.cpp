@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function MovieSceneTracks.MovieSceneTransformOrigin.BP_GetTransformOrigin
-// (Event, Protected, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 

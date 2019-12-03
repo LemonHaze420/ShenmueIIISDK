@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.CheckDoorOnPath
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ bool UBP_State_Follow_MoveBase_C::CheckDoorOnPath()
 	UBP_State_Follow_MoveBase_C_CheckDoorOnPath_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,14 +36,14 @@ bool UBP_State_Follow_MoveBase_C::CheckDoorOnPath()
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.CalculateFollowSpeed
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DistanceToLeader               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          LeaderSpeed                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FollowDistanceEnd              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutSpeed                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_MoveBase_C::CalculateFollowSpeed(float DistanceToLeader, float LeaderSpeed, float FollowDistanceEnd, float* OutSpeed)
+void UBP_State_Follow_MoveBase_C::STATIC_CalculateFollowSpeed(float DistanceToLeader, float LeaderSpeed, float FollowDistanceEnd, float* OutSpeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.CalculateFollowSpeed");
 
@@ -52,6 +53,7 @@ void UBP_State_Follow_MoveBase_C::CalculateFollowSpeed(float DistanceToLeader, f
 	params.FollowDistanceEnd = FollowDistanceEnd;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,15 +65,16 @@ void UBP_State_Follow_MoveBase_C::CalculateFollowSpeed(float DistanceToLeader, f
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.TryLogPathFailure
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 
-void UBP_State_Follow_MoveBase_C::TryLogPathFailure()
+void UBP_State_Follow_MoveBase_C::STATIC_TryLogPathFailure()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.TryLogPathFailure");
 
 	UBP_State_Follow_MoveBase_C_TryLogPathFailure_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +83,7 @@ void UBP_State_Follow_MoveBase_C::TryLogPathFailure()
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.MoveStateEnter
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -91,6 +94,7 @@ void UBP_State_Follow_MoveBase_C::MoveStateEnter(bool* bDummy)
 	UBP_State_Follow_MoveBase_C_MoveStateEnter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +106,7 @@ void UBP_State_Follow_MoveBase_C::MoveStateEnter(bool* bDummy)
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -115,6 +119,7 @@ void UBP_State_Follow_MoveBase_C::StateEnter(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,7 +131,7 @@ void UBP_State_Follow_MoveBase_C::StateEnter(float Delta, bool* bProcessing)
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.GetPathfindTarget
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FVector                 OutLocation                    (Parm, OutParm, IsPlainOldData)
 // class AActor*                  OutActor                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -138,6 +143,7 @@ void UBP_State_Follow_MoveBase_C::GetPathfindTarget(struct FVector* OutLocation,
 	UBP_State_Follow_MoveBase_C_GetPathfindTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +157,7 @@ void UBP_State_Follow_MoveBase_C::GetPathfindTarget(struct FVector* OutLocation,
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.OnFail_27825A3A4DCF934B8E42E09B783488FD
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -163,6 +169,7 @@ void UBP_State_Follow_MoveBase_C::OnFail_27825A3A4DCF934B8E42E09B783488FD(TEnumA
 	params.MovementResult = MovementResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,7 +178,7 @@ void UBP_State_Follow_MoveBase_C::OnFail_27825A3A4DCF934B8E42E09B783488FD(TEnumA
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.OnSuccess_27825A3A4DCF934B8E42E09B783488FD
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // TEnumAsByte<EPathFollowingResult> MovementResult                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -183,6 +190,7 @@ void UBP_State_Follow_MoveBase_C::OnSuccess_27825A3A4DCF934B8E42E09B783488FD(TEn
 	params.MovementResult = MovementResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,15 +199,16 @@ void UBP_State_Follow_MoveBase_C::OnSuccess_27825A3A4DCF934B8E42E09B783488FD(TEn
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.Pathfind
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBP_State_Follow_MoveBase_C::Pathfind()
+void UBP_State_Follow_MoveBase_C::STATIC_Pathfind()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.Pathfind");
 
 	UBP_State_Follow_MoveBase_C_Pathfind_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,7 +217,7 @@ void UBP_State_Follow_MoveBase_C::Pathfind()
 
 
 // Function BP_State_Follow_MoveBase.BP_State_Follow_MoveBase_C.ExecuteUbergraph_BP_State_Follow_MoveBase
-// (HasDefaults)
+// (Native, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -220,6 +229,7 @@ void UBP_State_Follow_MoveBase_C::ExecuteUbergraph_BP_State_Follow_MoveBase(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

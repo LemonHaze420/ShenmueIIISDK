@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.HideMiniWood
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UWBP_CW_Wood_C::HideMiniWood()
 {
@@ -23,6 +23,7 @@ void UWBP_CW_Wood_C::HideMiniWood()
 	UWBP_CW_Wood_C_HideMiniWood_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UWBP_CW_Wood_C::HideMiniWood()
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.IsEnd
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           End                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -42,6 +43,7 @@ void UWBP_CW_Wood_C::IsEnd(bool* End)
 	UWBP_CW_Wood_C_IsEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +55,7 @@ void UWBP_CW_Wood_C::IsEnd(bool* End)
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.PlayConcentrateAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, NetClient, DLLImport)
 
 void UWBP_CW_Wood_C::PlayConcentrateAnim()
 {
@@ -70,7 +72,7 @@ void UWBP_CW_Wood_C::PlayConcentrateAnim()
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.SetWoodVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            WoodNum                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,7 +92,7 @@ void UWBP_CW_Wood_C::SetWoodVisible(int WoodNum)
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 
 void UWBP_CW_Wood_C::Construct()
 {
@@ -107,7 +109,7 @@ void UWBP_CW_Wood_C::Construct()
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -121,6 +123,7 @@ void UWBP_CW_Wood_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,7 +132,7 @@ void UWBP_CW_Wood_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 
 
 // Function WBP_CW_Wood.WBP_CW_Wood_C.ExecuteUbergraph_WBP_CW_Wood
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -141,6 +144,7 @@ void UWBP_CW_Wood_C::ExecuteUbergraph_WBP_CW_Wood(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

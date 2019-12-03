@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_SubFlagController.BW_SubFlagController_C.UpdateAllWidgetFlagIds
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 
-void UBW_SubFlagController_C::UpdateAllWidgetFlagIds()
+void UBW_SubFlagController_C::STATIC_UpdateAllWidgetFlagIds()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SubFlagController.BW_SubFlagController_C.UpdateAllWidgetFlagIds");
 
 	UBW_SubFlagController_C_UpdateAllWidgetFlagIds_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,12 +32,12 @@ void UBW_SubFlagController_C::UpdateAllWidgetFlagIds()
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.WidgetIdxToFlagIdx
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            WidgetIdx                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            FlagIdx                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBW_SubFlagController_C::WidgetIdxToFlagIdx(int WidgetIdx, int* FlagIdx)
+void UBW_SubFlagController_C::STATIC_WidgetIdxToFlagIdx(int WidgetIdx, int* FlagIdx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SubFlagController.BW_SubFlagController_C.WidgetIdxToFlagIdx");
 
@@ -55,12 +56,12 @@ void UBW_SubFlagController_C::WidgetIdxToFlagIdx(int WidgetIdx, int* FlagIdx)
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.UpdateWidgetValue
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBW_IntegerProperty_C*   Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_SubFlagController_C::UpdateWidgetValue(class UBW_IntegerProperty_C* Widget, int Index)
+void UBW_SubFlagController_C::STATIC_UpdateWidgetValue(class UBW_IntegerProperty_C* Widget, int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SubFlagController.BW_SubFlagController_C.UpdateWidgetValue");
 
@@ -77,12 +78,12 @@ void UBW_SubFlagController_C::UpdateWidgetValue(class UBW_IntegerProperty_C* Wid
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.SetTargetFlagValue
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_SubFlagController_C::SetTargetFlagValue(int Index, int flag)
+void UBW_SubFlagController_C::STATIC_SetTargetFlagValue(int Index, int flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SubFlagController.BW_SubFlagController_C.SetTargetFlagValue");
 
@@ -91,6 +92,7 @@ void UBW_SubFlagController_C::SetTargetFlagValue(int Index, int flag)
 	params.flag = flag;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,12 +101,12 @@ void UBW_SubFlagController_C::SetTargetFlagValue(int Index, int flag)
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.GetTargetFlagValue
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            FlagIdx                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBW_SubFlagController_C::GetTargetFlagValue(int FlagIdx)
+int UBW_SubFlagController_C::STATIC_GetTargetFlagValue(int FlagIdx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SubFlagController.BW_SubFlagController_C.GetTargetFlagValue");
 
@@ -122,12 +124,12 @@ int UBW_SubFlagController_C::GetTargetFlagValue(int FlagIdx)
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.UpdateWidgetFlagId
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, Private, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBW_IntegerProperty_C*   Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            WidgetIdx                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_SubFlagController_C::UpdateWidgetFlagId(class UBW_IntegerProperty_C* Widget, int WidgetIdx)
+void UBW_SubFlagController_C::STATIC_UpdateWidgetFlagId(class UBW_IntegerProperty_C* Widget, int WidgetIdx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SubFlagController.BW_SubFlagController_C.UpdateWidgetFlagId");
 
@@ -144,12 +146,12 @@ void UBW_SubFlagController_C::UpdateWidgetFlagId(class UBW_IntegerProperty_C* Wi
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Native, Static, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_SubFlagController_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBW_SubFlagController_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_SubFlagController.BW_SubFlagController_C.Tick");
 
@@ -158,6 +160,7 @@ void UBW_SubFlagController_C::Tick(const struct FGeometry& MyGeometry, float InD
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +169,7 @@ void UBW_SubFlagController_C::Tick(const struct FGeometry& MyGeometry, float InD
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.ChangePage
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_SubFlagController_C::ChangePage()
 {
@@ -183,7 +186,7 @@ void UBW_SubFlagController_C::ChangePage()
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.OnFlagPropertyChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_IntegerProperty_C*   Context                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -205,7 +208,7 @@ void UBW_SubFlagController_C::OnFlagPropertyChanged(int Value, class UBW_Integer
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.SetInitialFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_SubFlagController_C::SetInitialFocus()
 {
@@ -222,7 +225,7 @@ void UBW_SubFlagController_C::SetInitialFocus()
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.BuildMenu
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_SubFlagController_C::BuildMenu()
 {
@@ -239,7 +242,7 @@ void UBW_SubFlagController_C::BuildMenu()
 
 
 // Function BW_SubFlagController.BW_SubFlagController_C.ExecuteUbergraph_BW_SubFlagController
-// (HasDefaults)
+// (NetReliable, NetMulticast, Protected, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

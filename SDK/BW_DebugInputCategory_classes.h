@@ -34,12 +34,12 @@ public:
 
 
 	struct FEventReply OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent);
-	struct FSlateColor GetCategoryColor();
-	struct FText GetCategoryName();
-	void AddWidgetToCategory(class UWidget* Widget);
+	struct FSlateColor STATIC_GetCategoryColor();
+	struct FText STATIC_GetCategoryName();
+	void STATIC_AddWidgetToCategory(class UWidget* Widget);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void BndEvt__Button_393_K2Node_ComponentBoundEvent_282_OnButtonClickedEvent__DelegateSignature();
-	void ExecuteUbergraph_BW_DebugInputCategory(int EntryPoint);
+	void STATIC_BndEvt__Button_393_K2Node_ComponentBoundEvent_282_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BW_DebugInputCategory(int EntryPoint);
 };
 
 

@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Door.BPF_Door_C.GetDoorManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_DoorManager_C*       DoorManager                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Door_C::STATIC_GetDoorManager(class UObject* __WorldContext, class ABP_DoorManager_C** DoorManager)
+void UBPF_Door_C::GetDoorManager(class UObject* __WorldContext, class ABP_DoorManager_C** DoorManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Door.BPF_Door_C.GetDoorManager");
 
@@ -27,6 +27,7 @@ void UBPF_Door_C::STATIC_GetDoorManager(class UObject* __WorldContext, class ABP
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

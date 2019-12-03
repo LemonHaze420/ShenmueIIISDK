@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingMeshes
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_MeshFader_C::RegisterSiblingMeshes()
+void UBPC_MeshFader_C::STATIC_RegisterSiblingMeshes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingMeshes");
 
@@ -31,9 +31,9 @@ void UBPC_MeshFader_C::RegisterSiblingMeshes()
 
 
 // Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingSkeletalMeshes
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_MeshFader_C::RegisterSiblingSkeletalMeshes()
+void UBPC_MeshFader_C::STATIC_RegisterSiblingSkeletalMeshes()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MeshFader.BPC_MeshFader_C.RegisterSiblingSkeletalMeshes");
 
@@ -48,12 +48,12 @@ void UBPC_MeshFader_C::RegisterSiblingSkeletalMeshes()
 
 
 // Function BPC_MeshFader.BPC_MeshFader_C.CreateFadeMaterial
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UMaterialInterface*      SourceMaterial                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UMaterialInterface* UBPC_MeshFader_C::CreateFadeMaterial(class UMaterialInterface* SourceMaterial)
+class UMaterialInterface* UBPC_MeshFader_C::STATIC_CreateFadeMaterial(class UMaterialInterface* SourceMaterial)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MeshFader.BPC_MeshFader_C.CreateFadeMaterial");
 

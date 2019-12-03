@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_Fishing_Input_Test_C::UserConstructionScript()
+void ABP_Fishing_Input_Test_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.UserConstructionScript");
 
 	ABP_Fishing_Input_Test_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void ABP_Fishing_Input_Test_C::UserConstructionScript()
 
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_4
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Fishing_Input_Test_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_4(const struct FKey& Key)
+void ABP_Fishing_Input_Test_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_4(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_4");
 
@@ -51,11 +52,11 @@ void ABP_Fishing_Input_Test_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_
 
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_3
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Fishing_Input_Test_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ABP_Fishing_Input_Test_C::STATIC_InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_3");
 
@@ -71,11 +72,11 @@ void ABP_Fishing_Input_Test_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent
 
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_Fishing_Input_Test_C::STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1");
 
@@ -91,11 +92,11 @@ void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAx
 
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_3
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_3(float AxisValue)
+void ABP_Fishing_Input_Test_C::STATIC_InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_3(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_3");
 
@@ -111,11 +112,11 @@ void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_RightStickVertical_K2Node_InputAxis
 
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7
-// (BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7(float AxisValue)
+void ABP_Fishing_Input_Test_C::STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7");
 
@@ -123,6 +124,7 @@ void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxi
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,11 +133,11 @@ void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxi
 
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_13
-// (BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_13(float AxisValue)
+void ABP_Fishing_Input_Test_C::STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_13(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_13");
 
@@ -143,6 +145,7 @@ void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisE
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +154,7 @@ void ABP_Fishing_Input_Test_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisE
 
 
 // Function BP_Fishing_Input_Test.BP_Fishing_Input_Test_C.ExecuteUbergraph_BP_Fishing_Input_Test
-// (HasDefaults)
+// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

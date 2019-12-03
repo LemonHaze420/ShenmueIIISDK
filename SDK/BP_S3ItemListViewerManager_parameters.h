@@ -71,7 +71,7 @@ struct ABP_S3ItemListViewerManager_C_AddItemDataToList_Params
 struct ABP_S3ItemListViewerManager_C_SimpleValueAdditiveSort_Params
 {
 	ES3ItemListMenuType                                CategoryType;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	TArray<struct FItemListItemTable>                  ItemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FItemListItemTable>                  itemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
 // Function BP_S3ItemListViewerManager.BP_S3ItemListViewerManager_C.SpaceOneItemPerRow

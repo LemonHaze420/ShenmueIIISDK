@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_PlayerFollow_Base.BTT_PlayerFollow_Base_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_Base_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayerFollow_Base_C::STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_Base.BTT_PlayerFollow_Base_C.ReceiveExecuteAI");
 
@@ -36,7 +36,7 @@ void UBTT_PlayerFollow_Base_C::ReceiveExecuteAI(class AAIController* OwnerContro
 
 
 // Function BTT_PlayerFollow_Base.BTT_PlayerFollow_Base_C.ExecuteUbergraph_BTT_PlayerFollow_Base
-// ()
+// (NetReliable, NetRequest, Event, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

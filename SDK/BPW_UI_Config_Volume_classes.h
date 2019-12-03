@@ -30,9 +30,9 @@ public:
 	}
 
 
-	void PlaySoundAnimation(bool isPlay);
-	void SetAppearance(float Value, bool IsFocus);
-	void SetValue(float Value);
+	void STATIC_PlaySoundAnimation(bool isPlay);
+	void STATIC_SetAppearance(float Value, bool IsFocus);
+	void STATIC_SetValue(float Value);
 };
 
 

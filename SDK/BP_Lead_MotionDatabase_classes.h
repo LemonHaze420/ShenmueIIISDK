@@ -38,8 +38,8 @@ public:
 	}
 
 
-	void GetTurnMotion(float InAngle, class UAnimMontage** OutMontage);
-	void GetWaveMotion(float InAngle, float InDistanceSqr, class UAnimMontage** OutMontage);
+	void STATIC_GetTurnMotion(float InAngle, class UAnimMontage** OutMontage);
+	void STATIC_GetWaveMotion(float InAngle, float InDistanceSqr, class UAnimMontage** OutMontage);
 };
 
 

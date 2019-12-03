@@ -245,13 +245,13 @@ struct ABP_Otoshidama_Base_C_D_Up_Pushed_Params
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.LeftStick X-Axis
 struct ABP_Otoshidama_Base_C_LeftStick_X_Axis_Params
 {
-	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Left Stick Y-Axis
 struct ABP_Otoshidama_Base_C_Left_Stick_Y_Axis_Params
 {
-	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Initialize

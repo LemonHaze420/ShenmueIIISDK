@@ -20,8 +20,8 @@ struct Uwgt_S3actionSelect_iconBase_C_doCmd_fade_Params
 	bool                                               FadeIn;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.updateOpacity
-struct Uwgt_S3actionSelect_iconBase_C_updateOpacity_Params
+// Function wgt_S3actionSelect_iconBase.wgt_S3actionSelect_iconBase_C.UpdateOpacity
+struct Uwgt_S3actionSelect_iconBase_C_UpdateOpacity_Params
 {
 	float                                              Opacity;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

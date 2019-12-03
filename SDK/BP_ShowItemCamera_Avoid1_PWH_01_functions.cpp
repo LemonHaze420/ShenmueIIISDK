@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ShowItemCamera_Avoid1_PWH_01.BP_ShowItemCamera_Avoid1_PWH_01_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_ShowItemCamera_Avoid1_PWH_01_C::UserConstructionScript()
+void ABP_ShowItemCamera_Avoid1_PWH_01_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShowItemCamera_Avoid1_PWH_01.BP_ShowItemCamera_Avoid1_PWH_01_C.UserConstructionScript");
 
 	ABP_ShowItemCamera_Avoid1_PWH_01_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void ABP_ShowItemCamera_Avoid1_PWH_01_C::UserConstructionScript()
 
 
 // Function BP_ShowItemCamera_Avoid1_PWH_01.BP_ShowItemCamera_Avoid1_PWH_01_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_ShowItemCamera_Avoid1_PWH_01_C::ReceiveBeginPlay()
+void ABP_ShowItemCamera_Avoid1_PWH_01_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShowItemCamera_Avoid1_PWH_01.BP_ShowItemCamera_Avoid1_PWH_01_C.ReceiveBeginPlay");
 
 	ABP_ShowItemCamera_Avoid1_PWH_01_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void ABP_ShowItemCamera_Avoid1_PWH_01_C::ReceiveBeginPlay()
 
 
 // Function BP_ShowItemCamera_Avoid1_PWH_01.BP_ShowItemCamera_Avoid1_PWH_01_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +70,7 @@ void ABP_ShowItemCamera_Avoid1_PWH_01_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ShowItemCamera_Avoid1_PWH_01.BP_ShowItemCamera_Avoid1_PWH_01_C.ExecuteUbergraph_BP_ShowItemCamera_Avoid1_PWH_01
-// ()
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +82,7 @@ void ABP_ShowItemCamera_Avoid1_PWH_01_C::ExecuteUbergraph_BP_ShowItemCamera_Avoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

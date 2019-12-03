@@ -41,12 +41,12 @@ public:
 
 
 	void SetVisible(bool Condition);
-	void RemoveTriangle(class AActor* Actor);
+	void STATIC_RemoveTriangle(class AActor* Actor);
 	void DestroyTriangle();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_MiniGame_QteTriangleSpawn(int EntryPoint);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_QteTriangleSpawn(int EntryPoint);
 };
 
 

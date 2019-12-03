@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void ChangeRow(int RowIndex);
+	void STATIC_ChangeRow(int RowIndex);
 	void InitClothingLine(const struct FName& MeshName, const struct FST_ClothingCategory& Category, TMap<EClothPartsType, struct FS3ClothPartsArray> PartsArray, TArray<int>* SelectIndex);
 	void InitIconButton();
 };

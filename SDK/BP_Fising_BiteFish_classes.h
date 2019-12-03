@@ -43,17 +43,17 @@ public:
 	}
 
 
-	void DisableBite();
+	void STATIC_DisableBite();
 	void MoveToTargetInTime();
-	void SetTargetLocation(const struct FVector& TargetLocation, struct FVector* Output_Get);
+	void STATIC_SetTargetLocation(const struct FVector& TargetLocation, struct FVector* Output_Get);
 	void UpdateBite();
 	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
-	void Initialize();
-	void ReceiveBeginPlay();
-	void DestroyReady();
-	void ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint);
-	void OnPerfectBiteDispacher__DelegateSignature();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_Initialize();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_DestroyReady();
+	void STATIC_ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint);
+	void STATIC_OnPerfectBiteDispacher__DelegateSignature();
 };
 
 

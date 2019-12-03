@@ -81,28 +81,28 @@ public:
 	}
 
 
-	class UWidget* GetCurrentSubMenu();
-	void BuildAchievementMenu();
-	void BuildMenu(class UObject* Widget);
+	class UWidget* STATIC_GetCurrentSubMenu();
+	void STATIC_BuildAchievementMenu();
+	void STATIC_BuildMenu(class UObject* Widget);
 	void IsInputPage(bool* Input);
 	void BuildBattleMenu();
-	void BuildAutoConversationMenu();
-	void UpdCategoryCursor();
-	void SetMode(int Mode);
-	void BuildTeleportToNPCMenu();
-	void BuildCutsceneMenu();
-	void SetDbgSubFlags();
-	void BuildWatchMenu();
-	void OnTeleportClick(class UObject* ContextObject);
-	void BuildTeleportMenu();
+	void STATIC_BuildAutoConversationMenu();
+	void STATIC_UpdCategoryCursor();
+	void STATIC_SetMode(int Mode);
+	void STATIC_BuildTeleportToNPCMenu();
+	void STATIC_BuildCutsceneMenu();
+	void STATIC_SetDbgSubFlags();
+	void STATIC_BuildWatchMenu();
+	void STATIC_OnTeleportClick(class UObject* ContextObject);
+	void STATIC_BuildTeleportMenu();
 	void SetFocus();
-	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void BuildDebugInputMenu();
-	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void UpdateMode();
+	struct FEventReply STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void STATIC_BuildDebugInputMenu();
+	struct FEventReply STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void STATIC_UpdateMode();
 	void NextMode();
-	void PrevMode();
-	struct FText GetModeLabel();
+	void STATIC_PrevMode();
+	struct FText STATIC_GetModeLabel();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void BndEvt__PrevModeButton_K2Node_ComponentBoundEvent_139_OnButtonClickedEvent__DelegateSignature();
@@ -110,7 +110,7 @@ public:
 	void Destruct();
 	void CloseDebugMenu();
 	void BndEvt__BW_DebugItemViewer_K2Node_ComponentBoundEvent_0_OnClickedDispatcher__DelegateSignature();
-	void OnCategoryClick(class UBW_DebugMenuCategoryButton_C* Clicked);
+	void STATIC_OnCategoryClick(class UBW_DebugMenuCategoryButton_C* Clicked);
 	void RemoveAllWidgets();
 	void ToggleFPS();
 	void StartDebugCamera();

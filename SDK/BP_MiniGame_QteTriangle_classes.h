@@ -40,7 +40,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_MiniGame_QteTriangle(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_QteTriangle(int EntryPoint);
 };
 
 

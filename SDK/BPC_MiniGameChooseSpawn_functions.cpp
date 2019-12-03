@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameChooseSpawn.BPC_MiniGameChooseSpawn_C.SpawnMiniGameChooseActor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3MiniGameCategory            Category                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ManualCamera                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_MiniGameChoose_C*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameChoose_C* UBPC_MiniGameChooseSpawn_C::SpawnMiniGameChooseActor(ES3MiniGameCategory Category, bool ManualCamera)
+class ABP_MiniGameChoose_C* UBPC_MiniGameChooseSpawn_C::STATIC_SpawnMiniGameChooseActor(ES3MiniGameCategory Category, bool ManualCamera)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameChooseSpawn.BPC_MiniGameChooseSpawn_C.SpawnMiniGameChooseActor");
 

@@ -23,7 +23,7 @@ struct ABP_UI_PawnshManager_C_IsVisibleRStickCenterPos_Params
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckClothItemNum
 struct ABP_UI_PawnshManager_C_CheckClothItemNum_Params
 {
-	ES3ItemDataGroup                                   CurrentCategory;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ES3ItemDataGroup                                   currentCategory;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ES3ItemDataGroup                                   ItemListGroup;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Add_List;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -51,7 +51,7 @@ struct ABP_UI_PawnshManager_C_CheckItemGroup_Params
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckRewardGacha
 struct ABP_UI_PawnshManager_C_CheckRewardGacha_Params
 {
-	ES3ItemDataGroup                                   CurrentCategory;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ES3ItemDataGroup                                   currentCategory;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ES3ItemDataGroup                                   ItemListGroup;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Add_List;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -59,7 +59,7 @@ struct ABP_UI_PawnshManager_C_CheckRewardGacha_Params
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckClothItem
 struct ABP_UI_PawnshManager_C_CheckClothItem_Params
 {
-	ES3ItemDataGroup                                   CurrentCategory;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	ES3ItemDataGroup                                   currentCategory;                                          // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	ES3ItemDataGroup                                   ItemListGroup;                                            // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               Add_List;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
@@ -100,8 +100,8 @@ struct ABP_UI_PawnshManager_C_PawnshChangePage_Params
 	int                                                Value;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MakeItemIDList
-struct ABP_UI_PawnshManager_C_MakeItemIDList_Params
+// Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MakeItemIdList
+struct ABP_UI_PawnshManager_C_MakeItemIdList_Params
 {
 };
 

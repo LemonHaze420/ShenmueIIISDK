@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NPC_Lead_She.BP_NPC_Lead_She_C.CanEnterBuilding
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3BuildingStaticMeshActor_C* Building                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_NPC_Lead_She_C::CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Building)
+bool ABP_NPC_Lead_She_C::STATIC_CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Building)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead_She.BP_NPC_Lead_She_C.CanEnterBuilding");
 
@@ -37,9 +37,9 @@ bool ABP_NPC_Lead_She_C::CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C*
 
 
 // Function BP_NPC_Lead_She.BP_NPC_Lead_She_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_NPC_Lead_She_C::UserConstructionScript()
+void ABP_NPC_Lead_She_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPC_Lead_She.BP_NPC_Lead_She_C.UserConstructionScript");
 
@@ -54,7 +54,7 @@ void ABP_NPC_Lead_She_C::UserConstructionScript()
 
 
 // Function BP_NPC_Lead_She.BP_NPC_Lead_She_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_NPC_Lead_She_C::ReceiveBeginPlay()
 {
@@ -63,6 +63,7 @@ void ABP_NPC_Lead_She_C::ReceiveBeginPlay()
 	ABP_NPC_Lead_She_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +72,7 @@ void ABP_NPC_Lead_She_C::ReceiveBeginPlay()
 
 
 // Function BP_NPC_Lead_She.BP_NPC_Lead_She_C.ExecuteUbergraph_BP_NPC_Lead_She
-// ()
+// (Exec, NetResponse, NetMulticast, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

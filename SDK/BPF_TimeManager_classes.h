@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3GameTimeManager(class UObject* __WorldContext, class ABP_S3WorldTimekeeper_C** BP_S3World_Timekeeper);
+	void getS3GameTimeManager(class UObject* __WorldContext, class ABP_S3WorldTimekeeper_C** BP_S3World_Timekeeper);
 };
 
 

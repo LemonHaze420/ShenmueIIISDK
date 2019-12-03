@@ -29,8 +29,8 @@ public:
 
 
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_S3PlayerCameraManager(int EntryPoint);
 };
 

@@ -53,7 +53,7 @@ public:
 	}
 
 
-	int GetNPCNum();
+	int STATIC_GetNPCNum();
 };
 
 

@@ -31,8 +31,8 @@ public:
 
 
 	void ShowTextOnly(bool Eternity, TArray<struct FString>* TextArray);
-	void Construct();
-	void PlayFadeOut();
+	void STATIC_Construct();
+	void STATIC_PlayFadeOut();
 	void ExecuteUbergraph_UMG_SubtitlesFadeIn(int EntryPoint);
 };
 

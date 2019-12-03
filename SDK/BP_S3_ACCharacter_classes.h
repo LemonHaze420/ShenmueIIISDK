@@ -34,10 +34,10 @@ public:
 
 
 	void LoadSkeletalMesh(class USkeletalMesh** Mesh);
-	void GetNPCMesh(const struct FName& CharacterName, class US3NPCDefinition* Definition, bool* Success, class USkeletalMesh** Mesh);
+	void STATIC_GetNPCMesh(const struct FName& CharacterName, class US3NPCDefinition* Definition, bool* Success, class USkeletalMesh** Mesh);
 	void Detach();
-	void AttachSetting(class US3NPCDefinition** Definition);
-	bool IsTalking();
+	void STATIC_AttachSetting(class US3NPCDefinition** Definition);
+	bool STATIC_IsTalking();
 	void InitCharacter(const struct FName& CharaName, bool* Success);
 	void UserConstructionScript();
 	void Init(const struct FName& Name);
@@ -45,10 +45,10 @@ public:
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void OnTalkStart(class US3TalkComponent* TalkComponent);
-	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
+	void STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
 	void Screen_Player();
 	void Screen_NPC();
-	void ExecuteUbergraph_BP_S3_ACCharacter(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_S3_ACCharacter(int EntryPoint);
 };
 
 

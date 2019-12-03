@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_GameModeBase.BPF_GameModeBase_C.getS3GamemodeBase
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3GamemodeBase_C*    BP_S3GamemodeBase              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_GameModeBase_C::STATIC_getS3GamemodeBase(class UObject* __WorldContext, class ABP_S3GamemodeBase_C** BP_S3GamemodeBase)
+void UBPF_GameModeBase_C::getS3GamemodeBase(class UObject* __WorldContext, class ABP_S3GamemodeBase_C** BP_S3GamemodeBase)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_GameModeBase.BPF_GameModeBase_C.getS3GamemodeBase");
 

@@ -35,12 +35,12 @@ public:
 
 
 	void SetSkillLibrary(class UBTL_CommandLibrary_C* SkillLibrary);
-	void SetDefaultFrameVisible(bool Visible);
+	void STATIC_SetDefaultFrameVisible(bool Visible);
 	void SetDescriptionText(const struct FText& Text);
-	void SetItem_TableIndex(int Index);
+	void STATIC_SetItem_TableIndex(int Index);
 	void Construct();
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_wgt_SkillEditorDetails(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_SkillEditorDetails(int EntryPoint);
 };
 
 

@@ -28,7 +28,7 @@ public:
 
 
 	void Activate();
-	void ExecuteUbergraph_BP_TalkProcess_TimerStart(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_TalkProcess_TimerStart(int EntryPoint);
 };
 
 

@@ -29,10 +29,10 @@ public:
 	}
 
 
-	void SetData(const struct FText& Text, int FontSize, TEnumAsByte<ETextJustify> Justification);
+	void STATIC_SetData(const struct FText& Text, int FontSize, TEnumAsByte<ETextJustify> Justification);
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_BPW_UI_GeneralWindow_Text(int EntryPoint);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow_Text(int EntryPoint);
 };
 
 

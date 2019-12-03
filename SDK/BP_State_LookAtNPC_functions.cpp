@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsNPCLocomotionAnimation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bReturnValue                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_C::IsNPCLocomotionAnimation(bool* bReturnValue)
+void UBP_State_LookAtNPC_C::STATIC_IsNPCLocomotionAnimation(bool* bReturnValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsNPCLocomotionAnimation");
 
 	UBP_State_LookAtNPC_C_IsNPCLocomotionAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,17 +37,18 @@ void UBP_State_LookAtNPC_C::IsNPCLocomotionAnimation(bool* bReturnValue)
 
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsNPCLocomotionSit
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bReturnValue                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_C::IsNPCLocomotionSit(bool* bReturnValue)
+void UBP_State_LookAtNPC_C::STATIC_IsNPCLocomotionSit(bool* bReturnValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsNPCLocomotionSit");
 
 	UBP_State_LookAtNPC_C_IsNPCLocomotionSit_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +60,7 @@ void UBP_State_LookAtNPC_C::IsNPCLocomotionSit(bool* bReturnValue)
 
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsNPCLocomotionWalk
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bReturnValue                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -80,11 +82,11 @@ void UBP_State_LookAtNPC_C::IsNPCLocomotionWalk(bool* bReturnValue)
 
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsNPCLocomotionIdle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bReturnValue                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_C::IsNPCLocomotionIdle(bool* bReturnValue)
+void UBP_State_LookAtNPC_C::STATIC_IsNPCLocomotionIdle(bool* bReturnValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsNPCLocomotionIdle");
 
@@ -102,7 +104,7 @@ void UBP_State_LookAtNPC_C::IsNPCLocomotionIdle(bool* bReturnValue)
 
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.IsInitializeState
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -113,6 +115,7 @@ void UBP_State_LookAtNPC_C::IsInitializeState(bool* bSuccess)
 	UBP_State_LookAtNPC_C_IsInitializeState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +127,7 @@ void UBP_State_LookAtNPC_C::IsInitializeState(bool* bSuccess)
 
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.StateOnInitialize
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void UBP_State_LookAtNPC_C::StateOnInitialize()
 {
@@ -133,6 +136,7 @@ void UBP_State_LookAtNPC_C::StateOnInitialize()
 	UBP_State_LookAtNPC_C_StateOnInitialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,9 +145,9 @@ void UBP_State_LookAtNPC_C::StateOnInitialize()
 
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.Setup
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBP_State_LookAtNPC_C::Setup()
+void UBP_State_LookAtNPC_C::STATIC_Setup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.Setup");
 
@@ -158,11 +162,11 @@ void UBP_State_LookAtNPC_C::Setup()
 
 
 // Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.ExecuteUbergraph_BP_State_LookAtNPC
-// ()
+// (Exec, Native, Event, Static, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_C::ExecuteUbergraph_BP_State_LookAtNPC(int EntryPoint)
+void UBP_State_LookAtNPC_C::STATIC_ExecuteUbergraph_BP_State_LookAtNPC(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC.BP_State_LookAtNPC_C.ExecuteUbergraph_BP_State_LookAtNPC");
 
@@ -170,6 +174,7 @@ void UBP_State_LookAtNPC_C::ExecuteUbergraph_BP_State_LookAtNPC(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

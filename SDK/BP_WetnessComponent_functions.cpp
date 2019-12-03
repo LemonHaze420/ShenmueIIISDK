@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_WetnessComponent.BP_WetnessComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_WetnessComponent_C::ReceiveBeginPlay()
 {
@@ -31,7 +31,7 @@ void UBP_WetnessComponent_C::ReceiveBeginPlay()
 
 
 // Function BP_WetnessComponent.BP_WetnessComponent_C.ExecuteUbergraph_BP_WetnessComponent
-// (HasDefaults)
+// (Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +43,7 @@ void UBP_WetnessComponent_C::ExecuteUbergraph_BP_WetnessComponent(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

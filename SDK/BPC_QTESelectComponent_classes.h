@@ -31,19 +31,19 @@ public:
 
 
 	void UpdateAnimationState();
-	void DebugQTEForceSuccessUpdateInternal();
-	float GetLengthBeforeCountInputLimitTime();
+	void STATIC_DebugQTEForceSuccessUpdateInternal();
+	float STATIC_GetLengthBeforeCountInputLimitTime();
 	bool IsInputedOther();
-	void SetupQTE(const struct FName& InLeftAction, const struct FName& InRightAction, const struct FName& InSuccessAction);
+	void STATIC_SetupQTE(const struct FName& InLeftAction, const struct FName& InRightAction, const struct FName& InSuccessAction);
 	void PlayInputFailedAnimation();
-	void PlayInputSuccessAnimation(bool InRight);
+	void STATIC_PlayInputSuccessAnimation(bool InRight);
 	bool IsPlayingInAnimation();
-	void PlayTimeUpFailedAnimation();
-	void PlayInAnimation();
-	void SetTimeGaugeRate(float InGaugeRate);
+	void STATIC_PlayTimeUpFailedAnimation();
+	void STATIC_PlayInAnimation();
+	void STATIC_SetTimeGaugeRate(float InGaugeRate);
 	void ExecuteInputAction(const struct FName& InInputAction);
 	void Reset();
-	void Finalize();
+	void STATIC_Finalize();
 	void Initialize();
 };
 

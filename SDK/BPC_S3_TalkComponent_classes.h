@@ -24,7 +24,7 @@ public:
 	bool                                               IsSight;                                                  // 0x0228(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isTalkable;                                               // 0x0229(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               isMessageWaiting;                                         // 0x022A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               isActionButtonExec;                                       // 0x022B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsActionButtonExec;                                       // 0x022B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isShowKS;                                                 // 0x022C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isTalkingSit;                                             // 0x022D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x022E(0x0002) MISSED OFFSET
@@ -52,52 +52,52 @@ public:
 	}
 
 
-	void CommandStartShowHP(bool Show);
+	void STATIC_CommandStartShowHP(bool Show);
 	void CommandCancelKS();
 	void CommandStartKS(bool bNoCancel);
 	void CommandCancelMessagewaiting();
-	void CommandStartMessagewaiting();
+	void STATIC_CommandStartMessagewaiting();
 	bool ShouldDelayAction();
 	void CheckItem(TMap<struct FName, int> ItemMap, bool* Possess);
-	void GetEventIconType(ES3ActionIconType* Type, bool* AnimIcon);
-	void IsShowDLCIcon(bool* Show, bool* AnimIcon);
+	void STATIC_GetEventIconType(ES3ActionIconType* Type, bool* AnimIcon);
+	void STATIC_IsShowDLCIcon(bool* Show, bool* AnimIcon);
 	void DoCancelButton_Impl();
-	void CheckSubQuest(class UDataTable* DataTable, bool* NeedCheck, bool* InProgress, bool* AnimIcon);
+	void STATIC_CheckSubQuest(class UDataTable* DataTable, bool* NeedCheck, bool* InProgress, bool* AnimIcon);
 	void DoStepButton_Impl();
-	void IsShowSubQuestIcon(bool* Show, bool* AnimIcon);
+	void STATIC_IsShowSubQuestIcon(bool* Show, bool* AnimIcon);
 	void IntToGameTime(int InVal, float* Time);
 	void ParseCurrentStepSchedule();
-	bool GetIsActionButtonExec();
-	void GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params);
-	void CanSit(class AActor* SitActor, bool bOutputLog, bool* bResult);
+	bool STATIC_GetIsActionButtonExec();
+	void STATIC_GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params);
+	void STATIC_CanSit(class AActor* SitActor, bool bOutputLog, bool* bResult);
 	void DebugPrintCurrentDetecttingActor(class ABP_S3DetectAction_C* DetectActor);
-	void SetActionButtonExec(bool flag);
-	void GetJawPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime);
+	void STATIC_SetActionButtonExec(bool flag);
+	void STATIC_GetJawPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime);
 	void SetJawPointingParamater(float Yaw, float Pitch, float AnimBlendTime);
-	void JawPointingMotionFlagOFF();
+	void STATIC_JawPointingMotionFlagOFF();
 	void JawPointingMotionFlagON();
-	void GetFingerPointingMode(ES3FingerPointingMode* CurrentMode);
-	void SetFingerPointingMode(ES3FingerPointingMode NewMode);
-	void SetFingerPointingParamater(float Yaw, float Pitch, float AnimBlendTime);
+	void STATIC_GetFingerPointingMode(ES3FingerPointingMode* CurrentMode);
+	void STATIC_SetFingerPointingMode(ES3FingerPointingMode NewMode);
+	void STATIC_SetFingerPointingParamater(float Yaw, float Pitch, float AnimBlendTime);
 	void FingerPointingMotionFlagOFF();
-	void FingerPointingMotionFlagON();
-	void GetFingerPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime);
-	void getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
-	void SetEventIdName(const struct FName& newParam);
-	void ReceiveBeginPlay();
-	void doActionButton();
-	void doStepButton();
-	void doSkipButton();
-	void doCancelButton();
-	void OnBSEventStart(class AActor* NpcActors, class UTalkScript* TalkScript);
-	void BindsTalkComponent();
-	void InitializeTalk(class US3TalkDataListBase* TalkDataList, const struct FNPCTalkEventInfo& TalkEventInfo);
-	void DecideDetectAction(ES3ActionIconType ActionType);
-	void OnStepChanged(int SetSteps);
-	void OnPcEnableScheduleEvent(float receiveTime);
-	void OnReceiveTimeEvent(int EventIndex);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ChangeStep(int SetSteps);
+	void STATIC_FingerPointingMotionFlagON();
+	void STATIC_GetFingerPointingParameter(bool* bFingerPointing, float* Yaw, float* Pitch, float* AnimBlendTime);
+	void GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
+	void STATIC_SetEventIdName(const struct FName& newParam);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_doActionButton();
+	void STATIC_doStepButton();
+	void STATIC_doSkipButton();
+	void STATIC_doCancelButton();
+	void STATIC_OnBSEventStart(class AActor* NpcActors, class UTalkScript* TalkScript);
+	void STATIC_BindsTalkComponent();
+	void STATIC_InitializeTalk(class US3TalkDataListBase* TalkDataList, const struct FNPCTalkEventInfo& TalkEventInfo);
+	void STATIC_DecideDetectAction(ES3ActionIconType ActionType);
+	void STATIC_OnStepChanged(int SetSteps);
+	void STATIC_OnPcEnableScheduleEvent(float receiveTime);
+	void STATIC_OnReceiveTimeEvent(int EventIndex);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ChangeStep(int SetSteps);
 	void ChangeFlag(int ArrayIndex, int SetFlags);
 	void ExecuteUbergraph_BPC_S3_TalkComponent(int EntryPoint);
 };

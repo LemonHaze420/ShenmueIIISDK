@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetDoorActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AS3GimmickOpenDoor*      DoorActor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_AnimNotify_DoorKnock_C::GetDoorActor(class USkeletalMeshComponent* Mesh, class AS3GimmickOpenDoor** DoorActor)
+void UBP_AnimNotify_DoorKnock_C::STATIC_GetDoorActor(class USkeletalMeshComponent* Mesh, class AS3GimmickOpenDoor** DoorActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetDoorActor");
 
@@ -38,7 +38,7 @@ void UBP_AnimNotify_DoorKnock_C::GetDoorActor(class USkeletalMeshComponent* Mesh
 
 
 // Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetSound
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Sound                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,7 +62,7 @@ void UBP_AnimNotify_DoorKnock_C::GetSound(class AS3GimmickOpenDoor* Door, class 
 
 
 // Function BP_AnimNotify_DoorKnock.BP_AnimNotify_DoorKnock_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 

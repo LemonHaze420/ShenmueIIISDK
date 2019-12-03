@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BP_S3_CharacterAdventure.BPF_BP_S3_CharacterAdventure_C.Get_BP_S3_CharacterAdventure
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3_Character_Adventure_C* Character                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BP_S3_CharacterAdventure_C::STATIC_Get_BP_S3_CharacterAdventure(class UObject* __WorldContext, class ABP_S3_Character_Adventure_C** Character, bool* IsValid)
+void UBPF_BP_S3_CharacterAdventure_C::Get_BP_S3_CharacterAdventure(class UObject* __WorldContext, class ABP_S3_Character_Adventure_C** Character, bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BP_S3_CharacterAdventure.BPF_BP_S3_CharacterAdventure_C.Get_BP_S3_CharacterAdventure");
 

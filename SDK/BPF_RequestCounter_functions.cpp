@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_RequestCounter.BPF_RequestCounter_C.BPF_CreateRequestCounter
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class URequestCounter_C*       Reference                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_RequestCounter_C::STATIC_BPF_CreateRequestCounter(class UObject* __WorldContext, class URequestCounter_C** Reference)
+void UBPF_RequestCounter_C::BPF_CreateRequestCounter(class UObject* __WorldContext, class URequestCounter_C** Reference)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_RequestCounter.BPF_RequestCounter_C.BPF_CreateRequestCounter");
 
@@ -38,7 +38,7 @@ void UBPF_RequestCounter_C::STATIC_BPF_CreateRequestCounter(class UObject* __Wor
 
 
 // Function BPF_RequestCounter.BPF_RequestCounter_C.BPF_RemoveRequest
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UObject*                 RequestingObject               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class URequestCounter_C*       RequestCounterReference        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -67,7 +67,7 @@ void UBPF_RequestCounter_C::STATIC_BPF_RemoveRequest(class UObject* RequestingOb
 
 
 // Function BPF_RequestCounter.BPF_RequestCounter_C.BPF_AddRequest
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UObject*                 RequestingObject               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class URequestCounter_C*       RequestCounter                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -85,6 +85,7 @@ void UBPF_RequestCounter_C::STATIC_BPF_AddRequest(class UObject* RequestingObjec
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

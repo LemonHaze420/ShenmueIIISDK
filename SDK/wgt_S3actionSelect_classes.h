@@ -152,33 +152,33 @@ public:
 
 
 	void doCmd_startSelection_Base();
-	bool CheckTime();
+	bool STATIC_CheckTime();
 	void EndButtonAnim();
 	void Init();
 	void StartButtonAnim();
-	void InitButtonPos();
+	void STATIC_InitButtonPos();
 	void SetCalcText();
-	float GetTextMaxLength();
-	void catch_onEndFade_iconbase_(bool FadeIn);
+	float STATIC_GetTextMaxLength();
+	void STATIC_catch_onEndFade_iconbase_(bool FadeIn);
 	void catch_onTimeover();
 	void delSelectItem(int Index);
-	void doCmd_addItem(int Index, const struct FText& Text);
-	void AddSelectItem(int Index);
-	void doCmd_startTimer(float Time);
+	void STATIC_doCmd_addItem(int Index, const struct FText& Text);
+	void STATIC_addSelectItem(int Index);
+	void STATIC_doCmd_startTimer(float Time);
 	void catch_onEndFadeOut_timer_();
 	void catch_onEndFadeIn_timer_();
-	void doCmd_setVisibility_timer_(bool Visible);
+	void STATIC_doCmd_setVisibility_timer_(bool Visible);
 	void doCmd_cancelSelection();
 	void doCmd_startDecide(int DecideIndex);
 	void doCmd_sendInput(TEnumAsByte<EN_padSwitch> Button, bool press);
 	void catch_onEndFadeOut_item_(class Uwgt_S3actionSelect_elem_C* Widget, class UWidgetAnimation* Animation);
 	void catch_onEndFadeIn_item_(class Uwgt_S3actionSelect_elem_C* Widget, class UWidgetAnimation* Animation);
-	void checkFinish();
-	void checkReady();
-	void catch_onIconAnimEnd();
+	void STATIC_checkFinish();
+	void STATIC_checkReady();
+	void STATIC_catch_onIconAnimEnd();
 	void AdjustCenter(class UPanelSlot* PanelSlot, const struct FVector2D& slotSize);
-	void doCmd_startSelection();
-	void doCmd_setVisibility_UI_(bool Visible);
+	void STATIC_doCmd_startSelection();
+	void STATIC_doCmd_setVisibility_UI_(bool Visible);
 	void Construct();
 	void Destruct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
@@ -187,10 +187,10 @@ public:
 	void BndEvt__CenterFadeOut_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void SizeSetIn();
 	void ExecuteUbergraph_wgt_S3actionSelect(int EntryPoint);
-	void OnSetSizeEnd__DelegateSignature();
-	void onEndFinishSelection__DelegateSignature();
-	void onEndStartSelection__DelegateSignature();
-	void onSelected__DelegateSignature(int Index);
+	void STATIC_OnSetSizeEnd__DelegateSignature();
+	void STATIC_onEndFinishSelection__DelegateSignature();
+	void STATIC_onEndStartSelection__DelegateSignature();
+	void STATIC_onSelected__DelegateSignature(int Index);
 };
 
 

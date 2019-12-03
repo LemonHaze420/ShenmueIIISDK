@@ -27,8 +27,10 @@ public:
 
 
 	void SetEnabled(bool Enabled);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void OnStart(class ABP_MiniGameBase_C* SelfMiniGame);
+	void OnEnd(class ABP_MiniGameBase_C* SelfMiniGame);
+	void STATIC_ExecuteUbergraph_BPC_MiniGameInGameLight(int EntryPoint);
 };
 
 

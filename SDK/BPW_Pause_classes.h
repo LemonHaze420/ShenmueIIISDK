@@ -36,9 +36,9 @@ public:
 	}
 
 
-	void DrawBuildInfo();
-	void Construct();
-	void ExecuteUbergraph_BPW_Pause(int EntryPoint);
+	void STATIC_DrawBuildInfo();
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_BPW_Pause(int EntryPoint);
 };
 
 

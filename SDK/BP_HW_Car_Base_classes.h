@@ -33,10 +33,10 @@ public:
 
 
 	void SetCollisionEnabled(bool Enabled);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ExecuteUbergraph_BP_HW_Car_Base(int EntryPoint);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_ExecuteUbergraph_BP_HW_Car_Base(int EntryPoint);
 };
 
 

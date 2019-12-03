@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.GetHitElement
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::GetHitElement(int* newParam)
+void ABP_OD_CenterPocket_C::STATIC_GetHitElement(int* newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.GetHitElement");
 
@@ -36,11 +36,11 @@ void ABP_OD_CenterPocket_C::GetHitElement(int* newParam)
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.SetNailCollisionHidden
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, Delegate, NetServer)
 // Parameters:
 // bool                           NewHidden                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::SetNailCollisionHidden(bool NewHidden)
+void ABP_OD_CenterPocket_C::STATIC_SetNailCollisionHidden(bool NewHidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.SetNailCollisionHidden");
 
@@ -48,6 +48,7 @@ void ABP_OD_CenterPocket_C::SetNailCollisionHidden(bool NewHidden)
 	params.NewHidden = NewHidden;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,15 +57,16 @@ void ABP_OD_CenterPocket_C::SetNailCollisionHidden(bool NewHidden)
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_OD_CenterPocket_C::UserConstructionScript()
+void ABP_OD_CenterPocket_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.UserConstructionScript");
 
 	ABP_OD_CenterPocket_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +75,7 @@ void ABP_OD_CenterPocket_C::UserConstructionScript()
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -82,7 +84,7 @@ void ABP_OD_CenterPocket_C::UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_OD_CenterPocket_C::STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -103,7 +105,7 @@ void ABP_OD_CenterPocket_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBe
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__DestroyNail_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -112,7 +114,7 @@ void ABP_OD_CenterPocket_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBe
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::BndEvt__DestroyNail_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_OD_CenterPocket_C::STATIC_BndEvt__DestroyNail_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__DestroyNail_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -133,7 +135,7 @@ void ABP_OD_CenterPocket_C::BndEvt__DestroyNail_K2Node_ComponentBoundEvent_0_Com
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -142,7 +144,7 @@ void ABP_OD_CenterPocket_C::BndEvt__DestroyNail_K2Node_ComponentBoundEvent_0_Com
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_OD_CenterPocket_C::STATIC_BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -163,14 +165,14 @@ void ABP_OD_CenterPocket_C::BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_8_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_8_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_OD_CenterPocket_C::STATIC_BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_8_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_8_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -189,7 +191,7 @@ void ABP_OD_CenterPocket_C::BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -198,7 +200,7 @@ void ABP_OD_CenterPocket_C::BndEvt__HitLeftWallSound_K2Node_ComponentBoundEvent_
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_OD_CenterPocket_C::STATIC_BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -219,14 +221,14 @@ void ABP_OD_CenterPocket_C::BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_10_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_CenterPocket_C::BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_10_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_OD_CenterPocket_C::STATIC_BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_10_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent_10_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -237,6 +239,7 @@ void ABP_OD_CenterPocket_C::BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -245,7 +248,7 @@ void ABP_OD_CenterPocket_C::BndEvt__HitRightWallSound_K2Node_ComponentBoundEvent
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.ExecuteUbergraph_BP_OD_CenterPocket
-// (HasDefaults)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -257,6 +260,7 @@ void ABP_OD_CenterPocket_C::ExecuteUbergraph_BP_OD_CenterPocket(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -265,7 +269,7 @@ void ABP_OD_CenterPocket_C::ExecuteUbergraph_BP_OD_CenterPocket(int EntryPoint)
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.DestroyNailEvent__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ABP_OD_Nail_C*           nail                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -277,6 +281,7 @@ void ABP_OD_CenterPocket_C::DestroyNailEvent__DelegateSignature(class ABP_OD_Nai
 	params.nail = nail;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,7 +290,7 @@ void ABP_OD_CenterPocket_C::DestroyNailEvent__DelegateSignature(class ABP_OD_Nai
 
 
 // Function BP_OD_CenterPocket.BP_OD_CenterPocket_C.BeginHitEvent__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            hit_element                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -297,6 +302,7 @@ void ABP_OD_CenterPocket_C::BeginHitEvent__DelegateSignature(int hit_element)
 	params.hit_element = hit_element;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

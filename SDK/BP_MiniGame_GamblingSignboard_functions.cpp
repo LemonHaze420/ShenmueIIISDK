@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.InitializeViewMeshComponent
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ViewMeshNum                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBPC_MiniGameBoardNum_C* Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_MiniGame_GamblingSignboard_C::InitializeViewMeshComponent(int ViewMeshNum, class UBPC_MiniGameBoardNum_C* Component)
+void ABP_MiniGame_GamblingSignboard_C::STATIC_InitializeViewMeshComponent(int ViewMeshNum, class UBPC_MiniGameBoardNum_C* Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.InitializeViewMeshComponent");
 
@@ -28,6 +28,7 @@ void ABP_MiniGame_GamblingSignboard_C::InitializeViewMeshComponent(int ViewMeshN
 	params.Component = Component;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_MiniGame_GamblingSignboard_C::InitializeViewMeshComponent(int ViewMeshN
 
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.OnObjectLoaded
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 LoadId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 LoadedObject                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -50,6 +51,7 @@ void ABP_MiniGame_GamblingSignboard_C::OnObjectLoaded(const struct FString& Load
 	params.LoadedObject = LoadedObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +60,7 @@ void ABP_MiniGame_GamblingSignboard_C::OnObjectLoaded(const struct FString& Load
 
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.SetNumberPos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 
 void ABP_MiniGame_GamblingSignboard_C::SetNumberPos()
 {
@@ -75,13 +77,13 @@ void ABP_MiniGame_GamblingSignboard_C::SetNumberPos()
 
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.SetBoardInfoOnePlay
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Private, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGameGambleType> Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OnePlayPrice                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsKihuda                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_GamblingSignboard_C::SetBoardInfoOnePlay(TEnumAsByte<E_MiniGameGambleType> Index, int OnePlayPrice, bool IsKihuda)
+void ABP_MiniGame_GamblingSignboard_C::STATIC_SetBoardInfoOnePlay(TEnumAsByte<E_MiniGameGambleType> Index, int OnePlayPrice, bool IsKihuda)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.SetBoardInfoOnePlay");
 
@@ -91,6 +93,7 @@ void ABP_MiniGame_GamblingSignboard_C::SetBoardInfoOnePlay(TEnumAsByte<E_MiniGam
 	params.IsKihuda = IsKihuda;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,7 +102,7 @@ void ABP_MiniGame_GamblingSignboard_C::SetBoardInfoOnePlay(TEnumAsByte<E_MiniGam
 
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.SetBoardInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGameGambleType> Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MinNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -125,7 +128,7 @@ void ABP_MiniGame_GamblingSignboard_C::SetBoardInfo(TEnumAsByte<E_MiniGameGamble
 
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_GamblingSignboard_C::UserConstructionScript()
 {
@@ -134,6 +137,7 @@ void ABP_MiniGame_GamblingSignboard_C::UserConstructionScript()
 	ABP_MiniGame_GamblingSignboard_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,15 +146,16 @@ void ABP_MiniGame_GamblingSignboard_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_MiniGame_GamblingSignboard_C::ReceiveBeginPlay()
+void ABP_MiniGame_GamblingSignboard_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.ReceiveBeginPlay");
 
 	ABP_MiniGame_GamblingSignboard_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -159,7 +164,7 @@ void ABP_MiniGame_GamblingSignboard_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_GamblingSignboard.BP_MiniGame_GamblingSignboard_C.ExecuteUbergraph_BP_MiniGame_GamblingSignboard
-// ()
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -171,6 +176,7 @@ void ABP_MiniGame_GamblingSignboard_C::ExecuteUbergraph_BP_MiniGame_GamblingSign
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

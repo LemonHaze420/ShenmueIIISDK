@@ -24,12 +24,6 @@ struct ULevelSequencePlayer_CreateLevelSequencePlayer_Params
 	class ULevelSequencePlayer*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
-struct ULevelSequenceBurnInOptions_SetBurnIn_Params
-{
-	struct FSoftClassPath                              InBurnInClass;                                            // (Parm)
-};
-
 // Function LevelSequence.LevelSequenceActor.SetSequence
 struct ALevelSequenceActor_SetSequence_Params
 {
@@ -82,6 +76,12 @@ struct ALevelSequenceActor_AddBinding_Params
 	struct FMovieSceneObjectBindingID                  Binding;                                                  // (Parm)
 	class AActor*                                      Actor;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bAllowBindingsFromAsset;                                  // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function LevelSequence.LevelSequenceBurnInOptions.SetBurnIn
+struct ULevelSequenceBurnInOptions_SetBurnIn_Params
+{
+	struct FSoftClassPath                              InBurnInClass;                                            // (Parm)
 };
 
 // Function LevelSequence.LevelSequenceBurnIn.SetSettings

@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.GetGlowTextBorder
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UBorder*                 GlowTextBorder                 (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUMG_SubTitleText_C::GetGlowTextBorder(class UBorder** GlowTextBorder)
+void UUMG_SubTitleText_C::STATIC_GetGlowTextBorder(class UBorder** GlowTextBorder)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.GetGlowTextBorder");
 
 	UUMG_SubTitleText_C_GetGlowTextBorder_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,17 +37,18 @@ void UUMG_SubTitleText_C::GetGlowTextBorder(class UBorder** GlowTextBorder)
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.GetGlowTextBlock
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class US3GlowTextBlock*        GlowTextBlock                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUMG_SubTitleText_C::GetGlowTextBlock(class US3GlowTextBlock** GlowTextBlock)
+void UUMG_SubTitleText_C::STATIC_GetGlowTextBlock(class US3GlowTextBlock** GlowTextBlock)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.GetGlowTextBlock");
 
 	UUMG_SubTitleText_C_GetGlowTextBlock_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,17 +60,18 @@ void UUMG_SubTitleText_C::GetGlowTextBlock(class US3GlowTextBlock** GlowTextBloc
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.GetNowText
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UTextBlock*              NowText                        (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUMG_SubTitleText_C::GetNowText(class UTextBlock** NowText)
+void UUMG_SubTitleText_C::STATIC_GetNowText(class UTextBlock** NowText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.GetNowText");
 
 	UUMG_SubTitleText_C_GetNowText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,17 +83,18 @@ void UUMG_SubTitleText_C::GetNowText(class UTextBlock** NowText)
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.GetAllSizeText
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UTextBlock*              AllSize                        (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUMG_SubTitleText_C::GetAllSizeText(class UTextBlock** AllSize)
+void UUMG_SubTitleText_C::STATIC_GetAllSizeText(class UTextBlock** AllSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.GetAllSizeText");
 
 	UUMG_SubTitleText_C_GetAllSizeText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,11 +106,11 @@ void UUMG_SubTitleText_C::GetAllSizeText(class UTextBlock** AllSize)
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.GetRubyRootCanvas
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UCanvasPanel*            Canvas                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUMG_SubTitleText_C::GetRubyRootCanvas(class UCanvasPanel** Canvas)
+void UUMG_SubTitleText_C::STATIC_GetRubyRootCanvas(class UCanvasPanel** Canvas)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.GetRubyRootCanvas");
 
@@ -124,17 +128,18 @@ void UUMG_SubTitleText_C::GetRubyRootCanvas(class UCanvasPanel** Canvas)
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.GetDummyTextBody
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UTextBlock*              Body                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUMG_SubTitleText_C::GetDummyTextBody(class UTextBlock** Body)
+void UUMG_SubTitleText_C::STATIC_GetDummyTextBody(class UTextBlock** Body)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.GetDummyTextBody");
 
 	UUMG_SubTitleText_C_GetDummyTextBody_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,17 +151,18 @@ void UUMG_SubTitleText_C::GetDummyTextBody(class UTextBlock** Body)
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.GetDummyTextRubyBody
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UTextBlock*              Body                           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UUMG_SubTitleText_C::GetDummyTextRubyBody(class UTextBlock** Body)
+void UUMG_SubTitleText_C::STATIC_GetDummyTextRubyBody(class UTextBlock** Body)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.GetDummyTextRubyBody");
 
 	UUMG_SubTitleText_C_GetDummyTextRubyBody_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -168,15 +174,16 @@ void UUMG_SubTitleText_C::GetDummyTextRubyBody(class UTextBlock** Body)
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void UUMG_SubTitleText_C::Construct()
+void UUMG_SubTitleText_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.Construct");
 
 	UUMG_SubTitleText_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,14 +192,14 @@ void UUMG_SubTitleText_C::Construct()
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.SetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Body                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FST_RubyInfo            InRubyInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FLinearColor            InSubtitleColor                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FLinearColor            InOutlineColor                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UUMG_SubTitleText_C::SetText(const struct FString& Body, const struct FST_RubyInfo& InRubyInfo, const struct FLinearColor& InSubtitleColor, const struct FLinearColor& InOutlineColor)
+void UUMG_SubTitleText_C::STATIC_SetText(const struct FString& Body, const struct FST_RubyInfo& InRubyInfo, const struct FLinearColor& InSubtitleColor, const struct FLinearColor& InOutlineColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.SetText");
 
@@ -203,6 +210,7 @@ void UUMG_SubTitleText_C::SetText(const struct FString& Body, const struct FST_R
 	params.InOutlineColor = InOutlineColor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -211,11 +219,11 @@ void UUMG_SubTitleText_C::SetText(const struct FString& Body, const struct FST_R
 
 
 // Function UMG_SubTitleText.UMG_SubTitleText_C.ExecuteUbergraph_UMG_SubTitleText
-// (HasDefaults)
+// (Event, Static, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUMG_SubTitleText_C::ExecuteUbergraph_UMG_SubTitleText(int EntryPoint)
+void UUMG_SubTitleText_C::STATIC_ExecuteUbergraph_UMG_SubTitleText(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UMG_SubTitleText.UMG_SubTitleText_C.ExecuteUbergraph_UMG_SubTitleText");
 

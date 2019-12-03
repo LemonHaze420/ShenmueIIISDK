@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ACTrigger.BP_ACTrigger_C.BehaviorControl
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 // Parameters:
 // bool                           NoChangeBehavior               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ACTrigger_C::BehaviorControl(bool NoChangeBehavior)
+void ABP_ACTrigger_C::STATIC_BehaviorControl(bool NoChangeBehavior)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.BehaviorControl");
 
@@ -26,6 +26,7 @@ void ABP_ACTrigger_C::BehaviorControl(bool NoChangeBehavior)
 	params.NoChangeBehavior = NoChangeBehavior;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,17 +35,18 @@ void ABP_ACTrigger_C::BehaviorControl(bool NoChangeBehavior)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.CheckSavedConditions
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_ACTrigger_C::CheckSavedConditions()
+bool ABP_ACTrigger_C::STATIC_CheckSavedConditions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.CheckSavedConditions");
 
 	ABP_ACTrigger_C_CheckSavedConditions_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +57,7 @@ bool ABP_ACTrigger_C::CheckSavedConditions()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.CheckPlayCount
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -66,6 +68,7 @@ bool ABP_ACTrigger_C::CheckPlayCount()
 	ABP_ACTrigger_C_CheckPlayCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +79,11 @@ bool ABP_ACTrigger_C::CheckPlayCount()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.TriggerEnable
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, NetValidate)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ACTrigger_C::TriggerEnable(bool* Enable)
+void ABP_ACTrigger_C::STATIC_TriggerEnable(bool* Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.TriggerEnable");
 
@@ -98,7 +101,7 @@ void ABP_ACTrigger_C::TriggerEnable(bool* Enable)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ShutDownActionFunc
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_ACTrigger_C::ShutDownActionFunc()
 {
@@ -107,6 +110,7 @@ void ABP_ACTrigger_C::ShutDownActionFunc()
 	ABP_ACTrigger_C_ShutDownActionFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,12 +119,12 @@ void ABP_ACTrigger_C::ShutDownActionFunc()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.IsForward
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Static, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // struct FVector                 HitLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           Play                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ACTrigger_C::IsForward(const struct FVector& HitLocation, bool* Play)
+void ABP_ACTrigger_C::STATIC_IsForward(const struct FVector& HitLocation, bool* Play)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.IsForward");
 
@@ -128,6 +132,7 @@ void ABP_ACTrigger_C::IsForward(const struct FVector& HitLocation, bool* Play)
 	params.HitLocation = HitLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,7 +144,7 @@ void ABP_ACTrigger_C::IsForward(const struct FVector& HitLocation, bool* Play)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ShouldDelayFadeIn
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           DisableIt                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -150,6 +155,7 @@ void ABP_ACTrigger_C::ShouldDelayFadeIn(bool* DisableIt)
 	ABP_ACTrigger_C_ShouldDelayFadeIn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +167,7 @@ void ABP_ACTrigger_C::ShouldDelayFadeIn(bool* DisableIt)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ShouldDisablePlayerControl
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           DisableIt                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -172,6 +178,7 @@ void ABP_ACTrigger_C::ShouldDisablePlayerControl(bool* DisableIt)
 	ABP_ACTrigger_C_ShouldDisablePlayerControl_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,7 +190,7 @@ void ABP_ACTrigger_C::ShouldDisablePlayerControl(bool* DisableIt)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ApplyLog
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 
 void ABP_ACTrigger_C::ApplyLog()
 {
@@ -200,7 +207,7 @@ void ABP_ACTrigger_C::ApplyLog()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ResetLog
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Public, BlueprintPure, NetValidate)
 
 void ABP_ACTrigger_C::ResetLog()
 {
@@ -217,11 +224,11 @@ void ABP_ACTrigger_C::ResetLog()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.CheckReset
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // bool                           Reset                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ACTrigger_C::CheckReset(bool* Reset)
+void ABP_ACTrigger_C::STATIC_CheckReset(bool* Reset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.CheckReset");
 
@@ -239,15 +246,16 @@ void ABP_ACTrigger_C::CheckReset(bool* Reset)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.SaveLog
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_ACTrigger_C::SaveLog()
+void ABP_ACTrigger_C::STATIC_SaveLog()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.SaveLog");
 
 	ABP_ACTrigger_C_SaveLog_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,7 +264,7 @@ void ABP_ACTrigger_C::SaveLog()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.CanPlay
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -278,7 +286,7 @@ void ABP_ACTrigger_C::CanPlay(bool* CAN)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.TeleportPlayer
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, NetMulticast, Public, BlueprintPure, NetValidate)
 
 void ABP_ACTrigger_C::TeleportPlayer()
 {
@@ -295,7 +303,7 @@ void ABP_ACTrigger_C::TeleportPlayer()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.SetPlayerControl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Public, NetServer, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -307,6 +315,7 @@ void ABP_ACTrigger_C::SetPlayerControl(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -315,11 +324,11 @@ void ABP_ACTrigger_C::SetPlayerControl(bool Enable)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.PlayAction
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ACTrigger_C::PlayAction(bool* Success)
+void ABP_ACTrigger_C::STATIC_PlayAction(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.PlayAction");
 
@@ -337,9 +346,9 @@ void ABP_ACTrigger_C::PlayAction(bool* Success)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_ACTrigger_C::UserConstructionScript()
+void ABP_ACTrigger_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.UserConstructionScript");
 
@@ -354,7 +363,7 @@ void ABP_ACTrigger_C::UserConstructionScript()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.OnLoaded_3DE5C7A6450AC770771EC1A18B8E6811
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -366,6 +375,7 @@ void ABP_ACTrigger_C::OnLoaded_3DE5C7A6450AC770771EC1A18B8E6811(class UObject* L
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -374,7 +384,7 @@ void ABP_ACTrigger_C::OnLoaded_3DE5C7A6450AC770771EC1A18B8E6811(class UObject* L
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -386,6 +396,7 @@ void ABP_ACTrigger_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -394,7 +405,7 @@ void ABP_ACTrigger_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Native, Event, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -416,6 +427,7 @@ void ABP_ACTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_Co
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -424,7 +436,7 @@ void ABP_ACTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_Co
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -442,6 +454,7 @@ void ABP_ACTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_Co
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -450,15 +463,16 @@ void ABP_ACTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_Co
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_ACTrigger_C::ReceiveBeginPlay()
+void ABP_ACTrigger_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.ReceiveBeginPlay");
 
 	ABP_ACTrigger_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -467,7 +481,7 @@ void ABP_ACTrigger_C::ReceiveBeginPlay()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -479,6 +493,7 @@ void ABP_ACTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -487,15 +502,16 @@ void ABP_ACTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.PlayACEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_ACTrigger_C::PlayACEvent()
+void ABP_ACTrigger_C::STATIC_PlayACEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.PlayACEvent");
 
 	ABP_ACTrigger_C_PlayACEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -504,15 +520,16 @@ void ABP_ACTrigger_C::PlayACEvent()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.CheckCanPlay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_ACTrigger_C::CheckCanPlay()
+void ABP_ACTrigger_C::STATIC_CheckCanPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.CheckCanPlay");
 
 	ABP_ACTrigger_C_CheckCanPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -521,7 +538,7 @@ void ABP_ACTrigger_C::CheckCanPlay()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.CustomEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -533,6 +550,7 @@ void ABP_ACTrigger_C::CustomEvent(int SetSteps)
 	params.SetSteps = SetSteps;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -541,15 +559,16 @@ void ABP_ACTrigger_C::CustomEvent(int SetSteps)
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.LoadTalkScript
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_ACTrigger_C::LoadTalkScript()
+void ABP_ACTrigger_C::STATIC_LoadTalkScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACTrigger.BP_ACTrigger_C.LoadTalkScript");
 
 	ABP_ACTrigger_C_LoadTalkScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -558,7 +577,7 @@ void ABP_ACTrigger_C::LoadTalkScript()
 
 
 // Function BP_ACTrigger.BP_ACTrigger_C.ExecuteUbergraph_BP_ACTrigger
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -570,6 +589,7 @@ void ABP_ACTrigger_C::ExecuteUbergraph_BP_ACTrigger(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.SetFocusToButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UWBP_DebugTeleportToNPCListItem_C::SetFocusToButton()
 {
@@ -31,7 +31,7 @@ void UWBP_DebugTeleportToNPCListItem_C::SetFocusToButton()
 
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Public, Delegate)
 
 void UWBP_DebugTeleportToNPCListItem_C::Construct()
 {
@@ -48,7 +48,7 @@ void UWBP_DebugTeleportToNPCListItem_C::Construct()
 
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Public, Delegate)
 
 void UWBP_DebugTeleportToNPCListItem_C::BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature()
 {
@@ -65,11 +65,11 @@ void UWBP_DebugTeleportToNPCListItem_C::BndEvt__Button_K2Node_ComponentBoundEven
 
 
 // Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.ExecuteUbergraph_WBP_DebugTeleportToNPCListItem
-// (HasDefaults)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_DebugTeleportToNPCListItem_C::ExecuteUbergraph_WBP_DebugTeleportToNPCListItem(int EntryPoint)
+void UWBP_DebugTeleportToNPCListItem_C::STATIC_ExecuteUbergraph_WBP_DebugTeleportToNPCListItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugTeleportToNPCListItem.WBP_DebugTeleportToNPCListItem_C.ExecuteUbergraph_WBP_DebugTeleportToNPCListItem");
 
@@ -77,6 +77,7 @@ void UWBP_DebugTeleportToNPCListItem_C::ExecuteUbergraph_WBP_DebugTeleportToNPCL
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

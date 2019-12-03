@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.TryDisableTick
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBPC_RadialStuckScanner_C::TryDisableTick()
 {
@@ -23,6 +23,7 @@ void UBPC_RadialStuckScanner_C::TryDisableTick()
 	UBPC_RadialStuckScanner_C_TryDisableTick_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBPC_RadialStuckScanner_C::TryDisableTick()
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.IgnoreCollision
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3Character*            Char                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Ignore                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -53,13 +54,13 @@ void UBPC_RadialStuckScanner_C::IgnoreCollision(class AS3Character* Char, bool I
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.TestBlockedByNPC
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class AS3Character*>    AddNPCS                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBPC_RadialStuckScanner_C::TestBlockedByNPC(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS)
+void UBPC_RadialStuckScanner_C::STATIC_TestBlockedByNPC(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.TestBlockedByNPC");
 
@@ -68,6 +69,7 @@ void UBPC_RadialStuckScanner_C::TestBlockedByNPC(float Yaw, float Distance, TArr
 	params.Distance = Distance;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,7 +81,7 @@ void UBPC_RadialStuckScanner_C::TestBlockedByNPC(float Yaw, float Distance, TArr
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.TestAngleBlocked
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Distance                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -105,7 +107,7 @@ void UBPC_RadialStuckScanner_C::TestAngleBlocked(float Yaw, float Distance, TArr
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.TestNavmeshDistance
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -121,6 +123,7 @@ void UBPC_RadialStuckScanner_C::TestNavmeshDistance(float Yaw, float Max, bool* 
 	params.Max = Max;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,7 +137,7 @@ void UBPC_RadialStuckScanner_C::TestNavmeshDistance(float Yaw, float Max, bool* 
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBPC_RadialStuckScanner_C::ReceiveBeginPlay()
 {
@@ -151,7 +154,7 @@ void UBPC_RadialStuckScanner_C::ReceiveBeginPlay()
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -171,7 +174,7 @@ void UBPC_RadialStuckScanner_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.StartScan
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBPC_RadialStuckScanner_C::StartScan()
 {
@@ -188,7 +191,7 @@ void UBPC_RadialStuckScanner_C::StartScan()
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.StartScanning
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBPC_RadialStuckScanner_C::StartScanning()
 {
@@ -205,7 +208,7 @@ void UBPC_RadialStuckScanner_C::StartScanning()
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.StopScanning
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBPC_RadialStuckScanner_C::StopScanning()
 {
@@ -222,7 +225,7 @@ void UBPC_RadialStuckScanner_C::StopScanning()
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.OnCompletedPositionCollectionWindow
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBPC_RadialStuckScanner_C::OnCompletedPositionCollectionWindow()
 {
@@ -239,11 +242,11 @@ void UBPC_RadialStuckScanner_C::OnCompletedPositionCollectionWindow()
 
 
 // Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.ExecuteUbergraph_BPC_RadialStuckScanner
-// (HasDefaults)
+// (Net, Static, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_RadialStuckScanner_C::ExecuteUbergraph_BPC_RadialStuckScanner(int EntryPoint)
+void UBPC_RadialStuckScanner_C::STATIC_ExecuteUbergraph_BPC_RadialStuckScanner(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_RadialStuckScanner.BPC_RadialStuckScanner_C.ExecuteUbergraph_BPC_RadialStuckScanner");
 

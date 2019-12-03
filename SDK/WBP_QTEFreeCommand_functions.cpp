@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.IsAnyButtonAnimating
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Event, NetResponse, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ bool UWBP_QTEFreeCommand_C::IsAnyButtonAnimating()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayBlinkAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // ES3PadButtonIndex              Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +47,7 @@ void UWBP_QTEFreeCommand_C::PlayBlinkAnimation(ES3PadButtonIndex Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void UWBP_QTEFreeCommand_C::PlayBlinkAnimation(ES3PadButtonIndex Index)
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetLightFromPadIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Event, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ES3PadButtonIndex              PadIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UWBP_QTESimonLight_C*    Light                          (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -79,7 +80,7 @@ void UWBP_QTEFreeCommand_C::GetLightFromPadIndex(ES3PadButtonIndex PadIndex, cla
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayLightAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // ES3PadButtonIndex              Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -99,12 +100,12 @@ void UWBP_QTEFreeCommand_C::PlayLightAnimation(ES3PadButtonIndex Index)
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetButtonFromPadIndex
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Event, Static, NetMulticast, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3PadButtonIndex              Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UWBP_QTEFreeCommandButton_C* Button                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UWBP_QTEFreeCommand_C::GetButtonFromPadIndex(ES3PadButtonIndex Selection, class UWBP_QTEFreeCommandButton_C** Button)
+void UWBP_QTEFreeCommand_C::STATIC_GetButtonFromPadIndex(ES3PadButtonIndex Selection, class UWBP_QTEFreeCommandButton_C** Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetButtonFromPadIndex");
 
@@ -123,11 +124,11 @@ void UWBP_QTEFreeCommand_C::GetButtonFromPadIndex(ES3PadButtonIndex Selection, c
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetSuccessText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UWBP_QTEFreeCommand_C::SetSuccessText(const struct FText& InText)
+void UWBP_QTEFreeCommand_C::STATIC_SetSuccessText(const struct FText& InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetSuccessText");
 
@@ -135,6 +136,7 @@ void UWBP_QTEFreeCommand_C::SetSuccessText(const struct FText& InText)
 	params.InText = InText;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,17 +145,18 @@ void UWBP_QTEFreeCommand_C::SetSuccessText(const struct FText& InText)
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetMaxOutAnimationLength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, Static, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UWBP_QTEFreeCommand_C::GetMaxOutAnimationLength()
+float UWBP_QTEFreeCommand_C::STATIC_GetMaxOutAnimationLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetMaxOutAnimationLength");
 
 	UWBP_QTEFreeCommand_C_GetMaxOutAnimationLength_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,17 +167,18 @@ float UWBP_QTEFreeCommand_C::GetMaxOutAnimationLength()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetInAnimationLength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, Static, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UWBP_QTEFreeCommand_C::GetInAnimationLength()
+float UWBP_QTEFreeCommand_C::STATIC_GetInAnimationLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetInAnimationLength");
 
 	UWBP_QTEFreeCommand_C_GetInAnimationLength_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,11 +189,11 @@ float UWBP_QTEFreeCommand_C::GetInAnimationLength()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetAutoOutOkAfterInputSuccess
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsAutoOut                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTEFreeCommand_C::SetAutoOutOkAfterInputSuccess(bool IsAutoOut)
+void UWBP_QTEFreeCommand_C::STATIC_SetAutoOutOkAfterInputSuccess(bool IsAutoOut)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetAutoOutOkAfterInputSuccess");
 
@@ -205,11 +209,11 @@ void UWBP_QTEFreeCommand_C::SetAutoOutOkAfterInputSuccess(bool IsAutoOut)
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetTimeGaugeRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTEFreeCommand_C::SetTimeGaugeRate(float Rate)
+void UWBP_QTEFreeCommand_C::STATIC_SetTimeGaugeRate(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetTimeGaugeRate");
 
@@ -217,6 +221,7 @@ void UWBP_QTEFreeCommand_C::SetTimeGaugeRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,17 +230,18 @@ void UWBP_QTEFreeCommand_C::SetTimeGaugeRate(float Rate)
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.IsPlayingOut
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWBP_QTEFreeCommand_C::IsPlayingOut()
+bool UWBP_QTEFreeCommand_C::STATIC_IsPlayingOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.IsPlayingOut");
 
 	UWBP_QTEFreeCommand_C_IsPlayingOut_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -246,7 +252,7 @@ bool UWBP_QTEFreeCommand_C::IsPlayingOut()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.IsPlayingIn
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -257,6 +263,7 @@ bool UWBP_QTEFreeCommand_C::IsPlayingIn()
 	UWBP_QTEFreeCommand_C_IsPlayingIn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -267,15 +274,16 @@ bool UWBP_QTEFreeCommand_C::IsPlayingIn()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayOutNg
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::PlayOutNg()
+void UWBP_QTEFreeCommand_C::STATIC_PlayOutNg()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayOutNg");
 
 	UWBP_QTEFreeCommand_C_PlayOutNg_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -284,15 +292,16 @@ void UWBP_QTEFreeCommand_C::PlayOutNg()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayOutOk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::PlayOutOk()
+void UWBP_QTEFreeCommand_C::STATIC_PlayOutOk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayOutOk");
 
 	UWBP_QTEFreeCommand_C_PlayOutOk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -301,15 +310,16 @@ void UWBP_QTEFreeCommand_C::PlayOutOk()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayIn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::PlayIn()
+void UWBP_QTEFreeCommand_C::STATIC_PlayIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayIn");
 
 	UWBP_QTEFreeCommand_C_PlayIn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -318,7 +328,7 @@ void UWBP_QTEFreeCommand_C::PlayIn()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.IsPlayingInputSuccess
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, Private, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -329,6 +339,7 @@ bool UWBP_QTEFreeCommand_C::IsPlayingInputSuccess()
 	UWBP_QTEFreeCommand_C_IsPlayingInputSuccess_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,15 +350,16 @@ bool UWBP_QTEFreeCommand_C::IsPlayingInputSuccess()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.ResetAllButtonZOrder
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_QTEFreeCommand_C::ResetAllButtonZOrder()
+void UWBP_QTEFreeCommand_C::STATIC_ResetAllButtonZOrder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.ResetAllButtonZOrder");
 
 	UWBP_QTEFreeCommand_C_ResetAllButtonZOrder_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -356,7 +368,7 @@ void UWBP_QTEFreeCommand_C::ResetAllButtonZOrder()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.ResetButtonZOrder
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UWBP_QTEFreeCommandButton_C* TargetButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -376,7 +388,7 @@ void UWBP_QTEFreeCommand_C::ResetButtonZOrder(class UWBP_QTEFreeCommandButton_C*
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetButtonZOrderToFront
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UWBP_QTEFreeCommandButton_C* TargetButton                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -388,6 +400,7 @@ void UWBP_QTEFreeCommand_C::SetButtonZOrderToFront(class UWBP_QTEFreeCommandButt
 	params.TargetButton = TargetButton;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -396,7 +409,7 @@ void UWBP_QTEFreeCommand_C::SetButtonZOrderToFront(class UWBP_QTEFreeCommandButt
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.SetupButtonImages
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void UWBP_QTEFreeCommand_C::SetupButtonImages()
 {
@@ -405,6 +418,7 @@ void UWBP_QTEFreeCommand_C::SetupButtonImages()
 	UWBP_QTEFreeCommand_C_SetupButtonImages_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -413,7 +427,7 @@ void UWBP_QTEFreeCommand_C::SetupButtonImages()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.PlayInputSuccess
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InputName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsAutoHide                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -427,6 +441,7 @@ void UWBP_QTEFreeCommand_C::PlayInputSuccess(const struct FName& InputName, bool
 	params.IsAutoHide = IsAutoHide;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -435,7 +450,7 @@ void UWBP_QTEFreeCommand_C::PlayInputSuccess(const struct FName& InputName, bool
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.Reset
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UWBP_QTEFreeCommand_C::Reset()
 {
@@ -444,6 +459,7 @@ void UWBP_QTEFreeCommand_C::Reset()
 	UWBP_QTEFreeCommand_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -452,7 +468,7 @@ void UWBP_QTEFreeCommand_C::Reset()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.GetButtonFromInputName
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InputName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UWBP_QTEFreeCommandButton_C* Button                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -465,6 +481,7 @@ void UWBP_QTEFreeCommand_C::GetButtonFromInputName(const struct FName& InputName
 	params.InputName = InputName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -476,9 +493,9 @@ void UWBP_QTEFreeCommand_C::GetButtonFromInputName(const struct FName& InputName
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::Construct()
+void UWBP_QTEFreeCommand_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.Construct");
 
@@ -493,9 +510,9 @@ void UWBP_QTEFreeCommand_C::Construct()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnButtonInputAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::OnButtonInputAnimationFinished()
+void UWBP_QTEFreeCommand_C::STATIC_OnButtonInputAnimationFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnButtonInputAnimationFinished");
 
@@ -510,9 +527,9 @@ void UWBP_QTEFreeCommand_C::OnButtonInputAnimationFinished()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void UWBP_QTEFreeCommand_C::STATIC_BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -527,9 +544,9 @@ void UWBP_QTEFreeCommand_C::BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_O
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void UWBP_QTEFreeCommand_C::STATIC_BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
@@ -544,11 +561,11 @@ void UWBP_QTEFreeCommand_C::BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_O
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.ExecuteUbergraph_WBP_QTEFreeCommand
-// ()
+// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTEFreeCommand_C::ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint)
+void UWBP_QTEFreeCommand_C::STATIC_ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.ExecuteUbergraph_WBP_QTEFreeCommand");
 
@@ -556,6 +573,7 @@ void UWBP_QTEFreeCommand_C::ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -564,15 +582,16 @@ void UWBP_QTEFreeCommand_C::ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint)
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnOutAnimationFinishedDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::OnOutAnimationFinishedDispatcher__DelegateSignature()
+void UWBP_QTEFreeCommand_C::STATIC_OnOutAnimationFinishedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnOutAnimationFinishedDispatcher__DelegateSignature");
 
 	UWBP_QTEFreeCommand_C_OnOutAnimationFinishedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -581,15 +600,16 @@ void UWBP_QTEFreeCommand_C::OnOutAnimationFinishedDispatcher__DelegateSignature(
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnInAnimationFinishedDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::OnInAnimationFinishedDispatcher__DelegateSignature()
+void UWBP_QTEFreeCommand_C::STATIC_OnInAnimationFinishedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnInAnimationFinishedDispatcher__DelegateSignature");
 
 	UWBP_QTEFreeCommand_C_OnInAnimationFinishedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -598,15 +618,16 @@ void UWBP_QTEFreeCommand_C::OnInAnimationFinishedDispatcher__DelegateSignature()
 
 
 // Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UWBP_QTEFreeCommand_C::OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature()
+void UWBP_QTEFreeCommand_C::STATIC_OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTEFreeCommand.WBP_QTEFreeCommand_C.OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature");
 
 	UWBP_QTEFreeCommand_C_OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

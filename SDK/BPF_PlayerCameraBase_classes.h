@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3PlayerCameraManagerBase(class UObject* __WorldContext, class ABP_S3PlayerCameraManagerBase_C** BP_S3PlayerCameraManagerBase);
+	void getS3PlayerCameraManagerBase(class UObject* __WorldContext, class ABP_S3PlayerCameraManagerBase_C** BP_S3PlayerCameraManagerBase);
 };
 
 

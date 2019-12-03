@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.FindClosestForwardDirection
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, MulticastDelegate, Public, HasOutParms, Const)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 OutDirToSpline                 (Parm, OutParm, IsPlainOldData)
@@ -30,6 +30,7 @@ void APlayerSplineNavi_C::FindClosestForwardDirection(const struct FVector& InLo
 	params.InLocation = InLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -47,13 +48,13 @@ void APlayerSplineNavi_C::FindClosestForwardDirection(const struct FVector& InLo
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.CheckLOS
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 InSplineLocation               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 InPlayerLocation               (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           OutIsClear                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerSplineNavi_C::CheckLOS(const struct FVector& InSplineLocation, const struct FVector& InPlayerLocation, bool* OutIsClear)
+void APlayerSplineNavi_C::STATIC_CheckLOS(const struct FVector& InSplineLocation, const struct FVector& InPlayerLocation, bool* OutIsClear)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerSplineNavi.PlayerSplineNavi_C.CheckLOS");
 
@@ -73,7 +74,7 @@ void APlayerSplineNavi_C::CheckLOS(const struct FVector& InSplineLocation, const
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.RailGetClosestDirection
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 InLocation                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 InDirection                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -83,7 +84,7 @@ void APlayerSplineNavi_C::CheckLOS(const struct FVector& InSplineLocation, const
 // float                          OutAngleAbs                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            OutRailDir                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerSplineNavi_C::RailGetClosestDirection(const struct FVector& InLocation, const struct FVector& InDirection, int InPreviousDirection, float AngleHysteresis, struct FVector* OutDirection, float* OutAngleAbs, int* OutRailDir)
+void APlayerSplineNavi_C::STATIC_RailGetClosestDirection(const struct FVector& InLocation, const struct FVector& InDirection, int InPreviousDirection, float AngleHysteresis, struct FVector* OutDirection, float* OutAngleAbs, int* OutRailDir)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerSplineNavi.PlayerSplineNavi_C.RailGetClosestDirection");
 
@@ -109,7 +110,7 @@ void APlayerSplineNavi_C::RailGetClosestDirection(const struct FVector& InLocati
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.FindSplineDistanceAndForward
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 WorldLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, OutParm, IsPlainOldData)
@@ -136,7 +137,7 @@ void APlayerSplineNavi_C::FindSplineDistanceAndForward(const struct FVector& Wor
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.GetWidth
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Point                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Width                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -160,7 +161,7 @@ void APlayerSplineNavi_C::GetWidth(const struct FVector& Point, float* Width)
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.CalculateStrength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Static, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 InputDir                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -171,7 +172,7 @@ void APlayerSplineNavi_C::GetWidth(const struct FVector& Point, float* Width)
 // bool                           bForceFollowDebug              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Strength                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void APlayerSplineNavi_C::CalculateStrength(const struct FVector& Location, const struct FVector& InputDir, const struct FVector& TargetLocation, const struct FVector& TargetDir, float NoInputN, float Distance, bool bForceFollowDebug, float* Strength)
+void APlayerSplineNavi_C::STATIC_CalculateStrength(const struct FVector& Location, const struct FVector& InputDir, const struct FVector& TargetLocation, const struct FVector& TargetDir, float NoInputN, float Distance, bool bForceFollowDebug, float* Strength)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerSplineNavi.PlayerSplineNavi_C.CalculateStrength");
 
@@ -196,7 +197,7 @@ void APlayerSplineNavi_C::CalculateStrength(const struct FVector& Location, cons
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.CalculateSteer
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, NetServer, HasOutParms, Const)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 InputDir                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -232,11 +233,11 @@ void APlayerSplineNavi_C::CalculateSteer(const struct FVector& Location, const s
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.SplineInit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APlayer_SplineMoveActor_C* SplineMoveActorRef             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayerSplineNavi_C::SplineInit(class APlayer_SplineMoveActor_C* SplineMoveActorRef)
+void APlayerSplineNavi_C::STATIC_SplineInit(class APlayer_SplineMoveActor_C* SplineMoveActorRef)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerSplineNavi.PlayerSplineNavi_C.SplineInit");
 
@@ -252,7 +253,7 @@ void APlayerSplineNavi_C::SplineInit(class APlayer_SplineMoveActor_C* SplineMove
 
 
 // Function PlayerSplineNavi.PlayerSplineNavi_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void APlayerSplineNavi_C::UserConstructionScript()
 {
@@ -261,6 +262,7 @@ void APlayerSplineNavi_C::UserConstructionScript()
 	APlayerSplineNavi_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

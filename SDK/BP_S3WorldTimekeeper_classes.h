@@ -29,10 +29,10 @@ public:
 
 
 	bool InitDataTime();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void WaitPlay();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_WaitPlay();
 	void ExecuteUbergraph_BP_S3WorldTimekeeper(int EntryPoint);
 };
 

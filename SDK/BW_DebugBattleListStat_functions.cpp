@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.SetValueText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -26,6 +26,7 @@ void UBW_DebugBattleListStat_C::SetValueText(const struct FText& InText)
 	params.InText = InText;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UBW_DebugBattleListStat_C::SetValueText(const struct FText& InText)
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.SetValueInt
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Numb                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,7 +55,7 @@ void UBW_DebugBattleListStat_C::SetValueInt(int Numb)
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.SetValueRatio
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Ratio                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,6 +67,7 @@ void UBW_DebugBattleListStat_C::SetValueRatio(float Ratio)
 	params.Ratio = Ratio;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +76,7 @@ void UBW_DebugBattleListStat_C::SetValueRatio(float Ratio)
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.SetValueInts
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Denom                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -88,6 +90,7 @@ void UBW_DebugBattleListStat_C::SetValueInts(int Enum, int Denom)
 	params.Denom = Denom;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,7 +99,7 @@ void UBW_DebugBattleListStat_C::SetValueInts(int Enum, int Denom)
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -108,6 +111,7 @@ void UBW_DebugBattleListStat_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +120,7 @@ void UBW_DebugBattleListStat_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugBattleListStat_C::BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
@@ -125,6 +129,7 @@ void UBW_DebugBattleListStat_C::BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_
 	UBW_DebugBattleListStat_C_BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,7 +138,7 @@ void UBW_DebugBattleListStat_C::BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugBattleListStat_C::BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
@@ -142,6 +147,7 @@ void UBW_DebugBattleListStat_C::BndEvt__Button_MinusHP_K2Node_ComponentBoundEven
 	UBW_DebugBattleListStat_C_BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,7 +156,7 @@ void UBW_DebugBattleListStat_C::BndEvt__Button_MinusHP_K2Node_ComponentBoundEven
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugBattleListStat_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
@@ -159,6 +165,7 @@ void UBW_DebugBattleListStat_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_
 	UBW_DebugBattleListStat_C_BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +174,7 @@ void UBW_DebugBattleListStat_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_2_
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.ResetFocus
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -179,6 +186,7 @@ void UBW_DebugBattleListStat_C::ResetFocus(class APlayerController* PlayerContro
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,7 +195,7 @@ void UBW_DebugBattleListStat_C::ResetFocus(class APlayerController* PlayerContro
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.ExecuteUbergraph_BW_DebugBattleListStat
-// ()
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -207,7 +215,7 @@ void UBW_DebugBattleListStat_C::ExecuteUbergraph_BW_DebugBattleListStat(int Entr
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.OnMax__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBW_DebugBattleListStat_C::OnMax__DelegateSignature()
 {
@@ -224,7 +232,7 @@ void UBW_DebugBattleListStat_C::OnMax__DelegateSignature()
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.OnMinus__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBW_DebugBattleListStat_C::OnMinus__DelegateSignature()
 {
@@ -241,7 +249,7 @@ void UBW_DebugBattleListStat_C::OnMinus__DelegateSignature()
 
 
 // Function BW_DebugBattleListStat.BW_DebugBattleListStat_C.OnPlus__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBW_DebugBattleListStat_C::OnPlus__DelegateSignature()
 {

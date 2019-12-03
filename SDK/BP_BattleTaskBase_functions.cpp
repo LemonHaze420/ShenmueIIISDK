@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BattleTaskBase.BP_BattleTaskBase_C.GetAssetReferenceHolder
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UObject* ABP_BattleTaskBase_C::GetAssetReferenceHolder()
+class UObject* ABP_BattleTaskBase_C::STATIC_GetAssetReferenceHolder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleTaskBase.BP_BattleTaskBase_C.GetAssetReferenceHolder");
 
@@ -35,7 +35,7 @@ class UObject* ABP_BattleTaskBase_C::GetAssetReferenceHolder()
 
 
 // Function BP_BattleTaskBase.BP_BattleTaskBase_C.StartBattle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 
 void ABP_BattleTaskBase_C::StartBattle()
 {
@@ -52,7 +52,7 @@ void ABP_BattleTaskBase_C::StartBattle()
 
 
 // Function BP_BattleTaskBase.BP_BattleTaskBase_C.EndBattle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -76,7 +76,7 @@ void ABP_BattleTaskBase_C::EndBattle(TEnumAsByte<EBattleWinLoseResult> Result, b
 
 
 // Function BP_BattleTaskBase.BP_BattleTaskBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 
 void ABP_BattleTaskBase_C::UserConstructionScript()
 {
@@ -93,7 +93,7 @@ void ABP_BattleTaskBase_C::UserConstructionScript()
 
 
 // Function BP_BattleTaskBase.BP_BattleTaskBase_C.OnBattleResultDecided__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -113,7 +113,7 @@ void ABP_BattleTaskBase_C::OnBattleResultDecided__DelegateSignature(TEnumAsByte<
 
 
 // Function BP_BattleTaskBase.BP_BattleTaskBase_C.OnBattleLoaded__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BattleTaskBase_C::OnBattleLoaded__DelegateSignature()
 {
@@ -130,7 +130,7 @@ void ABP_BattleTaskBase_C::OnBattleLoaded__DelegateSignature()
 
 
 // Function BP_BattleTaskBase.BP_BattleTaskBase_C.OnBattleEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -142,6 +142,7 @@ void ABP_BattleTaskBase_C::OnBattleEnd__DelegateSignature(TEnumAsByte<EBattleWin
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

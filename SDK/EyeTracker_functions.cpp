@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class APlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UEyeTrackerFunctionLibrary::STATIC_SetEyeTrackedPlayer(class APlayerController* PlayerController)
+void UEyeTrackerFunctionLibrary::SetEyeTrackedPlayer(class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.SetEyeTrackedPlayer");
 
@@ -26,7 +26,6 @@ void UEyeTrackerFunctionLibrary::STATIC_SetEyeTrackedPlayer(class APlayerControl
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,18 +34,17 @@ void UEyeTrackerFunctionLibrary::STATIC_SetEyeTrackedPlayer(class APlayerControl
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEyeTrackerFunctionLibrary::STATIC_IsStereoGazeDataAvailable()
+bool UEyeTrackerFunctionLibrary::IsStereoGazeDataAvailable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsStereoGazeDataAvailable");
 
 	UEyeTrackerFunctionLibrary_IsStereoGazeDataAvailable_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,18 +55,17 @@ bool UEyeTrackerFunctionLibrary::STATIC_IsStereoGazeDataAvailable()
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.IsEyeTrackerConnected
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEyeTrackerFunctionLibrary::STATIC_IsEyeTrackerConnected()
+bool UEyeTrackerFunctionLibrary::IsEyeTrackerConnected()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.IsEyeTrackerConnected");
 
 	UEyeTrackerFunctionLibrary_IsEyeTrackerConnected_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,19 +76,18 @@ bool UEyeTrackerFunctionLibrary::STATIC_IsEyeTrackerConnected()
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.GetStereoGazeData
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FEyeTrackerStereoGazeData OutGazeData                    (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEyeTrackerFunctionLibrary::STATIC_GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData)
+bool UEyeTrackerFunctionLibrary::GetStereoGazeData(struct FEyeTrackerStereoGazeData* OutGazeData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetStereoGazeData");
 
 	UEyeTrackerFunctionLibrary_GetStereoGazeData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,19 +101,18 @@ bool UEyeTrackerFunctionLibrary::STATIC_GetStereoGazeData(struct FEyeTrackerSter
 
 
 // Function EyeTracker.EyeTrackerFunctionLibrary.GetGazeData
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FEyeTrackerGazeData     OutGazeData                    (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UEyeTrackerFunctionLibrary::STATIC_GetGazeData(struct FEyeTrackerGazeData* OutGazeData)
+bool UEyeTrackerFunctionLibrary::GetGazeData(struct FEyeTrackerGazeData* OutGazeData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function EyeTracker.EyeTrackerFunctionLibrary.GetGazeData");
 
 	UEyeTrackerFunctionLibrary_GetGazeData_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

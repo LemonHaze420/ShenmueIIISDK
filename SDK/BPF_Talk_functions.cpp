@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Talk.BPF_Talk_C.IsCharacterReadyAC
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  TargetCharacter                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bReady                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Talk_C::STATIC_IsCharacterReadyAC(class AActor* TargetCharacter, class UObject* __WorldContext, bool* bReady)
+void UBPF_Talk_C::IsCharacterReadyAC(class AActor* TargetCharacter, class UObject* __WorldContext, bool* bReady)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Talk.BPF_Talk_C.IsCharacterReadyAC");
 
@@ -40,7 +40,7 @@ void UBPF_Talk_C::STATIC_IsCharacterReadyAC(class AActor* TargetCharacter, class
 
 
 // Function BPF_Talk.BPF_Talk_C.IsCharacterReadyTalk
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  TargetCharacter                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  TalkTo                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -57,6 +57,7 @@ void UBPF_Talk_C::STATIC_IsCharacterReadyTalk(class AActor* TargetCharacter, cla
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,12 +69,12 @@ void UBPF_Talk_C::STATIC_IsCharacterReadyTalk(class AActor* TargetCharacter, cla
 
 
 // Function BPF_Talk.BPF_Talk_C.getS3TalkEventManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_TalkEventManager_C*  TalkEventManager               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Talk_C::STATIC_getS3TalkEventManager(class UObject* __WorldContext, class ABP_TalkEventManager_C** TalkEventManager)
+void UBPF_Talk_C::getS3TalkEventManager(class UObject* __WorldContext, class ABP_TalkEventManager_C** TalkEventManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Talk.BPF_Talk_C.getS3TalkEventManager");
 

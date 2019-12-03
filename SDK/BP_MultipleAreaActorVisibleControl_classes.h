@@ -29,16 +29,16 @@ public:
 
 
 	bool CheckOverlappingActor(class AActor* InActor);
-	void OnVisibleControlAreaEndOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex);
-	void OnVisibleControlAreaBeginOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex, bool InFromSweep, struct FHitResult* InHitResult);
+	void STATIC_OnVisibleControlAreaEndOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex);
+	void STATIC_OnVisibleControlAreaBeginOverlap(class UPrimitiveComponent* InOverlappedComponent, class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex, bool InFromSweep, struct FHitResult* InHitResult);
 	void FinalizeAdditionalVisibleControlArea();
 	void InitializeAdditionalVisibleControlArea();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void ExecuteUbergraph_BP_MultipleAreaActorVisibleControl(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MultipleAreaActorVisibleControl(int EntryPoint);
 };
 
 

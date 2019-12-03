@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_AutoFraming.BPC_AutoFraming_C.SetLookRotation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FRotator                StartRotation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPC_AutoFraming_C::SetLookRotation(const struct FRotator& StartRotation)
+void UBPC_AutoFraming_C::STATIC_SetLookRotation(const struct FRotator& StartRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFraming.BPC_AutoFraming_C.SetLookRotation");
 
@@ -26,6 +26,7 @@ void UBPC_AutoFraming_C::SetLookRotation(const struct FRotator& StartRotation)
 	params.StartRotation = StartRotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UBPC_AutoFraming_C::SetLookRotation(const struct FRotator& StartRotation)
 
 
 // Function BPC_AutoFraming.BPC_AutoFraming_C.SetTargetSocket
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   Socket                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          PanSpeed                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -48,6 +49,7 @@ void UBPC_AutoFraming_C::SetTargetSocket(const struct FName& Socket, float PanSp
 	params.PanSpeed = PanSpeed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,12 +58,12 @@ void UBPC_AutoFraming_C::SetTargetSocket(const struct FName& Socket, float PanSp
 
 
 // Function BPC_AutoFraming.BPC_AutoFraming_C.SetTargetActor
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          PanTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_AutoFraming_C::SetTargetActor(class AActor* Actor, float PanTime)
+void UBPC_AutoFraming_C::STATIC_SetTargetActor(class AActor* Actor, float PanTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFraming.BPC_AutoFraming_C.SetTargetActor");
 
@@ -78,9 +80,9 @@ void UBPC_AutoFraming_C::SetTargetActor(class AActor* Actor, float PanTime)
 
 
 // Function BPC_AutoFraming.BPC_AutoFraming_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_AutoFraming_C::ReceiveBeginPlay()
+void UBPC_AutoFraming_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFraming.BPC_AutoFraming_C.ReceiveBeginPlay");
 
@@ -95,9 +97,9 @@ void UBPC_AutoFraming_C::ReceiveBeginPlay()
 
 
 // Function BPC_AutoFraming.BPC_AutoFraming_C.Update
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_AutoFraming_C::Update()
+void UBPC_AutoFraming_C::STATIC_Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFraming.BPC_AutoFraming_C.Update");
 
@@ -112,11 +114,11 @@ void UBPC_AutoFraming_C::Update()
 
 
 // Function BPC_AutoFraming.BPC_AutoFraming_C.ExecuteUbergraph_BPC_AutoFraming
-// (HasDefaults)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_AutoFraming_C::ExecuteUbergraph_BPC_AutoFraming(int EntryPoint)
+void UBPC_AutoFraming_C::STATIC_ExecuteUbergraph_BPC_AutoFraming(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoFraming.BPC_AutoFraming_C.ExecuteUbergraph_BPC_AutoFraming");
 

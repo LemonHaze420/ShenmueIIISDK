@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraAC_LongShot_PFU_02.BP_TalkCameraAC_LongShot_PFU_02_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TalkCameraAC_LongShot_PFU_02_C::UserConstructionScript()
 {
@@ -23,6 +23,7 @@ void ABP_TalkCameraAC_LongShot_PFU_02_C::UserConstructionScript()
 	ABP_TalkCameraAC_LongShot_PFU_02_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_TalkCameraAC_LongShot_PFU_02_C::UserConstructionScript()
 
 
 // Function BP_TalkCameraAC_LongShot_PFU_02.BP_TalkCameraAC_LongShot_PFU_02_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Event, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCameraAC_LongShot_PFU_02_C::ReceiveBeginPlay()
 {
@@ -48,11 +49,11 @@ void ABP_TalkCameraAC_LongShot_PFU_02_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraAC_LongShot_PFU_02.BP_TalkCameraAC_LongShot_PFU_02_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraAC_LongShot_PFU_02_C::ReceiveTick(float DeltaSeconds)
+void ABP_TalkCameraAC_LongShot_PFU_02_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraAC_LongShot_PFU_02.BP_TalkCameraAC_LongShot_PFU_02_C.ReceiveTick");
 
@@ -68,7 +69,7 @@ void ABP_TalkCameraAC_LongShot_PFU_02_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraAC_LongShot_PFU_02.BP_TalkCameraAC_LongShot_PFU_02_C.ExecuteUbergraph_BP_TalkCameraAC_LongShot_PFU_02
-// ()
+// (Exec, Native, NetResponse, NetMulticast, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +81,7 @@ void ABP_TalkCameraAC_LongShot_PFU_02_C::ExecuteUbergraph_BP_TalkCameraAC_LongSh
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

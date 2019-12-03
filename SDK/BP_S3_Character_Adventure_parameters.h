@@ -183,7 +183,7 @@ struct ABP_S3_Character_Adventure_C_TalkPlayMotion_Params
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IsDenyInput
 struct ABP_S3_Character_Adventure_C_IsDenyInput_Params
 {
-	bool                                               deny;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               Deny;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.CheckInputAxis

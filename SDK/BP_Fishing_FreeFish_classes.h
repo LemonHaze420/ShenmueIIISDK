@@ -72,21 +72,21 @@ public:
 
 	void IsBiteMove(bool* ArgBite);
 	void Start_Bite();
-	void DebugDispArea();
+	void STATIC_DebugDispArea();
 	void Move_Bite();
-	void CheckBiteStart();
+	void STATIC_CheckBiteStart();
 	void CheckCenterPos(const struct FVector& ArgPos, struct FVector* RetPos);
 	void SetNextMoveVector();
 	void GetRandomCirclePos(const struct FVector& ArgCenterPos, float ArgRadius, struct FVector* RetPos);
 	void Start_ReflectionMove();
-	void Move_ReflectionMove();
+	void STATIC_Move_ReflectionMove();
 	void Init();
 	void StartInfinitySymbolMove(const struct FVector& ArgBasePos);
-	void Move_InfinitySymbol();
+	void STATIC_Move_InfinitySymbol();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_Fishing_FreeFish(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_Fishing_FreeFish(int EntryPoint);
 };
 
 

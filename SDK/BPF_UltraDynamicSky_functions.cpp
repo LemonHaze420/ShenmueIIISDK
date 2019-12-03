@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_UltraDynamicSky.BPF_UltraDynamicSky_C.GetUltraDynamicSky
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Event, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AUltra_Dynamic_Sky_BP_C* UDS                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_UltraDynamicSky_C::STATIC_GetUltraDynamicSky(class UObject* __WorldContext, class AUltra_Dynamic_Sky_BP_C** UDS)
+void UBPF_UltraDynamicSky_C::GetUltraDynamicSky(class UObject* __WorldContext, class AUltra_Dynamic_Sky_BP_C** UDS)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_UltraDynamicSky.BPF_UltraDynamicSky_C.GetUltraDynamicSky");
 
@@ -27,6 +27,7 @@ void UBPF_UltraDynamicSky_C::STATIC_GetUltraDynamicSky(class UObject* __WorldCon
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

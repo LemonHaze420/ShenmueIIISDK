@@ -42,18 +42,18 @@ public:
 
 
 	void SetAllValue(float MinRate, float MaxRate, float CurrentRate, float BasePercent, float MinLimitRate);
-	void SetValueText(float Rate, float PercentBase, float MinRate, class UTextBlock* Target);
+	void STATIC_SetValueText(float Rate, float PercentBase, float MinRate, class UTextBlock* Target);
 	void PreConstruct(bool IsDesignTime);
-	void BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
 	void ResetFocus(class APlayerController* PlayerController);
-	void BndEvt__S3Button_0_K2Node_ComponentBoundEvent_128_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__S3Button_1_K2Node_ComponentBoundEvent_145_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_128_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__S3Button_1_K2Node_ComponentBoundEvent_145_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_BW_DebugMiniGameListStat(int EntryPoint);
-	void OnMinusMax__DelegateSignature();
-	void OnPlusMax__DelegateSignature();
-	void OnMinusMin__DelegateSignature();
-	void OnPlusMin__DelegateSignature();
+	void STATIC_OnMinusMax__DelegateSignature();
+	void STATIC_OnPlusMax__DelegateSignature();
+	void STATIC_OnMinusMin__DelegateSignature();
+	void STATIC_OnPlusMin__DelegateSignature();
 };
 
 

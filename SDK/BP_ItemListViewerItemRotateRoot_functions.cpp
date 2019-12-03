@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.UpdRotate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
 
-void ABP_ItemListViewerItemRotateRoot_C::UpdRotate()
+void ABP_ItemListViewerItemRotateRoot_C::STATIC_UpdRotate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.UpdRotate");
 
@@ -31,7 +31,7 @@ void ABP_ItemListViewerItemRotateRoot_C::UpdRotate()
 
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.SetCalcSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Size                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +43,7 @@ void ABP_ItemListViewerItemRotateRoot_C::SetCalcSize(float Size)
 	params.Size = Size;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,13 +52,13 @@ void ABP_ItemListViewerItemRotateRoot_C::SetCalcSize(float Size)
 
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.ChangeMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UStaticMesh*             Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           SkelMesh                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimationAsset*         NewAnimToPlay                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ItemListViewerItemRotateRoot_C::ChangeMesh(class UStaticMesh* Mesh, class USkeletalMesh* SkelMesh, class UAnimationAsset* NewAnimToPlay)
+void ABP_ItemListViewerItemRotateRoot_C::STATIC_ChangeMesh(class UStaticMesh* Mesh, class USkeletalMesh* SkelMesh, class UAnimationAsset* NewAnimToPlay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.ChangeMesh");
 
@@ -75,7 +76,7 @@ void ABP_ItemListViewerItemRotateRoot_C::ChangeMesh(class UStaticMesh* Mesh, cla
 
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.SetBaseSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Size                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -95,15 +96,16 @@ void ABP_ItemListViewerItemRotateRoot_C::SetBaseSize(float Size)
 
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_ItemListViewerItemRotateRoot_C::UserConstructionScript()
+void ABP_ItemListViewerItemRotateRoot_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.UserConstructionScript");
 
 	ABP_ItemListViewerItemRotateRoot_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,7 +114,7 @@ void ABP_ItemListViewerItemRotateRoot_C::UserConstructionScript()
 
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_ItemListViewerItemRotateRoot_C::ReceiveBeginPlay()
 {
@@ -121,6 +123,7 @@ void ABP_ItemListViewerItemRotateRoot_C::ReceiveBeginPlay()
 	ABP_ItemListViewerItemRotateRoot_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -129,7 +132,7 @@ void ABP_ItemListViewerItemRotateRoot_C::ReceiveBeginPlay()
 
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -149,11 +152,11 @@ void ABP_ItemListViewerItemRotateRoot_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.ExecuteUbergraph_BP_ItemListViewerItemRotateRoot
-// (HasDefaults)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ItemListViewerItemRotateRoot_C::ExecuteUbergraph_BP_ItemListViewerItemRotateRoot(int EntryPoint)
+void ABP_ItemListViewerItemRotateRoot_C::STATIC_ExecuteUbergraph_BP_ItemListViewerItemRotateRoot(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemListViewerItemRotateRoot.BP_ItemListViewerItemRotateRoot_C.ExecuteUbergraph_BP_ItemListViewerItemRotateRoot");
 

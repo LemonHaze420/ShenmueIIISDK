@@ -31,16 +31,16 @@ public:
 	}
 
 
-	void SkipCurrentAutoMove();
+	void STATIC_SkipCurrentAutoMove();
 	void StopAutoMove();
-	void UnPause();
-	void Pause();
+	void STATIC_UnPause();
+	void STATIC_Pause();
 	void RequestAutoMove();
 	void UserConstructionScript();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void Initialize(class ABP_NPCLeadManager_C* LeadNPCAI, class ABP_S3_Character_Adventure_C* PlayerPawn);
 	void UnpossessAndDestroy();
-	void ExecuteUbergraph_BP_PlayerFollowAIController(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_PlayerFollowAIController(int EntryPoint);
 };
 
 

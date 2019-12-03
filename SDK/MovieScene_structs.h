@@ -82,15 +82,6 @@ enum class EUpdateClockSource : uint8_t
 };
 
 
-// Enum MovieScene.EMovieSceneEvaluationType
-enum class EMovieSceneEvaluationType : uint8_t
-{
-	EMovieSceneEvaluationType__FrameLocked = 0,
-	EMovieSceneEvaluationType__WithSubFrames = 1,
-	EMovieSceneEvaluationType__EMovieSceneEvaluationType_MAX = 2
-};
-
-
 // Enum MovieScene.EMovieScenePlayerStatus
 enum class EMovieScenePlayerStatus : uint8_t
 {
@@ -105,6 +96,16 @@ enum class EMovieScenePlayerStatus : uint8_t
 };
 
 
+// Enum MovieScene.EMovieSceneCompletionMode
+enum class EMovieSceneCompletionMode : uint8_t
+{
+	EMovieSceneCompletionMode__KeepState = 0,
+	EMovieSceneCompletionMode__RestoreState = 1,
+	EMovieSceneCompletionMode__ProjectDefault = 2,
+	EMovieSceneCompletionMode__EMovieSceneCompletionMode_MAX = 3
+};
+
+
 // Enum MovieScene.EMovieSceneObjectBindingSpace
 enum class EMovieSceneObjectBindingSpace : uint8_t
 {
@@ -114,13 +115,13 @@ enum class EMovieSceneObjectBindingSpace : uint8_t
 };
 
 
-// Enum MovieScene.EMovieSceneCompletionMode
-enum class EMovieSceneCompletionMode : uint8_t
+// Enum MovieScene.ESpawnOwnership
+enum class ESpawnOwnership : uint8_t
 {
-	EMovieSceneCompletionMode__KeepState = 0,
-	EMovieSceneCompletionMode__RestoreState = 1,
-	EMovieSceneCompletionMode__ProjectDefault = 2,
-	EMovieSceneCompletionMode__EMovieSceneCompletionMode_MAX = 3
+	ESpawnOwnership__InnerSequence = 0,
+	ESpawnOwnership__MasterSequence = 1,
+	ESpawnOwnership__External      = 2,
+	ESpawnOwnership__ESpawnOwnership_MAX = 3
 };
 
 
@@ -134,13 +135,12 @@ enum class ESectionEvaluationFlags : uint8_t
 };
 
 
-// Enum MovieScene.ESpawnOwnership
-enum class ESpawnOwnership : uint8_t
+// Enum MovieScene.EMovieSceneEvaluationType
+enum class EMovieSceneEvaluationType : uint8_t
 {
-	ESpawnOwnership__InnerSequence = 0,
-	ESpawnOwnership__MasterSequence = 1,
-	ESpawnOwnership__External      = 2,
-	ESpawnOwnership__ESpawnOwnership_MAX = 3
+	EMovieSceneEvaluationType__FrameLocked = 0,
+	EMovieSceneEvaluationType__WithSubFrames = 1,
+	EMovieSceneEvaluationType__EMovieSceneEvaluationType_MAX = 2
 };
 
 
@@ -737,13 +737,6 @@ struct FMovieScenePropertySectionTemplate : public FMovieSceneEvalTemplate
 	struct FMovieScenePropertySectionData              PropertyData;                                             // 0x0020(0x0028)
 };
 
-// ScriptStruct MovieScene.TestMovieSceneEvalTemplate
-// 0x0000 (0x0020 - 0x0020)
-struct FTestMovieSceneEvalTemplate : public FMovieSceneEvalTemplate
-{
-
-};
-
 // ScriptStruct MovieScene.SectionEvaluationData
 // 0x000C
 struct FSectionEvaluationData
@@ -752,6 +745,13 @@ struct FSectionEvaluationData
 	struct FFrameNumber                                ForcedTime;                                               // 0x0004(0x0004)
 	ESectionEvaluationFlags                            Flags;                                                    // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct MovieScene.TestMovieSceneEvalTemplate
+// 0x0000 (0x0020 - 0x0020)
+struct FTestMovieSceneEvalTemplate : public FMovieSceneEvalTemplate
+{
+
 };
 
 // ScriptStruct MovieScene.MovieSceneTrackImplementation

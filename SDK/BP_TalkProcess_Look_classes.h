@@ -30,9 +30,9 @@ public:
 	}
 
 
-	void Activate();
-	void Update(float DeltaTime);
-	void ExecuteUbergraph_BP_TalkProcess_Look(int EntryPoint);
+	void STATIC_Activate();
+	void STATIC_Update(float DeltaTime);
+	void STATIC_ExecuteUbergraph_BP_TalkProcess_Look(int EntryPoint);
 };
 
 

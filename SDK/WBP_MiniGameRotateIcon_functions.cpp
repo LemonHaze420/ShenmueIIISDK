@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.PlayShakeStickAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           isPlay                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,11 +34,11 @@ void UWBP_MiniGameRotateIcon_C::PlayShakeStickAnim(bool isPlay)
 
 
 // Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.SetVisibleIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameRotateIcon_C::SetVisibleIcon(bool Visible)
+void UWBP_MiniGameRotateIcon_C::STATIC_SetVisibleIcon(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.SetVisibleIcon");
 
@@ -46,6 +46,7 @@ void UWBP_MiniGameRotateIcon_C::SetVisibleIcon(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +55,7 @@ void UWBP_MiniGameRotateIcon_C::SetVisibleIcon(bool Visible)
 
 
 // Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.PlayFadeAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsAppear                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -74,7 +75,7 @@ void UWBP_MiniGameRotateIcon_C::PlayFadeAnim(bool IsAppear)
 
 
 // Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.PlayRotationAnim
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsRightRotate                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          PlaybackSpeed                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -90,6 +91,7 @@ void UWBP_MiniGameRotateIcon_C::PlayRotationAnim(bool IsRightRotate, float Playb
 	params.ShakeRotateIcon = ShakeRotateIcon;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,15 +100,16 @@ void UWBP_MiniGameRotateIcon_C::PlayRotationAnim(bool IsRightRotate, float Playb
 
 
 // Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 
-void UWBP_MiniGameRotateIcon_C::Construct()
+void UWBP_MiniGameRotateIcon_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.Construct");
 
 	UWBP_MiniGameRotateIcon_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,12 +118,12 @@ void UWBP_MiniGameRotateIcon_C::Construct()
 
 
 // Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameRotateIcon_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_MiniGameRotateIcon_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.Tick");
 
@@ -129,6 +132,7 @@ void UWBP_MiniGameRotateIcon_C::Tick(const struct FGeometry& MyGeometry, float I
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,11 +141,11 @@ void UWBP_MiniGameRotateIcon_C::Tick(const struct FGeometry& MyGeometry, float I
 
 
 // Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.ExecuteUbergraph_WBP_MiniGameRotateIcon
-// (HasDefaults)
+// (Net, NetReliable, Native, Static, NetMulticast, Private, Protected, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGameRotateIcon_C::ExecuteUbergraph_WBP_MiniGameRotateIcon(int EntryPoint)
+void UWBP_MiniGameRotateIcon_C::STATIC_ExecuteUbergraph_WBP_MiniGameRotateIcon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGameRotateIcon.WBP_MiniGameRotateIcon_C.ExecuteUbergraph_WBP_MiniGameRotateIcon");
 
@@ -149,6 +153,7 @@ void UWBP_MiniGameRotateIcon_C::ExecuteUbergraph_WBP_MiniGameRotateIcon(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

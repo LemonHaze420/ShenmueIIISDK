@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.GetUpFaceNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // int                            Num                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_MiniGame_UDYDice2_C::GetUpFaceNum(int* Num)
 	ABP_MiniGame_UDYDice2_C_GetUpFaceNum_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void ABP_MiniGame_UDYDice2_C::GetUpFaceNum(int* Num)
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.UpdateRollingSE
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport)
 
-void ABP_MiniGame_UDYDice2_C::UpdateRollingSE()
+void ABP_MiniGame_UDYDice2_C::STATIC_UpdateRollingSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.UpdateRollingSE");
 
 	ABP_MiniGame_UDYDice2_C_UpdateRollingSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,17 +55,18 @@ void ABP_MiniGame_UDYDice2_C::UpdateRollingSE()
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.IsHitSEPlaying
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_MiniGame_UDYDice2_C::IsHitSEPlaying()
+bool ABP_MiniGame_UDYDice2_C::STATIC_IsHitSEPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.IsHitSEPlaying");
 
 	ABP_MiniGame_UDYDice2_C_IsHitSEPlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +77,7 @@ bool ABP_MiniGame_UDYDice2_C::IsHitSEPlaying()
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.IsStopped
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bStop                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -96,7 +99,7 @@ void ABP_MiniGame_UDYDice2_C::IsStopped(bool* bStop)
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_MiniGame_UDYDice2_C::UserConstructionScript()
 {
@@ -105,6 +108,7 @@ void ABP_MiniGame_UDYDice2_C::UserConstructionScript()
 	ABP_MiniGame_UDYDice2_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,7 +117,7 @@ void ABP_MiniGame_UDYDice2_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 
 void ABP_MiniGame_UDYDice2_C::ReceiveBeginPlay()
 {
@@ -122,6 +126,7 @@ void ABP_MiniGame_UDYDice2_C::ReceiveBeginPlay()
 	ABP_MiniGame_UDYDice2_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,7 +135,7 @@ void ABP_MiniGame_UDYDice2_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -150,6 +155,7 @@ void ABP_MiniGame_UDYDice2_C::BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_Com
 	params.Hit = Hit;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,7 +164,7 @@ void ABP_MiniGame_UDYDice2_C::BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_Com
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,7 +184,7 @@ void ABP_MiniGame_UDYDice2_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.Throw
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FVector                 dir                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Power                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -192,6 +198,7 @@ void ABP_MiniGame_UDYDice2_C::Throw(const struct FVector& dir, float Power)
 	params.Power = Power;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,11 +207,11 @@ void ABP_MiniGame_UDYDice2_C::Throw(const struct FVector& dir, float Power)
 
 
 // Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.ExecuteUbergraph_BP_MiniGame_UDYDice2
-// (HasDefaults)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UDYDice2_C::ExecuteUbergraph_BP_MiniGame_UDYDice2(int EntryPoint)
+void ABP_MiniGame_UDYDice2_C::STATIC_ExecuteUbergraph_BP_MiniGame_UDYDice2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice2.BP_MiniGame_UDYDice2_C.ExecuteUbergraph_BP_MiniGame_UDYDice2");
 
@@ -212,6 +219,7 @@ void ABP_MiniGame_UDYDice2_C::ExecuteUbergraph_BP_MiniGame_UDYDice2(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

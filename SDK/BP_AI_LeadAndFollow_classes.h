@@ -28,7 +28,7 @@ public:
 
 	class US3PathFollowingComponent* GetS3PathFollowingComponent();
 	void UserConstructionScript();
-	void StartLead();
+	void STATIC_StartLead();
 	void StartFollow();
 	void ExecuteUbergraph_BP_AI_LeadAndFollow(int EntryPoint);
 };

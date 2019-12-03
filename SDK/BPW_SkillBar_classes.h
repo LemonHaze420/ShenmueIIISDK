@@ -44,14 +44,14 @@ public:
 	}
 
 
-	void SetTextOutlineSize(int Size);
-	void SetOutlineSize(class UTextBlock* Target, int Outline_Size);
+	void STATIC_SetTextOutlineSize(int Size);
+	void STATIC_SetOutlineSize(class UTextBlock* Target, int Outline_Size);
 	void SetGaugeRatio(float Ratio);
-	void LerpLevelUpDisplay(float N);
-	void SetLevelUpData(const struct FST_SparringResultLevelUpData& LevelUpData);
+	void STATIC_LerpLevelUpDisplay(float N);
+	void STATIC_SetLevelUpData(const struct FST_SparringResultLevelUpData& LevelUpData);
 	void ShowLevel(int Level, float NextLevelRatio, int Max);
 	void Construct();
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_BPW_SkillBar(int EntryPoint);
 	void OnAnimLevelUp__DelegateSignature();
 };

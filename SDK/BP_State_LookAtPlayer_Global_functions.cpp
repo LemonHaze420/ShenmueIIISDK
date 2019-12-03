@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtPlayer_Global.BP_State_LookAtPlayer_Global_C.StateUpdate
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtPlayer_Global_C::StateUpdate(float Delta, bool* bDummy)
+void UBP_State_LookAtPlayer_Global_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtPlayer_Global.BP_State_LookAtPlayer_Global_C.StateUpdate");
 

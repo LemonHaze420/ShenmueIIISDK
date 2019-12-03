@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_WorldTel.ABP_WorldTel_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_WorldTel_C::BlueprintUpdateAnimation(float DeltaTimeX)
+void UABP_WorldTel_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_WorldTel.ABP_WorldTel_C.BlueprintUpdateAnimation");
 
@@ -34,7 +34,7 @@ void UABP_WorldTel_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.TelEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::TelEnd()
 {
@@ -51,7 +51,7 @@ void UABP_WorldTel_C::TelEnd()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.TelStart
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::TelStart()
 {
@@ -68,7 +68,7 @@ void UABP_WorldTel_C::TelStart()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.AnimNotify_Talk_Start
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::AnimNotify_Talk_Start()
 {
@@ -85,7 +85,7 @@ void UABP_WorldTel_C::AnimNotify_Talk_Start()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.AnimNotify_CallStart
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::AnimNotify_CallStart()
 {
@@ -102,7 +102,7 @@ void UABP_WorldTel_C::AnimNotify_CallStart()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.AnimNotify_CallEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::AnimNotify_CallEnd()
 {
@@ -119,7 +119,7 @@ void UABP_WorldTel_C::AnimNotify_CallEnd()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.AnimNotify_Sound_Cloth01
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::AnimNotify_Sound_Cloth01()
 {
@@ -136,7 +136,7 @@ void UABP_WorldTel_C::AnimNotify_Sound_Cloth01()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.AnimNotify_Sound_Take
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::AnimNotify_Sound_Take()
 {
@@ -153,7 +153,7 @@ void UABP_WorldTel_C::AnimNotify_Sound_Take()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.AnimNotify_Sound_ButtonPush
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::AnimNotify_Sound_ButtonPush()
 {
@@ -170,7 +170,7 @@ void UABP_WorldTel_C::AnimNotify_Sound_ButtonPush()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.AnimNotify_Sound_end
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_WorldTel_C::AnimNotify_Sound_end()
 {
@@ -187,11 +187,11 @@ void UABP_WorldTel_C::AnimNotify_Sound_end()
 
 
 // Function ABP_WorldTel.ABP_WorldTel_C.ExecuteUbergraph_ABP_WorldTel
-// ()
+// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_WorldTel_C::ExecuteUbergraph_ABP_WorldTel(int EntryPoint)
+void UABP_WorldTel_C::STATIC_ExecuteUbergraph_ABP_WorldTel(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_WorldTel.ABP_WorldTel_C.ExecuteUbergraph_ABP_WorldTel");
 
@@ -199,6 +199,7 @@ void UABP_WorldTel_C::ExecuteUbergraph_ABP_WorldTel(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

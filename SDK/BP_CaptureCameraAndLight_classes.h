@@ -39,12 +39,12 @@ public:
 
 
 	void Init(int ItemNumber, class UBP_SaveData_ViewItem_C* GameData);
-	void GameDataUpdate();
+	void STATIC_GameDataUpdate();
 	void UpdateLightPosAndRot(float PosX, float PosY, float posZ, int LightNumber);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void Update(int ItemNo);
-	void ExecuteUbergraph_BP_CaptureCameraAndLight(int EntryPoint);
+	void STATIC_Update(int ItemNo);
+	void STATIC_ExecuteUbergraph_BP_CaptureCameraAndLight(int EntryPoint);
 };
 
 

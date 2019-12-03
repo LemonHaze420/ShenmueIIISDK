@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameStandaloneTalkScript.BPC_MiniGameStandaloneTalkScript_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UBPC_MiniGameStandaloneTalkScript_C::ReceiveBeginPlay()
+void UBPC_MiniGameStandaloneTalkScript_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameStandaloneTalkScript.BPC_MiniGameStandaloneTalkScript_C.ReceiveBeginPlay");
 
@@ -31,7 +31,7 @@ void UBPC_MiniGameStandaloneTalkScript_C::ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameStandaloneTalkScript.BPC_MiniGameStandaloneTalkScript_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -51,7 +51,7 @@ void UBPC_MiniGameStandaloneTalkScript_C::ReceiveEndPlay(TEnumAsByte<EEndPlayRea
 
 
 // Function BPC_MiniGameStandaloneTalkScript.BPC_MiniGameStandaloneTalkScript_C.ExecuteUbergraph_BPC_MiniGameStandaloneTalkScript
-// ()
+// (NetReliable, Exec, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

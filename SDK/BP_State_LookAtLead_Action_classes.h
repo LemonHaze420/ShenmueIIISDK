@@ -28,9 +28,9 @@ public:
 
 	void SetSpline(class USplineComponent* spline);
 	void LookAtSpline(bool bLookAt);
-	void StateExit(float Delta, bool* bProcessing);
+	void STATIC_StateExit(float Delta, bool* bProcessing);
 	void StateEnter(float Delta, bool* bProcessing);
-	void StateUpdate(float Delta, bool* bDummy);
+	void STATIC_StateUpdate(float Delta, bool* bDummy);
 };
 
 

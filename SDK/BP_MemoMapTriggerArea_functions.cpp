@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_MemoMapTriggerArea_C::UserConstructionScript()
+void ABP_MemoMapTriggerArea_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_MemoMapTriggerArea_C::UserConstructionScript()
 
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -40,7 +40,7 @@ void ABP_MemoMapTriggerArea_C::UserConstructionScript()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MemoMapTriggerArea_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -53,6 +53,7 @@ void ABP_MemoMapTriggerArea_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_Compo
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +62,7 @@ void ABP_MemoMapTriggerArea_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_Compo
 
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -70,7 +71,7 @@ void ABP_MemoMapTriggerArea_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_Compo
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MemoMapTriggerArea_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_MemoMapTriggerArea_C::STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -83,6 +84,7 @@ void ABP_MemoMapTriggerArea_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_Componen
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,11 +93,11 @@ void ABP_MemoMapTriggerArea_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_Componen
 
 
 // Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.ExecuteUbergraph_BP_MemoMapTriggerArea
-// (HasDefaults)
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MemoMapTriggerArea_C::ExecuteUbergraph_BP_MemoMapTriggerArea(int EntryPoint)
+void ABP_MemoMapTriggerArea_C::STATIC_ExecuteUbergraph_BP_MemoMapTriggerArea(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MemoMapTriggerArea.BP_MemoMapTriggerArea_C.ExecuteUbergraph_BP_MemoMapTriggerArea");
 

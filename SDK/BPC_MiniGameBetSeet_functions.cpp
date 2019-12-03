@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.GetRenderTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class UTextureRenderTarget2D*  RefRenderTarget                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameBetSeet_C::GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget)
+void UBPC_MiniGameBetSeet_C::STATIC_GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.GetRenderTarget");
 
 	UBPC_MiniGameBetSeet_C_GetRenderTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void UBPC_MiniGameBetSeet_C::GetRenderTarget(class UTextureRenderTarget2D** RefR
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.InitializeRenderTarget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            Width                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Height                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -58,11 +59,11 @@ void UBPC_MiniGameBetSeet_C::InitializeRenderTarget(int Width, int Height)
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameBetSeet_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_MiniGameBetSeet_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveEndPlay");
 
@@ -70,6 +71,7 @@ void UBPC_MiniGameBetSeet_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,9 +80,9 @@ void UBPC_MiniGameBetSeet_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 
-void UBPC_MiniGameBetSeet_C::ReceiveBeginPlay()
+void UBPC_MiniGameBetSeet_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ReceiveBeginPlay");
 
@@ -95,11 +97,11 @@ void UBPC_MiniGameBetSeet_C::ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ExecuteUbergraph_BPC_MiniGameBetSeet
-// ()
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameBetSeet_C::ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint)
+void UBPC_MiniGameBetSeet_C::STATIC_ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameBetSeet.BPC_MiniGameBetSeet_C.ExecuteUbergraph_BPC_MiniGameBetSeet");
 

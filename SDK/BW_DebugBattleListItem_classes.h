@@ -39,7 +39,7 @@ public:
 	void Construct();
 	void BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature();
 	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	void ExecuteUbergraph_BW_DebugBattleListItem(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BW_DebugBattleListItem(int EntryPoint);
 	void OnFocused__DelegateSignature(class US3Button* Button);
 	void OnStartBattle__DelegateSignature();
 };

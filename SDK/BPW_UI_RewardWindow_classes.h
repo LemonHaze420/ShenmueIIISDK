@@ -32,9 +32,9 @@ public:
 	}
 
 
-	void GetLabel(struct FName* TextLabel);
-	void Construct();
-	void BndEvt__NewAnimation_1_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_GetLabel(struct FName* TextLabel);
+	void STATIC_Construct();
+	void STATIC_BndEvt__NewAnimation_1_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void ExecuteUbergraph_BPW_UI_RewardWindow(int EntryPoint);
 	void ED_FinishAnim__DelegateSignature();
 };

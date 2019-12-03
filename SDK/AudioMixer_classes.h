@@ -53,31 +53,6 @@ public:
 };
 
 
-// Class AudioMixer.AudioMixerBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UAudioMixerBlueprintLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.AudioMixerBlueprintLibrary");
-		return ptr;
-	}
-
-
-	class USoundWave* STATIC_StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const struct FString& Name, const struct FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite);
-	void STATIC_StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord);
-	void STATIC_SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex, bool bBypassed);
-	void STATIC_RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex);
-	void STATIC_RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
-	int STATIC_GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain);
-	void STATIC_ClearMasterSubmixEffects(class UObject* WorldContextObject);
-	void STATIC_AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry);
-	void STATIC_AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
-};
-
-
 // Class AudioMixer.SubmixEffectDynamicsProcessorPreset
 // 0x0078 (0x00B8 - 0x0040)
 class USubmixEffectDynamicsProcessorPreset : public USoundEffectSubmixPreset
@@ -94,6 +69,47 @@ public:
 
 
 	void SetSettings(const struct FSubmixEffectDynamicsProcessorSettings& InSettings);
+};
+
+
+// Class AudioMixer.AudioMixerBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UAudioMixerBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AudioMixer.AudioMixerBlueprintLibrary");
+		return ptr;
+	}
+
+
+	class USoundWave* StopRecordingOutput(class UObject* WorldContextObject, EAudioRecordingExportType ExportType, const struct FString& Name, const struct FString& Path, class USoundSubmix* SubmixToRecord, class USoundWave* ExistingSoundWaveToOverwrite);
+	void StartRecordingOutput(class UObject* WorldContextObject, float ExpectedDuration, class USoundSubmix* SubmixToRecord);
+	void SetBypassSourceEffectChainEntry(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex, bool bBypassed);
+	void RemoveSourceEffectFromPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, int EntryIndex);
+	void RemoveMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
+	int GetNumberOfEntriesInSourceEffectChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain);
+	void ClearMasterSubmixEffects(class UObject* WorldContextObject);
+	void AddSourceEffectToPresetChain(class UObject* WorldContextObject, class USoundEffectSourcePresetChain* PresetChain, const struct FSourceEffectChainEntry& Entry);
+	void AddMasterSubmixEffect(class UObject* WorldContextObject, class USoundEffectSubmixPreset* SubmixEffectPreset);
+};
+
+
+// Class AudioMixer.SynthSound
+// 0x0020 (0x0270 - 0x0250)
+class USynthSound : public USoundWaveProcedural
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0250(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class AudioMixer.SynthSound");
+		return ptr;
+	}
+
 };
 
 
@@ -133,22 +149,6 @@ public:
 
 	void SetSettingsWithReverbEffect(class UReverbEffect* InReverbEffect, float WetLevel);
 	void SetSettings(const struct FSubmixEffectReverbSettings& InSettings);
-};
-
-
-// Class AudioMixer.SynthSound
-// 0x0020 (0x0270 - 0x0250)
-class USynthSound : public USoundWaveProcedural
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0250(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class AudioMixer.SynthSound");
-		return ptr;
-	}
-
 };
 
 

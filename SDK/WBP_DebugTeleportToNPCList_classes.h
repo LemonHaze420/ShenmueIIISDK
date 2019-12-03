@@ -39,8 +39,8 @@ public:
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void BuildTeleportToNPCList();
 	void BndEvt__NPCName_K2Node_ComponentBoundEvent_50_OnEditableTextBoxChangedEvent__DelegateSignature(const struct FText& Text);
-	void Construct();
-	void BndEvt__ModeButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_Construct();
+	void STATIC_BndEvt__ModeButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_WBP_DebugTeleportToNPCList(int EntryPoint);
 };
 

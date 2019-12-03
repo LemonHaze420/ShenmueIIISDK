@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SplineNavArea.BP_SplineNavArea_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_SplineNavArea_C::UserConstructionScript()
+void ABP_SplineNavArea_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SplineNavArea.BP_SplineNavArea_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_SplineNavArea_C::UserConstructionScript()
 
 
 // Function BP_SplineNavArea.BP_SplineNavArea_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_SplineNavArea_C::ReceiveBeginPlay()
 {
@@ -40,6 +40,7 @@ void ABP_SplineNavArea_C::ReceiveBeginPlay()
 	ABP_SplineNavArea_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +49,7 @@ void ABP_SplineNavArea_C::ReceiveBeginPlay()
 
 
 // Function BP_SplineNavArea.BP_SplineNavArea_C.ExecuteUbergraph_BP_SplineNavArea
-// ()
+// (Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

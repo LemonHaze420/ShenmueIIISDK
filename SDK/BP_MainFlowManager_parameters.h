@@ -90,13 +90,13 @@ struct ABP_MainFlowManager_C_FindEventMan_Params
 // Function BP_MainFlowManager.BP_MainFlowManager_C.CheckIntervalMessage
 struct ABP_MainFlowManager_C_CheckIntervalMessage_Params
 {
-	float                                              DeltaSEcond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSecond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.ReservationInquiryMessage
 struct ABP_MainFlowManager_C_ReservationInquiryMessage_Params
 {
-	float                                              IntervalTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              IntervalTIme;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MainFlowManager.BP_MainFlowManager_C.MessageControlWorkSub

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_S3CategoryButtonWidget.BPF_S3CategoryButtonWidget_C.BPF_SetButtonTextures
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UTexture*                LightTex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -22,7 +22,7 @@ namespace SDK
 // class UTexture*                GlowTex                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_S3CategoryButtonWidget_C::STATIC_BPF_SetButtonTextures(class UImage* Image, class UTexture* LightTex, class UTexture* DarkTex, class UTexture* GlowTex, class UObject* __WorldContext)
+void UBPF_S3CategoryButtonWidget_C::BPF_SetButtonTextures(class UImage* Image, class UTexture* LightTex, class UTexture* DarkTex, class UTexture* GlowTex, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_S3CategoryButtonWidget.BPF_S3CategoryButtonWidget_C.BPF_SetButtonTextures");
 
@@ -34,6 +34,7 @@ void UBPF_S3CategoryButtonWidget_C::STATIC_BPF_SetButtonTextures(class UImage* I
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,14 +43,14 @@ void UBPF_S3CategoryButtonWidget_C::STATIC_BPF_SetButtonTextures(class UImage* I
 
 
 // Function BPF_S3CategoryButtonWidget.BPF_S3CategoryButtonWidget_C.BPF_SetButtonSelected
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           bSelected                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_S3CategoryButtonWidget_C::STATIC_BPF_SetButtonSelected(class UImage* Image, class UTextBlock* Text, bool bSelected, class UObject* __WorldContext)
+void UBPF_S3CategoryButtonWidget_C::BPF_SetButtonSelected(class UImage* Image, class UTextBlock* Text, bool bSelected, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_S3CategoryButtonWidget.BPF_S3CategoryButtonWidget_C.BPF_SetButtonSelected");
 
@@ -60,6 +61,7 @@ void UBPF_S3CategoryButtonWidget_C::STATIC_BPF_SetButtonSelected(class UImage* I
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +70,7 @@ void UBPF_S3CategoryButtonWidget_C::STATIC_BPF_SetButtonSelected(class UImage* I
 
 
 // Function BPF_S3CategoryButtonWidget.BPF_S3CategoryButtonWidget_C.BPF_EnableButtonCursor
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UImage*                  Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)

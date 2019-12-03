@@ -49,7 +49,7 @@ public:
 	void PushCancelButton();
 	void LeanRightStick(float AxisValue);
 	void PushRightStick();
-	void ExecuteUbergraph_BP_UI_ConfigManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_UI_ConfigManager(int EntryPoint);
 };
 
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectFullCameras.TalkCam_SelectFullCameras_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -30,6 +30,7 @@ void UTalkCam_SelectFullCameras_C::ReceiveTickAI(class AAIController* OwnerContr
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,11 +39,11 @@ void UTalkCam_SelectFullCameras_C::ReceiveTickAI(class AAIController* OwnerContr
 
 
 // Function TalkCam_SelectFullCameras.TalkCam_SelectFullCameras_C.ExecuteUbergraph_TalkCam_SelectFullCameras
-// (HasDefaults)
+// (Net, NetRequest, Native, Static, NetMulticast, Public, Delegate, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SelectFullCameras_C::ExecuteUbergraph_TalkCam_SelectFullCameras(int EntryPoint)
+void UTalkCam_SelectFullCameras_C::STATIC_ExecuteUbergraph_TalkCam_SelectFullCameras(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SelectFullCameras.TalkCam_SelectFullCameras_C.ExecuteUbergraph_TalkCam_SelectFullCameras");
 
@@ -50,6 +51,7 @@ void UTalkCam_SelectFullCameras_C::ExecuteUbergraph_TalkCam_SelectFullCameras(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

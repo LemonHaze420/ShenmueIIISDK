@@ -32,11 +32,11 @@ public:
 	}
 
 
-	void Editor_Fixup();
+	void STATIC_Editor_Fixup();
 	void SetBlockDistance(float Distance);
-	void CalculateClosestDirection(const struct FVector& SourceLocation, const struct FVector& SourceDirection, float LookAheadAmount, struct FVector* OutDirection);
-	void LookAhead(const struct FVector& CurrentLocation, float DistanceAhead, struct FVector* OutLocation);
-	void FindTangent(const struct FVector& WorldLocation, struct FVector* Tangent);
+	void STATIC_CalculateClosestDirection(const struct FVector& SourceLocation, const struct FVector& SourceDirection, float LookAheadAmount, struct FVector* OutDirection);
+	void STATIC_LookAhead(const struct FVector& CurrentLocation, float DistanceAhead, struct FVector* OutLocation);
+	void STATIC_FindTangent(const struct FVector& WorldLocation, struct FVector* Tangent);
 	void UserConstructionScript();
 };
 

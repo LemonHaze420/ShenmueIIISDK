@@ -39,14 +39,14 @@ public:
 	void SetForbid(class AActor* Actor, bool Fobid);
 	void CheckVisible();
 	void Hide(class AActor* Actor);
-	void Show(class AActor* Actor);
+	void STATIC_Show(class AActor* Actor);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void CreateWidget();
-	void DestroyWidget();
-	void FadeOutFinished();
-	void ExecuteUbergraph_BP_money_status(int EntryPoint);
+	void STATIC_CreateWidget();
+	void STATIC_DestroyWidget();
+	void STATIC_FadeOutFinished();
+	void STATIC_ExecuteUbergraph_BP_money_status(int EntryPoint);
 };
 
 

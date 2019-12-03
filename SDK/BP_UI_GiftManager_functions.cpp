@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.CheckResult
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_UseItemResult>  Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ConsumeFlag                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -39,11 +39,11 @@ void ABP_UI_GiftManager_C::CheckResult(TEnumAsByte<EN_UseItemResult>* Result, bo
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.GiftChangePage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GiftManager_C::GiftChangePage(int Value)
+void ABP_UI_GiftManager_C::STATIC_GiftChangePage(int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.GiftChangePage");
 
@@ -59,9 +59,9 @@ void ABP_UI_GiftManager_C::GiftChangePage(int Value)
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeCanUseItemIDList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_UI_GiftManager_C::MakeCanUseItemIDList()
+void ABP_UI_GiftManager_C::STATIC_MakeCanUseItemIDList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeCanUseItemIDList");
 
@@ -76,15 +76,16 @@ void ABP_UI_GiftManager_C::MakeCanUseItemIDList()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.InitItemDataLength
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_GiftManager_C::InitItemDataLength()
+void ABP_UI_GiftManager_C::STATIC_InitItemDataLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.InitItemDataLength");
 
 	ABP_UI_GiftManager_C_InitItemDataLength_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,16 +93,17 @@ void ABP_UI_GiftManager_C::InitItemDataLength()
 }
 
 
-// Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeItemIDList
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeItemIdList
+// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_UI_GiftManager_C::MakeItemIDList()
+void ABP_UI_GiftManager_C::STATIC_MakeItemIdList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeItemIDList");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeItemIdList");
 
-	ABP_UI_GiftManager_C_MakeItemIDList_Params params;
+	ABP_UI_GiftManager_C_MakeItemIdList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,9 +112,9 @@ void ABP_UI_GiftManager_C::MakeItemIDList()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_UI_GiftManager_C::UserConstructionScript()
+void ABP_UI_GiftManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.UserConstructionScript");
 
@@ -127,7 +129,7 @@ void ABP_UI_GiftManager_C::UserConstructionScript()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer)
 
 void ABP_UI_GiftManager_C::ReceiveBeginPlay()
 {
@@ -136,6 +138,7 @@ void ABP_UI_GiftManager_C::ReceiveBeginPlay()
 	ABP_UI_GiftManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,7 +147,7 @@ void ABP_UI_GiftManager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.CheckVisibleAddButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_GiftManager_C::CheckVisibleAddButton()
 {
@@ -161,7 +164,7 @@ void ABP_UI_GiftManager_C::CheckVisibleAddButton()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.CheckVisibleSubButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_GiftManager_C::CheckVisibleSubButton()
 {
@@ -178,7 +181,7 @@ void ABP_UI_GiftManager_C::CheckVisibleSubButton()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.PushAddSubButtonAfter
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_GiftManager_C::PushAddSubButtonAfter()
 {
@@ -195,11 +198,11 @@ void ABP_UI_GiftManager_C::PushAddSubButtonAfter()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.PushCheckDialog
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_UI_Button>      PushButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GiftManager_C::PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton)
+void ABP_UI_GiftManager_C::STATIC_PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.PushCheckDialog");
 
@@ -215,7 +218,7 @@ void ABP_UI_GiftManager_C::PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton)
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.BeforDestroy
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_GiftManager_C::BeforDestroy()
 {
@@ -232,7 +235,7 @@ void ABP_UI_GiftManager_C::BeforDestroy()
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.SetShopName
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ShopID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -252,11 +255,11 @@ void ABP_UI_GiftManager_C::SetShopName(int ShopID)
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.ExecuteUbergraph_BP_UI_GiftManager
-// (HasDefaults)
+// (Net, NetResponse, Static, Public, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GiftManager_C::ExecuteUbergraph_BP_UI_GiftManager(int EntryPoint)
+void ABP_UI_GiftManager_C::STATIC_ExecuteUbergraph_BP_UI_GiftManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.ExecuteUbergraph_BP_UI_GiftManager");
 
@@ -272,16 +275,16 @@ void ABP_UI_GiftManager_C::ExecuteUbergraph_BP_UI_GiftManager(int EntryPoint)
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.INFO_SuccessItem__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// int                            ItemList                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// int                            itemList                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GiftManager_C::INFO_SuccessItem__DelegateSignature(int ItemList)
+void ABP_UI_GiftManager_C::STATIC_INFO_SuccessItem__DelegateSignature(int itemList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.INFO_SuccessItem__DelegateSignature");
 
 	ABP_UI_GiftManager_C_INFO_SuccessItem__DelegateSignature_Params params;
-	params.ItemList = ItemList;
+	params.itemList = itemList;
 
 	auto flags = fn->FunctionFlags;
 
@@ -292,11 +295,11 @@ void ABP_UI_GiftManager_C::INFO_SuccessItem__DelegateSignature(int ItemList)
 
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.ED_UseItem__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_UseItemResult>  Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_GiftManager_C::ED_UseItem__DelegateSignature(TEnumAsByte<EN_UseItemResult> Result)
+void ABP_UI_GiftManager_C::STATIC_ED_UseItem__DelegateSignature(TEnumAsByte<EN_UseItemResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_GiftManager.BP_UI_GiftManager_C.ED_UseItem__DelegateSignature");
 
@@ -304,6 +307,7 @@ void ABP_UI_GiftManager_C::ED_UseItem__DelegateSignature(TEnumAsByte<EN_UseItemR
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

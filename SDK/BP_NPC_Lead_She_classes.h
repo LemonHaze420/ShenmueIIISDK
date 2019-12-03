@@ -26,8 +26,8 @@ public:
 	}
 
 
-	bool CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Building);
-	void UserConstructionScript();
+	bool STATIC_CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Building);
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_NPC_Lead_She(int EntryPoint);
 };

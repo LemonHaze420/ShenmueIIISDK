@@ -75,29 +75,29 @@ public:
 
 
 	bool IconNeedsAnimUpdate(const struct FS3DetectActionParam& Action, class Uwgt_S3DetectButtonIcon_C* Widget);
-	bool IconNeedsUpdate(const struct FS3DetectActionParam& Action, class Uwgt_S3DetectButtonIcon_C* Widget);
-	class Uwgt_S3DetectButtonIcon_C* ShowNewIcon_UpdateOnly(int ButtonIndex, struct FS3DetectActionParam* Param);
+	bool STATIC_IconNeedsUpdate(const struct FS3DetectActionParam& Action, class Uwgt_S3DetectButtonIcon_C* Widget);
+	class Uwgt_S3DetectButtonIcon_C* STATIC_ShowNewIcon_UpdateOnly(int ButtonIndex, struct FS3DetectActionParam* Param);
 	void GetPlatformButton();
-	void EndNewInfoAnimation();
+	void STATIC_EndNewInfoAnimation();
 	void StartNewInfoAnimation(ES3ActionIconType Type);
 	void GetButtonIcon(int ButtonIndex, class Uwgt_S3DetectButtonIcon_C** Icon);
 	void BlinkHelpIcon(bool End);
 	void SetCharaName(const struct FString& CharaName, const struct FString& AlphabetName, bool Visible);
-	void CheckShowIconBaseAll();
-	void CreateIcons();
-	void ShowNewIcon(int Index, struct FS3DetectActionParam* Param);
+	void STATIC_CheckShowIconBaseAll();
+	void STATIC_CreateIcons();
+	void STATIC_ShowNewIcon(int Index, struct FS3DetectActionParam* Param);
 	void FadeOutIcon(class Uwgt_S3DetectButtonIcon_C* Icon, bool Decide);
 	void DecideAction(int DecideIndex, class AActor** ReturnActor, ES3ActionIconType* ReturnType);
 	void UpdateIcon(int ButtonIndex, bool InDecide, struct FS3DetectActionParam* Param, bool* Change);
-	void UpdateIconAll(TArray<struct FS3DetectActionParam>* InParams);
-	void AdjustCenter(class UPanelSlot* PanelSlot);
-	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void BndEvt__NewHelpAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void BndEvt__NewHelpFade_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void BndEvt__NewHelpFlash_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void BndEvt__NewHelpAnim_35_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void ExecuteUbergraph_wgt_S3DetectAction(int EntryPoint);
+	void STATIC_UpdateIconAll(TArray<struct FS3DetectActionParam>* InParams);
+	void STATIC_AdjustCenter(class UPanelSlot* PanelSlot);
+	void STATIC_Construct();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_BndEvt__NewHelpAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_BndEvt__NewHelpFade_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_BndEvt__NewHelpFlash_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_BndEvt__NewHelpAnim_35_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_ExecuteUbergraph_wgt_S3DetectAction(int EntryPoint);
 	void ED_NewHelpAnim_Finish__DelegateSignature();
 };
 

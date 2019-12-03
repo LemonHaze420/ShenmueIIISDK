@@ -181,25 +181,6 @@ public:
 };
 
 
-// Class DatasmithContent.DatasmithContentBlueprintLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UDatasmithContentBlueprintLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithContentBlueprintLibrary");
-		return ptr;
-	}
-
-
-	struct FString STATIC_GetDatasmithUserDataValueForKey(class UObject* Object, const struct FName& Key);
-	void STATIC_GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const struct FString& StringToMatch, TArray<struct FName>* OutKeys, TArray<struct FString>* OutValues);
-	class UDatasmithAssetUserData* STATIC_GetDatasmithUserData(class UObject* Object);
-};
-
-
 // Class DatasmithContent.DatasmithImportOptions
 // 0x0060 (0x0088 - 0x0028)
 class UDatasmithImportOptions : public UObject
@@ -228,31 +209,22 @@ public:
 };
 
 
-// Class DatasmithContent.DatasmithLightComponentTemplate
-// 0x0038 (0x0060 - 0x0028)
-class UDatasmithLightComponentTemplate : public UDatasmithObjectTemplate
+// Class DatasmithContent.DatasmithContentBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UDatasmithContentBlueprintLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	unsigned char                                      bVisible : 1;                                             // 0x0028(0x0001)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
-	unsigned char                                      CastShadows : 1;                                          // 0x002C(0x0001)
-	unsigned char                                      bUseTemperature : 1;                                      // 0x002C(0x0001)
-	unsigned char                                      bUseIESBrightness : 1;                                    // 0x002C(0x0001)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
-	float                                              Intensity;                                                // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              Temperature;                                              // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              IESBrightnessScale;                                       // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                LightColor;                                               // 0x003C(0x0010) (IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          LightFunctionMaterial;                                    // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UTextureLightProfile*                        IESTexture;                                               // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithLightComponentTemplate");
+		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithContentBlueprintLibrary");
 		return ptr;
 	}
 
+
+	struct FString GetDatasmithUserDataValueForKey(class UObject* Object, const struct FName& Key);
+	void GetDatasmithUserDataKeysAndValuesForValue(class UObject* Object, const struct FString& StringToMatch, TArray<struct FName>* OutKeys, TArray<struct FString>* OutValues);
+	class UDatasmithAssetUserData* GetDatasmithUserData(class UObject* Object);
 };
 
 
@@ -291,23 +263,6 @@ public:
 };
 
 
-// Class DatasmithContent.DatasmithSceneActor
-// 0x0058 (0x0380 - 0x0328)
-class ADatasmithSceneActor : public AActor
-{
-public:
-	class UDatasmithScene*                             Scene;                                                    // 0x0328(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0330(0x0050) UNKNOWN PROPERTY: MapProperty DatasmithContent.DatasmithSceneActor.RelatedActors
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneActor");
-		return ptr;
-	}
-
-};
-
-
 // Class DatasmithContent.DatasmithSceneComponentTemplate
 // 0x0048 (0x0070 - 0x0028)
 class UDatasmithSceneComponentTemplate : public UDatasmithObjectTemplate
@@ -328,19 +283,45 @@ public:
 };
 
 
-// Class DatasmithContent.DatasmithSkyLightComponentTemplate
-// 0x0010 (0x0038 - 0x0028)
-class UDatasmithSkyLightComponentTemplate : public UDatasmithObjectTemplate
+// Class DatasmithContent.DatasmithLightComponentTemplate
+// 0x0038 (0x0060 - 0x0028)
+class UDatasmithLightComponentTemplate : public UDatasmithObjectTemplate
 {
 public:
-	TEnumAsByte<ESkyLightSourceType>                   SourceType;                                               // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bVisible : 1;                                             // 0x0028(0x0001)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
-	int                                                CubemapResolution;                                        // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
-	class UTextureCube*                                Cubemap;                                                  // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      CastShadows : 1;                                          // 0x002C(0x0001)
+	unsigned char                                      bUseTemperature : 1;                                      // 0x002C(0x0001)
+	unsigned char                                      bUseIESBrightness : 1;                                    // 0x002C(0x0001)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
+	float                                              Intensity;                                                // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              Temperature;                                              // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              IESBrightnessScale;                                       // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FLinearColor                                LightColor;                                               // 0x003C(0x0010) (IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          LightFunctionMaterial;                                    // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UTextureLightProfile*                        IESTexture;                                               // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithSkyLightComponentTemplate");
+		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithLightComponentTemplate");
+		return ptr;
+	}
+
+};
+
+
+// Class DatasmithContent.DatasmithSceneActor
+// 0x0058 (0x0380 - 0x0328)
+class ADatasmithSceneActor : public AActor
+{
+public:
+	class UDatasmithScene*                             Scene;                                                    // 0x0328(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0330(0x0050) UNKNOWN PROPERTY: MapProperty DatasmithContent.DatasmithSceneActor.RelatedActors
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithSceneActor");
 		return ptr;
 	}
 
@@ -396,6 +377,25 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithStaticMeshTemplate");
+		return ptr;
+	}
+
+};
+
+
+// Class DatasmithContent.DatasmithSkyLightComponentTemplate
+// 0x0010 (0x0038 - 0x0028)
+class UDatasmithSkyLightComponentTemplate : public UDatasmithObjectTemplate
+{
+public:
+	TEnumAsByte<ESkyLightSourceType>                   SourceType;                                               // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
+	int                                                CubemapResolution;                                        // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
+	class UTextureCube*                                Cubemap;                                                  // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class DatasmithContent.DatasmithSkyLightComponentTemplate");
 		return ptr;
 	}
 

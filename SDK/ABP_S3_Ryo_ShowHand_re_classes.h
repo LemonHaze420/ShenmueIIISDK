@@ -54,8 +54,8 @@ public:
 	}
 
 
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF();
-	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF();
+	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
 	void ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re(int EntryPoint);
 };
 

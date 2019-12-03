@@ -35,19 +35,19 @@ public:
 	}
 
 
-	void DisableSoftwareCursor();
-	void OnMouseUp();
-	void OnMouseDown();
+	void STATIC_DisableSoftwareCursor();
+	void STATIC_OnMouseUp();
+	void STATIC_OnMouseDown();
 	void UpdateSoftwareCursor(struct FVector2D* MouseScreenSpace, struct FVector2D* VirtualAxii, bool* JoystickOn, bool* SetMousePosition);
-	bool CanTrapMouse();
+	bool STATIC_CanTrapMouse();
 	struct FVector2D ConstrainViewportMousePosition(const struct FVector2D& Location);
-	void EnableVirtualJoystick(bool Enable);
-	void SetMouseCursorProperties(bool EnableWalkMode);
-	void GetConstrainRect(struct FVector2D* Min, struct FVector2D* Max);
+	void STATIC_EnableVirtualJoystick(bool Enable);
+	void STATIC_SetMouseCursorProperties(bool EnableWalkMode);
+	void STATIC_GetConstrainRect(struct FVector2D* Min, struct FVector2D* Max);
 	struct FEventReply ConstrainAbsoluteMousePosition(const struct FVector2D& Location, struct FEventReply* EventReply);
-	void Construct();
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_BPW_AdventureCursorWindow(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_AdventureCursorWindow(int EntryPoint);
 };
 
 

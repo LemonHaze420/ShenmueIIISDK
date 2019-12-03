@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.GetBPLinkGacha
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetServer, NetClient)
 // Parameters:
 // class ABP_LinkGacha_C*         BPLinkGacha                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,9 +36,9 @@ void ABP_LinkGacha_Input_C::GetBPLinkGacha(class ABP_LinkGacha_C** BPLinkGacha)
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_LinkGacha_Input_C::UserConstructionScript()
+void ABP_LinkGacha_Input_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.UserConstructionScript");
 
@@ -53,7 +53,7 @@ void ABP_LinkGacha_Input_C::UserConstructionScript()
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -65,6 +65,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +74,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (Exec, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -85,6 +86,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,7 +95,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_1
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_10
-// (BlueprintEvent)
+// (Exec, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -105,6 +107,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_10(
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,7 +116,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_10(
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_9
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -125,6 +128,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_9(
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,7 +137,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_9(
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -145,6 +149,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_8(const st
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,7 +158,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_8(const st
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.InpActEvt_MG_Right_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -165,6 +170,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_7(const s
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,7 +179,7 @@ void ABP_LinkGacha_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_7(const s
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.DecideDetectAction
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -185,6 +191,7 @@ void ABP_LinkGacha_Input_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,7 +200,7 @@ void ABP_LinkGacha_Input_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_LinkGacha_Input.BP_LinkGacha_Input_C.ExecuteUbergraph_BP_LinkGacha_Input
-// (HasDefaults)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -205,6 +212,7 @@ void ABP_LinkGacha_Input_C::ExecuteUbergraph_BP_LinkGacha_Input(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

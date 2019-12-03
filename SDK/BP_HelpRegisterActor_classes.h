@@ -31,13 +31,13 @@ public:
 
 	ES3HelpPriority GetHelpPriority();
 	struct FName GetHelpName();
-	bool IsActivateHelp();
-	bool RegisterHelp(ES3HelpRegisterTiming Timing);
+	bool STATIC_IsActivateHelp();
+	bool STATIC_RegisterHelp(ES3HelpRegisterTiming Timing);
 	bool UnregisterHelp(ES3HelpRegisterTiming Timing);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_HelpRegisterActor(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_HelpRegisterActor(int EntryPoint);
 };
 
 

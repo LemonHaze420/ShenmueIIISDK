@@ -205,8 +205,8 @@ struct UBPC_S3_TalkComponent_C_GetFingerPointingParameter_Params
 	float                                              AnimBlendTime;                                            // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.getActionType
-struct UBPC_S3_TalkComponent_C_getActionType_Params
+// Function BPC_S3_TalkComponent.BPC_S3_TalkComponent_C.GetActionType
+struct UBPC_S3_TalkComponent_C_GetActionType_Params
 {
 	bool                                               Sight;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FS3DetectActionParam>                Params;                                                   // (Parm, OutParm, ZeroConstructor)

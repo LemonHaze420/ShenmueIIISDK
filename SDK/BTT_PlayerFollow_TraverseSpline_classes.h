@@ -29,9 +29,9 @@ public:
 
 
 	void Finish(bool Result);
-	bool IsPlayerInsideSpline(float Buffer);
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	bool STATIC_IsPlayerInsideSpline(float Buffer);
+	void STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_BTT_PlayerFollow_TraverseSpline(int EntryPoint);
 };

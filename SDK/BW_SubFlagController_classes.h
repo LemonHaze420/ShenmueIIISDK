@@ -41,13 +41,13 @@ public:
 	}
 
 
-	void UpdateAllWidgetFlagIds();
-	void WidgetIdxToFlagIdx(int WidgetIdx, int* FlagIdx);
-	void UpdateWidgetValue(class UBW_IntegerProperty_C* Widget, int Index);
-	void SetTargetFlagValue(int Index, int flag);
-	int GetTargetFlagValue(int FlagIdx);
-	void UpdateWidgetFlagId(class UBW_IntegerProperty_C* Widget, int WidgetIdx);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_UpdateAllWidgetFlagIds();
+	void STATIC_WidgetIdxToFlagIdx(int WidgetIdx, int* FlagIdx);
+	void STATIC_UpdateWidgetValue(class UBW_IntegerProperty_C* Widget, int Index);
+	void STATIC_SetTargetFlagValue(int Index, int flag);
+	int STATIC_GetTargetFlagValue(int FlagIdx);
+	void STATIC_UpdateWidgetFlagId(class UBW_IntegerProperty_C* Widget, int WidgetIdx);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ChangePage();
 	void OnFlagPropertyChanged(int Value, class UBW_IntegerProperty_C* Context);
 	void SetInitialFocus();

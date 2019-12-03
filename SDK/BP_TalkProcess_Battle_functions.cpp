@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.EnableGameTime
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Battle_C::EnableGameTime(bool bEnabled)
+void UBP_TalkProcess_Battle_C::STATIC_EnableGameTime(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.EnableGameTime");
 
@@ -34,7 +34,7 @@ void UBP_TalkProcess_Battle_C::EnableGameTime(bool bEnabled)
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.ResettingLookAtTargetActors
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, Delegate, NetServer, NetClient, Const)
 
 void UBP_TalkProcess_Battle_C::ResettingLookAtTargetActors()
 {
@@ -51,7 +51,7 @@ void UBP_TalkProcess_Battle_C::ResettingLookAtTargetActors()
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.CachedLookAtTargetActors
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_TalkProcess_Battle_C::CachedLookAtTargetActors()
 {
@@ -60,6 +60,7 @@ void UBP_TalkProcess_Battle_C::CachedLookAtTargetActors()
 	UBP_TalkProcess_Battle_C_CachedLookAtTargetActors_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +69,7 @@ void UBP_TalkProcess_Battle_C::CachedLookAtTargetActors()
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.OnLoaded_F2C0EA96403370D7C0981B823EF8717B
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -88,7 +89,7 @@ void UBP_TalkProcess_Battle_C::OnLoaded_F2C0EA96403370D7C0981B823EF8717B(class U
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_TalkProcess_Battle_C::Activate()
 {
@@ -105,11 +106,11 @@ void UBP_TalkProcess_Battle_C::Activate()
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.OnEndBattle
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Battle_C::OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result)
+void UBP_TalkProcess_Battle_C::STATIC_OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.OnEndBattle");
 
@@ -125,11 +126,11 @@ void UBP_TalkProcess_Battle_C::OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Res
 
 
 // Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.ExecuteUbergraph_BP_TalkProcess_Battle
-// (HasDefaults)
+// (Net, NetReliable, Event, Static, NetMulticast, Delegate, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Battle_C::ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint)
+void UBP_TalkProcess_Battle_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Battle.BP_TalkProcess_Battle_C.ExecuteUbergraph_BP_TalkProcess_Battle");
 

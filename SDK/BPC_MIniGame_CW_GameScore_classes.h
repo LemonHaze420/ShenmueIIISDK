@@ -30,7 +30,7 @@ public:
 
 
 	void GetRewardPrice(int WoodNumber, int* Price);
-	void ExecuteUbergraph_BPC_MIniGame_CW_GameScore(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_MIniGame_CW_GameScore(int EntryPoint);
 };
 
 

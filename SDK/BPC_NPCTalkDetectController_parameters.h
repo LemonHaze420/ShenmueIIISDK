@@ -65,8 +65,8 @@ struct UBPC_NPCTalkDetectController_C_IsTalking_Params
 	bool                                               bTalking;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.getActionType
-struct UBPC_NPCTalkDetectController_C_getActionType_Params
+// Function BPC_NPCTalkDetectController.BPC_NPCTalkDetectController_C.GetActionType
+struct UBPC_NPCTalkDetectController_C_GetActionType_Params
 {
 	TArray<struct FS3DetectActionParam>                Params;                                                   // (Parm, OutParm, ZeroConstructor)
 };

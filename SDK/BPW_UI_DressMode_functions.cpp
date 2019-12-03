@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.CheckVisibleArrow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void UBPW_UI_DressMode_C::CheckVisibleArrow()
 {
@@ -31,9 +31,9 @@ void UBPW_UI_DressMode_C::CheckVisibleArrow()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.ResetCloth
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UBPW_UI_DressMode_C::ResetCloth()
+void UBPW_UI_DressMode_C::STATIC_ResetCloth()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.ResetCloth");
 
@@ -48,7 +48,7 @@ void UBPW_UI_DressMode_C::ResetCloth()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.ResetRotation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPW_UI_DressMode_C::ResetRotation()
 {
@@ -65,18 +65,19 @@ void UBPW_UI_DressMode_C::ResetRotation()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.RotationModel
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// float                          Axis_Value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          axis_value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_C::RotationModel(float Axis_Value)
+void UBPW_UI_DressMode_C::STATIC_RotationModel(float axis_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.RotationModel");
 
 	UBPW_UI_DressMode_C_RotationModel_Params params;
-	params.Axis_Value = Axis_Value;
+	params.axis_value = axis_value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,11 +86,11 @@ void UBPW_UI_DressMode_C::RotationModel(float Axis_Value)
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.UpdateCharaCloth
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Apply                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_C::UpdateCharaCloth(bool Apply)
+void UBPW_UI_DressMode_C::STATIC_UpdateCharaCloth(bool Apply)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.UpdateCharaCloth");
 
@@ -97,6 +98,7 @@ void UBPW_UI_DressMode_C::UpdateCharaCloth(bool Apply)
 	params.Apply = Apply;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,9 +107,9 @@ void UBPW_UI_DressMode_C::UpdateCharaCloth(bool Apply)
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.Fitting
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent)
 
-void UBPW_UI_DressMode_C::Fitting()
+void UBPW_UI_DressMode_C::STATIC_Fitting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.Fitting");
 
@@ -122,17 +124,18 @@ void UBPW_UI_DressMode_C::Fitting()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.MakeFittingInfo
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FST_ClothesFittingInfo> FittingInfo                    (Parm, OutParm, ZeroConstructor)
 
-void UBPW_UI_DressMode_C::MakeFittingInfo(TArray<struct FST_ClothesFittingInfo>* FittingInfo)
+void UBPW_UI_DressMode_C::STATIC_MakeFittingInfo(TArray<struct FST_ClothesFittingInfo>* FittingInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.MakeFittingInfo");
 
 	UBPW_UI_DressMode_C_MakeFittingInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,9 +147,9 @@ void UBPW_UI_DressMode_C::MakeFittingInfo(TArray<struct FST_ClothesFittingInfo>*
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.InitCloth
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPW_UI_DressMode_C::InitCloth()
+void UBPW_UI_DressMode_C::STATIC_InitCloth()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.InitCloth");
 
@@ -161,7 +164,7 @@ void UBPW_UI_DressMode_C::InitCloth()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.MakeList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void UBPW_UI_DressMode_C::MakeList()
 {
@@ -178,7 +181,7 @@ void UBPW_UI_DressMode_C::MakeList()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.SetCaptureCharaClothing
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_DressMode_C::SetCaptureCharaClothing()
 {
@@ -195,9 +198,9 @@ void UBPW_UI_DressMode_C::SetCaptureCharaClothing()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.PushDownButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, HasOutParms, DLLImport, BlueprintEvent)
 
-void UBPW_UI_DressMode_C::PushDownButton()
+void UBPW_UI_DressMode_C::STATIC_PushDownButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.PushDownButton");
 
@@ -212,7 +215,7 @@ void UBPW_UI_DressMode_C::PushDownButton()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.ChangeClothing
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBPW_UI_DressMode_C::ChangeClothing()
 {
@@ -229,7 +232,7 @@ void UBPW_UI_DressMode_C::ChangeClothing()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.PushRightLeftCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -241,6 +244,7 @@ void UBPW_UI_DressMode_C::PushRightLeftCursor(int Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -249,15 +253,16 @@ void UBPW_UI_DressMode_C::PushRightLeftCursor(int Value)
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.PushRightButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_UI_DressMode_C::PushRightButton()
+void UBPW_UI_DressMode_C::STATIC_PushRightButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.PushRightButton");
 
 	UBPW_UI_DressMode_C_PushRightButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,11 +271,11 @@ void UBPW_UI_DressMode_C::PushRightButton()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.PushUpDownCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_C::PushUpDownCursor(int Value)
+void UBPW_UI_DressMode_C::STATIC_PushUpDownCursor(int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.PushUpDownCursor");
 
@@ -286,7 +291,7 @@ void UBPW_UI_DressMode_C::PushUpDownCursor(int Value)
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBPW_UI_DressMode_C::Construct()
 {
@@ -295,6 +300,7 @@ void UBPW_UI_DressMode_C::Construct()
 	UBPW_UI_DressMode_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -303,12 +309,12 @@ void UBPW_UI_DressMode_C::Construct()
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.ClothChanged
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_C::ClothChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName)
+void UBPW_UI_DressMode_C::STATIC_ClothChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.ClothChanged");
 
@@ -325,7 +331,7 @@ void UBPW_UI_DressMode_C::ClothChanged(const TScriptInterface<class US3ClothInte
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.BndEvt__FadeAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBPW_UI_DressMode_C::BndEvt__FadeAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
@@ -334,6 +340,7 @@ void UBPW_UI_DressMode_C::BndEvt__FadeAnim_K2Node_ComponentBoundEvent_0_OnWidget
 	UBPW_UI_DressMode_C_BndEvt__FadeAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -342,11 +349,11 @@ void UBPW_UI_DressMode_C::BndEvt__FadeAnim_K2Node_ComponentBoundEvent_0_OnWidget
 
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.ExecuteUbergraph_BPW_UI_DressMode
-// (HasDefaults)
+// (NetReliable, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_C::ExecuteUbergraph_BPW_UI_DressMode(int EntryPoint)
+void UBPW_UI_DressMode_C::STATIC_ExecuteUbergraph_BPW_UI_DressMode(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode.BPW_UI_DressMode_C.ExecuteUbergraph_BPW_UI_DressMode");
 

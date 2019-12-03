@@ -70,13 +70,13 @@ public:
 
 	void SetDiscription(int Index);
 	void ChangeSelectButtonIcon();
-	void PushLeftRightIndex(int Index, int Add);
-	void InitChoiceList(int Index, TArray<struct FString>* ChoiceList);
-	void SetPage(int page);
+	void STATIC_PushLeftRightIndex(int Index, int Add);
+	void STATIC_InitChoiceList(int Index, TArray<struct FString>* ChoiceList);
+	void STATIC_SetPage(int page);
 	void InitDescription(TArray<struct FString>* DescriptionList);
-	void SetConfigName(TArray<struct FString>* NameList);
-	void FocusButtonIndex(int Index);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_SetConfigName(TArray<struct FString>* NameList);
+	void STATIC_FocusButtonIndex(int Index);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void Construct();
 	void ExecuteUbergraph_BPW_UI_Config(int EntryPoint);
 };

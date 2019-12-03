@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_SWU_01.BP_TalkCamera_SWU_01_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkCamera_SWU_01_C::UserConstructionScript()
+void ABP_TalkCamera_SWU_01_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SWU_01.BP_TalkCamera_SWU_01_C.UserConstructionScript");
 
 	ABP_TalkCamera_SWU_01_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void ABP_TalkCamera_SWU_01_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_SWU_01.BP_TalkCamera_SWU_01_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, NetResponse, Static, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkCamera_SWU_01_C::ReceiveBeginPlay()
+void ABP_TalkCamera_SWU_01_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SWU_01.BP_TalkCamera_SWU_01_C.ReceiveBeginPlay");
 
@@ -48,11 +49,11 @@ void ABP_TalkCamera_SWU_01_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_SWU_01.BP_TalkCamera_SWU_01_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCamera_SWU_01_C::ReceiveTick(float DeltaSeconds)
+void ABP_TalkCamera_SWU_01_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SWU_01.BP_TalkCamera_SWU_01_C.ReceiveTick");
 
@@ -60,6 +61,7 @@ void ABP_TalkCamera_SWU_01_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +70,7 @@ void ABP_TalkCamera_SWU_01_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_SWU_01.BP_TalkCamera_SWU_01_C.ExecuteUbergraph_BP_TalkCamera_SWU_01
-// ()
+// (Net, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +82,7 @@ void ABP_TalkCamera_SWU_01_C::ExecuteUbergraph_BP_TalkCamera_SWU_01(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

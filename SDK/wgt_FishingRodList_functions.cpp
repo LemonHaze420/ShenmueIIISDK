@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.DestroyCaptureItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, Delegate, NetServer)
 
-void Uwgt_FishingRodList_C::DestroyCaptureItem()
+void Uwgt_FishingRodList_C::STATIC_DestroyCaptureItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_FishingRodList.wgt_FishingRodList_C.DestroyCaptureItem");
 
@@ -31,12 +31,12 @@ void Uwgt_FishingRodList_C::DestroyCaptureItem()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.SetItemCapture
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 RodId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 LureID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void Uwgt_FishingRodList_C::SetItemCapture(const struct FString& RodId, const struct FString& LureID)
+void Uwgt_FishingRodList_C::STATIC_SetItemCapture(const struct FString& RodId, const struct FString& LureID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_FishingRodList.wgt_FishingRodList_C.SetItemCapture");
 
@@ -45,6 +45,7 @@ void Uwgt_FishingRodList_C::SetItemCapture(const struct FString& RodId, const st
 	params.LureID = LureID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +54,7 @@ void Uwgt_FishingRodList_C::SetItemCapture(const struct FString& RodId, const st
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.SetPayButtonVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -73,7 +74,7 @@ void Uwgt_FishingRodList_C::SetPayButtonVisible(bool Visible)
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.PagePrev
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, Delegate, NetServer)
 
 void Uwgt_FishingRodList_C::PagePrev()
 {
@@ -82,6 +83,7 @@ void Uwgt_FishingRodList_C::PagePrev()
 	Uwgt_FishingRodList_C_PagePrev_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +92,7 @@ void Uwgt_FishingRodList_C::PagePrev()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.PageNext
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, Delegate, NetServer)
 
 void Uwgt_FishingRodList_C::PageNext()
 {
@@ -99,6 +101,7 @@ void Uwgt_FishingRodList_C::PageNext()
 	Uwgt_FishingRodList_C_PageNext_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,9 +110,9 @@ void Uwgt_FishingRodList_C::PageNext()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.ResetDialog
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void Uwgt_FishingRodList_C::ResetDialog()
+void Uwgt_FishingRodList_C::STATIC_ResetDialog()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_FishingRodList.wgt_FishingRodList_C.ResetDialog");
 
@@ -124,9 +127,9 @@ void Uwgt_FishingRodList_C::ResetDialog()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.PushDialogLeft
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void Uwgt_FishingRodList_C::PushDialogLeft()
+void Uwgt_FishingRodList_C::STATIC_PushDialogLeft()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_FishingRodList.wgt_FishingRodList_C.PushDialogLeft");
 
@@ -141,9 +144,9 @@ void Uwgt_FishingRodList_C::PushDialogLeft()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.PushDialogRight
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void Uwgt_FishingRodList_C::PushDialogRight()
+void Uwgt_FishingRodList_C::STATIC_PushDialogRight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_FishingRodList.wgt_FishingRodList_C.PushDialogRight");
 
@@ -158,7 +161,7 @@ void Uwgt_FishingRodList_C::PushDialogRight()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void Uwgt_FishingRodList_C::Construct()
 {
@@ -175,7 +178,7 @@ void Uwgt_FishingRodList_C::Construct()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Native, Event, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -189,6 +192,7 @@ void Uwgt_FishingRodList_C::Tick(const struct FGeometry& MyGeometry, float InDel
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -197,7 +201,7 @@ void Uwgt_FishingRodList_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.FinishMeshLoad
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Public, Delegate, NetServer)
 
 void Uwgt_FishingRodList_C::FinishMeshLoad()
 {
@@ -214,11 +218,11 @@ void Uwgt_FishingRodList_C::FinishMeshLoad()
 
 
 // Function wgt_FishingRodList.wgt_FishingRodList_C.ExecuteUbergraph_wgt_FishingRodList
-// (HasDefaults)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_FishingRodList_C::ExecuteUbergraph_wgt_FishingRodList(int EntryPoint)
+void Uwgt_FishingRodList_C::STATIC_ExecuteUbergraph_wgt_FishingRodList(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_FishingRodList.wgt_FishingRodList_C.ExecuteUbergraph_wgt_FishingRodList");
 

@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.InitAdventureDebugMenus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_S3CharacterBase_C*   Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_CheatManagerBase_C::InitAdventureDebugMenus(class ABP_S3CharacterBase_C* Character)
+void UBP_CheatManagerBase_C::STATIC_InitAdventureDebugMenus(class ABP_S3CharacterBase_C* Character)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.InitAdventureDebugMenus");
 
@@ -34,9 +34,9 @@ void UBP_CheatManagerBase_C::InitAdventureDebugMenus(class ABP_S3CharacterBase_C
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_O
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_O()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_O()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_O");
 
@@ -51,9 +51,9 @@ void UBP_CheatManagerBase_C::OnInputKey_O()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_Cmd_Insert
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_Cmd_Insert()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_Cmd_Insert()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_Cmd_Insert");
 
@@ -68,9 +68,9 @@ void UBP_CheatManagerBase_C::OnInputKey_Cmd_Insert()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdShiftPageUp
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_CmdShiftPageUp()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_CmdShiftPageUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdShiftPageUp");
 
@@ -85,9 +85,9 @@ void UBP_CheatManagerBase_C::OnInputKey_CmdShiftPageUp()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdShiftPageDown
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_CmdShiftPageDown()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_CmdShiftPageDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdShiftPageDown");
 
@@ -102,9 +102,9 @@ void UBP_CheatManagerBase_C::OnInputKey_CmdShiftPageDown()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdPageUp
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_CmdPageUp()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_CmdPageUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdPageUp");
 
@@ -119,9 +119,9 @@ void UBP_CheatManagerBase_C::OnInputKey_CmdPageUp()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdPageDown
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_CmdPageDown()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_CmdPageDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdPageDown");
 
@@ -136,9 +136,9 @@ void UBP_CheatManagerBase_C::OnInputKey_CmdPageDown()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdAltPageUp
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_CmdAltPageUp()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_CmdAltPageUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdAltPageUp");
 
@@ -153,9 +153,9 @@ void UBP_CheatManagerBase_C::OnInputKey_CmdAltPageUp()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdAltPageDown
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_CmdAltPageDown()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_CmdAltPageDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdAltPageDown");
 
@@ -170,9 +170,9 @@ void UBP_CheatManagerBase_C::OnInputKey_CmdAltPageDown()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdAltInsert
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_CmdAltInsert()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_CmdAltInsert()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_CmdAltInsert");
 
@@ -187,7 +187,7 @@ void UBP_CheatManagerBase_C::OnInputKey_CmdAltInsert()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_3
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInput_3()
 {
@@ -196,6 +196,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_3()
 	UBP_CheatManagerBase_C_OnKeyInput_3_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,15 +205,16 @@ void UBP_CheatManagerBase_C::OnKeyInput_3()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_P
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_P()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_P()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_P");
 
 	UBP_CheatManagerBase_C_OnInputKey_P_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,7 +223,7 @@ void UBP_CheatManagerBase_C::OnInputKey_P()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_2
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInput_2()
 {
@@ -230,6 +232,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_2()
 	UBP_CheatManagerBase_C_OnKeyInput_2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -238,9 +241,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_2()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num+
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_Num_Plus()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_Num_Plus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num+");
 
@@ -255,9 +258,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_Num_Plus()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num-
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_Num_Minus()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_Num_Minus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Num-");
 
@@ -272,9 +275,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_Num_Minus()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_L
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_L()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_L()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_L");
 
@@ -289,9 +292,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_L()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_Alt+Shift L
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_Alt_Shift_L()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_Alt_Shift_L()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_Alt+Shift L");
 
@@ -306,9 +309,9 @@ void UBP_CheatManagerBase_C::OnInputKey_Alt_Shift_L()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_Alt L
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputKey_Alt_L()
+void UBP_CheatManagerBase_C::STATIC_OnInputKey_Alt_L()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_Alt L");
 
@@ -323,9 +326,9 @@ void UBP_CheatManagerBase_C::OnInputKey_Alt_L()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Pause
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_Pause()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Pause");
 
@@ -340,9 +343,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_Pause()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_F9Ctrl
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_F9Ctrl()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_F9Ctrl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_F9Ctrl");
 
@@ -357,9 +360,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_F9Ctrl()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_F10
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_F10()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_F10()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_F10");
 
@@ -374,9 +377,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_F10()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputAction_DebugView
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInputAction_DebugView()
+void UBP_CheatManagerBase_C::STATIC_OnInputAction_DebugView()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputAction_DebugView");
 
@@ -391,9 +394,9 @@ void UBP_CheatManagerBase_C::OnInputAction_DebugView()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInput_RightShoulder
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInput_RightShoulder()
+void UBP_CheatManagerBase_C::STATIC_OnInput_RightShoulder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInput_RightShoulder");
 
@@ -408,9 +411,9 @@ void UBP_CheatManagerBase_C::OnInput_RightShoulder()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInput_LeftShoulder
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInput_LeftShoulder()
+void UBP_CheatManagerBase_C::STATIC_OnInput_LeftShoulder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInput_LeftShoulder");
 
@@ -425,9 +428,9 @@ void UBP_CheatManagerBase_C::OnInput_LeftShoulder()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInput_DpadLeft
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnInput_DpadLeft()
+void UBP_CheatManagerBase_C::STATIC_OnInput_DpadLeft()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInput_DpadLeft");
 
@@ -442,9 +445,9 @@ void UBP_CheatManagerBase_C::OnInput_DpadLeft()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_E
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_E()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_E");
 
@@ -459,9 +462,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_E()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Q
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_Q()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_Q()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Q");
 
@@ -476,9 +479,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_Q()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_ShiftQ
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_ShiftQ()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_ShiftQ()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_ShiftQ");
 
@@ -493,9 +496,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_ShiftQ()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_T
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_T()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_T()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_T");
 
@@ -510,9 +513,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_T()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_U
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_U()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_U()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_U");
 
@@ -527,9 +530,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_U()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_SpecialRight
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_SpecialRight()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_SpecialRight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_SpecialRight");
 
@@ -544,7 +547,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_SpecialRight()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Y
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInput_Y()
 {
@@ -553,6 +556,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_Y()
 	UBP_CheatManagerBase_C_OnKeyInput_Y_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -561,9 +565,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_Y()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_CtrlY
-// (BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_CtrlY()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_CtrlY()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_CtrlY");
 
@@ -578,7 +582,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_CtrlY()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnInputKey_V
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnInputKey_V()
 {
@@ -587,6 +591,7 @@ void UBP_CheatManagerBase_C::OnInputKey_V()
 	UBP_CheatManagerBase_C_OnInputKey_V_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -595,9 +600,9 @@ void UBP_CheatManagerBase_C::OnInputKey_V()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_F
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_F()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_F()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_F");
 
@@ -612,7 +617,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_F()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_Z
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInput_Z()
 {
@@ -621,6 +626,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_Z()
 	UBP_CheatManagerBase_C_OnKeyInput_Z_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -629,7 +635,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_Z()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_AltB
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInput_AltB()
 {
@@ -638,6 +644,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_AltB()
 	UBP_CheatManagerBase_C_OnKeyInput_AltB_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -646,9 +653,9 @@ void UBP_CheatManagerBase_C::OnKeyInput_AltB()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_D
-// (BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_D()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_D()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_D");
 
@@ -663,7 +670,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_D()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.ReceiveInitCheatManager
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::ReceiveInitCheatManager()
 {
@@ -672,6 +679,7 @@ void UBP_CheatManagerBase_C::ReceiveInitCheatManager()
 	UBP_CheatManagerBase_C_ReceiveInitCheatManager_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -680,7 +688,7 @@ void UBP_CheatManagerBase_C::ReceiveInitCheatManager()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInputSemicolon
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInputSemicolon()
 {
@@ -689,6 +697,7 @@ void UBP_CheatManagerBase_C::OnKeyInputSemicolon()
 	UBP_CheatManagerBase_C_OnKeyInputSemicolon_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -697,9 +706,9 @@ void UBP_CheatManagerBase_C::OnKeyInputSemicolon()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.DelayRemoveAllWidgets
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::DelayRemoveAllWidgets()
+void UBP_CheatManagerBase_C::STATIC_DelayRemoveAllWidgets()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.DelayRemoveAllWidgets");
 
@@ -714,9 +723,9 @@ void UBP_CheatManagerBase_C::DelayRemoveAllWidgets()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_ShiftT
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_CheatManagerBase_C::OnKeyInput_ShiftT()
+void UBP_CheatManagerBase_C::STATIC_OnKeyInput_ShiftT()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_ShiftT");
 
@@ -731,7 +740,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_ShiftT()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_AltT
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInput_AltT()
 {
@@ -740,6 +749,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_AltT()
 	UBP_CheatManagerBase_C_OnKeyInput_AltT_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -748,7 +758,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_AltT()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.OnKeyInput_CtrlT
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_CheatManagerBase_C::OnKeyInput_CtrlT()
 {
@@ -757,6 +767,7 @@ void UBP_CheatManagerBase_C::OnKeyInput_CtrlT()
 	UBP_CheatManagerBase_C_OnKeyInput_CtrlT_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -765,11 +776,11 @@ void UBP_CheatManagerBase_C::OnKeyInput_CtrlT()
 
 
 // Function BP_CheatManagerBase.BP_CheatManagerBase_C.ExecuteUbergraph_BP_CheatManagerBase
-// ()
+// (Net, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_CheatManagerBase_C::ExecuteUbergraph_BP_CheatManagerBase(int EntryPoint)
+void UBP_CheatManagerBase_C::STATIC_ExecuteUbergraph_BP_CheatManagerBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CheatManagerBase.BP_CheatManagerBase_C.ExecuteUbergraph_BP_CheatManagerBase");
 

@@ -39,15 +39,15 @@ public:
 	}
 
 
-	void UpdateFishBaseLocation(const struct FVector& BaseLocation);
-	void CheckBite(bool* ArgBite);
+	void STATIC_UpdateFishBaseLocation(const struct FVector& BaseLocation);
+	void STATIC_CheckBite(bool* ArgBite);
 	void MoveEnd();
-	void MoveStart(int ArgType, int ArgFishNum, const struct FVector& ArgCenterPos, float BiteWait);
+	void STATIC_MoveStart(int ArgType, int ArgFishNum, const struct FVector& ArgCenterPos, float BiteWait);
 	void Init();
-	void StartInfinitySymbolMove(const struct FVector& ArgBasePos);
-	void Move_InfinitySymbol();
+	void STATIC_StartInfinitySymbolMove(const struct FVector& ArgBasePos);
+	void STATIC_Move_InfinitySymbol();
 	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_Fishing_FishShadow(int EntryPoint);
 };
 

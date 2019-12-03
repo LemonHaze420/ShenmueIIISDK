@@ -54,6 +54,14 @@ struct FNodeHierarchyData
 	TMap<struct FName, int>                            NodeNameToIndexMapping;                                   // 0x0020(0x0050) (ZeroConstructor)
 };
 
+// ScriptStruct AnimationCore.NodeHierarchyWithUserData
+// 0x0078
+struct FNodeHierarchyWithUserData
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	struct FNodeHierarchyData                          Hierarchy;                                                // 0x0008(0x0070)
+};
+
 // ScriptStruct AnimationCore.FilterOptionPerAxis
 // 0x0003
 struct FFilterOptionPerAxis
@@ -99,14 +107,6 @@ struct FConstraintOffset
 	struct FVector                                     Scale;                                                    // 0x0020(0x000C) (IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 	struct FTransform                                  Parent;                                                   // 0x0030(0x0030) (IsPlainOldData)
-};
-
-// ScriptStruct AnimationCore.NodeHierarchyWithUserData
-// 0x0078
-struct FNodeHierarchyWithUserData
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	struct FNodeHierarchyData                          Hierarchy;                                                // 0x0008(0x0070)
 };
 
 // ScriptStruct AnimationCore.TransformFilter

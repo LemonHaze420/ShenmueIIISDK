@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BP_S3BattleStatsManager.BPF_BP_S3BattleStatsManager_C.BPF_GetBPS3BattleStatsManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_S3BattleStatsManager_C* BPManager                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BP_S3BattleStatsManager_C::STATIC_BPF_GetBPS3BattleStatsManager(class UObject* __WorldContext, class UBP_S3BattleStatsManager_C** BPManager)
+void UBPF_BP_S3BattleStatsManager_C::BPF_GetBPS3BattleStatsManager(class UObject* __WorldContext, class UBP_S3BattleStatsManager_C** BPManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BP_S3BattleStatsManager.BPF_BP_S3BattleStatsManager_C.BPF_GetBPS3BattleStatsManager");
 

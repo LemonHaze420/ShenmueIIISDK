@@ -32,7 +32,7 @@ public:
 	void GetSkeletalMeshComponent(class USkeletalMeshComponent** SkeltalMeshComp);
 	void UserConstructionScript();
 	void SetMeshVisibility(bool bEnable);
-	void ExecuteUbergraph_BP_SpawningAttachmentSk(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_SpawningAttachmentSk(int EntryPoint);
 };
 
 

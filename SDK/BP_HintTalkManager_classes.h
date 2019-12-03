@@ -36,13 +36,13 @@ public:
 
 	void LengthToDistanceEnum(float Length, TEnumAsByte<EN_HintTalkDistance>* DistanceEnum);
 	void GetPlaceMessage(struct FString* Message);
-	void IsPlaceMessage(const struct FName& TextID, bool* Result);
+	void STATIC_IsPlaceMessage(const struct FName& TextID, bool* Result);
 	void GetTextDataStrings(struct FName* Label, struct FString* OutString, struct FString* ClipperString, TArray<struct FString>* TextArray, int* LinefeedCount, TArray<struct FST_RubyInfo>* RubyInfoArray);
 	void UserConstructionScript();
-	void InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void STATIC_InpActEvt_Ctrl_Shift_H_K2Node_InputKeyEvent_2(const struct FKey& Key);
 	void ReceiveBeginPlay();
 	void ReceiveDestroyed();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_HintTalkManager(int EntryPoint);
 };
 

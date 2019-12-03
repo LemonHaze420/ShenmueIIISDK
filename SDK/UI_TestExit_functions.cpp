@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function UI_TestExit.UI_TestExit_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UUI_TestExit_C::Construct()
 {
@@ -31,11 +31,11 @@ void UUI_TestExit_C::Construct()
 
 
 // Function UI_TestExit.UI_TestExit_C.ExecuteUbergraph_UI_TestExit
-// ()
+// (NetReliable, NetRequest, Native, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UUI_TestExit_C::ExecuteUbergraph_UI_TestExit(int EntryPoint)
+void UUI_TestExit_C::STATIC_ExecuteUbergraph_UI_TestExit(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UI_TestExit.UI_TestExit_C.ExecuteUbergraph_UI_TestExit");
 
@@ -43,6 +43,7 @@ void UUI_TestExit_C::ExecuteUbergraph_UI_TestExit(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

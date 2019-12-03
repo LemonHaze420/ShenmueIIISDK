@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SimpleWrapperMeter.wgt_SimpleWrapperMeter_C.SetFillRatio
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          FillRatio                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void Uwgt_SimpleWrapperMeter_C::SetFillRatio(float FillRatio, bool* Changed)
 
 
 // Function wgt_SimpleWrapperMeter.wgt_SimpleWrapperMeter_C.SetScaleRatio
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          ScaleRatio                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)

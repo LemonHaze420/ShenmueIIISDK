@@ -30,18 +30,18 @@ public:
 	}
 
 
-	void ClearCacheMiniGameContainer();
+	void STATIC_ClearCacheMiniGameContainer();
 	void ShowPopup(bool* bSuccess);
-	void IsItemGift(struct FS3GameGift* CheckGIft, bool* bItem);
-	void IsBetGift(struct FS3GameGift* CheckGIft, bool* bBet);
+	void STATIC_IsItemGift(struct FS3GameGift* CheckGIft, bool* bItem);
+	void STATIC_IsBetGift(struct FS3GameGift* CheckGIft, bool* bBet);
 	void GetValueType(TEnumAsByte<EN_ValueType>* ValueType);
 	void IsMoneyGift(struct FS3GameGift* CheckGIft, bool* bMoney);
-	void PushGiftCustomizeMoney(int Money);
-	void GetGiftData(bool* bSuccess, struct FName* GiftId, struct FS3GiftDataTable* GiftData);
+	void STATIC_PushGiftCustomizeMoney(int Money);
+	void STATIC_GetGiftData(bool* bSuccess, struct FName* GiftId, struct FS3GiftDataTable* GiftData);
 	void ClearGift();
 	void ClearGiftStack();
-	void PopGift(struct FName* GiftId, struct FS3GiftDataTable* OutGiftData);
-	void PushGift(const struct FName& GiftId);
+	void STATIC_PopGift(struct FName* GiftId, struct FS3GiftDataTable* OutGiftData);
+	void STATIC_PushGift(const struct FName& GiftId);
 };
 
 

@@ -39,13 +39,13 @@ public:
 	void UpdateCondition(TEnumAsByte<EHideActorConditions> ConditionsType, const struct FString& IdMin, const struct FString& IdMax, int Option, bool Visible);
 	void SetupEventStep();
 	void HideMyOwner(bool Mode);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ChangeStep(int SetSteps);
-	void ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum);
-	void ChangeFlag(int ArrayIndex, int SetFlags);
+	void STATIC_ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum);
+	void STATIC_ChangeFlag(int ArrayIndex, int SetFlags);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void UnbindEvent();
+	void STATIC_UnbindEvent();
 	void SetUpEvent();
 	void ExecuteUbergraph_BP_HideActorByCondition(int EntryPoint);
 };

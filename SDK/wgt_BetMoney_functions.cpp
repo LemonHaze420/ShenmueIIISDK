@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_BetMoney.wgt_BetMoney_C.GetFadeAnimations
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class UWidgetAnimation*> Array                          (Parm, OutParm, ZeroConstructor)
 
-void Uwgt_BetMoney_C::GetFadeAnimations(TArray<class UWidgetAnimation*>* Array)
+void Uwgt_BetMoney_C::STATIC_GetFadeAnimations(TArray<class UWidgetAnimation*>* Array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BetMoney.wgt_BetMoney_C.GetFadeAnimations");
 
@@ -36,7 +36,7 @@ void Uwgt_BetMoney_C::GetFadeAnimations(TArray<class UWidgetAnimation*>* Array)
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.FormatMoneyText
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
@@ -59,7 +59,7 @@ struct FText Uwgt_BetMoney_C::FormatMoneyText(int Value)
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.GetActualBetMin
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -80,7 +80,7 @@ int Uwgt_BetMoney_C::GetActualBetMin()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.GetActualBetMax
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -91,6 +91,7 @@ int Uwgt_BetMoney_C::GetActualBetMax()
 	Uwgt_BetMoney_C_GetActualBetMax_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,11 +102,11 @@ int Uwgt_BetMoney_C::GetActualBetMax()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.SetMoney
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BetMoney_C::SetMoney(int Value)
+void Uwgt_BetMoney_C::STATIC_SetMoney(int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BetMoney.wgt_BetMoney_C.SetMoney");
 
@@ -113,6 +114,7 @@ void Uwgt_BetMoney_C::SetMoney(int Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,7 +123,7 @@ void Uwgt_BetMoney_C::SetMoney(int Value)
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.GetActualFluctuation
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -132,6 +134,7 @@ int Uwgt_BetMoney_C::GetActualFluctuation()
 	Uwgt_BetMoney_C_GetActualFluctuation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,9 +145,9 @@ int Uwgt_BetMoney_C::GetActualFluctuation()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.UpdateBetMoneyText
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void Uwgt_BetMoney_C::UpdateBetMoneyText()
+void Uwgt_BetMoney_C::STATIC_UpdateBetMoneyText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BetMoney.wgt_BetMoney_C.UpdateBetMoneyText");
 
@@ -159,7 +162,7 @@ void Uwgt_BetMoney_C::UpdateBetMoneyText()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.CanAdjustBet
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Event, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -170,6 +173,7 @@ bool Uwgt_BetMoney_C::CanAdjustBet()
 	Uwgt_BetMoney_C_CanAdjustBet_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,7 +184,7 @@ bool Uwgt_BetMoney_C::CanAdjustBet()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.GetBetMoney
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            BetMoney                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -191,6 +195,7 @@ void Uwgt_BetMoney_C::GetBetMoney(int* BetMoney)
 	Uwgt_BetMoney_C_GetBetMoney_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,7 +207,7 @@ void Uwgt_BetMoney_C::GetBetMoney(int* BetMoney)
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.DecideCancel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_BetMoney_C::DecideCancel()
 {
@@ -211,6 +216,7 @@ void Uwgt_BetMoney_C::DecideCancel()
 	Uwgt_BetMoney_C_DecideCancel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -219,7 +225,7 @@ void Uwgt_BetMoney_C::DecideCancel()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_BetMoney_C::Construct()
 {
@@ -228,6 +234,7 @@ void Uwgt_BetMoney_C::Construct()
 	Uwgt_BetMoney_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,7 +243,7 @@ void Uwgt_BetMoney_C::Construct()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.SelectBetUp
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_BetMoney_C::SelectBetUp()
 {
@@ -253,7 +260,7 @@ void Uwgt_BetMoney_C::SelectBetUp()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.SelectBetDown
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_BetMoney_C::SelectBetDown()
 {
@@ -270,7 +277,7 @@ void Uwgt_BetMoney_C::SelectBetDown()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.SelectMaxBet
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_BetMoney_C::SelectMaxBet()
 {
@@ -287,7 +294,7 @@ void Uwgt_BetMoney_C::SelectMaxBet()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.SelectCancel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_BetMoney_C::SelectCancel()
 {
@@ -304,7 +311,7 @@ void Uwgt_BetMoney_C::SelectCancel()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.DecideBet
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_BetMoney_C::DecideBet()
 {
@@ -321,11 +328,11 @@ void Uwgt_BetMoney_C::DecideBet()
 
 
 // Function wgt_BetMoney.wgt_BetMoney_C.ExecuteUbergraph_wgt_BetMoney
-// (HasDefaults)
+// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BetMoney_C::ExecuteUbergraph_wgt_BetMoney(int EntryPoint)
+void Uwgt_BetMoney_C::STATIC_ExecuteUbergraph_wgt_BetMoney(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BetMoney.wgt_BetMoney_C.ExecuteUbergraph_wgt_BetMoney");
 
@@ -333,6 +340,7 @@ void Uwgt_BetMoney_C::ExecuteUbergraph_wgt_BetMoney(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

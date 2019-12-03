@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.SetActiveLight
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,9 +34,9 @@ void ABP_S3ReflectorBoardActor_C::SetActiveLight(bool Enabled)
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ToggleActive
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3ReflectorBoardActor_C::ToggleActive()
+void ABP_S3ReflectorBoardActor_C::STATIC_ToggleActive()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ToggleActive");
 
@@ -51,7 +51,7 @@ void ABP_S3ReflectorBoardActor_C::ToggleActive()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.UpdateLightActive
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3ReflectorBoardActor_C::UpdateLightActive()
 {
@@ -60,6 +60,7 @@ void ABP_S3ReflectorBoardActor_C::UpdateLightActive()
 	ABP_S3ReflectorBoardActor_C_UpdateLightActive_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,12 +69,12 @@ void ABP_S3ReflectorBoardActor_C::UpdateLightActive()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.CalcLightPos
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 pelvis                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 ReturnPos                      (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3ReflectorBoardActor_C::CalcLightPos(const struct FVector& pelvis, struct FVector* ReturnPos)
+void ABP_S3ReflectorBoardActor_C::STATIC_CalcLightPos(const struct FVector& pelvis, struct FVector* ReturnPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.CalcLightPos");
 
@@ -92,9 +93,9 @@ void ABP_S3ReflectorBoardActor_C::CalcLightPos(const struct FVector& pelvis, str
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.CalcLightPosition
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_S3ReflectorBoardActor_C::CalcLightPosition()
+void ABP_S3ReflectorBoardActor_C::STATIC_CalcLightPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.CalcLightPosition");
 
@@ -109,15 +110,16 @@ void ABP_S3ReflectorBoardActor_C::CalcLightPosition()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_S3ReflectorBoardActor_C::UserConstructionScript()
+void ABP_S3ReflectorBoardActor_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.UserConstructionScript");
 
 	ABP_S3ReflectorBoardActor_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,9 +128,9 @@ void ABP_S3ReflectorBoardActor_C::UserConstructionScript()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.EndCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::EndCutscene()
+void ABP_S3ReflectorBoardActor_C::STATIC_EndCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.EndCutscene");
 
@@ -143,9 +145,9 @@ void ABP_S3ReflectorBoardActor_C::EndCutscene()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.StartCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::StartCutscene()
+void ABP_S3ReflectorBoardActor_C::STATIC_StartCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.StartCutscene");
 
@@ -160,9 +162,9 @@ void ABP_S3ReflectorBoardActor_C::StartCutscene()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.StartTalk
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::StartTalk()
+void ABP_S3ReflectorBoardActor_C::STATIC_StartTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.StartTalk");
 
@@ -177,9 +179,9 @@ void ABP_S3ReflectorBoardActor_C::StartTalk()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.EndTalk
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::EndTalk()
+void ABP_S3ReflectorBoardActor_C::STATIC_EndTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.EndTalk");
 
@@ -194,9 +196,9 @@ void ABP_S3ReflectorBoardActor_C::EndTalk()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ChangeTalkCamera
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::ChangeTalkCamera()
+void ABP_S3ReflectorBoardActor_C::STATIC_ChangeTalkCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ChangeTalkCamera");
 
@@ -211,9 +213,9 @@ void ABP_S3ReflectorBoardActor_C::ChangeTalkCamera()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.UnbindEventDispacher
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::UnbindEventDispacher()
+void ABP_S3ReflectorBoardActor_C::STATIC_UnbindEventDispacher()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.UnbindEventDispacher");
 
@@ -228,9 +230,9 @@ void ABP_S3ReflectorBoardActor_C::UnbindEventDispacher()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.BindEventDispatcher
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::BindEventDispatcher()
+void ABP_S3ReflectorBoardActor_C::STATIC_BindEventDispatcher()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.BindEventDispatcher");
 
@@ -245,9 +247,9 @@ void ABP_S3ReflectorBoardActor_C::BindEventDispatcher()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_S3ReflectorBoardActor_C::ReceiveBeginPlay()
+void ABP_S3ReflectorBoardActor_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ReceiveBeginPlay");
 
@@ -262,11 +264,11 @@ void ABP_S3ReflectorBoardActor_C::ReceiveBeginPlay()
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ReflectorBoardActor_C::ReceiveTick(float DeltaSeconds)
+void ABP_S3ReflectorBoardActor_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ReceiveTick");
 
@@ -282,12 +284,12 @@ void ABP_S3ReflectorBoardActor_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.EndOwner
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ReflectorBoardActor_C::EndOwner(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3ReflectorBoardActor_C::STATIC_EndOwner(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.EndOwner");
 
@@ -304,11 +306,11 @@ void ABP_S3ReflectorBoardActor_C::EndOwner(class AActor* Actor, TEnumAsByte<EEnd
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3ReflectorBoardActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3ReflectorBoardActor_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ReceiveEndPlay");
 
@@ -324,7 +326,7 @@ void ABP_S3ReflectorBoardActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 
 
 // Function BP_S3ReflectorBoardActor.BP_S3ReflectorBoardActor_C.ExecuteUbergraph_BP_S3ReflectorBoardActor
-// ()
+// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

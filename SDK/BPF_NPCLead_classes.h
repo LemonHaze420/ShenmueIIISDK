@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_GetNPCLeadCharacter(class UObject* __WorldContext, class ABP_NPC_Lead_C** newParam);
-	void STATIC_DestroyNPCLeadActor(class UObject* __WorldContext);
+	void DestroyNPCLeadActor(class UObject* __WorldContext);
 	void STATIC_SpawnNPCLeadActor(const struct FVector& SpawnPos, float SpawnRot, class ANPC_SplineMoveActor_C* SplineActor, class UObject* __WorldContext);
 	void STATIC_GetNPCLeadManager(class UObject* __WorldContext, class ABP_NPCLeadManager_C** newParam);
 };

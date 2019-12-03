@@ -28,7 +28,7 @@ public:
 
 
 	void GetBPLinkGacha(class ABP_LinkGacha_C** BPLinkGacha);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void InpActEvt_MG_LeftStickRight_K2Node_InputActionEvent_12(const struct FKey& Key);
 	void InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_11(const struct FKey& Key);
 	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_10(const struct FKey& Key);

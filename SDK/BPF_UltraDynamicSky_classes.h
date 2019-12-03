@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_GetUltraDynamicSky(class UObject* __WorldContext, class AUltra_Dynamic_Sky_BP_C** UDS);
+	void GetUltraDynamicSky(class UObject* __WorldContext, class AUltra_Dynamic_Sky_BP_C** UDS);
 };
 
 

@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_PlayPrice.BPW_PlayPrice_C.SetPlayPrice
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            PlayPrice                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PlayPrice_C::SetPlayPrice(int PlayPrice)
+void UBPW_PlayPrice_C::STATIC_SetPlayPrice(int PlayPrice)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PlayPrice.BPW_PlayPrice_C.SetPlayPrice");
 
@@ -34,7 +34,7 @@ void UBPW_PlayPrice_C::SetPlayPrice(int PlayPrice)
 
 
 // Function BPW_PlayPrice.BPW_PlayPrice_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBPW_PlayPrice_C::Construct()
 {
@@ -51,11 +51,11 @@ void UBPW_PlayPrice_C::Construct()
 
 
 // Function BPW_PlayPrice.BPW_PlayPrice_C.ExecuteUbergraph_BPW_PlayPrice
-// (HasDefaults)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_PlayPrice_C::ExecuteUbergraph_BPW_PlayPrice(int EntryPoint)
+void UBPW_PlayPrice_C::STATIC_ExecuteUbergraph_BPW_PlayPrice(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_PlayPrice.BPW_PlayPrice_C.ExecuteUbergraph_BPW_PlayPrice");
 
@@ -63,6 +63,7 @@ void UBPW_PlayPrice_C::ExecuteUbergraph_BPW_PlayPrice(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

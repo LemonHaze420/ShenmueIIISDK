@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.PlayAction
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,15 +36,16 @@ void ABP_HelpTrigger_C::PlayAction(bool* Success)
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, BlueprintPure, NetValidate)
 
-void ABP_HelpTrigger_C::UserConstructionScript()
+void ABP_HelpTrigger_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HelpTrigger.BP_HelpTrigger_C.UserConstructionScript");
 
 	ABP_HelpTrigger_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +54,7 @@ void ABP_HelpTrigger_C::UserConstructionScript()
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_HelpTrigger_C::ReceiveBeginPlay()
 {
@@ -70,7 +71,7 @@ void ABP_HelpTrigger_C::ReceiveBeginPlay()
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.EndOverlap
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_HelpTrigger_C::EndOverlap()
 {
@@ -87,7 +88,7 @@ void ABP_HelpTrigger_C::EndOverlap()
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Exec, Event, NetMulticast, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -117,7 +118,7 @@ void ABP_HelpTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -143,12 +144,12 @@ void ABP_HelpTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.ChangePlayerBehaviorHelp
-// (BlueprintCallable, BlueprintEvent)
+// (Event, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3PlayerBehavior              NewId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PlayerBehavior              OldId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HelpTrigger_C::ChangePlayerBehaviorHelp(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
+void ABP_HelpTrigger_C::STATIC_ChangePlayerBehaviorHelp(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HelpTrigger.BP_HelpTrigger_C.ChangePlayerBehaviorHelp");
 
@@ -165,7 +166,7 @@ void ABP_HelpTrigger_C::ChangePlayerBehaviorHelp(ES3PlayerBehavior NewId, ES3Pla
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -185,7 +186,7 @@ void ABP_HelpTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason
 
 
 // Function BP_HelpTrigger.BP_HelpTrigger_C.ExecuteUbergraph_BP_HelpTrigger
-// (HasDefaults)
+// (NetRequest, Native, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -197,6 +198,7 @@ void ABP_HelpTrigger_C::ExecuteUbergraph_BP_HelpTrigger(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

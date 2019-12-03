@@ -44,19 +44,19 @@ public:
 
 
 	struct FText GetText_2();
-	class UWidget* On_MenuAnchor_Script_GetMenuContent_1();
+	class UWidget* STATIC_On_MenuAnchor_Script_GetMenuContent_1();
 	class UWidget* On_MenuAnchor_TextData_GetMenuContent_1();
 	struct FText GetText_1();
 	void SetUserFocusByChildIndex(int Index);
 	void ResetUserFocus();
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void Construct();
-	void BndEvt__S3Button_0_K2Node_ComponentBoundEvent_50_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
-	void PreConstruct(bool IsDesignTime);
-	void BndEvt__Button_Script_K2Node_ComponentBoundEvent_95_OnButtonPressedEvent__DelegateSignature();
-	void BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
-	void ExecuteUbergraph_BW_DebugTalk(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_50_OnButtonPressedEvent__DelegateSignature();
+	void STATIC_BndEvt__MenuAnchor_TextData_K2Node_ComponentBoundEvent_10_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_BndEvt__Button_Script_K2Node_ComponentBoundEvent_95_OnButtonPressedEvent__DelegateSignature();
+	void STATIC_BndEvt__MenuAnchor_Script_K2Node_ComponentBoundEvent_111_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen);
+	void STATIC_ExecuteUbergraph_BW_DebugTalk(int EntryPoint);
 };
 
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.SkipCurrentAutoMove
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void ABP_PlayerFollowAIController_C::SkipCurrentAutoMove()
+void ABP_PlayerFollowAIController_C::STATIC_SkipCurrentAutoMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.SkipCurrentAutoMove");
 
 	ABP_PlayerFollowAIController_C_SkipCurrentAutoMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_PlayerFollowAIController_C::SkipCurrentAutoMove()
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.StopAutoMove
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
 void ABP_PlayerFollowAIController_C::StopAutoMove()
 {
@@ -48,15 +49,16 @@ void ABP_PlayerFollowAIController_C::StopAutoMove()
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.UnPause
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void ABP_PlayerFollowAIController_C::UnPause()
+void ABP_PlayerFollowAIController_C::STATIC_UnPause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.UnPause");
 
 	ABP_PlayerFollowAIController_C_UnPause_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,15 +67,16 @@ void ABP_PlayerFollowAIController_C::UnPause()
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.Pause
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void ABP_PlayerFollowAIController_C::Pause()
+void ABP_PlayerFollowAIController_C::STATIC_Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.Pause");
 
 	ABP_PlayerFollowAIController_C_Pause_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +85,7 @@ void ABP_PlayerFollowAIController_C::Pause()
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.RequestAutoMove
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetMulticast, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_PlayerFollowAIController_C::RequestAutoMove()
 {
@@ -91,6 +94,7 @@ void ABP_PlayerFollowAIController_C::RequestAutoMove()
 	ABP_PlayerFollowAIController_C_RequestAutoMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,7 +103,7 @@ void ABP_PlayerFollowAIController_C::RequestAutoMove()
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_PlayerFollowAIController_C::UserConstructionScript()
 {
@@ -108,6 +112,7 @@ void ABP_PlayerFollowAIController_C::UserConstructionScript()
 	ABP_PlayerFollowAIController_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +121,7 @@ void ABP_PlayerFollowAIController_C::UserConstructionScript()
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -128,6 +133,7 @@ void ABP_PlayerFollowAIController_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> 
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +142,7 @@ void ABP_PlayerFollowAIController_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> 
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.Initialize
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ABP_NPCLeadManager_C*    LeadNPCAI                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3_Character_Adventure_C* PlayerPawn                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -158,7 +164,7 @@ void ABP_PlayerFollowAIController_C::Initialize(class ABP_NPCLeadManager_C* Lead
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.UnpossessAndDestroy
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_PlayerFollowAIController_C::UnpossessAndDestroy()
 {
@@ -167,6 +173,7 @@ void ABP_PlayerFollowAIController_C::UnpossessAndDestroy()
 	ABP_PlayerFollowAIController_C_UnpossessAndDestroy_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,11 +182,11 @@ void ABP_PlayerFollowAIController_C::UnpossessAndDestroy()
 
 
 // Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.ExecuteUbergraph_BP_PlayerFollowAIController
-// (HasDefaults)
+// (NetRequest, Exec, Event, Static, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerFollowAIController_C::ExecuteUbergraph_BP_PlayerFollowAIController(int EntryPoint)
+void ABP_PlayerFollowAIController_C::STATIC_ExecuteUbergraph_BP_PlayerFollowAIController(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerFollowAIController.BP_PlayerFollowAIController_C.ExecuteUbergraph_BP_PlayerFollowAIController");
 

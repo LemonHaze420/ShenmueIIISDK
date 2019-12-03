@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void DebugOpenCheck(bool* IsOpen);
+	void STATIC_DebugOpenCheck(bool* IsOpen);
 	void MakeMask(class UPanelWidget* InputPin, ES3Where Place);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_MemoMap_CreateMask(int EntryPoint);
 };

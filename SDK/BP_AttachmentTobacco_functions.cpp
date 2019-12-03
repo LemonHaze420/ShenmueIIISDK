@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AttachmentTobacco.BP_AttachmentTobacco_C.CreateSmoke
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Protected, NetServer, HasDefaults, NetValidate)
 
-void ABP_AttachmentTobacco_C::CreateSmoke()
+void ABP_AttachmentTobacco_C::STATIC_CreateSmoke()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttachmentTobacco.BP_AttachmentTobacco_C.CreateSmoke");
 
 	ABP_AttachmentTobacco_C_CreateSmoke_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_AttachmentTobacco_C::CreateSmoke()
 
 
 // Function BP_AttachmentTobacco.BP_AttachmentTobacco_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
 void ABP_AttachmentTobacco_C::UserConstructionScript()
 {
@@ -40,6 +41,7 @@ void ABP_AttachmentTobacco_C::UserConstructionScript()
 	ABP_AttachmentTobacco_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void ABP_AttachmentTobacco_C::UserConstructionScript()
 
 
 // Function BP_AttachmentTobacco.BP_AttachmentTobacco_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
 void ABP_AttachmentTobacco_C::ReceiveBeginPlay()
 {
@@ -65,7 +67,7 @@ void ABP_AttachmentTobacco_C::ReceiveBeginPlay()
 
 
 // Function BP_AttachmentTobacco.BP_AttachmentTobacco_C.ExecuteUbergraph_BP_AttachmentTobacco
-// ()
+// (NetReliable, Exec, Native, NetResponse, Private, Protected, NetServer, HasDefaults, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -77,6 +79,7 @@ void ABP_AttachmentTobacco_C::ExecuteUbergraph_BP_AttachmentTobacco(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.SetEnabledPushVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_SkipSceneIcon_C::SetEnabledPushVisible(bool Enabled)
+void UWBP_SkipSceneIcon_C::STATIC_SetEnabledPushVisible(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.SetEnabledPushVisible");
 
@@ -34,7 +34,7 @@ void UWBP_SkipSceneIcon_C::SetEnabledPushVisible(bool Enabled)
 
 
 // Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.SetRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Public, Private, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,15 +54,16 @@ void UWBP_SkipSceneIcon_C::SetRate(float Rate)
 
 
 // Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UWBP_SkipSceneIcon_C::Reset()
+void UWBP_SkipSceneIcon_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.Reset");
 
 	UWBP_SkipSceneIcon_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +72,7 @@ void UWBP_SkipSceneIcon_C::Reset()
 
 
 // Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.SetTimeGaugeRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -83,6 +84,7 @@ void UWBP_SkipSceneIcon_C::SetTimeGaugeRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,9 +93,9 @@ void UWBP_SkipSceneIcon_C::SetTimeGaugeRate(float Rate)
 
 
 // Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_SkipSceneIcon_C::Construct()
+void UWBP_SkipSceneIcon_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.Construct");
 
@@ -108,11 +110,11 @@ void UWBP_SkipSceneIcon_C::Construct()
 
 
 // Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.ExecuteUbergraph_WBP_SkipSceneIcon
-// ()
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Protected, NetClient)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_SkipSceneIcon_C::ExecuteUbergraph_WBP_SkipSceneIcon(int EntryPoint)
+void UWBP_SkipSceneIcon_C::STATIC_ExecuteUbergraph_WBP_SkipSceneIcon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_SkipSceneIcon.WBP_SkipSceneIcon_C.ExecuteUbergraph_WBP_SkipSceneIcon");
 

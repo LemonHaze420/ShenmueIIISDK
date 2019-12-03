@@ -65,7 +65,7 @@ bool UObject::IsA(UClass* cmp) const
 }
 
 // Function CoreUObject.Object.ExecuteUbergraph
-// (Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // int                            EntryPoint                     (Parm, ZeroConstructor, IsPlainOldData)
 

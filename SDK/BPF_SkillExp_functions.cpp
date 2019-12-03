@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_ShouldShowSkillAquisitionHint
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,6 +27,7 @@ bool UBPF_SkillExp_C::STATIC_BPF_ShouldShowSkillAquisitionHint(class UObject* __
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,12 +38,12 @@ bool UBPF_SkillExp_C::STATIC_BPF_ShouldShowSkillAquisitionHint(class UObject* __
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_HasPlayerMasteredAllSkills
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_SkillExp_C::STATIC_BPF_HasPlayerMasteredAllSkills(class UObject* __WorldContext)
+bool UBPF_SkillExp_C::BPF_HasPlayerMasteredAllSkills(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_SkillExp.BPF_SkillExp_C.BPF_HasPlayerMasteredAllSkills");
 
@@ -60,12 +61,12 @@ bool UBPF_SkillExp_C::STATIC_BPF_HasPlayerMasteredAllSkills(class UObject* __Wor
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_CountNonMasteredSkills
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBPF_SkillExp_C::STATIC_BPF_CountNonMasteredSkills(class UObject* __WorldContext)
+int UBPF_SkillExp_C::BPF_CountNonMasteredSkills(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_SkillExp.BPF_SkillExp_C.BPF_CountNonMasteredSkills");
 
@@ -73,6 +74,7 @@ int UBPF_SkillExp_C::STATIC_BPF_CountNonMasteredSkills(class UObject* __WorldCon
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,13 +85,13 @@ int UBPF_SkillExp_C::STATIC_BPF_CountNonMasteredSkills(class UObject* __WorldCon
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_IsPlayerSkillMastered
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_SkillExp_C::STATIC_BPF_IsPlayerSkillMastered(const struct FName& SkillItem, class UObject* __WorldContext)
+bool UBPF_SkillExp_C::BPF_IsPlayerSkillMastered(const struct FName& SkillItem, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_SkillExp.BPF_SkillExp_C.BPF_IsPlayerSkillMastered");
 
@@ -108,7 +110,7 @@ bool UBPF_SkillExp_C::STATIC_BPF_IsPlayerSkillMastered(const struct FName& Skill
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_GetPlayerSkillLevelData
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Static, Public, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -143,7 +145,7 @@ void UBPF_SkillExp_C::STATIC_BPF_GetPlayerSkillLevelData(const struct FName& Ski
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_GetPlayerSkillLevelMax
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetClient, Const)
 // Parameters:
 // struct FName                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -158,6 +160,7 @@ void UBPF_SkillExp_C::STATIC_BPF_GetPlayerSkillLevelMax(const struct FName& Key,
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,7 +172,7 @@ void UBPF_SkillExp_C::STATIC_BPF_GetPlayerSkillLevelMax(const struct FName& Key,
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_GetPlayerSkillLevelAsRatio
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Key                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -194,7 +197,7 @@ float UBPF_SkillExp_C::STATIC_BPF_GetPlayerSkillLevelAsRatio(const struct FName&
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_GetPlayerSkillLevel
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetClient, Const)
 // Parameters:
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -209,6 +212,7 @@ void UBPF_SkillExp_C::STATIC_BPF_GetPlayerSkillLevel(const struct FName& SkillIt
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,7 +224,7 @@ void UBPF_SkillExp_C::STATIC_BPF_GetPlayerSkillLevel(const struct FName& SkillIt
 
 
 // Function BPF_SkillExp.BPF_SkillExp_C.BPF_GetPlayerSkillStats
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3PlayerExpCollection*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

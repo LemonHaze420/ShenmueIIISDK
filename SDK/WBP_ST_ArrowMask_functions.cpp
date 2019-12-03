@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_ST_ArrowMask.WBP_ST_ArrowMask_C.SetTriangleSize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, BlueprintEvent)
 // Parameters:
 // struct FVector2D               InSize                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UWBP_ST_ArrowMask_C::SetTriangleSize(const struct FVector2D& InSize)
+void UWBP_ST_ArrowMask_C::STATIC_SetTriangleSize(const struct FVector2D& InSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ST_ArrowMask.WBP_ST_ArrowMask_C.SetTriangleSize");
 
@@ -34,7 +34,7 @@ void UWBP_ST_ArrowMask_C::SetTriangleSize(const struct FVector2D& InSize)
 
 
 // Function WBP_ST_ArrowMask.WBP_ST_ArrowMask_C.AddTrianglePos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               Add                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -46,6 +46,7 @@ void UWBP_ST_ArrowMask_C::AddTrianglePos(const struct FVector2D& Add)
 	params.Add = Add;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +55,11 @@ void UWBP_ST_ArrowMask_C::AddTrianglePos(const struct FVector2D& Add)
 
 
 // Function WBP_ST_ArrowMask.WBP_ST_ArrowMask_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_ST_ArrowMask_C::PreConstruct(bool IsDesignTime)
+void UWBP_ST_ArrowMask_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ST_ArrowMask.WBP_ST_ArrowMask_C.PreConstruct");
 
@@ -74,7 +75,7 @@ void UWBP_ST_ArrowMask_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_ST_ArrowMask.WBP_ST_ArrowMask_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 
 void UWBP_ST_ArrowMask_C::Construct()
 {
@@ -91,7 +92,7 @@ void UWBP_ST_ArrowMask_C::Construct()
 
 
 // Function WBP_ST_ArrowMask.WBP_ST_ArrowMask_C.ExecuteUbergraph_WBP_ST_ArrowMask
-// ()
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

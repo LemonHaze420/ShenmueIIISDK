@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PlayerInputBufferComponent.BP_PlayerInputBufferComponent_C.DetermineState_TargetSwitch
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EN_PC_State>       State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  SubState                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_PC_InputRecord> Action                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_PlayerInputBufferComponent_C::DetermineState_TargetSwitch(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action)
+void UBP_PlayerInputBufferComponent_C::STATIC_DetermineState_TargetSwitch(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerInputBufferComponent.BP_PlayerInputBufferComponent_C.DetermineState_TargetSwitch");
 
@@ -40,7 +40,7 @@ void UBP_PlayerInputBufferComponent_C::DetermineState_TargetSwitch(TEnumAsByte<E
 
 
 // Function BP_PlayerInputBufferComponent.BP_PlayerInputBufferComponent_C.DetermineState_Jump
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_PC_State>       State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  SubState                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -66,7 +66,7 @@ void UBP_PlayerInputBufferComponent_C::DetermineState_Jump(TEnumAsByte<EN_PC_Sta
 
 
 // Function BP_PlayerInputBufferComponent.BP_PlayerInputBufferComponent_C.Update
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_PC_State>       InPCState                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  INPCSubState                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -80,6 +80,7 @@ void UBP_PlayerInputBufferComponent_C::Update(TEnumAsByte<EN_PC_State> InPCState
 	params.INPCSubState = INPCSubState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,7 +89,7 @@ void UBP_PlayerInputBufferComponent_C::Update(TEnumAsByte<EN_PC_State> InPCState
 
 
 // Function BP_PlayerInputBufferComponent.BP_PlayerInputBufferComponent_C.OnTargetSelectAction__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void UBP_PlayerInputBufferComponent_C::OnTargetSelectAction__DelegateSignature()
 {
@@ -105,15 +106,16 @@ void UBP_PlayerInputBufferComponent_C::OnTargetSelectAction__DelegateSignature()
 
 
 // Function BP_PlayerInputBufferComponent.BP_PlayerInputBufferComponent_C.OnJumpAction__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 
-void UBP_PlayerInputBufferComponent_C::OnJumpAction__DelegateSignature()
+void UBP_PlayerInputBufferComponent_C::STATIC_OnJumpAction__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerInputBufferComponent.BP_PlayerInputBufferComponent_C.OnJumpAction__DelegateSignature");
 
 	UBP_PlayerInputBufferComponent_C_OnJumpAction__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

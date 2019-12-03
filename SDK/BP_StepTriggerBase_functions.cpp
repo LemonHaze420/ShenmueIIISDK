@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckTime
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, NetResponse, NetMulticast, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ bool ABP_StepTriggerBase_C::CheckTime()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.HasGameTimeRestriction
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -46,6 +46,7 @@ bool ABP_StepTriggerBase_C::HasGameTimeRestriction()
 	ABP_StepTriggerBase_C_HasGameTimeRestriction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +57,7 @@ bool ABP_StepTriggerBase_C::HasGameTimeRestriction()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CacheInStepAndTime
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Event, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Previous                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Next                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -68,6 +69,7 @@ void ABP_StepTriggerBase_C::CacheInStepAndTime(int* Previous, int* Next)
 	ABP_StepTriggerBase_C_CacheInStepAndTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,9 +83,9 @@ void ABP_StepTriggerBase_C::CacheInStepAndTime(int* Previous, int* Next)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.OnExitStepAndTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_StepTriggerBase_C::OnExitStepAndTime()
+void ABP_StepTriggerBase_C::STATIC_OnExitStepAndTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.OnExitStepAndTime");
 
@@ -98,15 +100,16 @@ void ABP_StepTriggerBase_C::OnExitStepAndTime()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.OnEnterStepAndTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_StepTriggerBase_C::OnEnterStepAndTime()
+void ABP_StepTriggerBase_C::STATIC_OnEnterStepAndTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.OnEnterStepAndTime");
 
 	ABP_StepTriggerBase_C_OnEnterStepAndTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,11 +118,11 @@ void ABP_StepTriggerBase_C::OnEnterStepAndTime()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckSavedConditions
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_StepTriggerBase_C::CheckSavedConditions()
+bool ABP_StepTriggerBase_C::STATIC_CheckSavedConditions()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckSavedConditions");
 
@@ -136,17 +139,18 @@ bool ABP_StepTriggerBase_C::CheckSavedConditions()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CanActionByBehaviorState
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_StepTriggerBase_C::CanActionByBehaviorState()
+bool ABP_StepTriggerBase_C::STATIC_CanActionByBehaviorState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.CanActionByBehaviorState");
 
 	ABP_StepTriggerBase_C_CanActionByBehaviorState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,12 +161,12 @@ bool ABP_StepTriggerBase_C::CanActionByBehaviorState()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.EnableByStep
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bEnable                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::EnableByStep(bool bEnable, bool* bDummy)
+void ABP_StepTriggerBase_C::STATIC_EnableByStep(bool bEnable, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.EnableByStep");
 
@@ -181,7 +185,7 @@ void ABP_StepTriggerBase_C::EnableByStep(bool bEnable, bool* bDummy)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ResetBind
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_StepTriggerBase_C::ResetBind()
 {
@@ -190,6 +194,7 @@ void ABP_StepTriggerBase_C::ResetBind()
 	ABP_StepTriggerBase_C_ResetBind_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -198,17 +203,18 @@ void ABP_StepTriggerBase_C::ResetBind()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ResetParam
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::ResetParam(bool* dummy)
+void ABP_StepTriggerBase_C::STATIC_ResetParam(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.ResetParam");
 
 	ABP_StepTriggerBase_C_ResetParam_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,17 +226,18 @@ void ABP_StepTriggerBase_C::ResetParam(bool* dummy)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckOverlapPlayer
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Overlap                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::CheckOverlapPlayer(bool* Overlap)
+void ABP_StepTriggerBase_C::STATIC_CheckOverlapPlayer(bool* Overlap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckOverlapPlayer");
 
 	ABP_StepTriggerBase_C_CheckOverlapPlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,15 +249,16 @@ void ABP_StepTriggerBase_C::CheckOverlapPlayer(bool* Overlap)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.EndOverlap
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_StepTriggerBase_C::EndOverlap()
+void ABP_StepTriggerBase_C::STATIC_EndOverlap()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.EndOverlap");
 
 	ABP_StepTriggerBase_C_EndOverlap_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,7 +267,7 @@ void ABP_StepTriggerBase_C::EndOverlap()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CanAction
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Public, Delegate, BlueprintCallable)
 // Parameters:
 // bool                           CheckOnly                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -283,7 +291,7 @@ void ABP_StepTriggerBase_C::CanAction(bool CheckOnly, bool* CAN)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckStep
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnFlag                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -305,17 +313,18 @@ void ABP_StepTriggerBase_C::CheckStep(bool* ReturnFlag)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.PlayAction
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::PlayAction(bool* Success)
+void ABP_StepTriggerBase_C::STATIC_PlayAction(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.PlayAction");
 
 	ABP_StepTriggerBase_C_PlayAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -327,17 +336,18 @@ void ABP_StepTriggerBase_C::PlayAction(bool* Success)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckStepAndTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnFlag                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::CheckStepAndTime(bool* ReturnFlag)
+void ABP_StepTriggerBase_C::STATIC_CheckStepAndTime(bool* ReturnFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.CheckStepAndTime");
 
 	ABP_StepTriggerBase_C_CheckStepAndTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -349,7 +359,7 @@ void ABP_StepTriggerBase_C::CheckStepAndTime(bool* ReturnFlag)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_StepTriggerBase_C::UserConstructionScript()
 {
@@ -366,9 +376,9 @@ void ABP_StepTriggerBase_C::UserConstructionScript()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.BindTalkEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_StepTriggerBase_C::BindTalkEvent()
+void ABP_StepTriggerBase_C::STATIC_BindTalkEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.BindTalkEvent");
 
@@ -383,7 +393,7 @@ void ABP_StepTriggerBase_C::BindTalkEvent()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.OnEndTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_StepTriggerBase_C::OnEndTalk()
 {
@@ -392,6 +402,7 @@ void ABP_StepTriggerBase_C::OnEndTalk()
 	ABP_StepTriggerBase_C_OnEndTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -400,9 +411,9 @@ void ABP_StepTriggerBase_C::OnEndTalk()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.UnBindTalkEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_StepTriggerBase_C::UnBindTalkEvent()
+void ABP_StepTriggerBase_C::STATIC_UnBindTalkEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.UnBindTalkEvent");
 
@@ -417,7 +428,7 @@ void ABP_StepTriggerBase_C::UnBindTalkEvent()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.OnFinishedTurn
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBPC_TurnAround_C*       SelfTurnAroundComponent        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -429,6 +440,7 @@ void ABP_StepTriggerBase_C::OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnArou
 	params.SelfTurnAroundComponent = SelfTurnAroundComponent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -437,7 +449,7 @@ void ABP_StepTriggerBase_C::OnFinishedTurn(class UBPC_TurnAround_C* SelfTurnArou
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.BindPlayerBehavior
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_StepTriggerBase_C::BindPlayerBehavior()
 {
@@ -454,7 +466,7 @@ void ABP_StepTriggerBase_C::BindPlayerBehavior()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ChangePlayerBehavior
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // ES3PlayerBehavior              NewId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PlayerBehavior              OldId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -476,9 +488,9 @@ void ABP_StepTriggerBase_C::ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3Pla
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.UnbindPlayerBehavior
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, NetServer)
 
-void ABP_StepTriggerBase_C::UnbindPlayerBehavior()
+void ABP_StepTriggerBase_C::STATIC_UnbindPlayerBehavior()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.UnbindPlayerBehavior");
 
@@ -493,11 +505,11 @@ void ABP_StepTriggerBase_C::UnbindPlayerBehavior()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ChangeTime
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EventIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::ChangeTime(int EventIndex)
+void ABP_StepTriggerBase_C::STATIC_ChangeTime(int EventIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.ChangeTime");
 
@@ -513,11 +525,11 @@ void ABP_StepTriggerBase_C::ChangeTime(int EventIndex)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.BindTimeChange
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::BindTimeChange(float Time)
+void ABP_StepTriggerBase_C::STATIC_BindTimeChange(float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.BindTimeChange");
 
@@ -533,7 +545,7 @@ void ABP_StepTriggerBase_C::BindTimeChange(float Time)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.UnbindTimeChange
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, NetServer)
 
 void ABP_StepTriggerBase_C::UnbindTimeChange()
 {
@@ -550,11 +562,11 @@ void ABP_StepTriggerBase_C::UnbindTimeChange()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::ReceiveTick(float DeltaSeconds)
+void ABP_StepTriggerBase_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.ReceiveTick");
 
@@ -570,7 +582,7 @@ void ABP_StepTriggerBase_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetMulticast, NetServer)
 
 void ABP_StepTriggerBase_C::ReceiveBeginPlay()
 {
@@ -587,11 +599,11 @@ void ABP_StepTriggerBase_C::ReceiveBeginPlay()
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Exec, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StepTriggerBase_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_StepTriggerBase_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StepTriggerBase.BP_StepTriggerBase_C.ReceiveEndPlay");
 
@@ -607,7 +619,7 @@ void ABP_StepTriggerBase_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRe
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ChangeStep
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -627,7 +639,7 @@ void ABP_StepTriggerBase_C::ChangeStep(int SetSteps)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ChangeFlag
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -641,6 +653,7 @@ void ABP_StepTriggerBase_C::ChangeFlag(int ArrayIndex, int SetFlags)
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -649,7 +662,7 @@ void ABP_StepTriggerBase_C::ChangeFlag(int ArrayIndex, int SetFlags)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.RepondToStepOrTime
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Init                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -669,7 +682,7 @@ void ABP_StepTriggerBase_C::RepondToStepOrTime(bool Init)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.TryRegisterNextTimeCheck
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           StartTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -681,6 +694,7 @@ void ABP_StepTriggerBase_C::TryRegisterNextTimeCheck(bool StartTime)
 	params.StartTime = StartTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -689,7 +703,7 @@ void ABP_StepTriggerBase_C::TryRegisterNextTimeCheck(bool StartTime)
 
 
 // Function BP_StepTriggerBase.BP_StepTriggerBase_C.ExecuteUbergraph_BP_StepTriggerBase
-// ()
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -27,7 +27,7 @@ public:
 
 	void STATIC_IsVisible(int FlagIndex, int SubFlagIndex, class UObject* __WorldContext, bool* IsVisible);
 	void STATIC_SetVisibility(class UWidget* TextBlock, int Index, int SubFlagIndex, class UObject* __WorldContext);
-	struct FText STATIC_GetText(const struct FName& Label, class UObject* __WorldContext);
+	struct FText GetText(const struct FName& Label, class UObject* __WorldContext);
 };
 
 

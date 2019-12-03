@@ -114,24 +114,24 @@ public:
 
 
 	void CheckVisibleArrow();
-	void ResetCloth();
+	void STATIC_ResetCloth();
 	void ResetRotation();
-	void RotationModel(float Axis_Value);
-	void UpdateCharaCloth(bool Apply);
-	void Fitting();
-	void MakeFittingInfo(TArray<struct FST_ClothesFittingInfo>* FittingInfo);
-	void InitCloth();
+	void STATIC_RotationModel(float axis_value);
+	void STATIC_UpdateCharaCloth(bool Apply);
+	void STATIC_Fitting();
+	void STATIC_MakeFittingInfo(TArray<struct FST_ClothesFittingInfo>* FittingInfo);
+	void STATIC_InitCloth();
 	void MakeList();
 	void SetCaptureCharaClothing();
-	void PushDownButton();
+	void STATIC_PushDownButton();
 	void ChangeClothing();
 	void PushRightLeftCursor(int Value);
-	void PushRightButton();
-	void PushUpDownCursor(int Value);
+	void STATIC_PushRightButton();
+	void STATIC_PushUpDownCursor(int Value);
 	void Construct();
-	void ClothChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
+	void STATIC_ClothChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
 	void BndEvt__FadeAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void ExecuteUbergraph_BPW_UI_DressMode(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_UI_DressMode(int EntryPoint);
 };
 
 

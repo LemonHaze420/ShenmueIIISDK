@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Adventure_HUD.BPF_Adventure_HUD_C.getS3AdventureHud
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetMulticast, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3AdventureHUD_C*    AdventureHUD                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Adventure_HUD_C::STATIC_getS3AdventureHud(class UObject* __WorldContext, class ABP_S3AdventureHUD_C** AdventureHUD)
+void UBPF_Adventure_HUD_C::getS3AdventureHud(class UObject* __WorldContext, class ABP_S3AdventureHUD_C** AdventureHUD)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Adventure_HUD.BPF_Adventure_HUD_C.getS3AdventureHud");
 

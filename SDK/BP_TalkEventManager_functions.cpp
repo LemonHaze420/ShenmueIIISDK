@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsStreetFightScript
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_TalkEventManager_C::IsStreetFightScript()
+bool ABP_TalkEventManager_C::STATIC_IsStreetFightScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.IsStreetFightScript");
 
 	ABP_TalkEventManager_C_IsStreetFightScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ bool ABP_TalkEventManager_C::IsStreetFightScript()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsIgonoreShe
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           Ignore                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -46,6 +47,7 @@ void ABP_TalkEventManager_C::IsIgonoreShe(bool* Ignore)
 	ABP_TalkEventManager_C_IsIgonoreShe_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +59,7 @@ void ABP_TalkEventManager_C::IsIgonoreShe(bool* Ignore)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetDisableAnsel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Disable                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -69,6 +71,7 @@ void ABP_TalkEventManager_C::SetDisableAnsel(bool Disable)
 	params.Disable = Disable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,11 +80,11 @@ void ABP_TalkEventManager_C::SetDisableAnsel(bool Disable)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecMuteSoundTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UMuteFadeSoundTask*      MuteSoundTask                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecMuteSoundTask(class UMuteFadeSoundTask* MuteSoundTask)
+void ABP_TalkEventManager_C::STATIC_ExecMuteSoundTask(class UMuteFadeSoundTask* MuteSoundTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecMuteSoundTask");
 
@@ -97,15 +100,16 @@ void ABP_TalkEventManager_C::ExecMuteSoundTask(class UMuteFadeSoundTask* MuteSou
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.StopForceSkip
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_TalkEventManager_C::StopForceSkip()
+void ABP_TalkEventManager_C::STATIC_StopForceSkip()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.StopForceSkip");
 
 	ABP_TalkEventManager_C_StopForceSkip_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,12 +118,12 @@ void ABP_TalkEventManager_C::StopForceSkip()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CheckCanSkip
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Skip                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::CheckCanSkip(bool Skip, bool* CAN)
+void ABP_TalkEventManager_C::STATIC_CheckCanSkip(bool Skip, bool* CAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.CheckCanSkip");
 
@@ -138,7 +142,7 @@ void ABP_TalkEventManager_C::CheckCanSkip(bool Skip, bool* CAN)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecFade
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -162,18 +166,18 @@ void ABP_TalkEventManager_C::ExecFade(int Type, float Time, int ColorIndex)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SkipTalk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           AC_Only                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           Debug                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           DEBUG                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::SkipTalk(bool AC_Only, bool Debug)
+void ABP_TalkEventManager_C::STATIC_SkipTalk(bool AC_Only, bool DEBUG)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SkipTalk");
 
 	ABP_TalkEventManager_C_SkipTalk_Params params;
 	params.AC_Only = AC_Only;
-	params.Debug = Debug;
+	params.DEBUG = DEBUG;
 
 	auto flags = fn->FunctionFlags;
 
@@ -184,9 +188,9 @@ void ABP_TalkEventManager_C::SkipTalk(bool AC_Only, bool Debug)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.NotifyCameraChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkEventManager_C::NotifyCameraChange()
+void ABP_TalkEventManager_C::STATIC_NotifyCameraChange()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.NotifyCameraChange");
 
@@ -201,7 +205,7 @@ void ABP_TalkEventManager_C::NotifyCameraChange()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.RunStandAloneScript
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  InTalkedActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InIsBS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -229,7 +233,7 @@ void ABP_TalkEventManager_C::RunStandAloneScript(class AActor* InTalkedActor, bo
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CheckLookAtTask
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class ULookAtTask*             Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Failed                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -253,11 +257,11 @@ void ABP_TalkEventManager_C::CheckLookAtTask(class ULookAtTask* Task, bool* Fail
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetMoonLightCastShadow
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::SetMoonLightCastShadow(bool Enable)
+void ABP_TalkEventManager_C::STATIC_SetMoonLightCastShadow(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SetMoonLightCastShadow");
 
@@ -265,6 +269,7 @@ void ABP_TalkEventManager_C::SetMoonLightCastShadow(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -273,13 +278,13 @@ void ABP_TalkEventManager_C::SetMoonLightCastShadow(bool Enable)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TeleportActor
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Rotation                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_TalkEventManager_C::TeleportActor(class AActor* Actor, const struct FVector& Location, const struct FRotator& Rotation)
+void ABP_TalkEventManager_C::STATIC_TeleportActor(class AActor* Actor, const struct FVector& Location, const struct FRotator& Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TeleportActor");
 
@@ -289,6 +294,7 @@ void ABP_TalkEventManager_C::TeleportActor(class AActor* Actor, const struct FVe
 	params.Rotation = Rotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -297,11 +303,11 @@ void ABP_TalkEventManager_C::TeleportActor(class AActor* Actor, const struct FVe
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecPauseScheduleTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPauseScheduleTask*      PauseScheduleTask              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecPauseScheduleTask(class UPauseScheduleTask* PauseScheduleTask)
+void ABP_TalkEventManager_C::STATIC_ExecPauseScheduleTask(class UPauseScheduleTask* PauseScheduleTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecPauseScheduleTask");
 
@@ -317,15 +323,16 @@ void ABP_TalkEventManager_C::ExecPauseScheduleTask(class UPauseScheduleTask* Pau
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FinishShowItemEnd
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkEventManager_C::FinishShowItemEnd()
+void ABP_TalkEventManager_C::STATIC_FinishShowItemEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.FinishShowItemEnd");
 
 	ABP_TalkEventManager_C_FinishShowItemEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -334,7 +341,7 @@ void ABP_TalkEventManager_C::FinishShowItemEnd()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FindTalkScriptTask
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UTalkScript*             Script                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  CheckTalkTaskClass             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -363,7 +370,7 @@ void ABP_TalkEventManager_C::FindTalkScriptTask(class UTalkScript* Script, class
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CheckForceAddDetect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, NetMulticast, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TalkEventManager_C::CheckForceAddDetect()
 {
@@ -380,11 +387,11 @@ void ABP_TalkEventManager_C::CheckForceAddDetect()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetTalkedActor
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::SetTalkedActor(class AActor* Actor)
+void ABP_TalkEventManager_C::STATIC_SetTalkedActor(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SetTalkedActor");
 
@@ -400,11 +407,11 @@ void ABP_TalkEventManager_C::SetTalkedActor(class AActor* Actor)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetCurrentTask
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // class UTalkEventTaskBase*      Task                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::GetCurrentTask(class UTalkEventTaskBase** Task)
+void ABP_TalkEventManager_C::STATIC_GetCurrentTask(class UTalkEventTaskBase** Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.GetCurrentTask");
 
@@ -422,11 +429,11 @@ void ABP_TalkEventManager_C::GetCurrentTask(class UTalkEventTaskBase** Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecDojoCaptionTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, Public, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UDojoCaptionTask*        Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecDojoCaptionTask(class UDojoCaptionTask* Task)
+void ABP_TalkEventManager_C::STATIC_ExecDojoCaptionTask(class UDojoCaptionTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecDojoCaptionTask");
 
@@ -434,6 +441,7 @@ void ABP_TalkEventManager_C::ExecDojoCaptionTask(class UDojoCaptionTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -442,11 +450,11 @@ void ABP_TalkEventManager_C::ExecDojoCaptionTask(class UDojoCaptionTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecHelpPriorityTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Static, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UHelpPriorityTask*       Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecHelpPriorityTask(class UHelpPriorityTask* Task)
+void ABP_TalkEventManager_C::STATIC_ExecHelpPriorityTask(class UHelpPriorityTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecHelpPriorityTask");
 
@@ -462,7 +470,7 @@ void ABP_TalkEventManager_C::ExecHelpPriorityTask(class UHelpPriorityTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.Finalize
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -483,13 +491,13 @@ bool ABP_TalkEventManager_C::Finalize()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsExistTalkScriptTask
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTalkScript*             Script                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UClass*>          CheckTalkTaskClasses           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           bExist                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::IsExistTalkScriptTask(class UTalkScript* Script, TArray<class UClass*>* CheckTalkTaskClasses, bool* bExist)
+void ABP_TalkEventManager_C::STATIC_IsExistTalkScriptTask(class UTalkScript* Script, TArray<class UClass*>* CheckTalkTaskClasses, bool* bExist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.IsExistTalkScriptTask");
 
@@ -510,7 +518,7 @@ void ABP_TalkEventManager_C::IsExistTalkScriptTask(class UTalkScript* Script, TA
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsMiniGameTalk
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bStrictly                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -533,15 +541,16 @@ bool ABP_TalkEventManager_C::IsMiniGameTalk(bool bStrictly)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.EnableAutoCamera
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkEventManager_C::EnableAutoCamera()
+void ABP_TalkEventManager_C::STATIC_EnableAutoCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.EnableAutoCamera");
 
 	ABP_TalkEventManager_C_EnableAutoCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -550,18 +559,19 @@ void ABP_TalkEventManager_C::EnableAutoCamera()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsWaitTaskWaiting
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           isWaiting                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UWaitTask*               WaitTask                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::IsWaitTaskWaiting(bool* isWaiting, class UWaitTask** WaitTask)
+void ABP_TalkEventManager_C::STATIC_IsWaitTaskWaiting(bool* isWaiting, class UWaitTask** WaitTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.IsWaitTaskWaiting");
 
 	ABP_TalkEventManager_C_IsWaitTaskWaiting_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -575,12 +585,12 @@ void ABP_TalkEventManager_C::IsWaitTaskWaiting(bool* isWaiting, class UWaitTask*
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsTalkTransitionErroredActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3Character*            TalkTo                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::IsTalkTransitionErroredActor(class AS3Character* TalkTo, bool* Result)
+void ABP_TalkEventManager_C::STATIC_IsTalkTransitionErroredActor(class AS3Character* TalkTo, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.IsTalkTransitionErroredActor");
 
@@ -588,6 +598,7 @@ void ABP_TalkEventManager_C::IsTalkTransitionErroredActor(class AS3Character* Ta
 	params.TalkTo = TalkTo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -599,13 +610,13 @@ void ABP_TalkEventManager_C::IsTalkTransitionErroredActor(class AS3Character* Ta
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetMiniGamePrice
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class ABP_MiniGameManager_C*   MiniGameManager                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::GetMiniGamePrice(class ABP_MiniGameManager_C* MiniGameManager, bool* Success, int* Price)
+void ABP_TalkEventManager_C::STATIC_GetMiniGamePrice(class ABP_MiniGameManager_C* MiniGameManager, bool* Success, int* Price)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.GetMiniGamePrice");
 
@@ -626,11 +637,11 @@ void ABP_TalkEventManager_C::GetMiniGamePrice(class ABP_MiniGameManager_C* MiniG
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TalkTransitionError
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           bError                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::TalkTransitionError(bool* bError)
+void ABP_TalkEventManager_C::STATIC_TalkTransitionError(bool* bError)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TalkTransitionError");
 
@@ -648,7 +659,7 @@ void ABP_TalkEventManager_C::TalkTransitionError(bool* bError)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecPlayBgm
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UPlayBgmTask*            Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -668,7 +679,7 @@ void ABP_TalkEventManager_C::ExecPlayBgm(class UPlayBgmTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateDebugForceSkipFlag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkEventTaskBase*      Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -688,7 +699,7 @@ void ABP_TalkEventManager_C::UpdateDebugForceSkipFlag(class UTalkEventTaskBase* 
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetNextFighterName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 Name                           (Parm, OutParm, ZeroConstructor)
 
@@ -710,7 +721,7 @@ void ABP_TalkEventManager_C::GetNextFighterName(struct FString* Name)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateMiniGamePlayCount
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, NetServer)
 // Parameters:
 // int                            PlayCount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -730,17 +741,18 @@ void ABP_TalkEventManager_C::UpdateMiniGamePlayCount(int PlayCount)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsTalkingToShopCharacter
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_TalkEventManager_C::IsTalkingToShopCharacter()
+bool ABP_TalkEventManager_C::STATIC_IsTalkingToShopCharacter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.IsTalkingToShopCharacter");
 
 	ABP_TalkEventManager_C_IsTalkingToShopCharacter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -751,15 +763,16 @@ bool ABP_TalkEventManager_C::IsTalkingToShopCharacter()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.DestroySubtitle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkEventManager_C::DestroySubtitle()
+void ABP_TalkEventManager_C::STATIC_DestroySubtitle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.DestroySubtitle");
 
 	ABP_TalkEventManager_C_DestroySubtitle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -768,7 +781,7 @@ void ABP_TalkEventManager_C::DestroySubtitle()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CreateSubtitle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TalkEventManager_C::CreateSubtitle()
 {
@@ -785,11 +798,11 @@ void ABP_TalkEventManager_C::CreateSubtitle()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsFinishedTalkActorCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Finished                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::IsFinishedTalkActorCamera(bool* Finished)
+void ABP_TalkEventManager_C::STATIC_IsFinishedTalkActorCamera(bool* Finished)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.IsFinishedTalkActorCamera");
 
@@ -807,15 +820,16 @@ void ABP_TalkEventManager_C::IsFinishedTalkActorCamera(bool* Finished)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.RestorePlayerIgnoreCollision
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, HasOutParms, NetClient, DLLImport)
 
-void ABP_TalkEventManager_C::RestorePlayerIgnoreCollision()
+void ABP_TalkEventManager_C::STATIC_RestorePlayerIgnoreCollision()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.RestorePlayerIgnoreCollision");
 
 	ABP_TalkEventManager_C_RestorePlayerIgnoreCollision_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -824,7 +838,7 @@ void ABP_TalkEventManager_C::RestorePlayerIgnoreCollision()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.MakePlayerIgnoreCollision
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkEventManager_C::MakePlayerIgnoreCollision()
 {
@@ -841,11 +855,11 @@ void ABP_TalkEventManager_C::MakePlayerIgnoreCollision()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetWhetherPlayerIgnoreCollision
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           InStartIgnore                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::SetWhetherPlayerIgnoreCollision(bool InStartIgnore)
+void ABP_TalkEventManager_C::STATIC_SetWhetherPlayerIgnoreCollision(bool InStartIgnore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SetWhetherPlayerIgnoreCollision");
 
@@ -861,7 +875,7 @@ void ABP_TalkEventManager_C::SetWhetherPlayerIgnoreCollision(bool InStartIgnore)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecUseIKTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UUseIKTask*              UseIKTask                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -881,13 +895,13 @@ void ABP_TalkEventManager_C::ExecUseIKTask(class UUseIKTask* UseIKTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.EqualToString
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 InStr1                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FString                 InStr2                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           bEqual                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::EqualToString(struct FString* InStr1, struct FString* InStr2, bool* bEqual)
+void ABP_TalkEventManager_C::STATIC_EqualToString(struct FString* InStr1, struct FString* InStr2, bool* bEqual)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.EqualToString");
 
@@ -909,7 +923,7 @@ void ABP_TalkEventManager_C::EqualToString(struct FString* InStr1, struct FStrin
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecDevExtendedTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Public, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UDevExtendedTask*        DevExtendedTask                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -929,7 +943,7 @@ void ABP_TalkEventManager_C::ExecDevExtendedTask(class UDevExtendedTask* DevExte
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecPlaySeTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UPlaySeTask*             PlaySeTask                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -941,6 +955,7 @@ void ABP_TalkEventManager_C::ExecPlaySeTask(class UPlaySeTask* PlaySeTask)
 	params.PlaySeTask = PlaySeTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -949,7 +964,7 @@ void ABP_TalkEventManager_C::ExecPlaySeTask(class UPlaySeTask* PlaySeTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecKsVisibilityTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, NetServer)
 // Parameters:
 // class UKsVisibilityTask*       KsVisibilityTask               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -969,11 +984,11 @@ void ABP_TalkEventManager_C::ExecKsVisibilityTask(class UKsVisibilityTask* KsVis
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecInventoryTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UInventoryTask*          InventoryTask                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecInventoryTask(class UInventoryTask* InventoryTask)
+void ABP_TalkEventManager_C::STATIC_ExecInventoryTask(class UInventoryTask* InventoryTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecInventoryTask");
 
@@ -989,11 +1004,11 @@ void ABP_TalkEventManager_C::ExecInventoryTask(class UInventoryTask* InventoryTa
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecImaginary
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UImaginary*              ImaginaryTask                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecImaginary(class UImaginary* ImaginaryTask)
+void ABP_TalkEventManager_C::STATIC_ExecImaginary(class UImaginary* ImaginaryTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecImaginary");
 
@@ -1009,12 +1024,12 @@ void ABP_TalkEventManager_C::ExecImaginary(class UImaginary* ImaginaryTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.IsExistCurrentTalkScriptTask
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, Public, HasOutParms, Const)
 // Parameters:
 // TArray<class UClass*>          CheckTalkTaskClasses           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           bExist                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::IsExistCurrentTalkScriptTask(TArray<class UClass*>* CheckTalkTaskClasses, bool* bExist)
+void ABP_TalkEventManager_C::STATIC_IsExistCurrentTalkScriptTask(TArray<class UClass*>* CheckTalkTaskClasses, bool* bExist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.IsExistCurrentTalkScriptTask");
 
@@ -1034,12 +1049,12 @@ void ABP_TalkEventManager_C::IsExistCurrentTalkScriptTask(TArray<class UClass*>*
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ConvertKeywordSelectedIndex
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<E_TalkKeywordSelect> Selected                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ConvertKeywordSelectedIndex(int Index, TEnumAsByte<E_TalkKeywordSelect>* Selected)
+void ABP_TalkEventManager_C::STATIC_ConvertKeywordSelectedIndex(int Index, TEnumAsByte<E_TalkKeywordSelect>* Selected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ConvertKeywordSelectedIndex");
 
@@ -1047,6 +1062,7 @@ void ABP_TalkEventManager_C::ConvertKeywordSelectedIndex(int Index, TEnumAsByte<
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1058,7 +1074,7 @@ void ABP_TalkEventManager_C::ConvertKeywordSelectedIndex(int Index, TEnumAsByte<
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecControlCameraTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UControlCameraTask*      ControlCameraTask              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1078,7 +1094,7 @@ void ABP_TalkEventManager_C::ExecControlCameraTask(class UControlCameraTask* Con
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetupPlayerCameraAfterLookAt
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_TalkEventManager_C::SetupPlayerCameraAfterLookAt()
 {
@@ -1095,11 +1111,11 @@ void ABP_TalkEventManager_C::SetupPlayerCameraAfterLookAt()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecBuyKihudaTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBuyKihudaTask*          BuyKihudaTask                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecBuyKihudaTask(class UBuyKihudaTask* BuyKihudaTask)
+void ABP_TalkEventManager_C::STATIC_ExecBuyKihudaTask(class UBuyKihudaTask* BuyKihudaTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecBuyKihudaTask");
 
@@ -1107,6 +1123,7 @@ void ABP_TalkEventManager_C::ExecBuyKihudaTask(class UBuyKihudaTask* BuyKihudaTa
 	params.BuyKihudaTask = BuyKihudaTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1115,11 +1132,11 @@ void ABP_TalkEventManager_C::ExecBuyKihudaTask(class UBuyKihudaTask* BuyKihudaTa
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FinishLookAt
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, Private, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  NPC                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::FinishLookAt(class AActor* NPC)
+void ABP_TalkEventManager_C::STATIC_FinishLookAt(class AActor* NPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.FinishLookAt");
 
@@ -1135,7 +1152,7 @@ void ABP_TalkEventManager_C::FinishLookAt(class AActor* NPC)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.RequestStepChange
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // int                            Step                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1148,6 +1165,7 @@ bool ABP_TalkEventManager_C::RequestStepChange(int Step)
 	params.Step = Step;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1158,11 +1176,11 @@ bool ABP_TalkEventManager_C::RequestStepChange(int Step)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.HintTalkInit
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AActor*                  TalkedNPC                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::HintTalkInit(class AActor* TalkedNPC)
+void ABP_TalkEventManager_C::STATIC_HintTalkInit(class AActor* TalkedNPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.HintTalkInit");
 
@@ -1170,6 +1188,7 @@ void ABP_TalkEventManager_C::HintTalkInit(class AActor* TalkedNPC)
 	params.TalkedNPC = TalkedNPC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1178,12 +1197,12 @@ void ABP_TalkEventManager_C::HintTalkInit(class AActor* TalkedNPC)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FindNPCFromID
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::FindNPCFromID(const struct FName& ID, class AActor** Actor)
+void ABP_TalkEventManager_C::STATIC_FindNPCFromID(const struct FName& ID, class AActor** Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.FindNPCFromID");
 
@@ -1202,12 +1221,12 @@ void ABP_TalkEventManager_C::FindNPCFromID(const struct FName& ID, class AActor*
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExistAcTask
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkScript*             TalkScript                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Exist                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExistAcTask(class UTalkScript* TalkScript, bool* Exist)
+void ABP_TalkEventManager_C::STATIC_ExistAcTask(class UTalkScript* TalkScript, bool* Exist)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExistAcTask");
 
@@ -1215,6 +1234,7 @@ void ABP_TalkEventManager_C::ExistAcTask(class UTalkScript* TalkScript, bool* Ex
 	params.TalkScript = TalkScript;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1226,11 +1246,11 @@ void ABP_TalkEventManager_C::ExistAcTask(class UTalkScript* TalkScript, bool* Ex
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CanFinishTalkEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_TalkEventManager_C::CanFinishTalkEvent()
+bool ABP_TalkEventManager_C::STATIC_CanFinishTalkEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.CanFinishTalkEvent");
 
@@ -1247,11 +1267,11 @@ bool ABP_TalkEventManager_C::CanFinishTalkEvent()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetVisibilityTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USetVisibilityTask*      Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecSetVisibilityTask(class USetVisibilityTask* Task)
+void ABP_TalkEventManager_C::STATIC_ExecSetVisibilityTask(class USetVisibilityTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetVisibilityTask");
 
@@ -1267,7 +1287,7 @@ void ABP_TalkEventManager_C::ExecSetVisibilityTask(class USetVisibilityTask* Tas
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecWeatherTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USetWeatherTask*         Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1279,6 +1299,7 @@ void ABP_TalkEventManager_C::ExecWeatherTask(class USetWeatherTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1287,7 +1308,7 @@ void ABP_TalkEventManager_C::ExecWeatherTask(class USetWeatherTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CanStartCameraPreviewMode
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           CanStart                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1298,6 +1319,7 @@ void ABP_TalkEventManager_C::CanStartCameraPreviewMode(bool* CanStart)
 	ABP_TalkEventManager_C_CanStartCameraPreviewMode_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1309,7 +1331,7 @@ void ABP_TalkEventManager_C::CanStartCameraPreviewMode(bool* CanStart)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCallScriptTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UCallScriptTask*         Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1321,6 +1343,7 @@ void ABP_TalkEventManager_C::ExecCallScriptTask(class UCallScriptTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1329,11 +1352,11 @@ void ABP_TalkEventManager_C::ExecCallScriptTask(class UCallScriptTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecPostProcessTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UPostProcessTask*        Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecPostProcessTask(class UPostProcessTask* Task)
+void ABP_TalkEventManager_C::STATIC_ExecPostProcessTask(class UPostProcessTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecPostProcessTask");
 
@@ -1341,6 +1364,7 @@ void ABP_TalkEventManager_C::ExecPostProcessTask(class UPostProcessTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1349,7 +1373,7 @@ void ABP_TalkEventManager_C::ExecPostProcessTask(class UPostProcessTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecACCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class UAcCameraTask*           Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1369,7 +1393,7 @@ void ABP_TalkEventManager_C::ExecACCamera(class UAcCameraTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecAcEndTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAcEndTask*              Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1389,7 +1413,7 @@ void ABP_TalkEventManager_C::ExecAcEndTask(class UAcEndTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecAcTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class UAcTask*                 Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1409,7 +1433,7 @@ void ABP_TalkEventManager_C::ExecAcTask(class UAcTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetTalkEnableTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class USetTalkEnableTask*      Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1429,11 +1453,11 @@ void ABP_TalkEventManager_C::ExecSetTalkEnableTask(class USetTalkEnableTask* Tas
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLoadPositionAndRotationTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ULoadPositionAndRotationTask* LoadPositionAndRotationTask    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecLoadPositionAndRotationTask(class ULoadPositionAndRotationTask* LoadPositionAndRotationTask)
+void ABP_TalkEventManager_C::STATIC_ExecLoadPositionAndRotationTask(class ULoadPositionAndRotationTask* LoadPositionAndRotationTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLoadPositionAndRotationTask");
 
@@ -1449,11 +1473,11 @@ void ABP_TalkEventManager_C::ExecLoadPositionAndRotationTask(class ULoadPosition
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLoadRotationTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULoadRotationTask*       LoadRotationTask               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecLoadRotationTask(class ULoadRotationTask* LoadRotationTask)
+void ABP_TalkEventManager_C::STATIC_ExecLoadRotationTask(class ULoadRotationTask* LoadRotationTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLoadRotationTask");
 
@@ -1469,11 +1493,11 @@ void ABP_TalkEventManager_C::ExecLoadRotationTask(class ULoadRotationTask* LoadR
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLoadPositionTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ULoadPositionTask*       Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecLoadPositionTask(class ULoadPositionTask* Task)
+void ABP_TalkEventManager_C::STATIC_ExecLoadPositionTask(class ULoadPositionTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLoadPositionTask");
 
@@ -1481,6 +1505,7 @@ void ABP_TalkEventManager_C::ExecLoadPositionTask(class ULoadPositionTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1489,7 +1514,7 @@ void ABP_TalkEventManager_C::ExecLoadPositionTask(class ULoadPositionTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSavePositionAndRotationTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USavePositionAndRotationTask* Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1509,11 +1534,11 @@ void ABP_TalkEventManager_C::ExecSavePositionAndRotationTask(class USavePosition
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSaveRotationTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USaveRotationTask*       Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecSaveRotationTask(class USaveRotationTask* Task)
+void ABP_TalkEventManager_C::STATIC_ExecSaveRotationTask(class USaveRotationTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSaveRotationTask");
 
@@ -1521,6 +1546,7 @@ void ABP_TalkEventManager_C::ExecSaveRotationTask(class USaveRotationTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1529,11 +1555,11 @@ void ABP_TalkEventManager_C::ExecSaveRotationTask(class USaveRotationTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSavePositionTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USavePositionTask*       SavePositionTask               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecSavePositionTask(class USavePositionTask* SavePositionTask)
+void ABP_TalkEventManager_C::STATIC_ExecSavePositionTask(class USavePositionTask* SavePositionTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSavePositionTask");
 
@@ -1541,6 +1567,7 @@ void ABP_TalkEventManager_C::ExecSavePositionTask(class USavePositionTask* SaveP
 	params.SavePositionTask = SavePositionTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1549,7 +1576,7 @@ void ABP_TalkEventManager_C::ExecSavePositionTask(class USavePositionTask* SaveP
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetPositionAndRotationTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class USetPositionAndRotationTask* SetPositionAndRotationTask     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1569,7 +1596,7 @@ void ABP_TalkEventManager_C::ExecSetPositionAndRotationTask(class USetPositionAn
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecStopMotionTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UStopMotionTask*         StopMotionTask                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1589,12 +1616,12 @@ void ABP_TalkEventManager_C::ExecStopMotionTask(class UStopMotionTask* StopMotio
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TryTalkScriptReimport
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UTalkScript*             TalkScript                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::TryTalkScriptReimport(class UTalkScript* TalkScript, bool* bSuccess)
+void ABP_TalkEventManager_C::STATIC_TryTalkScriptReimport(class UTalkScript* TalkScript, bool* bSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TryTalkScriptReimport");
 
@@ -1602,6 +1629,7 @@ void ABP_TalkEventManager_C::TryTalkScriptReimport(class UTalkScript* TalkScript
 	params.TalkScript = TalkScript;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1613,11 +1641,11 @@ void ABP_TalkEventManager_C::TryTalkScriptReimport(class UTalkScript* TalkScript
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCameraActorTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UCameraActorTask*        CameraActorTask                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecCameraActorTask(class UCameraActorTask* CameraActorTask)
+void ABP_TalkEventManager_C::STATIC_ExecCameraActorTask(class UCameraActorTask* CameraActorTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCameraActorTask");
 
@@ -1633,7 +1661,7 @@ void ABP_TalkEventManager_C::ExecCameraActorTask(class UCameraActorTask* CameraA
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetActiveScriptTalkComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Event, NetResponse, NetMulticast, NetServer)
 // Parameters:
 // class UBPC_S3_TalkComponent_C* TalkComponent                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -1644,6 +1672,7 @@ void ABP_TalkEventManager_C::GetActiveScriptTalkComponent(class UBPC_S3_TalkComp
 	ABP_TalkEventManager_C_GetActiveScriptTalkComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1655,7 +1684,7 @@ void ABP_TalkEventManager_C::GetActiveScriptTalkComponent(class UBPC_S3_TalkComp
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCutSceneTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPlayCutsceneTask*       Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1667,6 +1696,7 @@ void ABP_TalkEventManager_C::ExecCutSceneTask(class UPlayCutsceneTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1675,11 +1705,11 @@ void ABP_TalkEventManager_C::ExecCutSceneTask(class UPlayCutsceneTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecRewardMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UGiftMiniGameTask*       GiftMiniGameTask               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecRewardMiniGameTask(class UGiftMiniGameTask* GiftMiniGameTask)
+void ABP_TalkEventManager_C::STATIC_ExecRewardMiniGameTask(class UGiftMiniGameTask* GiftMiniGameTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecRewardMiniGameTask");
 
@@ -1687,6 +1717,7 @@ void ABP_TalkEventManager_C::ExecRewardMiniGameTask(class UGiftMiniGameTask* Gif
 	params.GiftMiniGameTask = GiftMiniGameTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1695,7 +1726,7 @@ void ABP_TalkEventManager_C::ExecRewardMiniGameTask(class UGiftMiniGameTask* Gif
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ActivateMiniGameTask
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UTalkEventTaskBase*      TaskBase                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1719,7 +1750,7 @@ void ABP_TalkEventManager_C::ActivateMiniGameTask(class UTalkEventTaskBase* Task
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecUpdatePlayPriceMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UUpdatePlayPriceMiniGame* UpdatePlayPriceMniGameTask     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1731,6 +1762,7 @@ void ABP_TalkEventManager_C::ExecUpdatePlayPriceMiniGameTask(class UUpdatePlayPr
 	params.UpdatePlayPriceMniGameTask = UpdatePlayPriceMniGameTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1739,7 +1771,7 @@ void ABP_TalkEventManager_C::ExecUpdatePlayPriceMiniGameTask(class UUpdatePlayPr
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecChooseMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Private, Protected, Delegate, HasDefaults, NetClient, Const)
 // Parameters:
 // class UChooseMiniGameTask*     ChooseMniGameTask              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1751,6 +1783,7 @@ void ABP_TalkEventManager_C::ExecChooseMiniGameTask(class UChooseMiniGameTask* C
 	params.ChooseMniGameTask = ChooseMniGameTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1759,9 +1792,9 @@ void ABP_TalkEventManager_C::ExecChooseMiniGameTask(class UChooseMiniGameTask* C
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.PrintTalkDebug
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Static, MulticastDelegate, NetServer)
 
-void ABP_TalkEventManager_C::PrintTalkDebug()
+void ABP_TalkEventManager_C::STATIC_PrintTalkDebug()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.PrintTalkDebug");
 
@@ -1776,7 +1809,7 @@ void ABP_TalkEventManager_C::PrintTalkDebug()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetPositionTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USetPositionTask*        SetPositionTask                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1788,6 +1821,7 @@ void ABP_TalkEventManager_C::ExecSetPositionTask(class USetPositionTask* SetPosi
 	params.SetPositionTask = SetPositionTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1796,11 +1830,11 @@ void ABP_TalkEventManager_C::ExecSetPositionTask(class USetPositionTask* SetPosi
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetRotatioinTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USetRotationTask*        SetRotationTask                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecSetRotatioinTask(class USetRotationTask* SetRotationTask)
+void ABP_TalkEventManager_C::STATIC_ExecSetRotatioinTask(class USetRotationTask* SetRotationTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetRotatioinTask");
 
@@ -1808,6 +1842,7 @@ void ABP_TalkEventManager_C::ExecSetRotatioinTask(class USetRotationTask* SetRot
 	params.SetRotationTask = SetRotationTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1816,7 +1851,7 @@ void ABP_TalkEventManager_C::ExecSetRotatioinTask(class USetRotationTask* SetRot
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetBsEnableTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USetBsEnableTask*        BsEnableTask                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1836,7 +1871,7 @@ void ABP_TalkEventManager_C::ExecSetBsEnableTask(class USetBsEnableTask* BsEnabl
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetBsCountTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USetBsCountTask*         SetBsCountTask                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1848,6 +1883,7 @@ void ABP_TalkEventManager_C::ExecSetBsCountTask(class USetBsCountTask* SetBsCoun
 	params.SetBsCountTask = SetBsCountTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1856,17 +1892,18 @@ void ABP_TalkEventManager_C::ExecSetBsCountTask(class USetBsCountTask* SetBsCoun
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExistLookAtTurnningCharacter
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExistLookAtTurnningCharacter(bool* Result)
+void ABP_TalkEventManager_C::STATIC_ExistLookAtTurnningCharacter(bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExistLookAtTurnningCharacter");
 
 	ABP_TalkEventManager_C_ExistLookAtTurnningCharacter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1878,7 +1915,7 @@ void ABP_TalkEventManager_C::ExistLookAtTurnningCharacter(bool* Result)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FinalizeMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkEventManager_C::FinalizeMiniGame()
 {
@@ -1895,7 +1932,7 @@ void ABP_TalkEventManager_C::FinalizeMiniGame()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecResultMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UResultMiniGameTask*     ResultGameTask                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1907,6 +1944,7 @@ void ABP_TalkEventManager_C::ExecResultMiniGameTask(class UResultMiniGameTask* R
 	params.ResultGameTask = ResultGameTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1915,7 +1953,7 @@ void ABP_TalkEventManager_C::ExecResultMiniGameTask(class UResultMiniGameTask* R
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecResumeMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UResumeMiniGameTask*     ResumeMiniGameTask             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1935,11 +1973,11 @@ void ABP_TalkEventManager_C::ExecResumeMiniGameTask(class UResumeMiniGameTask* R
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecEventMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UEventMiniGameTask*      EventGameTask                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecEventMiniGameTask(class UEventMiniGameTask* EventGameTask)
+void ABP_TalkEventManager_C::STATIC_ExecEventMiniGameTask(class UEventMiniGameTask* EventGameTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecEventMiniGameTask");
 
@@ -1947,6 +1985,7 @@ void ABP_TalkEventManager_C::ExecEventMiniGameTask(class UEventMiniGameTask* Eve
 	params.EventGameTask = EventGameTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1955,18 +1994,19 @@ void ABP_TalkEventManager_C::ExecEventMiniGameTask(class UEventMiniGameTask* Eve
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetLookAtCache
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bLookAtCommandExecuted         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  LookAtTarget                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::GetLookAtCache(bool* bLookAtCommandExecuted, class AActor** LookAtTarget)
+void ABP_TalkEventManager_C::STATIC_GetLookAtCache(bool* bLookAtCommandExecuted, class AActor** LookAtTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.GetLookAtCache");
 
 	ABP_TalkEventManager_C_GetLookAtCache_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1980,11 +2020,11 @@ void ABP_TalkEventManager_C::GetLookAtCache(bool* bLookAtCommandExecuted, class 
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateCameraGroupTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UUpdateCameraGroupTask*  Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::UpdateCameraGroupTask(class UUpdateCameraGroupTask* Task)
+void ABP_TalkEventManager_C::STATIC_UpdateCameraGroupTask(class UUpdateCameraGroupTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateCameraGroupTask");
 
@@ -2000,11 +2040,11 @@ void ABP_TalkEventManager_C::UpdateCameraGroupTask(class UUpdateCameraGroupTask*
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateCameraTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UUpdateCameraTask*       Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::UpdateCameraTask(class UUpdateCameraTask* Task)
+void ABP_TalkEventManager_C::STATIC_UpdateCameraTask(class UUpdateCameraTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateCameraTask");
 
@@ -2012,6 +2052,7 @@ void ABP_TalkEventManager_C::UpdateCameraTask(class UUpdateCameraTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2020,11 +2061,11 @@ void ABP_TalkEventManager_C::UpdateCameraTask(class UUpdateCameraTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCanMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UCanMiniGameFlagTask*    CanMiniGameFlagTask            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecCanMiniGameTask(class UCanMiniGameFlagTask* CanMiniGameFlagTask)
+void ABP_TalkEventManager_C::STATIC_ExecCanMiniGameTask(class UCanMiniGameFlagTask* CanMiniGameFlagTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCanMiniGameTask");
 
@@ -2040,11 +2081,11 @@ void ABP_TalkEventManager_C::ExecCanMiniGameTask(class UCanMiniGameFlagTask* Can
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecShowPriceTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, Public, Private, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UShowPriceTask*          ShowPriceTask                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecShowPriceTask(class UShowPriceTask* ShowPriceTask)
+void ABP_TalkEventManager_C::STATIC_ExecShowPriceTask(class UShowPriceTask* ShowPriceTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecShowPriceTask");
 
@@ -2060,7 +2101,7 @@ void ABP_TalkEventManager_C::ExecShowPriceTask(class UShowPriceTask* ShowPriceTa
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecEnterMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UEnterMiniGameTask*      EnterMiniGameTask              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2080,15 +2121,16 @@ void ABP_TalkEventManager_C::ExecEnterMiniGameTask(class UEnterMiniGameTask* Ent
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CreateAutoTalkCameraDirector
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkEventManager_C::CreateAutoTalkCameraDirector()
+void ABP_TalkEventManager_C::STATIC_CreateAutoTalkCameraDirector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.CreateAutoTalkCameraDirector");
 
 	ABP_TalkEventManager_C_CreateAutoTalkCameraDirector_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2097,17 +2139,18 @@ void ABP_TalkEventManager_C::CreateAutoTalkCameraDirector()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.WhetherToChangeCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::WhetherToChangeCamera(bool* Result)
+void ABP_TalkEventManager_C::STATIC_WhetherToChangeCamera(bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.WhetherToChangeCamera");
 
 	ABP_TalkEventManager_C_WhetherToChangeCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2119,7 +2162,7 @@ void ABP_TalkEventManager_C::WhetherToChangeCamera(bool* Result)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetTalkTaskDuration
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UTalkTask*               TalkTask                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2143,7 +2186,7 @@ void ABP_TalkEventManager_C::GetTalkTaskDuration(class UTalkTask* TalkTask, floa
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetCurrentTalkTaskDuration
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // float                          Duration                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -2154,6 +2197,7 @@ void ABP_TalkEventManager_C::GetCurrentTalkTaskDuration(float* Duration)
 	ABP_TalkEventManager_C_GetCurrentTalkTaskDuration_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2165,7 +2209,7 @@ void ABP_TalkEventManager_C::GetCurrentTalkTaskDuration(float* Duration)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetDetectActionTarget
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, NetServer)
 // Parameters:
 // class AActor*                  DetectActionTarget             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -2176,6 +2220,7 @@ void ABP_TalkEventManager_C::GetDetectActionTarget(class AActor** DetectActionTa
 	ABP_TalkEventManager_C_GetDetectActionTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2187,9 +2232,9 @@ void ABP_TalkEventManager_C::GetDetectActionTarget(class AActor** DetectActionTa
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetTalkedActorFromTalkScript
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 
-void ABP_TalkEventManager_C::SetTalkedActorFromTalkScript()
+void ABP_TalkEventManager_C::STATIC_SetTalkedActorFromTalkScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SetTalkedActorFromTalkScript");
 
@@ -2204,7 +2249,7 @@ void ABP_TalkEventManager_C::SetTalkedActorFromTalkScript()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetActorFromTagCharaName
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2217,6 +2262,7 @@ void ABP_TalkEventManager_C::GetActorFromTagCharaName(const struct FName& CharaN
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2228,11 +2274,11 @@ void ABP_TalkEventManager_C::GetActorFromTagCharaName(const struct FName& CharaN
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCharacterTurnTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UCharacterTurnTask*      CharacterTurnTask              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecCharacterTurnTask(class UCharacterTurnTask* CharacterTurnTask)
+void ABP_TalkEventManager_C::STATIC_ExecCharacterTurnTask(class UCharacterTurnTask* CharacterTurnTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCharacterTurnTask");
 
@@ -2248,12 +2294,12 @@ void ABP_TalkEventManager_C::ExecCharacterTurnTask(class UCharacterTurnTask* Cha
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetJoinedThisTalkActorByName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::GetJoinedThisTalkActorByName(const struct FName& Name, class AActor** Actor)
+void ABP_TalkEventManager_C::STATIC_GetJoinedThisTalkActorByName(const struct FName& Name, class AActor** Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.GetJoinedThisTalkActorByName");
 
@@ -2272,17 +2318,18 @@ void ABP_TalkEventManager_C::GetJoinedThisTalkActorByName(const struct FName& Na
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CanSkipCurrentTask
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::CanSkipCurrentTask(bool* bCan)
+void ABP_TalkEventManager_C::STATIC_CanSkipCurrentTask(bool* bCan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.CanSkipCurrentTask");
 
 	ABP_TalkEventManager_C_CanSkipCurrentTask_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2294,7 +2341,7 @@ void ABP_TalkEventManager_C::CanSkipCurrentTask(bool* bCan)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecFadeTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UFadeTask*               FadeTask                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2306,6 +2353,7 @@ void ABP_TalkEventManager_C::ExecFadeTask(class UFadeTask* FadeTask)
 	params.FadeTask = FadeTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2314,7 +2362,7 @@ void ABP_TalkEventManager_C::ExecFadeTask(class UFadeTask* FadeTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecStartedMiniGameTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UStartedMiniGameTask*    MiniGameTask                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2326,6 +2374,7 @@ void ABP_TalkEventManager_C::ExecStartedMiniGameTask(class UStartedMiniGameTask*
 	params.MiniGameTask = MiniGameTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2334,7 +2383,7 @@ void ABP_TalkEventManager_C::ExecStartedMiniGameTask(class UStartedMiniGameTask*
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CanTransitionToTalkProcessing
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Public, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  TalkTo                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2358,12 +2407,12 @@ void ABP_TalkEventManager_C::CanTransitionToTalkProcessing(class AActor* TalkTo,
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.InitVariables
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AActor*                  InTalkedActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InIsBS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::InitVariables(class AActor* InTalkedActor, bool InIsBS)
+void ABP_TalkEventManager_C::STATIC_InitVariables(class AActor* InTalkedActor, bool InIsBS)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.InitVariables");
 
@@ -2380,12 +2429,12 @@ void ABP_TalkEventManager_C::InitVariables(class AActor* InTalkedActor, bool InI
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetTalkType
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkEventTaskBase*      Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // EAutoCameraType                Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::GetTalkType(class UTalkEventTaskBase* Task, EAutoCameraType* Type)
+void ABP_TalkEventManager_C::STATIC_GetTalkType(class UTalkEventTaskBase* Task, EAutoCameraType* Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.GetTalkType");
 
@@ -2404,14 +2453,14 @@ void ABP_TalkEventManager_C::GetTalkType(class UTalkEventTaskBase* Task, EAutoCa
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetLookAtTaskMotionDirection
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  LookAtActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  NpcActor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Yaw                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Picth                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::GetLookAtTaskMotionDirection(class AActor* LookAtActor, class AActor* NpcActor, float* Yaw, float* Picth)
+void ABP_TalkEventManager_C::STATIC_GetLookAtTaskMotionDirection(class AActor* LookAtActor, class AActor* NpcActor, float* Yaw, float* Picth)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.GetLookAtTaskMotionDirection");
 
@@ -2433,12 +2482,12 @@ void ABP_TalkEventManager_C::GetLookAtTaskMotionDirection(class AActor* LookAtAc
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLookAtTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, MulticastDelegate, NetServer)
 // Parameters:
 // class ULookAtTask*             LookAtTask                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           OnlyCamera                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecLookAtTask(class ULookAtTask* LookAtTask, bool OnlyCamera)
+void ABP_TalkEventManager_C::STATIC_ExecLookAtTask(class ULookAtTask* LookAtTask, bool OnlyCamera)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecLookAtTask");
 
@@ -2455,12 +2504,12 @@ void ABP_TalkEventManager_C::ExecLookAtTask(class ULookAtTask* LookAtTask, bool 
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecShowItemTask
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class UShowItemTask*           ShowItemTask                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isShowStart                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecShowItemTask(class UShowItemTask* ShowItemTask, bool* isShowStart)
+void ABP_TalkEventManager_C::STATIC_ExecShowItemTask(class UShowItemTask* ShowItemTask, bool* isShowStart)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecShowItemTask");
 
@@ -2468,6 +2517,7 @@ void ABP_TalkEventManager_C::ExecShowItemTask(class UShowItemTask* ShowItemTask,
 	params.ShowItemTask = ShowItemTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2479,15 +2529,16 @@ void ABP_TalkEventManager_C::ExecShowItemTask(class UShowItemTask* ShowItemTask,
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.DestroyKeywardSelect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkEventManager_C::DestroyKeywardSelect()
+void ABP_TalkEventManager_C::STATIC_DestroyKeywardSelect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.DestroyKeywardSelect");
 
 	ABP_TalkEventManager_C_DestroyKeywardSelect_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2496,11 +2547,11 @@ void ABP_TalkEventManager_C::DestroyKeywardSelect()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecKsLabelTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UKsLabelTask*            KsLabelTask                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecKsLabelTask(class UKsLabelTask* KsLabelTask)
+void ABP_TalkEventManager_C::STATIC_ExecKsLabelTask(class UKsLabelTask* KsLabelTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecKsLabelTask");
 
@@ -2516,13 +2567,13 @@ void ABP_TalkEventManager_C::ExecKsLabelTask(class UKsLabelTask* KsLabelTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TryGetItemIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 FlagStr                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-// bool                           isFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::TryGetItemIndex(const struct FString& FlagStr, bool* isFound, int* Index)
+void ABP_TalkEventManager_C::STATIC_TryGetItemIndex(const struct FString& FlagStr, bool* IsFound, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TryGetItemIndex");
 
@@ -2530,24 +2581,25 @@ void ABP_TalkEventManager_C::TryGetItemIndex(const struct FString& FlagStr, bool
 	params.FlagStr = FlagStr;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (isFound != nullptr)
-		*isFound = params.isFound;
+	if (IsFound != nullptr)
+		*IsFound = params.IsFound;
 	if (Index != nullptr)
 		*Index = params.Index;
 }
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecItemTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class UItemTask*               ItemTask                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecItemTask(class UItemTask* ItemTask)
+void ABP_TalkEventManager_C::STATIC_ExecItemTask(class UItemTask* ItemTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecItemTask");
 
@@ -2555,6 +2607,7 @@ void ABP_TalkEventManager_C::ExecItemTask(class UItemTask* ItemTask)
 	params.ItemTask = ItemTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2563,9 +2616,9 @@ void ABP_TalkEventManager_C::ExecItemTask(class UItemTask* ItemTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetTalkActors
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkEventManager_C::SetTalkActors()
+void ABP_TalkEventManager_C::STATIC_SetTalkActors()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SetTalkActors");
 
@@ -2580,12 +2633,12 @@ void ABP_TalkEventManager_C::SetTalkActors()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SetTargetsFromIds
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FString>         Array                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class AActor*>          TargetArray                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_TalkEventManager_C::SetTargetsFromIds(TArray<struct FString>* Array, TArray<class AActor*>* TargetArray)
+void ABP_TalkEventManager_C::STATIC_SetTargetsFromIds(TArray<struct FString>* Array, TArray<class AActor*>* TargetArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SetTargetsFromIds");
 
@@ -2605,7 +2658,7 @@ void ABP_TalkEventManager_C::SetTargetsFromIds(TArray<struct FString>* Array, TA
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCameraTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UCameraTask*             CameraTask                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2617,6 +2670,7 @@ void ABP_TalkEventManager_C::ExecCameraTask(class UCameraTask* CameraTask)
 	params.CameraTask = CameraTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2625,7 +2679,7 @@ void ABP_TalkEventManager_C::ExecCameraTask(class UCameraTask* CameraTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecCameraGroupTargets
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UCameraGroupTask*        CameraGroupTask                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2645,7 +2699,7 @@ void ABP_TalkEventManager_C::ExecCameraGroupTargets(class UCameraGroupTask* Came
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetSubtitleChara
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UTalkTask*               TalkTask                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EN_TalkCharacterType> TalkType                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2658,6 +2712,7 @@ void ABP_TalkEventManager_C::GetSubtitleChara(class UTalkTask* TalkTask, TEnumAs
 	params.TalkTask = TalkTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2669,7 +2724,7 @@ void ABP_TalkEventManager_C::GetSubtitleChara(class UTalkTask* TalkTask, TEnumAs
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.GetSpeakerID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UTalkTask*               TalkTask                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -2693,7 +2748,7 @@ void ABP_TalkEventManager_C::GetSpeakerID(class UTalkTask* TalkTask, struct FNam
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ClearSubtitle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_TalkEventManager_C::ClearSubtitle()
 {
@@ -2702,6 +2757,7 @@ void ABP_TalkEventManager_C::ClearSubtitle()
 	ABP_TalkEventManager_C_ClearSubtitle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2710,7 +2766,7 @@ void ABP_TalkEventManager_C::ClearSubtitle()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.RevertFlags
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkEventManager_C::RevertFlags()
 {
@@ -2719,6 +2775,7 @@ void ABP_TalkEventManager_C::RevertFlags()
 	ABP_TalkEventManager_C_RevertFlags_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2727,11 +2784,11 @@ void ABP_TalkEventManager_C::RevertFlags()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecMotionTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UMotionTask*             MotionTask                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecMotionTask(class UMotionTask* MotionTask)
+void ABP_TalkEventManager_C::STATIC_ExecMotionTask(class UMotionTask* MotionTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecMotionTask");
 
@@ -2747,7 +2804,7 @@ void ABP_TalkEventManager_C::ExecMotionTask(class UMotionTask* MotionTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecInfoTask
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UInfoTask*               InfoTask                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2767,12 +2824,12 @@ void ABP_TalkEventManager_C::ExecInfoTask(class UInfoTask* InfoTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TraceErrorVoice
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 Voice                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::TraceErrorVoice(class UObject* Voice, const struct FName& Label)
+void ABP_TalkEventManager_C::STATIC_TraceErrorVoice(class UObject* Voice, const struct FName& Label)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TraceErrorVoice");
 
@@ -2789,11 +2846,11 @@ void ABP_TalkEventManager_C::TraceErrorVoice(class UObject* Voice, const struct 
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecFocusChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UChangeFocusTask*        Task                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecFocusChange(class UChangeFocusTask* Task)
+void ABP_TalkEventManager_C::STATIC_ExecFocusChange(class UChangeFocusTask* Task)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecFocusChange");
 
@@ -2801,6 +2858,7 @@ void ABP_TalkEventManager_C::ExecFocusChange(class UChangeFocusTask* Task)
 	params.Task = Task;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2809,7 +2867,7 @@ void ABP_TalkEventManager_C::ExecFocusChange(class UChangeFocusTask* Task)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateSubList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 
 void ABP_TalkEventManager_C::UpdateSubList()
 {
@@ -2818,6 +2876,7 @@ void ABP_TalkEventManager_C::UpdateSubList()
 	ABP_TalkEventManager_C_UpdateSubList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2826,7 +2885,7 @@ void ABP_TalkEventManager_C::UpdateSubList()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UpdateActiveList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_TalkEventManager_C::UpdateActiveList()
 {
@@ -2843,7 +2902,7 @@ void ABP_TalkEventManager_C::UpdateActiveList()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TryGetTalkComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBPC_S3_TalkComponent_C* TalkComponent                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -2867,11 +2926,11 @@ void ABP_TalkEventManager_C::TryGetTalkComponent(class AActor* Actor, class UBPC
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecEmoteTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UEmoteTask*              EmoteTask                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ExecEmoteTask(class UEmoteTask* EmoteTask)
+void ABP_TalkEventManager_C::STATIC_ExecEmoteTask(class UEmoteTask* EmoteTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ExecEmoteTask");
 
@@ -2879,6 +2938,7 @@ void ABP_TalkEventManager_C::ExecEmoteTask(class UEmoteTask* EmoteTask)
 	params.EmoteTask = EmoteTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2887,14 +2947,14 @@ void ABP_TalkEventManager_C::ExecEmoteTask(class UEmoteTask* EmoteTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FindSubStrings
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 InStr                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TArray<struct FString>         SubStrings                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           isFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FString>         foundStrings                   (Parm, OutParm, ZeroConstructor)
 
-void ABP_TalkEventManager_C::FindSubStrings(const struct FString& InStr, TArray<struct FString>* SubStrings, bool* isFound, TArray<struct FString>* foundStrings)
+void ABP_TalkEventManager_C::STATIC_FindSubStrings(const struct FString& InStr, TArray<struct FString>* SubStrings, bool* IsFound, TArray<struct FString>* foundStrings)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.FindSubStrings");
 
@@ -2909,15 +2969,15 @@ void ABP_TalkEventManager_C::FindSubStrings(const struct FString& InStr, TArray<
 
 	if (SubStrings != nullptr)
 		*SubStrings = params.SubStrings;
-	if (isFound != nullptr)
-		*isFound = params.isFound;
+	if (IsFound != nullptr)
+		*IsFound = params.IsFound;
 	if (foundStrings != nullptr)
 		*foundStrings = params.foundStrings;
 }
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecSetFlag
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class USetTask*                SetTask                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2937,12 +2997,12 @@ void ABP_TalkEventManager_C::ExecSetFlag(class USetTask* SetTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ReplaceLF
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 InStr                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 Result                         (Parm, OutParm, ZeroConstructor)
 
-void ABP_TalkEventManager_C::ReplaceLF(const struct FString& InStr, struct FString* Result)
+void ABP_TalkEventManager_C::STATIC_ReplaceLF(const struct FString& InStr, struct FString* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ReplaceLF");
 
@@ -2950,6 +3010,7 @@ void ABP_TalkEventManager_C::ReplaceLF(const struct FString& InStr, struct FStri
 	params.InStr = InStr;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2961,7 +3022,7 @@ void ABP_TalkEventManager_C::ReplaceLF(const struct FString& InStr, struct FStri
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecNoVoiceTimeTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USetNoVoiceTimeTask*     NoVoiceTimeTask                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2981,7 +3042,7 @@ void ABP_TalkEventManager_C::ExecNoVoiceTimeTask(class USetNoVoiceTimeTask* NoVo
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecIfTask
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UIfTask*                 IfTask                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2993,6 +3054,7 @@ void ABP_TalkEventManager_C::ExecIfTask(class UIfTask* IfTask)
 	params.IfTask = IfTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3001,7 +3063,7 @@ void ABP_TalkEventManager_C::ExecIfTask(class UIfTask* IfTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.EvaluateExpression
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FString                 InStr                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -3028,7 +3090,7 @@ void ABP_TalkEventManager_C::EvaluateExpression(const struct FString& InStr, int
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.StartTalk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkTask*               TalkTask                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3040,6 +3102,7 @@ void ABP_TalkEventManager_C::StartTalk(class UTalkTask* TalkTask)
 	params.TalkTask = TalkTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3048,7 +3111,7 @@ void ABP_TalkEventManager_C::StartTalk(class UTalkTask* TalkTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CreateCameraManager
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EAutoCameraType                AutoCameraType                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3068,15 +3131,16 @@ void ABP_TalkEventManager_C::CreateCameraManager(EAutoCameraType AutoCameraType)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkEventManager_C::UserConstructionScript()
+void ABP_TalkEventManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UserConstructionScript");
 
 	ABP_TalkEventManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3085,11 +3149,11 @@ void ABP_TalkEventManager_C::UserConstructionScript()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_C_K2Node_InputKeyEvent_8
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_TalkEventManager_C::InpActEvt_Shift_C_K2Node_InputKeyEvent_8(const struct FKey& Key)
+void ABP_TalkEventManager_C::STATIC_InpActEvt_Shift_C_K2Node_InputKeyEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_C_K2Node_InputKeyEvent_8");
 
@@ -3105,11 +3169,11 @@ void ABP_TalkEventManager_C::InpActEvt_Shift_C_K2Node_InputKeyEvent_8(const stru
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_7
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_TalkEventManager_C::InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_7(const struct FKey& Key)
+void ABP_TalkEventManager_C::STATIC_InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_7");
 
@@ -3125,11 +3189,11 @@ void ABP_TalkEventManager_C::InpActEvt_Ctrl_Q_K2Node_InputKeyEvent_7(const struc
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_K_K2Node_InputKeyEvent_6
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_TalkEventManager_C::InpActEvt_Shift_K_K2Node_InputKeyEvent_6(const struct FKey& Key)
+void ABP_TalkEventManager_C::STATIC_InpActEvt_Shift_K_K2Node_InputKeyEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Shift_K_K2Node_InputKeyEvent_6");
 
@@ -3145,11 +3209,11 @@ void ABP_TalkEventManager_C::InpActEvt_Shift_K_K2Node_InputKeyEvent_6(const stru
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Q_K2Node_InputKeyEvent_5
-// (BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_TalkEventManager_C::InpActEvt_Q_K2Node_InputKeyEvent_5(const struct FKey& Key)
+void ABP_TalkEventManager_C::STATIC_InpActEvt_Q_K2Node_InputKeyEvent_5(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_Q_K2Node_InputKeyEvent_5");
 
@@ -3165,11 +3229,11 @@ void ABP_TalkEventManager_C::InpActEvt_Q_K2Node_InputKeyEvent_5(const struct FKe
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_TalkSkip_K2Node_InputActionEvent_2
-// (BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_TalkEventManager_C::InpActEvt_TalkSkip_K2Node_InputActionEvent_2(const struct FKey& Key)
+void ABP_TalkEventManager_C::STATIC_InpActEvt_TalkSkip_K2Node_InputActionEvent_2(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.InpActEvt_TalkSkip_K2Node_InputActionEvent_2");
 
@@ -3185,11 +3249,11 @@ void ABP_TalkEventManager_C::InpActEvt_TalkSkip_K2Node_InputActionEvent_2(const 
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnLoaded_8AD0905A45E984F04EF8EC995D53228B
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnLoaded_8AD0905A45E984F04EF8EC995D53228B(class UObject* Loaded)
+void ABP_TalkEventManager_C::STATIC_OnLoaded_8AD0905A45E984F04EF8EC995D53228B(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnLoaded_8AD0905A45E984F04EF8EC995D53228B");
 
@@ -3205,7 +3269,7 @@ void ABP_TalkEventManager_C::OnLoaded_8AD0905A45E984F04EF8EC995D53228B(class UOb
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindHUDFadeEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::BindHUDFadeEvents()
 {
@@ -3214,6 +3278,7 @@ void ABP_TalkEventManager_C::BindHUDFadeEvents()
 	ABP_TalkEventManager_C_BindHUDFadeEvents_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3222,9 +3287,9 @@ void ABP_TalkEventManager_C::BindHUDFadeEvents()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindHUDEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::UnbindHUDEvents()
+void ABP_TalkEventManager_C::STATIC_UnbindHUDEvents()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindHUDEvents");
 
@@ -3239,9 +3304,9 @@ void ABP_TalkEventManager_C::UnbindHUDEvents()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinishedFadeIn
-// (BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnFinishedFadeIn()
+void ABP_TalkEventManager_C::STATIC_OnFinishedFadeIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinishedFadeIn");
 
@@ -3256,7 +3321,7 @@ void ABP_TalkEventManager_C::OnFinishedFadeIn()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinishedFadeOut
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::OnFinishedFadeOut()
 {
@@ -3265,6 +3330,7 @@ void ABP_TalkEventManager_C::OnFinishedFadeOut()
 	ABP_TalkEventManager_C_OnFinishedFadeOut_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3273,7 +3339,7 @@ void ABP_TalkEventManager_C::OnFinishedFadeOut()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindPopupItemEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::BindPopupItemEvent()
 {
@@ -3282,6 +3348,7 @@ void ABP_TalkEventManager_C::BindPopupItemEvent()
 	ABP_TalkEventManager_C_BindPopupItemEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3290,7 +3357,7 @@ void ABP_TalkEventManager_C::BindPopupItemEvent()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinishedPopup
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::OnFinishedPopup()
 {
@@ -3299,6 +3366,7 @@ void ABP_TalkEventManager_C::OnFinishedPopup()
 	ABP_TalkEventManager_C_OnFinishedPopup_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3307,11 +3375,11 @@ void ABP_TalkEventManager_C::OnFinishedPopup()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindBuyKihudaEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3BetMoneyManager_C* BetManager                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::BindBuyKihudaEvents(class ABP_S3BetMoneyManager_C* BetManager)
+void ABP_TalkEventManager_C::STATIC_BindBuyKihudaEvents(class ABP_S3BetMoneyManager_C* BetManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.BindBuyKihudaEvents");
 
@@ -3319,6 +3387,7 @@ void ABP_TalkEventManager_C::BindBuyKihudaEvents(class ABP_S3BetMoneyManager_C* 
 	params.BetManager = BetManager;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3327,7 +3396,7 @@ void ABP_TalkEventManager_C::BindBuyKihudaEvents(class ABP_S3BetMoneyManager_C* 
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnBuyKihuda
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::OnBuyKihuda()
 {
@@ -3336,6 +3405,7 @@ void ABP_TalkEventManager_C::OnBuyKihuda()
 	ABP_TalkEventManager_C_OnBuyKihuda_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3344,7 +3414,7 @@ void ABP_TalkEventManager_C::OnBuyKihuda()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnCancelledKihuda
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::OnCancelledKihuda()
 {
@@ -3353,6 +3423,7 @@ void ABP_TalkEventManager_C::OnCancelledKihuda()
 	ABP_TalkEventManager_C_OnCancelledKihuda_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3361,11 +3432,11 @@ void ABP_TalkEventManager_C::OnCancelledKihuda()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindBuyKihudaEvents
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3BetMoneyManager_C* BetManager                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::UnbindBuyKihudaEvents(class ABP_S3BetMoneyManager_C* BetManager)
+void ABP_TalkEventManager_C::STATIC_UnbindBuyKihudaEvents(class ABP_S3BetMoneyManager_C* BetManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindBuyKihudaEvents");
 
@@ -3373,6 +3444,7 @@ void ABP_TalkEventManager_C::UnbindBuyKihudaEvents(class ABP_S3BetMoneyManager_C
 	params.BetManager = BetManager;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3381,11 +3453,11 @@ void ABP_TalkEventManager_C::UnbindBuyKihudaEvents(class ABP_S3BetMoneyManager_C
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindinventoryEvents
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_UI_GiftManager_C*    UseItemManager                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::BindinventoryEvents(class ABP_UI_GiftManager_C* UseItemManager)
+void ABP_TalkEventManager_C::STATIC_BindinventoryEvents(class ABP_UI_GiftManager_C* UseItemManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.BindinventoryEvents");
 
@@ -3393,6 +3465,7 @@ void ABP_TalkEventManager_C::BindinventoryEvents(class ABP_UI_GiftManager_C* Use
 	params.UseItemManager = UseItemManager;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3401,11 +3474,11 @@ void ABP_TalkEventManager_C::BindinventoryEvents(class ABP_UI_GiftManager_C* Use
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindinventoryEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_UI_GiftManager_C*    UseItemManager                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::UnbindinventoryEvents(class ABP_UI_GiftManager_C* UseItemManager)
+void ABP_TalkEventManager_C::STATIC_UnbindinventoryEvents(class ABP_UI_GiftManager_C* UseItemManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindinventoryEvents");
 
@@ -3413,6 +3486,7 @@ void ABP_TalkEventManager_C::UnbindinventoryEvents(class ABP_UI_GiftManager_C* U
 	params.UseItemManager = UseItemManager;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3421,11 +3495,11 @@ void ABP_TalkEventManager_C::UnbindinventoryEvents(class ABP_UI_GiftManager_C* U
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnInventoryUseItem
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_UseItemResult>  Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnInventoryUseItem(TEnumAsByte<EN_UseItemResult> Result)
+void ABP_TalkEventManager_C::STATIC_OnInventoryUseItem(TEnumAsByte<EN_UseItemResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnInventoryUseItem");
 
@@ -3433,6 +3507,7 @@ void ABP_TalkEventManager_C::OnInventoryUseItem(TEnumAsByte<EN_UseItemResult> Re
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3441,7 +3516,7 @@ void ABP_TalkEventManager_C::OnInventoryUseItem(TEnumAsByte<EN_UseItemResult> Re
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindShowItemZoomEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::BindShowItemZoomEvent()
 {
@@ -3450,6 +3525,7 @@ void ABP_TalkEventManager_C::BindShowItemZoomEvent()
 	ABP_TalkEventManager_C_BindShowItemZoomEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3458,7 +3534,7 @@ void ABP_TalkEventManager_C::BindShowItemZoomEvent()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindShowItemZoomEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::UnbindShowItemZoomEvent()
 {
@@ -3467,6 +3543,7 @@ void ABP_TalkEventManager_C::UnbindShowItemZoomEvent()
 	ABP_TalkEventManager_C_UnbindShowItemZoomEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3475,11 +3552,11 @@ void ABP_TalkEventManager_C::UnbindShowItemZoomEvent()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CheckForShowItemZoomCameraStart
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::CheckForShowItemZoomCameraStart(const struct FName& Name)
+void ABP_TalkEventManager_C::STATIC_CheckForShowItemZoomCameraStart(const struct FName& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.CheckForShowItemZoomCameraStart");
 
@@ -3495,7 +3572,7 @@ void ABP_TalkEventManager_C::CheckForShowItemZoomCameraStart(const struct FName&
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindShowItemPutAwayEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, NetServer)
 
 void ABP_TalkEventManager_C::BindShowItemPutAwayEvent()
 {
@@ -3504,6 +3581,7 @@ void ABP_TalkEventManager_C::BindShowItemPutAwayEvent()
 	ABP_TalkEventManager_C_BindShowItemPutAwayEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3512,9 +3590,9 @@ void ABP_TalkEventManager_C::BindShowItemPutAwayEvent()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindShowItemPutAwayEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::UnbindShowItemPutAwayEvent()
+void ABP_TalkEventManager_C::STATIC_UnbindShowItemPutAwayEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindShowItemPutAwayEvent");
 
@@ -3529,11 +3607,11 @@ void ABP_TalkEventManager_C::UnbindShowItemPutAwayEvent()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CheckForShowItemPutAway
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::CheckForShowItemPutAway(const struct FName& Name)
+void ABP_TalkEventManager_C::STATIC_CheckForShowItemPutAway(const struct FName& Name)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.CheckForShowItemPutAway");
 
@@ -3541,6 +3619,7 @@ void ABP_TalkEventManager_C::CheckForShowItemPutAway(const struct FName& Name)
 	params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3549,11 +3628,11 @@ void ABP_TalkEventManager_C::CheckForShowItemPutAway(const struct FName& Name)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindMiniGameEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_MiniGameBase_C*      MiniGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::BindMiniGameEvents(class ABP_MiniGameBase_C* MiniGame)
+void ABP_TalkEventManager_C::STATIC_BindMiniGameEvents(class ABP_MiniGameBase_C* MiniGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.BindMiniGameEvents");
 
@@ -3561,6 +3640,7 @@ void ABP_TalkEventManager_C::BindMiniGameEvents(class ABP_MiniGameBase_C* MiniGa
 	params.MiniGame = MiniGame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3569,11 +3649,11 @@ void ABP_TalkEventManager_C::BindMiniGameEvents(class ABP_MiniGameBase_C* MiniGa
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnMiniGameEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnMiniGameEnd(class ABP_MiniGameBase_C* SelfMiniGame)
+void ABP_TalkEventManager_C::STATIC_OnMiniGameEnd(class ABP_MiniGameBase_C* SelfMiniGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnMiniGameEnd");
 
@@ -3581,6 +3661,7 @@ void ABP_TalkEventManager_C::OnMiniGameEnd(class ABP_MiniGameBase_C* SelfMiniGam
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3589,11 +3670,11 @@ void ABP_TalkEventManager_C::OnMiniGameEnd(class ABP_MiniGameBase_C* SelfMiniGam
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindMiniGameEnterEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_MiniGameBase_C*      MiniGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::BindMiniGameEnterEvents(class ABP_MiniGameBase_C* MiniGame)
+void ABP_TalkEventManager_C::STATIC_BindMiniGameEnterEvents(class ABP_MiniGameBase_C* MiniGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.BindMiniGameEnterEvents");
 
@@ -3601,6 +3682,7 @@ void ABP_TalkEventManager_C::BindMiniGameEnterEvents(class ABP_MiniGameBase_C* M
 	params.MiniGame = MiniGame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3609,11 +3691,11 @@ void ABP_TalkEventManager_C::BindMiniGameEnterEvents(class ABP_MiniGameBase_C* M
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinishedEnterMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnFinishedEnterMiniGame(class ABP_MiniGameBase_C* SelfMiniGame)
+void ABP_TalkEventManager_C::STATIC_OnFinishedEnterMiniGame(class ABP_MiniGameBase_C* SelfMiniGame)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinishedEnterMiniGame");
 
@@ -3621,6 +3703,7 @@ void ABP_TalkEventManager_C::OnFinishedEnterMiniGame(class ABP_MiniGameBase_C* S
 	params.SelfMiniGame = SelfMiniGame;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3629,7 +3712,7 @@ void ABP_TalkEventManager_C::OnFinishedEnterMiniGame(class ABP_MiniGameBase_C* S
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnMiniGameScriptEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class ABP_MiniGameBase_C*      SelfMiniGame                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -3651,9 +3734,9 @@ void ABP_TalkEventManager_C::OnMiniGameScriptEvent(class ABP_MiniGameBase_C* Sel
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindMiniGameEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::UnbindMiniGameEvents()
+void ABP_TalkEventManager_C::STATIC_UnbindMiniGameEvents()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindMiniGameEvents");
 
@@ -3668,11 +3751,11 @@ void ABP_TalkEventManager_C::UnbindMiniGameEvents()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.BindMiniGameChooseEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_MiniGameChoose_C*    MiniGameChooseActor            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::BindMiniGameChooseEvents(class ABP_MiniGameChoose_C* MiniGameChooseActor)
+void ABP_TalkEventManager_C::STATIC_BindMiniGameChooseEvents(class ABP_MiniGameChoose_C* MiniGameChooseActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.BindMiniGameChooseEvents");
 
@@ -3680,6 +3763,7 @@ void ABP_TalkEventManager_C::BindMiniGameChooseEvents(class ABP_MiniGameChoose_C
 	params.MiniGameChooseActor = MiniGameChooseActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3688,11 +3772,11 @@ void ABP_TalkEventManager_C::BindMiniGameChooseEvents(class ABP_MiniGameChoose_C
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnChooseMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  ChooseActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnChooseMiniGame(class AActor* ChooseActor)
+void ABP_TalkEventManager_C::STATIC_OnChooseMiniGame(class AActor* ChooseActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnChooseMiniGame");
 
@@ -3700,6 +3784,7 @@ void ABP_TalkEventManager_C::OnChooseMiniGame(class AActor* ChooseActor)
 	params.ChooseActor = ChooseActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3708,9 +3793,9 @@ void ABP_TalkEventManager_C::OnChooseMiniGame(class AActor* ChooseActor)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnCancelChooseMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnCancelChooseMiniGame()
+void ABP_TalkEventManager_C::STATIC_OnCancelChooseMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnCancelChooseMiniGame");
 
@@ -3725,11 +3810,11 @@ void ABP_TalkEventManager_C::OnCancelChooseMiniGame()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnDestroyedChooseActors
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  DestroyedActor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnDestroyedChooseActors(class AActor* DestroyedActor)
+void ABP_TalkEventManager_C::STATIC_OnDestroyedChooseActors(class AActor* DestroyedActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnDestroyedChooseActors");
 
@@ -3737,6 +3822,7 @@ void ABP_TalkEventManager_C::OnDestroyedChooseActors(class AActor* DestroyedActo
 	params.DestroyedActor = DestroyedActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3745,9 +3831,9 @@ void ABP_TalkEventManager_C::OnDestroyedChooseActors(class AActor* DestroyedActo
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.EventFastForwarding
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::EventFastForwarding()
+void ABP_TalkEventManager_C::STATIC_EventFastForwarding()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.EventFastForwarding");
 
@@ -3762,9 +3848,9 @@ void ABP_TalkEventManager_C::EventFastForwarding()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ToggleCameraCutDebugMode
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::ToggleCameraCutDebugMode()
+void ABP_TalkEventManager_C::STATIC_ToggleCameraCutDebugMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ToggleCameraCutDebugMode");
 
@@ -3779,9 +3865,9 @@ void ABP_TalkEventManager_C::ToggleCameraCutDebugMode()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TakeCameraDebugScreenShot
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::TakeCameraDebugScreenShot()
+void ABP_TalkEventManager_C::STATIC_TakeCameraDebugScreenShot()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TakeCameraDebugScreenShot");
 
@@ -3796,9 +3882,9 @@ void ABP_TalkEventManager_C::TakeCameraDebugScreenShot()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.CameraManagerLerpEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::CameraManagerLerpEnd()
+void ABP_TalkEventManager_C::STATIC_CameraManagerLerpEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.CameraManagerLerpEnd");
 
@@ -3813,7 +3899,7 @@ void ABP_TalkEventManager_C::CameraManagerLerpEnd()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TryChangeCamera
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // EAutoCameraType                AutoCameraType                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 TalkCharacterId                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -3837,7 +3923,7 @@ void ABP_TalkEventManager_C::TryChangeCamera(EAutoCameraType AutoCameraType, con
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnCallUpdateCameraTask
-// (BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FString                 TalkCharacterId                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 LockTargetCharacterId          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -3859,9 +3945,9 @@ void ABP_TalkEventManager_C::OnCallUpdateCameraTask(const struct FString& TalkCh
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.EndPreviewCameraMode
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::EndPreviewCameraMode()
+void ABP_TalkEventManager_C::STATIC_EndPreviewCameraMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.EndPreviewCameraMode");
 
@@ -3876,9 +3962,9 @@ void ABP_TalkEventManager_C::EndPreviewCameraMode()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnTalkEventFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnTalkEventFinished()
+void ABP_TalkEventManager_C::STATIC_OnTalkEventFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnTalkEventFinished");
 
@@ -3893,9 +3979,9 @@ void ABP_TalkEventManager_C::OnTalkEventFinished()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::ReceiveBeginPlay()
+void ABP_TalkEventManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ReceiveBeginPlay");
 
@@ -3910,7 +3996,7 @@ void ABP_TalkEventManager_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinished
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkEventTaskBase*      ptr                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NextIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -3934,11 +4020,11 @@ void ABP_TalkEventManager_C::OnFinished(class UTalkEventTaskBase* ptr, int NextI
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnTalkStart
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkEventTaskBase*      ptr                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnTalkStart(class UTalkEventTaskBase* ptr)
+void ABP_TalkEventManager_C::STATIC_OnTalkStart(class UTalkEventTaskBase* ptr)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnTalkStart");
 
@@ -3946,6 +4032,7 @@ void ABP_TalkEventManager_C::OnTalkStart(class UTalkEventTaskBase* ptr)
 	params.ptr = ptr;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3954,11 +4041,11 @@ void ABP_TalkEventManager_C::OnTalkStart(class UTalkEventTaskBase* ptr)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnActivate
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkEventTaskBase*      ptr                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnActivate(class UTalkEventTaskBase* ptr)
+void ABP_TalkEventManager_C::STATIC_OnActivate(class UTalkEventTaskBase* ptr)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnActivate");
 
@@ -3966,6 +4053,7 @@ void ABP_TalkEventManager_C::OnActivate(class UTalkEventTaskBase* ptr)
 	params.ptr = ptr;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3974,9 +4062,9 @@ void ABP_TalkEventManager_C::OnActivate(class UTalkEventTaskBase* ptr)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.DelayedTalkStart
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::DelayedTalkStart()
+void ABP_TalkEventManager_C::STATIC_DelayedTalkStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.DelayedTalkStart");
 
@@ -3991,11 +4079,11 @@ void ABP_TalkEventManager_C::DelayedTalkStart()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_TalkEventManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.ReceiveTick");
 
@@ -4003,6 +4091,7 @@ void ABP_TalkEventManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4011,7 +4100,7 @@ void ABP_TalkEventManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnFinishedSubEvent
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkEventTaskBase*      ptr                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NextIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -4035,11 +4124,11 @@ void ABP_TalkEventManager_C::OnFinishedSubEvent(class UTalkEventTaskBase* ptr, i
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.doNextStep
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::doNextStep(class AActor* Actor)
+void ABP_TalkEventManager_C::STATIC_doNextStep(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.doNextStep");
 
@@ -4047,6 +4136,7 @@ void ABP_TalkEventManager_C::doNextStep(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4055,15 +4145,16 @@ void ABP_TalkEventManager_C::doNextStep(class AActor* Actor)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.doCancel
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::doCancel()
+void ABP_TalkEventManager_C::STATIC_doCancel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.doCancel");
 
 	ABP_TalkEventManager_C_doCancel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4072,15 +4163,16 @@ void ABP_TalkEventManager_C::doCancel()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.InitialMotion
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::InitialMotion()
+void ABP_TalkEventManager_C::STATIC_InitialMotion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.InitialMotion");
 
 	ABP_TalkEventManager_C_InitialMotion_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4089,15 +4181,16 @@ void ABP_TalkEventManager_C::InitialMotion()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnEndInitialMotion
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnEndInitialMotion()
+void ABP_TalkEventManager_C::STATIC_OnEndInitialMotion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnEndInitialMotion");
 
 	ABP_TalkEventManager_C_OnEndInitialMotion_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4106,11 +4199,11 @@ void ABP_TalkEventManager_C::OnEndInitialMotion()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SkippedCurrentTalk
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UTalkTask*               SkippedTask                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::SkippedCurrentTalk(class UTalkTask* SkippedTask)
+void ABP_TalkEventManager_C::STATIC_SkippedCurrentTalk(class UTalkTask* SkippedTask)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SkippedCurrentTalk");
 
@@ -4118,6 +4211,7 @@ void ABP_TalkEventManager_C::SkippedCurrentTalk(class UTalkTask* SkippedTask)
 	params.SkippedTask = SkippedTask;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4126,11 +4220,11 @@ void ABP_TalkEventManager_C::SkippedCurrentTalk(class UTalkTask* SkippedTask)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.catch_onSelected
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::catch_onSelected(int Index)
+void ABP_TalkEventManager_C::STATIC_catch_onSelected(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.catch_onSelected");
 
@@ -4138,6 +4232,7 @@ void ABP_TalkEventManager_C::catch_onSelected(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4146,15 +4241,16 @@ void ABP_TalkEventManager_C::catch_onSelected(int Index)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindKeywardSelect
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::UnbindKeywardSelect()
+void ABP_TalkEventManager_C::STATIC_UnbindKeywardSelect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.UnbindKeywardSelect");
 
 	ABP_TalkEventManager_C_UnbindKeywardSelect_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4163,15 +4259,16 @@ void ABP_TalkEventManager_C::UnbindKeywardSelect()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TimeupMessageWait
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::TimeupMessageWait()
+void ABP_TalkEventManager_C::STATIC_TimeupMessageWait()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TimeupMessageWait");
 
 	ABP_TalkEventManager_C_TimeupMessageWait_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4180,15 +4277,16 @@ void ABP_TalkEventManager_C::TimeupMessageWait()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FinalizeCleanUI
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::FinalizeCleanUI()
+void ABP_TalkEventManager_C::STATIC_FinalizeCleanUI()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.FinalizeCleanUI");
 
 	ABP_TalkEventManager_C_FinalizeCleanUI_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4197,9 +4295,9 @@ void ABP_TalkEventManager_C::FinalizeCleanUI()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.TrySkipCurrentTalkTask
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::TrySkipCurrentTalkTask()
+void ABP_TalkEventManager_C::STATIC_TrySkipCurrentTalkTask()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.TrySkipCurrentTalkTask");
 
@@ -4214,9 +4312,9 @@ void ABP_TalkEventManager_C::TrySkipCurrentTalkTask()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SkipMessageWait
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::SkipMessageWait()
+void ABP_TalkEventManager_C::STATIC_SkipMessageWait()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SkipMessageWait");
 
@@ -4231,9 +4329,9 @@ void ABP_TalkEventManager_C::SkipMessageWait()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnEndCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnEndCutscene()
+void ABP_TalkEventManager_C::STATIC_OnEndCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnEndCutscene");
 
@@ -4248,7 +4346,7 @@ void ABP_TalkEventManager_C::OnEndCutscene()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.RunDoorTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class AActor*                  InTalkedActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InIsBS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -4266,6 +4364,7 @@ void ABP_TalkEventManager_C::RunDoorTalk(class AActor* InTalkedActor, bool InIsB
 	params.InTalkComponent = InTalkComponent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4274,7 +4373,7 @@ void ABP_TalkEventManager_C::RunDoorTalk(class AActor* InTalkedActor, bool InIsB
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.HintTalkStart
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class AActor*                  InTalkedActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTalkScript*             InTalkScript                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -4292,6 +4391,7 @@ void ABP_TalkEventManager_C::HintTalkStart(class AActor* InTalkedActor, class UT
 	params.InHintTarget = InHintTarget;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4300,11 +4400,11 @@ void ABP_TalkEventManager_C::HintTalkStart(class AActor* InTalkedActor, class UT
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnAcCameraFinised
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ULevelSequencePlayer*    LevelSequencePlayer            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnAcCameraFinised(class ULevelSequencePlayer* LevelSequencePlayer)
+void ABP_TalkEventManager_C::STATIC_OnAcCameraFinised(class ULevelSequencePlayer* LevelSequencePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnAcCameraFinised");
 
@@ -4312,6 +4412,7 @@ void ABP_TalkEventManager_C::OnAcCameraFinised(class ULevelSequencePlayer* Level
 	params.LevelSequencePlayer = LevelSequencePlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4320,9 +4421,9 @@ void ABP_TalkEventManager_C::OnAcCameraFinised(class ULevelSequencePlayer* Level
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnAcCameraStoped
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnAcCameraStoped()
+void ABP_TalkEventManager_C::STATIC_OnAcCameraStoped()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnAcCameraStoped");
 
@@ -4337,9 +4438,9 @@ void ABP_TalkEventManager_C::OnAcCameraStoped()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.SkipShowItem
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::SkipShowItem()
+void ABP_TalkEventManager_C::STATIC_SkipShowItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.SkipShowItem");
 
@@ -4354,15 +4455,16 @@ void ABP_TalkEventManager_C::SkipShowItem()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnShowItemZoomEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnShowItemZoomEnd()
+void ABP_TalkEventManager_C::STATIC_OnShowItemZoomEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnShowItemZoomEnd");
 
 	ABP_TalkEventManager_C_OnShowItemZoomEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4371,15 +4473,16 @@ void ABP_TalkEventManager_C::OnShowItemZoomEnd()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.StartAC
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::StartAC()
+void ABP_TalkEventManager_C::STATIC_StartAC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.StartAC");
 
 	ABP_TalkEventManager_C_StartAC_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4388,15 +4491,16 @@ void ABP_TalkEventManager_C::StartAC()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnTimeoutTransition
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::OnTimeoutTransition()
+void ABP_TalkEventManager_C::STATIC_OnTimeoutTransition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnTimeoutTransition");
 
 	ABP_TalkEventManager_C_OnTimeoutTransition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4405,15 +4509,16 @@ void ABP_TalkEventManager_C::OnTimeoutTransition()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.StopAcCamera
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::StopAcCamera()
+void ABP_TalkEventManager_C::STATIC_StopAcCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.StopAcCamera");
 
 	ABP_TalkEventManager_C_StopAcCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4422,7 +4527,7 @@ void ABP_TalkEventManager_C::StopAcCamera()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.Initialize
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  InTalkedActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InIsBS                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -4430,7 +4535,7 @@ void ABP_TalkEventManager_C::StopAcCamera()
 // class US3TalkComponent*        InTalkComponent                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // ENPCTalkState                  InTalkState                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::Initialize(class AActor* InTalkedActor, bool InIsBS, class UTalkScript* InTalkScript, class US3TalkComponent* InTalkComponent, ENPCTalkState InTalkState)
+void ABP_TalkEventManager_C::STATIC_Initialize(class AActor* InTalkedActor, bool InIsBS, class UTalkScript* InTalkScript, class US3TalkComponent* InTalkComponent, ENPCTalkState InTalkState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.Initialize");
 
@@ -4442,6 +4547,7 @@ void ABP_TalkEventManager_C::Initialize(class AActor* InTalkedActor, bool InIsBS
 	params.InTalkState = InTalkState;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4450,15 +4556,16 @@ void ABP_TalkEventManager_C::Initialize(class AActor* InTalkedActor, bool InIsBS
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FinishKSAnim
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::FinishKSAnim()
+void ABP_TalkEventManager_C::STATIC_FinishKSAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.FinishKSAnim");
 
 	ABP_TalkEventManager_C_FinishKSAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4467,15 +4574,16 @@ void ABP_TalkEventManager_C::FinishKSAnim()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.FinishCaptionAnim
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::FinishCaptionAnim()
+void ABP_TalkEventManager_C::STATIC_FinishCaptionAnim()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.FinishCaptionAnim");
 
 	ABP_TalkEventManager_C_FinishCaptionAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4484,15 +4592,16 @@ void ABP_TalkEventManager_C::FinishCaptionAnim()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.StartShowItemZoom
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::StartShowItemZoom()
+void ABP_TalkEventManager_C::STATIC_StartShowItemZoom()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.StartShowItemZoom");
 
 	ABP_TalkEventManager_C_StartShowItemZoom_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4501,15 +4610,16 @@ void ABP_TalkEventManager_C::StartShowItemZoom()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.DelayPermitUI
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::DelayPermitUI()
+void ABP_TalkEventManager_C::STATIC_DelayPermitUI()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.DelayPermitUI");
 
 	ABP_TalkEventManager_C_DelayPermitUI_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4518,11 +4628,11 @@ void ABP_TalkEventManager_C::DelayPermitUI()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.DisablePhysics
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3Character*            Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::DisablePhysics(class AS3Character* Character)
+void ABP_TalkEventManager_C::STATIC_DisablePhysics(class AS3Character* Character)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.DisablePhysics");
 
@@ -4530,6 +4640,7 @@ void ABP_TalkEventManager_C::DisablePhysics(class AS3Character* Character)
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4538,15 +4649,16 @@ void ABP_TalkEventManager_C::DisablePhysics(class AS3Character* Character)
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.LoadedCueSheet
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::LoadedCueSheet()
+void ABP_TalkEventManager_C::STATIC_LoadedCueSheet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.LoadedCueSheet");
 
 	ABP_TalkEventManager_C_LoadedCueSheet_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4555,15 +4667,16 @@ void ABP_TalkEventManager_C::LoadedCueSheet()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.WaitLookAtTask
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, NetMulticast, NetServer)
 
-void ABP_TalkEventManager_C::WaitLookAtTask()
+void ABP_TalkEventManager_C::STATIC_WaitLookAtTask()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.WaitLookAtTask");
 
 	ABP_TalkEventManager_C_WaitLookAtTask_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4572,7 +4685,7 @@ void ABP_TalkEventManager_C::WaitLookAtTask()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.ExecuteUbergraph_BP_TalkEventManager
-// (HasDefaults)
+// (Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -4592,11 +4705,11 @@ void ABP_TalkEventManager_C::ExecuteUbergraph_BP_TalkEventManager(int EntryPoint
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnStartAcCameraSequence__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ALevelSequenceActor*     PlaySequenceActor              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnStartAcCameraSequence__DelegateSignature(class ALevelSequenceActor* PlaySequenceActor)
+void ABP_TalkEventManager_C::STATIC_OnStartAcCameraSequence__DelegateSignature(class ALevelSequenceActor* PlaySequenceActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnStartAcCameraSequence__DelegateSignature");
 
@@ -4612,11 +4725,11 @@ void ABP_TalkEventManager_C::OnStartAcCameraSequence__DelegateSignature(class AL
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnStreetFightFinished__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<Enum_StreetFightResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnStreetFightFinished__DelegateSignature(TEnumAsByte<Enum_StreetFightResult> Result)
+void ABP_TalkEventManager_C::STATIC_OnStreetFightFinished__DelegateSignature(TEnumAsByte<Enum_StreetFightResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnStreetFightFinished__DelegateSignature");
 
@@ -4632,11 +4745,11 @@ void ABP_TalkEventManager_C::OnStreetFightFinished__DelegateSignature(TEnumAsByt
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnEndKeywordSelect__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_TalkKeywordSelect> Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnEndKeywordSelect__DelegateSignature(TEnumAsByte<E_TalkKeywordSelect> Selected)
+void ABP_TalkEventManager_C::STATIC_OnEndKeywordSelect__DelegateSignature(TEnumAsByte<E_TalkKeywordSelect> Selected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnEndKeywordSelect__DelegateSignature");
 
@@ -4652,9 +4765,9 @@ void ABP_TalkEventManager_C::OnEndKeywordSelect__DelegateSignature(TEnumAsByte<E
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnInputQuestDebugKey__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkEventManager_C::OnInputQuestDebugKey__DelegateSignature()
+void ABP_TalkEventManager_C::STATIC_OnInputQuestDebugKey__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnInputQuestDebugKey__DelegateSignature");
 
@@ -4669,11 +4782,11 @@ void ABP_TalkEventManager_C::OnInputQuestDebugKey__DelegateSignature()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.OnSkipTalkTask__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          SkipTaskDuration               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::OnSkipTalkTask__DelegateSignature(float SkipTaskDuration)
+void ABP_TalkEventManager_C::STATIC_OnSkipTalkTask__DelegateSignature(float SkipTaskDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.OnSkipTalkTask__DelegateSignature");
 
@@ -4689,9 +4802,9 @@ void ABP_TalkEventManager_C::OnSkipTalkTask__DelegateSignature(float SkipTaskDur
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.commandAction(cancel)__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkEventManager_C::commandAction_cancel___DelegateSignature()
+void ABP_TalkEventManager_C::STATIC_commandAction_cancel___DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.commandAction(cancel)__DelegateSignature");
 
@@ -4706,11 +4819,11 @@ void ABP_TalkEventManager_C::commandAction_cancel___DelegateSignature()
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.commandAction(skip)__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::commandAction_skip___DelegateSignature(class AActor* Actor)
+void ABP_TalkEventManager_C::STATIC_commandAction_skip___DelegateSignature(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.commandAction(skip)__DelegateSignature");
 
@@ -4726,11 +4839,11 @@ void ABP_TalkEventManager_C::commandAction_skip___DelegateSignature(class AActor
 
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.commandAction(step)__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkEventManager_C::commandAction_step___DelegateSignature(class AActor* Actor)
+void ABP_TalkEventManager_C::STATIC_commandAction_step___DelegateSignature(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkEventManager.BP_TalkEventManager_C.commandAction(step)__DelegateSignature");
 

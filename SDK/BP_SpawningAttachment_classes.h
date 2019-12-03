@@ -28,9 +28,9 @@ public:
 
 
 	class UStaticMeshComponent* GetStaticMeshComp();
-	bool IsMeshVisibility();
+	bool STATIC_IsMeshVisibility();
 	void UserConstructionScript();
-	void SetMeshVisibility(bool bEnable);
+	void STATIC_SetMeshVisibility(bool bEnable);
 	void ExecuteUbergraph_BP_SpawningAttachment(int EntryPoint);
 };
 

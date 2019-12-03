@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
 void UBPW_UI_LoadingBar_C::Construct()
 {
@@ -31,12 +31,12 @@ void UBPW_UI_LoadingBar_C::Construct()
 
 
 // Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_LoadingBar_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_UI_LoadingBar_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.Tick");
 
@@ -45,6 +45,7 @@ void UBPW_UI_LoadingBar_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +54,11 @@ void UBPW_UI_LoadingBar_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 
 
 // Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.ExecuteUbergraph_BPW_UI_LoadingBar
-// (HasDefaults)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_LoadingBar_C::ExecuteUbergraph_BPW_UI_LoadingBar(int EntryPoint)
+void UBPW_UI_LoadingBar_C::STATIC_ExecuteUbergraph_BPW_UI_LoadingBar(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_LoadingBar.BPW_UI_LoadingBar_C.ExecuteUbergraph_BPW_UI_LoadingBar");
 
@@ -65,6 +66,7 @@ void UBPW_UI_LoadingBar_C::ExecuteUbergraph_BPW_UI_LoadingBar(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_S3UILocLabel.BPF_S3UILocLabel_C.BPF_GetLocalizedUIString
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // struct FName                   LocLabel                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -29,6 +29,7 @@ struct FString UBPF_S3UILocLabel_C::STATIC_BPF_GetLocalizedUIString(const struct
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +40,7 @@ struct FString UBPF_S3UILocLabel_C::STATIC_BPF_GetLocalizedUIString(const struct
 
 
 // Function BPF_S3UILocLabel.BPF_S3UILocLabel_C.BPF_GetLocalizedUIText
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_S3UILocLabel        LocLabel                       (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
@@ -66,7 +67,7 @@ struct FText UBPF_S3UILocLabel_C::STATIC_BPF_GetLocalizedUIText(bool IsDesignTim
 
 
 // Function BPF_S3UILocLabel.BPF_S3UILocLabel_C.BPF_InitLocalizedTextWidget
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTextBlock*              Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)

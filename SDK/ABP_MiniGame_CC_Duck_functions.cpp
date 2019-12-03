@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_MiniGame_CC_Duck.ABP_MiniGame_CC_Duck_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Duck_AnimGraphNode_BlendListByEnum_3F97BCD44582ACD8DB7DA8BC89A37FCD
-// (BlueprintEvent)
+// (NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 
 void UABP_MiniGame_CC_Duck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_CC_Duck_AnimGraphNode_BlendListByEnum_3F97BCD44582ACD8DB7DA8BC89A37FCD()
 {
@@ -31,11 +31,11 @@ void UABP_MiniGame_CC_Duck_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mi
 
 
 // Function ABP_MiniGame_CC_Duck.ABP_MiniGame_CC_Duck_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Duck_C::BlueprintUpdateAnimation(float DeltaTimeX)
+void UABP_MiniGame_CC_Duck_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Duck.ABP_MiniGame_CC_Duck_C.BlueprintUpdateAnimation");
 
@@ -51,11 +51,11 @@ void UABP_MiniGame_CC_Duck_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_MiniGame_CC_Duck.ABP_MiniGame_CC_Duck_C.ExecuteUbergraph_ABP_MiniGame_CC_Duck
-// ()
+// (NetRequest, Exec, Event, NetResponse, Static, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_CC_Duck_C::ExecuteUbergraph_ABP_MiniGame_CC_Duck(int EntryPoint)
+void UABP_MiniGame_CC_Duck_C::STATIC_ExecuteUbergraph_ABP_MiniGame_CC_Duck(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_CC_Duck.ABP_MiniGame_CC_Duck_C.ExecuteUbergraph_ABP_MiniGame_CC_Duck");
 

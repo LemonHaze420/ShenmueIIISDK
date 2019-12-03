@@ -42,17 +42,17 @@ struct ABP_MenuWindowManager_C_StopAllActor_Params
 {
 };
 
-// Function BP_MenuWindowManager.BP_MenuWindowManager_C.setDenyFlag
-struct ABP_MenuWindowManager_C_setDenyFlag_Params
+// Function BP_MenuWindowManager.BP_MenuWindowManager_C.SetDenyFlag
+struct ABP_MenuWindowManager_C_SetDenyFlag_Params
 {
-	bool                                               deny;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Deny;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               succes;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_MenuWindowManager.BP_MenuWindowManager_C.isDetected
-struct ABP_MenuWindowManager_C_isDetected_Params
+// Function BP_MenuWindowManager.BP_MenuWindowManager_C.IsDetected
+struct ABP_MenuWindowManager_C_IsDetected_Params
 {
-	bool                                               isDetected;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsDetected;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.UserConstructionScript

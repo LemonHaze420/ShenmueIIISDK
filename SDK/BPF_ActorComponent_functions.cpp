@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_ActorComponent.BPF_ActorComponent_C.SafeDestroyAndRelease
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UActorComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBPF_ActorComponent_C::STATIC_SafeDestroyAndRelease(class UObject* __WorldC
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

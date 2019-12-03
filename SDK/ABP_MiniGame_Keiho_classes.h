@@ -73,21 +73,21 @@ public:
 
 
 	void IsTurning(bool* bTurning);
-	bool IsCounterClock();
-	bool IsClockWise();
-	void SetResetAnim(bool bResetAnim);
-	void SetTurn(bool bClockWiseWalk);
+	bool STATIC_IsCounterClock();
+	bool STATIC_IsClockWise();
+	void STATIC_SetResetAnim(bool bResetAnim);
+	void STATIC_SetTurn(bool bClockWiseWalk);
 	void GetWalkOffsetRate(float* Rate);
 	void SetWalkRate(float WalkRate);
 	void SetFailed(bool IsFailed);
-	void UpdateWalk(float WalkRate);
+	void STATIC_UpdateWalk(float WalkRate);
 	void UnBindDispacher();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_5DD33975461884065AAEEEBEFE8BCF3C();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_A7BA5F0345FC6A6A4847DF9E965B2986();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_250155304228EE743413178CB3EBA14B();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_6C2FEF504C2F47FB8BA462A0AEA6834E();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_C82D658A44D9F4818D0DA0B4D75AD3D2();
-	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
 	void AnimNotify_MG_Keiho_LeftFoot();
 	void AnimNotify_MG_Keiho_RightFoot();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_7B8DA4A84FF4C3556D26419D09F3E377();
@@ -108,16 +108,16 @@ public:
 	void AnimNotify_TransitionEndToClockWise();
 	void AnimNotify_TransitionEndToCounterClock();
 	void ExecuteUbergraph_ABP_MiniGame_Keiho(int EntryPoint);
-	void EventRyoUpdateFade__DelegateSignature();
-	void EventFootPrintR__DelegateSignature();
-	void EventFootPrintL__DelegateSignature();
-	void LeftFootInputStartDispacher__DelegateSignature();
-	void RightFootInputStartDispacher__DelegateSignature();
-	void LeftFootStartDispacher__DelegateSignature();
-	void RightFootStartDispacher__DelegateSignature();
-	void FailedEndDispacher__DelegateSignature();
-	void LeftFootLandedDispacher__DelegateSignature();
-	void RightFootLandedDipatcher__DelegateSignature();
+	void STATIC_EventRyoUpdateFade__DelegateSignature();
+	void STATIC_EventFootPrintR__DelegateSignature();
+	void STATIC_EventFootPrintL__DelegateSignature();
+	void STATIC_LeftFootInputStartDispacher__DelegateSignature();
+	void STATIC_RightFootInputStartDispacher__DelegateSignature();
+	void STATIC_LeftFootStartDispacher__DelegateSignature();
+	void STATIC_RightFootStartDispacher__DelegateSignature();
+	void STATIC_FailedEndDispacher__DelegateSignature();
+	void STATIC_LeftFootLandedDispacher__DelegateSignature();
+	void STATIC_RightFootLandedDipatcher__DelegateSignature();
 };
 
 

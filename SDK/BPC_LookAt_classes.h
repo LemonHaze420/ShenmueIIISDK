@@ -78,18 +78,18 @@ public:
 	}
 
 
-	void GetRandomAnimEyesTarget(float* Target);
-	void UpdateAnimEyeRotation();
-	bool IsDebugLog();
+	void STATIC_GetRandomAnimEyesTarget(float* Target);
+	void STATIC_UpdateAnimEyeRotation();
+	bool STATIC_IsDebugLog();
 	bool IsWasRecentlyRenderedOwner();
-	void IsProcessingLookAt(bool* IsProcessing);
-	void GetLookAtEyesLocation(struct FVector* R, struct FVector* L);
+	void STATIC_IsProcessingLookAt(bool* IsProcessing);
+	void STATIC_GetLookAtEyesLocation(struct FVector* R, struct FVector* L);
 	void GetTargetLocation(bool* bSuccess, struct FVector* TargetLocation);
 	void Update();
-	void GetTarget(class AActor** TargetActor);
+	void STATIC_GetTarget(class AActor** TargetActor);
 	void SetTarget(class AActor* Actor);
-	void ReceiveBeginPlay();
-	void Init();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_Init();
 	void ExecuteUbergraph_BPC_LookAt(int EntryPoint);
 };
 

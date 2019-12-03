@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectMultipleCameras.TalkCam_SelectMultipleCameras_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (Net, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -30,6 +30,7 @@ void UTalkCam_SelectMultipleCameras_C::ReceiveTickAI(class AAIController* OwnerC
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UTalkCam_SelectMultipleCameras_C::ReceiveTickAI(class AAIController* OwnerC
 
 
 // Function TalkCam_SelectMultipleCameras.TalkCam_SelectMultipleCameras_C.ExecuteUbergraph_TalkCam_SelectMultipleCameras
-// (HasDefaults)
+// (Net, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

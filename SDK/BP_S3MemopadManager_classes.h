@@ -23,7 +23,7 @@ public:
 	bool                                               bIsDeny;                                                  // 0x0340(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0341(0x0007) MISSED OFFSET
 	struct FString                                     result_debug_;                                            // 0x0348(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               isActionButtonExec;                                       // 0x0358(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsActionButtonExec;                                       // 0x0358(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0359(0x0003) MISSED OFFSET
 	float                                              defineFloat_beginPlayDelayTime_;                          // 0x035C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               isViewing;                                                // 0x0360(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -53,32 +53,32 @@ public:
 
 	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	void CheckOpenMainEventPage(bool* IsOpenMainEventPage);
+	void STATIC_CheckOpenMainEventPage(bool* IsOpenMainEventPage);
 	void GetIsUnreadMainEvent(bool* IsUnreadMainEvent);
-	void GetIsNowSubEventPage(bool* IsNowSubEventPage);
-	void GetIsSubEventOngoing(bool* IsSubEventOngoing);
+	void STATIC_GetIsNowSubEventPage(bool* IsNowSubEventPage);
+	void STATIC_GetIsSubEventOngoing(bool* IsSubEventOngoing);
 	void CursoFade(bool FadeIn);
-	void InitMemoPage();
+	void STATIC_InitMemoPage();
 	void CheckCanUSeMemopad(bool* CanUse);
-	void SetBlink();
-	void isDetected(bool* isDetected);
+	void STATIC_SetBlink();
+	void STATIC_IsDetected(bool* IsDetected);
 	void _dbg_print_memoFlags_(bool Already);
 	void _dbg_check_memoFlags_(bool Already, TArray<struct FString>* Flags);
 	void checkEvent(bool* nowDisableMemopadEvent);
-	void setDenyFlag(bool deny, bool* succes);
+	void SetDenyFlag(bool Deny, bool* succes);
 	void firstAttach(bool* Success);
-	void _dbgPrint_location_();
+	void STATIC__dbgPrint_location_();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void delayedFirstAttach();
-	void doCmd_FirstDetectRetain_memopadManager_();
-	void delayedRegistCheck_detector_();
-	void catch_onEndScreenIn();
-	void Finalize();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_delayedFirstAttach();
+	void STATIC_doCmd_FirstDetectRetain_memopadManager_();
+	void STATIC_delayedRegistCheck_detector_();
+	void STATIC_catch_onEndScreenIn();
+	void STATIC_Finalize();
 	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_15(float AxisValue);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_19(float AxisValue);
-	void ForceDestroy();
+	void STATIC_ForceDestroy();
 	void InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(float AxisValue);
 	void InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_3(float AxisValue);
 	void StartMemopad(int OpenPageIndex);
@@ -89,7 +89,7 @@ public:
 	void DecideDetectAction(ES3ActionIconType Type);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_S3MemopadManager(int EntryPoint);
-	void ED_MemoFinish__DelegateSignature();
+	void STATIC_ED_MemoFinish__DelegateSignature();
 };
 
 

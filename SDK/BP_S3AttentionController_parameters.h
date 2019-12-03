@@ -237,7 +237,7 @@ struct ABP_S3AttentionController_C_MultiCapsuleTrace_Params
 	float                                              Radius;                                                   // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              HalfHeight;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<class AActor*>                              ignoreActors;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                               Debug;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               DEBUG;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UPrimitiveComponent*                         HitComponent;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 	struct FVector                                     MoveVec;                                                  // (Parm, OutParm, IsPlainOldData)

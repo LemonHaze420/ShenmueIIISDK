@@ -52,16 +52,16 @@ public:
 	}
 
 
-	void UpdateGradation(float Value, float SafeRamge);
-	void UpdateSafeLineRootRotate(float New_Rotation_X__Roll_);
+	void STATIC_UpdateGradation(float Value, float SafeRamge);
+	void STATIC_UpdateSafeLineRootRotate(float New_Rotation_X__Roll_);
 	void InitializeSafeRange(float Range, float Alpha);
 	void UpdateStickRotate(float New_Rotation_X__Roll_);
 	void UserConstructionScript();
 	void Timeline_LineVisiblefade__FinishedFunc();
 	void Timeline_LineVisiblefade__UpdateFunc();
 	void ReceiveBeginPlay();
-	void SetEnabledLine(bool Enabled);
-	void ExecuteUbergraph_BP_MiniGame_KeihoUI(int EntryPoint);
+	void STATIC_SetEnabledLine(bool Enabled);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_KeihoUI(int EntryPoint);
 };
 
 

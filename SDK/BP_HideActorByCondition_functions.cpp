@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.UpdateCondition
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EHideActorConditions> ConditionsType                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 IdMin                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -34,6 +34,7 @@ void UBP_HideActorByCondition_C::UpdateCondition(TEnumAsByte<EHideActorCondition
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -42,7 +43,7 @@ void UBP_HideActorByCondition_C::UpdateCondition(TEnumAsByte<EHideActorCondition
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.SetupEventStep
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_HideActorByCondition_C::SetupEventStep()
 {
@@ -51,6 +52,7 @@ void UBP_HideActorByCondition_C::SetupEventStep()
 	UBP_HideActorByCondition_C_SetupEventStep_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,7 +61,7 @@ void UBP_HideActorByCondition_C::SetupEventStep()
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.HideMyOwner
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Private, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -79,9 +81,9 @@ void UBP_HideActorByCondition_C::HideMyOwner(bool Mode)
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBP_HideActorByCondition_C::ReceiveBeginPlay()
+void UBP_HideActorByCondition_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideActorByCondition.BP_HideActorByCondition_C.ReceiveBeginPlay");
 
@@ -96,7 +98,7 @@ void UBP_HideActorByCondition_C::ReceiveBeginPlay()
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -108,6 +110,7 @@ void UBP_HideActorByCondition_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +119,7 @@ void UBP_HideActorByCondition_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.ChangeStep
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            SetSteps                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -128,6 +131,7 @@ void UBP_HideActorByCondition_C::ChangeStep(int SetSteps)
 	params.SetSteps = SetSteps;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,13 +140,13 @@ void UBP_HideActorByCondition_C::ChangeStep(int SetSteps)
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.ChangeItemNum
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NewNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OldNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_HideActorByCondition_C::ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum)
+void UBP_HideActorByCondition_C::STATIC_ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideActorByCondition.BP_HideActorByCondition_C.ChangeItemNum");
 
@@ -152,6 +156,7 @@ void UBP_HideActorByCondition_C::ChangeItemNum(const struct FName& ItemId, int N
 	params.OldNum = OldNum;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,12 +165,12 @@ void UBP_HideActorByCondition_C::ChangeItemNum(const struct FName& ItemId, int N
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.ChangeFlag
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_HideActorByCondition_C::ChangeFlag(int ArrayIndex, int SetFlags)
+void UBP_HideActorByCondition_C::STATIC_ChangeFlag(int ArrayIndex, int SetFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideActorByCondition.BP_HideActorByCondition_C.ChangeFlag");
 
@@ -182,7 +187,7 @@ void UBP_HideActorByCondition_C::ChangeFlag(int ArrayIndex, int SetFlags)
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -202,9 +207,9 @@ void UBP_HideActorByCondition_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndP
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.UnbindEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBP_HideActorByCondition_C::UnbindEvent()
+void UBP_HideActorByCondition_C::STATIC_UnbindEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HideActorByCondition.BP_HideActorByCondition_C.UnbindEvent");
 
@@ -219,7 +224,7 @@ void UBP_HideActorByCondition_C::UnbindEvent()
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.SetUpEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void UBP_HideActorByCondition_C::SetUpEvent()
 {
@@ -228,6 +233,7 @@ void UBP_HideActorByCondition_C::SetUpEvent()
 	UBP_HideActorByCondition_C_SetUpEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,7 +242,7 @@ void UBP_HideActorByCondition_C::SetUpEvent()
 
 
 // Function BP_HideActorByCondition.BP_HideActorByCondition_C.ExecuteUbergraph_BP_HideActorByCondition
-// ()
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

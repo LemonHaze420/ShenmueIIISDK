@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.SetFocusToButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBW_DebugPerfMenuLevelItem_C::SetFocusToButton()
+void UBW_DebugPerfMenuLevelItem_C::STATIC_SetFocusToButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.SetFocusToButton");
 
@@ -31,11 +31,11 @@ void UBW_DebugPerfMenuLevelItem_C::SetFocusToButton()
 
 
 // Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.OnAddedToFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FFocusEvent             InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBW_DebugPerfMenuLevelItem_C::OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
+void UBW_DebugPerfMenuLevelItem_C::STATIC_OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.OnAddedToFocusPath");
 
@@ -43,6 +43,7 @@ void UBW_DebugPerfMenuLevelItem_C::OnAddedToFocusPath(const struct FFocusEvent& 
 	params.InFocusEvent = InFocusEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,9 +52,9 @@ void UBW_DebugPerfMenuLevelItem_C::OnAddedToFocusPath(const struct FFocusEvent& 
 
 
 // Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugPerfMenuLevelItem_C::Construct()
+void UBW_DebugPerfMenuLevelItem_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.Construct");
 
@@ -68,9 +69,9 @@ void UBW_DebugPerfMenuLevelItem_C::Construct()
 
 
 // Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugPerfMenuLevelItem_C::BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugPerfMenuLevelItem_C::STATIC_BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature");
 
@@ -85,11 +86,11 @@ void UBW_DebugPerfMenuLevelItem_C::BndEvt__ItemButton_K2Node_ComponentBoundEvent
 
 
 // Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.ExecuteUbergraph_BW_DebugPerfMenuLevelItem
-// (HasDefaults)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugPerfMenuLevelItem_C::ExecuteUbergraph_BW_DebugPerfMenuLevelItem(int EntryPoint)
+void UBW_DebugPerfMenuLevelItem_C::STATIC_ExecuteUbergraph_BW_DebugPerfMenuLevelItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.ExecuteUbergraph_BW_DebugPerfMenuLevelItem");
 
@@ -105,11 +106,11 @@ void UBW_DebugPerfMenuLevelItem_C::ExecuteUbergraph_BW_DebugPerfMenuLevelItem(in
 
 
 // Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.OnFocused__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class US3Button*               Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_DebugPerfMenuLevelItem_C::OnFocused__DelegateSignature(class US3Button* Button)
+void UBW_DebugPerfMenuLevelItem_C::STATIC_OnFocused__DelegateSignature(class US3Button* Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.OnFocused__DelegateSignature");
 
@@ -117,6 +118,7 @@ void UBW_DebugPerfMenuLevelItem_C::OnFocused__DelegateSignature(class US3Button*
 	params.Button = Button;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,11 +127,11 @@ void UBW_DebugPerfMenuLevelItem_C::OnFocused__DelegateSignature(class US3Button*
 
 
 // Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.OnLevelClicked__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ULevelStreaming*         Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugPerfMenuLevelItem_C::OnLevelClicked__DelegateSignature(class ULevelStreaming* Level)
+void UBW_DebugPerfMenuLevelItem_C::STATIC_OnLevelClicked__DelegateSignature(class ULevelStreaming* Level)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugPerfMenuLevelItem.BW_DebugPerfMenuLevelItem_C.OnLevelClicked__DelegateSignature");
 

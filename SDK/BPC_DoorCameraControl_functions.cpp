@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.CalculateLengthOverrideAlpha
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_DoorCameraControl_C::CalculateLengthOverrideAlpha()
+float UBPC_DoorCameraControl_C::STATIC_CalculateLengthOverrideAlpha()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.CalculateLengthOverrideAlpha");
 
 	UBPC_DoorCameraControl_C_CalculateLengthOverrideAlpha_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ float UBPC_DoorCameraControl_C::CalculateLengthOverrideAlpha()
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.SetCharacter
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3Character_C*       PlayerCharacter                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +48,7 @@ void UBPC_DoorCameraControl_C::SetCharacter(class ABP_S3Character_C* PlayerChara
 	params.PlayerCharacter = PlayerCharacter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +57,7 @@ void UBPC_DoorCameraControl_C::SetCharacter(class ABP_S3Character_C* PlayerChara
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.CalculateSpringArmLength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Event, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Length                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Alpha                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -80,11 +82,11 @@ void UBPC_DoorCameraControl_C::CalculateSpringArmLength(float* Length, float* Al
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.RegisterDoor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorCameraControl_C::RegisterDoor(class AS3GimmickOpenDoor* Door)
+void UBPC_DoorCameraControl_C::STATIC_RegisterDoor(class AS3GimmickOpenDoor* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.RegisterDoor");
 
@@ -100,11 +102,11 @@ void UBPC_DoorCameraControl_C::RegisterDoor(class AS3GimmickOpenDoor* Door)
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.StartDoorInteract
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_Gimmick_OpenDoor_Template_C* Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorCameraControl_C::StartDoorInteract(class ABP_Gimmick_OpenDoor_Template_C* Door)
+void UBPC_DoorCameraControl_C::STATIC_StartDoorInteract(class ABP_Gimmick_OpenDoor_Template_C* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.StartDoorInteract");
 
@@ -120,12 +122,12 @@ void UBPC_DoorCameraControl_C::StartDoorInteract(class ABP_Gimmick_OpenDoor_Temp
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.OnDoorEndPlay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorCameraControl_C::OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_DoorCameraControl_C::STATIC_OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.OnDoorEndPlay");
 
@@ -134,6 +136,7 @@ void UBPC_DoorCameraControl_C::OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EE
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,11 +145,11 @@ void UBPC_DoorCameraControl_C::OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EE
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorCameraControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_DoorCameraControl_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.ReceiveEndPlay");
 
@@ -162,9 +165,9 @@ void UBPC_DoorCameraControl_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.OnDoorAnimFinish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
-void UBPC_DoorCameraControl_C::OnDoorAnimFinish()
+void UBPC_DoorCameraControl_C::STATIC_OnDoorAnimFinish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.OnDoorAnimFinish");
 
@@ -179,11 +182,11 @@ void UBPC_DoorCameraControl_C::OnDoorAnimFinish()
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorCameraControl_C::ReceiveTick(float DeltaSeconds)
+void UBPC_DoorCameraControl_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.ReceiveTick");
 
@@ -199,9 +202,9 @@ void UBPC_DoorCameraControl_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.StartInteraction
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
-void UBPC_DoorCameraControl_C::StartInteraction()
+void UBPC_DoorCameraControl_C::STATIC_StartInteraction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.StartInteraction");
 
@@ -216,9 +219,9 @@ void UBPC_DoorCameraControl_C::StartInteraction()
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.EndInteraction
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
-void UBPC_DoorCameraControl_C::EndInteraction()
+void UBPC_DoorCameraControl_C::STATIC_EndInteraction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.EndInteraction");
 
@@ -233,11 +236,11 @@ void UBPC_DoorCameraControl_C::EndInteraction()
 
 
 // Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.ExecuteUbergraph_BPC_DoorCameraControl
-// ()
+// (Exec, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorCameraControl_C::ExecuteUbergraph_BPC_DoorCameraControl(int EntryPoint)
+void UBPC_DoorCameraControl_C::STATIC_ExecuteUbergraph_BPC_DoorCameraControl(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorCameraControl.BPC_DoorCameraControl_C.ExecuteUbergraph_BPC_DoorCameraControl");
 
@@ -245,6 +248,7 @@ void UBPC_DoorCameraControl_C::ExecuteUbergraph_BPC_DoorCameraControl(int EntryP
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

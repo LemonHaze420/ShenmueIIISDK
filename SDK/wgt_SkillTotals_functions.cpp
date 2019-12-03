@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.PlayMeterSound
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void Uwgt_SkillTotals_C::PlayMeterSound()
+void Uwgt_SkillTotals_C::STATIC_PlayMeterSound()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillTotals.wgt_SkillTotals_C.PlayMeterSound");
 
 	Uwgt_SkillTotals_C_PlayMeterSound_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,12 +32,12 @@ void Uwgt_SkillTotals_C::PlayMeterSound()
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.SetBarHighlight
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UUserWidget*             bar                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Highlight                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillTotals_C::SetBarHighlight(class UUserWidget* bar, bool Highlight)
+void Uwgt_SkillTotals_C::STATIC_SetBarHighlight(class UUserWidget* bar, bool Highlight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillTotals.wgt_SkillTotals_C.SetBarHighlight");
 
@@ -53,11 +54,11 @@ void Uwgt_SkillTotals_C::SetBarHighlight(class UUserWidget* bar, bool Highlight)
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.LerpLevelUpDisplay
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          N                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillTotals_C::LerpLevelUpDisplay(float N)
+void Uwgt_SkillTotals_C::STATIC_LerpLevelUpDisplay(float N)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillTotals.wgt_SkillTotals_C.LerpLevelUpDisplay");
 
@@ -65,6 +66,7 @@ void Uwgt_SkillTotals_C::LerpLevelUpDisplay(float N)
 	params.N = N;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +75,7 @@ void Uwgt_SkillTotals_C::LerpLevelUpDisplay(float N)
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.SetLevelUpData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_SparringResultLevelUpData Attack                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_SparringResultLevelUpData Vitality                       (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -89,6 +91,7 @@ void Uwgt_SkillTotals_C::SetLevelUpData(const struct FST_SparringResultLevelUpDa
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,12 +100,12 @@ void Uwgt_SkillTotals_C::SetLevelUpData(const struct FST_SparringResultLevelUpDa
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.UpdateLevelData
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UBPW_SkillBar_C*         BarWidget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class US3DerivedPlayerLevel*   Stat                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillTotals_C::UpdateLevelData(class UBPW_SkillBar_C* BarWidget, class US3DerivedPlayerLevel* Stat)
+void Uwgt_SkillTotals_C::STATIC_UpdateLevelData(class UBPW_SkillBar_C* BarWidget, class US3DerivedPlayerLevel* Stat)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillTotals.wgt_SkillTotals_C.UpdateLevelData");
 
@@ -119,7 +122,7 @@ void Uwgt_SkillTotals_C::UpdateLevelData(class UBPW_SkillBar_C* BarWidget, class
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.Update
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 
 void Uwgt_SkillTotals_C::Update()
 {
@@ -128,6 +131,7 @@ void Uwgt_SkillTotals_C::Update()
 	Uwgt_SkillTotals_C_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +140,7 @@ void Uwgt_SkillTotals_C::Update()
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void Uwgt_SkillTotals_C::Construct()
 {
@@ -145,6 +149,7 @@ void Uwgt_SkillTotals_C::Construct()
 	Uwgt_SkillTotals_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,11 +158,11 @@ void Uwgt_SkillTotals_C::Construct()
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillTotals_C::PreConstruct(bool IsDesignTime)
+void Uwgt_SkillTotals_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillTotals.wgt_SkillTotals_C.PreConstruct");
 
@@ -165,6 +170,7 @@ void Uwgt_SkillTotals_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,7 +179,7 @@ void Uwgt_SkillTotals_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.BndEvt__Bar_Attack_K2Node_ComponentBoundEvent_0_OnAnimLevelUp__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, Event, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void Uwgt_SkillTotals_C::BndEvt__Bar_Attack_K2Node_ComponentBoundEvent_0_OnAnimLevelUp__DelegateSignature()
 {
@@ -182,6 +188,7 @@ void Uwgt_SkillTotals_C::BndEvt__Bar_Attack_K2Node_ComponentBoundEvent_0_OnAnimL
 	Uwgt_SkillTotals_C_BndEvt__Bar_Attack_K2Node_ComponentBoundEvent_0_OnAnimLevelUp__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -190,7 +197,7 @@ void Uwgt_SkillTotals_C::BndEvt__Bar_Attack_K2Node_ComponentBoundEvent_0_OnAnimL
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.BndEvt__Bar_Level_K2Node_ComponentBoundEvent_1_OnAnimLevelUp__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, Event, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void Uwgt_SkillTotals_C::BndEvt__Bar_Level_K2Node_ComponentBoundEvent_1_OnAnimLevelUp__DelegateSignature()
 {
@@ -199,6 +206,7 @@ void Uwgt_SkillTotals_C::BndEvt__Bar_Level_K2Node_ComponentBoundEvent_1_OnAnimLe
 	Uwgt_SkillTotals_C_BndEvt__Bar_Level_K2Node_ComponentBoundEvent_1_OnAnimLevelUp__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -207,7 +215,7 @@ void Uwgt_SkillTotals_C::BndEvt__Bar_Level_K2Node_ComponentBoundEvent_1_OnAnimLe
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.BndEvt__Bar_Vitality_K2Node_ComponentBoundEvent_2_OnAnimLevelUp__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, Event, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void Uwgt_SkillTotals_C::BndEvt__Bar_Vitality_K2Node_ComponentBoundEvent_2_OnAnimLevelUp__DelegateSignature()
 {
@@ -216,6 +224,7 @@ void Uwgt_SkillTotals_C::BndEvt__Bar_Vitality_K2Node_ComponentBoundEvent_2_OnAni
 	Uwgt_SkillTotals_C_BndEvt__Bar_Vitality_K2Node_ComponentBoundEvent_2_OnAnimLevelUp__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -224,7 +233,7 @@ void Uwgt_SkillTotals_C::BndEvt__Bar_Vitality_K2Node_ComponentBoundEvent_2_OnAni
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.StartLevelUpAnim
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void Uwgt_SkillTotals_C::StartLevelUpAnim()
 {
@@ -233,6 +242,7 @@ void Uwgt_SkillTotals_C::StartLevelUpAnim()
 	Uwgt_SkillTotals_C_StartLevelUpAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,11 +251,11 @@ void Uwgt_SkillTotals_C::StartLevelUpAnim()
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.ExecuteUbergraph_wgt_SkillTotals
-// ()
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillTotals_C::ExecuteUbergraph_wgt_SkillTotals(int EntryPoint)
+void Uwgt_SkillTotals_C::STATIC_ExecuteUbergraph_wgt_SkillTotals(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillTotals.wgt_SkillTotals_C.ExecuteUbergraph_wgt_SkillTotals");
 
@@ -261,7 +271,7 @@ void Uwgt_SkillTotals_C::ExecuteUbergraph_wgt_SkillTotals(int EntryPoint)
 
 
 // Function wgt_SkillTotals.wgt_SkillTotals_C.OnLevelUpAnimationDone__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void Uwgt_SkillTotals_C::OnLevelUpAnimationDone__DelegateSignature()
 {
@@ -270,6 +280,7 @@ void Uwgt_SkillTotals_C::OnLevelUpAnimationDone__DelegateSignature()
 	Uwgt_SkillTotals_C_OnLevelUpAnimationDone__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

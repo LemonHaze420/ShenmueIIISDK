@@ -33,11 +33,11 @@ public:
 
 	void SetFullTex(class UTexture2D* FullTexture);
 	void SetFillRatio(float FillRatio, bool* Changed);
-	void SetScaleRatio(float ScaleRatio, bool* Changed);
+	void STATIC_SetScaleRatio(float ScaleRatio, bool* Changed);
 	void SetUse(bool Use);
-	void UpdateIcon();
+	void STATIC_UpdateIcon();
 	void Construct();
-	void ExecuteUbergraph_wgt_HealthOrb(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_HealthOrb(int EntryPoint);
 };
 
 

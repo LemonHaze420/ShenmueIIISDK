@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_PWH_04.BP_TalkCamera_PWH_04_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkCamera_PWH_04_C::UserConstructionScript()
+void ABP_TalkCamera_PWH_04_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_PWH_04.BP_TalkCamera_PWH_04_C.UserConstructionScript");
 
@@ -31,9 +31,9 @@ void ABP_TalkCamera_PWH_04_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_PWH_04.BP_TalkCamera_PWH_04_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkCamera_PWH_04_C::ReceiveBeginPlay()
+void ABP_TalkCamera_PWH_04_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_PWH_04.BP_TalkCamera_PWH_04_C.ReceiveBeginPlay");
 
@@ -48,7 +48,7 @@ void ABP_TalkCamera_PWH_04_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_PWH_04.BP_TalkCamera_PWH_04_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +60,7 @@ void ABP_TalkCamera_PWH_04_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +69,7 @@ void ABP_TalkCamera_PWH_04_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_PWH_04.BP_TalkCamera_PWH_04_C.ExecuteUbergraph_BP_TalkCamera_PWH_04
-// ()
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +81,7 @@ void ABP_TalkCamera_PWH_04_C::ExecuteUbergraph_BP_TalkCamera_PWH_04(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

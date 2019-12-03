@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.ShouldSetPlayerBehavior
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_FoodTutorialEvent_C::ShouldSetPlayerBehavior()
+bool ABP_FoodTutorialEvent_C::STATIC_ShouldSetPlayerBehavior()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.ShouldSetPlayerBehavior");
 
@@ -35,15 +35,16 @@ bool ABP_FoodTutorialEvent_C::ShouldSetPlayerBehavior()
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_FoodTutorialEvent_C::UserConstructionScript()
+void ABP_FoodTutorialEvent_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.UserConstructionScript");
 
 	ABP_FoodTutorialEvent_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,7 +53,7 @@ void ABP_FoodTutorialEvent_C::UserConstructionScript()
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_FoodTutorialEvent_C::ReceiveBeginPlay()
 {
@@ -69,11 +70,11 @@ void ABP_FoodTutorialEvent_C::ReceiveBeginPlay()
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FoodTutorialEvent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_FoodTutorialEvent_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.ReceiveEndPlay");
 
@@ -81,6 +82,7 @@ void ABP_FoodTutorialEvent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,11 +91,11 @@ void ABP_FoodTutorialEvent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.EnablePlayerInput
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FoodTutorialEvent_C::EnablePlayerInput(bool Condition)
+void ABP_FoodTutorialEvent_C::STATIC_EnablePlayerInput(bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.EnablePlayerInput");
 
@@ -101,6 +103,7 @@ void ABP_FoodTutorialEvent_C::EnablePlayerInput(bool Condition)
 	params.Condition = Condition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,11 +112,11 @@ void ABP_FoodTutorialEvent_C::EnablePlayerInput(bool Condition)
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.BindDIalogFinish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           Bind                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FoodTutorialEvent_C::BindDIalogFinish(bool Bind)
+void ABP_FoodTutorialEvent_C::STATIC_BindDIalogFinish(bool Bind)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.BindDIalogFinish");
 
@@ -129,11 +132,11 @@ void ABP_FoodTutorialEvent_C::BindDIalogFinish(bool Bind)
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.StartPause
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           Pause                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FoodTutorialEvent_C::StartPause(bool Pause)
+void ABP_FoodTutorialEvent_C::STATIC_StartPause(bool Pause)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.StartPause");
 
@@ -149,11 +152,11 @@ void ABP_FoodTutorialEvent_C::StartPause(bool Pause)
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.OnDialogClose
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FoodTutorialEvent_C::OnDialogClose(class AActor* Actor)
+void ABP_FoodTutorialEvent_C::STATIC_OnDialogClose(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.OnDialogClose");
 
@@ -169,11 +172,11 @@ void ABP_FoodTutorialEvent_C::OnDialogClose(class AActor* Actor)
 
 
 // Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.ExecuteUbergraph_BP_FoodTutorialEvent
-// (HasDefaults)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Protected, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FoodTutorialEvent_C::ExecuteUbergraph_BP_FoodTutorialEvent(int EntryPoint)
+void ABP_FoodTutorialEvent_C::STATIC_ExecuteUbergraph_BP_FoodTutorialEvent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FoodTutorialEvent.BP_FoodTutorialEvent_C.ExecuteUbergraph_BP_FoodTutorialEvent");
 

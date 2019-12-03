@@ -34,12 +34,12 @@ public:
 	}
 
 
-	void SetEnabledPushVisible(bool Enabled);
+	void STATIC_SetEnabledPushVisible(bool Enabled);
 	void SetRate(float Rate);
-	void Reset();
+	void STATIC_Reset();
 	void SetTimeGaugeRate(float Rate);
-	void Construct();
-	void ExecuteUbergraph_WBP_SkipSceneIcon(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_WBP_SkipSceneIcon(int EntryPoint);
 };
 
 

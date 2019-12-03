@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_PWH_03.BP_TalkCamera_PWH_03_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_PWH_03_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_TalkCamera_PWH_03_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_PWH_03.BP_TalkCamera_PWH_03_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_PWH_03_C::ReceiveBeginPlay()
 {
@@ -48,7 +48,7 @@ void ABP_TalkCamera_PWH_03_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_PWH_03.BP_TalkCamera_PWH_03_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +60,7 @@ void ABP_TalkCamera_PWH_03_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,11 +69,11 @@ void ABP_TalkCamera_PWH_03_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_PWH_03.BP_TalkCamera_PWH_03_C.ExecuteUbergraph_BP_TalkCamera_PWH_03
-// ()
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCamera_PWH_03_C::ExecuteUbergraph_BP_TalkCamera_PWH_03(int EntryPoint)
+void ABP_TalkCamera_PWH_03_C::STATIC_ExecuteUbergraph_BP_TalkCamera_PWH_03(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_PWH_03.BP_TalkCamera_PWH_03_C.ExecuteUbergraph_BP_TalkCamera_PWH_03");
 

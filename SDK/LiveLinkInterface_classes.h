@@ -12,21 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class LiveLinkInterface.LiveLinkSourceFactory
-// 0x0000 (0x0028 - 0x0028)
-class ULiveLinkSourceFactory : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSourceFactory");
-		return ptr;
-	}
-
-};
-
-
 // Class LiveLinkInterface.LiveLinkSourceSettings
 // 0x0008 (0x0030 - 0x0028)
 class ULiveLinkSourceSettings : public UObject
@@ -37,6 +22,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSourceSettings");
+		return ptr;
+	}
+
+};
+
+
+// Class LiveLinkInterface.LiveLinkSourceFactory
+// 0x0000 (0x0028 - 0x0028)
+class ULiveLinkSourceFactory : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LiveLinkInterface.LiveLinkSourceFactory");
 		return ptr;
 	}
 

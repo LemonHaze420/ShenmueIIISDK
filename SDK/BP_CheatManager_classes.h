@@ -41,16 +41,16 @@ public:
 
 
 	void SetForceNPCVisible(int Num);
-	void Init_DebugItemPrice();
-	void DisplayLightCount();
+	void STATIC_Init_DebugItemPrice();
+	void STATIC_DisplayLightCount();
 	void ToggleDispDevelopText();
 	void ToggleDispCutscenePlayArea();
 	void BatchAddPropertyWatch(const struct FText& ObjectDisplayName, class UObject* Object, TArray<struct FBatchPropertyWatchInfo>* Properties);
 	void DisplayWorkMap();
-	void DisplayLightInfo();
+	void STATIC_DisplayLightInfo();
 	void DebugAddMoney(bool Add);
 	void DisplayNPCNum();
-	void dbgCalcAddtime(float Base, float Bias, bool Signed, float* Result);
+	void STATIC_dbgCalcAddtime(float Base, float Bias, bool Signed, float* Result);
 	void UserConstructionScript();
 	void ReceiveInitCheatManager();
 	void OnInputKey_Cmd_Insert();

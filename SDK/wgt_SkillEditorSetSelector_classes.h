@@ -35,8 +35,8 @@ public:
 	}
 
 
-	void AlertSet();
-	void SetTitleText(const struct FText& InText);
+	void STATIC_AlertSet();
+	void STATIC_SetTitleText(const struct FText& InText);
 	void PlayArrowAnim(bool Play);
 	void SetButtonImage(bool Auto);
 	void SetSkillSetIndex(const struct FText& SkillSetText, int Index);

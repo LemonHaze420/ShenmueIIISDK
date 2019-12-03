@@ -26,7 +26,7 @@ public:
 	}
 
 
-	void StateUpdate(float Delta, bool* bDummy);
+	void STATIC_StateUpdate(float Delta, bool* bDummy);
 };
 
 

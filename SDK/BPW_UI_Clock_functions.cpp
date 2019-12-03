@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.SetDifficultyImage
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EBattleDifficulty> Difficulty                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Clock_C::SetDifficultyImage(TEnumAsByte<EBattleDifficulty> Difficulty)
+void UBPW_UI_Clock_C::STATIC_SetDifficultyImage(TEnumAsByte<EBattleDifficulty> Difficulty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Clock.BPW_UI_Clock_C.SetDifficultyImage");
 
@@ -34,11 +34,11 @@ void UBPW_UI_Clock_C::SetDifficultyImage(TEnumAsByte<EBattleDifficulty> Difficul
 
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.SetMaterialTime
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FDateTime               InDateTime                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_UI_Clock_C::SetMaterialTime(const struct FDateTime& InDateTime)
+void UBPW_UI_Clock_C::STATIC_SetMaterialTime(const struct FDateTime& InDateTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Clock.BPW_UI_Clock_C.SetMaterialTime");
 
@@ -46,6 +46,7 @@ void UBPW_UI_Clock_C::SetMaterialTime(const struct FDateTime& InDateTime)
 	params.InDateTime = InDateTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +55,11 @@ void UBPW_UI_Clock_C::SetMaterialTime(const struct FDateTime& InDateTime)
 
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.GetForceVisibilityOperation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ForceVisibilityOperation       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Clock_C::GetForceVisibilityOperation(bool* ForceVisibilityOperation)
+void UBPW_UI_Clock_C::STATIC_GetForceVisibilityOperation(bool* ForceVisibilityOperation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Clock.BPW_UI_Clock_C.GetForceVisibilityOperation");
 
@@ -76,7 +77,7 @@ void UBPW_UI_Clock_C::GetForceVisibilityOperation(bool* ForceVisibilityOperation
 
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.SetClockVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -88,6 +89,7 @@ void UBPW_UI_Clock_C::SetClockVisibility(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,11 +98,11 @@ void UBPW_UI_Clock_C::SetClockVisibility(bool Visible)
 
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.SetForceVisibilityOperation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ForceOperation                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Clock_C::SetForceVisibilityOperation(bool ForceOperation)
+void UBPW_UI_Clock_C::STATIC_SetForceVisibilityOperation(bool ForceOperation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Clock.BPW_UI_Clock_C.SetForceVisibilityOperation");
 
@@ -116,9 +118,9 @@ void UBPW_UI_Clock_C::SetForceVisibilityOperation(bool ForceOperation)
 
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBPW_UI_Clock_C::Construct()
+void UBPW_UI_Clock_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Clock.BPW_UI_Clock_C.Construct");
 
@@ -133,7 +135,7 @@ void UBPW_UI_Clock_C::Construct()
 
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -155,11 +157,11 @@ void UBPW_UI_Clock_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 
 
 // Function BPW_UI_Clock.BPW_UI_Clock_C.ExecuteUbergraph_BPW_UI_Clock
-// (HasDefaults)
+// (Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Clock_C::ExecuteUbergraph_BPW_UI_Clock(int EntryPoint)
+void UBPW_UI_Clock_C::STATIC_ExecuteUbergraph_BPW_UI_Clock(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Clock.BPW_UI_Clock_C.ExecuteUbergraph_BPW_UI_Clock");
 

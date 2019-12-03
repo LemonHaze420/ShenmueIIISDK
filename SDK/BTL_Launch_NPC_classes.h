@@ -35,9 +35,9 @@ public:
 	}
 
 
-	void GetDataFromAsset(class UBTL_NPCDataAsset* Asset);
+	void STATIC_GetDataFromAsset(class UBTL_NPCDataAsset* Asset);
 	void SetDefaultAsNeccessary(class UBTL_NPCDataAsset* DefaultDataAsset);
-	void SetHardDataAsset(class UBTL_NPCDataAsset* Asset);
+	void STATIC_SetHardDataAsset(class UBTL_NPCDataAsset* Asset);
 	void FinishedLoading__DelegateSignature();
 };
 

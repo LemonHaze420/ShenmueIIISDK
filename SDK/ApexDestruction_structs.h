@@ -27,27 +27,6 @@ enum class EImpactDamageOverride : uint8_t
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct ApexDestruction.FractureMaterial
-// 0x0024
-struct FFractureMaterial
-{
-	struct FVector2D                                   UVScale;                                                  // 0x0000(0x0008) (Edit, IsPlainOldData)
-	struct FVector2D                                   UVOffset;                                                 // 0x0008(0x0008) (Edit, IsPlainOldData)
-	struct FVector                                     Tangent;                                                  // 0x0010(0x000C) (Edit, IsPlainOldData)
-	float                                              UAngle;                                                   // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                InteriorElementIndex;                                     // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct ApexDestruction.DestructibleChunkParameters
-// 0x0004
-struct FDestructibleChunkParameters
-{
-	bool                                               bIsSupportChunk;                                          // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bDoNotFracture;                                           // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bDoNotDamage;                                             // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bDoNotCrumble;                                            // 0x0003(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct ApexDestruction.DestructibleDamageParameters
 // 0x001C
 struct FDestructibleDamageParameters
@@ -131,6 +110,27 @@ struct FDestructibleParameters
 	TArray<struct FDestructibleDepthParameters>        DepthParameters;                                          // 0x0070(0x0010) (Edit, EditFixedSize, ZeroConstructor)
 	struct FDestructibleParametersFlag                 Flags;                                                    // 0x0080(0x0004) (Edit)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct ApexDestruction.FractureMaterial
+// 0x0024
+struct FFractureMaterial
+{
+	struct FVector2D                                   UVScale;                                                  // 0x0000(0x0008) (Edit, IsPlainOldData)
+	struct FVector2D                                   UVOffset;                                                 // 0x0008(0x0008) (Edit, IsPlainOldData)
+	struct FVector                                     Tangent;                                                  // 0x0010(0x000C) (Edit, IsPlainOldData)
+	float                                              UAngle;                                                   // 0x001C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                InteriorElementIndex;                                     // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ApexDestruction.DestructibleChunkParameters
+// 0x0004
+struct FDestructibleChunkParameters
+{
+	bool                                               bIsSupportChunk;                                          // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bDoNotFracture;                                           // 0x0001(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bDoNotDamage;                                             // 0x0002(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bDoNotCrumble;                                            // 0x0003(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 }

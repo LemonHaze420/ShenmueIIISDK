@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void STATIC_BPF_SafeRemovePersistantWidget(class UObject* __WorldContext, class UUserWidget** Widget);
-	void STATIC_getS3HudBase(class UObject* __WorldContext, class ABP_S3HUD_Base_C** BP_S3HUD_Base);
+	void BPF_SafeRemovePersistantWidget(class UObject* __WorldContext, class UUserWidget** Widget);
+	void getS3HudBase(class UObject* __WorldContext, class ABP_S3HUD_Base_C** BP_S3HUD_Base);
 };
 
 

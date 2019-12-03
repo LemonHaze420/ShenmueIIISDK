@@ -33,18 +33,18 @@ public:
 	}
 
 
-	float CalculateLengthOverrideAlpha();
+	float STATIC_CalculateLengthOverrideAlpha();
 	void SetCharacter(class ABP_S3Character_C* PlayerCharacter);
 	void CalculateSpringArmLength(float* Length, float* Alpha);
-	void RegisterDoor(class AS3GimmickOpenDoor* Door);
-	void StartDoorInteract(class ABP_Gimmick_OpenDoor_Template_C* Door);
-	void OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void OnDoorAnimFinish();
-	void ReceiveTick(float DeltaSeconds);
-	void StartInteraction();
-	void EndInteraction();
-	void ExecuteUbergraph_BPC_DoorCameraControl(int EntryPoint);
+	void STATIC_RegisterDoor(class AS3GimmickOpenDoor* Door);
+	void STATIC_StartDoorInteract(class ABP_Gimmick_OpenDoor_Template_C* Door);
+	void STATIC_OnDoorEndPlay(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_OnDoorAnimFinish();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_StartInteraction();
+	void STATIC_EndInteraction();
+	void STATIC_ExecuteUbergraph_BPC_DoorCameraControl(int EntryPoint);
 };
 
 

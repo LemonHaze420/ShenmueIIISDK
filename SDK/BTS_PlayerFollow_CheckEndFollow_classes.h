@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
+	void STATIC_ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 	void ReceiveSearchStartAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void ExecuteUbergraph_BTS_PlayerFollow_CheckEndFollow(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BTS_PlayerFollow_CheckEndFollow(int EntryPoint);
 };
 
 

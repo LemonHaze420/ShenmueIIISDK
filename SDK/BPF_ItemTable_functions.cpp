@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableIndexListByGroup
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Native, NetMulticast, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ItemDataGroup               Group                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<int> UBPF_ItemTable_C::STATIC_GetItemTableIndexListByGroup(ES3ItemDataGroup Group, class UObject* __WorldContext)
+TArray<int> UBPF_ItemTable_C::GetItemTableIndexListByGroup(ES3ItemDataGroup Group, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableIndexListByGroup");
 
@@ -29,6 +29,7 @@ TArray<int> UBPF_ItemTable_C::STATIC_GetItemTableIndexListByGroup(ES3ItemDataGro
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,13 +40,13 @@ TArray<int> UBPF_ItemTable_C::STATIC_GetItemTableIndexListByGroup(ES3ItemDataGro
 
 
 // Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableLabelListByGroup
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // ES3ItemDataGroup               Group                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnList                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_ItemTable_C::STATIC_GetItemTableLabelListByGroup(ES3ItemDataGroup Group, class UObject* __WorldContext, TArray<struct FName>* ReturnList)
+void UBPF_ItemTable_C::GetItemTableLabelListByGroup(ES3ItemDataGroup Group, class UObject* __WorldContext, TArray<struct FName>* ReturnList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableLabelListByGroup");
 
@@ -54,6 +55,7 @@ void UBPF_ItemTable_C::STATIC_GetItemTableLabelListByGroup(ES3ItemDataGroup Grou
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,12 +67,12 @@ void UBPF_ItemTable_C::STATIC_GetItemTableLabelListByGroup(ES3ItemDataGroup Grou
 
 
 // Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableInvalidIndex
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetMulticast, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ItemTable_C::STATIC_GetItemTableInvalidIndex(class UObject* __WorldContext, int* Index)
+void UBPF_ItemTable_C::GetItemTableInvalidIndex(class UObject* __WorldContext, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableInvalidIndex");
 
@@ -89,7 +91,7 @@ void UBPF_ItemTable_C::STATIC_GetItemTableInvalidIndex(class UObject* __WorldCon
 
 
 // Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableIndexListByEffectTarget
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // ES3ItemEffectTarget            ValueTarget                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -115,13 +117,13 @@ void UBPF_ItemTable_C::STATIC_GetItemTableIndexListByEffectTarget(ES3ItemEffectT
 
 
 // Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableLabelListByEffectTarget
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // ES3ItemEffectTarget            ValueTarget                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnList                     (Parm, OutParm, ZeroConstructor)
 
-void UBPF_ItemTable_C::STATIC_GetItemTableLabelListByEffectTarget(ES3ItemEffectTarget ValueTarget, class UObject* __WorldContext, TArray<struct FName>* ReturnList)
+void UBPF_ItemTable_C::GetItemTableLabelListByEffectTarget(ES3ItemEffectTarget ValueTarget, class UObject* __WorldContext, TArray<struct FName>* ReturnList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ItemTable.BPF_ItemTable_C.GetItemTableLabelListByEffectTarget");
 
@@ -141,13 +143,13 @@ void UBPF_ItemTable_C::STATIC_GetItemTableLabelListByEffectTarget(ES3ItemEffectT
 
 
 // Function BPF_ItemTable.BPF_ItemTable_C.ItemTableIndexToText
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   Result                         (Parm, OutParm)
 
-void UBPF_ItemTable_C::STATIC_ItemTableIndexToText(int Index, class UObject* __WorldContext, struct FText* Result)
+void UBPF_ItemTable_C::ItemTableIndexToText(int Index, class UObject* __WorldContext, struct FText* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ItemTable.BPF_ItemTable_C.ItemTableIndexToText");
 
@@ -156,6 +158,7 @@ void UBPF_ItemTable_C::STATIC_ItemTableIndexToText(int Index, class UObject* __W
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,13 +170,13 @@ void UBPF_ItemTable_C::STATIC_ItemTableIndexToText(int Index, class UObject* __W
 
 
 // Function BPF_ItemTable.BPF_ItemTable_C.LabelToItemTableIndex
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ItemTable_C::STATIC_LabelToItemTableIndex(const struct FName& Label, class UObject* __WorldContext, int* Index)
+void UBPF_ItemTable_C::LabelToItemTableIndex(const struct FName& Label, class UObject* __WorldContext, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ItemTable.BPF_ItemTable_C.LabelToItemTableIndex");
 
@@ -182,6 +185,7 @@ void UBPF_ItemTable_C::STATIC_LabelToItemTableIndex(const struct FName& Label, c
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,13 +197,13 @@ void UBPF_ItemTable_C::STATIC_LabelToItemTableIndex(const struct FName& Label, c
 
 
 // Function BPF_ItemTable.BPF_ItemTable_C.ItemTableIndexToLabel
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetResponse, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Label                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ItemTable_C::STATIC_ItemTableIndexToLabel(int Index, class UObject* __WorldContext, struct FName* Label)
+void UBPF_ItemTable_C::ItemTableIndexToLabel(int Index, class UObject* __WorldContext, struct FName* Label)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ItemTable.BPF_ItemTable_C.ItemTableIndexToLabel");
 

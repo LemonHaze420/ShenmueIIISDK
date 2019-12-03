@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_Take2.BP_OD_Take2_C.SpawnInputControlActor
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ class ABP_MiniGameInputBase_C* ABP_OD_Take2_C::SpawnInputControlActor()
 	ABP_OD_Take2_C_SpawnInputControlActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,17 +36,18 @@ class ABP_MiniGameInputBase_C* ABP_OD_Take2_C::SpawnInputControlActor()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.GetRewardMoney
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_OD_Take2_C::GetRewardMoney()
+int ABP_OD_Take2_C::STATIC_GetRewardMoney()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.GetRewardMoney");
 
 	ABP_OD_Take2_C_GetRewardMoney_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,15 +58,16 @@ int ABP_OD_Take2_C::GetRewardMoney()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_OD_Take2_C::UserConstructionScript()
+void ABP_OD_Take2_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.UserConstructionScript");
 
 	ABP_OD_Take2_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,15 +76,16 @@ void ABP_OD_Take2_C::UserConstructionScript()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_OD_Take2_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
+void ABP_OD_Take2_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature");
 
 	ABP_OD_Take2_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,15 +94,16 @@ void ABP_OD_Take2_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEv
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_OD_Take2_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
+void ABP_OD_Take2_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature");
 
 	ABP_OD_Take2_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,11 +112,11 @@ void ABP_OD_Take2_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEv
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.ResumeMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_OD_Take2_C::ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_OD_Take2_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.ResumeMiniGame");
 
@@ -127,11 +132,11 @@ void ABP_OD_Take2_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.OnTalkScriptEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Take2_C::OnTalkScriptEvent(int EventNumber)
+void ABP_OD_Take2_C::STATIC_OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.OnTalkScriptEvent");
 
@@ -147,7 +152,7 @@ void ABP_OD_Take2_C::OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -159,6 +164,7 @@ void ABP_OD_Take2_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +173,7 @@ void ABP_OD_Take2_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Take2_C::ReceiveBeginPlay()
 {
@@ -184,7 +190,7 @@ void ABP_OD_Take2_C::ReceiveBeginPlay()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.RestartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Take2_C::RestartMiniGame()
 {
@@ -201,7 +207,7 @@ void ABP_OD_Take2_C::RestartMiniGame()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Take2_C::EndMiniGame()
 {
@@ -210,6 +216,7 @@ void ABP_OD_Take2_C::EndMiniGame()
 	ABP_OD_Take2_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -218,9 +225,9 @@ void ABP_OD_Take2_C::EndMiniGame()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.HitCheck
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABP_OD_Take2_C::HitCheck()
+void ABP_OD_Take2_C::STATIC_HitCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.HitCheck");
 
@@ -235,7 +242,7 @@ void ABP_OD_Take2_C::HitCheck()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.Otoshidama End
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           is_success                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -247,6 +254,7 @@ void ABP_OD_Take2_C::Otoshidama_End(bool is_success)
 	params.is_success = is_success;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -255,9 +263,9 @@ void ABP_OD_Take2_C::Otoshidama_End(bool is_success)
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.Finalize_Check
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABP_OD_Take2_C::Finalize_Check()
+void ABP_OD_Take2_C::STATIC_Finalize_Check()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.Finalize_Check");
 
@@ -272,7 +280,7 @@ void ABP_OD_Take2_C::Finalize_Check()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Take2_C::StartMiniGame()
 {
@@ -281,6 +289,7 @@ void ABP_OD_Take2_C::StartMiniGame()
 	ABP_OD_Take2_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -289,11 +298,11 @@ void ABP_OD_Take2_C::StartMiniGame()
 
 
 // Function BP_OD_Take2.BP_OD_Take2_C.ExecuteUbergraph_BP_OD_Take2
-// ()
+// (Static, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Take2_C::ExecuteUbergraph_BP_OD_Take2(int EntryPoint)
+void ABP_OD_Take2_C::STATIC_ExecuteUbergraph_BP_OD_Take2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Take2.BP_OD_Take2_C.ExecuteUbergraph_BP_OD_Take2");
 

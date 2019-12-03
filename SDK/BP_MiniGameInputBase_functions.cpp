@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.GetMiniGameValueType
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EN_ValueType>      Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,15 +36,16 @@ void ABP_MiniGameInputBase_C::GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Ty
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MiniGameInputBase_C::UserConstructionScript()
+void ABP_MiniGameInputBase_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.UserConstructionScript");
 
 	ABP_MiniGameInputBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +54,11 @@ void ABP_MiniGameInputBase_C::UserConstructionScript()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_20
-// (BlueprintEvent)
+// (NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_20(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_20(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_20");
 
@@ -65,6 +66,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_20(con
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,11 +75,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_20(con
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_19
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_19(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_19(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_19");
 
@@ -85,6 +87,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,11 +96,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18
-// (BlueprintEvent)
+// (NetReliable, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18");
 
@@ -105,6 +108,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,11 +117,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_18
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_17
-// (BlueprintEvent)
+// (NetReliable, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_17(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_17(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_17");
 
@@ -125,6 +129,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,11 +138,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_1
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16");
 
@@ -145,6 +150,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16(
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,11 +159,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16(
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Left_K2Node_InputActionEvent_15
-// (BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_Left_K2Node_InputActionEvent_15(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_15(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Left_K2Node_InputActionEvent_15");
 
@@ -165,6 +171,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Left_K2Node_InputActionEvent_15(const
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,11 +180,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Left_K2Node_InputActionEvent_15(const
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Right_K2Node_InputActionEvent_14
-// (BlueprintEvent)
+// (Net, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_Right_K2Node_InputActionEvent_14(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_14(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Right_K2Node_InputActionEvent_14");
 
@@ -185,6 +192,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Right_K2Node_InputActionEvent_14(cons
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,11 +201,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Right_K2Node_InputActionEvent_14(cons
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Top_K2Node_InputActionEvent_13
-// (BlueprintEvent)
+// (Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_Top_K2Node_InputActionEvent_13(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_13(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_Top_K2Node_InputActionEvent_13");
 
@@ -205,6 +213,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Top_K2Node_InputActionEvent_13(const 
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,11 +222,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_Top_K2Node_InputActionEvent_13(const 
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_RightShoulder_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_MG_RightShoulder_K2Node_InputActionEvent_12(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_MG_RightShoulder_K2Node_InputActionEvent_12(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_MG_RightShoulder_K2Node_InputActionEvent_12");
 
@@ -225,6 +234,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_RightShoulder_K2Node_InputActionEvent
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -233,11 +243,11 @@ void ABP_MiniGameInputBase_C::InpActEvt_MG_RightShoulder_K2Node_InputActionEvent
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_Interruption_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGameInputBase_C::InpActEvt_Interruption_K2Node_InputActionEvent_11(const struct FKey& Key)
+void ABP_MiniGameInputBase_C::STATIC_InpActEvt_Interruption_K2Node_InputActionEvent_11(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpActEvt_Interruption_K2Node_InputActionEvent_11");
 
@@ -245,6 +255,7 @@ void ABP_MiniGameInputBase_C::InpActEvt_Interruption_K2Node_InputActionEvent_11(
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -253,15 +264,16 @@ void ABP_MiniGameInputBase_C::InpActEvt_Interruption_K2Node_InputActionEvent_11(
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::EndMiniGame()
+void ABP_MiniGameInputBase_C::STATIC_EndMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.EndMiniGame");
 
 	ABP_MiniGameInputBase_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -270,15 +282,16 @@ void ABP_MiniGameInputBase_C::EndMiniGame()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.WinMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::WinMiniGame()
+void ABP_MiniGameInputBase_C::STATIC_WinMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.WinMiniGame");
 
 	ABP_MiniGameInputBase_C_WinMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -287,15 +300,16 @@ void ABP_MiniGameInputBase_C::WinMiniGame()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.LoseMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::LoseMiniGame()
+void ABP_MiniGameInputBase_C::STATIC_LoseMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.LoseMiniGame");
 
 	ABP_MiniGameInputBase_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -304,15 +318,16 @@ void ABP_MiniGameInputBase_C::LoseMiniGame()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.DrawMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::DrawMiniGame()
+void ABP_MiniGameInputBase_C::STATIC_DrawMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.DrawMiniGame");
 
 	ABP_MiniGameInputBase_C_DrawMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -321,11 +336,11 @@ void ABP_MiniGameInputBase_C::DrawMiniGame()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.EnterMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          EnterTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::EnterMiniGame(float EnterTime)
+void ABP_MiniGameInputBase_C::STATIC_EnterMiniGame(float EnterTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.EnterMiniGame");
 
@@ -333,6 +348,7 @@ void ABP_MiniGameInputBase_C::EnterMiniGame(float EnterTime)
 	params.EnterTime = EnterTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -341,15 +357,16 @@ void ABP_MiniGameInputBase_C::EnterMiniGame(float EnterTime)
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.RestartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::RestartMiniGame()
+void ABP_MiniGameInputBase_C::STATIC_RestartMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.RestartMiniGame");
 
 	ABP_MiniGameInputBase_C_RestartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -358,15 +375,16 @@ void ABP_MiniGameInputBase_C::RestartMiniGame()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.FinalizeTalk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::FinalizeTalk()
+void ABP_MiniGameInputBase_C::STATIC_FinalizeTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.FinalizeTalk");
 
 	ABP_MiniGameInputBase_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -375,15 +393,16 @@ void ABP_MiniGameInputBase_C::FinalizeTalk()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::StartMiniGame()
+void ABP_MiniGameInputBase_C::STATIC_StartMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.StartMiniGame");
 
 	ABP_MiniGameInputBase_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -392,11 +411,11 @@ void ABP_MiniGameInputBase_C::StartMiniGame()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_17
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_17(float AxisValue)
+void ABP_MiniGameInputBase_C::STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_17(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_17");
 
@@ -404,6 +423,7 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxis
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -412,11 +432,11 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxis
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_18
-// (BlueprintEvent)
+// (NetResponse, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_18(float AxisValue)
+void ABP_MiniGameInputBase_C::STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_18(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_18");
 
@@ -432,11 +452,11 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEv
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_27
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_27(float AxisValue)
+void ABP_MiniGameInputBase_C::STATIC_InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_27(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_27");
 
@@ -444,6 +464,7 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_27
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -452,11 +473,11 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_27
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_37
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_37(float AxisValue)
+void ABP_MiniGameInputBase_C::STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_37(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_37");
 
@@ -464,6 +485,7 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxi
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -472,11 +494,11 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxi
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_47
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_47(float AxisValue)
+void ABP_MiniGameInputBase_C::STATIC_InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_47(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_47");
 
@@ -484,6 +506,7 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisE
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -492,11 +515,11 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisE
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_58
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_58(float AxisValue)
+void ABP_MiniGameInputBase_C::STATIC_InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_58(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_58");
 
@@ -504,6 +527,7 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_5
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -512,15 +536,16 @@ void ABP_MiniGameInputBase_C::InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_5
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.EnabledMiniGameInput
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::EnabledMiniGameInput()
+void ABP_MiniGameInputBase_C::STATIC_EnabledMiniGameInput()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.EnabledMiniGameInput");
 
 	ABP_MiniGameInputBase_C_EnabledMiniGameInput_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -529,15 +554,16 @@ void ABP_MiniGameInputBase_C::EnabledMiniGameInput()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.DisabledMiniGameInput
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameInputBase_C::DisabledMiniGameInput()
+void ABP_MiniGameInputBase_C::STATIC_DisabledMiniGameInput()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.DisabledMiniGameInput");
 
 	ABP_MiniGameInputBase_C_DisabledMiniGameInput_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -546,11 +572,11 @@ void ABP_MiniGameInputBase_C::DisabledMiniGameInput()
 
 
 // Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.ExecuteUbergraph_BP_MiniGameInputBase
-// (HasDefaults)
+// (NetReliable, NetRequest, Exec, Static, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameInputBase_C::ExecuteUbergraph_BP_MiniGameInputBase(int EntryPoint)
+void ABP_MiniGameInputBase_C::STATIC_ExecuteUbergraph_BP_MiniGameInputBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameInputBase.BP_MiniGameInputBase_C.ExecuteUbergraph_BP_MiniGameInputBase");
 

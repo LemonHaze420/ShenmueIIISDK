@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SensorPointLight.BP_SensorPointLight_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_SensorPointLight_C::UserConstructionScript()
 {
@@ -31,15 +31,16 @@ void ABP_SensorPointLight_C::UserConstructionScript()
 
 
 // Function BP_SensorPointLight.BP_SensorPointLight_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, NetValidate)
 
-void ABP_SensorPointLight_C::ReceiveBeginPlay()
+void ABP_SensorPointLight_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SensorPointLight.BP_SensorPointLight_C.ReceiveBeginPlay");
 
 	ABP_SensorPointLight_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +49,11 @@ void ABP_SensorPointLight_C::ReceiveBeginPlay()
 
 
 // Function BP_SensorPointLight.BP_SensorPointLight_C.ExecuteUbergraph_BP_SensorPointLight
-// ()
+// (Net, NetReliable, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SensorPointLight_C::ExecuteUbergraph_BP_SensorPointLight(int EntryPoint)
+void ABP_SensorPointLight_C::STATIC_ExecuteUbergraph_BP_SensorPointLight(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SensorPointLight.BP_SensorPointLight_C.ExecuteUbergraph_BP_SensorPointLight");
 

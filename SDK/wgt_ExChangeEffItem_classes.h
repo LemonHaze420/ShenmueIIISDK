@@ -31,8 +31,8 @@ public:
 
 	void PreConstruct(bool IsDesignTime);
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_wgt_ExChangeEffItem(int EntryPoint);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_ExecuteUbergraph_wgt_ExChangeEffItem(int EntryPoint);
 };
 
 

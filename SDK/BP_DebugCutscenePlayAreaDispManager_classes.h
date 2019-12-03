@@ -42,21 +42,21 @@ public:
 	}
 
 
-	bool IsRequestedEndDisp();
-	bool IsDisp();
-	void RequestEndDisp();
-	void EndDisp();
+	bool STATIC_IsRequestedEndDisp();
+	bool STATIC_IsDisp();
+	void STATIC_RequestEndDisp();
+	void STATIC_EndDisp();
 	void DispCutsceneArea();
-	bool IsCurrentLevelUnloadable();
+	bool STATIC_IsCurrentLevelUnloadable();
 	void AddCutsceneDispInfo(const struct FST_DbgCutscenePlayInfo& InInfo);
-	void GetLoadLevelName(const struct FST_DbgCutscenePlayInfo& InPlayInfo, struct FName* LevelName);
-	bool IsAddedDispInfo(const struct FST_DbgCutscenePlayInfo& InPlayInfo);
+	void STATIC_GetLoadLevelName(const struct FST_DbgCutscenePlayInfo& InPlayInfo, struct FName* LevelName);
+	bool STATIC_IsAddedDispInfo(const struct FST_DbgCutscenePlayInfo& InPlayInfo);
 	void GetDebugPlayInfoList();
-	void StartDisp();
+	void STATIC_StartDisp();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void InitializeDispInfo();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_InitializeDispInfo();
 	void ExecuteUbergraph_BP_DebugCutscenePlayAreaDispManager(int EntryPoint);
 };
 

@@ -31,7 +31,7 @@ public:
 	void UserConstructionScript();
 	void EvtFreeState();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_ForcedEndSerach(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_ForcedEndSerach(int EntryPoint);
 };
 
 

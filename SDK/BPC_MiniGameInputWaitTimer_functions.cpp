@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.End
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameInputWaitTimer_C::End()
+void UBPC_MiniGameInputWaitTimer_C::STATIC_End()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.End");
 
 	UBPC_MiniGameInputWaitTimer_C_End_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void UBPC_MiniGameInputWaitTimer_C::End()
 
 
 // Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.Start
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPC_MiniGameInputWaitTimer_C::Start()
+void UBPC_MiniGameInputWaitTimer_C::STATIC_Start()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.Start");
 
 	UBPC_MiniGameInputWaitTimer_C_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void UBPC_MiniGameInputWaitTimer_C::Start()
 
 
 // Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.CheckLimitTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, NetMulticast, Public, Private, Delegate, HasOutParms)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -69,11 +71,11 @@ bool UBPC_MiniGameInputWaitTimer_C::CheckLimitTime()
 
 
 // Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.SetLimitTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          limit_time                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameInputWaitTimer_C::SetLimitTime(float limit_time)
+void UBPC_MiniGameInputWaitTimer_C::STATIC_SetLimitTime(float limit_time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.SetLimitTime");
 
@@ -81,6 +83,7 @@ void UBPC_MiniGameInputWaitTimer_C::SetLimitTime(float limit_time)
 	params.limit_time = limit_time;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,7 +92,7 @@ void UBPC_MiniGameInputWaitTimer_C::SetLimitTime(float limit_time)
 
 
 // Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Event, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
 void UBPC_MiniGameInputWaitTimer_C::ReceiveBeginPlay()
 {
@@ -106,11 +109,11 @@ void UBPC_MiniGameInputWaitTimer_C::ReceiveBeginPlay()
 
 
 // Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGameInputWaitTimer_C::ReceiveTick(float DeltaSeconds)
+void UBPC_MiniGameInputWaitTimer_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.ReceiveTick");
 
@@ -118,6 +121,7 @@ void UBPC_MiniGameInputWaitTimer_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,7 +130,7 @@ void UBPC_MiniGameInputWaitTimer_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_MiniGameInputWaitTimer.BPC_MiniGameInputWaitTimer_C.ExecuteUbergraph_BPC_MiniGameInputWaitTimer
-// ()
+// (Net, NetReliable, NetRequest, NetResponse, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

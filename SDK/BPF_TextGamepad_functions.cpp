@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_TextGamepad.BPF_TextGamepad_C.GetPlaftormGamepadShoulderText
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Native, Event, Static, NetMulticast, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // TEnumAsByte<EGamepadShoulder>  Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -29,6 +29,7 @@ struct FText UBPF_TextGamepad_C::STATIC_GetPlaftormGamepadShoulderText(TEnumAsBy
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.ConstructWidget
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_KungFu_Result_C::ConstructWidget()
+void ABP_KungFu_Result_C::STATIC_ConstructWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KungFu_Result.BP_KungFu_Result_C.ConstructWidget");
 
 	ABP_KungFu_Result_C_ConstructWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_KungFu_Result_C::ConstructWidget()
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_KungFu_Result_C::UserConstructionScript()
 {
@@ -40,6 +41,7 @@ void ABP_KungFu_Result_C::UserConstructionScript()
 	ABP_KungFu_Result_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +50,11 @@ void ABP_KungFu_Result_C::UserConstructionScript()
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2
-// (BlueprintEvent)
+// (Net, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_KungFu_Result_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key)
+void ABP_KungFu_Result_C::STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KungFu_Result.BP_KungFu_Result_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2");
 
@@ -68,11 +70,11 @@ void ABP_KungFu_Result_C::InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(con
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_KungFu_Result_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_KungFu_Result_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_KungFu_Result.BP_KungFu_Result_C.ReceiveEndPlay");
 
@@ -88,7 +90,7 @@ void ABP_KungFu_Result_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.OnWidgetAnimationFinished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_KungFu_Result_C::OnWidgetAnimationFinished()
 {
@@ -105,7 +107,7 @@ void ABP_KungFu_Result_C::OnWidgetAnimationFinished()
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.StartClose
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_KungFu_Result_C::StartClose()
 {
@@ -122,7 +124,7 @@ void ABP_KungFu_Result_C::StartClose()
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_KungFu_Result_C::ReceiveBeginPlay()
 {
@@ -139,7 +141,7 @@ void ABP_KungFu_Result_C::ReceiveBeginPlay()
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.StartInputWait
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_KungFu_Result_C::StartInputWait()
 {
@@ -156,7 +158,7 @@ void ABP_KungFu_Result_C::StartInputWait()
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.ExecuteUbergraph_BP_KungFu_Result
-// (HasDefaults)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -168,6 +170,7 @@ void ABP_KungFu_Result_C::ExecuteUbergraph_BP_KungFu_Result(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,7 +179,7 @@ void ABP_KungFu_Result_C::ExecuteUbergraph_BP_KungFu_Result(int EntryPoint)
 
 
 // Function BP_KungFu_Result.BP_KungFu_Result_C.OnClose__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_KungFu_Result_C::OnClose__DelegateSignature()
 {

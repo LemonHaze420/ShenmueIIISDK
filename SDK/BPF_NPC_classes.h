@@ -32,9 +32,9 @@ public:
 	void STATIC_BPF_SpawnFollowSHE(float Back, float Side, bool Rotate_to_players, class UObject* __WorldContext);
 	void STATIC_BPF_QueryTagCharaName2NpcActorNew(const struct FName& CharaName, class UObject* __WorldContext, class AS3Character** Character);
 	void STATIC_BPF_QueryPlayerNearNpcNew(class UObject* __WorldContext, class AActor** NpcActorRef, float* Length);
-	void STATIC_BPF_NPC_GetMiniGameIdsTable(int RowIndex, class UObject* __WorldContext, bool* bSuccess, struct FNPCMiniGameManagerIds* Out_Row);
-	void STATIC_BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObject* __WorldContext, struct FName* Name);
-	void STATIC_BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States);
+	void BPF_NPC_GetMiniGameIdsTable(int RowIndex, class UObject* __WorldContext, bool* bSuccess, struct FNPCMiniGameManagerIds* Out_Row);
+	void BPF_NPC_ConvertScriptStateIDFromName(int ID, class UObject* __WorldContext, struct FName* Name);
+	void BPF_NPC_GetVisibleTalkIconStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States);
 	void STATIC_BPF_NPC_GetCanNotTalkTurnAcoundStates(class UObject* __WorldContext, TArray<TEnumAsByte<ELocomotionState>>* States);
 };
 

@@ -38,19 +38,19 @@ public:
 	}
 
 
-	void PlayMeterSound();
-	void SetBarHighlight(class UUserWidget* bar, bool Highlight);
-	void LerpLevelUpDisplay(float N);
+	void STATIC_PlayMeterSound();
+	void STATIC_SetBarHighlight(class UUserWidget* bar, bool Highlight);
+	void STATIC_LerpLevelUpDisplay(float N);
 	void SetLevelUpData(const struct FST_SparringResultLevelUpData& Attack, const struct FST_SparringResultLevelUpData& Vitality, const struct FST_SparringResultLevelUpData& Player);
-	void UpdateLevelData(class UBPW_SkillBar_C* BarWidget, class US3DerivedPlayerLevel* Stat);
+	void STATIC_UpdateLevelData(class UBPW_SkillBar_C* BarWidget, class US3DerivedPlayerLevel* Stat);
 	void Update();
 	void Construct();
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void BndEvt__Bar_Attack_K2Node_ComponentBoundEvent_0_OnAnimLevelUp__DelegateSignature();
 	void BndEvt__Bar_Level_K2Node_ComponentBoundEvent_1_OnAnimLevelUp__DelegateSignature();
 	void BndEvt__Bar_Vitality_K2Node_ComponentBoundEvent_2_OnAnimLevelUp__DelegateSignature();
 	void StartLevelUpAnim();
-	void ExecuteUbergraph_wgt_SkillTotals(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_SkillTotals(int EntryPoint);
 	void OnLevelUpAnimationDone__DelegateSignature();
 };
 

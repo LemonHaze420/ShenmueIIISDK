@@ -36,15 +36,15 @@ public:
 	}
 
 
-	void CleanUp();
+	void STATIC_CleanUp();
 	void StartGameContinueConfirmCheck();
 	void BindActionSelectEvents(class ABP_S3actionSelect_C* Action);
-	void onSelected(int Index);
-	void UnbindActionSelectEvents();
-	void RepayMiniGame(float WaitTime);
-	void ReceiveBeginPlay();
+	void STATIC_onSelected(int Index);
+	void STATIC_UnbindActionSelectEvents();
+	void STATIC_RepayMiniGame(float WaitTime);
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_MiniGameContinueConfirm(int EntryPoint);
-	void OnGameFinishedDispatcher__DelegateSignature();
+	void STATIC_OnGameFinishedDispatcher__DelegateSignature();
 	void OnGameContinueDispatcher__DelegateSignature();
 };
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_InNarrowSpaceCamera_Single02.BP_InNarrowSpaceCamera_Single02_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_InNarrowSpaceCamera_Single02_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_InNarrowSpaceCamera_Single02_C::UserConstructionScript()
 
 
 // Function BP_InNarrowSpaceCamera_Single02.BP_InNarrowSpaceCamera_Single02_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_InNarrowSpaceCamera_Single02_C::ReceiveBeginPlay()
 {
@@ -40,6 +40,7 @@ void ABP_InNarrowSpaceCamera_Single02_C::ReceiveBeginPlay()
 	ABP_InNarrowSpaceCamera_Single02_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +49,7 @@ void ABP_InNarrowSpaceCamera_Single02_C::ReceiveBeginPlay()
 
 
 // Function BP_InNarrowSpaceCamera_Single02.BP_InNarrowSpaceCamera_Single02_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +61,7 @@ void ABP_InNarrowSpaceCamera_Single02_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,11 +70,11 @@ void ABP_InNarrowSpaceCamera_Single02_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_InNarrowSpaceCamera_Single02.BP_InNarrowSpaceCamera_Single02_C.ExecuteUbergraph_BP_InNarrowSpaceCamera_Single02
-// ()
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_InNarrowSpaceCamera_Single02_C::ExecuteUbergraph_BP_InNarrowSpaceCamera_Single02(int EntryPoint)
+void ABP_InNarrowSpaceCamera_Single02_C::STATIC_ExecuteUbergraph_BP_InNarrowSpaceCamera_Single02(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_InNarrowSpaceCamera_Single02.BP_InNarrowSpaceCamera_Single02_C.ExecuteUbergraph_BP_InNarrowSpaceCamera_Single02");
 

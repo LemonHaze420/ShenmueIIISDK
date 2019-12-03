@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.LimitToBehaviorState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3PlayerBehavior              State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPC_CharacterDialogPlayer_C::LimitToBehaviorState(ES3PlayerBehavior State)
 
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.StopSubtitleDialog
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBPC_CharacterDialogPlayer_C::StopSubtitleDialog()
 {
@@ -43,6 +43,7 @@ void UBPC_CharacterDialogPlayer_C::StopSubtitleDialog()
 	UBPC_CharacterDialogPlayer_C_StopSubtitleDialog_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +52,7 @@ void UBPC_CharacterDialogPlayer_C::StopSubtitleDialog()
 
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.IsSpeaking
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -62,6 +63,7 @@ bool UBPC_CharacterDialogPlayer_C::IsSpeaking()
 	UBPC_CharacterDialogPlayer_C_IsSpeaking_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,13 +74,13 @@ bool UBPC_CharacterDialogPlayer_C::IsSpeaking()
 
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.RandomLabelNoRepeat
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FName>           Labels                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            LastIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FName                   Selection                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_CharacterDialogPlayer_C::RandomLabelNoRepeat(TArray<struct FName>* Labels, int* LastIndex, struct FName* Selection)
+void UBPC_CharacterDialogPlayer_C::STATIC_RandomLabelNoRepeat(TArray<struct FName>* Labels, int* LastIndex, struct FName* Selection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.RandomLabelNoRepeat");
 
@@ -100,7 +102,7 @@ void UBPC_CharacterDialogPlayer_C::RandomLabelNoRepeat(TArray<struct FName>* Lab
 
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.CallOnEnd
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsLast                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -112,6 +114,7 @@ void UBPC_CharacterDialogPlayer_C::CallOnEnd(bool IsLast)
 	params.IsLast = IsLast;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,13 +123,13 @@ void UBPC_CharacterDialogPlayer_C::CallOnEnd(bool IsLast)
 
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.PlaySubtitleDialog
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          MinTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_CharacterDialogPlayer_C::PlaySubtitleDialog(const struct FName& Label, ES3TextPathType Type, float MinTime)
+void UBPC_CharacterDialogPlayer_C::STATIC_PlaySubtitleDialog(const struct FName& Label, ES3TextPathType Type, float MinTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.PlaySubtitleDialog");
 
@@ -144,7 +147,7 @@ void UBPC_CharacterDialogPlayer_C::PlaySubtitleDialog(const struct FName& Label,
 
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Event, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -156,6 +159,7 @@ void UBPC_CharacterDialogPlayer_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,11 +168,11 @@ void UBPC_CharacterDialogPlayer_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.ExecuteUbergraph_BPC_CharacterDialogPlayer
-// ()
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_CharacterDialogPlayer_C::ExecuteUbergraph_BPC_CharacterDialogPlayer(int EntryPoint)
+void UBPC_CharacterDialogPlayer_C::STATIC_ExecuteUbergraph_BPC_CharacterDialogPlayer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterDialogPlayer.BPC_CharacterDialogPlayer_C.ExecuteUbergraph_BPC_CharacterDialogPlayer");
 
@@ -176,6 +180,7 @@ void UBPC_CharacterDialogPlayer_C::ExecuteUbergraph_BPC_CharacterDialogPlayer(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

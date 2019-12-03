@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.GetTalkComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class UBPC_S3_TalkComponent_C* BPC_S3_TalkComponent           (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_Chara_WorldTel2_C::GetTalkComponent(class UBPC_S3_TalkComponent_C** BPC
 	ABP_Chara_WorldTel2_C_GetTalkComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void ABP_Chara_WorldTel2_C::GetTalkComponent(class UBPC_S3_TalkComponent_C** BPC
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::UserConstructionScript()
+void ABP_Chara_WorldTel2_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.UserConstructionScript");
 
 	ABP_Chara_WorldTel2_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +55,7 @@ void ABP_Chara_WorldTel2_C::UserConstructionScript()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.TelStart
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_Chara_WorldTel2_C::TelStart()
 {
@@ -62,6 +64,7 @@ void ABP_Chara_WorldTel2_C::TelStart()
 	ABP_Chara_WorldTel2_C_TelStart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +73,7 @@ void ABP_Chara_WorldTel2_C::TelStart()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.TelEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_Chara_WorldTel2_C::TelEnd()
 {
@@ -79,6 +82,7 @@ void ABP_Chara_WorldTel2_C::TelEnd()
 	ABP_Chara_WorldTel2_C_TelEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +91,7 @@ void ABP_Chara_WorldTel2_C::TelEnd()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.TalkStart
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_Chara_WorldTel2_C::TalkStart()
 {
@@ -96,6 +100,7 @@ void ABP_Chara_WorldTel2_C::TalkStart()
 	ABP_Chara_WorldTel2_C_TalkStart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,7 +109,7 @@ void ABP_Chara_WorldTel2_C::TalkStart()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.CallStart
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_Chara_WorldTel2_C::CallStart()
 {
@@ -113,6 +118,7 @@ void ABP_Chara_WorldTel2_C::CallStart()
 	ABP_Chara_WorldTel2_C_CallStart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,7 +127,7 @@ void ABP_Chara_WorldTel2_C::CallStart()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.CallEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_Chara_WorldTel2_C::CallEnd()
 {
@@ -138,7 +144,7 @@ void ABP_Chara_WorldTel2_C::CallEnd()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.OnTalkFinished
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -160,11 +166,11 @@ void ABP_Chara_WorldTel2_C::OnTalkFinished(class US3TalkComponent* TalkComponent
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ExecuteUbergraph_BP_Chara_WorldTel2
-// ()
+// (Net, NetResponse, Static, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Chara_WorldTel2_C::ExecuteUbergraph_BP_Chara_WorldTel2(int EntryPoint)
+void ABP_Chara_WorldTel2_C::STATIC_ExecuteUbergraph_BP_Chara_WorldTel2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ExecuteUbergraph_BP_Chara_WorldTel2");
 
@@ -180,9 +186,9 @@ void ABP_Chara_WorldTel2_C::ExecuteUbergraph_BP_Chara_WorldTel2(int EntryPoint)
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_ButtonPush__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::ED_ButtonPush__DelegateSignature()
+void ABP_Chara_WorldTel2_C::STATIC_ED_ButtonPush__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_ButtonPush__DelegateSignature");
 
@@ -197,9 +203,9 @@ void ABP_Chara_WorldTel2_C::ED_ButtonPush__DelegateSignature()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_CallEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::ED_CallEnd__DelegateSignature()
+void ABP_Chara_WorldTel2_C::STATIC_ED_CallEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_CallEnd__DelegateSignature");
 
@@ -214,9 +220,9 @@ void ABP_Chara_WorldTel2_C::ED_CallEnd__DelegateSignature()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_CallStart__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::ED_CallStart__DelegateSignature()
+void ABP_Chara_WorldTel2_C::STATIC_ED_CallStart__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_CallStart__DelegateSignature");
 
@@ -231,9 +237,9 @@ void ABP_Chara_WorldTel2_C::ED_CallStart__DelegateSignature()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TalkFinish__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::ED_TalkFinish__DelegateSignature()
+void ABP_Chara_WorldTel2_C::STATIC_ED_TalkFinish__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TalkFinish__DelegateSignature");
 
@@ -248,9 +254,9 @@ void ABP_Chara_WorldTel2_C::ED_TalkFinish__DelegateSignature()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TalkStart__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::ED_TalkStart__DelegateSignature()
+void ABP_Chara_WorldTel2_C::STATIC_ED_TalkStart__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TalkStart__DelegateSignature");
 
@@ -265,9 +271,9 @@ void ABP_Chara_WorldTel2_C::ED_TalkStart__DelegateSignature()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TelEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::ED_TelEnd__DelegateSignature()
+void ABP_Chara_WorldTel2_C::STATIC_ED_TelEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TelEnd__DelegateSignature");
 
@@ -282,9 +288,9 @@ void ABP_Chara_WorldTel2_C::ED_TelEnd__DelegateSignature()
 
 
 // Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TelStart__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Chara_WorldTel2_C::ED_TelStart__DelegateSignature()
+void ABP_Chara_WorldTel2_C::STATIC_ED_TelStart__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Chara_WorldTel2.BP_Chara_WorldTel2_C.ED_TelStart__DelegateSignature");
 

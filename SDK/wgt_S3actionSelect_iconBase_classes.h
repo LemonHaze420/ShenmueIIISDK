@@ -30,12 +30,12 @@ public:
 	}
 
 
-	void doCmd_fade(bool FadeIn);
-	void updateOpacity(float Opacity);
-	void Construct();
+	void STATIC_doCmd_fade(bool FadeIn);
+	void UpdateOpacity(float Opacity);
+	void STATIC_Construct();
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
-	void ExecuteUbergraph_wgt_S3actionSelect_iconBase(int EntryPoint);
-	void onEndFade__DelegateSignature(bool FadeIn);
+	void STATIC_ExecuteUbergraph_wgt_S3actionSelect_iconBase(int EntryPoint);
+	void STATIC_onEndFade__DelegateSignature(bool FadeIn);
 };
 
 

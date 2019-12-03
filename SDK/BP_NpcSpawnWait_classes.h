@@ -35,11 +35,11 @@ public:
 
 
 	void CheckNpcAlpha(bool* NPCVisible);
-	void InitSet(const struct FGameplayTag& NPCID, float ChangeSpawnFadeTime, bool CheckNpcAlpha);
+	void STATIC_InitSet(const struct FGameplayTag& NPCID, float ChangeSpawnFadeTime, bool CheckNpcAlpha);
 	void UserConstructionScript();
 	void EndNpcSpawnWait();
-	void NPCSpawn(const struct FGameplayTag& NPCID);
-	void ExecuteUbergraph_BP_NpcSpawnWait(int EntryPoint);
+	void STATIC_NPCSpawn(const struct FGameplayTag& NPCID);
+	void STATIC_ExecuteUbergraph_BP_NpcSpawnWait(int EntryPoint);
 };
 
 

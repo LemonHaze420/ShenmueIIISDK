@@ -73,33 +73,33 @@ public:
 	}
 
 
-	void BehaviorControl(bool NoChangeBehavior);
-	bool CheckSavedConditions();
+	void STATIC_BehaviorControl(bool NoChangeBehavior);
+	bool STATIC_CheckSavedConditions();
 	bool CheckPlayCount();
-	void TriggerEnable(bool* Enable);
+	void STATIC_TriggerEnable(bool* Enable);
 	void ShutDownActionFunc();
-	void IsForward(const struct FVector& HitLocation, bool* Play);
+	void STATIC_IsForward(const struct FVector& HitLocation, bool* Play);
 	void ShouldDelayFadeIn(bool* DisableIt);
 	void ShouldDisablePlayerControl(bool* DisableIt);
 	void ApplyLog();
 	void ResetLog();
-	void CheckReset(bool* Reset);
-	void SaveLog();
+	void STATIC_CheckReset(bool* Reset);
+	void STATIC_SaveLog();
 	void CanPlay(bool* CAN);
 	void TeleportPlayer();
 	void SetPlayerControl(bool Enable);
-	void PlayAction(bool* Success);
-	void UserConstructionScript();
+	void STATIC_PlayAction(bool* Success);
+	void STATIC_UserConstructionScript();
 	void OnLoaded_3DE5C7A6450AC770771EC1A18B8E6811(class UObject* Loaded);
 	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void PlayACEvent();
-	void CheckCanPlay();
+	void STATIC_PlayACEvent();
+	void STATIC_CheckCanPlay();
 	void CustomEvent(int SetSteps);
-	void LoadTalkScript();
+	void STATIC_LoadTalkScript();
 	void ExecuteUbergraph_BP_ACTrigger(int EntryPoint);
 };
 

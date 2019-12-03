@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function SubABP_NPCLead.SubABP_NPCLead_C.IsEnableLookAt
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, Public, HasOutParms, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ bool USubABP_NPCLead_C::IsEnableLookAt()
 
 
 // Function SubABP_NPCLead.SubABP_NPCLead_C.InitFaceMotages
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, HasOutParms, Const)
 // Parameters:
 // bool                           Succsess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_NPCLead_C::InitFaceMotages(bool* Succsess)
+void USubABP_NPCLead_C::STATIC_InitFaceMotages(bool* Succsess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_NPCLead.SubABP_NPCLead_C.InitFaceMotages");
 

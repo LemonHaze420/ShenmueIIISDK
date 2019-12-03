@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.PlayStartEndAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Start                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Itemset                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -28,6 +28,7 @@ void UBPW_UI_ItemViewer_C::PlayStartEndAnim(bool Start, bool Itemset)
 	params.Itemset = Itemset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void UBPW_UI_ItemViewer_C::PlayStartEndAnim(bool Start, bool Itemset)
 
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.BndEvt__Viewer_StartAnim_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPW_UI_ItemViewer_C::BndEvt__Viewer_StartAnim_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
@@ -53,7 +54,7 @@ void UBPW_UI_ItemViewer_C::BndEvt__Viewer_StartAnim_K2Node_ComponentBoundEvent_1
 
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.BndEvt__Viewer_EndAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPW_UI_ItemViewer_C::BndEvt__Viewer_EndAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
@@ -70,12 +71,12 @@ void UBPW_UI_ItemViewer_C::BndEvt__Viewer_EndAnim_K2Node_ComponentBoundEvent_0_O
 
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemViewer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_UI_ItemViewer_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.Tick");
 
@@ -84,6 +85,7 @@ void UBPW_UI_ItemViewer_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +94,7 @@ void UBPW_UI_ItemViewer_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPW_UI_ItemViewer_C::Construct()
 {
@@ -109,7 +111,7 @@ void UBPW_UI_ItemViewer_C::Construct()
 
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.BndEvt__Viewer_StartAnim_Itemset_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPW_UI_ItemViewer_C::BndEvt__Viewer_StartAnim_Itemset_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
@@ -126,7 +128,7 @@ void UBPW_UI_ItemViewer_C::BndEvt__Viewer_StartAnim_Itemset_K2Node_ComponentBoun
 
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.BndEvt__Viewer_EndAnim_Itemset_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPW_UI_ItemViewer_C::BndEvt__Viewer_EndAnim_Itemset_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
@@ -143,7 +145,7 @@ void UBPW_UI_ItemViewer_C::BndEvt__Viewer_EndAnim_Itemset_K2Node_ComponentBoundE
 
 
 // Function BPW_UI_ItemViewer.BPW_UI_ItemViewer_C.ExecuteUbergraph_BPW_UI_ItemViewer
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, NetMulticast, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -155,6 +157,7 @@ void UBPW_UI_ItemViewer_C::ExecuteUbergraph_BPW_UI_ItemViewer(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

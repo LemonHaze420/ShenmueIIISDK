@@ -4,9 +4,32 @@
 #define MOD_VER						"1.0"
 #define MOD_STRING					MOD_NAME " " MOD_VER
 
+
+void energyManagerHook(class UObject* _this, class UFunction* a2, void* pParms) {
+#ifdef _DEBUG
+	//printf("[EnergyManager] Stopped BP_S3EnergyManager (%s) from ticking..\n", _this->GetFullName().c_str());
+#endif
+}
+
 // Called when DLL is attached
 void Attach() {
 	printf(MOD_STRING " attached\n");
+
+	// BP_S3EnergyManager_C PL_Hakkason.PL_Hakkason.PersistentLevel.BP_S3EnergyManager_C_1
+	CreateProcessEventHook("Energy Manager Disable", "Function BP_S3EnergyManager.BP_S3EnergyManager_C.ReceiveTick", energyManagerHook);
+#ifdef _DEBUG
+	auto buildInfoConfig = UObject::FindObject<US3BuildInfoConfig>();
+	if (buildInfoConfig) {
+		printf("=======================\nBuild Info Config\n=======================\n");
+		printf("BuildDate: %s\n",		buildInfoConfig->BuildDate.ToString().c_str());
+		printf("BuildNumber: %d\n",		buildInfoConfig->BuildNumber);
+		printf("BuildType: %s\n",		buildInfoConfig->BuildType.ToString().c_str());
+		printf("Changelist: %d\n",		buildInfoConfig->Changelist);
+		printf("Configuration: %s\n",	buildInfoConfig->Configuration.ToString().c_str());
+		printf("Platform: %s\n",		buildInfoConfig->Platform.ToString().c_str());
+		printf("=======================\n");
+	}
+#endif
 }
 
 // Called when DLL is detached

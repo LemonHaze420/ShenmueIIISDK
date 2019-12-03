@@ -34,20 +34,20 @@ public:
 	}
 
 
-	void IsVisibleRStickCenterPos(bool* IsCenter);
+	void STATIC_IsVisibleRStickCenterPos(bool* IsCenter);
 	bool IsVisibleRStickOnlyViewMode();
 	void MakeAreaItemIdList();
-	void GetItem();
-	void SetRightWindow();
+	void STATIC_GetItem();
+	void STATIC_SetRightWindow();
 	void SetExchangeChangePage(int Value);
-	void MakeItemIDList();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void MakeItemIdList();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void MoveCategoryFocusAfter();
 	void ChangePage(int Value);
 	void PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton);
-	void ExecuteUbergraph_BP_UI_SetExchangeManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_UI_SetExchangeManager(int EntryPoint);
 };
 
 

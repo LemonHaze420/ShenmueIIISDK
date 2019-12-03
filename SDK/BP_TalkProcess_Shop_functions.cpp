@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UBP_TalkProcess_Shop_C::Activate()
+void UBP_TalkProcess_Shop_C::STATIC_Activate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.Activate");
 
 	UBP_TalkProcess_Shop_C_Activate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void UBP_TalkProcess_Shop_C::Activate()
 
 
 // Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.BindShopEvents
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UBP_TalkProcess_Shop_C::BindShopEvents()
+void UBP_TalkProcess_Shop_C::STATIC_BindShopEvents()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.BindShopEvents");
 
 	UBP_TalkProcess_Shop_C_BindShopEvents_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,15 +50,16 @@ void UBP_TalkProcess_Shop_C::BindShopEvents()
 
 
 // Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.OnFinishedShop
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UBP_TalkProcess_Shop_C::OnFinishedShop()
+void UBP_TalkProcess_Shop_C::STATIC_OnFinishedShop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.OnFinishedShop");
 
 	UBP_TalkProcess_Shop_C_OnFinishedShop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,11 +68,11 @@ void UBP_TalkProcess_Shop_C::OnFinishedShop()
 
 
 // Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.UnbindShopEvents
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // class ABP_ShopEventManager_C*  ShopManager                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Shop_C::UnbindShopEvents(class ABP_ShopEventManager_C* ShopManager)
+void UBP_TalkProcess_Shop_C::STATIC_UnbindShopEvents(class ABP_ShopEventManager_C* ShopManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.UnbindShopEvents");
 
@@ -77,6 +80,7 @@ void UBP_TalkProcess_Shop_C::UnbindShopEvents(class ABP_ShopEventManager_C* Shop
 	params.ShopManager = ShopManager;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,15 +89,16 @@ void UBP_TalkProcess_Shop_C::UnbindShopEvents(class ABP_ShopEventManager_C* Shop
 
 
 // Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.OnEndBuyShop
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UBP_TalkProcess_Shop_C::OnEndBuyShop()
+void UBP_TalkProcess_Shop_C::STATIC_OnEndBuyShop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.OnEndBuyShop");
 
 	UBP_TalkProcess_Shop_C_OnEndBuyShop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,15 +107,16 @@ void UBP_TalkProcess_Shop_C::OnEndBuyShop()
 
 
 // Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.OnEndNoBuyShop
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UBP_TalkProcess_Shop_C::OnEndNoBuyShop()
+void UBP_TalkProcess_Shop_C::STATIC_OnEndNoBuyShop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.OnEndNoBuyShop");
 
 	UBP_TalkProcess_Shop_C_OnEndNoBuyShop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -119,7 +125,7 @@ void UBP_TalkProcess_Shop_C::OnEndNoBuyShop()
 
 
 // Function BP_TalkProcess_Shop.BP_TalkProcess_Shop_C.ExecuteUbergraph_BP_TalkProcess_Shop
-// (HasDefaults)
+// (Net, NetMulticast, MulticastDelegate, Public, Protected, DLLImport, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

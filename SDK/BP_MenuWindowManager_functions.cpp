@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.SetItemListViewerManagerClass
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UClass*                  Class                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MenuWindowManager_C::SetItemListViewerManagerClass(class UClass* Class)
+void ABP_MenuWindowManager_C::STATIC_SetItemListViewerManagerClass(class UClass* Class)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.SetItemListViewerManagerClass");
 
@@ -34,17 +34,18 @@ void ABP_MenuWindowManager_C::SetItemListViewerManagerClass(class UClass* Class)
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.CheckBehaviorState
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_MenuWindowManager_C::CheckBehaviorState()
+bool ABP_MenuWindowManager_C::STATIC_CheckBehaviorState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.CheckBehaviorState");
 
 	ABP_MenuWindowManager_C_CheckBehaviorState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ bool ABP_MenuWindowManager_C::CheckBehaviorState()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.CheckDoorOpen
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // bool                           DoMenu                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -77,7 +78,7 @@ void ABP_MenuWindowManager_C::CheckDoorOpen(bool* DoMenu)
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.StartAllActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 
 void ABP_MenuWindowManager_C::StartAllActor()
 {
@@ -86,6 +87,7 @@ void ABP_MenuWindowManager_C::StartAllActor()
 	ABP_MenuWindowManager_C_StartAllActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +96,7 @@ void ABP_MenuWindowManager_C::StartAllActor()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.StopAllActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MenuWindowManager_C::StopAllActor()
 {
@@ -110,18 +112,18 @@ void ABP_MenuWindowManager_C::StopAllActor()
 }
 
 
-// Function BP_MenuWindowManager.BP_MenuWindowManager_C.setDenyFlag
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Function BP_MenuWindowManager.BP_MenuWindowManager_C.SetDenyFlag
+// (NetRequest, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
-// bool                           deny                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Deny                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           succes                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MenuWindowManager_C::setDenyFlag(bool deny, bool* succes)
+void ABP_MenuWindowManager_C::SetDenyFlag(bool Deny, bool* succes)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.setDenyFlag");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.SetDenyFlag");
 
-	ABP_MenuWindowManager_C_setDenyFlag_Params params;
-	params.deny = deny;
+	ABP_MenuWindowManager_C_SetDenyFlag_Params params;
+	params.Deny = Deny;
 
 	auto flags = fn->FunctionFlags;
 
@@ -134,30 +136,31 @@ void ABP_MenuWindowManager_C::setDenyFlag(bool deny, bool* succes)
 }
 
 
-// Function BP_MenuWindowManager.BP_MenuWindowManager_C.isDetected
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function BP_MenuWindowManager.BP_MenuWindowManager_C.IsDetected
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           isDetected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsDetected                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MenuWindowManager_C::isDetected(bool* isDetected)
+void ABP_MenuWindowManager_C::IsDetected(bool* IsDetected)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.isDetected");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.IsDetected");
 
-	ABP_MenuWindowManager_C_isDetected_Params params;
+	ABP_MenuWindowManager_C_IsDetected_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (isDetected != nullptr)
-		*isDetected = params.isDetected;
+	if (IsDetected != nullptr)
+		*IsDetected = params.IsDetected;
 }
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_MenuWindowManager_C::UserConstructionScript()
 {
@@ -166,6 +169,7 @@ void ABP_MenuWindowManager_C::UserConstructionScript()
 	ABP_MenuWindowManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -174,7 +178,7 @@ void ABP_MenuWindowManager_C::UserConstructionScript()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -194,15 +198,16 @@ void ABP_MenuWindowManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.doCmd_FirstDetectRetain(Menu)
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_MenuWindowManager_C::doCmd_FirstDetectRetain_Menu_()
+void ABP_MenuWindowManager_C::STATIC_doCmd_FirstDetectRetain_Menu_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.doCmd_FirstDetectRetain(Menu)");
 
 	ABP_MenuWindowManager_C_doCmd_FirstDetectRetain_Menu__Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -211,9 +216,9 @@ void ABP_MenuWindowManager_C::doCmd_FirstDetectRetain_Menu_()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.delayedRegistCheck(detector)
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_MenuWindowManager_C::delayedRegistCheck_detector_()
+void ABP_MenuWindowManager_C::STATIC_delayedRegistCheck_detector_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.delayedRegistCheck(detector)");
 
@@ -228,9 +233,9 @@ void ABP_MenuWindowManager_C::delayedRegistCheck_detector_()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.StartMenu
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_MenuWindowManager_C::StartMenu()
+void ABP_MenuWindowManager_C::STATIC_StartMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.StartMenu");
 
@@ -245,7 +250,7 @@ void ABP_MenuWindowManager_C::StartMenu()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.ActionStartButton
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           IsPress                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -265,9 +270,9 @@ void ABP_MenuWindowManager_C::ActionStartButton(bool IsPress)
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.FinishMenu
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_MenuWindowManager_C::FinishMenu()
+void ABP_MenuWindowManager_C::STATIC_FinishMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.FinishMenu");
 
@@ -282,7 +287,7 @@ void ABP_MenuWindowManager_C::FinishMenu()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.OpenInventory_EatEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -302,9 +307,9 @@ void ABP_MenuWindowManager_C::OpenInventory_EatEvent(int ItemId)
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.Open_ItemWindow
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_MenuWindowManager_C::Open_ItemWindow()
+void ABP_MenuWindowManager_C::STATIC_Open_ItemWindow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.Open_ItemWindow");
 
@@ -319,9 +324,9 @@ void ABP_MenuWindowManager_C::Open_ItemWindow()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_MenuWindowManager_C::ReceiveBeginPlay()
+void ABP_MenuWindowManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.ReceiveBeginPlay");
 
@@ -336,11 +341,11 @@ void ABP_MenuWindowManager_C::ReceiveBeginPlay()
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.ExecuteUbergraph_BP_MenuWindowManager
-// (HasDefaults)
+// (Static, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MenuWindowManager_C::ExecuteUbergraph_BP_MenuWindowManager(int EntryPoint)
+void ABP_MenuWindowManager_C::STATIC_ExecuteUbergraph_BP_MenuWindowManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MenuWindowManager.BP_MenuWindowManager_C.ExecuteUbergraph_BP_MenuWindowManager");
 
@@ -356,7 +361,7 @@ void ABP_MenuWindowManager_C::ExecuteUbergraph_BP_MenuWindowManager(int EntryPoi
 
 
 // Function BP_MenuWindowManager.BP_MenuWindowManager_C.OnMenuClosed__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_MenuWindowManager_C::OnMenuClosed__DelegateSignature()
 {
@@ -365,6 +370,7 @@ void ABP_MenuWindowManager_C::OnMenuClosed__DelegateSignature()
 	ABP_MenuWindowManager_C_OnMenuClosed__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

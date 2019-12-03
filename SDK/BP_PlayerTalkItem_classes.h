@@ -34,12 +34,12 @@ public:
 	}
 
 
-	void UpdateFadeTimer(float DeltaSeconds, bool* Done);
-	void UpdateFade();
-	void HideItem();
+	void STATIC_UpdateFadeTimer(float DeltaSeconds, bool* Done);
+	void STATIC_UpdateFade();
+	void STATIC_HideItem();
 	void ShowItem();
-	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_PlayerTalkItem(int EntryPoint);
 	void OnFinishHide__DelegateSignature();
 };

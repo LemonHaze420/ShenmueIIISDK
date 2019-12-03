@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameChooseMoveTriangle.BP_MiniGameChooseMoveTriangle_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_MiniGameChooseMoveTriangle_C::UserConstructionScript()
+void ABP_MiniGameChooseMoveTriangle_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseMoveTriangle.BP_MiniGameChooseMoveTriangle_C.UserConstructionScript");
 
@@ -31,9 +31,9 @@ void ABP_MiniGameChooseMoveTriangle_C::UserConstructionScript()
 
 
 // Function BP_MiniGameChooseMoveTriangle.BP_MiniGameChooseMoveTriangle_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGameChooseMoveTriangle_C::ReceiveBeginPlay()
+void ABP_MiniGameChooseMoveTriangle_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseMoveTriangle.BP_MiniGameChooseMoveTriangle_C.ReceiveBeginPlay");
 
@@ -48,11 +48,11 @@ void ABP_MiniGameChooseMoveTriangle_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameChooseMoveTriangle.BP_MiniGameChooseMoveTriangle_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameChooseMoveTriangle_C::ReceiveTick(float DeltaSeconds)
+void ABP_MiniGameChooseMoveTriangle_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameChooseMoveTriangle.BP_MiniGameChooseMoveTriangle_C.ReceiveTick");
 
@@ -60,6 +60,7 @@ void ABP_MiniGameChooseMoveTriangle_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +69,7 @@ void ABP_MiniGameChooseMoveTriangle_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGameChooseMoveTriangle.BP_MiniGameChooseMoveTriangle_C.ExecuteUbergraph_BP_MiniGameChooseMoveTriangle
-// (HasDefaults)
+// (NetReliable, Exec, NetResponse, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

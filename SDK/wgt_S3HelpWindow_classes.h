@@ -53,23 +53,23 @@ public:
 	}
 
 
-	void AllReset();
+	void STATIC_AllReset();
 	void AddPage(int Index, int Add);
-	void AddImg(const struct FString& ID);
+	void STATIC_AddImg(const struct FString& ID);
 	void AddCategory(const struct FString& Name, const struct FString& ID, bool Last);
-	void SetScroll(int SelectCategoryIndex);
-	void ChgHelpImage(int Index);
-	void PrevScroll(float NextScrollVal, int SelectCategoryIndex);
-	void NextScroll(float NextScrollVal, int SelectCategoryIndex);
-	void PlayCloseAnime();
-	void PlayOpenAnime();
-	void OnLoaded_6E1564824F630812B0409FA66A36D2DC(class UObject* Loaded);
-	void Construct();
+	void STATIC_SetScroll(int SelectCategoryIndex);
+	void STATIC_ChgHelpImage(int Index);
+	void STATIC_PrevScroll(float NextScrollVal, int SelectCategoryIndex);
+	void STATIC_NextScroll(float NextScrollVal, int SelectCategoryIndex);
+	void STATIC_PlayCloseAnime();
+	void STATIC_PlayOpenAnime();
+	void STATIC_OnLoaded_6E1564824F630812B0409FA66A36D2DC(class UObject* Loaded);
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void SetTexture();
-	void ExecuteUbergraph_wgt_S3HelpWindow(int EntryPoint);
+	void STATIC_BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_SetTexture();
+	void STATIC_ExecuteUbergraph_wgt_S3HelpWindow(int EntryPoint);
 };
 
 

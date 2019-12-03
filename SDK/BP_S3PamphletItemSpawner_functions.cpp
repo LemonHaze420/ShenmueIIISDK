@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.CalcUniqueCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 
-void ABP_S3PamphletItemSpawner_C::CalcUniqueCamera()
+void ABP_S3PamphletItemSpawner_C::STATIC_CalcUniqueCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.CalcUniqueCamera");
 
 	ABP_S3PamphletItemSpawner_C_CalcUniqueCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_S3PamphletItemSpawner_C::CalcUniqueCamera()
 
 
 // Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3PamphletItemSpawner_C::UserConstructionScript()
 {
@@ -48,7 +49,7 @@ void ABP_S3PamphletItemSpawner_C::UserConstructionScript()
 
 
 // Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3PamphletItemSpawner_C::ReceiveBeginPlay()
 {
@@ -57,6 +58,7 @@ void ABP_S3PamphletItemSpawner_C::ReceiveBeginPlay()
 	ABP_S3PamphletItemSpawner_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,11 +67,11 @@ void ABP_S3PamphletItemSpawner_C::ReceiveBeginPlay()
 
 
 // Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.SetEnabledHelp
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PamphletItemSpawner_C::SetEnabledHelp(bool Condition)
+void ABP_S3PamphletItemSpawner_C::STATIC_SetEnabledHelp(bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.SetEnabledHelp");
 
@@ -77,6 +79,7 @@ void ABP_S3PamphletItemSpawner_C::SetEnabledHelp(bool Condition)
 	params.Condition = Condition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,11 +88,11 @@ void ABP_S3PamphletItemSpawner_C::SetEnabledHelp(bool Condition)
 
 
 // Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.ExecuteUbergraph_BP_S3PamphletItemSpawner
-// ()
+// (Net, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PamphletItemSpawner_C::ExecuteUbergraph_BP_S3PamphletItemSpawner(int EntryPoint)
+void ABP_S3PamphletItemSpawner_C::STATIC_ExecuteUbergraph_BP_S3PamphletItemSpawner(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PamphletItemSpawner.BP_S3PamphletItemSpawner_C.ExecuteUbergraph_BP_S3PamphletItemSpawner");
 
@@ -97,6 +100,7 @@ void ABP_S3PamphletItemSpawner_C::ExecuteUbergraph_BP_S3PamphletItemSpawner(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

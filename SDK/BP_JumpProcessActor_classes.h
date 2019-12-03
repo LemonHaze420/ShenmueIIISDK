@@ -39,12 +39,12 @@ public:
 
 
 	void AddGameTime(float Time);
-	void CheckNPCSpawn(bool* Success);
-	void UserConstructionScript();
+	void STATIC_CheckNPCSpawn(bool* Success);
+	void STATIC_UserConstructionScript();
 	void BindNPCSpawn();
-	void SpawnNPC(const struct FGameplayTag& NPCID);
-	void UnspawnNPC(const struct FGameplayTag& NPCID);
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_SpawnNPC(const struct FGameplayTag& NPCID);
+	void STATIC_UnspawnNPC(const struct FGameplayTag& NPCID);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_JumpProcessActor(int EntryPoint);
 };

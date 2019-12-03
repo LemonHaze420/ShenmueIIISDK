@@ -34,9 +34,9 @@ public:
 	void SetUpTalkComponents(class ABP_ScheduleNPC_C* TargetNPC, class US3NPCDefinition* NPCDef);
 	void UserConstructionScript();
 	void BlueprintInitializeNPC(class AS3Character* NewNPC, class AS3NPCController* NewAI, class US3NPCDefinition* NPCDef);
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_NPCManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_NPCManager(int EntryPoint);
 };
 
 

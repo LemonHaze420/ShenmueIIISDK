@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.IsBiteMove
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, MulticastDelegate, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ArgBite                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_Fishing_FreeFish_C::IsBiteMove(bool* ArgBite)
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Start_Bite
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Fishing_FreeFish_C::Start_Bite()
 {
@@ -45,6 +45,7 @@ void ABP_Fishing_FreeFish_C::Start_Bite()
 	ABP_Fishing_FreeFish_C_Start_Bite_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,9 +54,9 @@ void ABP_Fishing_FreeFish_C::Start_Bite()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.DebugDispArea
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_Fishing_FreeFish_C::DebugDispArea()
+void ABP_Fishing_FreeFish_C::STATIC_DebugDispArea()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.DebugDispArea");
 
@@ -70,7 +71,7 @@ void ABP_Fishing_FreeFish_C::DebugDispArea()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Move_Bite
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Fishing_FreeFish_C::Move_Bite()
 {
@@ -87,9 +88,9 @@ void ABP_Fishing_FreeFish_C::Move_Bite()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.CheckBiteStart
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 
-void ABP_Fishing_FreeFish_C::CheckBiteStart()
+void ABP_Fishing_FreeFish_C::STATIC_CheckBiteStart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.CheckBiteStart");
 
@@ -104,7 +105,7 @@ void ABP_Fishing_FreeFish_C::CheckBiteStart()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.CheckCenterPos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ArgPos                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 RetPos                         (Parm, OutParm, IsPlainOldData)
@@ -117,6 +118,7 @@ void ABP_Fishing_FreeFish_C::CheckCenterPos(const struct FVector& ArgPos, struct
 	params.ArgPos = ArgPos;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -128,7 +130,7 @@ void ABP_Fishing_FreeFish_C::CheckCenterPos(const struct FVector& ArgPos, struct
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.SetNextMoveVector
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, MulticastDelegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Fishing_FreeFish_C::SetNextMoveVector()
 {
@@ -145,7 +147,7 @@ void ABP_Fishing_FreeFish_C::SetNextMoveVector()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.GetRandomCirclePos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ArgCenterPos                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          ArgRadius                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -171,7 +173,7 @@ void ABP_Fishing_FreeFish_C::GetRandomCirclePos(const struct FVector& ArgCenterP
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Start_ReflectionMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Fishing_FreeFish_C::Start_ReflectionMove()
 {
@@ -180,6 +182,7 @@ void ABP_Fishing_FreeFish_C::Start_ReflectionMove()
 	ABP_Fishing_FreeFish_C_Start_ReflectionMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,15 +191,16 @@ void ABP_Fishing_FreeFish_C::Start_ReflectionMove()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Move_ReflectionMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_Fishing_FreeFish_C::Move_ReflectionMove()
+void ABP_Fishing_FreeFish_C::STATIC_Move_ReflectionMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Move_ReflectionMove");
 
 	ABP_Fishing_FreeFish_C_Move_ReflectionMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,7 +209,7 @@ void ABP_Fishing_FreeFish_C::Move_ReflectionMove()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Init
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Fishing_FreeFish_C::Init()
 {
@@ -214,6 +218,7 @@ void ABP_Fishing_FreeFish_C::Init()
 	ABP_Fishing_FreeFish_C_Init_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,7 +227,7 @@ void ABP_Fishing_FreeFish_C::Init()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.StartInfinitySymbolMove
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ArgBasePos                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -234,6 +239,7 @@ void ABP_Fishing_FreeFish_C::StartInfinitySymbolMove(const struct FVector& ArgBa
 	params.ArgBasePos = ArgBasePos;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,15 +248,16 @@ void ABP_Fishing_FreeFish_C::StartInfinitySymbolMove(const struct FVector& ArgBa
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Move_InfinitySymbol
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_Fishing_FreeFish_C::Move_InfinitySymbol()
+void ABP_Fishing_FreeFish_C::STATIC_Move_InfinitySymbol()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.Move_InfinitySymbol");
 
 	ABP_Fishing_FreeFish_C_Move_InfinitySymbol_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,7 +266,7 @@ void ABP_Fishing_FreeFish_C::Move_InfinitySymbol()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Fishing_FreeFish_C::UserConstructionScript()
 {
@@ -276,7 +283,7 @@ void ABP_Fishing_FreeFish_C::UserConstructionScript()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -296,7 +303,7 @@ void ABP_Fishing_FreeFish_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 
 void ABP_Fishing_FreeFish_C::ReceiveBeginPlay()
 {
@@ -313,11 +320,11 @@ void ABP_Fishing_FreeFish_C::ReceiveBeginPlay()
 
 
 // Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.ExecuteUbergraph_BP_Fishing_FreeFish
-// (HasDefaults)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_FreeFish_C::ExecuteUbergraph_BP_Fishing_FreeFish(int EntryPoint)
+void ABP_Fishing_FreeFish_C::STATIC_ExecuteUbergraph_BP_Fishing_FreeFish(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeFish.BP_Fishing_FreeFish_C.ExecuteUbergraph_BP_Fishing_FreeFish");
 
@@ -325,6 +332,7 @@ void ABP_Fishing_FreeFish_C::ExecuteUbergraph_BP_Fishing_FreeFish(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

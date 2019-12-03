@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.MaxOut
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void UPC_SimpleFloatMeter_C::MaxOut()
+void UPC_SimpleFloatMeter_C::STATIC_MaxOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.MaxOut");
 
@@ -31,9 +31,9 @@ void UPC_SimpleFloatMeter_C::MaxOut()
 
 
 // Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void UPC_SimpleFloatMeter_C::Reset()
+void UPC_SimpleFloatMeter_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Reset");
 
@@ -48,12 +48,12 @@ void UPC_SimpleFloatMeter_C::Reset()
 
 
 // Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Tick
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Increase                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UPC_SimpleFloatMeter_C::Tick(bool Increase, float DeltaTime)
+void UPC_SimpleFloatMeter_C::STATIC_Tick(bool Increase, float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_SimpleFloatMeter.PC_SimpleFloatMeter_C.Tick");
 

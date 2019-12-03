@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.SetFlogNumber
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Number                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UWBP_AR_SupportMeter_C::SetFlogNumber(int Number)
+void UWBP_AR_SupportMeter_C::STATIC_SetFlogNumber(int Number)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.SetFlogNumber");
 
@@ -26,6 +26,7 @@ void UWBP_AR_SupportMeter_C::SetFlogNumber(int Number)
 	params.Number = Number;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,11 +35,11 @@ void UWBP_AR_SupportMeter_C::SetFlogNumber(int Number)
 
 
 // Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.SetTurtleColor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            SelectIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_AR_SupportMeter_C::SetTurtleColor(int SelectIndex)
+void UWBP_AR_SupportMeter_C::STATIC_SetTurtleColor(int SelectIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.SetTurtleColor");
 
@@ -46,6 +47,7 @@ void UWBP_AR_SupportMeter_C::SetTurtleColor(int SelectIndex)
 	params.SelectIndex = SelectIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +56,11 @@ void UWBP_AR_SupportMeter_C::SetTurtleColor(int SelectIndex)
 
 
 // Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_AR_SupportMeter_C::PreConstruct(bool IsDesignTime)
+void UWBP_AR_SupportMeter_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.PreConstruct");
 
@@ -66,6 +68,7 @@ void UWBP_AR_SupportMeter_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +77,11 @@ void UWBP_AR_SupportMeter_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.ExecuteUbergraph_WBP_AR_SupportMeter
-// ()
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_AR_SupportMeter_C::ExecuteUbergraph_WBP_AR_SupportMeter(int EntryPoint)
+void UWBP_AR_SupportMeter_C::STATIC_ExecuteUbergraph_WBP_AR_SupportMeter(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_AR_SupportMeter.WBP_AR_SupportMeter_C.ExecuteUbergraph_WBP_AR_SupportMeter");
 

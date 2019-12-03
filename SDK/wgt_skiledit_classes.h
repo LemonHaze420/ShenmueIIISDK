@@ -18,7 +18,7 @@ class Uwgt_skiledit_C : public US3UserWidget
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0220(0x0008) (Transient, DuplicateTransient)
-	class UImage*                                      Bg;                                                       // 0x0228(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	class UImage*                                      bg;                                                       // 0x0228(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UImage*                                      Image_SkillTotalFrame;                                    // 0x0230(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UTextBlock*                                  LevelUpDescription_center;                                // 0x0238(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UTextBlock*                                  LevelUpDescription_Left;                                  // 0x0240(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
@@ -56,19 +56,19 @@ public:
 	}
 
 
-	void SetWazeSlotSwitchSel(bool Visible);
-	void SetWazePageSel(bool Visible);
+	void STATIC_SetWazeSlotSwitchSel(bool Visible);
+	void STATIC_SetWazePageSel(bool Visible);
 	void UpdatePageIcons();
-	void UpdateDetailPanel();
+	void STATIC_UpdateDetailPanel();
 	void UpdateBookItem(int* ItemIndex);
 	void OpenBookToItem_ItemIntID_(int ItemIntID, int SetIndexOnInvalid, int* ItemIndex);
-	void UpdateSetSelection();
-	void SetBookPage(int InputPin, bool* Changed);
-	void PushLR(int AddPage);
+	void STATIC_UpdateSetSelection();
+	void STATIC_SetBookPage(int InputPin, bool* Changed);
+	void STATIC_PushLR(int AddPage);
 	void InitPageIcon();
-	void SetCurrentMode(TEnumAsByte<ESkillEditorInnnerModeType> current_mode, int* ItemIndex);
+	void STATIC_SetCurrentMode(TEnumAsByte<ESkillEditorInnnerModeType> current_mode, int* ItemIndex);
 	void ExecDialog();
-	void InputSelectDirection(TEnumAsByte<Een_skill_key_type> Key, bool* IsActionButton, int* ItemIndex);
+	void STATIC_InputSelectDirection(TEnumAsByte<Een_skill_key_type> Key, bool* IsActionButton, int* ItemIndex);
 	void InputCancel(bool* IsEnd);
 	void InputSelect(int* ItemIndex);
 	void PreConstruct(bool IsDesignTime);

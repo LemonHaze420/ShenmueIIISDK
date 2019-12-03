@@ -87,13 +87,13 @@ public:
 	void InitAsyncLoad(bool* dummy);
 	void UpdateMahoAccumulation();
 	void SetDifficulty(int Level);
-	TArray<struct FS3DetectActionParam> GetDetectAction();
-	void GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
-	bool CanGameUpdate();
+	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
+	void STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
+	bool STATIC_CanGameUpdate();
 	void UpdateUILine();
-	void SetNPCVisible(bool Visible);
-	void UpdateAnim();
-	void UserConstructionScript();
+	void STATIC_SetNPCVisible(bool Visible);
+	void STATIC_UpdateAnim();
+	void STATIC_UserConstructionScript();
 	void Timeline_CollisionScaleInitialize__FinishedFunc();
 	void Timeline_CollisionScaleInitialize__UpdateFunc();
 	void Timiline_SafeBar__FinishedFunc();
@@ -116,7 +116,7 @@ public:
 	void TimeUpEvent();
 	void OnTimeUp();
 	void PlayScriptMaho();
-	void ExecuteUbergraph_BP_MiniGame_Maho(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_Maho(int EntryPoint);
 };
 
 

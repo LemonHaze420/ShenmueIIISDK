@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.AdjustForDifficultySetting
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            PlayerLevelsAbove              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBPC_BattleSoftlockSettings_C::AdjustForDifficultySetting(int PlayerLevelsAbove)
+int UBPC_BattleSoftlockSettings_C::STATIC_AdjustForDifficultySetting(int PlayerLevelsAbove)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.AdjustForDifficultySetting");
 
@@ -27,6 +27,7 @@ int UBPC_BattleSoftlockSettings_C::AdjustForDifficultySetting(int PlayerLevelsAb
 	params.PlayerLevelsAbove = PlayerLevelsAbove;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +38,7 @@ int UBPC_BattleSoftlockSettings_C::AdjustForDifficultySetting(int PlayerLevelsAb
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcEnemyTeamAdjust
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            LevelRef                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MaxSimultaneousAttacks         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -61,12 +62,12 @@ void UBPC_BattleSoftlockSettings_C::CalcEnemyTeamAdjust(int LevelRef, int* MaxSi
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcEnemyAdjust
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            PlayerLevelAbove               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AIStep                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BattleSoftlockSettings_C::CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep)
+void UBPC_BattleSoftlockSettings_C::STATIC_CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcEnemyAdjust");
 
@@ -74,6 +75,7 @@ void UBPC_BattleSoftlockSettings_C::CalcEnemyAdjust(int PlayerLevelAbove, int* A
 	params.PlayerLevelAbove = PlayerLevelAbove;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,7 +87,7 @@ void UBPC_BattleSoftlockSettings_C::CalcEnemyAdjust(int PlayerLevelAbove, int* A
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.DebugPrintEffects
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, Const)
 // Parameters:
 // int                            RelativeLevel                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InDamage                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -94,7 +96,7 @@ void UBPC_BattleSoftlockSettings_C::CalcEnemyAdjust(int PlayerLevelAbove, int* A
 // bool                           Short                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBPC_BattleSoftlockSettings_C::DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short)
+struct FString UBPC_BattleSoftlockSettings_C::STATIC_DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.DebugPrintEffects");
 
@@ -116,9 +118,9 @@ struct FString UBPC_BattleSoftlockSettings_C::DebugPrintEffects(int RelativeLeve
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.PrintExampleStats
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, Const)
 
-void UBPC_BattleSoftlockSettings_C::PrintExampleStats()
+void UBPC_BattleSoftlockSettings_C::STATIC_PrintExampleStats()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.PrintExampleStats");
 
@@ -133,7 +135,7 @@ void UBPC_BattleSoftlockSettings_C::PrintExampleStats()
 
 
 // Function BPC_BattleSoftlockSettings.BPC_BattleSoftlockSettings_C.CalcPlayerAdjust
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            PlayerLevelsAbove              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Apply                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)

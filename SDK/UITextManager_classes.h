@@ -20,7 +20,7 @@ public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (Transient, DuplicateTransient)
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TArray<struct FString>                             localizedList;                                            // 0x0338(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               Debug;                                                    // 0x0348(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               DEBUG;                                                    // 0x0348(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,9 +31,9 @@ public:
 
 	void GetLocalTxt(const struct FString& Name, struct FString* Text);
 	void GetLocalizedText(TEnumAsByte<EUIText_Enum> ID, struct FString* Text);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_UITextManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_UITextManager(int EntryPoint);
 };
 
 

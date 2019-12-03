@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_Config_Volume.BPW_UI_Config_Volume_C.PlaySoundAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // bool                           isPlay                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Volume_C::PlaySoundAnimation(bool isPlay)
+void UBPW_UI_Config_Volume_C::STATIC_PlaySoundAnimation(bool isPlay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Volume.BPW_UI_Config_Volume_C.PlaySoundAnimation");
 
@@ -34,12 +34,12 @@ void UBPW_UI_Config_Volume_C::PlaySoundAnimation(bool isPlay)
 
 
 // Function BPW_UI_Config_Volume.BPW_UI_Config_Volume_C.SetAppearance
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, Const)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFocus                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Volume_C::SetAppearance(float Value, bool IsFocus)
+void UBPW_UI_Config_Volume_C::STATIC_SetAppearance(float Value, bool IsFocus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Volume.BPW_UI_Config_Volume_C.SetAppearance");
 
@@ -48,6 +48,7 @@ void UBPW_UI_Config_Volume_C::SetAppearance(float Value, bool IsFocus)
 	params.IsFocus = IsFocus;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,11 +57,11 @@ void UBPW_UI_Config_Volume_C::SetAppearance(float Value, bool IsFocus)
 
 
 // Function BPW_UI_Config_Volume.BPW_UI_Config_Volume_C.SetValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Config_Volume_C::SetValue(float Value)
+void UBPW_UI_Config_Volume_C::STATIC_SetValue(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Config_Volume.BPW_UI_Config_Volume_C.SetValue");
 
@@ -68,6 +69,7 @@ void UBPW_UI_Config_Volume_C::SetValue(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

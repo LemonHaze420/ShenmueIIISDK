@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_DetectActionBase.BPF_DetectActionBase_C.ForbidAllDetectAction
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -36,12 +36,12 @@ void UBPF_DetectActionBase_C::STATIC_ForbidAllDetectAction(class AActor* Actor, 
 
 
 // Function BPF_DetectActionBase.BPF_DetectActionBase_C.PermitAllDetectAction
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DetectActionBase_C::STATIC_PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext)
+void UBPF_DetectActionBase_C::PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DetectActionBase.BPF_DetectActionBase_C.PermitAllDetectAction");
 
@@ -58,7 +58,7 @@ void UBPF_DetectActionBase_C::STATIC_PermitAllDetectAction(class AActor* Actor, 
 
 
 // Function BPF_DetectActionBase.BPF_DetectActionBase_C.ForbidWindowUI
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Private, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -72,6 +72,7 @@ void UBPF_DetectActionBase_C::STATIC_ForbidWindowUI(class AActor* Actor, class U
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,12 +81,12 @@ void UBPF_DetectActionBase_C::STATIC_ForbidWindowUI(class AActor* Actor, class U
 
 
 // Function BPF_DetectActionBase.BPF_DetectActionBase_C.PermitWindowUI
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DetectActionBase_C::STATIC_PermitWindowUI(class AActor* Actor, class UObject* __WorldContext)
+void UBPF_DetectActionBase_C::PermitWindowUI(class AActor* Actor, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DetectActionBase.BPF_DetectActionBase_C.PermitWindowUI");
 
@@ -94,6 +95,7 @@ void UBPF_DetectActionBase_C::STATIC_PermitWindowUI(class AActor* Actor, class U
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

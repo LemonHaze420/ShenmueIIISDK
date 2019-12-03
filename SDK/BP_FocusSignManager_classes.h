@@ -35,15 +35,15 @@ public:
 	}
 
 
-	bool IsEnabledPlayerState();
+	bool STATIC_IsEnabledPlayerState();
 	void CheckMoveCamera(bool* Move);
-	void IsSearchSightEnabled(bool* IsEnabled);
+	void STATIC_IsSearchSightEnabled(bool* IsEnabled);
 	void UpdateWidget();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_FocusSignManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_FocusSignManager(int EntryPoint);
 };
 
 

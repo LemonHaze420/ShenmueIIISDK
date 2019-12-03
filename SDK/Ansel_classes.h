@@ -25,20 +25,20 @@ public:
 	}
 
 
-	void STATIC_StopSession(class UObject* WorldContextObject);
-	void STATIC_StartSession(class UObject* WorldContextObject);
-	void STATIC_SetUIControlVisibility(class UObject* WorldContextObject, TEnumAsByte<EUIControlEffectTarget> UIControlTarget, bool bIsVisible);
-	void STATIC_SetSettleFrames(int NumSettleFrames);
-	void STATIC_SetIsPhotographyAllowed(bool bIsPhotographyAllowed);
-	void STATIC_SetCameraMovementSpeed(float TranslationSpeed);
-	void STATIC_SetCameraConstraintDistance(float MaxCameraDistance);
-	void STATIC_SetCameraConstraintCameraSize(float CameraSize);
-	void STATIC_SetAutoPostprocess(bool bShouldAutoPostprocess);
-	void STATIC_SetAutoPause(bool bShouldAutoPause);
-	bool STATIC_IsPhotographyAvailable();
-	bool STATIC_IsPhotographyAllowed();
-	void STATIC_ConstrainCameraByGeometry(class UObject* WorldContextObject, const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* OutCameraLocation);
-	void STATIC_ConstrainCameraByDistance(class UObject* WorldContextObject, const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, float MaxDistance, struct FVector* OutCameraLocation);
+	void StopSession(class UObject* WorldContextObject);
+	void StartSession(class UObject* WorldContextObject);
+	void SetUIControlVisibility(class UObject* WorldContextObject, TEnumAsByte<EUIControlEffectTarget> UIControlTarget, bool bIsVisible);
+	void SetSettleFrames(int NumSettleFrames);
+	void SetIsPhotographyAllowed(bool bIsPhotographyAllowed);
+	void SetCameraMovementSpeed(float TranslationSpeed);
+	void SetCameraConstraintDistance(float MaxCameraDistance);
+	void SetCameraConstraintCameraSize(float CameraSize);
+	void SetAutoPostprocess(bool bShouldAutoPostprocess);
+	void SetAutoPause(bool bShouldAutoPause);
+	bool IsPhotographyAvailable();
+	bool IsPhotographyAllowed();
+	void ConstrainCameraByGeometry(class UObject* WorldContextObject, const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, struct FVector* OutCameraLocation);
+	void ConstrainCameraByDistance(class UObject* WorldContextObject, const struct FVector& NewCameraLocation, const struct FVector& PreviousCameraLocation, const struct FVector& OriginalCameraLocation, float MaxDistance, struct FVector* OutCameraLocation);
 };
 
 

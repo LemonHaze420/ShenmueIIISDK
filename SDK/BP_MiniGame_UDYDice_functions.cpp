@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.StopRollingSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MiniGame_UDYDice_C::StopRollingSE()
+void ABP_MiniGame_UDYDice_C::STATIC_StopRollingSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.StopRollingSE");
 
 	ABP_MiniGame_UDYDice_C_StopRollingSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void ABP_MiniGame_UDYDice_C::StopRollingSE()
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.InitializeSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Static, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_UDYDice_C::InitializeSE()
+void ABP_MiniGame_UDYDice_C::STATIC_InitializeSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.InitializeSE");
 
@@ -48,17 +49,18 @@ void ABP_MiniGame_UDYDice_C::InitializeSE()
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.IsPerfectStop
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Stop                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UDYDice_C::IsPerfectStop(bool* Stop)
+void ABP_MiniGame_UDYDice_C::STATIC_IsPerfectStop(bool* Stop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.IsPerfectStop");
 
 	ABP_MiniGame_UDYDice_C_IsPerfectStop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +72,7 @@ void ABP_MiniGame_UDYDice_C::IsPerfectStop(bool* Stop)
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.UpdateRollingSE
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UDYDice_C::UpdateRollingSE()
 {
@@ -87,17 +89,18 @@ void ABP_MiniGame_UDYDice_C::UpdateRollingSE()
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.IsHitSEPlaying
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_MiniGame_UDYDice_C::IsHitSEPlaying()
+bool ABP_MiniGame_UDYDice_C::STATIC_IsHitSEPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.IsHitSEPlaying");
 
 	ABP_MiniGame_UDYDice_C_IsHitSEPlaying_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -108,11 +111,11 @@ bool ABP_MiniGame_UDYDice_C::IsHitSEPlaying()
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.IsStopped
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // bool                           bStop                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UDYDice_C::IsStopped(bool* bStop)
+void ABP_MiniGame_UDYDice_C::STATIC_IsStopped(bool* bStop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.IsStopped");
 
@@ -130,9 +133,9 @@ void ABP_MiniGame_UDYDice_C::IsStopped(bool* bStop)
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_UDYDice_C::UserConstructionScript()
+void ABP_MiniGame_UDYDice_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.UserConstructionScript");
 
@@ -147,7 +150,7 @@ void ABP_MiniGame_UDYDice_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -159,6 +162,7 @@ void ABP_MiniGame_UDYDice_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +171,7 @@ void ABP_MiniGame_UDYDice_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -175,7 +179,7 @@ void ABP_MiniGame_UDYDice_C::ReceiveTick(float DeltaSeconds)
 // struct FVector                 NormalImpulse                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FHitResult              Hit                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MiniGame_UDYDice_C::BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
+void ABP_MiniGame_UDYDice_C::STATIC_BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature");
 
@@ -195,15 +199,16 @@ void ABP_MiniGame_UDYDice_C::BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_Comp
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_UDYDice_C::ReceiveBeginPlay()
+void ABP_MiniGame_UDYDice_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.ReceiveBeginPlay");
 
 	ABP_MiniGame_UDYDice_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +217,7 @@ void ABP_MiniGame_UDYDice_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -224,6 +229,7 @@ void ABP_MiniGame_UDYDice_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -232,15 +238,16 @@ void ABP_MiniGame_UDYDice_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.PlayHitSE
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_UDYDice_C::PlayHitSE()
+void ABP_MiniGame_UDYDice_C::STATIC_PlayHitSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.PlayHitSE");
 
 	ABP_MiniGame_UDYDice_C_PlayHitSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -249,11 +256,11 @@ void ABP_MiniGame_UDYDice_C::PlayHitSE()
 
 
 // Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.ExecuteUbergraph_BP_MiniGame_UDYDice
-// (HasDefaults)
+// (Net, NetReliable, Native, Static, MulticastDelegate, Public, Private, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UDYDice_C::ExecuteUbergraph_BP_MiniGame_UDYDice(int EntryPoint)
+void ABP_MiniGame_UDYDice_C::STATIC_ExecuteUbergraph_BP_MiniGame_UDYDice(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UDYDice.BP_MiniGame_UDYDice_C.ExecuteUbergraph_BP_MiniGame_UDYDice");
 
@@ -261,6 +268,7 @@ void ABP_MiniGame_UDYDice_C::ExecuteUbergraph_BP_MiniGame_UDYDice(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

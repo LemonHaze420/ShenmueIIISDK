@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillInput.wgt_SkillInput_C.GetShoulderInputImage
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EGamepadShoulder>  Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Image                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,11 +38,11 @@ void Uwgt_SkillInput_C::GetShoulderInputImage(TEnumAsByte<EGamepadShoulder> Sele
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.SetInputByShoulderButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EGamepadShoulder>  Modifier                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillInput_C::SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> Modifier)
+void Uwgt_SkillInput_C::STATIC_SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> Modifier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.SetInputByShoulderButton");
 
@@ -50,6 +50,7 @@ void Uwgt_SkillInput_C::SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> M
 	params.Modifier = Modifier;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,17 +59,18 @@ void Uwgt_SkillInput_C::SetInputByShoulderButton(TEnumAsByte<EGamepadShoulder> M
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.GetShoulderStyle
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EShoulderButtonStyle> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EShoulderButtonStyle> Uwgt_SkillInput_C::GetShoulderStyle()
+TEnumAsByte<EShoulderButtonStyle> Uwgt_SkillInput_C::STATIC_GetShoulderStyle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.GetShoulderStyle");
 
 	Uwgt_SkillInput_C_GetShoulderStyle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,12 +81,12 @@ TEnumAsByte<EShoulderButtonStyle> Uwgt_SkillInput_C::GetShoulderStyle()
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.GetModifierInputImage
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EBTL_HoldInputType             Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Image                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillInput_C::GetModifierInputImage(EBTL_HoldInputType Selection, class UTexture2D** Image)
+void Uwgt_SkillInput_C::STATIC_GetModifierInputImage(EBTL_HoldInputType Selection, class UTexture2D** Image)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.GetModifierInputImage");
 
@@ -92,6 +94,7 @@ void Uwgt_SkillInput_C::GetModifierInputImage(EBTL_HoldInputType Selection, clas
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,11 +106,11 @@ void Uwgt_SkillInput_C::GetModifierInputImage(EBTL_HoldInputType Selection, clas
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.SetStyle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Style                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillInput_C::SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style)
+void Uwgt_SkillInput_C::STATIC_SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.SetStyle");
 
@@ -115,6 +118,7 @@ void Uwgt_SkillInput_C::SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style)
 	params.Style = Style;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,11 +127,11 @@ void Uwgt_SkillInput_C::SetStyle(TEnumAsByte<EFaceButtonImageStyle> Style)
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.SetInputByModifierButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // EBTL_HoldInputType             Modifier                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillInput_C::SetInputByModifierButton(EBTL_HoldInputType Modifier)
+void Uwgt_SkillInput_C::STATIC_SetInputByModifierButton(EBTL_HoldInputType Modifier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.SetInputByModifierButton");
 
@@ -135,6 +139,7 @@ void Uwgt_SkillInput_C::SetInputByModifierButton(EBTL_HoldInputType Modifier)
 	params.Modifier = Modifier;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,11 +148,11 @@ void Uwgt_SkillInput_C::SetInputByModifierButton(EBTL_HoldInputType Modifier)
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.SetInputByActionName
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillInput_C::SetInputByActionName(const struct FName& Selection)
+void Uwgt_SkillInput_C::STATIC_SetInputByActionName(const struct FName& Selection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.SetInputByActionName");
 
@@ -163,12 +168,12 @@ void Uwgt_SkillInput_C::SetInputByActionName(const struct FName& Selection)
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.GetAttackInputImage
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Graphic                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillInput_C::GetAttackInputImage(const struct FName& Selection, class UTexture2D** Graphic)
+void Uwgt_SkillInput_C::STATIC_GetAttackInputImage(const struct FName& Selection, class UTexture2D** Graphic)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.GetAttackInputImage");
 
@@ -187,15 +192,16 @@ void Uwgt_SkillInput_C::GetAttackInputImage(const struct FName& Selection, class
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void Uwgt_SkillInput_C::Construct()
+void Uwgt_SkillInput_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.Construct");
 
 	Uwgt_SkillInput_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,11 +210,11 @@ void Uwgt_SkillInput_C::Construct()
 
 
 // Function wgt_SkillInput.wgt_SkillInput_C.ExecuteUbergraph_wgt_SkillInput
-// ()
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillInput_C::ExecuteUbergraph_wgt_SkillInput(int EntryPoint)
+void Uwgt_SkillInput_C::STATIC_ExecuteUbergraph_wgt_SkillInput(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillInput.wgt_SkillInput_C.ExecuteUbergraph_wgt_SkillInput");
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_BoolProperty.BW_BoolProperty_C.GetCheckedState
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // ECheckBoxState                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ ECheckBoxState UBW_BoolProperty_C::GetCheckedState()
 	UBW_BoolProperty_C_GetCheckedState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ ECheckBoxState UBW_BoolProperty_C::GetCheckedState()
 
 
 // Function BW_BoolProperty.BW_BoolProperty_C.GetParameterName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -56,7 +57,7 @@ struct FText UBW_BoolProperty_C::GetParameterName()
 
 
 // Function BW_BoolProperty.BW_BoolProperty_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -78,7 +79,7 @@ void UBW_BoolProperty_C::Tick(const struct FGeometry& MyGeometry, float InDeltaT
 
 
 // Function BW_BoolProperty.BW_BoolProperty_C.BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_131_OnCheckBoxComponentStateChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bIsChecked                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -98,9 +99,9 @@ void UBW_BoolProperty_C::BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_131_OnChe
 
 
 // Function BW_BoolProperty.BW_BoolProperty_C.BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_BoolProperty_C::BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature()
+void UBW_BoolProperty_C::STATIC_BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_BoolProperty.BW_BoolProperty_C.BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature");
 
@@ -115,7 +116,7 @@ void UBW_BoolProperty_C::BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnBu
 
 
 // Function BW_BoolProperty.BW_BoolProperty_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -135,7 +136,7 @@ void UBW_BoolProperty_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_BoolProperty.BW_BoolProperty_C.ExecuteUbergraph_BW_BoolProperty
-// (HasDefaults)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -147,6 +148,7 @@ void UBW_BoolProperty_C::ExecuteUbergraph_BW_BoolProperty(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,7 +157,7 @@ void UBW_BoolProperty_C::ExecuteUbergraph_BW_BoolProperty(int EntryPoint)
 
 
 // Function BW_BoolProperty.BW_BoolProperty_C.BoolPropertyChanged__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBW_BoolProperty_C::BoolPropertyChanged__DelegateSignature()
 {
@@ -164,6 +166,7 @@ void UBW_BoolProperty_C::BoolPropertyChanged__DelegateSignature()
 	UBW_BoolProperty_C_BoolPropertyChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

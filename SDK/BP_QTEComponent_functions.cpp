@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_QTEComponent.BP_QTEComponent_C.StopTimeCountSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBP_QTEComponent_C::StopTimeCountSE()
 {
@@ -23,6 +23,7 @@ void UBP_QTEComponent_C::StopTimeCountSE()
 	UBP_QTEComponent_C_StopTimeCountSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBP_QTEComponent_C::StopTimeCountSE()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.PlayTimeCountSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_QTEComponent_C::PlayTimeCountSE()
 {
@@ -40,6 +41,7 @@ void UBP_QTEComponent_C::PlayTimeCountSE()
 	UBP_QTEComponent_C_PlayTimeCountSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void UBP_QTEComponent_C::PlayTimeCountSE()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.UpdateTime
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, NetMulticast, Private, Delegate, NetServer)
 // Parameters:
 // float                          TickDeltaSeconds               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          CurrentDeltaSeconds            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -72,7 +74,7 @@ void UBP_QTEComponent_C::UpdateTime(float TickDeltaSeconds, float* CurrentDeltaS
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.SetUseRealTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           UseRealTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -84,6 +86,7 @@ void UBP_QTEComponent_C::SetUseRealTime(bool UseRealTime)
 	params.UseRealTime = UseRealTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +95,7 @@ void UBP_QTEComponent_C::SetUseRealTime(bool UseRealTime)
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.ClearResult
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_QTEComponent_C::ClearResult()
 {
@@ -109,11 +112,11 @@ void UBP_QTEComponent_C::ClearResult()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.InputFunction
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    InKey                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_QTEComponent_C::InputFunction(const struct FKey& InKey)
+void UBP_QTEComponent_C::STATIC_InputFunction(const struct FKey& InKey)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTEComponent.BP_QTEComponent_C.InputFunction");
 
@@ -129,7 +132,7 @@ void UBP_QTEComponent_C::InputFunction(const struct FKey& InKey)
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.InputEndFunction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, Const)
 
 void UBP_QTEComponent_C::InputEndFunction()
 {
@@ -146,7 +149,7 @@ void UBP_QTEComponent_C::InputEndFunction()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.InputStartFunction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   SuccessAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -158,6 +161,7 @@ void UBP_QTEComponent_C::InputStartFunction(const struct FName& SuccessAction)
 	params.SuccessAction = SuccessAction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +170,7 @@ void UBP_QTEComponent_C::InputStartFunction(const struct FName& SuccessAction)
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.EndFunction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Delegate, NetServer)
 
 void UBP_QTEComponent_C::EndFunction()
 {
@@ -183,15 +187,16 @@ void UBP_QTEComponent_C::EndFunction()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.Prepare
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UBP_QTEComponent_C::Prepare()
+void UBP_QTEComponent_C::STATIC_Prepare()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTEComponent.BP_QTEComponent_C.Prepare");
 
 	UBP_QTEComponent_C_Prepare_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,7 +205,7 @@ void UBP_QTEComponent_C::Prepare()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.GetButtonImage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InputName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Texture2D                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -213,6 +218,7 @@ void UBP_QTEComponent_C::GetButtonImage(const struct FName& InputName, class UTe
 	params.InputName = InputName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -224,7 +230,7 @@ void UBP_QTEComponent_C::GetButtonImage(const struct FName& InputName, class UTe
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.PlaySE
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBP_QTEComponent_C::PlaySE()
 {
@@ -233,6 +239,7 @@ void UBP_QTEComponent_C::PlaySE()
 	UBP_QTEComponent_C_PlaySE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,7 +248,7 @@ void UBP_QTEComponent_C::PlaySE()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -253,6 +260,7 @@ void UBP_QTEComponent_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -261,7 +269,7 @@ void UBP_QTEComponent_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -273,6 +281,7 @@ void UBP_QTEComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -281,7 +290,7 @@ void UBP_QTEComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.ExecuteUbergraph_BP_QTEComponent
-// ()
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Delegate, NetServer)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -301,11 +310,11 @@ void UBP_QTEComponent_C::ExecuteUbergraph_BP_QTEComponent(int EntryPoint)
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.ButtonDown__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Succeed                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_QTEComponent_C::ButtonDown__DelegateSignature(bool Succeed)
+void UBP_QTEComponent_C::STATIC_ButtonDown__DelegateSignature(bool Succeed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTEComponent.BP_QTEComponent_C.ButtonDown__DelegateSignature");
 
@@ -321,9 +330,9 @@ void UBP_QTEComponent_C::ButtonDown__DelegateSignature(bool Succeed)
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.End__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBP_QTEComponent_C::End__DelegateSignature()
+void UBP_QTEComponent_C::STATIC_End__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTEComponent.BP_QTEComponent_C.End__DelegateSignature");
 
@@ -338,9 +347,9 @@ void UBP_QTEComponent_C::End__DelegateSignature()
 
 
 // Function BP_QTEComponent.BP_QTEComponent_C.Success__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBP_QTEComponent_C::Success__DelegateSignature()
+void UBP_QTEComponent_C::STATIC_Success__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_QTEComponent.BP_QTEComponent_C.Success__DelegateSignature");
 

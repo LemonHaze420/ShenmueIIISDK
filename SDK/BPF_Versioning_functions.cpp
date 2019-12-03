@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Versioning.BPF_Versioning_C.GetAvailableVoiceLanguages
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<ES3VoiceLanguage>       Languages                      (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Versioning_C::STATIC_GetAvailableVoiceLanguages(class UObject* __WorldContext, TArray<ES3VoiceLanguage>* Languages)
+void UBPF_Versioning_C::GetAvailableVoiceLanguages(class UObject* __WorldContext, TArray<ES3VoiceLanguage>* Languages)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Versioning.BPF_Versioning_C.GetAvailableVoiceLanguages");
 
@@ -27,6 +27,7 @@ void UBPF_Versioning_C::STATIC_GetAvailableVoiceLanguages(class UObject* __World
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UBPF_Versioning_C::STATIC_GetAvailableVoiceLanguages(class UObject* __World
 
 
 // Function BPF_Versioning.BPF_Versioning_C.GetAvailableLocales
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Native, Static, NetMulticast, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<ES3Locale>              Locales                        (Parm, OutParm, ZeroConstructor)
@@ -51,6 +52,7 @@ void UBPF_Versioning_C::STATIC_GetAvailableLocales(class UObject* __WorldContext
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

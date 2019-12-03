@@ -30,10 +30,10 @@ public:
 	}
 
 
-	void SetIcon(int item_no);
-	void Reset();
+	void STATIC_SetIcon(int item_no);
+	void STATIC_Reset();
 	void Construct();
-	void ExecuteUbergraph_wgt_ShopCartListItem(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_ShopCartListItem(int EntryPoint);
 };
 
 

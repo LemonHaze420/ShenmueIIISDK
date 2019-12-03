@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ExecuteUbergraph_BTT_PlayAC(int EntryPoint);
 };
 

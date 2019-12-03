@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC_Idle.BP_State_LookAtNPC_Idle_C.StateExit
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBP_State_LookAtNPC_Idle_C::StateExit(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UBP_State_LookAtNPC_Idle_C::StateExit(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtNPC_Idle.BP_State_LookAtNPC_Idle_C.StateUpdate
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,12 +63,12 @@ void UBP_State_LookAtNPC_Idle_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_LookAtNPC_Idle.BP_State_LookAtNPC_Idle_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Idle_C::StateEnter(float Delta, bool* bProcessing)
+void UBP_State_LookAtNPC_Idle_C::STATIC_StateEnter(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Idle.BP_State_LookAtNPC_Idle_C.StateEnter");
 

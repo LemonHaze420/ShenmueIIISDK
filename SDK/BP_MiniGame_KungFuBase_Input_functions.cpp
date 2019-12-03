@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_MiniGame_KungFuBase_Input_C::UserConstructionScript()
+void ABP_MiniGame_KungFuBase_Input_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.UserConstructionScript");
 
 	ABP_MiniGame_KungFuBase_Input_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_MiniGame_KungFuBase_Input_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -43,6 +44,7 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_ButtonRight_K2Node_InputActio
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +53,7 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_ButtonRight_K2Node_InputActio
 
 
 // Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -63,6 +65,7 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_7
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +74,7 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_7
 
 
 // Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_6
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -83,6 +86,7 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +95,7 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEven
 
 
 // Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_5
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -103,6 +107,7 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_ButtonBottom_K2Node_InputActi
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,11 +116,11 @@ void ABP_MiniGame_KungFuBase_Input_C::InpActEvt_MG_ButtonBottom_K2Node_InputActi
 
 
 // Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.ExecuteUbergraph_BP_MiniGame_KungFuBase_Input
-// (HasDefaults)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KungFuBase_Input_C::ExecuteUbergraph_BP_MiniGame_KungFuBase_Input(int EntryPoint)
+void ABP_MiniGame_KungFuBase_Input_C::STATIC_ExecuteUbergraph_BP_MiniGame_KungFuBase_Input(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KungFuBase_Input.BP_MiniGame_KungFuBase_Input_C.ExecuteUbergraph_BP_MiniGame_KungFuBase_Input");
 
@@ -123,6 +128,7 @@ void ABP_MiniGame_KungFuBase_Input_C::ExecuteUbergraph_BP_MiniGame_KungFuBase_In
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

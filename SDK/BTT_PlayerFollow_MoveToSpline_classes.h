@@ -33,14 +33,14 @@ public:
 	}
 
 
-	void UpdateClosestSplinePoint();
+	void STATIC_UpdateClosestSplinePoint();
 	void UpdateClosestSplineDistance();
-	void StopPathing();
+	void STATIC_StopPathing();
 	void Finish(bool Success);
-	bool IsPlayerInSpline(float Buffer);
+	bool STATIC_IsPlayerInSpline(float Buffer);
 	void OnFail_227D29014046C8BB113903BF06DFD651(TEnumAsByte<EPathFollowingResult> MovementResult);
 	void OnSuccess_227D29014046C8BB113903BF06DFD651(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 	void WaitAndRepath();
 	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);

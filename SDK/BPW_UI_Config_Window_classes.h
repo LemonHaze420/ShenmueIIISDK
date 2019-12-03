@@ -49,7 +49,7 @@ public:
 	void PushLeftRightCursor(int Index, int Add);
 	void InitChoiceList(int Index, TArray<struct FString>* ChoiceList);
 	void SetConfigName(TArray<struct FString>* NameList);
-	void FocusButtonIndex(int Index);
+	void STATIC_FocusButtonIndex(int Index);
 	void Construct();
 	void ExecuteUbergraph_BPW_UI_Config_Window(int EntryPoint);
 };

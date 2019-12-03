@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_DebugMenu.BPF_DebugMenu_C.CheckPressButton
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UPanelWidget*            PanelWidget                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -42,7 +42,7 @@ void UBPF_DebugMenu_C::STATIC_CheckPressButton(const struct FKeyEvent& InKeyEven
 
 
 // Function BPF_DebugMenu.BPF_DebugMenu_C.GetDebugMenu
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Native, Static, Public, Delegate, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_DebugMenu_C*         DebugMenu                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -55,6 +55,7 @@ void UBPF_DebugMenu_C::STATIC_GetDebugMenu(class UObject* __WorldContext, class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

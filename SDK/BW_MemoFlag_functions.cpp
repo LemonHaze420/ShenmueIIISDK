@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_MemoFlag.BW_MemoFlag_C.SetMemoData
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, NetMulticast, Protected, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBW_IntegerProperty_C*   Memo_Flag_Property             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UBW_IntegerProperty_C*   MemoIdentifer                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -42,7 +42,7 @@ void UBW_MemoFlag_C::SetMemoData(class UBW_IntegerProperty_C* Memo_Flag_Property
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::Construct()
 {
@@ -59,7 +59,7 @@ void UBW_MemoFlag_C::Construct()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.Change Page
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::Change_Page()
 {
@@ -68,6 +68,7 @@ void UBW_MemoFlag_C::Change_Page()
 	UBW_MemoFlag_C_Change_Page_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,7 +77,7 @@ void UBW_MemoFlag_C::Change_Page()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_1
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_1()
 {
@@ -85,6 +86,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_1()
 	UBW_MemoFlag_C_ChangedMemoFlag_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,7 +95,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_1()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_2
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_2()
 {
@@ -102,6 +104,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_2()
 	UBW_MemoFlag_C_ChangedMemoFlag_2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,7 +113,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_2()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_3
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_3()
 {
@@ -119,6 +122,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_3()
 	UBW_MemoFlag_C_ChangedMemoFlag_3_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +131,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_3()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_4
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_4()
 {
@@ -136,6 +140,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_4()
 	UBW_MemoFlag_C_ChangedMemoFlag_4_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,7 +149,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_4()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_5
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_5()
 {
@@ -153,6 +158,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_5()
 	UBW_MemoFlag_C_ChangedMemoFlag_5_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +167,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_5()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_6
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_6()
 {
@@ -170,6 +176,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_6()
 	UBW_MemoFlag_C_ChangedMemoFlag_6_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,7 +185,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_6()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_7
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_7()
 {
@@ -187,6 +194,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_7()
 	UBW_MemoFlag_C_ChangedMemoFlag_7_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +203,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_7()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_8
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_8()
 {
@@ -204,6 +212,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_8()
 	UBW_MemoFlag_C_ChangedMemoFlag_8_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +221,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_8()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_9
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_9()
 {
@@ -221,6 +230,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_9()
 	UBW_MemoFlag_C_ChangedMemoFlag_9_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,7 +239,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_9()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangedMemoFlag_10
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangedMemoFlag_10()
 {
@@ -246,7 +256,7 @@ void UBW_MemoFlag_C::ChangedMemoFlag_10()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_1
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_1()
 {
@@ -263,7 +273,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_1()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_2
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_2()
 {
@@ -280,7 +290,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_2()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_3
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_3()
 {
@@ -297,7 +307,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_3()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_4
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_4()
 {
@@ -314,7 +324,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_4()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_5
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_5()
 {
@@ -331,7 +341,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_5()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_6
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_6()
 {
@@ -348,7 +358,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_6()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_7
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_7()
 {
@@ -365,7 +375,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_7()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_8
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_8()
 {
@@ -382,7 +392,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_8()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_9
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_9()
 {
@@ -399,7 +409,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_9()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ChangeMemoIdentifer_10
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::ChangeMemoIdentifer_10()
 {
@@ -416,7 +426,7 @@ void UBW_MemoFlag_C::ChangeMemoIdentifer_10()
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.BndEvt__S3Button_1_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MemoFlag_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_0_OnButtonPressedEvent__DelegateSignature()
 {
@@ -433,7 +443,7 @@ void UBW_MemoFlag_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_0_OnButtonPre
 
 
 // Function BW_MemoFlag.BW_MemoFlag_C.ExecuteUbergraph_BW_MemoFlag
-// ()
+// (Net, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -445,6 +455,7 @@ void UBW_MemoFlag_C::ExecuteUbergraph_BW_MemoFlag(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

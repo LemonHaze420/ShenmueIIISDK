@@ -43,16 +43,16 @@ public:
 
 
 	void CachePawnData(class AActor* Pawn);
-	void DoPlayerRequestedSwitch(class AActor* Pawn);
+	void STATIC_DoPlayerRequestedSwitch(class AActor* Pawn);
 	void UpdateDetectAction();
-	void Reset();
+	void STATIC_Reset();
 	void FaceDirection(const struct FVector& Direction);
-	bool IsNPCTalkative(class AActor* Target);
+	bool STATIC_IsNPCTalkative(class AActor* Target);
 	void RequestManualDirection(const struct FVector& Direction);
 	void GetTargetCandidates(TArray<class AS3Character*>* OutNPCs, TArray<float>* OutScores);
 	void RequestSwitchTarget();
-	void Update(class APawn* Pawn);
-	void OnFaceDirection__DelegateSignature(const struct FVector& Direction);
+	void STATIC_Update(class APawn* Pawn);
+	void STATIC_OnFaceDirection__DelegateSignature(const struct FVector& Direction);
 };
 
 

@@ -41,23 +41,23 @@ public:
 	}
 
 
-	class AS3Character* GetFollower();
+	class AS3Character* STATIC_GetFollower();
 	void UnpairFollower();
-	void PairFollower(class AS3Character* Follower);
+	void STATIC_PairFollower(class AS3Character* Follower);
 	void AutoFollowSpline(class AS3SplineMoveActor* SplineActor);
-	void GetSpline(class AS3SplineMoveActor** SplineActor);
-	void AllowBackwardsFollow(bool Enable);
+	void STATIC_GetSpline(class AS3SplineMoveActor** SplineActor);
+	void STATIC_AllowBackwardsFollow(bool Enable);
 	void GetMaxFollowSpeed(float OriginalMax, bool WantsToMatch, float* Matched);
-	void SetAutoMove(bool Value);
+	void STATIC_SetAutoMove(bool Value);
 	void PairLeader(class AS3SplineMoveActor* FollowSpline);
-	void UnpairLeader();
+	void STATIC_UnpairLeader();
 	void DeleteInvalidRefs();
-	void GetMatchedSpeed(float OriginalSpeed, float* Matched);
+	void STATIC_GetMatchedSpeed(float OriginalSpeed, float* Matched);
 	void CanBeFollowed(bool* bFollowable);
-	void ValidateData();
-	void ReceiveBeginPlay();
+	void STATIC_ValidateData();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void Input_Move();
+	void STATIC_Input_Move();
 	void ExecuteUbergraph_BPC_Player_Lead(int EntryPoint);
 };
 

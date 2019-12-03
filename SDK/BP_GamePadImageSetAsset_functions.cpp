@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetFaceButtonImageSetNoDefault
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetMulticast, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadFaceButtonSetAsset_C* SET                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBP_GamePadImageSetAsset_C::GetFaceButtonImageSetNoDefault(TEnumAsByte<EFac
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UBP_GamePadImageSetAsset_C::GetFaceButtonImageSetNoDefault(TEnumAsByte<EFac
 
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetShoulderImageSet
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, Public, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EShoulderButtonStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadShoulderSetAsset_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -51,6 +52,7 @@ class UBP_GamePadShoulderSetAsset_C* UBP_GamePadImageSetAsset_C::GetShoulderImag
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +63,7 @@ class UBP_GamePadShoulderSetAsset_C* UBP_GamePadImageSetAsset_C::GetShoulderImag
 
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetDPadImageSet
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EDpadButtonImageStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadFaceButtonSetAsset_C* SET                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -74,6 +76,7 @@ void UBP_GamePadImageSetAsset_C::GetDPadImageSet(TEnumAsByte<EDpadButtonImageSty
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,12 +88,12 @@ void UBP_GamePadImageSetAsset_C::GetDPadImageSet(TEnumAsByte<EDpadButtonImageSty
 
 
 // Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetFaceButtonImageSet
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EFaceButtonImageStyle> Selection                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_GamePadFaceButtonSetAsset_C* SET                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_GamePadImageSetAsset_C::GetFaceButtonImageSet(TEnumAsByte<EFaceButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET)
+void UBP_GamePadImageSetAsset_C::STATIC_GetFaceButtonImageSet(TEnumAsByte<EFaceButtonImageStyle> Selection, class UBP_GamePadFaceButtonSetAsset_C** SET)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GamePadImageSetAsset.BP_GamePadImageSetAsset_C.GetFaceButtonImageSet");
 
@@ -98,6 +101,7 @@ void UBP_GamePadImageSetAsset_C::GetFaceButtonImageSet(TEnumAsByte<EFaceButtonIm
 	params.Selection = Selection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

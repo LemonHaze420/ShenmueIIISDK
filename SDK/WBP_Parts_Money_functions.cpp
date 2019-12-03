@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Parts_Money.WBP_Parts_Money_C.SetValue
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           NotAnim                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Parts_Money_C::SetValue(int Value, bool NotAnim)
+void UWBP_Parts_Money_C::STATIC_SetValue(int Value, bool NotAnim)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Parts_Money.WBP_Parts_Money_C.SetValue");
 
@@ -28,6 +28,7 @@ void UWBP_Parts_Money_C::SetValue(int Value, bool NotAnim)
 	params.NotAnim = NotAnim;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

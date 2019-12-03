@@ -51,15 +51,15 @@ public:
 
 
 	void GetUpFaceNum(int* Num);
-	void UpdateRollingSE();
-	bool IsHitSEPlaying();
+	void STATIC_UpdateRollingSE();
+	bool STATIC_IsHitSEPlaying();
 	void IsStopped(bool* bStop);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
 	void ReceiveTick(float DeltaSeconds);
 	void Throw(const struct FVector& dir, float Power);
-	void ExecuteUbergraph_BP_MiniGame_UDYDice2(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_UDYDice2(int EntryPoint);
 };
 
 

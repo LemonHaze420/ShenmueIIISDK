@@ -39,8 +39,8 @@ public:
 	}
 
 
-	void SetNewPosition(class UTextBlock* Text, const struct FVector2D& NewPosition);
-	void Construct();
+	void STATIC_SetNewPosition(class UTextBlock* Text, const struct FVector2D& NewPosition);
+	void STATIC_Construct();
 	void ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_1(int EntryPoint);
 };
 

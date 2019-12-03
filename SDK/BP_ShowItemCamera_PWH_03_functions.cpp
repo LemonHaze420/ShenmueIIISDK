@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ShowItemCamera_PWH_03.BP_ShowItemCamera_PWH_03_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_ShowItemCamera_PWH_03_C::UserConstructionScript()
+void ABP_ShowItemCamera_PWH_03_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShowItemCamera_PWH_03.BP_ShowItemCamera_PWH_03_C.UserConstructionScript");
 
@@ -31,9 +31,9 @@ void ABP_ShowItemCamera_PWH_03_C::UserConstructionScript()
 
 
 // Function BP_ShowItemCamera_PWH_03.BP_ShowItemCamera_PWH_03_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_ShowItemCamera_PWH_03_C::ReceiveBeginPlay()
+void ABP_ShowItemCamera_PWH_03_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ShowItemCamera_PWH_03.BP_ShowItemCamera_PWH_03_C.ReceiveBeginPlay");
 
@@ -48,7 +48,7 @@ void ABP_ShowItemCamera_PWH_03_C::ReceiveBeginPlay()
 
 
 // Function BP_ShowItemCamera_PWH_03.BP_ShowItemCamera_PWH_03_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +68,7 @@ void ABP_ShowItemCamera_PWH_03_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ShowItemCamera_PWH_03.BP_ShowItemCamera_PWH_03_C.ExecuteUbergraph_BP_ShowItemCamera_PWH_03
-// ()
+// (NetReliable, Event, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

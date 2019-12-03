@@ -357,7 +357,7 @@ struct ABP_SearchArea_C_TestLockOnChange_Params
 // Function BP_SearchArea.BP_SearchArea_C.CrouchAction
 struct ABP_SearchArea_C_CrouchAction_Params
 {
-	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_SearchArea.BP_SearchArea_C.SetForbiddenAction

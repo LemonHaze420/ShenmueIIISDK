@@ -29,8 +29,8 @@ public:
 	}
 
 
-	void SetMachineMaterial(class UMaterialInterface* Material);
-	void UserConstructionScript();
+	void STATIC_SetMachineMaterial(class UMaterialInterface* Material);
+	void STATIC_UserConstructionScript();
 };
 
 

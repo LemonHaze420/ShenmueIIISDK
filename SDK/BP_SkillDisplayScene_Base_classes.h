@@ -33,16 +33,16 @@ public:
 
 
 	bool IsLoading();
-	bool GetWidgetVisible(class UWidget* self2);
+	bool STATIC_GetWidgetVisible(class UWidget* self2);
 	void CaptureSingleFrame(const struct FName& Item, bool* Success);
 	void SetRenderTexture(class UTextureRenderTarget2D* TextureRenderTarget2D);
 	void EnableDrawToTexture(bool bRender);
 	void StopMotion(bool* bSuccess);
 	void PlayMotionForItem(const struct FName& Skill, bool* bSuccess);
 	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_SkillDisplayScene_Base(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_SkillDisplayScene_Base(int EntryPoint);
 };
 
 

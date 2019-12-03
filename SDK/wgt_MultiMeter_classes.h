@@ -35,13 +35,13 @@ public:
 
 
 	float CalcMeterRatio(float Min, float Max);
-	float GetMaxDisplayableRatio(float A);
-	void GetOrbTresholds(int Index, float* Min, float* Max);
-	void UpdateSubScaleRatios();
+	float STATIC_GetMaxDisplayableRatio(float A);
+	void STATIC_GetOrbTresholds(int Index, float* Min, float* Max);
+	void STATIC_UpdateSubScaleRatios();
 	void UpdateSubFillRatios();
-	void SetFillRatio(float FillRatio, bool* Changed);
+	void STATIC_SetFillRatio(float FillRatio, bool* Changed);
 	void SetScaleRatio(float ScaleRatio, bool* Changed);
-	void FindChildOrbs(class UPanelWidget* InputPin, bool Reverse);
+	void STATIC_FindChildOrbs(class UPanelWidget* InputPin, bool Reverse);
 	void Construct();
 	void ExecuteUbergraph_wgt_MultiMeter(int EntryPoint);
 };

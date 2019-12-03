@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_HelpController.BW_HelpController_C.ChangeCheck
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class UCheckBox*               CheckBox                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_HelpController_C::ChangeCheck(class UCheckBox* CheckBox)
+void UBW_HelpController_C::STATIC_ChangeCheck(class UCheckBox* CheckBox)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_HelpController.BW_HelpController_C.ChangeCheck");
 
@@ -34,7 +34,7 @@ void UBW_HelpController_C::ChangeCheck(class UCheckBox* CheckBox)
 
 
 // Function BW_HelpController.BW_HelpController_C.OnAnalogValueChanged
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FAnalogInputEvent       InAnalogInputEvent             (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -49,6 +49,7 @@ struct FEventReply UBW_HelpController_C::OnAnalogValueChanged(const struct FGeom
 	params.InAnalogInputEvent = InAnalogInputEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,7 +60,7 @@ struct FEventReply UBW_HelpController_C::OnAnalogValueChanged(const struct FGeom
 
 
 // Function BW_HelpController.BW_HelpController_C.SetHelpFlag
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -75,6 +76,7 @@ void UBW_HelpController_C::SetHelpFlag(int Index, class UTextBlock* Text, class 
 	params.flag = flag;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +85,7 @@ void UBW_HelpController_C::SetHelpFlag(int Index, class UTextBlock* Text, class 
 
 
 // Function BW_HelpController.BW_HelpController_C.MakeHelpFlagList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::MakeHelpFlagList()
 {
@@ -100,15 +102,16 @@ void UBW_HelpController_C::MakeHelpFlagList()
 
 
 // Function BW_HelpController.BW_HelpController_C.UpdateHelpFlag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, Public, HasOutParms, DLLImport, BlueprintEvent)
 
-void UBW_HelpController_C::UpdateHelpFlag()
+void UBW_HelpController_C::STATIC_UpdateHelpFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_HelpController.BW_HelpController_C.UpdateHelpFlag");
 
 	UBW_HelpController_C_UpdateHelpFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +120,7 @@ void UBW_HelpController_C::UpdateHelpFlag()
 
 
 // Function BW_HelpController.BW_HelpController_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::Construct()
 {
@@ -126,6 +129,7 @@ void UBW_HelpController_C::Construct()
 	UBW_HelpController_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,11 +138,11 @@ void UBW_HelpController_C::Construct()
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpinBoxValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_HelpController_C::BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
+void UBW_HelpController_C::STATIC_BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_HelpController.BW_HelpController_C.BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpinBoxValueChangedEvent__DelegateSignature");
 
@@ -146,6 +150,7 @@ void UBW_HelpController_C::BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpin
 	params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,7 +159,7 @@ void UBW_HelpController_C::BndEvt__SpinBox_0_K2Node_ComponentBoundEvent_0_OnSpin
 
 
 // Function BW_HelpController.BW_HelpController_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -168,6 +173,7 @@ void UBW_HelpController_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,7 +182,7 @@ void UBW_HelpController_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature()
 {
@@ -185,6 +191,7 @@ void UBW_HelpController_C::BndEvt__Button0_K2Node_ComponentBoundEvent_3_OnButton
 	UBW_HelpController_C_BndEvt__Button0_K2Node_ComponentBoundEvent_3_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,7 +200,7 @@ void UBW_HelpController_C::BndEvt__Button0_K2Node_ComponentBoundEvent_3_OnButton
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button1_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button1_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature()
 {
@@ -202,6 +209,7 @@ void UBW_HelpController_C::BndEvt__Button1_K2Node_ComponentBoundEvent_4_OnButton
 	UBW_HelpController_C_BndEvt__Button1_K2Node_ComponentBoundEvent_4_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -210,7 +218,7 @@ void UBW_HelpController_C::BndEvt__Button1_K2Node_ComponentBoundEvent_4_OnButton
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button2_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button2_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature()
 {
@@ -219,6 +227,7 @@ void UBW_HelpController_C::BndEvt__Button2_K2Node_ComponentBoundEvent_5_OnButton
 	UBW_HelpController_C_BndEvt__Button2_K2Node_ComponentBoundEvent_5_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -227,7 +236,7 @@ void UBW_HelpController_C::BndEvt__Button2_K2Node_ComponentBoundEvent_5_OnButton
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button3_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button3_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature()
 {
@@ -236,6 +245,7 @@ void UBW_HelpController_C::BndEvt__Button3_K2Node_ComponentBoundEvent_6_OnButton
 	UBW_HelpController_C_BndEvt__Button3_K2Node_ComponentBoundEvent_6_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -244,7 +254,7 @@ void UBW_HelpController_C::BndEvt__Button3_K2Node_ComponentBoundEvent_6_OnButton
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button4_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button4_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature()
 {
@@ -253,6 +263,7 @@ void UBW_HelpController_C::BndEvt__Button4_K2Node_ComponentBoundEvent_7_OnButton
 	UBW_HelpController_C_BndEvt__Button4_K2Node_ComponentBoundEvent_7_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -261,7 +272,7 @@ void UBW_HelpController_C::BndEvt__Button4_K2Node_ComponentBoundEvent_7_OnButton
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button5_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button5_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature()
 {
@@ -270,6 +281,7 @@ void UBW_HelpController_C::BndEvt__Button5_K2Node_ComponentBoundEvent_8_OnButton
 	UBW_HelpController_C_BndEvt__Button5_K2Node_ComponentBoundEvent_8_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,7 +290,7 @@ void UBW_HelpController_C::BndEvt__Button5_K2Node_ComponentBoundEvent_8_OnButton
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button6_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button6_K2Node_ComponentBoundEvent_9_OnButtonClickedEvent__DelegateSignature()
 {
@@ -295,7 +307,7 @@ void UBW_HelpController_C::BndEvt__Button6_K2Node_ComponentBoundEvent_9_OnButton
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button7_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button7_K2Node_ComponentBoundEvent_10_OnButtonClickedEvent__DelegateSignature()
 {
@@ -312,7 +324,7 @@ void UBW_HelpController_C::BndEvt__Button7_K2Node_ComponentBoundEvent_10_OnButto
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button8_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button8_K2Node_ComponentBoundEvent_11_OnButtonClickedEvent__DelegateSignature()
 {
@@ -329,7 +341,7 @@ void UBW_HelpController_C::BndEvt__Button8_K2Node_ComponentBoundEvent_11_OnButto
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__Button9_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__Button9_K2Node_ComponentBoundEvent_12_OnButtonClickedEvent__DelegateSignature()
 {
@@ -346,7 +358,7 @@ void UBW_HelpController_C::BndEvt__Button9_K2Node_ComponentBoundEvent_12_OnButto
 
 
 // Function BW_HelpController.BW_HelpController_C.BndEvt__S3Button_9_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_HelpController_C::BndEvt__S3Button_9_K2Node_ComponentBoundEvent_13_OnButtonClickedEvent__DelegateSignature()
 {
@@ -363,7 +375,7 @@ void UBW_HelpController_C::BndEvt__S3Button_9_K2Node_ComponentBoundEvent_13_OnBu
 
 
 // Function BW_HelpController.BW_HelpController_C.ExecuteUbergraph_BW_HelpController
-// (HasDefaults)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

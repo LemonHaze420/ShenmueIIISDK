@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.GetCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UCameraComponent*        Camera                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_MultiplePersonCamera_C::GetCamera(class UCameraComponent** Camera)
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.SortFloat
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<float>                  inArray                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<int>                    SortedIndex                    (Parm, OutParm, ZeroConstructor)
@@ -48,6 +48,7 @@ void ABP_MultiplePersonCamera_C::SortFloat(TArray<float>* inArray, TArray<int>* 
 	ABP_MultiplePersonCamera_C_SortFloat_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,9 +62,9 @@ void ABP_MultiplePersonCamera_C::SortFloat(TArray<float>* inArray, TArray<int>* 
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.SetTargetByActorIds
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, Public, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MultiplePersonCamera_C::SetTargetByActorIds()
+void ABP_MultiplePersonCamera_C::STATIC_SetTargetByActorIds()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.SetTargetByActorIds");
 
@@ -78,12 +79,12 @@ void ABP_MultiplePersonCamera_C::SetTargetByActorIds()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.SortByAngle
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class AActor*>          TargetArray                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class AActor*>          SortedArray                    (Parm, OutParm, ZeroConstructor)
 
-void ABP_MultiplePersonCamera_C::SortByAngle(TArray<class AActor*>* TargetArray, TArray<class AActor*>* SortedArray)
+void ABP_MultiplePersonCamera_C::STATIC_SortByAngle(TArray<class AActor*>* TargetArray, TArray<class AActor*>* SortedArray)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.SortByAngle");
 
@@ -103,7 +104,7 @@ void ABP_MultiplePersonCamera_C::SortByAngle(TArray<class AActor*>* TargetArray,
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.UpdateDistance
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MultiplePersonCamera_C::UpdateDistance()
 {
@@ -112,6 +113,7 @@ void ABP_MultiplePersonCamera_C::UpdateDistance()
 	ABP_MultiplePersonCamera_C_UpdateDistance_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,7 +122,7 @@ void ABP_MultiplePersonCamera_C::UpdateDistance()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.UpdateFOV
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 
 void ABP_MultiplePersonCamera_C::UpdateFOV()
 {
@@ -129,6 +131,7 @@ void ABP_MultiplePersonCamera_C::UpdateFOV()
 	ABP_MultiplePersonCamera_C_UpdateFOV_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,15 +140,16 @@ void ABP_MultiplePersonCamera_C::UpdateFOV()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.UpdateAlpha
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MultiplePersonCamera_C::UpdateAlpha()
+void ABP_MultiplePersonCamera_C::STATIC_UpdateAlpha()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.UpdateAlpha");
 
 	ABP_MultiplePersonCamera_C_UpdateAlpha_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,9 +158,9 @@ void ABP_MultiplePersonCamera_C::UpdateAlpha()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.CalcYawAndPitch
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MultiplePersonCamera_C::CalcYawAndPitch()
+void ABP_MultiplePersonCamera_C::STATIC_CalcYawAndPitch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.CalcYawAndPitch");
 
@@ -171,7 +175,7 @@ void ABP_MultiplePersonCamera_C::CalcYawAndPitch()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.SortTargetsClockwise
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_MultiplePersonCamera_C::SortTargetsClockwise()
 {
@@ -188,9 +192,9 @@ void ABP_MultiplePersonCamera_C::SortTargetsClockwise()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.CreateSprine
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MultiplePersonCamera_C::CreateSprine()
+void ABP_MultiplePersonCamera_C::STATIC_CreateSprine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.CreateSprine");
 
@@ -205,9 +209,9 @@ void ABP_MultiplePersonCamera_C::CreateSprine()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.DrawDebugNorm
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_MultiplePersonCamera_C::DrawDebugNorm()
+void ABP_MultiplePersonCamera_C::STATIC_DrawDebugNorm()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.DrawDebugNorm");
 
@@ -222,7 +226,7 @@ void ABP_MultiplePersonCamera_C::DrawDebugNorm()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.UpdateCameraTransform
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Delegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 
 void ABP_MultiplePersonCamera_C::UpdateCameraTransform()
 {
@@ -239,15 +243,16 @@ void ABP_MultiplePersonCamera_C::UpdateCameraTransform()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.FindTargetfromID
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_MultiplePersonCamera_C::FindTargetfromID()
+void ABP_MultiplePersonCamera_C::STATIC_FindTargetfromID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.FindTargetfromID");
 
 	ABP_MultiplePersonCamera_C_FindTargetfromID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,18 +261,19 @@ void ABP_MultiplePersonCamera_C::FindTargetfromID()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.CulcTargetPos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class AS3Character*>    TargetActors                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FVector                 AverageVector                  (Parm, OutParm, IsPlainOldData)
 
-void ABP_MultiplePersonCamera_C::CulcTargetPos(TArray<class AS3Character*>* TargetActors, struct FVector* AverageVector)
+void ABP_MultiplePersonCamera_C::STATIC_CulcTargetPos(TArray<class AS3Character*>* TargetActors, struct FVector* AverageVector)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.CulcTargetPos");
 
 	ABP_MultiplePersonCamera_C_CulcTargetPos_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -281,7 +287,7 @@ void ABP_MultiplePersonCamera_C::CulcTargetPos(TArray<class AS3Character*>* Targ
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MultiplePersonCamera_C::UserConstructionScript()
 {
@@ -298,7 +304,7 @@ void ABP_MultiplePersonCamera_C::UserConstructionScript()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -318,7 +324,7 @@ void ABP_MultiplePersonCamera_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_MultiplePersonCamera_C::Update()
 {
@@ -327,6 +333,7 @@ void ABP_MultiplePersonCamera_C::Update()
 	ABP_MultiplePersonCamera_C_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -335,7 +342,7 @@ void ABP_MultiplePersonCamera_C::Update()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.Init
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_MultiplePersonCamera_C::Init()
 {
@@ -344,6 +351,7 @@ void ABP_MultiplePersonCamera_C::Init()
 	ABP_MultiplePersonCamera_C_Init_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -352,7 +360,7 @@ void ABP_MultiplePersonCamera_C::Init()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_MultiplePersonCamera_C::ReceiveBeginPlay()
 {
@@ -361,6 +369,7 @@ void ABP_MultiplePersonCamera_C::ReceiveBeginPlay()
 	ABP_MultiplePersonCamera_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -369,12 +378,12 @@ void ABP_MultiplePersonCamera_C::ReceiveBeginPlay()
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.ChangeTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class AActor*>          NewTarget                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          lerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MultiplePersonCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
+void ABP_MultiplePersonCamera_C::STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.ChangeTarget");
 
@@ -383,6 +392,7 @@ void ABP_MultiplePersonCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, f
 	params.lerpTime = lerpTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -391,7 +401,7 @@ void ABP_MultiplePersonCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, f
 
 
 // Function BP_MultiplePersonCamera.BP_MultiplePersonCamera_C.ExecuteUbergraph_BP_MultiplePersonCamera
-// (HasDefaults)
+// (Net, Exec, Native, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -403,6 +413,7 @@ void ABP_MultiplePersonCamera_C::ExecuteUbergraph_BP_MultiplePersonCamera(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -12,17 +12,6 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum AudioMixer.ESubmixEffectDynamicsPeakMode
-enum class ESubmixEffectDynamicsPeakMode : uint8_t
-{
-	ESubmixEffectDynamicsPeakMode__MeanSquared = 0,
-	ESubmixEffectDynamicsPeakMode__RootMeanSquared = 1,
-	ESubmixEffectDynamicsPeakMode__Peak = 2,
-	ESubmixEffectDynamicsPeakMode__Count = 3,
-	ESubmixEffectDynamicsPeakMode__ESubmixEffectDynamicsPeakMode_MAX = 4
-};
-
-
 // Enum AudioMixer.ESubmixEffectDynamicsProcessorType
 enum class ESubmixEffectDynamicsProcessorType : uint8_t
 {
@@ -32,6 +21,17 @@ enum class ESubmixEffectDynamicsProcessorType : uint8_t
 	ESubmixEffectDynamicsProcessorType__Gate = 3,
 	ESubmixEffectDynamicsProcessorType__Count = 4,
 	ESubmixEffectDynamicsProcessorType__ESubmixEffectDynamicsProcessorType_MAX = 5
+};
+
+
+// Enum AudioMixer.ESubmixEffectDynamicsPeakMode
+enum class ESubmixEffectDynamicsPeakMode : uint8_t
+{
+	ESubmixEffectDynamicsPeakMode__MeanSquared = 0,
+	ESubmixEffectDynamicsPeakMode__RootMeanSquared = 1,
+	ESubmixEffectDynamicsPeakMode__Peak = 2,
+	ESubmixEffectDynamicsPeakMode__Count = 3,
+	ESubmixEffectDynamicsPeakMode__ESubmixEffectDynamicsPeakMode_MAX = 4
 };
 
 

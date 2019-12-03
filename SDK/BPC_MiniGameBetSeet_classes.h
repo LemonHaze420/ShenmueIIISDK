@@ -27,11 +27,11 @@ public:
 	}
 
 
-	void GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget);
+	void STATIC_GetRenderTarget(class UTextureRenderTarget2D** RefRenderTarget);
 	void InitializeRenderTarget(int Width, int Height);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BPC_MiniGameBetSeet(int EntryPoint);
 };
 
 

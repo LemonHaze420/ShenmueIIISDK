@@ -26,7 +26,7 @@ public:
 	}
 
 
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_FishingCableEnd(int EntryPoint);
 };
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.SetSunAndMoonMovement
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void AUltra_Dynamic_Sky_BP_C::SetSunAndMoonMovement(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,11 +35,11 @@ void AUltra_Dynamic_Sky_BP_C::SetSunAndMoonMovement(bool Enable)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.GetCurrentUDMMat
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // class UMaterialInstanceDynamic* newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::GetCurrentUDMMat(class UMaterialInstanceDynamic** newParam)
+void AUltra_Dynamic_Sky_BP_C::STATIC_GetCurrentUDMMat(class UMaterialInstanceDynamic** newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.GetCurrentUDMMat");
 
@@ -56,7 +57,7 @@ void AUltra_Dynamic_Sky_BP_C::GetCurrentUDMMat(class UMaterialInstanceDynamic** 
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ForceMoonPosition
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,6 +69,7 @@ void AUltra_Dynamic_Sky_BP_C::ForceMoonPosition(float Yaw)
 	params.Yaw = Yaw;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,9 +78,9 @@ void AUltra_Dynamic_Sky_BP_C::ForceMoonPosition(float Yaw)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ForceUpdateSkylight
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
 
-void AUltra_Dynamic_Sky_BP_C::ForceUpdateSkylight()
+void AUltra_Dynamic_Sky_BP_C::STATIC_ForceUpdateSkylight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ForceUpdateSkylight");
 
@@ -93,7 +95,7 @@ void AUltra_Dynamic_Sky_BP_C::ForceUpdateSkylight()
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.IsCloudy
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Native, Event, NetResponse, Public, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           Cloudy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -104,6 +106,7 @@ void AUltra_Dynamic_Sky_BP_C::IsCloudy(bool* Cloudy)
 	AUltra_Dynamic_Sky_BP_C_IsCloudy_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,15 +118,16 @@ void AUltra_Dynamic_Sky_BP_C::IsCloudy(bool* Cloudy)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ResetCloudSimulateTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void AUltra_Dynamic_Sky_BP_C::ResetCloudSimulateTime()
+void AUltra_Dynamic_Sky_BP_C::STATIC_ResetCloudSimulateTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ResetCloudSimulateTime");
 
 	AUltra_Dynamic_Sky_BP_C_ResetCloudSimulateTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +136,7 @@ void AUltra_Dynamic_Sky_BP_C::ResetCloudSimulateTime()
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.SetWindSpeed
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -144,6 +148,7 @@ void AUltra_Dynamic_Sky_BP_C::SetWindSpeed(float Speed)
 	params.Speed = Speed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,7 +157,7 @@ void AUltra_Dynamic_Sky_BP_C::SetWindSpeed(float Speed)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.UpdateFogDensity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -172,15 +177,16 @@ void AUltra_Dynamic_Sky_BP_C::UpdateFogDensity(float DeltaSeconds)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.AnmateCloudDensity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
 
-void AUltra_Dynamic_Sky_BP_C::AnmateCloudDensity()
+void AUltra_Dynamic_Sky_BP_C::STATIC_AnmateCloudDensity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.AnmateCloudDensity");
 
 	AUltra_Dynamic_Sky_BP_C_AnmateCloudDensity_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,7 +195,7 @@ void AUltra_Dynamic_Sky_BP_C::AnmateCloudDensity()
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.UpdateWind
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector                 WindVector                     (Parm, OutParm, IsPlainOldData)
 
@@ -211,12 +217,12 @@ void AUltra_Dynamic_Sky_BP_C::UpdateWind(struct FVector* WindVector)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.SetGameTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // float                          InGameTime                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bJump                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::SetGameTime(float InGameTime, bool bJump)
+void AUltra_Dynamic_Sky_BP_C::STATIC_SetGameTime(float InGameTime, bool bJump)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.SetGameTime");
 
@@ -233,7 +239,7 @@ void AUltra_Dynamic_Sky_BP_C::SetGameTime(float InGameTime, bool bJump)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.GetCloudRatio
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Ratio                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -255,11 +261,11 @@ void AUltra_Dynamic_Sky_BP_C::GetCloudRatio(float* Ratio)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.GetSunLocation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::GetSunLocation(struct FVector* Location)
+void AUltra_Dynamic_Sky_BP_C::STATIC_GetSunLocation(struct FVector* Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.GetSunLocation");
 
@@ -277,12 +283,12 @@ void AUltra_Dynamic_Sky_BP_C::GetSunLocation(struct FVector* Location)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.SetFogDensity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Force                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::SetFogDensity(float Value, bool Force)
+void AUltra_Dynamic_Sky_BP_C::STATIC_SetFogDensity(float Value, bool Force)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.SetFogDensity");
 
@@ -291,6 +297,7 @@ void AUltra_Dynamic_Sky_BP_C::SetFogDensity(float Value, bool Force)
 	params.Force = Force;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,11 +306,11 @@ void AUltra_Dynamic_Sky_BP_C::SetFogDensity(float Value, bool Force)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.CanRain
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // bool                           Rain                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::CanRain(bool* Rain)
+void AUltra_Dynamic_Sky_BP_C::STATIC_CanRain(bool* Rain)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.CanRain");
 
@@ -321,7 +328,7 @@ void AUltra_Dynamic_Sky_BP_C::CanRain(bool* Rain)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.UpdateCloudDensity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // float                          NewDencity                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Force                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -335,6 +342,7 @@ void AUltra_Dynamic_Sky_BP_C::UpdateCloudDensity(float NewDencity, bool Force)
 	params.Force = Force;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -343,7 +351,7 @@ void AUltra_Dynamic_Sky_BP_C::UpdateCloudDensity(float NewDencity, bool Force)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.SetCloudChangeSpeed
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Quick                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           TransitionTest                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -357,6 +365,7 @@ void AUltra_Dynamic_Sky_BP_C::SetCloudChangeSpeed(bool Quick, bool TransitionTes
 	params.TransitionTest = TransitionTest;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,19 +374,20 @@ void AUltra_Dynamic_Sky_BP_C::SetCloudChangeSpeed(bool Quick, bool TransitionTes
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.GetSkyParamater
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, Static, Public, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FRotator                Direction                      (Parm, OutParm, IsPlainOldData)
 // float                          Intensity                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            LightColor                     (Parm, OutParm, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::GetSkyParamater(struct FRotator* Direction, float* Intensity, struct FLinearColor* LightColor)
+void AUltra_Dynamic_Sky_BP_C::STATIC_GetSkyParamater(struct FRotator* Direction, float* Intensity, struct FLinearColor* LightColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.GetSkyParamater");
 
 	AUltra_Dynamic_Sky_BP_C_GetSkyParamater_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -393,11 +403,11 @@ void AUltra_Dynamic_Sky_BP_C::GetSkyParamater(struct FRotator* Direction, float*
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.Update Skylight
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Private, NetServer, NetClient, Const)
 // Parameters:
 // bool                           bAutoTimeOfDay                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::Update_Skylight(bool bAutoTimeOfDay)
+void AUltra_Dynamic_Sky_BP_C::STATIC_Update_Skylight(bool bAutoTimeOfDay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.Update Skylight");
 
@@ -413,7 +423,7 @@ void AUltra_Dynamic_Sky_BP_C::Update_Skylight(bool bAutoTimeOfDay)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.Set Material Variables
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, Private, Delegate, NetServer, NetClient, Const)
 
 void AUltra_Dynamic_Sky_BP_C::Set_Material_Variables()
 {
@@ -430,7 +440,7 @@ void AUltra_Dynamic_Sky_BP_C::Set_Material_Variables()
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.Set Solar Angle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetMulticast, Protected, Delegate, NetClient, Const)
 
 void AUltra_Dynamic_Sky_BP_C::Set_Solar_Angle()
 {
@@ -439,6 +449,7 @@ void AUltra_Dynamic_Sky_BP_C::Set_Solar_Angle()
 	AUltra_Dynamic_Sky_BP_C_Set_Solar_Angle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -447,15 +458,16 @@ void AUltra_Dynamic_Sky_BP_C::Set_Solar_Angle()
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, Private, NetServer, NetClient, Const)
 
-void AUltra_Dynamic_Sky_BP_C::UserConstructionScript()
+void AUltra_Dynamic_Sky_BP_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.UserConstructionScript");
 
 	AUltra_Dynamic_Sky_BP_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -464,7 +476,7 @@ void AUltra_Dynamic_Sky_BP_C::UserConstructionScript()
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -476,6 +488,7 @@ void AUltra_Dynamic_Sky_BP_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -484,7 +497,7 @@ void AUltra_Dynamic_Sky_BP_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Native, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void AUltra_Dynamic_Sky_BP_C::ReceiveBeginPlay()
 {
@@ -493,6 +506,7 @@ void AUltra_Dynamic_Sky_BP_C::ReceiveBeginPlay()
 	AUltra_Dynamic_Sky_BP_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -501,11 +515,11 @@ void AUltra_Dynamic_Sky_BP_C::ReceiveBeginPlay()
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ExecuteUbergraph_Ultra_Dynamic_Sky_BP
-// (HasDefaults)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AUltra_Dynamic_Sky_BP_C::ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoint)
+void AUltra_Dynamic_Sky_BP_C::STATIC_ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.ExecuteUbergraph_Ultra_Dynamic_Sky_BP");
 
@@ -513,6 +527,7 @@ void AUltra_Dynamic_Sky_BP_C::ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -521,7 +536,7 @@ void AUltra_Dynamic_Sky_BP_C::ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoi
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.OnUpdateWind__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // struct FVector                 WindDirection                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -533,6 +548,7 @@ void AUltra_Dynamic_Sky_BP_C::OnUpdateWind__DelegateSignature(const struct FVect
 	params.WindDirection = WindDirection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -541,15 +557,16 @@ void AUltra_Dynamic_Sky_BP_C::OnUpdateWind__DelegateSignature(const struct FVect
 
 
 // Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.OnReadyCloud__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void AUltra_Dynamic_Sky_BP_C::OnReadyCloud__DelegateSignature()
+void AUltra_Dynamic_Sky_BP_C::STATIC_OnReadyCloud__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Ultra_Dynamic_Sky_BP.Ultra_Dynamic_Sky_BP_C.OnReadyCloud__DelegateSignature");
 
 	AUltra_Dynamic_Sky_BP_C_OnReadyCloud__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

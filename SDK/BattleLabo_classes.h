@@ -88,49 +88,22 @@ public:
 };
 
 
-// Class BattleLabo.BTL_ActionSolverComponent
-// 0x0018 (0x0108 - 0x00F0)
-class UBTL_ActionSolverComponent : public UActorComponent
+// Class BattleLabo.BTL_AIController
+// 0x0008 (0x0440 - 0x0438)
+class ABTL_AIController : public AAIController
 {
 public:
-	TArray<float>                                      TimePassedSinceActions;                                   // 0x00F0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0100(0x0008) MISSED OFFSET
+	class UCrowdFollowingComponent*                    CrowdFollowingComponent;                                  // 0x0438(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_ActionSolverComponent");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_AIController");
 		return ptr;
 	}
 
 
-	void TickActionTimers(float DeltaTime, unsigned char CurrentIndex);
-	void ResetCurrentActionTimer(unsigned char Index);
-	void InitializeActionTimers(int Count);
-	float GetTimePassedSinceAction(unsigned char Index);
-	float GetCurrentActionTimer();
-};
-
-
-// Class BattleLabo.BTL_AnimInstance
-// 0x0030 (0x0390 - 0x0360)
-class UBTL_AnimInstance : public UAnimInstance
-{
-public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0360(0x0030) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_AnimInstance");
-		return ptr;
-	}
-
-
-	void SetRootTranslationScale(float Value);
-	class UAnimMontage* SearchClosestMontage(TArray<class UAnimMontage*> Candidates, float TargetEndYaw);
-	void ResetRootTranslationScale();
-	int GetClosest8DirectionIndex(float Target);
-	float GetClosest8DirectionAngle(float InputAngle, float FirstCheckAngle, float Hysteresis);
-	float BiasTargetDirection(float TargetAngle, float PreviousTarget);
+	void SetCrowdSlowdownAtGoal(bool Enable);
+	void SetCrowdSeparationWeight(float Weight);
 };
 
 
@@ -154,21 +127,6 @@ public:
 	void ClearNotifyCounts();
 	bool CheckNotifyExistFast(const struct FName& Key);
 	void AddNotifyCount(const struct FName& State);
-};
-
-
-// Class BattleLabo.BTL_AnimSetDataAsset
-// 0x0000 (0x0030 - 0x0030)
-class UBTL_AnimSetDataAsset : public UPrimaryDataAsset
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_AnimSetDataAsset");
-		return ptr;
-	}
-
 };
 
 
@@ -209,6 +167,79 @@ public:
 };
 
 
+// Class BattleLabo.BTL_AnimInstance
+// 0x0030 (0x0390 - 0x0360)
+class UBTL_AnimInstance : public UAnimInstance
+{
+public:
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0360(0x0030) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_AnimInstance");
+		return ptr;
+	}
+
+
+	void SetRootTranslationScale(float Value);
+	class UAnimMontage* SearchClosestMontage(TArray<class UAnimMontage*> Candidates, float TargetEndYaw);
+	void ResetRootTranslationScale();
+	int GetClosest8DirectionIndex(float Target);
+	float GetClosest8DirectionAngle(float InputAngle, float FirstCheckAngle, float Hysteresis);
+	float BiasTargetDirection(float TargetAngle, float PreviousTarget);
+};
+
+
+// Class BattleLabo.BTL_AnimSetDataAsset
+// 0x0000 (0x0030 - 0x0030)
+class UBTL_AnimSetDataAsset : public UPrimaryDataAsset
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_AnimSetDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class BattleLabo.BTL_BattleSpawner
+// 0x0000 (0x0328 - 0x0328)
+class ABTL_BattleSpawner : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BattleSpawner");
+		return ptr;
+	}
+
+
+	void LaunchDebugBattle();
+};
+
+
+// Class BattleLabo.BTL_BlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBTL_BlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BlueprintFunctionLibrary");
+		return ptr;
+	}
+
+
+	class UClass* FindUserClass(class UClass* BaseClass);
+	struct FVector ClosestPointOnSegment(const struct FVector& Point, const struct FVector& StartPoint, const struct FVector& EndPoint);
+};
+
+
 // Class BattleLabo.BTL_AttackHitSolverComponent
 // 0x0038 (0x0128 - 0x00F0)
 class UBTL_AttackHitSolverComponent : public UActorComponent
@@ -233,44 +264,19 @@ public:
 };
 
 
-// Class BattleLabo.BTL_AIController
-// 0x0008 (0x0440 - 0x0438)
-class ABTL_AIController : public AAIController
+// Class BattleLabo.BTL_BRallyGoalpost
+// 0x0008 (0x0330 - 0x0328)
+class ABTL_BRallyGoalpost : public AActor
 {
 public:
-	class UCrowdFollowingComponent*                    CrowdFollowingComponent;                                  // 0x0438(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBTL_GoalpostBehavior*                       Behavior;                                                 // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_AIController");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BRallyGoalpost");
 		return ptr;
 	}
 
-
-	void SetCrowdSlowdownAtGoal(bool Enable);
-	void SetCrowdSeparationWeight(float Weight);
-};
-
-
-// Class BattleLabo.BTL_BattleRallyFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBTL_BattleRallyFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BattleRallyFunctionLibrary");
-		return ptr;
-	}
-
-
-	struct FBTL_TimeMSC STATIC_MakeTimeMSCFromFloat(float Seconds);
-	float STATIC_MakeFloatFromTimeMSC(const struct FBTL_TimeMSC& Time);
-	bool STATIC_IsTimeMSCZero(const struct FBTL_TimeMSC& Time);
-	class UBTL_CourseRecordBook* STATIC_CreateRecordBook(TArray<class UBTL_CourseDataAsset*> Courses);
-	class UBTL_CourseLeaderboard* STATIC_CreateLeaderboard(const struct FName& Course, class UDataTable* DataTable);
-	class UBTL_CourseDataAsset* STATIC_CreateCourseDataAsset(TArray<struct FDataTableRowHandle> Battles);
 };
 
 
@@ -283,40 +289,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BattleManager");
-		return ptr;
-	}
-
-};
-
-
-// Class BattleLabo.BTL_BlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBTL_BlueprintFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BlueprintFunctionLibrary");
-		return ptr;
-	}
-
-
-	class UClass* STATIC_FindUserClass(class UClass* BaseClass);
-	struct FVector STATIC_ClosestPointOnSegment(const struct FVector& Point, const struct FVector& StartPoint, const struct FVector& EndPoint);
-};
-
-
-// Class BattleLabo.BTL_BRallyGoalpost
-// 0x0008 (0x0330 - 0x0328)
-class ABTL_BRallyGoalpost : public AActor
-{
-public:
-	class UBTL_GoalpostBehavior*                       Behavior;                                                 // 0x0328(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BRallyGoalpost");
 		return ptr;
 	}
 
@@ -345,20 +317,32 @@ public:
 };
 
 
-// Class BattleLabo.BTL_BattleSpawner
-// 0x0000 (0x0328 - 0x0328)
-class ABTL_BattleSpawner : public AActor
+// Class BattleLabo.BTL_BRallyScoreKeeper
+// 0x0088 (0x0178 - 0x00F0)
+class UBTL_BRallyScoreKeeper : public UActorComponent
 {
 public:
+	TArray<struct FBTL_ScoreTallyData>                 TallyScores;                                              // 0x00F0(0x0010) (ZeroConstructor, Transient)
+	TMap<struct FName, struct FBTL_ScoreGroupData>     MaxCounts;                                                // 0x0100(0x0050) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0150(0x0008) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnTotalScoreIncreased;                                    // 0x0158(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnTotalScoreChanged;                                      // 0x0168(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BattleSpawner");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BRallyScoreKeeper");
 		return ptr;
 	}
 
 
-	void LaunchDebugBattle();
+	void SortResults(class UDataTable* DataTable);
+	int GetTotalScore();
+	TArray<struct FBTL_ScoreTallyData> GetResults();
+	void Clear();
+	void AddToMaxCounts(TArray<struct FDataTableRowHandle> DataTableRowHandles);
+	void AddPointsFromTableRows(TArray<struct FDataTableRowHandle> DataTableRowHandles);
+	void AddPointsFromTableRow(const struct FDataTableRowHandle& DataTableRowHandle, int Times);
+	void AddPointsByRatio(const struct FDataTableRowHandle& DataTableRowHandle, float Ratio);
 };
 
 
@@ -392,32 +376,20 @@ public:
 };
 
 
-// Class BattleLabo.BTL_BRallyScoreKeeper
-// 0x0088 (0x0178 - 0x00F0)
-class UBTL_BRallyScoreKeeper : public UActorComponent
+// Class BattleLabo.BTL_CharacterEnviromentInterface
+// 0x0000 (0x0028 - 0x0028)
+class UBTL_CharacterEnviromentInterface : public UInterface
 {
 public:
-	TArray<struct FBTL_ScoreTallyData>                 TallyScores;                                              // 0x00F0(0x0010) (ZeroConstructor, Transient)
-	TMap<struct FName, struct FBTL_ScoreGroupData>     MaxCounts;                                                // 0x0100(0x0050) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0150(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnTotalScoreIncreased;                                    // 0x0158(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTotalScoreChanged;                                      // 0x0168(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BRallyScoreKeeper");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_CharacterEnviromentInterface");
 		return ptr;
 	}
 
 
-	void SortResults(class UDataTable* DataTable);
-	int GetTotalScore();
-	TArray<struct FBTL_ScoreTallyData> GetResults();
-	void Clear();
-	void AddToMaxCounts(TArray<struct FDataTableRowHandle> DataTableRowHandles);
-	void AddPointsFromTableRows(TArray<struct FDataTableRowHandle> DataTableRowHandles);
-	void AddPointsFromTableRow(const struct FDataTableRowHandle& DataTableRowHandle, int Times);
-	void AddPointsByRatio(const struct FDataTableRowHandle& DataTableRowHandle, float Ratio);
+	TArray<bool> GetAreaFlags();
 };
 
 
@@ -446,23 +418,6 @@ public:
 	void AddWorldOffsetToRootMotion(const struct FVector& DeltaLocation);
 	void AddLocalOffsetToRootMotion(const struct FVector& DeltaLocation);
 	void AddDeltaYawWithRootMotion(float DeltaRotation);
-};
-
-
-// Class BattleLabo.BTL_CharacterEnviromentInterface
-// 0x0000 (0x0028 - 0x0028)
-class UBTL_CharacterEnviromentInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_CharacterEnviromentInterface");
-		return ptr;
-	}
-
-
-	TArray<bool> GetAreaFlags();
 };
 
 
@@ -601,222 +556,6 @@ public:
 };
 
 
-// Class BattleLabo.BTL_CourseRecordBook
-// 0x0060 (0x0088 - 0x0028)
-class UBTL_CourseRecordBook : public UObject
-{
-public:
-	TArray<class UBTL_CourseLeaderboard*>              LeaderBoards;                                             // 0x0028(0x0010) (ZeroConstructor)
-	TMap<struct FName, class UDataTable*>              CourseDefaultLeaderboards;                                // 0x0038(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_CourseRecordBook");
-		return ptr;
-	}
-
-
-	void ReadSaveData(TArray<struct FBTL_CourseSaveData> SaveData);
-	class UBTL_CourseLeaderboard* GetLeaderboard(const struct FName& Course);
-	TArray<struct FBTL_CourseSaveData> CreatePlayerSaveData(TArray<struct FName> PlayerCharacters);
-};
-
-
-// Class BattleLabo.BTLDataTableFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBTLDataTableFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTLDataTableFunctionLibrary");
-		return ptr;
-	}
-
-
-	bool STATIC_GetDataTableRowFromName(class UScriptStruct* Struct, class UDataTable* Table, const struct FName& RowName, struct FTableRowBase* OutRow);
-};
-
-
-// Class BattleLabo.BTL_EnemySearchPath
-// 0x0060 (0x0088 - 0x0028)
-class UBTL_EnemySearchPath : public UObject
-{
-public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0028(0x0048) MISSED OFFSET
-	bool                                               IsStoredNodeArray;                                        // 0x0070(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
-	TArray<struct FBTL_EnemySearchPathNode>            StoredNodeArray;                                          // 0x0078(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_EnemySearchPath");
-		return ptr;
-	}
-
-
-	void SetupOrigin(int GoalIndex);
-	int SetupInsert(int AIndex, float ACost, int BIndex, float BCost);
-	int Insert(int AIndex, float ACost, int BIndex, float BCost);
-	void FindAndUsePath(int Start, TArray<int>* Route);
-	int AddNode();
-	void AddEdge(int NodeIndex, int EdgeTo, float EdgeCost);
-};
-
-
-// Class BattleLabo.BTL_EQSQueryRenderingComponent
-// 0x0020 (0x0580 - 0x0560)
-class UBTL_EQSQueryRenderingComponent : public UPrimitiveComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0560(0x0008) MISSED OFFSET
-	int                                                DispIndex;                                                // 0x0568(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x14];                                      // 0x056C(0x0014) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_EQSQueryRenderingComponent");
-		return ptr;
-	}
-
-};
-
-
-// Class BattleLabo.BTL_GoalpostBehavior
-// 0x0000 (0x0028 - 0x0028)
-class UBTL_GoalpostBehavior : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_GoalpostBehavior");
-		return ptr;
-	}
-
-
-	bool OnPlayerEntered(class ABTL_Character* Player, class ABTL_BRallyGoalpost* Goalpost);
-};
-
-
-// Class BattleLabo.BTLKismetLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBTLKismetLibrary : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTLKismetLibrary");
-		return ptr;
-	}
-
-
-	int STATIC_XorIntegerFlag(int lflag, int rflag);
-	int STATIC_SetIntegerFlag(int flag, int bitindex, bool Status);
-	int STATIC_OrIntegerFlag(int lflag, int rflag);
-	int STATIC_NotIntegerFlag(int flag);
-	struct FTransform STATIC_IntersectionOfLineAndCircle(const struct FVector& _startPos, const struct FVector& _endPos, const struct FVector& _circleCenterPos, float _rad);
-	struct FSyncActionInfoNative STATIC_GetRowByNameSyncActionInfo(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-	struct FMoveGapConditionNative STATIC_GetRowByNameMoveGapCondition(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-	struct FMotionDatabaseElementNative STATIC_GetRowByNameMotionDatabaseElement(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-	float STATIC_GetNotifyTriggerTime(class UAnimMontage* Montage, class UAnimNotify* Notify);
-	class UAnimNotify* STATIC_GetNotifyTrigger(class UAnimMontage* Montage, class UClass* NotifyClass, float StartRange, float EndRange, bool Last);
-	float STATIC_GetNotifyStateStartTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState);
-	void STATIC_GetNotifyStates(class UAnimMontage* Montage, class UClass* StateClass, TArray<class UAnimNotifyState*> States);
-	float STATIC_GetNotifyStateEndTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState);
-	class UAnimNotifyState* STATIC_GetNotifyStateAtTime(class UAnimMontage* Montage, class UClass* StateClass, float Time, bool Last);
-	class UAnimNotifyState* STATIC_GetNotifyState(class UAnimMontage* Montage, class UClass* StateClass, float StartRange, float EndRange, bool Last);
-	bool STATIC_GetIntegerFlag(int flag, int bitindex);
-	float STATIC_GetCustomNotifyTime(class UAnimMontage* Montage, const struct FName& NotifyName);
-	struct FName STATIC_EstimateNextNameInSequence(TArray<struct FName> Names, int* Confidence);
-	bool STATIC_EllipseContains(const struct FVector2D& Point, const struct FVector2D& Radii);
-	struct FVector2D STATIC_EllipseClamp(const struct FVector2D& Point, const struct FVector2D& Radii);
-	bool STATIC_ContainsNotifyState(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState);
-	bool STATIC_CallRemoteLevelEvent(const struct FName& EventName, class AActor* WorldContextObject);
-	int STATIC_AndIntegerFlag(int lflag, int rflag);
-};
-
-
-// Class BattleLabo.BTL_MeshFaderComponent
-// 0x0098 (0x0188 - 0x00F0)
-class UBTL_MeshFaderComponent : public UActorComponent
-{
-public:
-	struct FScriptMulticastDelegate                    OnMeshVisibilityChanged;                                  // 0x00F0(0x0010) (ZeroConstructor, InstancedReference)
-	TMap<struct FName, class UCurveFloat*>             MaterialFadeAlphaCurveMap;                                // 0x0100(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FBTL_MeshFadeSettings>               MeshSettings;                                             // 0x0150(0x0010) (ZeroConstructor)
-	TArray<class AActor*>                              FadeOutExecutors;                                         // 0x0160(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0170(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_MeshFaderComponent");
-		return ptr;
-	}
-
-
-	void StartFadeOut(class AActor* Executor, float FadeTime);
-	void StartFadeIn(class AActor* Executor, float FadeTime);
-	void SetMeshComponents(TArray<class UMeshComponent*> Components);
-	class UMaterialInterface* CreateFadeMaterial(class UMaterialInterface* SourceMaterial);
-	void AddMeshComponent(class UMeshComponent* Component);
-};
-
-
-// Class BattleLabo.BTL_MontageListDataAsset
-// 0x0010 (0x0040 - 0x0030)
-class UBTL_MontageListDataAsset : public UDataAsset
-{
-public:
-	TArray<class UAnimMontage*>                        Montages;                                                 // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_MontageListDataAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class BattleLabo.BTL_NavigationFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UBTL_NavigationFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_NavigationFunctionLibrary");
-		return ptr;
-	}
-
-
-	bool STATIC_TestPathExists(class UObject* Querier, const struct FVector& StartLocation, const struct FVector& EndLocation, class UClass* FilterClass);
-	class ARecastNavMesh* STATIC_GetRecastNavmesh(class UObject* WorldContextObject);
-	float STATIC_FindDistanceToWall(class UObject* WorldContextObject, const struct FVector& StartLoc, class UClass* FilterClass, class ARecastNavMesh* NavData, float MaxDistance, struct FVector* OutClosestPointOnWall);
-};
-
-
-// Class BattleLabo.BTL_NPCDataAsset
-// 0x0010 (0x00B8 - 0x00A8)
-class UBTL_NPCDataAsset : public UBTL_CharacterDataAsset
-{
-public:
-	class UDataTable*                                  AttackTable;                                              // 0x00A8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UBehaviorTree*                               BehaviorTree;                                             // 0x00B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_NPCDataAsset");
-		return ptr;
-	}
-
-};
-
-
 // Class BattleLabo.BTL_CommandLibraryBase
 // 0x0110 (0x0138 - 0x0028)
 class UBTL_CommandLibraryBase : public UObject
@@ -850,6 +589,224 @@ public:
 };
 
 
+// Class BattleLabo.BTLDataTableFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBTLDataTableFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTLDataTableFunctionLibrary");
+		return ptr;
+	}
+
+
+	bool GetDataTableRowFromName(class UScriptStruct* Struct, class UDataTable* Table, const struct FName& RowName, struct FTableRowBase* OutRow);
+};
+
+
+// Class BattleLabo.BTL_EnemySearchPath
+// 0x0060 (0x0088 - 0x0028)
+class UBTL_EnemySearchPath : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0028(0x0048) MISSED OFFSET
+	bool                                               IsStoredNodeArray;                                        // 0x0070(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	TArray<struct FBTL_EnemySearchPathNode>            StoredNodeArray;                                          // 0x0078(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_EnemySearchPath");
+		return ptr;
+	}
+
+
+	void SetupOrigin(int GoalIndex);
+	int SetupInsert(int AIndex, float ACost, int BIndex, float BCost);
+	int Insert(int AIndex, float ACost, int BIndex, float BCost);
+	void FindAndUsePath(int Start, TArray<int>* Route);
+	int AddNode();
+	void AddEdge(int NodeIndex, int EdgeTo, float EdgeCost);
+};
+
+
+// Class BattleLabo.BTL_ActionSolverComponent
+// 0x0018 (0x0108 - 0x00F0)
+class UBTL_ActionSolverComponent : public UActorComponent
+{
+public:
+	TArray<float>                                      TimePassedSinceActions;                                   // 0x00F0(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0100(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_ActionSolverComponent");
+		return ptr;
+	}
+
+
+	void TickActionTimers(float DeltaTime, unsigned char CurrentIndex);
+	void ResetCurrentActionTimer(unsigned char Index);
+	void InitializeActionTimers(int Count);
+	float GetTimePassedSinceAction(unsigned char Index);
+	float GetCurrentActionTimer();
+};
+
+
+// Class BattleLabo.BTL_GoalpostBehavior
+// 0x0000 (0x0028 - 0x0028)
+class UBTL_GoalpostBehavior : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_GoalpostBehavior");
+		return ptr;
+	}
+
+
+	bool OnPlayerEntered(class ABTL_Character* Player, class ABTL_BRallyGoalpost* Goalpost);
+};
+
+
+// Class BattleLabo.BTL_EQSQueryRenderingComponent
+// 0x0020 (0x0580 - 0x0560)
+class UBTL_EQSQueryRenderingComponent : public UPrimitiveComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0560(0x0008) MISSED OFFSET
+	int                                                DispIndex;                                                // 0x0568(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x14];                                      // 0x056C(0x0014) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_EQSQueryRenderingComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class BattleLabo.BTLKismetLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBTLKismetLibrary : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTLKismetLibrary");
+		return ptr;
+	}
+
+
+	int XorIntegerFlag(int lflag, int rflag);
+	int SetIntegerFlag(int flag, int bitindex, bool Status);
+	int OrIntegerFlag(int lflag, int rflag);
+	int NotIntegerFlag(int flag);
+	struct FTransform IntersectionOfLineAndCircle(const struct FVector& _startPos, const struct FVector& _endPos, const struct FVector& _circleCenterPos, float _rad);
+	struct FSyncActionInfoNative GetRowByNameSyncActionInfo(class UDataTable* DataTable, const struct FName& pName, bool* Result);
+	struct FMoveGapConditionNative GetRowByNameMoveGapCondition(class UDataTable* DataTable, const struct FName& pName, bool* Result);
+	struct FMotionDatabaseElementNative GetRowByNameMotionDatabaseElement(class UDataTable* DataTable, const struct FName& pName, bool* Result);
+	float GetNotifyTriggerTime(class UAnimMontage* Montage, class UAnimNotify* Notify);
+	class UAnimNotify* GetNotifyTrigger(class UAnimMontage* Montage, class UClass* NotifyClass, float StartRange, float EndRange, bool Last);
+	float GetNotifyStateStartTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState);
+	void GetNotifyStates(class UAnimMontage* Montage, class UClass* StateClass, TArray<class UAnimNotifyState*> States);
+	float GetNotifyStateEndTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState);
+	class UAnimNotifyState* GetNotifyStateAtTime(class UAnimMontage* Montage, class UClass* StateClass, float Time, bool Last);
+	class UAnimNotifyState* GetNotifyState(class UAnimMontage* Montage, class UClass* StateClass, float StartRange, float EndRange, bool Last);
+	bool GetIntegerFlag(int flag, int bitindex);
+	float GetCustomNotifyTime(class UAnimMontage* Montage, const struct FName& NotifyName);
+	struct FName EstimateNextNameInSequence(TArray<struct FName> Names, int* Confidence);
+	bool EllipseContains(const struct FVector2D& Point, const struct FVector2D& Radii);
+	struct FVector2D EllipseClamp(const struct FVector2D& Point, const struct FVector2D& Radii);
+	bool ContainsNotifyState(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState);
+	bool CallRemoteLevelEvent(const struct FName& EventName, class AActor* WorldContextObject);
+	int AndIntegerFlag(int lflag, int rflag);
+};
+
+
+// Class BattleLabo.BTL_MontageListDataAsset
+// 0x0010 (0x0040 - 0x0030)
+class UBTL_MontageListDataAsset : public UDataAsset
+{
+public:
+	TArray<class UAnimMontage*>                        Montages;                                                 // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_MontageListDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class BattleLabo.BTL_MeshFaderComponent
+// 0x0098 (0x0188 - 0x00F0)
+class UBTL_MeshFaderComponent : public UActorComponent
+{
+public:
+	struct FScriptMulticastDelegate                    OnMeshVisibilityChanged;                                  // 0x00F0(0x0010) (ZeroConstructor, InstancedReference)
+	TMap<struct FName, class UCurveFloat*>             MaterialFadeAlphaCurveMap;                                // 0x0100(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FBTL_MeshFadeSettings>               MeshSettings;                                             // 0x0150(0x0010) (ZeroConstructor)
+	TArray<class AActor*>                              FadeOutExecutors;                                         // 0x0160(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0170(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_MeshFaderComponent");
+		return ptr;
+	}
+
+
+	void StartFadeOut(class AActor* Executor, float FadeTime);
+	void StartFadeIn(class AActor* Executor, float FadeTime);
+	void SetMeshComponents(TArray<class UMeshComponent*> Components);
+	class UMaterialInterface* CreateFadeMaterial(class UMaterialInterface* SourceMaterial);
+	void AddMeshComponent(class UMeshComponent* Component);
+};
+
+
+// Class BattleLabo.BTL_NavigationFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBTL_NavigationFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_NavigationFunctionLibrary");
+		return ptr;
+	}
+
+
+	bool TestPathExists(class UObject* Querier, const struct FVector& StartLocation, const struct FVector& EndLocation, class UClass* FilterClass);
+	class ARecastNavMesh* GetRecastNavmesh(class UObject* WorldContextObject);
+	float FindDistanceToWall(class UObject* WorldContextObject, const struct FVector& StartLoc, class UClass* FilterClass, class ARecastNavMesh* NavData, float MaxDistance, struct FVector* OutClosestPointOnWall);
+};
+
+
+// Class BattleLabo.BTL_NPCDataAsset
+// 0x0010 (0x00B8 - 0x00A8)
+class UBTL_NPCDataAsset : public UBTL_CharacterDataAsset
+{
+public:
+	class UDataTable*                                  AttackTable;                                              // 0x00A8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UBehaviorTree*                               BehaviorTree;                                             // 0x00B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_NPCDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class BattleLabo.BTL_NPCLODSystem
 // 0x0030 (0x0120 - 0x00F0)
 class UBTL_NPCLODSystem : public UActorComponent
@@ -868,38 +825,6 @@ public:
 
 	void SetSpline(class USplineComponent* InSpline);
 	void RegisterNPCs(TArray<class ABTL_Character*> NPCs);
-};
-
-
-// Class BattleLabo.BTL_NPCLODComponent
-// 0x0060 (0x0150 - 0x00F0)
-class UBTL_NPCLODComponent : public UActorComponent
-{
-public:
-	class ABTL_Character*                              OwnerCharacter;                                           // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBTL_StatusComponent*                        StatusComponent;                                          // 0x00F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USplineComponent*                            spline;                                                   // 0x0100(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x14];                                      // 0x0108(0x0014) MISSED OFFSET
-	float                                              WakeDistanceEuclidean;                                    // 0x011C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              WakeDistanceSpline;                                       // 0x0120(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BreakOffDistanceSpline;                                   // 0x0124(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              BreakOffBufferSpline;                                     // 0x0128(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ReturnStandbyeDistance;                                   // 0x012C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DeactivateDistancePlayerEuclidean;                        // 0x0130(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DeactivateDistancePlayerSpline;                           // 0x0134(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DeactivateDistancePlayerSpawner;                          // 0x0138(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x013C(0x0004) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnStateChanged;                                           // 0x0140(0x0010) (Edit, ZeroConstructor, InstancedReference, BlueprintAssignable)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_NPCLODComponent");
-		return ptr;
-	}
-
-
-	EBTL_NPCLODState GetState();
-	struct FVector GetSpawnLocation();
 };
 
 
@@ -943,6 +868,29 @@ public:
 };
 
 
+// Class BattleLabo.BTL_RacerDataAsset
+// 0x0068 (0x0098 - 0x0030)
+class UBTL_RacerDataAsset : public UDataAsset
+{
+public:
+	struct FName                                       TagId;                                                    // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Requirement;                                              // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UBTL_PlayerCharacterDataAsset*               BattleAsset;                                              // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) UNKNOWN PROPERTY: SoftObjectProperty BattleLabo.BTL_RacerDataAsset.AnimationData
+	TArray<struct FName>                               ShortcutSkills;                                           // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FBTL_RacerStatLimits                        Attack;                                                   // 0x0080(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FBTL_RacerStatLimits                        Vitality;                                                 // 0x0088(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	class UTexture2D*                                  PortraitTexture;                                          // 0x0090(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_RacerDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class BattleLabo.BTL_RagdollSolverComponent
 // 0x00A0 (0x0190 - 0x00F0)
 class UBTL_RagdollSolverComponent : public UActorComponent
@@ -979,41 +927,77 @@ public:
 };
 
 
-// Class BattleLabo.BTL_ReplayCharacter
-// 0x0000 (0x0740 - 0x0740)
-class ABTL_ReplayCharacter : public ACharacter
+// Class BattleLabo.BTL_NPCLODComponent
+// 0x0060 (0x0150 - 0x00F0)
+class UBTL_NPCLODComponent : public UActorComponent
 {
 public:
+	class ABTL_Character*                              OwnerCharacter;                                           // 0x00F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBTL_StatusComponent*                        StatusComponent;                                          // 0x00F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USplineComponent*                            spline;                                                   // 0x0100(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x14];                                      // 0x0108(0x0014) MISSED OFFSET
+	float                                              WakeDistanceEuclidean;                                    // 0x011C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              WakeDistanceSpline;                                       // 0x0120(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BreakOffDistanceSpline;                                   // 0x0124(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              BreakOffBufferSpline;                                     // 0x0128(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ReturnStandbyeDistance;                                   // 0x012C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DeactivateDistancePlayerEuclidean;                        // 0x0130(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DeactivateDistancePlayerSpline;                           // 0x0134(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DeactivateDistancePlayerSpawner;                          // 0x0138(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x013C(0x0004) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnStateChanged;                                           // 0x0140(0x0010) (Edit, ZeroConstructor, InstancedReference, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_ReplayCharacter");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_NPCLODComponent");
 		return ptr;
 	}
 
+
+	EBTL_NPCLODState GetState();
+	struct FVector GetSpawnLocation();
 };
 
 
-// Class BattleLabo.BTL_RacerDataAsset
-// 0x0068 (0x0098 - 0x0030)
-class UBTL_RacerDataAsset : public UDataAsset
+// Class BattleLabo.BTL_BattleRallyFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBTL_BattleRallyFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	struct FName                                       TagId;                                                    // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Requirement;                                              // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UBTL_PlayerCharacterDataAsset*               BattleAsset;                                              // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) UNKNOWN PROPERTY: SoftObjectProperty BattleLabo.BTL_RacerDataAsset.AnimationData
-	TArray<struct FName>                               ShortcutSkills;                                           // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FBTL_RacerStatLimits                        Attack;                                                   // 0x0080(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FBTL_RacerStatLimits                        Vitality;                                                 // 0x0088(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	class UTexture2D*                                  PortraitTexture;                                          // 0x0090(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_RacerDataAsset");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_BattleRallyFunctionLibrary");
 		return ptr;
 	}
 
+
+	struct FBTL_TimeMSC MakeTimeMSCFromFloat(float Seconds);
+	float MakeFloatFromTimeMSC(const struct FBTL_TimeMSC& Time);
+	bool IsTimeMSCZero(const struct FBTL_TimeMSC& Time);
+	class UBTL_CourseRecordBook* CreateRecordBook(TArray<class UBTL_CourseDataAsset*> Courses);
+	class UBTL_CourseLeaderboard* CreateLeaderboard(const struct FName& Course, class UDataTable* DataTable);
+	class UBTL_CourseDataAsset* CreateCourseDataAsset(TArray<struct FDataTableRowHandle> Battles);
+};
+
+
+// Class BattleLabo.BTL_ReplayRecordComponent
+// 0x0040 (0x0130 - 0x00F0)
+class UBTL_ReplayRecordComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x40];                                      // 0x00F0(0x0040) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_ReplayRecordComponent");
+		return ptr;
+	}
+
+
+	void SetReplayRecordTime(float Time);
+	float GetStartGameTime();
+	float GetEndGameTime();
 };
 
 
@@ -1121,26 +1105,6 @@ public:
 };
 
 
-// Class BattleLabo.BTL_ReplayRecordComponent
-// 0x0040 (0x0130 - 0x00F0)
-class UBTL_ReplayRecordComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x00F0(0x0040) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_ReplayRecordComponent");
-		return ptr;
-	}
-
-
-	void STATIC_SetReplayRecordTime(float Time);
-	float GetStartGameTime();
-	float GetEndGameTime();
-};
-
-
 // Class BattleLabo.BTL_SplineFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UBTL_SplineFunctionLibrary : public UBlueprintFunctionLibrary
@@ -1154,8 +1118,8 @@ public:
 	}
 
 
-	float STATIC_FindDistanceClosestToWorldLocation(class USplineComponent* spline, const struct FVector& Location);
-	float STATIC_ConvertInputKeyToDistance(class USplineComponent* spline, float InputKey);
+	float FindDistanceClosestToWorldLocation(class USplineComponent* spline, const struct FVector& Location);
+	float ConvertInputKeyToDistance(class USplineComponent* spline, float InputKey);
 };
 
 
@@ -1227,33 +1191,15 @@ public:
 	}
 
 
-	void STATIC_SetupUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoCount, int WallPointCount, int StepPointCount);
-	void STATIC_SetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, const struct FUndulationInfoParamNative& Param);
-	void STATIC_SetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, const struct FRaycastHitpointInfoNative& Point);
-	int STATIC_GetUndulationInfoCount(const struct FUndulationInfoContainer& Container);
-	void STATIC_GetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, struct FUndulationInfoParamNative* OutStruct, int* WallRaycastHitpointInfoCount, int* StepRaycastHitpointInfoCount);
-	int STATIC_GetRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type);
-	void STATIC_GetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, struct FRaycastHitpointInfoNative* OutStruct);
-	int STATIC_GetEnableRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type);
-	void STATIC_ClearWorks(const struct FUndulationInfoContainer& Container);
-};
-
-
-// Class BattleLabo.PrimitiveDrawComponent
-// 0x0010 (0x0570 - 0x0560)
-class UPrimitiveDrawComponent : public UPrimitiveComponent
-{
-public:
-	class UMaterialInterface*                          MaterialInterface;                                        // 0x0560(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FColor                                      Color;                                                    // 0x0568(0x0004) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x056C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.PrimitiveDrawComponent");
-		return ptr;
-	}
-
+	void SetupUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoCount, int WallPointCount, int StepPointCount);
+	void SetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, const struct FUndulationInfoParamNative& Param);
+	void SetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, const struct FRaycastHitpointInfoNative& Point);
+	int GetUndulationInfoCount(const struct FUndulationInfoContainer& Container);
+	void GetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, struct FUndulationInfoParamNative* OutStruct, int* WallRaycastHitpointInfoCount, int* StepRaycastHitpointInfoCount);
+	int GetRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type);
+	void GetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, struct FRaycastHitpointInfoNative* OutStruct);
+	int GetEnableRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type);
+	void ClearWorks(const struct FUndulationInfoContainer& Container);
 };
 
 
@@ -1277,22 +1223,21 @@ public:
 };
 
 
-// Class BattleLabo.SquareDrawComponent
-// 0x0020 (0x0590 - 0x0570)
-class USquareDrawComponent : public UPrimitiveDrawComponent
+// Class BattleLabo.PrimitiveDrawComponent
+// 0x0010 (0x0570 - 0x0560)
+class UPrimitiveDrawComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0570(0x0020) MISSED OFFSET
+	class UMaterialInterface*                          MaterialInterface;                                        // 0x0560(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FColor                                      Color;                                                    // 0x0568(0x0004) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x056C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.SquareDrawComponent");
+		static auto ptr = UObject::FindClass("Class BattleLabo.PrimitiveDrawComponent");
 		return ptr;
 	}
 
-
-	void ClearSquare();
-	void AddSquare(const struct FVector& LT, const struct FVector& RT, const struct FVector& LB, const struct FVector& RB);
 };
 
 
@@ -1315,6 +1260,25 @@ public:
 };
 
 
+// Class BattleLabo.SquareDrawComponent
+// 0x0020 (0x0590 - 0x0570)
+class USquareDrawComponent : public UPrimitiveDrawComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0570(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.SquareDrawComponent");
+		return ptr;
+	}
+
+
+	void ClearSquare();
+	void AddSquare(const struct FVector& LT, const struct FVector& RT, const struct FVector& LB, const struct FVector& RB);
+};
+
+
 // Class BattleLabo.EnvQueryTest_BTL_CheckArea
 // 0x0008 (0x01C8 - 0x01C0)
 class UEnvQueryTest_BTL_CheckArea : public UEnvQueryTest
@@ -1331,20 +1295,24 @@ public:
 };
 
 
-// Class BattleLabo.EnvQueryTest_BTL_Range
-// 0x0038 (0x01F8 - 0x01C0)
-class UEnvQueryTest_BTL_Range : public UEnvQueryTest
+// Class BattleLabo.BTL_CourseRecordBook
+// 0x0060 (0x0088 - 0x0028)
+class UBTL_CourseRecordBook : public UObject
 {
 public:
-	class UClass*                                      OriginContext;                                            // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FAIDataProviderFloatValue                   Distance;                                                 // 0x01C8(0x0030) (Edit, DisableEditOnInstance)
+	TArray<class UBTL_CourseLeaderboard*>              LeaderBoards;                                             // 0x0028(0x0010) (ZeroConstructor)
+	TMap<struct FName, class UDataTable*>              CourseDefaultLeaderboards;                                // 0x0038(0x0050) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.EnvQueryTest_BTL_Range");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_CourseRecordBook");
 		return ptr;
 	}
 
+
+	void ReadSaveData(TArray<struct FBTL_CourseSaveData> SaveData);
+	class UBTL_CourseLeaderboard* GetLeaderboard(const struct FName& Course);
+	TArray<struct FBTL_CourseSaveData> CreatePlayerSaveData(TArray<struct FName> PlayerCharacters);
 };
 
 
@@ -1369,6 +1337,58 @@ public:
 };
 
 
+// Class BattleLabo.EnvQueryTest_BTL_Range
+// 0x0038 (0x01F8 - 0x01C0)
+class UEnvQueryTest_BTL_Range : public UEnvQueryTest
+{
+public:
+	class UClass*                                      OriginContext;                                            // 0x01C0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FAIDataProviderFloatValue                   Distance;                                                 // 0x01C8(0x0030) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.EnvQueryTest_BTL_Range");
+		return ptr;
+	}
+
+};
+
+
+// Class BattleLabo.KeyConfig
+// 0x0000 (0x0028 - 0x0028)
+class UKeyConfig : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.KeyConfig");
+		return ptr;
+	}
+
+
+	void SwitchKey(const struct FName& A, const struct FName& B);
+	void SortObject(class USortObjectCompare* Compare, TArray<class UObject*>* TargetArray);
+	void SortName(class USortNameCompare* Compare, TArray<struct FName>* TargetArray);
+	void SortActor(class USortActorCompare* Compare, TArray<class AActor*>* TargetArray);
+	void SetMontagePosition(class UAnimInstance* AnimInstance, class UAnimMontage* Montage, float Position);
+	void SetMontageBlendOutTime(class UAnimMontage* Montage, float BlendTime);
+	void SetMontageBlendInTime(class UAnimMontage* Montage, float BlendTime);
+	bool ResetAction(const struct FKey& Key, const struct FName& Name);
+	bool IsPlayingAttackMontage(class UAnimInstance* AnimInstance);
+	float GetMontageBlendOutTime(class UAnimMontage* Montage);
+	float GetMontageBlendInTime(class UAnimMontage* Montage);
+	TArray<struct FKey> GetKeyArray(const struct FName& Name);
+	float GetFollowingPathLength(class UPathFollowingComponent* PathFollowingComponent);
+	float GetCurrentMontagePosition(class UAnimInstance* AnimInstance);
+	float GetCurrentMontagePlayRate(class UAnimInstance* AnimInstance);
+	bool EnableNextAttack(class UAnimInstance* AnimInstance);
+	void DispCurrentAnimInfo(class UAnimInstance* AnimInstance);
+	class UObject* CreateObjectForTemplate(class UObject* Outer, const struct FName& Name, class UObject* Template);
+	class UObject* CreateObject(class UClass* ObjectClass);
+};
+
+
 // Class BattleLabo.Json
 // 0x0000 (0x0028 - 0x0028)
 class UJson : public UBlueprintFunctionLibrary
@@ -1382,29 +1402,13 @@ public:
 	}
 
 
-	bool STATIC_LoadJson(const struct FString& Name, struct FJsonData* Data);
-	bool STATIC_GetString(const struct FJsonData& JsonData, const struct FString& Key, struct FString* String);
-	bool STATIC_GetInt(const struct FJsonData& JsonData, const struct FString& Key, int* Int);
-	bool STATIC_GetFloat(const struct FJsonData& JsonData, const struct FString& Key, float* Float);
-	bool STATIC_GetData(const struct FJsonData& JsonData, const struct FString& Key, struct FJsonData* Data);
-	bool STATIC_GetBool(const struct FJsonData& JsonData, const struct FString& Key, bool* Bool);
-	bool STATIC_GetArray(const struct FJsonData& JsonData, const struct FString& Key, TArray<struct FString>* Array);
-};
-
-
-// Class BattleLabo.ManagedActorComponent
-// 0x0008 (0x00F8 - 0x00F0)
-class UManagedActorComponent : public UActorComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x00F0(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.ManagedActorComponent");
-		return ptr;
-	}
-
+	bool LoadJson(const struct FString& Name, struct FJsonData* Data);
+	bool GetString(const struct FJsonData& JsonData, const struct FString& Key, struct FString* String);
+	bool GetInt(const struct FJsonData& JsonData, const struct FString& Key, int* Int);
+	bool GetFloat(const struct FJsonData& JsonData, const struct FString& Key, float* Float);
+	bool GetData(const struct FJsonData& JsonData, const struct FString& Key, struct FJsonData* Data);
+	bool GetBool(const struct FJsonData& JsonData, const struct FString& Key, bool* Bool);
+	bool GetArray(const struct FJsonData& JsonData, const struct FString& Key, TArray<struct FString>* Array);
 };
 
 
@@ -1423,36 +1427,16 @@ public:
 };
 
 
-// Class BattleLabo.MyCharacterMovementComponent
-// 0x0010 (0x0780 - 0x0770)
-class UMyCharacterMovementComponent : public UCharacterMovementComponent
+// Class BattleLabo.ManagedActorComponent
+// 0x0008 (0x00F8 - 0x00F0)
+class UManagedActorComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0770(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00F0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.MyCharacterMovementComponent");
-		return ptr;
-	}
-
-
-	struct FVector UseRequestedVector();
-};
-
-
-// Class BattleLabo.MyGameInstance
-// 0x0028 (0x00C8 - 0x00A0)
-class UMyGameInstance : public UGameInstance
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00A0(0x0020) MISSED OFFSET
-	struct FDebugParam                                 DebugParam;                                               // 0x00C0(0x0004) (BlueprintVisible, IsPlainOldData)
-	struct FReplayParam                                ReplayParam;                                              // 0x00C4(0x0004) (BlueprintVisible, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.MyGameInstance");
+		static auto ptr = UObject::FindClass("Class BattleLabo.ManagedActorComponent");
 		return ptr;
 	}
 
@@ -1474,20 +1458,36 @@ public:
 };
 
 
-// Class BattleLabo.SortActorCompare
-// 0x0000 (0x0028 - 0x0028)
-class USortActorCompare : public UObject
+// Class BattleLabo.BTL_ReplayCharacter
+// 0x0000 (0x0740 - 0x0740)
+class ABTL_ReplayCharacter : public ACharacter
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.SortActorCompare");
+		static auto ptr = UObject::FindClass("Class BattleLabo.BTL_ReplayCharacter");
+		return ptr;
+	}
+
+};
+
+
+// Class BattleLabo.MyCharacterMovementComponent
+// 0x0010 (0x0780 - 0x0770)
+class UMyCharacterMovementComponent : public UCharacterMovementComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0770(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.MyCharacterMovementComponent");
 		return ptr;
 	}
 
 
-	bool Compare(class AActor* A, class AActor* B);
+	struct FVector UseRequestedVector();
 };
 
 
@@ -1525,38 +1525,38 @@ public:
 };
 
 
-// Class BattleLabo.KeyConfig
+// Class BattleLabo.SortActorCompare
 // 0x0000 (0x0028 - 0x0028)
-class UKeyConfig : public UBlueprintFunctionLibrary
+class USortActorCompare : public UObject
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class BattleLabo.KeyConfig");
+		static auto ptr = UObject::FindClass("Class BattleLabo.SortActorCompare");
 		return ptr;
 	}
 
 
-	void STATIC_SwitchKey(const struct FName& A, const struct FName& B);
-	void STATIC_SortObject(class USortObjectCompare* Compare, TArray<class UObject*>* TargetArray);
-	void STATIC_SortName(class USortNameCompare* Compare, TArray<struct FName>* TargetArray);
-	void STATIC_SortActor(class USortActorCompare* Compare, TArray<class AActor*>* TargetArray);
-	void STATIC_SetMontagePosition(class UAnimInstance* AnimInstance, class UAnimMontage* Montage, float Position);
-	void STATIC_SetMontageBlendOutTime(class UAnimMontage* Montage, float BlendTime);
-	void STATIC_SetMontageBlendInTime(class UAnimMontage* Montage, float BlendTime);
-	bool STATIC_ResetAction(const struct FKey& Key, const struct FName& Name);
-	bool STATIC_IsPlayingAttackMontage(class UAnimInstance* AnimInstance);
-	float STATIC_GetMontageBlendOutTime(class UAnimMontage* Montage);
-	float STATIC_GetMontageBlendInTime(class UAnimMontage* Montage);
-	TArray<struct FKey> STATIC_GetKeyArray(const struct FName& Name);
-	float STATIC_GetFollowingPathLength(class UPathFollowingComponent* PathFollowingComponent);
-	float STATIC_GetCurrentMontagePosition(class UAnimInstance* AnimInstance);
-	float STATIC_GetCurrentMontagePlayRate(class UAnimInstance* AnimInstance);
-	bool STATIC_EnableNextAttack(class UAnimInstance* AnimInstance);
-	void STATIC_DispCurrentAnimInfo(class UAnimInstance* AnimInstance);
-	class UObject* STATIC_CreateObjectForTemplate(class UObject* Outer, const struct FName& Name, class UObject* Template);
-	class UObject* STATIC_CreateObject(class UClass* ObjectClass);
+	bool Compare(class AActor* A, class AActor* B);
+};
+
+
+// Class BattleLabo.MyGameInstance
+// 0x0028 (0x00C8 - 0x00A0)
+class UMyGameInstance : public UGameInstance
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00A0(0x0020) MISSED OFFSET
+	struct FDebugParam                                 DebugParam;                                               // 0x00C0(0x0004) (BlueprintVisible, IsPlainOldData)
+	struct FReplayParam                                ReplayParam;                                              // 0x00C4(0x0004) (BlueprintVisible, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class BattleLabo.MyGameInstance");
+		return ptr;
+	}
+
 };
 
 

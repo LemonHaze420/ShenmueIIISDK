@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_RainController.BP_RainController_C.ToggleDebugDisplay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
 
-void ABP_RainController_C::ToggleDebugDisplay()
+void ABP_RainController_C::STATIC_ToggleDebugDisplay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ToggleDebugDisplay");
 
 	ABP_RainController_C_ToggleDebugDisplay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_RainController_C::ToggleDebugDisplay()
 
 
 // Function BP_RainController.BP_RainController_C.GetMaterialParams
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetResponse, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FS3RainParam            RainParam                      (Parm, OutParm)
 
@@ -42,6 +43,7 @@ void ABP_RainController_C::GetMaterialParams(struct FS3RainParam* RainParam)
 	ABP_RainController_C_GetMaterialParams_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,15 +55,16 @@ void ABP_RainController_C::GetMaterialParams(struct FS3RainParam* RainParam)
 
 
 // Function BP_RainController.BP_RainController_C.ResetMaterialParams
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, NetClient, Const)
 
-void ABP_RainController_C::ResetMaterialParams()
+void ABP_RainController_C::STATIC_ResetMaterialParams()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ResetMaterialParams");
 
 	ABP_RainController_C_ResetMaterialParams_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +73,7 @@ void ABP_RainController_C::ResetMaterialParams()
 
 
 // Function BP_RainController.BP_RainController_C.SetMaterialParams
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // float                          Strength1                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Strength2                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -78,7 +81,7 @@ void ABP_RainController_C::ResetMaterialParams()
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OpacityMultiplier              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RainController_C::SetMaterialParams(float Strength1, float Strength2, float Strength3, float Speed, float OpacityMultiplier)
+void ABP_RainController_C::STATIC_SetMaterialParams(float Strength1, float Strength2, float Strength3, float Speed, float OpacityMultiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.SetMaterialParams");
 
@@ -90,6 +93,7 @@ void ABP_RainController_C::SetMaterialParams(float Strength1, float Strength2, f
 	params.OpacityMultiplier = OpacityMultiplier;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,9 +102,9 @@ void ABP_RainController_C::SetMaterialParams(float Strength1, float Strength2, f
 
 
 // Function BP_RainController.BP_RainController_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_RainController_C::UserConstructionScript()
+void ABP_RainController_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.UserConstructionScript");
 
@@ -115,11 +119,11 @@ void ABP_RainController_C::UserConstructionScript()
 
 
 // Function BP_RainController.BP_RainController_C.InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_RainController_C::InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2(const struct FKey& Key)
+void ABP_RainController_C::STATIC_InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2");
 
@@ -135,7 +139,7 @@ void ABP_RainController_C::InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2(const struct 
 
 
 // Function BP_RainController.BP_RainController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_RainController_C::ReceiveBeginPlay()
 {
@@ -152,11 +156,11 @@ void ABP_RainController_C::ReceiveBeginPlay()
 
 
 // Function BP_RainController.BP_RainController_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RainController_C::ReceiveTick(float DeltaSeconds)
+void ABP_RainController_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ReceiveTick");
 
@@ -172,7 +176,7 @@ void ABP_RainController_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_RainController.BP_RainController_C.ToggleDisplay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_RainController_C::ToggleDisplay()
 {
@@ -189,11 +193,11 @@ void ABP_RainController_C::ToggleDisplay()
 
 
 // Function BP_RainController.BP_RainController_C.ExecuteUbergraph_BP_RainController
-// (HasDefaults)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_RainController_C::ExecuteUbergraph_BP_RainController(int EntryPoint)
+void ABP_RainController_C::STATIC_ExecuteUbergraph_BP_RainController(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_RainController.BP_RainController_C.ExecuteUbergraph_BP_RainController");
 
@@ -201,6 +205,7 @@ void ABP_RainController_C::ExecuteUbergraph_BP_RainController(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

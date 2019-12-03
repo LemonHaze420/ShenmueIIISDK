@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void ShowHP(int Type);
+	void SHOWHP(int Type);
 	void ShowHint(const struct FST_LoadingHintWindowParam& Params);
 	void NotifyLoadingDone();
 	void UserConstructionScript();

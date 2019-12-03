@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.SetEnableBodyLookAt
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_NPCLead_C::SetEnableBodyLookAt(bool Enable)
+void UBPC_TurnAround_NPCLead_C::STATIC_SetEnableBodyLookAt(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.SetEnableBodyLookAt");
 
@@ -26,6 +26,7 @@ void UBPC_TurnAround_NPCLead_C::SetEnableBodyLookAt(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,11 +35,11 @@ void UBPC_TurnAround_NPCLead_C::SetEnableBodyLookAt(bool Enable)
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.CanTurnAround
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_NPCLead_C::CanTurnAround(bool* bCan)
+void UBPC_TurnAround_NPCLead_C::STATIC_CanTurnAround(bool* bCan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.CanTurnAround");
 
@@ -56,11 +57,11 @@ void UBPC_TurnAround_NPCLead_C::CanTurnAround(bool* bCan)
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.IsPlayingSitAnimation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           bPlaying                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_NPCLead_C::IsPlayingSitAnimation(bool* bPlaying)
+void UBPC_TurnAround_NPCLead_C::STATIC_IsPlayingSitAnimation(bool* bPlaying)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.IsPlayingSitAnimation");
 
@@ -78,7 +79,7 @@ void UBPC_TurnAround_NPCLead_C::IsPlayingSitAnimation(bool* bPlaying)
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.OnLoaded_F7D60CF146905F4918060D8140E96419
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,6 +91,7 @@ void UBPC_TurnAround_NPCLead_C::OnLoaded_F7D60CF146905F4918060D8140E96419(class 
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,9 +100,9 @@ void UBPC_TurnAround_NPCLead_C::OnLoaded_F7D60CF146905F4918060D8140E96419(class 
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ReturnPreTalkRotationActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetServer)
 
-void UBPC_TurnAround_NPCLead_C::ReturnPreTalkRotationActor()
+void UBPC_TurnAround_NPCLead_C::STATIC_ReturnPreTalkRotationActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ReturnPreTalkRotationActor");
 
@@ -115,12 +117,12 @@ void UBPC_TurnAround_NPCLead_C::ReturnPreTalkRotationActor()
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ForceFinishTurnAround
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           bUpdateRotation                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                NewRotation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPC_TurnAround_NPCLead_C::ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation)
+void UBPC_TurnAround_NPCLead_C::STATIC_ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ForceFinishTurnAround");
 
@@ -129,6 +131,7 @@ void UBPC_TurnAround_NPCLead_C::ForceFinishTurnAround(bool bUpdateRotation, cons
 	params.NewRotation = NewRotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,9 +140,9 @@ void UBPC_TurnAround_NPCLead_C::ForceFinishTurnAround(bool bUpdateRotation, cons
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.TrySitMotation
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetServer)
 
-void UBPC_TurnAround_NPCLead_C::TrySitMotation()
+void UBPC_TurnAround_NPCLead_C::STATIC_TrySitMotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.TrySitMotation");
 
@@ -154,9 +157,9 @@ void UBPC_TurnAround_NPCLead_C::TrySitMotation()
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetServer)
 
-void UBPC_TurnAround_NPCLead_C::ReceiveBeginPlay()
+void UBPC_TurnAround_NPCLead_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ReceiveBeginPlay");
 
@@ -171,9 +174,9 @@ void UBPC_TurnAround_NPCLead_C::ReceiveBeginPlay()
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.TurnAroundTickFinish
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetServer)
 
-void UBPC_TurnAround_NPCLead_C::TurnAroundTickFinish()
+void UBPC_TurnAround_NPCLead_C::STATIC_TurnAroundTickFinish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.TurnAroundTickFinish");
 
@@ -188,11 +191,11 @@ void UBPC_TurnAround_NPCLead_C::TurnAroundTickFinish()
 
 
 // Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ExecuteUbergraph_BPC_TurnAround_NPCLead
-// (HasDefaults)
+// (NetReliable, NetRequest, Static, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_TurnAround_NPCLead_C::ExecuteUbergraph_BPC_TurnAround_NPCLead(int EntryPoint)
+void UBPC_TurnAround_NPCLead_C::STATIC_ExecuteUbergraph_BPC_TurnAround_NPCLead(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_TurnAround_NPCLead.BPC_TurnAround_NPCLead_C.ExecuteUbergraph_BPC_TurnAround_NPCLead");
 

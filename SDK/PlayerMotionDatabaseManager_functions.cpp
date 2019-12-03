@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PlayerMotionDatabaseManager.PlayerMotionDatabaseManager_C.GetSelectedDatabase
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APlayerMotionDatabase_C* Database                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UPlayerMotionDatabaseManager_C::GetSelectedDatabase(TEnumAsByte<EPC_EN_Play
 	params.DatabaseType = DatabaseType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UPlayerMotionDatabaseManager_C::GetSelectedDatabase(TEnumAsByte<EPC_EN_Play
 
 
 // Function PlayerMotionDatabaseManager.PlayerMotionDatabaseManager_C.GetDatabase
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class APlayerMotionDatabase_C* Datagbase                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -49,6 +50,7 @@ void UPlayerMotionDatabaseManager_C::GetDatabase(class APlayerMotionDatabase_C**
 	UPlayerMotionDatabaseManager_C_GetDatabase_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,15 +62,16 @@ void UPlayerMotionDatabaseManager_C::GetDatabase(class APlayerMotionDatabase_C**
 
 
 // Function PlayerMotionDatabaseManager.PlayerMotionDatabaseManager_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void UPlayerMotionDatabaseManager_C::Initialize()
+void UPlayerMotionDatabaseManager_C::STATIC_Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerMotionDatabaseManager.PlayerMotionDatabaseManager_C.Initialize");
 
 	UPlayerMotionDatabaseManager_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,11 +80,11 @@ void UPlayerMotionDatabaseManager_C::Initialize()
 
 
 // Function PlayerMotionDatabaseManager.PlayerMotionDatabaseManager_C.SwitchDatabase
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UPlayerMotionDatabaseManager_C::SwitchDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType)
+void UPlayerMotionDatabaseManager_C::STATIC_SwitchDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PlayerMotionDatabaseManager.PlayerMotionDatabaseManager_C.SwitchDatabase");
 
@@ -89,6 +92,7 @@ void UPlayerMotionDatabaseManager_C::SwitchDatabase(TEnumAsByte<EPC_EN_PlayerMot
 	params.DatabaseType = DatabaseType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -50,35 +50,35 @@ public:
 	}
 
 
-	float GetInAnimationLength();
-	void StartWaitTime(float Time);
+	float STATIC_GetInAnimationLength();
+	void STATIC_StartWaitTime(float Time);
 	void Update(float DeltaTime);
-	void SetUseRealTime(bool UseRealTime);
+	void STATIC_SetUseRealTime(bool UseRealTime);
 	void InstantHideBack();
-	bool IsPlayingInputSuccess();
-	bool IsPlayingInstructions();
-	void ResetAllButtonZOrder();
+	bool STATIC_IsPlayingInputSuccess();
+	bool STATIC_IsPlayingInstructions();
+	void STATIC_ResetAllButtonZOrder();
 	void ResetButtonZOrder(class UWBP_QTECommandButton_C* TargetButton);
 	void SetButtonZOrderToFront(class UWBP_QTECommandButton_C* TargetButton);
-	void SetupButton();
+	void STATIC_SetupButton();
 	void GetButtonImage(const struct FName& InputName, class UTexture2D** Image);
-	void PlayInputSuccess(const struct FName& InputName, bool IsAutoHide);
-	void PlayOutBack();
-	void GetCurrentInstructionButton(class UWBP_QTECommandButton_C** Button);
-	void PlayInstructions(TArray<struct FName>* Inputs);
+	void STATIC_PlayInputSuccess(const struct FName& InputName, bool IsAutoHide);
+	void STATIC_PlayOutBack();
+	void STATIC_GetCurrentInstructionButton(class UWBP_QTECommandButton_C** Button);
+	void STATIC_PlayInstructions(TArray<struct FName>* Inputs);
 	void Reset();
-	void GetButtonFromInputName(const struct FName& InputName, class UWBP_QTECommandButton_C** Button);
+	void STATIC_GetButtonFromInputName(const struct FName& InputName, class UWBP_QTECommandButton_C** Button);
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void OnButtonInstructionAnimationFinished();
 	void OnButtonInputAnimationFinished();
-	void OnOutbackAnimationFinished();
+	void OnOutBackAnimationFinished();
 	void PlayFirstInstruction();
 	void OnWaitTimeFinishedAfterPlayAnim();
-	void OnWaitTimeFinishedBeforeOutBack();
-	void ExecuteUbergraph_WBP_QTECommand(int EntryPoint);
+	void STATIC_OnWaitTimeFinishedBeforeOutBack();
+	void STATIC_ExecuteUbergraph_WBP_QTECommand(int EntryPoint);
 	void OnWaitTimeFinished__DelegateSignature();
-	void OnInstructionFinished__DelegateSignature();
+	void STATIC_OnInstructionFinished__DelegateSignature();
 };
 
 

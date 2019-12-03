@@ -33,12 +33,12 @@ public:
 
 
 	void DestroyTriangle();
-	void SetLocationAndRotation(class AActor* TargetActor, class UCameraComponent* Camera);
+	void STATIC_SetLocationAndRotation(class AActor* TargetActor, class UCameraComponent* Camera);
 	void UpdateVisible(int InputPin);
 	void SetMiniGameLastIndex(int MiniGameLastIndex);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_MiniGameChooseSelectTriangle(int EntryPoint);
 };
 

@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_GetEventIconManager(class UObject* __WorldContext, class ABP_EventIconDispRangeManager_C** newParam);
+	void GetEventIconManager(class UObject* __WorldContext, class ABP_EventIconDispRangeManager_C** newParam);
 };
 
 

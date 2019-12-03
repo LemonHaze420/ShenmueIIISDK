@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.MakeDefaultByteToNameMap
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // TMap<unsigned char, struct FName> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TMap<unsigned char, struct FName> UBTL_CommandLibrary_C::MakeDefaultByteToNameMap()
+TMap<unsigned char, struct FName> UBTL_CommandLibrary_C::STATIC_MakeDefaultByteToNameMap()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.MakeDefaultByteToNameMap");
 
@@ -35,7 +35,7 @@ TMap<unsigned char, struct FName> UBTL_CommandLibrary_C::MakeDefaultByteToNameMa
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.IsAttackEquippable
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FName                   AttackID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -58,7 +58,7 @@ bool UBTL_CommandLibrary_C::IsAttackEquippable(const struct FName& AttackID)
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.GetAllAttacks
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // TArray<struct FName>           Attacks                        (Parm, OutParm, ZeroConstructor)
 
@@ -80,7 +80,7 @@ void UBTL_CommandLibrary_C::GetAllAttacks(TArray<struct FName>* Attacks)
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.Initialize
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -101,7 +101,7 @@ bool UBTL_CommandLibrary_C::Initialize()
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.GetAllSkillitemList
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // TArray<struct FName>           AllItems                       (Parm, OutParm, ZeroConstructor)
 
@@ -123,12 +123,12 @@ void UBTL_CommandLibrary_C::GetAllSkillitemList(TArray<struct FName>* AllItems)
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.GetSkillSortInt
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // struct FName                   Key                            (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // int                            Sortint                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_CommandLibrary_C::GetSkillSortInt(const struct FName& Key, int* Sortint)
+void UBTL_CommandLibrary_C::STATIC_GetSkillSortInt(const struct FName& Key, int* Sortint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.GetSkillSortInt");
 
@@ -136,6 +136,7 @@ void UBTL_CommandLibrary_C::GetSkillSortInt(const struct FName& Key, int* Sortin
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,12 +148,12 @@ void UBTL_CommandLibrary_C::GetSkillSortInt(const struct FName& Key, int* Sortin
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.MakeSkillCommandSortInt
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetMulticast, Private, BlueprintEvent)
 // Parameters:
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SortInt1                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_CommandLibrary_C::MakeSkillCommandSortInt(const struct FName& SkillItem, int* SortInt1)
+void UBTL_CommandLibrary_C::STATIC_MakeSkillCommandSortInt(const struct FName& SkillItem, int* SortInt1)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.MakeSkillCommandSortInt");
 
@@ -160,6 +161,7 @@ void UBTL_CommandLibrary_C::MakeSkillCommandSortInt(const struct FName& SkillIte
 	params.SkillItem = SkillItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,7 +173,7 @@ void UBTL_CommandLibrary_C::MakeSkillCommandSortInt(const struct FName& SkillIte
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackEquipSetting
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, MulticastDelegate, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FName                   Attack                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // EBTL_AutoOnOff                 Setting                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -184,6 +186,7 @@ void UBTL_CommandLibrary_C::FindAttackEquipSetting(const struct FName& Attack, E
 	params.Attack = Attack;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,12 +198,12 @@ void UBTL_CommandLibrary_C::FindAttackEquipSetting(const struct FName& Attack, E
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindMatchingCombo
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, Private, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // TArray<struct FName>           Attacks                        (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            FoundIndex                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_CommandLibrary_C::FindMatchingCombo(TArray<struct FName> Attacks, int* FoundIndex)
+void UBTL_CommandLibrary_C::STATIC_FindMatchingCombo(TArray<struct FName> Attacks, int* FoundIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindMatchingCombo");
 
@@ -208,6 +211,7 @@ void UBTL_CommandLibrary_C::FindMatchingCombo(TArray<struct FName> Attacks, int*
 	params.Attacks = Attacks;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -219,14 +223,14 @@ void UBTL_CommandLibrary_C::FindMatchingCombo(TArray<struct FName> Attacks, int*
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackInputsWithCombo
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintPure)
 // Parameters:
 // struct FName                   AttackID                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           InputEvents                    (Parm, OutParm, ZeroConstructor)
 // EBTL_HoldInputType             Hold                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_CommandLibrary_C::FindAttackInputsWithCombo(const struct FName& AttackID, TArray<struct FName>* InputEvents, EBTL_HoldInputType* Hold, bool* Found)
+void UBTL_CommandLibrary_C::STATIC_FindAttackInputsWithCombo(const struct FName& AttackID, TArray<struct FName>* InputEvents, EBTL_HoldInputType* Hold, bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackInputsWithCombo");
 
@@ -234,6 +238,7 @@ void UBTL_CommandLibrary_C::FindAttackInputsWithCombo(const struct FName& Attack
 	params.AttackID = AttackID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -249,14 +254,14 @@ void UBTL_CommandLibrary_C::FindAttackInputsWithCombo(const struct FName& Attack
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackCommand
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FName                   Attack                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<TEnumAsByte<EBattleAttackInput>> OutCommand                     (Parm, OutParm, ZeroConstructor)
 // EBTL_HoldInputType             Hold                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bFound                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_CommandLibrary_C::FindAttackCommand(const struct FName& Attack, TArray<TEnumAsByte<EBattleAttackInput>>* OutCommand, EBTL_HoldInputType* Hold, bool* bFound)
+void UBTL_CommandLibrary_C::STATIC_FindAttackCommand(const struct FName& Attack, TArray<TEnumAsByte<EBattleAttackInput>>* OutCommand, EBTL_HoldInputType* Hold, bool* bFound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackCommand");
 
@@ -279,14 +284,14 @@ void UBTL_CommandLibrary_C::FindAttackCommand(const struct FName& Attack, TArray
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackInputs
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FName                   Attack                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           InputEvents                    (Parm, OutParm, ZeroConstructor)
 // EBTL_HoldInputType             Hold                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_CommandLibrary_C::FindAttackInputs(const struct FName& Attack, TArray<struct FName>* InputEvents, EBTL_HoldInputType* Hold, bool* Found)
+void UBTL_CommandLibrary_C::STATIC_FindAttackInputs(const struct FName& Attack, TArray<struct FName>* InputEvents, EBTL_HoldInputType* Hold, bool* Found)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackInputs");
 
@@ -294,6 +299,7 @@ void UBTL_CommandLibrary_C::FindAttackInputs(const struct FName& Attack, TArray<
 	params.Attack = Attack;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -309,13 +315,13 @@ void UBTL_CommandLibrary_C::FindAttackInputs(const struct FName& Attack, TArray<
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackByItemName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FName                   SkillItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Attack                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bFound                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_CommandLibrary_C::FindAttackByItemName(const struct FName& SkillItem, struct FName* Attack, bool* bFound)
+void UBTL_CommandLibrary_C::STATIC_FindAttackByItemName(const struct FName& SkillItem, struct FName* Attack, bool* bFound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.FindAttackByItemName");
 
@@ -323,6 +329,7 @@ void UBTL_CommandLibrary_C::FindAttackByItemName(const struct FName& SkillItem, 
 	params.SkillItem = SkillItem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -336,12 +343,12 @@ void UBTL_CommandLibrary_C::FindAttackByItemName(const struct FName& SkillItem, 
 
 
 // Function BTL_CommandLibrary.BTL_CommandLibrary_C.StringToCommandArray
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FString                 S                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TArray<TEnumAsByte<EBattleAttackInput>> Commands                       (Parm, OutParm, ZeroConstructor)
 
-void UBTL_CommandLibrary_C::StringToCommandArray(const struct FString& S, TArray<TEnumAsByte<EBattleAttackInput>>* Commands)
+void UBTL_CommandLibrary_C::STATIC_StringToCommandArray(const struct FString& S, TArray<TEnumAsByte<EBattleAttackInput>>* Commands)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_CommandLibrary.BTL_CommandLibrary_C.StringToCommandArray");
 

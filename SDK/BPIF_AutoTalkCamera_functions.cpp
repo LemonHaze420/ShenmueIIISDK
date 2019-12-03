@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPIF_AutoTalkCamera.BPIF_AutoTalkCamera_C.ChangeTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class AActor*>          NewTarget                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          lerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPIF_AutoTalkCamera_C::ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
+void UBPIF_AutoTalkCamera_C::STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPIF_AutoTalkCamera.BPIF_AutoTalkCamera_C.ChangeTarget");
 

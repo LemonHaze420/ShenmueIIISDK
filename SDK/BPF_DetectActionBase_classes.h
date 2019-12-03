@@ -26,9 +26,9 @@ public:
 
 
 	void STATIC_ForbidAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
-	void STATIC_PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
+	void PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
 	void STATIC_ForbidWindowUI(class AActor* Actor, class UObject* __WorldContext);
-	void STATIC_PermitWindowUI(class AActor* Actor, class UObject* __WorldContext);
+	void PermitWindowUI(class AActor* Actor, class UObject* __WorldContext);
 };
 
 

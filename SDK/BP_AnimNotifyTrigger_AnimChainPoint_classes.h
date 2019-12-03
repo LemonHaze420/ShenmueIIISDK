@@ -25,7 +25,8 @@ public:
 	}
 
 
-	struct FString GetNotifyName();
+	struct FString STATIC_GetNotifyName();
+	void STATIC_GetNotifyID(struct FName* NotifyID);
 };
 
 

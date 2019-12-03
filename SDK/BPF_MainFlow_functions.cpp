@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_MainFlow.BPF_MainFlow_C.getS3MainFlowManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_MainFlowManager_C*   MainFlowManager                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MainFlow_C::STATIC_getS3MainFlowManager(class UObject* __WorldContext, class ABP_MainFlowManager_C** MainFlowManager)
+void UBPF_MainFlow_C::getS3MainFlowManager(class UObject* __WorldContext, class ABP_MainFlowManager_C** MainFlowManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MainFlow.BPF_MainFlow_C.getS3MainFlowManager");
 
@@ -27,6 +27,7 @@ void UBPF_MainFlow_C::STATIC_getS3MainFlowManager(class UObject* __WorldContext,
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

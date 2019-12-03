@@ -31,9 +31,9 @@ public:
 
 
 	void GetInInteractArea(class AS3Character* Character, bool* bInRange);
-	void GetPointOnInteractArea(const struct FVector& Location, struct FVector* Closest);
-	void UserConstructionScript();
-	void BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_GetPointOnInteractArea(const struct FVector& Location, struct FVector* Closest);
+	void STATIC_UserConstructionScript();
+	void STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ExecuteUbergraph_BP_Follower_POI(int EntryPoint);
 };

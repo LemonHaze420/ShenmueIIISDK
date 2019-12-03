@@ -25,15 +25,15 @@ public:
 	}
 
 
-	void EnabledPlayerOnDecide();
-	void SetChooseCameraTransform();
-	void GetRewardFeed(ES3RewardType* Type);
-	void SetEnabledPlayerEvent(bool Enabled);
-	void GetCamera(class UCameraComponent** newParam);
-	void GetBetZoomTarget(class USceneComponent** newParam);
-	void GetZoomTarget(class USceneComponent** newParam);
-	void BindTalkEndEvent();
-	void CreateNailEvent();
+	void STATIC_EnabledPlayerOnDecide();
+	void STATIC_SetChooseCameraTransform();
+	void STATIC_GetRewardFeed(ES3RewardType* Type);
+	void STATIC_SetEnabledPlayerEvent(bool Enabled);
+	void STATIC_GetCamera(class UCameraComponent** newParam);
+	void STATIC_GetBetZoomTarget(class USceneComponent** newParam);
+	void STATIC_GetZoomTarget(class USceneComponent** newParam);
+	void STATIC_BindTalkEndEvent();
+	void STATIC_CreateNailEvent();
 };
 
 

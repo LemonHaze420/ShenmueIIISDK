@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AchievementManager.BP_S3AchievementManager_C.WriteAchievement
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // ES3AchievementType             ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

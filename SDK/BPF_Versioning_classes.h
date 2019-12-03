@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_GetAvailableVoiceLanguages(class UObject* __WorldContext, TArray<ES3VoiceLanguage>* Languages);
+	void GetAvailableVoiceLanguages(class UObject* __WorldContext, TArray<ES3VoiceLanguage>* Languages);
 	void STATIC_GetAvailableLocales(class UObject* __WorldContext, TArray<ES3Locale>* Locales);
 };
 

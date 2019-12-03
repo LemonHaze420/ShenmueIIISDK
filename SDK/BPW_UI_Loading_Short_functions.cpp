@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.ChangeFontColor
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPW_UI_Loading_Short_C::ChangeFontColor(class UTextBlock* Text)
 
 
 // Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.StartFade
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // bool                           In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,6 +46,7 @@ void UBPW_UI_Loading_Short_C::StartFade(bool In)
 	params.In = In;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,15 +55,16 @@ void UBPW_UI_Loading_Short_C::StartFade(bool In)
 
 
 // Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void UBPW_UI_Loading_Short_C::Construct()
+void UBPW_UI_Loading_Short_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.Construct");
 
 	UBPW_UI_Loading_Short_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +73,7 @@ void UBPW_UI_Loading_Short_C::Construct()
 
 
 // Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Private, Protected, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -85,6 +87,7 @@ void UBPW_UI_Loading_Short_C::Tick(const struct FGeometry& MyGeometry, float InD
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,11 +96,11 @@ void UBPW_UI_Loading_Short_C::Tick(const struct FGeometry& MyGeometry, float InD
 
 
 // Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.ExecuteUbergraph_BPW_UI_Loading_Short
-// (HasDefaults)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_Loading_Short_C::ExecuteUbergraph_BPW_UI_Loading_Short(int EntryPoint)
+void UBPW_UI_Loading_Short_C::STATIC_ExecuteUbergraph_BPW_UI_Loading_Short(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.ExecuteUbergraph_BPW_UI_Loading_Short");
 
@@ -105,6 +108,7 @@ void UBPW_UI_Loading_Short_C::ExecuteUbergraph_BPW_UI_Loading_Short(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,7 +117,7 @@ void UBPW_UI_Loading_Short_C::ExecuteUbergraph_BPW_UI_Loading_Short(int EntryPoi
 
 
 // Function BPW_UI_Loading_Short.BPW_UI_Loading_Short_C.OnFinishFadeOut__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
 
 void UBPW_UI_Loading_Short_C::OnFinishFadeOut__DelegateSignature()
 {
@@ -122,6 +126,7 @@ void UBPW_UI_Loading_Short_C::OnFinishFadeOut__DelegateSignature()
 	UBPW_UI_Loading_Short_C_OnFinishFadeOut__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

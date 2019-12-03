@@ -29,8 +29,8 @@ public:
 	}
 
 
-	void ConvertTime(float Minutes, int* Time);
-	void UpdateGlobalFlag();
+	void STATIC_ConvertTime(float Minutes, int* Time);
+	void STATIC_UpdateGlobalFlag();
 	void ReceiveBeginPlay();
 	void BindGameTimeManager();
 	void UnbindGameTimeManager();

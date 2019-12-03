@@ -42,11 +42,11 @@ public:
 	}
 
 
-	void CheckSkip(bool* dummy);
+	void STATIC_CheckSkip(bool* dummy);
 	class APawn* SpawnDefaultPawnFor(class AController* NewPlayer, class AActor* StartSpot);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_S3GamemodeBase(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_S3GamemodeBase(int EntryPoint);
 };
 
 

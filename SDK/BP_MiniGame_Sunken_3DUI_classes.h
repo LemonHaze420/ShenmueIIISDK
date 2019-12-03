@@ -70,9 +70,9 @@ public:
 	}
 
 
-	void CheckTiming(bool* IsJust, bool* IsEx);
+	void STATIC_CheckTiming(bool* IsJust, bool* IsEx);
 	void SetJustTiming(bool IsJustTiming);
-	void UpdateToMaxDistance();
+	void STATIC_UpdateToMaxDistance();
 	void UpdateBar(float Rate);
 	void UserConstructionScript();
 	void Timeline_FlashCenterBar__FinishedFunc();
@@ -89,8 +89,8 @@ public:
 	void Timeline_ActionTiming__StartJust__EventFunc();
 	void ReceiveBeginPlay();
 	void Event_FlashCenterBar();
-	void Event_EnabledSideBar(bool Enabled);
-	void Event_ForceSideBarEnabled(bool Visible);
+	void STATIC_Event_EnabledSideBar(bool Enabled);
+	void STATIC_Event_ForceSideBarEnabled(bool Visible);
 	void StartActionTiming();
 	void ExecuteUbergraph_BP_MiniGame_Sunken_3DUI(int EntryPoint);
 };

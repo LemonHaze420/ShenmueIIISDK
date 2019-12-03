@@ -26,9 +26,9 @@ public:
 
 
 	bool STATIC_BPF_ShouldShowSkillAquisitionHint(class UObject* __WorldContext);
-	bool STATIC_BPF_HasPlayerMasteredAllSkills(class UObject* __WorldContext);
-	int STATIC_BPF_CountNonMasteredSkills(class UObject* __WorldContext);
-	bool STATIC_BPF_IsPlayerSkillMastered(const struct FName& SkillItem, class UObject* __WorldContext);
+	bool BPF_HasPlayerMasteredAllSkills(class UObject* __WorldContext);
+	int BPF_CountNonMasteredSkills(class UObject* __WorldContext);
+	bool BPF_IsPlayerSkillMastered(const struct FName& SkillItem, class UObject* __WorldContext);
 	void STATIC_BPF_GetPlayerSkillLevelData(const struct FName& SkillItem, class UObject* __WorldContext, int* OutLevel, float* OutNextRatio, int* SkillMinLevel, int* SkillMaxLevel);
 	void STATIC_BPF_GetPlayerSkillLevelMax(const struct FName& Key, class UObject* __WorldContext, int* OutLevel);
 	float STATIC_BPF_GetPlayerSkillLevelAsRatio(const struct FName& Key, class UObject* __WorldContext);

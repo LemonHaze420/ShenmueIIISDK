@@ -30,15 +30,15 @@ public:
 	}
 
 
-	bool ShouldSetPlayerBehavior();
-	void UserConstructionScript();
+	bool STATIC_ShouldSetPlayerBehavior();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void EnablePlayerInput(bool Condition);
-	void BindDIalogFinish(bool Bind);
-	void StartPause(bool Pause);
-	void OnDialogClose(class AActor* Actor);
-	void ExecuteUbergraph_BP_FoodTutorialEvent(int EntryPoint);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_EnablePlayerInput(bool Condition);
+	void STATIC_BindDIalogFinish(bool Bind);
+	void STATIC_StartPause(bool Pause);
+	void STATIC_OnDialogClose(class AActor* Actor);
+	void STATIC_ExecuteUbergraph_BP_FoodTutorialEvent(int EntryPoint);
 };
 
 

@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ClothManager.BP_ClothManager_C.GetPartsMaterial
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class US3ClothPartsDataAsset*  DataAsset                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::GetPartsMaterial(class US3ClothPartsDataAsset* DataAsset)
+void ABP_ClothManager_C::STATIC_GetPartsMaterial(class US3ClothPartsDataAsset* DataAsset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.GetPartsMaterial");
 
@@ -26,6 +26,7 @@ void ABP_ClothManager_C::GetPartsMaterial(class US3ClothPartsDataAsset* DataAsse
 	params.DataAsset = DataAsset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void ABP_ClothManager_C::GetPartsMaterial(class US3ClothPartsDataAsset* DataAsse
 
 
 // Function BP_ClothManager.BP_ClothManager_C.InitSheParts
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_ClothManager_C::InitSheParts()
 {
@@ -51,12 +52,12 @@ void ABP_ClothManager_C::InitSheParts()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetDefaultPartsMap
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           RYO                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TMap<EClothPartsType, struct FName> Map                            (Parm, OutParm, ZeroConstructor)
 
-void ABP_ClothManager_C::GetDefaultPartsMap(bool RYO, TMap<EClothPartsType, struct FName>* Map)
+void ABP_ClothManager_C::STATIC_GetDefaultPartsMap(bool RYO, TMap<EClothPartsType, struct FName>* Map)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.GetDefaultPartsMap");
 
@@ -64,6 +65,7 @@ void ABP_ClothManager_C::GetDefaultPartsMap(bool RYO, TMap<EClothPartsType, stru
 	params.RYO = RYO;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,13 +77,13 @@ void ABP_ClothManager_C::GetDefaultPartsMap(bool RYO, TMap<EClothPartsType, stru
 
 
 // Function BP_ClothManager.BP_ClothManager_C.IsReinitPose
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Event, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class USkeletalMeshComponent*  Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReinitPose                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::IsReinitPose(class USkeletalMeshComponent* Component, const struct FName& CharaName, bool* ReinitPose)
+void ABP_ClothManager_C::STATIC_IsReinitPose(class USkeletalMeshComponent* Component, const struct FName& CharaName, bool* ReinitPose)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.IsReinitPose");
 
@@ -101,7 +103,7 @@ void ABP_ClothManager_C::IsReinitPose(class USkeletalMeshComponent* Component, c
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetWearMeshType
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           RYO                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3CharaMeshType               Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -114,6 +116,7 @@ void ABP_ClothManager_C::GetWearMeshType(bool RYO, ES3CharaMeshType* Type)
 	params.RYO = RYO;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,7 +128,7 @@ void ABP_ClothManager_C::GetWearMeshType(bool RYO, ES3CharaMeshType* Type)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.UpdateWear
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TMap<EClothPartsType, struct FName> Map                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -145,7 +148,7 @@ void ABP_ClothManager_C::UpdateWear(TMap<EClothPartsType, struct FName> Map)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetJeansMaterial
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UMaterialInstance*       Material                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -156,6 +159,7 @@ void ABP_ClothManager_C::GetJeansMaterial(class UMaterialInstance** Material)
 	ABP_ClothManager_C_GetJeansMaterial_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +171,7 @@ void ABP_ClothManager_C::GetJeansMaterial(class UMaterialInstance** Material)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetTShirtsMaterial
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, NetMulticast, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UMaterialInstance*       Material                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -178,6 +182,7 @@ void ABP_ClothManager_C::GetTShirtsMaterial(class UMaterialInstance** Material)
 	ABP_ClothManager_C_GetTShirtsMaterial_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,13 +194,13 @@ void ABP_ClothManager_C::GetTShirtsMaterial(class UMaterialInstance** Material)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ResetMaterial
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AS3Character*            Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent*  InComponent                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class USkeletalMeshComponent*  OutComponent                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_ClothManager_C::ResetMaterial(class AS3Character* Character, class USkeletalMeshComponent* InComponent, class USkeletalMeshComponent** OutComponent)
+void ABP_ClothManager_C::STATIC_ResetMaterial(class AS3Character* Character, class USkeletalMeshComponent* InComponent, class USkeletalMeshComponent** OutComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ResetMaterial");
 
@@ -215,11 +220,11 @@ void ABP_ClothManager_C::ResetMaterial(class AS3Character* Character, class USke
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetShoesMaterialIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::GetShoesMaterialIndex(int* Index)
+void ABP_ClothManager_C::STATIC_GetShoesMaterialIndex(int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.GetShoesMaterialIndex");
 
@@ -237,17 +242,18 @@ void ABP_ClothManager_C::GetShoesMaterialIndex(int* Index)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetBottomsMaterialIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::GetBottomsMaterialIndex(int* Index)
+void ABP_ClothManager_C::STATIC_GetBottomsMaterialIndex(int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.GetBottomsMaterialIndex");
 
 	ABP_ClothManager_C_GetBottomsMaterialIndex_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,13 +265,13 @@ void ABP_ClothManager_C::GetBottomsMaterialIndex(int* Index)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.IsCharaTagMatching
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor*                  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Tag                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Match                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::IsCharaTagMatching(class AActor* Target, const struct FName& Tag, bool* Match)
+void ABP_ClothManager_C::STATIC_IsCharaTagMatching(class AActor* Target, const struct FName& Tag, bool* Match)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.IsCharaTagMatching");
 
@@ -274,6 +280,7 @@ void ABP_ClothManager_C::IsCharaTagMatching(class AActor* Target, const struct F
 	params.Tag = Tag;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,7 +292,7 @@ void ABP_ClothManager_C::IsCharaTagMatching(class AActor* Target, const struct F
 
 
 // Function BP_ClothManager.BP_ClothManager_C.CheckUnlock
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           RYO                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -305,12 +312,12 @@ void ABP_ClothManager_C::CheckUnlock(bool RYO)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetUnlockedClothParts
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, NetResponse, Static, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<struct FName>           UnlockedParts                  (Parm, OutParm, ZeroConstructor)
 // bool                           bRyo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::GetUnlockedClothParts(bool bRyo, TArray<struct FName>* UnlockedParts)
+void ABP_ClothManager_C::STATIC_GetUnlockedClothParts(bool bRyo, TArray<struct FName>* UnlockedParts)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.GetUnlockedClothParts");
 
@@ -329,11 +336,11 @@ void ABP_ClothManager_C::GetUnlockedClothParts(bool bRyo, TArray<struct FName>* 
 
 
 // Function BP_ClothManager.BP_ClothManager_C.IsStreaming
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Streaming                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::IsStreaming(bool* Streaming)
+void ABP_ClothManager_C::STATIC_IsStreaming(bool* Streaming)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.IsStreaming");
 
@@ -351,12 +358,12 @@ void ABP_ClothManager_C::IsStreaming(bool* Streaming)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.CheckGetUnlockParts
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Num                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::CheckGetUnlockParts(const struct FName& ItemId, int Num)
+void ABP_ClothManager_C::STATIC_CheckGetUnlockParts(const struct FName& ItemId, int Num)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.CheckGetUnlockParts");
 
@@ -365,6 +372,7 @@ void ABP_ClothManager_C::CheckGetUnlockParts(const struct FName& ItemId, int Num
 	params.Num = Num;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -373,7 +381,7 @@ void ABP_ClothManager_C::CheckGetUnlockParts(const struct FName& ItemId, int Num
 
 
 // Function BP_ClothManager.BP_ClothManager_C.CheckInitUnlockParts
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 
 void ABP_ClothManager_C::CheckInitUnlockParts()
 {
@@ -382,6 +390,7 @@ void ABP_ClothManager_C::CheckInitUnlockParts()
 	ABP_ClothManager_C_CheckInitUnlockParts_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -390,7 +399,7 @@ void ABP_ClothManager_C::CheckInitUnlockParts()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.FinishFitting
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Apply                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -410,12 +419,12 @@ void ABP_ClothManager_C::FinishFitting(bool Apply)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.Fitting
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FST_ClothesFittingInfo> FittingInfo                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_ClothManager_C::Fitting(const TScriptInterface<class US3ClothInterface>& Interface, TArray<struct FST_ClothesFittingInfo>* FittingInfo)
+void ABP_ClothManager_C::STATIC_Fitting(const TScriptInterface<class US3ClothInterface>& Interface, TArray<struct FST_ClothesFittingInfo>* FittingInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.Fitting");
 
@@ -434,7 +443,7 @@ void ABP_ClothManager_C::Fitting(const TScriptInterface<class US3ClothInterface>
 
 
 // Function BP_ClothManager.BP_ClothManager_C.DebugSetupRyoMesh
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_ClothManager_C::DebugSetupRyoMesh()
 {
@@ -451,7 +460,7 @@ void ABP_ClothManager_C::DebugSetupRyoMesh()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetPartsReference
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   PartsID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // EClothPartsType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -465,6 +474,7 @@ void ABP_ClothManager_C::GetPartsReference(const struct FName& PartsID, EClothPa
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -473,7 +483,7 @@ void ABP_ClothManager_C::GetPartsReference(const struct FName& PartsID, EClothPa
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetMeshReference
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, NetResponse, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   MeshID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3CharaMeshType               Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -495,17 +505,18 @@ void ABP_ClothManager_C::GetMeshReference(const struct FName& MeshID, ES3CharaMe
 
 
 // Function BP_ClothManager.BP_ClothManager_C.GetDebugPlayerCharaName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FName                   CharaName                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::GetDebugPlayerCharaName(struct FName* CharaName)
+void ABP_ClothManager_C::STATIC_GetDebugPlayerCharaName(struct FName* CharaName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.GetDebugPlayerCharaName");
 
 	ABP_ClothManager_C_GetDebugPlayerCharaName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -517,12 +528,12 @@ void ABP_ClothManager_C::GetDebugPlayerCharaName(struct FName* CharaName)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ChangeClothes_Impl
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3CharaMeshType               Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::ChangeClothes_Impl(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type)
+void ABP_ClothManager_C::STATIC_ChangeClothes_Impl(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ChangeClothes_Impl");
 
@@ -539,7 +550,7 @@ void ABP_ClothManager_C::ChangeClothes_Impl(const TScriptInterface<class US3Clot
 
 
 // Function BP_ClothManager.BP_ClothManager_C.UpdateShenfaMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_ClothManager_C::UpdateShenfaMesh()
 {
@@ -548,6 +559,7 @@ void ABP_ClothManager_C::UpdateShenfaMesh()
 	ABP_ClothManager_C_UpdateShenfaMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -556,15 +568,16 @@ void ABP_ClothManager_C::UpdateShenfaMesh()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.UpdateRyoMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_ClothManager_C::UpdateRyoMesh()
+void ABP_ClothManager_C::STATIC_UpdateRyoMesh()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.UpdateRyoMesh");
 
 	ABP_ClothManager_C_UpdateRyoMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -573,7 +586,7 @@ void ABP_ClothManager_C::UpdateRyoMesh()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.SetupSkeletalMesh
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3Character*            S3Character                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent*  Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -590,6 +603,7 @@ void ABP_ClothManager_C::SetupSkeletalMesh(class AS3Character* S3Character, clas
 	params.Interface = Interface;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -601,13 +615,13 @@ void ABP_ClothManager_C::SetupSkeletalMesh(class AS3Character* S3Character, clas
 
 
 // Function BP_ClothManager.BP_ClothManager_C.StartAsyncLoadObject
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // ES3CharaMeshType               MeshType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::StartAsyncLoadObject(ES3CharaMeshType MeshType, const struct FName& CharaName, const TScriptInterface<class US3ClothInterface>& Interface)
+void ABP_ClothManager_C::STATIC_StartAsyncLoadObject(ES3CharaMeshType MeshType, const struct FName& CharaName, const TScriptInterface<class US3ClothInterface>& Interface)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.StartAsyncLoadObject");
 
@@ -617,6 +631,7 @@ void ABP_ClothManager_C::StartAsyncLoadObject(ES3CharaMeshType MeshType, const s
 	params.Interface = Interface;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -625,12 +640,12 @@ void ABP_ClothManager_C::StartAsyncLoadObject(ES3CharaMeshType MeshType, const s
 
 
 // Function BP_ClothManager.BP_ClothManager_C.DebugSetRyoMeshId
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   MeshID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           WithChange                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::DebugSetRyoMeshId(const struct FName& MeshID, bool WithChange)
+void ABP_ClothManager_C::STATIC_DebugSetRyoMeshId(const struct FName& MeshID, bool WithChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.DebugSetRyoMeshId");
 
@@ -639,6 +654,7 @@ void ABP_ClothManager_C::DebugSetRyoMeshId(const struct FName& MeshID, bool With
 	params.WithChange = WithChange;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -647,9 +663,9 @@ void ABP_ClothManager_C::DebugSetRyoMeshId(const struct FName& MeshID, bool With
 
 
 // Function BP_ClothManager.BP_ClothManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_ClothManager_C::UserConstructionScript()
+void ABP_ClothManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.UserConstructionScript");
 
@@ -664,11 +680,11 @@ void ABP_ClothManager_C::UserConstructionScript()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.OnLoaded_68DAAF824D005673C28CC89A68FA961E
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::OnLoaded_68DAAF824D005673C28CC89A68FA961E(class UObject* Loaded)
+void ABP_ClothManager_C::STATIC_OnLoaded_68DAAF824D005673C28CC89A68FA961E(class UObject* Loaded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.OnLoaded_68DAAF824D005673C28CC89A68FA961E");
 
@@ -684,9 +700,9 @@ void ABP_ClothManager_C::OnLoaded_68DAAF824D005673C28CC89A68FA961E(class UObject
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Event, NetResponse, Static, NetServer)
 
-void ABP_ClothManager_C::ReceiveBeginPlay()
+void ABP_ClothManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ReceiveBeginPlay");
 
@@ -701,11 +717,11 @@ void ABP_ClothManager_C::ReceiveBeginPlay()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_ClothManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ReceiveTick");
 
@@ -721,12 +737,12 @@ void ABP_ClothManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ChangeClothes
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // ES3CharaMeshType               Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::ChangeClothes(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type)
+void ABP_ClothManager_C::STATIC_ChangeClothes(const TScriptInterface<class US3ClothInterface>& Interface, ES3CharaMeshType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ChangeClothes");
 
@@ -743,12 +759,12 @@ void ABP_ClothManager_C::ChangeClothes(const TScriptInterface<class US3ClothInte
 
 
 // Function BP_ClothManager.BP_ClothManager_C.SetSheMeshType
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // ES3CharaMeshType               Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bWithChange                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::SetSheMeshType(ES3CharaMeshType Type, bool bWithChange)
+void ABP_ClothManager_C::STATIC_SetSheMeshType(ES3CharaMeshType Type, bool bWithChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.SetSheMeshType");
 
@@ -765,15 +781,16 @@ void ABP_ClothManager_C::SetSheMeshType(ES3CharaMeshType Type, bool bWithChange)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.WaitSpawnPlayer
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetServer)
 
-void ABP_ClothManager_C::WaitSpawnPlayer()
+void ABP_ClothManager_C::STATIC_WaitSpawnPlayer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.WaitSpawnPlayer");
 
 	ABP_ClothManager_C_WaitSpawnPlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -782,11 +799,11 @@ void ABP_ClothManager_C::WaitSpawnPlayer()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_ClothManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ReceiveEndPlay");
 
@@ -802,13 +819,13 @@ void ABP_ClothManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ChangeItemNum
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NewNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OldNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum)
+void ABP_ClothManager_C::STATIC_ChangeItemNum(const struct FName& ItemId, int NewNum, int OldNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ChangeItemNum");
 
@@ -818,6 +835,7 @@ void ABP_ClothManager_C::ChangeItemNum(const struct FName& ItemId, int NewNum, i
 	params.OldNum = OldNum;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -826,12 +844,12 @@ void ABP_ClothManager_C::ChangeItemNum(const struct FName& ItemId, int NewNum, i
 
 
 // Function BP_ClothManager.BP_ClothManager_C.SetRyoMeshType
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // ES3CharaMeshType               Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bWithChange                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::SetRyoMeshType(ES3CharaMeshType Type, bool bWithChange)
+void ABP_ClothManager_C::STATIC_SetRyoMeshType(ES3CharaMeshType Type, bool bWithChange)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.SetRyoMeshType");
 
@@ -840,6 +858,7 @@ void ABP_ClothManager_C::SetRyoMeshType(ES3CharaMeshType Type, bool bWithChange)
 	params.bWithChange = bWithChange;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -848,15 +867,16 @@ void ABP_ClothManager_C::SetRyoMeshType(ES3CharaMeshType Type, bool bWithChange)
 
 
 // Function BP_ClothManager.BP_ClothManager_C.WaitReward
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetServer)
 
-void ABP_ClothManager_C::WaitReward()
+void ABP_ClothManager_C::STATIC_WaitReward()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.WaitReward");
 
 	ABP_ClothManager_C_WaitReward_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -865,15 +885,16 @@ void ABP_ClothManager_C::WaitReward()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.DelayCheckUnlock
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, NetServer)
 
-void ABP_ClothManager_C::DelayCheckUnlock()
+void ABP_ClothManager_C::STATIC_DelayCheckUnlock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.DelayCheckUnlock");
 
 	ABP_ClothManager_C_DelayCheckUnlock_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -882,11 +903,11 @@ void ABP_ClothManager_C::DelayCheckUnlock()
 
 
 // Function BP_ClothManager.BP_ClothManager_C.ExecuteUbergraph_BP_ClothManager
-// (HasDefaults)
+// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ClothManager_C::ExecuteUbergraph_BP_ClothManager(int EntryPoint)
+void ABP_ClothManager_C::STATIC_ExecuteUbergraph_BP_ClothManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ClothManager.BP_ClothManager_C.ExecuteUbergraph_BP_ClothManager");
 

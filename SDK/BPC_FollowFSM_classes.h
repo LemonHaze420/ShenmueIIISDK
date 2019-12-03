@@ -49,18 +49,18 @@ public:
 	}
 
 
-	void TryClearPathFailure(float DeltaSeconds);
-	void FailedPath();
-	class US3PathFollowingComponent* GetPathFollowingComponent();
+	void STATIC_TryClearPathFailure(float DeltaSeconds);
+	void STATIC_FailedPath();
+	class US3PathFollowingComponent* STATIC_GetPathFollowingComponent();
 	void EnablePathMassaging(bool Enable);
 	void IsFollowEnabled(bool* EnableFollow);
-	class ABP_NPC_Lead_C* GetPawn();
+	class ABP_NPC_Lead_C* STATIC_GetPawn();
 	void Reset();
 	void UpdateLeaderData();
 	void UpdatePOIData();
 	void Update(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_FollowFSM(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_FollowFSM(int EntryPoint);
 };
 
 

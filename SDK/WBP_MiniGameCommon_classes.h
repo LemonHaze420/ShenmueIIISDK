@@ -35,8 +35,8 @@ public:
 	void SetIconImageSize(const struct FVector2D& DesiredSize);
 	void SetVisibleButtonIcon(bool Visible);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Construct();
-	void ExecuteUbergraph_WBP_MiniGameCommon(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_WBP_MiniGameCommon(int EntryPoint);
 };
 
 

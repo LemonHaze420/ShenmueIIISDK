@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimMarker_Snapshot.BP_AnimMarker_Snapshot_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -25,6 +25,7 @@ struct FString UBP_AnimMarker_Snapshot_C::GetNotifyName()
 	UBP_AnimMarker_Snapshot_C_GetNotifyName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

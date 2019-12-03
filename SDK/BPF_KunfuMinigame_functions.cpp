@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_KunfuMinigame.BPF_KunfuMinigame_C.BPF_GetAllKunFuKeys_Minigame
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, NetResponse, Static, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UBPF_KunfuMinigame_C::STATIC_BPF_GetAllKunFuKeys_Minigame(class UObject* __
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,13 +35,13 @@ void UBPF_KunfuMinigame_C::STATIC_BPF_GetAllKunFuKeys_Minigame(class UObject* __
 
 
 // Function BPF_KunfuMinigame.BPF_KunfuMinigame_C.BPF_GetKunfuKey_Minigame
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_KungFuType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName UBPF_KunfuMinigame_C::STATIC_BPF_GetKunfuKey_Minigame(TEnumAsByte<E_MiniGame_KungFuType> Type, class UObject* __WorldContext)
+struct FName UBPF_KunfuMinigame_C::BPF_GetKunfuKey_Minigame(TEnumAsByte<E_MiniGame_KungFuType> Type, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_KunfuMinigame.BPF_KunfuMinigame_C.BPF_GetKunfuKey_Minigame");
 

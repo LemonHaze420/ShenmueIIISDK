@@ -27,15 +27,15 @@ public:
 
 
 	void PrelaunchBattle(bool* dummy);
-	void SelectLoadingHint(bool* Found, struct FST_LoadingHintWindowParam* Hint);
+	void STATIC_SelectLoadingHint(bool* Found, struct FST_LoadingHintWindowParam* Hint);
 	int CountHeldRecoveryItems();
 	bool AllowsRecoveryItems();
 	void IsSparring(bool* Enabled);
 	void GetRequiredLevels(TArray<struct FName>* Levels, bool* OneOrMore);
-	void StartLoadingLaunchData(class UBTL_LaunchParameters_C** LaunchDataObject);
-	void CreateLaunchDataObject(class UBTL_LaunchParameters_C** Object);
-	void GetBattleID(struct FName* ID);
-	void StartBattle(class ABP_BattleManagerBase_C* BattleManager, class UBTL_LaunchParameters_C* LaunchData, bool* dummy);
+	void STATIC_StartLoadingLaunchData(class UBTL_LaunchParameters_C** LaunchDataObject);
+	void STATIC_CreateLaunchDataObject(class UBTL_LaunchParameters_C** Object);
+	void STATIC_GetBattleID(struct FName* ID);
+	void STATIC_StartBattle(class ABP_BattleManagerBase_C* BattleManager, class UBTL_LaunchParameters_C* LaunchData, bool* dummy);
 	void ShutdownBattle(class ABP_BattleManagerBase_C* Manager, bool* dummy);
 	void UserConstructionScript();
 };

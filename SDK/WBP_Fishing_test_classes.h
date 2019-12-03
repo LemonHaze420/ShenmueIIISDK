@@ -51,21 +51,21 @@ public:
 	}
 
 
-	void SetRotateAnimMode(bool IsHighSpeed);
+	void STATIC_SetRotateAnimMode(bool IsHighSpeed);
 	void SetDistanceMax(float DistanceMax);
 	void SetVisibleIcon(bool ButtonVisible, bool RotateVisible, bool LStickVisible);
-	struct FText GetFishGramText();
-	void SetImagePositionY(class UImage* ArgImage, float ArgPosY);
-	void StartFishGaugeAnime();
+	struct FText STATIC_GetFishGramText();
+	void STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY);
+	void STATIC_StartFishGaugeAnime();
 	void UpdateFishGauge(bool* IsUpdate);
 	void SetDispFishGaugeAll(bool ArgDisp);
 	struct FText GetDistanceText();
-	struct FText GetFishScaleText();
-	struct FText GetFishNameText();
+	struct FText STATIC_GetFishScaleText();
+	struct FText STATIC_GetFishNameText();
 	void Construct();
-	void SetCaptcherVisible(ESlateVisibility InVisibility);
-	void SetResultVisible(ESlateVisibility InVisibility);
-	void ExecuteUbergraph_WBP_Fishing_test(int EntryPoint);
+	void STATIC_SetCaptcherVisible(ESlateVisibility InVisibility);
+	void STATIC_SetResultVIsible(ESlateVisibility InVisibility);
+	void STATIC_ExecuteUbergraph_WBP_Fishing_test(int EntryPoint);
 };
 
 

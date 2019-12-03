@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.SetCharaName
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   NewName                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UABP_S3_ACCharacter_C::SetCharaName(const struct FName& NewName)
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.IsReadyTalk
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -55,7 +55,7 @@ bool UABP_S3_ACCharacter_C::IsReadyTalk()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AttachAnimObject
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // ENPCAttachFrom                 From                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -83,17 +83,18 @@ void UABP_S3_ACCharacter_C::AttachAnimObject(ENPCAttachFrom From, class AActor* 
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.Attach_DefinitionFromHaveItem
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FHaveItemAttachSetting  HaveItem                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UABP_S3_ACCharacter_C::Attach_DefinitionFromHaveItem(struct FHaveItemAttachSetting* HaveItem)
+void UABP_S3_ACCharacter_C::STATIC_Attach_DefinitionFromHaveItem(struct FHaveItemAttachSetting* HaveItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.Attach_DefinitionFromHaveItem");
 
 	UABP_S3_ACCharacter_C_Attach_DefinitionFromHaveItem_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,7 +106,7 @@ void UABP_S3_ACCharacter_C::Attach_DefinitionFromHaveItem(struct FHaveItemAttach
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.DetachAll
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::DetachAll()
 {
@@ -122,12 +123,12 @@ void UABP_S3_ACCharacter_C::DetachAll()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.GetAttachInfo
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBP_AnimNotify_Attach_C* Notify                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_NPC_AttachInfo      Info                           (Parm, OutParm)
 
-void UABP_S3_ACCharacter_C::GetAttachInfo(class UBP_AnimNotify_Attach_C* Notify, struct FST_NPC_AttachInfo* Info)
+void UABP_S3_ACCharacter_C::STATIC_GetAttachInfo(class UBP_AnimNotify_Attach_C* Notify, struct FST_NPC_AttachInfo* Info)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.GetAttachInfo");
 
@@ -135,6 +136,7 @@ void UABP_S3_ACCharacter_C::GetAttachInfo(class UBP_AnimNotify_Attach_C* Notify,
 	params.Notify = Notify;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,7 +148,7 @@ void UABP_S3_ACCharacter_C::GetAttachInfo(class UBP_AnimNotify_Attach_C* Notify,
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AttachStaticObject
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // ENPCAttachFrom                 From                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -174,11 +176,11 @@ void UABP_S3_ACCharacter_C::AttachStaticObject(ENPCAttachFrom From, class AActor
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.Attach
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FNPCAttachSetting       Setting                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UABP_S3_ACCharacter_C::Attach(struct FNPCAttachSetting* Setting)
+void UABP_S3_ACCharacter_C::STATIC_Attach(struct FNPCAttachSetting* Setting)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.Attach");
 
@@ -196,7 +198,7 @@ void UABP_S3_ACCharacter_C::Attach(struct FNPCAttachSetting* Setting)
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_CB95F9094739B009A3C66FBA30471F31
-// (BlueprintEvent)
+// (NetReliable, Exec, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_CB95F9094739B009A3C66FBA30471F31()
 {
@@ -213,7 +215,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_043A6256457A7CD0DB9BC8BA70202498
-// (BlueprintEvent)
+// (NetReliable, Exec, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_043A6256457A7CD0DB9BC8BA70202498()
 {
@@ -230,7 +232,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_613241A345B92B8202FED7B3D19799E5
-// (BlueprintEvent)
+// (Net, Exec, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_613241A345B92B8202FED7B3D19799E5()
 {
@@ -247,7 +249,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_5FF269CE4FE111C407DC82AAA7B9AD5A
-// (BlueprintEvent)
+// (Net, Exec, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_5FF269CE4FE111C407DC82AAA7B9AD5A()
 {
@@ -264,7 +266,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_25A040624373212E9146A8A14C0AB3C5
-// (BlueprintEvent)
+// (Exec, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_25A040624373212E9146A8A14C0AB3C5()
 {
@@ -281,7 +283,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_076800874AE8A307DD7B76AAB9AF9E05
-// (BlueprintEvent)
+// (Exec, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_076800874AE8A307DD7B76AAB9AF9E05()
 {
@@ -298,7 +300,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_A69B2A5543F9C8F71F228D82D3C3C77B
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_A69B2A5543F9C8F71F228D82D3C3C77B()
 {
@@ -315,7 +317,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_733F07F7489F702C70EBF586685C04C6
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_733F07F7489F702C70EBF586685C04C6()
 {
@@ -332,7 +334,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_06AB11D7478D87F7D2E7CDBBD55A4C05
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_06AB11D7478D87F7D2E7CDBBD55A4C05()
 {
@@ -349,7 +351,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_4418E22543E4B9C65AB7C58BA9FE43DD
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_4418E22543E4B9C65AB7C58BA9FE43DD()
 {
@@ -366,9 +368,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_F1EC4C2D43668D8B73CA489F63F5F743
-// (BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_F1EC4C2D43668D8B73CA489F63F5F743()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_F1EC4C2D43668D8B73CA489F63F5F743()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_F1EC4C2D43668D8B73CA489F63F5F743");
 
@@ -383,9 +385,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_DA7381A841467AC15D45D0A3EBE0A427
-// (BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_DA7381A841467AC15D45D0A3EBE0A427()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_DA7381A841467AC15D45D0A3EBE0A427()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_DA7381A841467AC15D45D0A3EBE0A427");
 
@@ -400,9 +402,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_DFAF7E7B48428CBCCAFD28983C5D3C4C
-// (BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_DFAF7E7B48428CBCCAFD28983C5D3C4C()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_DFAF7E7B48428CBCCAFD28983C5D3C4C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_DFAF7E7B48428CBCCAFD28983C5D3C4C");
 
@@ -417,9 +419,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_060034EC4B8CD885AA0CC8B3CB646651
-// (BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_060034EC4B8CD885AA0CC8B3CB646651()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_060034EC4B8CD885AA0CC8B3CB646651()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_060034EC4B8CD885AA0CC8B3CB646651");
 
@@ -434,9 +436,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_594328A0494A192C29296CB1C2B7C3C1
-// (BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_594328A0494A192C29296CB1C2B7C3C1()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_594328A0494A192C29296CB1C2B7C3C1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_594328A0494A192C29296CB1C2B7C3C1");
 
@@ -451,9 +453,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_6169B54C4DD021BA9DC22D9F89EDAA30
-// (BlueprintEvent)
+// (Net, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_6169B54C4DD021BA9DC22D9F89EDAA30()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_6169B54C4DD021BA9DC22D9F89EDAA30()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_6169B54C4DD021BA9DC22D9F89EDAA30");
 
@@ -468,9 +470,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_FB8BA695436655B06EBA709DBE1FB952
-// (BlueprintEvent)
+// (Net, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_FB8BA695436655B06EBA709DBE1FB952()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_FB8BA695436655B06EBA709DBE1FB952()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_FB8BA695436655B06EBA709DBE1FB952");
 
@@ -485,9 +487,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_B095B0A049028FAA77CC1AAE4CD27C4E
-// (BlueprintEvent)
+// (NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_B095B0A049028FAA77CC1AAE4CD27C4E()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_B095B0A049028FAA77CC1AAE4CD27C4E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_B095B0A049028FAA77CC1AAE4CD27C4E");
 
@@ -502,9 +504,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1DFF154D40EA788EEF7385B45B15D85F
-// (BlueprintEvent)
+// (NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1DFF154D40EA788EEF7385B45B15D85F()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1DFF154D40EA788EEF7385B45B15D85F()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1DFF154D40EA788EEF7385B45B15D85F");
 
@@ -519,9 +521,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1844A3E24300F4FFEEC255832D0CC0EC
-// (BlueprintEvent)
+// (Exec, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1844A3E24300F4FFEEC255832D0CC0EC()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1844A3E24300F4FFEEC255832D0CC0EC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_1844A3E24300F4FFEEC255832D0CC0EC");
 
@@ -536,9 +538,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9211CF5347245E63505F90BCFA5A1FFA
-// (BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9211CF5347245E63505F90BCFA5A1FFA()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9211CF5347245E63505F90BCFA5A1FFA()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9211CF5347245E63505F90BCFA5A1FFA");
 
@@ -553,9 +555,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_AE27EFFA4C6E4E51460A1EA17DB7388B
-// (BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_AE27EFFA4C6E4E51460A1EA17DB7388B()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_AE27EFFA4C6E4E51460A1EA17DB7388B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_AE27EFFA4C6E4E51460A1EA17DB7388B");
 
@@ -570,9 +572,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_E54F0A8447BF0C5DE4D1A983D49F8A03
-// (BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_E54F0A8447BF0C5DE4D1A983D49F8A03()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_E54F0A8447BF0C5DE4D1A983D49F8A03()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_E54F0A8447BF0C5DE4D1A983D49F8A03");
 
@@ -587,9 +589,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_D4D441534CAE79E94FE9A091F8AA0F46
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_D4D441534CAE79E94FE9A091F8AA0F46()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_D4D441534CAE79E94FE9A091F8AA0F46()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_D4D441534CAE79E94FE9A091F8AA0F46");
 
@@ -604,9 +606,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_D780519044902033B925A1AF6040D1E9
-// (BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_D780519044902033B925A1AF6040D1E9()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_D780519044902033B925A1AF6040D1E9()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_D780519044902033B925A1AF6040D1E9");
 
@@ -621,9 +623,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_SequencePlayer_F1D166A64E9615815124BAA82A4E04F6
-// (BlueprintEvent)
+// (Net, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_SequencePlayer_F1D166A64E9615815124BAA82A4E04F6()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_SequencePlayer_F1D166A64E9615815124BAA82A4E04F6()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_SequencePlayer_F1D166A64E9615815124BAA82A4E04F6");
 
@@ -638,9 +640,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_BD5F28084E410326CA2FA0B20B93A18E
-// (BlueprintEvent)
+// (Net, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_BD5F28084E410326CA2FA0B20B93A18E()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_BD5F28084E410326CA2FA0B20B93A18E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_BD5F28084E410326CA2FA0B20B93A18E");
 
@@ -655,9 +657,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_4B2286A041FB3ED3FCAB2B9341C0E848
-// (BlueprintEvent)
+// (Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_4B2286A041FB3ED3FCAB2B9341C0E848()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_4B2286A041FB3ED3FCAB2B9341C0E848()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_4B2286A041FB3ED3FCAB2B9341C0E848");
 
@@ -672,9 +674,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_7A1938CC400AF168CAB4C1A4D510BD8C
-// (BlueprintEvent)
+// (Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_7A1938CC400AF168CAB4C1A4D510BD8C()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_7A1938CC400AF168CAB4C1A4D510BD8C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TransitionResult_7A1938CC400AF168CAB4C1A4D510BD8C");
 
@@ -689,9 +691,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_F6D798F74BD57435CC50D18236A8E825
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_F6D798F74BD57435CC50D18236A8E825()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_F6D798F74BD57435CC50D18236A8E825()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_F6D798F74BD57435CC50D18236A8E825");
 
@@ -706,9 +708,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_4FD83E2B4EF0F83FC43E969F3029FD9B
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_4FD83E2B4EF0F83FC43E969F3029FD9B()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_4FD83E2B4EF0F83FC43E969F3029FD9B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_4FD83E2B4EF0F83FC43E969F3029FD9B");
 
@@ -723,9 +725,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_418B0A9D4D975D1B1B216EA848D6EF8B
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_418B0A9D4D975D1B1B216EA848D6EF8B()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_418B0A9D4D975D1B1B216EA848D6EF8B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_418B0A9D4D975D1B1B216EA848D6EF8B");
 
@@ -740,9 +742,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9BE4640240A8158AE30DF2BE98ED6A17
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9BE4640240A8158AE30DF2BE98ED6A17()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9BE4640240A8158AE30DF2BE98ED6A17()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_9BE4640240A8158AE30DF2BE98ED6A17");
 
@@ -757,9 +759,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5E80273F4C35850011D571BC5C587FC2
-// (BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5E80273F4C35850011D571BC5C587FC2()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5E80273F4C35850011D571BC5C587FC2()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5E80273F4C35850011D571BC5C587FC2");
 
@@ -774,9 +776,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_5B7B80DF4BF3542313FBCDB51E9CAAC4
-// (BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_5B7B80DF4BF3542313FBCDB51E9CAAC4()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_5B7B80DF4BF3542313FBCDB51E9CAAC4()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_5B7B80DF4BF3542313FBCDB51E9CAAC4");
 
@@ -791,9 +793,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_B0B79DDC4867771D0D899D857D648A8C
-// (BlueprintEvent)
+// (NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_B0B79DDC4867771D0D899D857D648A8C()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_B0B79DDC4867771D0D899D857D648A8C()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_B0B79DDC4867771D0D899D857D648A8C");
 
@@ -808,9 +810,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_2DD3F2AD4ABEDA317983A4AE85825B61
-// (BlueprintEvent)
+// (NetRequest, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_2DD3F2AD4ABEDA317983A4AE85825B61()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_2DD3F2AD4ABEDA317983A4AE85825B61()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_2DD3F2AD4ABEDA317983A4AE85825B61");
 
@@ -825,15 +827,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_B1AF5D2D4BE882D50B33DEBBFDAE9540
-// (BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_B1AF5D2D4BE882D50B33DEBBFDAE9540()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_B1AF5D2D4BE882D50B33DEBBFDAE9540()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_B1AF5D2D4BE882D50B33DEBBFDAE9540");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_ModifyBone_B1AF5D2D4BE882D50B33DEBBFDAE9540_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -842,15 +845,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_EF5F7C0349BB05A3F8A141AFCD07CCFD
-// (BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_EF5F7C0349BB05A3F8A141AFCD07CCFD()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_EF5F7C0349BB05A3F8A141AFCD07CCFD()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_EF5F7C0349BB05A3F8A141AFCD07CCFD");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_EF5F7C0349BB05A3F8A141AFCD07CCFD_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -859,15 +863,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_DE91B1CB4C6FF3A350402A85D49012E9
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_DE91B1CB4C6FF3A350402A85D49012E9()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_DE91B1CB4C6FF3A350402A85D49012E9()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_DE91B1CB4C6FF3A350402A85D49012E9");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_TwoBoneIK_DE91B1CB4C6FF3A350402A85D49012E9_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -876,15 +881,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5AE71F36450E92E614AA70A1E6BE0519
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5AE71F36450E92E614AA70A1E6BE0519()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5AE71F36450E92E614AA70A1E6BE0519()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5AE71F36450E92E614AA70A1E6BE0519");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_5AE71F36450E92E614AA70A1E6BE0519_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -893,15 +899,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterAdjusting
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterAdjusting()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterAdjusting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterAdjusting");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnterAdjusting_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -910,15 +917,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterAdjusting()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterAnimating
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterAnimating()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterAnimating()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterAnimating");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnterAnimating_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -927,15 +935,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterAnimating()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterIdle
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterIdle()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterIdle");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnterIdle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -944,15 +953,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterIdle()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterIdleToWalking
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterIdleToWalking()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterIdleToWalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterIdleToWalking");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnterIdleToWalking_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -961,15 +971,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterIdleToWalking()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterOpenDoor
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterOpenDoor()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterOpenDoor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterOpenDoor");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnterOpenDoor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -978,15 +989,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterOpenDoor()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterRunning
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterRunning()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterRunning()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterRunning");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnterRunning_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -995,9 +1007,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterRunning()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSitting
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterSitting()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterSitting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSitting");
 
@@ -1012,9 +1024,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterSitting()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSittingAnimating
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterSittingAnimating()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterSittingAnimating()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSittingAnimating");
 
@@ -1029,9 +1041,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterSittingAnimating()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSittingToWalking
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterSittingToWalking()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterSittingToWalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSittingToWalking");
 
@@ -1046,9 +1058,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterSittingToWalking()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterStairs
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterStairs()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterStairs()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterStairs");
 
@@ -1063,9 +1075,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterStairs()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterTalking
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterTalking()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterTalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterTalking");
 
@@ -1080,9 +1092,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterTalking()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterTurningInPlace
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterTurningInPlace()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterTurningInPlace()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterTurningInPlace");
 
@@ -1097,9 +1109,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterTurningInPlace()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalking
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterWalking()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterWalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalking");
 
@@ -1114,9 +1126,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterWalking()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingInterruption
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingInterruption()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterWalkingInterruption()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingInterruption");
 
@@ -1131,9 +1143,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingInterruption()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingToIdle
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingToIdle()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterWalkingToIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingToIdle");
 
@@ -1148,9 +1160,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingToIdle()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingToIdleOnTheWay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingToIdleOnTheWay()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterWalkingToIdleOnTheWay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingToIdleOnTheWay");
 
@@ -1165,9 +1177,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingToIdleOnTheWay()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingToSit
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingToSit()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterWalkingToSit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingToSit");
 
@@ -1182,9 +1194,9 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingToSit()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingTurn
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingTurn()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterWalkingTurn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterWalkingTurn");
 
@@ -1199,15 +1211,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterWalkingTurn()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSittingTurn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnterSittingTurn()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnterSittingTurn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnterSittingTurn");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnterSittingTurn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1216,15 +1229,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnterSittingTurn()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_RightFootDominant
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_RightFootDominant()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_RightFootDominant()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_RightFootDominant");
 
 	UABP_S3_ACCharacter_C_AnimNotify_RightFootDominant_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1233,15 +1247,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_RightFootDominant()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_LeftFootDominant
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_LeftFootDominant()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_LeftFootDominant()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_LeftFootDominant");
 
 	UABP_S3_ACCharacter_C_AnimNotify_LeftFootDominant_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1250,15 +1265,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_LeftFootDominant()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_AnimationAComplete
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_AnimationAComplete()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_AnimationAComplete()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_AnimationAComplete");
 
 	UABP_S3_ACCharacter_C_AnimNotify_AnimationAComplete_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1267,15 +1283,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_AnimationAComplete()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_AnimationBComplete
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_AnimationBComplete()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_AnimationBComplete()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_AnimationBComplete");
 
 	UABP_S3_ACCharacter_C_AnimNotify_AnimationBComplete_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1284,15 +1301,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_AnimationBComplete()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_77C333574C1086A9BFB57FB90778DF03
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_77C333574C1086A9BFB57FB90778DF03()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_77C333574C1086A9BFB57FB90778DF03()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_77C333574C1086A9BFB57FB90778DF03");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_77C333574C1086A9BFB57FB90778DF03_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1301,15 +1319,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EndAnimating
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EndAnimating()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EndAnimating()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EndAnimating");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EndAnimating_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1318,15 +1337,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EndAnimating()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_AdjustComplete
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_AdjustComplete()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_AdjustComplete()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_AdjustComplete");
 
 	UABP_S3_ACCharacter_C_AnimNotify_AdjustComplete_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1335,15 +1355,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_AdjustComplete()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_DisableFootIK
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_DisableFootIK()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_DisableFootIK()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_DisableFootIK");
 
 	UABP_S3_ACCharacter_C_AnimNotify_DisableFootIK_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1352,15 +1373,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_DisableFootIK()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnableFootIK
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnableFootIK()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnableFootIK()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnableFootIK");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnableFootIK_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1369,15 +1391,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnableFootIK()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_LeftStepBack
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_LeftStepBack()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_LeftStepBack()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_LeftStepBack");
 
 	UABP_S3_ACCharacter_C_AnimNotify_LeftStepBack_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1386,15 +1409,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_LeftStepBack()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnableBreathIK
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EnableBreathIK()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EnableBreathIK()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EnableBreathIK");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EnableBreathIK_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1403,15 +1427,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EnableBreathIK()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_DisableBreathIK
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_DisableBreathIK()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_DisableBreathIK()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_DisableBreathIK");
 
 	UABP_S3_ACCharacter_C_AnimNotify_DisableBreathIK_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1420,15 +1445,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_DisableBreathIK()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_58E93D704EE5C5FD3007A8B35DF19550
-// (BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_58E93D704EE5C5FD3007A8B35DF19550()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_58E93D704EE5C5FD3007A8B35DF19550()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_58E93D704EE5C5FD3007A8B35DF19550");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_58E93D704EE5C5FD3007A8B35DF19550_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1437,15 +1463,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_StartFingerPointing
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_StartFingerPointing()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_StartFingerPointing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_StartFingerPointing");
 
 	UABP_S3_ACCharacter_C_AnimNotify_StartFingerPointing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1454,15 +1481,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_StartFingerPointing()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EndFingerPointing
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_EndFingerPointing()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_EndFingerPointing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_EndFingerPointing");
 
 	UABP_S3_ACCharacter_C_AnimNotify_EndFingerPointing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1471,15 +1499,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_EndFingerPointing()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_356B409D4A369AD929D36A986C0C1216
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_356B409D4A369AD929D36A986C0C1216()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_356B409D4A369AD929D36A986C0C1216()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_356B409D4A369AD929D36A986C0C1216");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendListByBool_356B409D4A369AD929D36A986C0C1216_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1488,15 +1517,16 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_BeginSitting
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_BeginSitting()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_BeginSitting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_BeginSitting");
 
 	UABP_S3_ACCharacter_C_AnimNotify_BeginSitting_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1505,15 +1535,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_BeginSitting()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_BeginTransitionSittingToWalking
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_BeginTransitionSittingToWalking()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_BeginTransitionSittingToWalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_BeginTransitionSittingToWalking");
 
 	UABP_S3_ACCharacter_C_AnimNotify_BeginTransitionSittingToWalking_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1522,15 +1553,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_BeginTransitionSittingToWalking()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_GroundingFootL
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_GroundingFootL()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_GroundingFootL()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_GroundingFootL");
 
 	UABP_S3_ACCharacter_C_AnimNotify_GroundingFootL_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1539,15 +1571,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_GroundingFootL()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_GroundingFootR
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::AnimNotify_GroundingFootR()
+void UABP_S3_ACCharacter_C::STATIC_AnimNotify_GroundingFootR()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.AnimNotify_GroundingFootR");
 
 	UABP_S3_ACCharacter_C_AnimNotify_GroundingFootR_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1556,15 +1589,16 @@ void UABP_S3_ACCharacter_C::AnimNotify_GroundingFootR()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_3BDE2EDA41E75B81671A4985599EC936
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_3BDE2EDA41E75B81671A4985599EC936()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_3BDE2EDA41E75B81671A4985599EC936()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_3BDE2EDA41E75B81671A4985599EC936");
 
 	UABP_S3_ACCharacter_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_3BDE2EDA41E75B81671A4985599EC936_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1573,9 +1607,9 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
+// (Exec, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::BlueprintInitializeAnimation()
+void UABP_S3_ACCharacter_C::STATIC_BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.BlueprintInitializeAnimation");
 
@@ -1590,7 +1624,7 @@ void UABP_S3_ACCharacter_C::BlueprintInitializeAnimation()
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.SetUseHandMotion
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           bUse                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1610,7 +1644,7 @@ void UABP_S3_ACCharacter_C::SetUseHandMotion(bool bUse)
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.Attach_HaveItem
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FHaveItemAttachSetting  HaveItemSetting                (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1630,9 +1664,9 @@ void UABP_S3_ACCharacter_C::Attach_HaveItem(const struct FHaveItemAttachSetting&
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_5F1A4754403BF6959CD4FDA792165DCE
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_5F1A4754403BF6959CD4FDA792165DCE()
+void UABP_S3_ACCharacter_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_5F1A4754403BF6959CD4FDA792165DCE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_ACCharacter_AnimGraphNode_BlendSpacePlayer_5F1A4754403BF6959CD4FDA792165DCE");
 
@@ -1647,7 +1681,7 @@ void UABP_S3_ACCharacter_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_A
 
 
 // Function ABP_S3_ACCharacter.ABP_S3_ACCharacter_C.ExecuteUbergraph_ABP_S3_ACCharacter
-// (HasDefaults)
+// (NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

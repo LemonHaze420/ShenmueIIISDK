@@ -29,12 +29,12 @@ public:
 	}
 
 
-	void InitializeFontSize();
+	void STATIC_InitializeFontSize();
 	void ClearSubtitleTextWidget(class UTextBlock* InTextWidget);
-	void DrawSubtitleTextWidget(class UTextBlock* InTextWidget, const struct FString& Text);
-	void Clear();
+	void STATIC_DrawSubtitleTextWidget(class UTextBlock* InTextWidget, const struct FString& Text);
+	void STATIC_Clear();
 	void DrawSubtitles(TArray<struct FString>* InTextArray);
-	void Construct();
+	void STATIC_Construct();
 	void ExecuteUbergraph_WBP_SecondarySubtitles(int EntryPoint);
 };
 

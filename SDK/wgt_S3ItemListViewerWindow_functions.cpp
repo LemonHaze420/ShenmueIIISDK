@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.IsItemSet
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ bool Uwgt_S3ItemListViewerWindow_C::IsItemSet()
 	Uwgt_S3ItemListViewerWindow_C_IsItemSet_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ bool Uwgt_S3ItemListViewerWindow_C::IsItemSet()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +48,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetVisible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +57,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetVisible(bool Visible)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetCursorVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           SelectCategory                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ItemListMenuType            MenuType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -71,6 +73,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetCursorVisibility(bool SelectCategory, ES3
 	params.IsDialog = IsDialog;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,7 +82,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetCursorVisibility(bool SelectCategory, ES3
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetCursor_ItemSetRightWindow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Row                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -99,7 +102,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetCursor_ItemSetRightWindow(int Row)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.DescriptionWindowVisibility
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_Inventory_CategoryType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -119,11 +122,11 @@ void Uwgt_S3ItemListViewerWindow_C::DescriptionWindowVisibility(TEnumAsByte<EN_I
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.InputAxis_Left
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          AxisiValue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::InputAxis_Left(float AxisiValue)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_InputAxis_Left(float AxisiValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.InputAxis_Left");
 
@@ -131,6 +134,7 @@ void Uwgt_S3ItemListViewerWindow_C::InputAxis_Left(float AxisiValue)
 	params.AxisiValue = AxisiValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,15 +143,16 @@ void Uwgt_S3ItemListViewerWindow_C::InputAxis_Left(float AxisiValue)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.EndViewMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void Uwgt_S3ItemListViewerWindow_C::EndViewMode()
+void Uwgt_S3ItemListViewerWindow_C::STATIC_EndViewMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.EndViewMode");
 
 	Uwgt_S3ItemListViewerWindow_C_EndViewMode_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,7 +161,7 @@ void Uwgt_S3ItemListViewerWindow_C::EndViewMode()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.StartViewMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void Uwgt_S3ItemListViewerWindow_C::StartViewMode()
 {
@@ -173,7 +178,7 @@ void Uwgt_S3ItemListViewerWindow_C::StartViewMode()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetHealthBarVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ESlateVisibility               Visibility                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -185,6 +190,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetHealthBarVisibility(ESlateVisibility Visi
 	params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,11 +199,11 @@ void Uwgt_S3ItemListViewerWindow_C::SetHealthBarVisibility(ESlateVisibility Visi
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.GetItemMesh
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::GetItemMesh(int ItemId)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_GetItemMesh(int ItemId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.GetItemMesh");
 
@@ -213,7 +219,7 @@ void Uwgt_S3ItemListViewerWindow_C::GetItemMesh(int ItemId)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetItemCursor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            X                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Y                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -241,7 +247,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetItemCursor(int X, int Y, bool Visibility,
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.GetRowColumn
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetResponse, Public, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Row                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Column                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -266,11 +272,11 @@ void Uwgt_S3ItemListViewerWindow_C::GetRowColumn(int* Row, int* Column)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SelectedCategory
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::SelectedCategory(bool Selected)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_SelectedCategory(bool Selected)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SelectedCategory");
 
@@ -286,12 +292,12 @@ void Uwgt_S3ItemListViewerWindow_C::SelectedCategory(bool Selected)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.UpdRowColumn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            col                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Row                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::UpdRowColumn(int col, int Row)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_UpdRowColumn(int col, int Row)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.UpdRowColumn");
 
@@ -300,6 +306,7 @@ void Uwgt_S3ItemListViewerWindow_C::UpdRowColumn(int col, int Row)
 	params.Row = Row;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -308,11 +315,11 @@ void Uwgt_S3ItemListViewerWindow_C::UpdRowColumn(int col, int Row)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetCurPos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            idx                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::SetCurPos(int idx)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_SetCurPos(int idx)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetCurPos");
 
@@ -320,6 +327,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetCurPos(int idx)
 	params.idx = idx;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -328,7 +336,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetCurPos(int idx)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.AddCategoryLine
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_S3ItemListViewerWindow_C::AddCategoryLine()
 {
@@ -337,6 +345,7 @@ void Uwgt_S3ItemListViewerWindow_C::AddCategoryLine()
 	Uwgt_S3ItemListViewerWindow_C_AddCategoryLine_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -345,9 +354,9 @@ void Uwgt_S3ItemListViewerWindow_C::AddCategoryLine()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.ResetSelectItemList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void Uwgt_S3ItemListViewerWindow_C::ResetSelectItemList()
+void Uwgt_S3ItemListViewerWindow_C::STATIC_ResetSelectItemList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.ResetSelectItemList");
 
@@ -362,7 +371,7 @@ void Uwgt_S3ItemListViewerWindow_C::ResetSelectItemList()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetDispSelectItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           isOn                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -384,7 +393,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetDispSelectItem(int Index, bool isOn)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.AddCategory
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 name_jp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 name_eng                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -400,6 +409,7 @@ void Uwgt_S3ItemListViewerWindow_C::AddCategory(const struct FString& name_jp, c
 	params.str_color = str_color;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -408,11 +418,11 @@ void Uwgt_S3ItemListViewerWindow_C::AddCategory(const struct FString& name_jp, c
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetPageCurrent
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Now                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::SetPageCurrent(int Now)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_SetPageCurrent(int Now)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetPageCurrent");
 
@@ -428,7 +438,7 @@ void Uwgt_S3ItemListViewerWindow_C::SetPageCurrent(int Now)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.SetPageMax
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -448,11 +458,11 @@ void Uwgt_S3ItemListViewerWindow_C::SetPageMax(int Max)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.PrevScroll
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          NextScrollVal                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::PrevScroll(float NextScrollVal)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_PrevScroll(float NextScrollVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.PrevScroll");
 
@@ -460,6 +470,7 @@ void Uwgt_S3ItemListViewerWindow_C::PrevScroll(float NextScrollVal)
 	params.NextScrollVal = NextScrollVal;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -468,11 +479,11 @@ void Uwgt_S3ItemListViewerWindow_C::PrevScroll(float NextScrollVal)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.NextScroll
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          NextScrollVal                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::NextScroll(float NextScrollVal)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_NextScroll(float NextScrollVal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.NextScroll");
 
@@ -480,6 +491,7 @@ void Uwgt_S3ItemListViewerWindow_C::NextScroll(float NextScrollVal)
 	params.NextScrollVal = NextScrollVal;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -488,7 +500,7 @@ void Uwgt_S3ItemListViewerWindow_C::NextScroll(float NextScrollVal)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.PlayCloseAnime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void Uwgt_S3ItemListViewerWindow_C::PlayCloseAnime()
 {
@@ -497,6 +509,7 @@ void Uwgt_S3ItemListViewerWindow_C::PlayCloseAnime()
 	Uwgt_S3ItemListViewerWindow_C_PlayCloseAnime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -505,7 +518,7 @@ void Uwgt_S3ItemListViewerWindow_C::PlayCloseAnime()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.PlayOpenAnime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void Uwgt_S3ItemListViewerWindow_C::PlayOpenAnime()
 {
@@ -514,6 +527,7 @@ void Uwgt_S3ItemListViewerWindow_C::PlayOpenAnime()
 	Uwgt_S3ItemListViewerWindow_C_PlayOpenAnime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -522,7 +536,7 @@ void Uwgt_S3ItemListViewerWindow_C::PlayOpenAnime()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -534,6 +548,7 @@ void Uwgt_S3ItemListViewerWindow_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,15 +557,16 @@ void Uwgt_S3ItemListViewerWindow_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void Uwgt_S3ItemListViewerWindow_C::Construct()
+void Uwgt_S3ItemListViewerWindow_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.Construct");
 
 	Uwgt_S3ItemListViewerWindow_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -559,7 +575,7 @@ void Uwgt_S3ItemListViewerWindow_C::Construct()
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -573,6 +589,7 @@ void Uwgt_S3ItemListViewerWindow_C::Tick(const struct FGeometry& MyGeometry, flo
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -581,15 +598,16 @@ void Uwgt_S3ItemListViewerWindow_C::Tick(const struct FGeometry& MyGeometry, flo
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void Uwgt_S3ItemListViewerWindow_C::BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3ItemListViewerWindow_C::STATIC_BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
 	Uwgt_S3ItemListViewerWindow_C_BndEvt__Open_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -598,15 +616,16 @@ void Uwgt_S3ItemListViewerWindow_C::BndEvt__Open_K2Node_ComponentBoundEvent_0_On
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void Uwgt_S3ItemListViewerWindow_C::BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3ItemListViewerWindow_C::STATIC_BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
 	Uwgt_S3ItemListViewerWindow_C_BndEvt__Close_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -615,15 +634,16 @@ void Uwgt_S3ItemListViewerWindow_C::BndEvt__Close_K2Node_ComponentBoundEvent_1_O
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.BndEvt__Start_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void Uwgt_S3ItemListViewerWindow_C::BndEvt__Start_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
+void Uwgt_S3ItemListViewerWindow_C::STATIC_BndEvt__Start_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.BndEvt__Start_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature");
 
 	Uwgt_S3ItemListViewerWindow_C_BndEvt__Start_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -632,11 +652,11 @@ void Uwgt_S3ItemListViewerWindow_C::BndEvt__Start_K2Node_ComponentBoundEvent_0_O
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.ExecuteUbergraph_wgt_S3ItemListViewerWindow
-// (HasDefaults)
+// (Net, NetReliable, Exec, Event, Static, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3ItemListViewerWindow_C::ExecuteUbergraph_wgt_S3ItemListViewerWindow(int EntryPoint)
+void Uwgt_S3ItemListViewerWindow_C::STATIC_ExecuteUbergraph_wgt_S3ItemListViewerWindow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.ExecuteUbergraph_wgt_S3ItemListViewerWindow");
 
@@ -652,7 +672,7 @@ void Uwgt_S3ItemListViewerWindow_C::ExecuteUbergraph_wgt_S3ItemListViewerWindow(
 
 
 // Function wgt_S3ItemListViewerWindow.wgt_S3ItemListViewerWindow_C.ED_StartAnim__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void Uwgt_S3ItemListViewerWindow_C::ED_StartAnim__DelegateSignature()
 {
@@ -661,6 +681,7 @@ void Uwgt_S3ItemListViewerWindow_C::ED_StartAnim__DelegateSignature()
 	Uwgt_S3ItemListViewerWindow_C_ED_StartAnim__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

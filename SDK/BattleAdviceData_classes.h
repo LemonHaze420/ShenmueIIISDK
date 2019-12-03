@@ -44,7 +44,7 @@ public:
 
 
 	bool IsLevelSufficient();
-	void AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Score);
+	void STATIC_AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Score);
 	bool IsRelevant(TEnumAsByte<EBattleAdvice> ItemToFind);
 	void GetMostRelevantAdvice(TEnumAsByte<EBattleAdvice>* Output);
 	void CalculateAdvice();

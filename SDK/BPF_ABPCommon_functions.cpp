@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_CancelACTurn
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            flag                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ABPCommon_C::STATIC_BPF_CancelACTurn(class UObject* __WorldContext, int* flag)
+void UBPF_ABPCommon_C::BPF_CancelACTurn(class UObject* __WorldContext, int* flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_CancelACTurn");
 
@@ -38,7 +38,7 @@ void UBPF_ABPCommon_C::STATIC_BPF_CancelACTurn(class UObject* __WorldContext, in
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_IsACTurnCanceled
-// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, Const)
 // Parameters:
 // class US3AnimInstance*         AnimInstance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -53,6 +53,7 @@ bool UBPF_ABPCommon_C::STATIC_BPF_IsACTurnCanceled(class US3AnimInstance* AnimIn
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,13 +64,13 @@ bool UBPF_ABPCommon_C::STATIC_BPF_IsACTurnCanceled(class US3AnimInstance* AnimIn
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_ShouldCancelACTurn
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_ABPCommon_C::STATIC_BPF_ShouldCancelACTurn(int flag, class UObject* __WorldContext)
+bool UBPF_ABPCommon_C::BPF_ShouldCancelACTurn(int flag, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_ShouldCancelACTurn");
 
@@ -88,13 +89,13 @@ bool UBPF_ABPCommon_C::STATIC_BPF_ShouldCancelACTurn(int flag, class UObject* __
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_ShouldStartACTurn
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_ABPCommon_C::STATIC_BPF_ShouldStartACTurn(int flag, class UObject* __WorldContext)
+bool UBPF_ABPCommon_C::BPF_ShouldStartACTurn(int flag, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_ShouldStartACTurn");
 
@@ -113,12 +114,12 @@ bool UBPF_ABPCommon_C::STATIC_BPF_ShouldStartACTurn(int flag, class UObject* __W
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_MarkACTurnStarted
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Step                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ABPCommon_C::STATIC_BPF_MarkACTurnStarted(class UObject* __WorldContext, int* Step)
+void UBPF_ABPCommon_C::BPF_MarkACTurnStarted(class UObject* __WorldContext, int* Step)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_MarkACTurnStarted");
 
@@ -126,6 +127,7 @@ void UBPF_ABPCommon_C::STATIC_BPF_MarkACTurnStarted(class UObject* __WorldContex
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,7 +139,7 @@ void UBPF_ABPCommon_C::STATIC_BPF_MarkACTurnStarted(class UObject* __WorldContex
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_TickACTurn
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class US3AnimInstance*         AnimInstance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            StepFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -166,12 +168,12 @@ void UBPF_ABPCommon_C::STATIC_BPF_TickACTurn(class US3AnimInstance* AnimInstance
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_MarkACTurnDone
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Step                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_ABPCommon_C::STATIC_BPF_MarkACTurnDone(class UObject* __WorldContext, int* Step)
+void UBPF_ABPCommon_C::BPF_MarkACTurnDone(class UObject* __WorldContext, int* Step)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_MarkACTurnDone");
 
@@ -179,6 +181,7 @@ void UBPF_ABPCommon_C::STATIC_BPF_MarkACTurnDone(class UObject* __WorldContext, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -190,7 +193,7 @@ void UBPF_ABPCommon_C::STATIC_BPF_MarkACTurnDone(class UObject* __WorldContext, 
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_HasACTurnAroundRequest
-// (Static, Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class US3AnimInstance*         AnimInstance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -206,6 +209,7 @@ bool UBPF_ABPCommon_C::STATIC_BPF_HasACTurnAroundRequest(class US3AnimInstance* 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -219,7 +223,7 @@ bool UBPF_ABPCommon_C::STATIC_BPF_HasACTurnAroundRequest(class US3AnimInstance* 
 
 
 // Function BPF_ABPCommon.BPF_ABPCommon_C.BPF_UpdateFootIKAlpha
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class US3AnimInstance*         AnimInstance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

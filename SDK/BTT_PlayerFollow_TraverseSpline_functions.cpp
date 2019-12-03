@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.Finish
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UBTT_PlayerFollow_TraverseSpline_C::Finish(bool Result)
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,12 +35,12 @@ void UBTT_PlayerFollow_TraverseSpline_C::Finish(bool Result)
 
 
 // Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.IsPlayerInsideSpline
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Static, MulticastDelegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Buffer                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTT_PlayerFollow_TraverseSpline_C::IsPlayerInsideSpline(float Buffer)
+bool UBTT_PlayerFollow_TraverseSpline_C::STATIC_IsPlayerInsideSpline(float Buffer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.IsPlayerInsideSpline");
 
@@ -57,12 +58,12 @@ bool UBTT_PlayerFollow_TraverseSpline_C::IsPlayerInsideSpline(float Buffer)
 
 
 // Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_TraverseSpline_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayerFollow_TraverseSpline_C::STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.ReceiveExecuteAI");
 
@@ -79,12 +80,12 @@ void UBTT_PlayerFollow_TraverseSpline_C::ReceiveExecuteAI(class AAIController* O
 
 
 // Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.ReceiveAbortAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayerFollow_TraverseSpline_C::ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayerFollow_TraverseSpline_C::STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.ReceiveAbortAI");
 
@@ -93,6 +94,7 @@ void UBTT_PlayerFollow_TraverseSpline_C::ReceiveAbortAI(class AAIController* Own
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,7 +103,7 @@ void UBTT_PlayerFollow_TraverseSpline_C::ReceiveAbortAI(class AAIController* Own
 
 
 // Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -125,7 +127,7 @@ void UBTT_PlayerFollow_TraverseSpline_C::ReceiveTickAI(class AAIController* Owne
 
 
 // Function BTT_PlayerFollow_TraverseSpline.BTT_PlayerFollow_TraverseSpline_C.ExecuteUbergraph_BTT_PlayerFollow_TraverseSpline
-// ()
+// (Net, NetReliable, NetRequest, NetResponse, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

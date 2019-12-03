@@ -44,12 +44,12 @@ public:
 
 
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Construct();
-	void Push_Left();
-	void Push_Right();
+	void STATIC_Construct();
+	void STATIC_Push_Left();
+	void STATIC_Push_Right();
 	void ExecuteUbergraph_wgt_CheckWindow(int EntryPoint);
-	void ED_PushRight__DelegateSignature();
-	void ED_PushLeft__DelegateSignature();
+	void STATIC_ED_PushRight__DelegateSignature();
+	void STATIC_ED_PushLeft__DelegateSignature();
 };
 
 

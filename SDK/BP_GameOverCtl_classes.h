@@ -33,14 +33,14 @@ public:
 
 
 	void CheckLimitDay(struct FName* Type);
-	void InitSet(bool* Make_Actor);
-	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
-	void OnCutsceneEnd_M06_S9001();
-	void OnStartCutscenePlayer_M06_S9001();
-	void OnCutsceneEnd_M06_S9002();
-	void OnStartCutscenePlayer_M06_S9002();
-	void ExecuteUbergraph_BP_GameOverCtl(int EntryPoint);
+	void STATIC_InitSet(bool* Make_Actor);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_OnCutsceneEnd_M06_S9001();
+	void STATIC_OnStartCutscenePlayer_M06_S9001();
+	void STATIC_OnCutsceneEnd_M06_S9002();
+	void STATIC_OnStartCutscenePlayer_M06_S9002();
+	void STATIC_ExecuteUbergraph_BP_GameOverCtl(int EntryPoint);
 };
 
 

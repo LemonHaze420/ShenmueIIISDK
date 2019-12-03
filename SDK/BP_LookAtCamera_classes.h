@@ -46,7 +46,7 @@ public:
 
 	void GetCamera(class UCameraComponent** Camera);
 	void HitCheck();
-	void GetLocus(TArray<struct FVector>* Locus);
+	void STATIC_GetLocus(TArray<struct FVector>* Locus);
 	void TargetIsBehaindPlayer(bool* Result);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

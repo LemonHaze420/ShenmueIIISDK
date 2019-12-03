@@ -12,15 +12,6 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum SlateCore.EFontLayoutMethod
-enum class EFontLayoutMethod : uint8_t
-{
-	EFontLayoutMethod__Metrics     = 0,
-	EFontLayoutMethod__BoundingBox = 1,
-	EFontLayoutMethod__EFontLayoutMethod_MAX = 2
-};
-
-
 // Enum SlateCore.EWidgetClipping
 enum class EWidgetClipping : uint8_t
 {
@@ -33,13 +24,12 @@ enum class EWidgetClipping : uint8_t
 };
 
 
-// Enum SlateCore.EFontLoadingPolicy
-enum class EFontLoadingPolicy : uint8_t
+// Enum SlateCore.EFontLayoutMethod
+enum class EFontLayoutMethod : uint8_t
 {
-	EFontLoadingPolicy__LazyLoad   = 0,
-	EFontLoadingPolicy__Stream     = 1,
-	EFontLoadingPolicy__Inline     = 2,
-	EFontLoadingPolicy__EFontLoadingPolicy_MAX = 3
+	EFontLayoutMethod__Metrics     = 0,
+	EFontLayoutMethod__BoundingBox = 1,
+	EFontLayoutMethod__EFontLayoutMethod_MAX = 2
 };
 
 
@@ -55,13 +45,13 @@ enum class EFontHinting : uint8_t
 };
 
 
-// Enum SlateCore.ETextShapingMethod
-enum class ETextShapingMethod : uint8_t
+// Enum SlateCore.EFontLoadingPolicy
+enum class EFontLoadingPolicy : uint8_t
 {
-	ETextShapingMethod__Auto       = 0,
-	ETextShapingMethod__KerningOnly = 1,
-	ETextShapingMethod__FullShaping = 2,
-	ETextShapingMethod__ETextShapingMethod_MAX = 3
+	EFontLoadingPolicy__LazyLoad   = 0,
+	EFontLoadingPolicy__Stream     = 1,
+	EFontLoadingPolicy__Inline     = 2,
+	EFontLoadingPolicy__EFontLoadingPolicy_MAX = 3
 };
 
 
@@ -76,6 +66,39 @@ enum class EUINavigationRule : uint8_t
 	EUINavigationRule__CustomBoundary = 5,
 	EUINavigationRule__Invalid     = 6,
 	EUINavigationRule__EUINavigationRule_MAX = 7
+};
+
+
+// Enum SlateCore.ETextShapingMethod
+enum class ETextShapingMethod : uint8_t
+{
+	ETextShapingMethod__Auto       = 0,
+	ETextShapingMethod__KerningOnly = 1,
+	ETextShapingMethod__FullShaping = 2,
+	ETextShapingMethod__ETextShapingMethod_MAX = 3
+};
+
+
+// Enum SlateCore.EFocusCause
+enum class EFocusCause : uint8_t
+{
+	EFocusCause__Mouse             = 0,
+	EFocusCause__Navigation        = 1,
+	EFocusCause__SetDirectly       = 2,
+	EFocusCause__Cleared           = 3,
+	EFocusCause__OtherWidgetLostFocus = 4,
+	EFocusCause__WindowActivate    = 5,
+	EFocusCause__EFocusCause_MAX   = 6
+};
+
+
+// Enum SlateCore.ESlateBrushImageType
+enum class ESlateBrushImageType : uint8_t
+{
+	ESlateBrushImageType__NoImage  = 0,
+	ESlateBrushImageType__FullColor = 1,
+	ESlateBrushImageType__Linear   = 2,
+	ESlateBrushImageType__ESlateBrushImageType_MAX = 3
 };
 
 
@@ -101,6 +124,17 @@ enum class ESlateBrushMirrorType : uint8_t
 };
 
 
+// Enum SlateCore.ESlateBrushTileType
+enum class ESlateBrushTileType : uint8_t
+{
+	ESlateBrushTileType__NoTile    = 0,
+	ESlateBrushTileType__Horizontal = 1,
+	ESlateBrushTileType__Vertical  = 2,
+	ESlateBrushTileType__Both      = 3,
+	ESlateBrushTileType__ESlateBrushTileType_MAX = 4
+};
+
+
 // Enum SlateCore.ESlateBrushDrawType
 enum class ESlateBrushDrawType : uint8_t
 {
@@ -112,26 +146,14 @@ enum class ESlateBrushDrawType : uint8_t
 };
 
 
-// Enum SlateCore.EFocusCause
-enum class EFocusCause : uint8_t
+// Enum SlateCore.ESlateColorStylingMode
+enum class ESlateColorStylingMode : uint8_t
 {
-	EFocusCause__Mouse             = 0,
-	EFocusCause__Navigation        = 1,
-	EFocusCause__SetDirectly       = 2,
-	EFocusCause__Cleared           = 3,
-	EFocusCause__OtherWidgetLostFocus = 4,
-	EFocusCause__WindowActivate    = 5,
-	EFocusCause__EFocusCause_MAX   = 6
-};
-
-
-// Enum SlateCore.ESlateBrushImageType
-enum class ESlateBrushImageType : uint8_t
-{
-	ESlateBrushImageType__NoImage  = 0,
-	ESlateBrushImageType__FullColor = 1,
-	ESlateBrushImageType__Linear   = 2,
-	ESlateBrushImageType__ESlateBrushImageType_MAX = 3
+	ESlateColorStylingMode__UseColor_Specified = 0,
+	ESlateColorStylingMode__UseColor_Specified_Link = 1,
+	ESlateColorStylingMode__UseColor_Foreground = 2,
+	ESlateColorStylingMode__UseColor_Foreground_Subdued = 3,
+	ESlateColorStylingMode__UseColor_MAX = 4
 };
 
 
@@ -195,6 +217,17 @@ enum class EMenuPlacement : uint8_t
 };
 
 
+// Enum SlateCore.EVerticalAlignment
+enum class EVerticalAlignment : uint8_t
+{
+	VAlign_Fill                    = 0,
+	VAlign_Top                     = 1,
+	VAlign_Center                  = 2,
+	VAlign_Bottom                  = 3,
+	VAlign_MAX                     = 4
+};
+
+
 // Enum SlateCore.EHorizontalAlignment
 enum class EHorizontalAlignment : uint8_t
 {
@@ -206,36 +239,22 @@ enum class EHorizontalAlignment : uint8_t
 };
 
 
-// Enum SlateCore.ESlateColorStylingMode
-enum class ESlateColorStylingMode : uint8_t
+// Enum SlateCore.ENavigationGenesis
+enum class ENavigationGenesis : uint8_t
 {
-	ESlateColorStylingMode__UseColor_Specified = 0,
-	ESlateColorStylingMode__UseColor_Specified_Link = 1,
-	ESlateColorStylingMode__UseColor_Foreground = 2,
-	ESlateColorStylingMode__UseColor_Foreground_Subdued = 3,
-	ESlateColorStylingMode__UseColor_MAX = 4
+	ENavigationGenesis__Keyboard   = 0,
+	ENavigationGenesis__Controller = 1,
+	ENavigationGenesis__User       = 2,
+	ENavigationGenesis__ENavigationGenesis_MAX = 3
 };
 
 
-// Enum SlateCore.ESlateBrushTileType
-enum class ESlateBrushTileType : uint8_t
+// Enum SlateCore.ENavigationSource
+enum class ENavigationSource : uint8_t
 {
-	ESlateBrushTileType__NoTile    = 0,
-	ESlateBrushTileType__Horizontal = 1,
-	ESlateBrushTileType__Vertical  = 2,
-	ESlateBrushTileType__Both      = 3,
-	ESlateBrushTileType__ESlateBrushTileType_MAX = 4
-};
-
-
-// Enum SlateCore.EVerticalAlignment
-enum class EVerticalAlignment : uint8_t
-{
-	VAlign_Fill                    = 0,
-	VAlign_Top                     = 1,
-	VAlign_Center                  = 2,
-	VAlign_Bottom                  = 3,
-	VAlign_MAX                     = 4
+	ENavigationSource__FocusedWidget = 0,
+	ENavigationSource__WidgetUnderCursor = 1,
+	ENavigationSource__ENavigationSource_MAX = 2
 };
 
 
@@ -313,31 +332,12 @@ enum class ESlateCheckBoxType : uint8_t
 };
 
 
-// Enum SlateCore.ENavigationGenesis
-enum class ENavigationGenesis : uint8_t
-{
-	ENavigationGenesis__Keyboard   = 0,
-	ENavigationGenesis__Controller = 1,
-	ENavigationGenesis__User       = 2,
-	ENavigationGenesis__ENavigationGenesis_MAX = 3
-};
-
-
 // Enum SlateCore.ESlateParentWindowSearchMethod
 enum class ESlateParentWindowSearchMethod : uint8_t
 {
 	ESlateParentWindowSearchMethod__ActiveWindow = 0,
 	ESlateParentWindowSearchMethod__MainWindow = 1,
 	ESlateParentWindowSearchMethod__ESlateParentWindowSearchMethod_MAX = 2
-};
-
-
-// Enum SlateCore.ENavigationSource
-enum class ENavigationSource : uint8_t
-{
-	ENavigationSource__FocusedWidget = 0,
-	ENavigationSource__WidgetUnderCursor = 1,
-	ENavigationSource__ENavigationSource_MAX = 2
 };
 
 
@@ -417,13 +417,6 @@ struct FPointerEvent : public FInputEvent
 	unsigned char                                      UnknownData00[0x58];                                      // 0x0018(0x0058) MISSED OFFSET
 };
 
-// ScriptStruct SlateCore.CharacterEvent
-// 0x0008 (0x0020 - 0x0018)
-struct FCharacterEvent : public FInputEvent
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct SlateCore.KeyEvent
 // 0x0020 (0x0038 - 0x0018)
 struct FKeyEvent : public FInputEvent
@@ -434,6 +427,13 @@ struct FKeyEvent : public FInputEvent
 // ScriptStruct SlateCore.NavigationEvent
 // 0x0008 (0x0020 - 0x0018)
 struct FNavigationEvent : public FInputEvent
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct SlateCore.CharacterEvent
+// 0x0008 (0x0020 - 0x0018)
+struct FCharacterEvent : public FInputEvent
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
 };
@@ -661,6 +661,13 @@ struct FCompositeFont
 	TArray<struct FCompositeSubFont>                   SubTypefaces;                                             // 0x0028(0x0010) (ZeroConstructor)
 };
 
+// ScriptStruct SlateCore.MotionEvent
+// 0x0030 (0x0048 - 0x0018)
+struct FMotionEvent : public FInputEvent
+{
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0018(0x0030) MISSED OFFSET
+};
+
 // ScriptStruct SlateCore.CaptureLostEvent
 // 0x0008
 struct FCaptureLostEvent
@@ -668,11 +675,11 @@ struct FCaptureLostEvent
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
-// ScriptStruct SlateCore.MotionEvent
-// 0x0030 (0x0048 - 0x0018)
-struct FMotionEvent : public FInputEvent
+// ScriptStruct SlateCore.FocusEvent
+// 0x0008
+struct FFocusEvent
 {
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0018(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct SlateCore.WindowStyle
@@ -695,29 +702,12 @@ struct FWindowStyle : public FSlateWidgetStyle
 	struct FSlateBrush                                 ChildBackgroundBrush;                                     // 0x0F48(0x0088) (Edit, BlueprintVisible)
 };
 
-// ScriptStruct SlateCore.FocusEvent
-// 0x0008
-struct FFocusEvent
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-};
-
 // ScriptStruct SlateCore.ScrollBorderStyle
 // 0x0110 (0x0118 - 0x0008)
 struct FScrollBorderStyle : public FSlateWidgetStyle
 {
 	struct FSlateBrush                                 TopShadowBrush;                                           // 0x0008(0x0088) (Edit, BlueprintVisible)
 	struct FSlateBrush                                 BottomShadowBrush;                                        // 0x0090(0x0088) (Edit, BlueprintVisible)
-};
-
-// ScriptStruct SlateCore.ScrollBoxStyle
-// 0x0220 (0x0228 - 0x0008)
-struct FScrollBoxStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 TopShadowBrush;                                           // 0x0008(0x0088) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 BottomShadowBrush;                                        // 0x0090(0x0088) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 LeftShadowBrush;                                          // 0x0118(0x0088) (Edit, BlueprintVisible)
-	struct FSlateBrush                                 RightShadowBrush;                                         // 0x01A0(0x0088) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct SlateCore.DockTabStyle
@@ -737,6 +727,16 @@ struct FDockTabStyle : public FSlateWidgetStyle
 	float                                              OverlapWidth;                                             // 0x06D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x06D4(0x0004) MISSED OFFSET
 	struct FSlateColor                                 FlashColor;                                               // 0x06D8(0x0028) (Edit)
+};
+
+// ScriptStruct SlateCore.ScrollBoxStyle
+// 0x0220 (0x0228 - 0x0008)
+struct FScrollBoxStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 TopShadowBrush;                                           // 0x0008(0x0088) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 BottomShadowBrush;                                        // 0x0090(0x0088) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 LeftShadowBrush;                                          // 0x0118(0x0088) (Edit, BlueprintVisible)
+	struct FSlateBrush                                 RightShadowBrush;                                         // 0x01A0(0x0088) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct SlateCore.TableColumnHeaderStyle
@@ -821,6 +821,16 @@ struct FSearchBoxStyle : public FSlateWidgetStyle
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0A79(0x0007) MISSED OFFSET
 };
 
+// ScriptStruct SlateCore.ExpandableAreaStyle
+// 0x0118 (0x0120 - 0x0008)
+struct FExpandableAreaStyle : public FSlateWidgetStyle
+{
+	struct FSlateBrush                                 CollapsedImage;                                           // 0x0008(0x0088) (Edit)
+	struct FSlateBrush                                 ExpandedImage;                                            // 0x0090(0x0088) (Edit)
+	float                                              RolloutAnimationSeconds;                                  // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct SlateCore.ProgressBarStyle
 // 0x0198 (0x01A0 - 0x0008)
 struct FProgressBarStyle : public FSlateWidgetStyle
@@ -868,16 +878,6 @@ struct FCheckBoxStyle : public FSlateWidgetStyle
 	struct FSlateSound                                 CheckedSlateSound;                                        // 0x0538(0x0018) (Edit, BlueprintVisible)
 	struct FSlateSound                                 UncheckedSlateSound;                                      // 0x0550(0x0018) (Edit, BlueprintVisible)
 	struct FSlateSound                                 HoveredSlateSound;                                        // 0x0568(0x0018) (Edit, BlueprintVisible)
-};
-
-// ScriptStruct SlateCore.ExpandableAreaStyle
-// 0x0118 (0x0120 - 0x0008)
-struct FExpandableAreaStyle : public FSlateWidgetStyle
-{
-	struct FSlateBrush                                 CollapsedImage;                                           // 0x0008(0x0088) (Edit)
-	struct FSlateBrush                                 ExpandedImage;                                            // 0x0090(0x0088) (Edit)
-	float                                              RolloutAnimationSeconds;                                  // 0x0118(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
 };
 
 }

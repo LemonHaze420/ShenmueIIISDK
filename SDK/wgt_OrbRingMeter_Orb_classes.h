@@ -30,10 +30,10 @@ public:
 	}
 
 
-	void SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color);
+	void STATIC_SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color);
 	void SetFillRatio(float FillRatio, bool* Changed);
 	void SetScaleRatio(float ScaleRatio, bool* Changed);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_OrbRingMeter_Orb(int EntryPoint);
 };
 

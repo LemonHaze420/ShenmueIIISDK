@@ -32,7 +32,7 @@ public:
 	}
 
 
-	void GetRandCameraClass(TEnumAsByte<EN_TalkCameraClassKind>* newParam);
+	void STATIC_GetRandCameraClass(TEnumAsByte<EN_TalkCameraClassKind>* newParam);
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_TalkCam_SelectCameraClass(int EntryPoint);
 };

@@ -25,10 +25,10 @@ public:
 	}
 
 
-	void STATIC_BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row);
+	void BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row);
 	void STATIC_BPF_StepPlayerBattleDifficulty(TEnumAsByte<EUpOrDown> Direction, class UObject* __WorldContext);
 	void STATIC_BPF_SetPlayerBattleDifficulty(TEnumAsByte<EBattleDifficulty> Difficulty, class UObject* __WorldContext);
-	void STATIC_BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty);
+	void BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty);
 };
 
 

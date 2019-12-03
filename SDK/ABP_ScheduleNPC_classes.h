@@ -343,19 +343,19 @@ public:
 
 
 	float GetTalkBlendTime();
-	void BeginOpenDoor();
+	void STATIC_BeginOpenDoor();
 	void RequestAttachActionName(const struct FName& ActionName, const struct FGameplayTag& AttachmentTag);
-	void RequestAttachAnimationName(const struct FName& AnimationName, const struct FGameplayTag& AttachmentTag);
+	void STATIC_RequestAttachAnimationName(const struct FName& AnimationName, const struct FGameplayTag& AttachmentTag);
 	bool IsLookAtBody();
-	void Attach_DefinitionFromHaveItem(struct FHaveItemAttachSetting* HaveItem);
+	void STATIC_Attach_DefinitionFromHaveItem(struct FHaveItemAttachSetting* HaveItem);
 	void DetachAll();
-	void Attach_AnimNotify(class UBP_AnimNotify_Attach_C* AnimNotify);
-	void GetAttachInfo(class UStaticMesh** StaticMesh, class USkeletalMesh** SkeletalMesh, struct FNPCAttachInfo* Info);
+	void STATIC_Attach_AnimNotify(class UBP_AnimNotify_Attach_C* AnimNotify);
+	void STATIC_GetAttachInfo(class UStaticMesh** StaticMesh, class USkeletalMesh** SkeletalMesh, struct FNPCAttachInfo* Info);
 	void AttachAnimObject(class AActor* Actor, class USkeletalMeshComponent* SkMeshComp, const struct FName& SocketName, bool IsSpawn);
 	void NewFunction_1();
 	void DetachAnim();
 	void AttachStaticObject(class AActor* Actor, class UStaticMeshComponent* MeshComp, const struct FName& SocketName, bool IsSpawn, bool IsCollision);
-	void Attach(struct FNPCAttachSetting* Setting);
+	void STATIC_Attach(struct FNPCAttachSetting* Setting);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_89CE402D4B3848AF4EEDD9812EDB6B2D();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_AF4967AE46587B87947BF8B6A98CE6A8();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_E83E0A4A437233FFC1B37E836C186677();
@@ -499,14 +499,14 @@ public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_5456B7194588E358B124D4BFDBAACD5D();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_A4AC6E534A9623CA1BA2C69EDF97A1A0();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_6E35E1F340E02BF131ABFF9FEB258838();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_0A231F4D4B99B3A88DC8A7B44B4E1A09();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_22F2A2E345E2F40D4E76D4AEF2869DA6();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_3484694B447641ADD6F3AE9A57858D03();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_3756360C4EC5CCFAADE60C8F66C3D771();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_7ACE7ADA46611D2068AE3BBE86D7D21C();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_83A681144E25824598AFE28196CE552F();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TwoBoneIK_8150E465466DB0AF538FB6AF74AE509B();
-	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_BlendListByBool_D9E15D664E8CEBDC37EDC08EAB70F676();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_0A231F4D4B99B3A88DC8A7B44B4E1A09();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_22F2A2E345E2F40D4E76D4AEF2869DA6();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_3484694B447641ADD6F3AE9A57858D03();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_3756360C4EC5CCFAADE60C8F66C3D771();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_7ACE7ADA46611D2068AE3BBE86D7D21C();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_83A681144E25824598AFE28196CE552F();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TwoBoneIK_8150E465466DB0AF538FB6AF74AE509B();
+	void STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_BlendListByBool_D9E15D664E8CEBDC37EDC08EAB70F676();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_ModifyBone_AE7F07E94D83BF1CB2386EAE6ED4E093();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_BlendListByBool_33CF785541E23031BDE8E08C60FCECEA();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_LayeredBoneBlend_CBE35DEE40291D10C5216AAD9F2D596E();
@@ -566,15 +566,15 @@ public:
 	void AnimNotify_AnimationBCompleteEnd();
 	void AnimNotify_PreEndAnimating();
 	void AnimNotify_BeginTransitionSittingToIdle();
-	void Attach_HaveItem(const struct FHaveItemAttachSetting& HaveItemSetting);
+	void STATIC_Attach_HaveItem(const struct FHaveItemAttachSetting& HaveItemSetting);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_02507C7A4BDAD888D09291BD6BA22DBB();
-	void SetLookAtBody(bool Enable);
+	void STATIC_SetLookAtBody(bool Enable);
 	void AnimNotify_EndTransitionStairsLast();
 	void AnimNotify_EndTurningInPlace();
 	void BeginOpenDoorBP();
-	void SetNamePlate(bool bShow);
+	void STATIC_SetNamePlate(bool bShow);
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScheduleNPC_AnimGraphNode_TransitionResult_6ED5685649C9C7E8ECABFBB82EA96D71();
-	void ExecuteUbergraph_ABP_ScheduleNPC(int EntryPoint);
+	void STATIC_ExecuteUbergraph_ABP_ScheduleNPC(int EntryPoint);
 };
 
 

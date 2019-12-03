@@ -28,9 +28,9 @@ public:
 	}
 
 
-	void JudgeBgm(ES3DayTimeEvent NewEvent);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_JudgeBGM(ES3DayTimeEvent NewEvent);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
 	void ChangeGameTimeEvent(ES3DayTimeEvent EventType);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_S3BgmArea_dayTime(int EntryPoint);

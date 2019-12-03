@@ -32,16 +32,16 @@ public:
 	}
 
 
-	void SetEnableBodyLookAt(bool Enable);
-	void CanTurnAround(bool* bCan);
-	void IsPlayingSitAnimation(bool* bPlaying);
+	void STATIC_SetEnableBodyLookAt(bool Enable);
+	void STATIC_CanTurnAround(bool* bCan);
+	void STATIC_IsPlayingSitAnimation(bool* bPlaying);
 	void OnLoaded_F7D60CF146905F4918060D8140E96419(class UObject* Loaded);
-	void ReturnPreTalkRotationActor();
-	void ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
-	void TrySitMotation();
-	void ReceiveBeginPlay();
-	void TurnAroundTickFinish();
-	void ExecuteUbergraph_BPC_TurnAround_NPCLead(int EntryPoint);
+	void STATIC_ReturnPreTalkRotationActor();
+	void STATIC_ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
+	void STATIC_TrySitMotation();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_TurnAroundTickFinish();
+	void STATIC_ExecuteUbergraph_BPC_TurnAround_NPCLead(int EntryPoint);
 };
 
 

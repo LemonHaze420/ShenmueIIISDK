@@ -35,13 +35,13 @@ public:
 	}
 
 
-	void StartAC();
-	void SetFocusToButton();
+	void STATIC_StartAC();
+	void STATIC_SetFocusToButton();
 	struct FString GetCutsceneListLabel();
 	struct FText Get_Description_Text();
 	struct FText Get_MainButtonLabel_Text();
-	void Construct();
-	void BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_Construct();
+	void STATIC_BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_BW_DebugAutoConversationItem(int EntryPoint);
 };
 

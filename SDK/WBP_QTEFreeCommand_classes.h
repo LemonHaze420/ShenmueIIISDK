@@ -25,7 +25,7 @@ public:
 	class UWidgetAnimation*                            Outro_Failure;                                            // 0x0230(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UWidgetAnimation*                            Outro_Success;                                            // 0x0238(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UWidgetAnimation*                            Intro;                                                    // 0x0240(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
-	class UImage*                                      Bg;                                                       // 0x0248(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	class UImage*                                      bg;                                                       // 0x0248(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UImage*                                      BgIn;                                                     // 0x0250(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UWBP_QTEFreeCommandButton_C*                 ButtonBottom;                                             // 0x0258(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	class UWBP_QTEFreeCommandButton_C*                 ButtonLeft;                                               // 0x0260(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
@@ -62,33 +62,33 @@ public:
 	void PlayBlinkAnimation(ES3PadButtonIndex Index);
 	void GetLightFromPadIndex(ES3PadButtonIndex PadIndex, class UWBP_QTESimonLight_C** Light);
 	void PlayLightAnimation(ES3PadButtonIndex Index);
-	void GetButtonFromPadIndex(ES3PadButtonIndex Selection, class UWBP_QTEFreeCommandButton_C** Button);
-	void SetSuccessText(const struct FText& InText);
-	float GetMaxOutAnimationLength();
-	float GetInAnimationLength();
-	void SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
-	void SetTimeGaugeRate(float Rate);
-	bool IsPlayingOut();
+	void STATIC_GetButtonFromPadIndex(ES3PadButtonIndex Selection, class UWBP_QTEFreeCommandButton_C** Button);
+	void STATIC_SetSuccessText(const struct FText& InText);
+	float STATIC_GetMaxOutAnimationLength();
+	float STATIC_GetInAnimationLength();
+	void STATIC_SetAutoOutOkAfterInputSuccess(bool IsAutoOut);
+	void STATIC_SetTimeGaugeRate(float Rate);
+	bool STATIC_IsPlayingOut();
 	bool IsPlayingIn();
-	void PlayOutNg();
-	void PlayOutOk();
-	void PlayIn();
+	void STATIC_PlayOutNg();
+	void STATIC_PlayOutOk();
+	void STATIC_PlayIn();
 	bool IsPlayingInputSuccess();
-	void ResetAllButtonZOrder();
+	void STATIC_ResetAllButtonZOrder();
 	void ResetButtonZOrder(class UWBP_QTEFreeCommandButton_C* TargetButton);
 	void SetButtonZOrderToFront(class UWBP_QTEFreeCommandButton_C* TargetButton);
 	void SetupButtonImages();
 	void PlayInputSuccess(const struct FName& InputName, bool IsAutoHide);
 	void Reset();
 	void GetButtonFromInputName(const struct FName& InputName, class UWBP_QTEFreeCommandButton_C** Button);
-	void Construct();
-	void OnButtonInputAnimationFinished();
-	void BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint);
-	void OnOutAnimationFinishedDispatcher__DelegateSignature();
-	void OnInAnimationFinishedDispatcher__DelegateSignature();
-	void OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature();
+	void STATIC_Construct();
+	void STATIC_OnButtonInputAnimationFinished();
+	void STATIC_BndEvt__Outro_Success_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_BndEvt__Outro_Failure_K2Node_ComponentBoundEvent_4_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
+	void STATIC_ExecuteUbergraph_WBP_QTEFreeCommand(int EntryPoint);
+	void STATIC_OnOutAnimationFinishedDispatcher__DelegateSignature();
+	void STATIC_OnInAnimationFinishedDispatcher__DelegateSignature();
+	void STATIC_OnCurrentAnimationPlayListFinishedDispatcher__DelegateSignature();
 };
 
 

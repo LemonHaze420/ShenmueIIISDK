@@ -37,31 +37,31 @@ public:
 	}
 
 
-	float GetPlaybackTime();
+	float STATIC_GetPlaybackTime();
 	void StopForbid();
-	bool Stop();
-	void StopOnly();
+	bool STATIC_Stop();
+	void STATIC_StopOnly();
 	void JudgeVolume();
 	void SetSound();
 	void SetSoundPitch(float Pitch);
-	void SetAISAC(const struct FString& ControlName, float ControlValue);
+	void STATIC_SetAISAC(const struct FString& ControlName, float ControlValue);
 	void SetAttenuation(class USoundAttenuation* Attenuation);
 	void SetSelector(const struct FString& Selector, const struct FString& Label);
-	void SetSoundVolume(float Volume);
+	void STATIC_SetSoundVolume(float Volume);
 	void GetSource(class UObject** Cue);
 	void GetSourceType(TEnumAsByte<ESoundSourceType>* Type);
-	void GetDuration(bool* Result, float* Duration_sec_);
+	void STATIC_GetDuration(bool* Result, float* Duration_sec_);
 	void IsPlaying(bool* isPlay);
 	void SetSource(class UObject* Sound);
 	void EndCheck(bool* Destroy);
 	void Play();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void PermitPlay();
 	void StartReuse();
-	void SetVoiceFlag(bool bNewFlag);
-	void SetSystemVolume(float Volume);
+	void STATIC_SetVoiceFlag(bool bNewFlag);
+	void STATIC_SetSystemVolume(float Volume);
 	void AudioFinished();
 	void CriAudioFInished();
 	void BindFinishEvent();
@@ -69,7 +69,7 @@ public:
 	void Pause();
 	void Restart();
 	void ExecuteUbergraph_BP_S3SoundPlayer(int EntryPoint);
-	void OnAudioFinished__DelegateSignature(class ABP_S3SoundPlayer_C* SoundPlayer);
+	void STATIC_OnAudioFinished__DelegateSignature(class ABP_S3SoundPlayer_C* SoundPlayer);
 };
 
 

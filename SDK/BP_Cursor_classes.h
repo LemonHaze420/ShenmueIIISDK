@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void PlaySelectAnim(float* AnimTime);
+	void STATIC_PlaySelectAnim(float* AnimTime);
 	void UserConstructionScript();
 };
 

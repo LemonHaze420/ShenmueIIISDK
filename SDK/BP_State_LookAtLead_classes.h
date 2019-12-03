@@ -27,7 +27,7 @@ public:
 
 
 	void IsInitializeState(bool* bSuccess);
-	void StateOnInitialize();
+	void STATIC_StateOnInitialize();
 	void ExecuteUbergraph_BP_State_LookAtLead(int EntryPoint);
 };
 

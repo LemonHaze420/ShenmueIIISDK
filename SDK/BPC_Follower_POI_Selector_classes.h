@@ -36,10 +36,10 @@ public:
 
 
 	void InRange(class ABP_Follower_POI_C* POI, bool* bInRange);
-	void ScorePOI(class ABP_Follower_POI_C* POI, bool TestLeaderLoS, float* Score);
-	void IsNavStraightLine(class AS3Character* Character, class ABP_Follower_POI_C* POI, bool* bIsStraight);
+	void STATIC_ScorePOI(class ABP_Follower_POI_C* POI, bool TestLeaderLoS, float* Score);
+	void STATIC_IsNavStraightLine(class AS3Character* Character, class ABP_Follower_POI_C* POI, bool* bIsStraight);
 	void UpdateHistory(class ABP_Follower_POI_C* Selected);
-	void SearchForPOI(bool bIgnoreTimer, bool bTestLeaderLOS, class ABP_Follower_POI_C** POI, bool* bRanQuery);
+	void STATIC_SearchForPOI(bool bIgnoreTimer, bool bTestLeaderLOS, class ABP_Follower_POI_C** POI, bool* bRanQuery);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_Follower_POI_Selector(int EntryPoint);
 };

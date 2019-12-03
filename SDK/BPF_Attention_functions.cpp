@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Attention.BPF_Attention_C.GetS3AttentionController
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3AttentionController_C* AttentionController            (Parm, OutParm, ZeroConstructor, IsPlainOldData)

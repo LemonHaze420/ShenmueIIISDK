@@ -26,10 +26,10 @@ public:
 
 
 	class US3WetnessComponent* STATIC_GetPlayerWetnessComponent(class UObject* __WorldContext);
-	void STATIC_ResetPlayerWetness(class UObject* __WorldContext);
+	void ResetPlayerWetness(class UObject* __WorldContext);
 	void STATIC_IsApplyWetness(class AActor* Actor, class UObject* __WorldContext, bool* Apply);
 	void STATIC_ApplyMeshWetness(class USkeletalMeshComponent* Component, float Wetness, class UObject* __WorldContext);
-	void STATIC_GetPlayerWetness(class UObject* __WorldContext, float* Wetness);
+	void GetPlayerWetness(class UObject* __WorldContext, float* Wetness);
 };
 
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_S3_Ryo_ShowHand_re.ABP_S3_Ryo_ShowHand_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void UABP_S3_Ryo_ShowHand_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF()
+void UABP_S3_Ryo_ShowHand_re_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_ShowHand_re.ABP_S3_Ryo_ShowHand_re_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF");
 
 	UABP_S3_Ryo_ShowHand_re_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re_AnimGraphNode_BlendSpacePlayer_634697114ACC5A22898894888A89C5FF_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void UABP_S3_Ryo_ShowHand_re_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_
 
 
 // Function ABP_S3_Ryo_ShowHand_re.ABP_S3_Ryo_ShowHand_re_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_S3_Ryo_ShowHand_re_C::BlueprintUpdateAnimation(float DeltaTimeX)
+void UABP_S3_Ryo_ShowHand_re_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_S3_Ryo_ShowHand_re.ABP_S3_Ryo_ShowHand_re_C.BlueprintUpdateAnimation");
 
@@ -51,7 +52,7 @@ void UABP_S3_Ryo_ShowHand_re_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_S3_Ryo_ShowHand_re.ABP_S3_Ryo_ShowHand_re_C.ExecuteUbergraph_ABP_S3_Ryo_ShowHand_re
-// ()
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

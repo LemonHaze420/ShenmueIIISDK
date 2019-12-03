@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_FloatMeter.wgt_FloatMeter_C.SetScaleRatio
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ScaleRatio                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void Uwgt_FloatMeter_C::SetScaleRatio(float ScaleRatio, bool* Changed)
 
 
 // Function wgt_FloatMeter.wgt_FloatMeter_C.SetFillRatio
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          FillRatio                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)

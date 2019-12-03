@@ -28,9 +28,9 @@ public:
 	}
 
 
-	bool IsStillValidToWait();
-	void StartEvent(bool* Success);
-	void UserConstructionScript();
+	bool STATIC_IsStillValidToWait();
+	void STATIC_StartEvent(bool* Success);
+	void STATIC_UserConstructionScript();
 };
 
 

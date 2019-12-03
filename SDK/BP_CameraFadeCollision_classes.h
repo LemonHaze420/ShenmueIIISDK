@@ -54,26 +54,26 @@ public:
 
 
 	void UpdatePlayerFaderState();
-	float SelectFadeTime(float NonInstant);
+	float STATIC_SelectFadeTime(float NonInstant);
 	bool ShouldAllFadesBeInstant();
 	void EnableNPCFadeCollision(bool Enable, class UObject* Requester);
-	bool GetCollidedDoor(class AActor* Actor, class UPrimitiveComponent* Primitive, class AS3GimmickOpenDoor** Door);
+	bool STATIC_GetCollidedDoor(class AActor* Actor, class UPrimitiveComponent* Primitive, class AS3GimmickOpenDoor** Door);
 	void FadeDoor(class AS3GimmickOpenDoor* Door);
-	bool ShouldHideOverlappingNPCs();
-	void OverlapNPC(class AS3Character* NPC, bool Overlap);
+	bool STATIC_ShouldHideOverlappingNPCs();
+	void STATIC_OverlapNPC(class AS3Character* NPC, bool Overlap);
 	void EnablePlayerFadeCollision(bool Enable, class UObject* Requester);
-	bool WantsToHidePlayer();
+	bool STATIC_WantsToHidePlayer();
 	void FadeCharacter(class AS3Character* Character, bool FadeOut);
 	bool IsPlayerMeshCollision(class USceneComponent* Target);
 	void UserConstructionScript();
 	void BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_BndEvt__PlayerTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void STATIC_BndEvt__NPCTrigger_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void STATIC_BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_BndEvt__DoorTrigger_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void BndEvt__DisablePlayerFade_K2Node_ComponentBoundEvent_8_OnLastRequestRemove__DelegateSignature();
 	void BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_6_OnFirstRequestAdd__DelegateSignature();
 	void BndEvt__DisableNPCAndDoorFade_K2Node_ComponentBoundEvent_7_OnLastRequestRemove__DelegateSignature();

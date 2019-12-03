@@ -28,10 +28,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void StartMiniGame();
 	void EndMiniGame();
-	void ExecuteUbergraph_BP_Gacha_Input(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_Gacha_Input(int EntryPoint);
 };
 
 

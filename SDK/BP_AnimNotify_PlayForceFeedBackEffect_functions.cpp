@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_PlayForceFeedBackEffect.BP_AnimNotify_PlayForceFeedBackEffect_C.Received_Notify
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Event, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -39,11 +39,11 @@ bool UBP_AnimNotify_PlayForceFeedBackEffect_C::Received_Notify(class USkeletalMe
 
 
 // Function BP_AnimNotify_PlayForceFeedBackEffect.BP_AnimNotify_PlayForceFeedBackEffect_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_PlayForceFeedBackEffect_C::GetNotifyName()
+struct FString UBP_AnimNotify_PlayForceFeedBackEffect_C::STATIC_GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_PlayForceFeedBackEffect.BP_AnimNotify_PlayForceFeedBackEffect_C.GetNotifyName");
 

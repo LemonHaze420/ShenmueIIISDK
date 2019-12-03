@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.PrintLog
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBPC_S3DetectDebug_C::PrintLog()
 {
@@ -31,15 +31,16 @@ void UBPC_S3DetectDebug_C::PrintLog()
 
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetServer)
 
-void UBPC_S3DetectDebug_C::ReceiveBeginPlay()
+void UBPC_S3DetectDebug_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveBeginPlay");
 
 	UBPC_S3DetectDebug_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +49,11 @@ void UBPC_S3DetectDebug_C::ReceiveBeginPlay()
 
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3DetectDebug_C::ReceiveTick(float DeltaSeconds)
+void UBPC_S3DetectDebug_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ReceiveTick");
 
@@ -60,6 +61,7 @@ void UBPC_S3DetectDebug_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +70,7 @@ void UBPC_S3DetectDebug_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_S3DetectDebug.BPC_S3DetectDebug_C.ExecuteUbergraph_BPC_S3DetectDebug
-// ()
+// (Net, NetReliable, Exec, NetResponse, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

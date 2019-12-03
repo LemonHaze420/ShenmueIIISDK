@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_AutoRefineShoulderCut.BPC_AutoRefineShoulderCut_C.NewFunction_1
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_AutoRefineShoulderCut_C::NewFunction_1()
 {
@@ -31,7 +31,7 @@ void UBPC_AutoRefineShoulderCut_C::NewFunction_1()
 
 
 // Function BPC_AutoRefineShoulderCut.BPC_AutoRefineShoulderCut_C.ListenerIsTaller
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Public, NetServer)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -53,7 +53,7 @@ void UBPC_AutoRefineShoulderCut_C::ListenerIsTaller(bool* Result)
 
 
 // Function BPC_AutoRefineShoulderCut.BPC_AutoRefineShoulderCut_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBPC_AutoRefineShoulderCut_C::ReceiveBeginPlay()
 {
@@ -62,6 +62,7 @@ void UBPC_AutoRefineShoulderCut_C::ReceiveBeginPlay()
 	UBPC_AutoRefineShoulderCut_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +71,7 @@ void UBPC_AutoRefineShoulderCut_C::ReceiveBeginPlay()
 
 
 // Function BPC_AutoRefineShoulderCut.BPC_AutoRefineShoulderCut_C.Update
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBPC_AutoRefineShoulderCut_C::Update()
 {
@@ -79,6 +80,7 @@ void UBPC_AutoRefineShoulderCut_C::Update()
 	UBPC_AutoRefineShoulderCut_C_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,11 +89,11 @@ void UBPC_AutoRefineShoulderCut_C::Update()
 
 
 // Function BPC_AutoRefineShoulderCut.BPC_AutoRefineShoulderCut_C.ExecuteUbergraph_BPC_AutoRefineShoulderCut
-// (HasDefaults)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_AutoRefineShoulderCut_C::ExecuteUbergraph_BPC_AutoRefineShoulderCut(int EntryPoint)
+void UBPC_AutoRefineShoulderCut_C::STATIC_ExecuteUbergraph_BPC_AutoRefineShoulderCut(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_AutoRefineShoulderCut.BPC_AutoRefineShoulderCut_C.ExecuteUbergraph_BPC_AutoRefineShoulderCut");
 

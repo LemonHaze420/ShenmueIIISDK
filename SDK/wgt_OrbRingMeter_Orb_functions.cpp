@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_OrbRingMeter_Orb.wgt_OrbRingMeter_Orb_C.SetColorByEnum
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EHealthOrbColor>   Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_OrbRingMeter_Orb_C::SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color)
+void Uwgt_OrbRingMeter_Orb_C::STATIC_SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_OrbRingMeter_Orb.wgt_OrbRingMeter_Orb_C.SetColorByEnum");
 
@@ -34,7 +34,7 @@ void Uwgt_OrbRingMeter_Orb_C::SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color)
 
 
 // Function wgt_OrbRingMeter_Orb.wgt_OrbRingMeter_Orb_C.SetFillRatio
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          FillRatio                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -47,6 +47,7 @@ void Uwgt_OrbRingMeter_Orb_C::SetFillRatio(float FillRatio, bool* Changed)
 	params.FillRatio = FillRatio;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +59,7 @@ void Uwgt_OrbRingMeter_Orb_C::SetFillRatio(float FillRatio, bool* Changed)
 
 
 // Function wgt_OrbRingMeter_Orb.wgt_OrbRingMeter_Orb_C.SetScaleRatio
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ScaleRatio                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -82,11 +83,11 @@ void Uwgt_OrbRingMeter_Orb_C::SetScaleRatio(float ScaleRatio, bool* Changed)
 
 
 // Function wgt_OrbRingMeter_Orb.wgt_OrbRingMeter_Orb_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_OrbRingMeter_Orb_C::PreConstruct(bool IsDesignTime)
+void Uwgt_OrbRingMeter_Orb_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_OrbRingMeter_Orb.wgt_OrbRingMeter_Orb_C.PreConstruct");
 
@@ -94,6 +95,7 @@ void Uwgt_OrbRingMeter_Orb_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +104,7 @@ void Uwgt_OrbRingMeter_Orb_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_OrbRingMeter_Orb.wgt_OrbRingMeter_Orb_C.ExecuteUbergraph_wgt_OrbRingMeter_Orb
-// ()
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -114,6 +116,7 @@ void Uwgt_OrbRingMeter_Orb_C::ExecuteUbergraph_wgt_OrbRingMeter_Orb(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -28,12 +28,12 @@ public:
 	}
 
 
-	void End();
-	void Start();
+	void STATIC_End();
+	void STATIC_Start();
 	bool CheckLimitTime();
-	void SetLimitTime(float limit_time);
+	void STATIC_SetLimitTime(float limit_time);
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_MiniGameInputWaitTimer(int EntryPoint);
 };
 

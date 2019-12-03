@@ -47,9 +47,9 @@ public:
 	}
 
 
-	void SetEventStep(int NewStep);
-	void ValueCommitted(class USpinBox* SpinBox, float Value, TEnumAsByte<ETextCommit> Method);
-	void CheckFocus(class USpinBox* SpinBox, bool* Result);
+	void STATIC_SetEventStep(int NewStep);
+	void STATIC_ValueCommitted(class USpinBox* SpinBox, float Value, TEnumAsByte<ETextCommit> Method);
+	void STATIC_CheckFocus(class USpinBox* SpinBox, bool* Result);
 	struct FEventReply OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent);
 	void JointValue_Short();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

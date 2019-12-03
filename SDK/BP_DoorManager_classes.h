@@ -29,11 +29,11 @@ public:
 
 	void LazyFindDoors();
 	void ForbidPCDoorInteraction();
-	void GetDoors(TArray<class ABP_Gimmick_OpenDoor_Template_C*>* Doors);
+	void STATIC_GetDoors(TArray<class ABP_Gimmick_OpenDoor_Template_C*>* Doors);
 	void ChangeDoorType(const struct FString& DoorName, TEnumAsByte<EN_DoorType> DoorType);
 	void SetDoors();
 	void GetDoorByName(const struct FString& DoorName, class ABP_Gimmick_OpenDoor_Template_C** DoorActor);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 };
 
 

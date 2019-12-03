@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.IsUseFluctuationEmotion
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,11 +35,11 @@ bool USubABP_CharacterBase_C::IsUseFluctuationEmotion()
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.DebugPlayEmotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, HasOutParms, Const)
 // Parameters:
 // ECharacterEmotion              EmotionId                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_CharacterBase_C::DebugPlayEmotion(ECharacterEmotion EmotionId)
+void USubABP_CharacterBase_C::STATIC_DebugPlayEmotion(ECharacterEmotion EmotionId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.DebugPlayEmotion");
 
@@ -47,6 +47,7 @@ void USubABP_CharacterBase_C::DebugPlayEmotion(ECharacterEmotion EmotionId)
 	params.EmotionId = EmotionId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,11 +56,11 @@ void USubABP_CharacterBase_C::DebugPlayEmotion(ECharacterEmotion EmotionId)
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.OverlapEyeCloseBlendMap
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           Overlap                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_CharacterBase_C::OverlapEyeCloseBlendMap(bool* Overlap)
+void USubABP_CharacterBase_C::STATIC_OverlapEyeCloseBlendMap(bool* Overlap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.OverlapEyeCloseBlendMap");
 
@@ -77,15 +78,16 @@ void USubABP_CharacterBase_C::OverlapEyeCloseBlendMap(bool* Overlap)
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.InitAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void USubABP_CharacterBase_C::InitAnimation()
+void USubABP_CharacterBase_C::STATIC_InitAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.InitAnimation");
 
 	USubABP_CharacterBase_C_InitAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +96,7 @@ void USubABP_CharacterBase_C::InitAnimation()
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.InitManger
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -105,6 +107,7 @@ void USubABP_CharacterBase_C::InitManger(bool* Success)
 	USubABP_CharacterBase_C_InitManger_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +119,7 @@ void USubABP_CharacterBase_C::InitManger(bool* Success)
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.DebugPlayClipper
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMouseShape                    ClipperId                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -138,11 +141,11 @@ void USubABP_CharacterBase_C::DebugPlayClipper(EMouseShape ClipperId, float Volu
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.InitFaceMotages
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Succsess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_CharacterBase_C::InitFaceMotages(bool* Succsess)
+void USubABP_CharacterBase_C::STATIC_InitFaceMotages(bool* Succsess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.InitFaceMotages");
 
@@ -160,11 +163,11 @@ void USubABP_CharacterBase_C::InitFaceMotages(bool* Succsess)
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.PlayEyelidMontage
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_CharacterBase_C::PlayEyelidMontage(bool* dummy)
+void USubABP_CharacterBase_C::STATIC_PlayEyelidMontage(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.PlayEyelidMontage");
 
@@ -182,9 +185,9 @@ void USubABP_CharacterBase_C::PlayEyelidMontage(bool* dummy)
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_2427342E4DE62DA9681D10899FA0C469
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_2427342E4DE62DA9681D10899FA0C469()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_2427342E4DE62DA9681D10899FA0C469()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_2427342E4DE62DA9681D10899FA0C469");
 
@@ -199,9 +202,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_0BE400954F2DD819D23E14A25E18FFB6
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_0BE400954F2DD819D23E14A25E18FFB6()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_0BE400954F2DD819D23E14A25E18FFB6()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_0BE400954F2DD819D23E14A25E18FFB6");
 
@@ -216,9 +219,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_3A969FD84F89E2B587387FAE2BB3883B
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_3A969FD84F89E2B587387FAE2BB3883B()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_3A969FD84F89E2B587387FAE2BB3883B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_TwoBoneIK_3A969FD84F89E2B587387FAE2BB3883B");
 
@@ -233,9 +236,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_34BE70864AAE1E681F3699AD76E8D06D
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_34BE70864AAE1E681F3699AD76E8D06D()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_34BE70864AAE1E681F3699AD76E8D06D()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_34BE70864AAE1E681F3699AD76E8D06D");
 
@@ -250,9 +253,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5BE236A94C87625E7BBB518DE62094E8
-// (BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5BE236A94C87625E7BBB518DE62094E8()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5BE236A94C87625E7BBB518DE62094E8()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5BE236A94C87625E7BBB518DE62094E8");
 
@@ -267,9 +270,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_A7266A3E498F3EF9A0308BBBBB2EB246
-// (BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_A7266A3E498F3EF9A0308BBBBB2EB246()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_A7266A3E498F3EF9A0308BBBBB2EB246()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_A7266A3E498F3EF9A0308BBBBB2EB246");
 
@@ -284,9 +287,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_DAA02AFC4DC1197CB2C0178C65D47C4E
-// (BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_DAA02AFC4DC1197CB2C0178C65D47C4E()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_DAA02AFC4DC1197CB2C0178C65D47C4E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_DAA02AFC4DC1197CB2C0178C65D47C4E");
 
@@ -301,9 +304,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_09A482254DA4FED67620BDBA9AF2C14F
-// (BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_09A482254DA4FED67620BDBA9AF2C14F()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_09A482254DA4FED67620BDBA9AF2C14F()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_09A482254DA4FED67620BDBA9AF2C14F");
 
@@ -318,9 +321,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_17A9CDE541DED1AD6C3E81964EA9FF7B
-// (BlueprintEvent)
+// (Net, NetReliable, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_17A9CDE541DED1AD6C3E81964EA9FF7B()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_17A9CDE541DED1AD6C3E81964EA9FF7B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_17A9CDE541DED1AD6C3E81964EA9FF7B");
 
@@ -335,15 +338,16 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_6E40D96F4FF1FABBA3D5C893DA0FF173
-// (BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_6E40D96F4FF1FABBA3D5C893DA0FF173()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_6E40D96F4FF1FABBA3D5C893DA0FF173()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_6E40D96F4FF1FABBA3D5C893DA0FF173");
 
 	USubABP_CharacterBase_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_6E40D96F4FF1FABBA3D5C893DA0FF173_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -352,15 +356,16 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_75ECB2A54119C4902CEA6EB4A98AB190
-// (BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_75ECB2A54119C4902CEA6EB4A98AB190()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_75ECB2A54119C4902CEA6EB4A98AB190()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_75ECB2A54119C4902CEA6EB4A98AB190");
 
 	USubABP_CharacterBase_C_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_ModifyBone_75ECB2A54119C4902CEA6EB4A98AB190_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -369,9 +374,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_872AD054496382ED20CEBEAA0C3ABB35
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_872AD054496382ED20CEBEAA0C3ABB35()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_872AD054496382ED20CEBEAA0C3ABB35()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_872AD054496382ED20CEBEAA0C3ABB35");
 
@@ -386,9 +391,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_A25ED02C40574FBD07485A8EDF7DAABF
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_A25ED02C40574FBD07485A8EDF7DAABF()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_A25ED02C40574FBD07485A8EDF7DAABF()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_A25ED02C40574FBD07485A8EDF7DAABF");
 
@@ -403,9 +408,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_B0B10A0C473B7DF27D75AD8F131D92F5
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_B0B10A0C473B7DF27D75AD8F131D92F5()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_B0B10A0C473B7DF27D75AD8F131D92F5()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LookAt_B0B10A0C473B7DF27D75AD8F131D92F5");
 
@@ -420,9 +425,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_F15186F940D416D2FF0FC7A94367E54F
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_F15186F940D416D2FF0FC7A94367E54F()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_F15186F940D416D2FF0FC7A94367E54F()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_F15186F940D416D2FF0FC7A94367E54F");
 
@@ -437,9 +442,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_146D05A044B11F478977D6BACF041763
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_146D05A044B11F478977D6BACF041763()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_146D05A044B11F478977D6BACF041763()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_146D05A044B11F478977D6BACF041763");
 
@@ -454,9 +459,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_83CCFA454C996E72BFBB599FD2A0AA25
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_83CCFA454C996E72BFBB599FD2A0AA25()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_83CCFA454C996E72BFBB599FD2A0AA25()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_83CCFA454C996E72BFBB599FD2A0AA25");
 
@@ -471,9 +476,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_660409A34D1A9E226405539E6C696495
-// (BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_660409A34D1A9E226405539E6C696495()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_660409A34D1A9E226405539E6C696495()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_BlendListByBool_660409A34D1A9E226405539E6C696495");
 
@@ -488,9 +493,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5AEFF4E648C09169E60A47AE69852A08
-// (BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5AEFF4E648C09169E60A47AE69852A08()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5AEFF4E648C09169E60A47AE69852A08()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_5AEFF4E648C09169E60A47AE69852A08");
 
@@ -505,9 +510,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_163784F549F81C3689E764B16BB5F07E
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_163784F549F81C3689E764B16BB5F07E()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_163784F549F81C3689E764B16BB5F07E()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_LayeredBoneBlend_163784F549F81C3689E764B16BB5F07E");
 
@@ -522,7 +527,7 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.PlayGreeting
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -542,9 +547,9 @@ void USubABP_CharacterBase_C::PlayGreeting(int Level)
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::BlueprintInitializeAnimation()
+void USubABP_CharacterBase_C::STATIC_BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.BlueprintInitializeAnimation");
 
@@ -559,11 +564,11 @@ void USubABP_CharacterBase_C::BlueprintInitializeAnimation()
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.RetryFaceAnimation
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AS3Character*            LoadedCharacter                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_CharacterBase_C::RetryFaceAnimation(class AS3Character* LoadedCharacter)
+void USubABP_CharacterBase_C::STATIC_RetryFaceAnimation(class AS3Character* LoadedCharacter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.RetryFaceAnimation");
 
@@ -571,6 +576,7 @@ void USubABP_CharacterBase_C::RetryFaceAnimation(class AS3Character* LoadedChara
 	params.LoadedCharacter = LoadedCharacter;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -579,9 +585,9 @@ void USubABP_CharacterBase_C::RetryFaceAnimation(class AS3Character* LoadedChara
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.CalcEmotion
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::CalcEmotion()
+void USubABP_CharacterBase_C::STATIC_CalcEmotion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.CalcEmotion");
 
@@ -596,9 +602,9 @@ void USubABP_CharacterBase_C::CalcEmotion()
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_99EADCD44C38324A201E7AA7D7E49D7B
-// (BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_99EADCD44C38324A201E7AA7D7E49D7B()
+void USubABP_CharacterBase_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_99EADCD44C38324A201E7AA7D7E49D7B()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP_CharacterBase_AnimGraphNode_S3LookAt_99EADCD44C38324A201E7AA7D7E49D7B");
 
@@ -613,9 +619,9 @@ void USubABP_CharacterBase_C::EvaluateGraphExposedInputs_ExecuteUbergraph_SubABP
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.CalcLookAt
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CharacterBase_C::CalcLookAt()
+void USubABP_CharacterBase_C::STATIC_CalcLookAt()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CharacterBase.SubABP_CharacterBase_C.CalcLookAt");
 
@@ -630,7 +636,7 @@ void USubABP_CharacterBase_C::CalcLookAt()
 
 
 // Function SubABP_CharacterBase.SubABP_CharacterBase_C.ExecuteUbergraph_SubABP_CharacterBase
-// ()
+// (Net, NetReliable, NetRequest, Native, NetResponse, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -642,6 +648,7 @@ void USubABP_CharacterBase_C::ExecuteUbergraph_SubABP_CharacterBase(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

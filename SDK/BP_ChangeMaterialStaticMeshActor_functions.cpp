@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ChangeMaterial
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Private, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_ChangeMaterialStaticMeshActor_C::ChangeMaterial()
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_ChangeMaterial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ChangeMaterial");
 
@@ -31,9 +31,9 @@ void ABP_ChangeMaterialStaticMeshActor_C::ChangeMaterial()
 
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.CheckTimeEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_ChangeMaterialStaticMeshActor_C::CheckTimeEvent()
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_CheckTimeEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.CheckTimeEvent");
 
@@ -48,15 +48,16 @@ void ABP_ChangeMaterialStaticMeshActor_C::CheckTimeEvent()
 
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, NetValidate)
 
-void ABP_ChangeMaterialStaticMeshActor_C::UserConstructionScript()
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.UserConstructionScript");
 
 	ABP_ChangeMaterialStaticMeshActor_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,15 +66,16 @@ void ABP_ChangeMaterialStaticMeshActor_C::UserConstructionScript()
 
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_ChangeMaterialStaticMeshActor_C::ReceiveBeginPlay()
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ReceiveBeginPlay");
 
 	ABP_ChangeMaterialStaticMeshActor_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,11 +84,11 @@ void ABP_ChangeMaterialStaticMeshActor_C::ReceiveBeginPlay()
 
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ChangeTimeEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ChangeMaterialStaticMeshActor_C::ChangeTimeEvent(ES3DayTimeEvent EventType)
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_ChangeTimeEvent(ES3DayTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ChangeTimeEvent");
 
@@ -94,6 +96,7 @@ void ABP_ChangeMaterialStaticMeshActor_C::ChangeTimeEvent(ES3DayTimeEvent EventT
 	params.EventType = EventType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,11 +105,11 @@ void ABP_ChangeMaterialStaticMeshActor_C::ChangeTimeEvent(ES3DayTimeEvent EventT
 
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ChangeMaterialStaticMeshActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ReceiveEndPlay");
 
@@ -114,6 +117,7 @@ void ABP_ChangeMaterialStaticMeshActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayRea
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,11 +126,11 @@ void ABP_ChangeMaterialStaticMeshActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayRea
 
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ChangeMaterialStaticMeshActor_C::ReceiveTick(float DeltaSeconds)
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ReceiveTick");
 
@@ -142,11 +146,11 @@ void ABP_ChangeMaterialStaticMeshActor_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor
-// ()
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ChangeMaterialStaticMeshActor_C::ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor(int EntryPoint)
+void ABP_ChangeMaterialStaticMeshActor_C::STATIC_ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ChangeMaterialStaticMeshActor.BP_ChangeMaterialStaticMeshActor_C.ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor");
 
@@ -154,6 +158,7 @@ void ABP_ChangeMaterialStaticMeshActor_C::ExecuteUbergraph_BP_ChangeMaterialStat
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

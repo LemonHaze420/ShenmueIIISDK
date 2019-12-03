@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GachaMachineMeshActor.BP_GachaMachineMeshActor_C.SetMachineMaterial
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UMaterialInterface*      Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GachaMachineMeshActor_C::SetMachineMaterial(class UMaterialInterface* Material)
+void ABP_GachaMachineMeshActor_C::STATIC_SetMachineMaterial(class UMaterialInterface* Material)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GachaMachineMeshActor.BP_GachaMachineMeshActor_C.SetMachineMaterial");
 
@@ -26,6 +26,7 @@ void ABP_GachaMachineMeshActor_C::SetMachineMaterial(class UMaterialInterface* M
 	params.Material = Material;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,15 +35,16 @@ void ABP_GachaMachineMeshActor_C::SetMachineMaterial(class UMaterialInterface* M
 
 
 // Function BP_GachaMachineMeshActor.BP_GachaMachineMeshActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_GachaMachineMeshActor_C::UserConstructionScript()
+void ABP_GachaMachineMeshActor_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GachaMachineMeshActor.BP_GachaMachineMeshActor_C.UserConstructionScript");
 
 	ABP_GachaMachineMeshActor_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

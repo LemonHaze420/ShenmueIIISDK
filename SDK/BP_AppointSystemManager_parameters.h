@@ -205,7 +205,7 @@ struct ABP_AppointSystemManager_C_GetAppointData_Params
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.SetAppointButtonFlag
 struct ABP_AppointSystemManager_C_SetAppointButtonFlag_Params
 {
-	bool                                               deny;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Deny;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_AppointSystemManager.BP_AppointSystemManager_C.Finalize

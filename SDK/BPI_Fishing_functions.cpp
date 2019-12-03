@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_Fishing.BPI_Fishing_C.UpdateForCable
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void UBPI_Fishing_C::UpdateForCable()
 {
@@ -23,6 +23,7 @@ void UBPI_Fishing_C::UpdateForCable()
 	UBPI_Fishing_C_UpdateForCable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

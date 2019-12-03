@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SortSkillsForBattle.BP_SortSkillsForBattle_C.Compare
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, MulticastDelegate, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   B                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_SortSkillsForBattle_C::Compare(const struct FName& A, const struct FName& B)
+bool UBP_SortSkillsForBattle_C::STATIC_Compare(const struct FName& A, const struct FName& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SortSkillsForBattle.BP_SortSkillsForBattle_C.Compare");
 
@@ -29,6 +29,7 @@ bool UBP_SortSkillsForBattle_C::Compare(const struct FName& A, const struct FNam
 	params.B = B;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

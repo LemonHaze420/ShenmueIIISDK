@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ int ABP_S3BetMoneyManager_C::GetPriority()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -46,6 +46,7 @@ TArray<struct FS3DetectActionParam> ABP_S3BetMoneyManager_C::GetDetectAction()
 	ABP_S3BetMoneyManager_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +57,7 @@ TArray<struct FS3DetectActionParam> ABP_S3BetMoneyManager_C::GetDetectAction()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.CalcPrice
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // int                            Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -76,9 +77,9 @@ void ABP_S3BetMoneyManager_C::CalcPrice(int Price)
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.PressButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void ABP_S3BetMoneyManager_C::PressButton()
+void ABP_S3BetMoneyManager_C::STATIC_PressButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.PressButton");
 
@@ -93,7 +94,7 @@ void ABP_S3BetMoneyManager_C::PressButton()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.UpdCurrentNum
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3BetMoneyManager_C::UpdCurrentNum()
 {
@@ -110,15 +111,16 @@ void ABP_S3BetMoneyManager_C::UpdCurrentNum()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.AllDestroy
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, Const)
 
-void ABP_S3BetMoneyManager_C::AllDestroy()
+void ABP_S3BetMoneyManager_C::STATIC_AllDestroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.AllDestroy");
 
 	ABP_S3BetMoneyManager_C_AllDestroy_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,9 +129,9 @@ void ABP_S3BetMoneyManager_C::AllDestroy()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.ReturnStatus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3BetMoneyManager_C::ReturnStatus()
+void ABP_S3BetMoneyManager_C::STATIC_ReturnStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.ReturnStatus");
 
@@ -144,7 +146,7 @@ void ABP_S3BetMoneyManager_C::ReturnStatus()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.ChangeStatus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Public, Protected, Delegate, HasDefaults, NetClient, Const)
 
 void ABP_S3BetMoneyManager_C::ChangeStatus()
 {
@@ -153,6 +155,7 @@ void ABP_S3BetMoneyManager_C::ChangeStatus()
 	ABP_S3BetMoneyManager_C_ChangeStatus_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,9 +164,9 @@ void ABP_S3BetMoneyManager_C::ChangeStatus()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3BetMoneyManager_C::UserConstructionScript()
+void ABP_S3BetMoneyManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.UserConstructionScript");
 
@@ -178,7 +181,7 @@ void ABP_S3BetMoneyManager_C::UserConstructionScript()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -198,7 +201,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_1
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -218,7 +221,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_1
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -238,7 +241,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13
-// (BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -258,7 +261,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -270,6 +273,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -278,7 +282,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -290,6 +294,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,7 +303,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_10
-// (BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -310,6 +315,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -318,7 +324,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEven
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_9
-// (BlueprintEvent)
+// (Net, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -330,6 +336,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -338,7 +345,7 @@ void ABP_S3BetMoneyManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEven
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_S3BetMoneyManager_C::ReceiveBeginPlay()
 {
@@ -347,6 +354,7 @@ void ABP_S3BetMoneyManager_C::ReceiveBeginPlay()
 	ABP_S3BetMoneyManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -355,7 +363,7 @@ void ABP_S3BetMoneyManager_C::ReceiveBeginPlay()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -367,6 +375,7 @@ void ABP_S3BetMoneyManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -375,7 +384,7 @@ void ABP_S3BetMoneyManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -387,6 +396,7 @@ void ABP_S3BetMoneyManager_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -395,7 +405,7 @@ void ABP_S3BetMoneyManager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.PushAnimFinish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_S3BetMoneyManager_C::PushAnimFinish()
 {
@@ -404,6 +414,7 @@ void ABP_S3BetMoneyManager_C::PushAnimFinish()
 	ABP_S3BetMoneyManager_C_PushAnimFinish_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -412,7 +423,7 @@ void ABP_S3BetMoneyManager_C::PushAnimFinish()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.Dialog_Cancel
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_S3BetMoneyManager_C::Dialog_Cancel()
 {
@@ -421,6 +432,7 @@ void ABP_S3BetMoneyManager_C::Dialog_Cancel()
 	ABP_S3BetMoneyManager_C_Dialog_Cancel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -429,7 +441,7 @@ void ABP_S3BetMoneyManager_C::Dialog_Cancel()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.Dialog_Decide
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_S3BetMoneyManager_C::Dialog_Decide()
 {
@@ -438,6 +450,7 @@ void ABP_S3BetMoneyManager_C::Dialog_Decide()
 	ABP_S3BetMoneyManager_C_Dialog_Decide_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -446,7 +459,7 @@ void ABP_S3BetMoneyManager_C::Dialog_Decide()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.o
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -466,7 +479,7 @@ void ABP_S3BetMoneyManager_C::o(int Index)
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.ExecuteUbergraph_BP_S3BetMoneyManager
-// (HasDefaults)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -486,7 +499,7 @@ void ABP_S3BetMoneyManager_C::ExecuteUbergraph_BP_S3BetMoneyManager(int EntryPoi
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.buyEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 
 void ABP_S3BetMoneyManager_C::buyEnd__DelegateSignature()
 {
@@ -503,7 +516,7 @@ void ABP_S3BetMoneyManager_C::buyEnd__DelegateSignature()
 
 
 // Function BP_S3BetMoneyManager.BP_S3BetMoneyManager_C.noBuyEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 
 void ABP_S3BetMoneyManager_C::noBuyEnd__DelegateSignature()
 {
@@ -512,6 +525,7 @@ void ABP_S3BetMoneyManager_C::noBuyEnd__DelegateSignature()
 	ABP_S3BetMoneyManager_C_noBuyEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

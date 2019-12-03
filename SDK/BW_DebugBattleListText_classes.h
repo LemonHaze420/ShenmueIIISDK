@@ -28,9 +28,9 @@ public:
 	}
 
 
-	void SetText(const struct FText& Text);
+	void STATIC_SetText(const struct FText& Text);
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_BW_DebugBattleListText(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BW_DebugBattleListText(int EntryPoint);
 };
 
 

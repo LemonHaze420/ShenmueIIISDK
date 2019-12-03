@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtLead_Event.BP_State_LookAtLead_Event_C.StateExit
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtLead_Event_C::StateExit(float Delta, bool* bProcessing)
+void UBP_State_LookAtLead_Event_C::STATIC_StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtLead_Event.BP_State_LookAtLead_Event_C.StateExit");
 
@@ -38,7 +38,7 @@ void UBP_State_LookAtLead_Event_C::StateExit(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtLead_Event.BP_State_LookAtLead_Event_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, NetServer)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -51,6 +51,7 @@ void UBP_State_LookAtLead_Event_C::StateEnter(float Delta, bool* bProcessing)
 	params.Delta = Delta;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

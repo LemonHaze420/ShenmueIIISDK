@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_HUDBase.BPF_HUDBase_C.BPF_SafeRemovePersistantWidget
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Public, Private, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class UUserWidget*             Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_HUDBase_C::STATIC_BPF_SafeRemovePersistantWidget(class UObject* __WorldContext, class UUserWidget** Widget)
+void UBPF_HUDBase_C::BPF_SafeRemovePersistantWidget(class UObject* __WorldContext, class UUserWidget** Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_HUDBase.BPF_HUDBase_C.BPF_SafeRemovePersistantWidget");
 
@@ -27,6 +27,7 @@ void UBPF_HUDBase_C::STATIC_BPF_SafeRemovePersistantWidget(class UObject* __Worl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,12 +39,12 @@ void UBPF_HUDBase_C::STATIC_BPF_SafeRemovePersistantWidget(class UObject* __Worl
 
 
 // Function BPF_HUDBase.BPF_HUDBase_C.getS3HudBase
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3HUD_Base_C*        BP_S3HUD_Base                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_HUDBase_C::STATIC_getS3HudBase(class UObject* __WorldContext, class ABP_S3HUD_Base_C** BP_S3HUD_Base)
+void UBPF_HUDBase_C::getS3HudBase(class UObject* __WorldContext, class ABP_S3HUD_Base_C** BP_S3HUD_Base)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_HUDBase.BPF_HUDBase_C.getS3HudBase");
 

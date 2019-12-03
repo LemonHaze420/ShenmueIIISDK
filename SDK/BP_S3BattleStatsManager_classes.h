@@ -29,17 +29,17 @@ public:
 
 
 	void InitDefaultLevelProgression();
-	void ReinitFixedLevel();
-	void Debug_TestSkillProgression();
-	bool IsSkillEquipable(const struct FName& SkillId);
+	void STATIC_ReinitFixedLevel();
+	void STATIC_Debug_TestSkillProgression();
+	bool STATIC_IsSkillEquipable(const struct FName& SkillId);
 	bool IsSkillLevelable(const struct FName& SkillItem);
-	void GetDojoRankMax(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank);
+	void STATIC_GetDojoRankMax(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank);
 	bool InitBlueprint();
 	void SetLastAdviceData(class UBattleAdviceData_C* AdviceData);
 	void GetLastAdviceData(class UBattleAdviceData_C** AdviceData);
-	int GetDojoRankIndex(const struct FName& Dojo);
-	void DojoRankNameToEnum(const struct FName& Name, ES3DojoRank* Rank);
-	void DojoRankEnumToName(ES3DojoRank InRank, struct FName* OutRank);
+	int STATIC_GetDojoRankIndex(const struct FName& Dojo);
+	void STATIC_DojoRankNameToEnum(const struct FName& Name, ES3DojoRank* Rank);
+	void STATIC_DojoRankEnumToName(ES3DojoRank InRank, struct FName* OutRank);
 	void GetDojoRankAsEnum(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank* Rank);
 	void SetDojoRankAsEnum(TEnumAsByte<EDojoPlace> Dojo, ES3DojoRank Rank);
 };

@@ -27,8 +27,8 @@ public:
 
 
 	void SetProfileFromTable();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_S3_TagChara(int EntryPoint);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_S3_TagChara(int EntryPoint);
 };
 
 

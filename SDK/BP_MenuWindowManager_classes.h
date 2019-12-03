@@ -19,7 +19,7 @@ class ABP_MenuWindowManager_C : public AActor
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0328(0x0008) (Transient, DuplicateTransient)
 	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0330(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               isActionButtonExec;                                       // 0x0338(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsActionButtonExec;                                       // 0x0338(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsCancelButtonExec;                                       // 0x0339(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsDeny;                                                   // 0x033A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsMenuButtonExec;                                         // 0x033B(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -39,24 +39,24 @@ public:
 	}
 
 
-	void SetItemListViewerManagerClass(class UClass* Class);
-	bool CheckBehaviorState();
+	void STATIC_SetItemListViewerManagerClass(class UClass* Class);
+	bool STATIC_CheckBehaviorState();
 	void CheckDoorOpen(bool* DoMenu);
 	void StartAllActor();
 	void StopAllActor();
-	void setDenyFlag(bool deny, bool* succes);
-	void isDetected(bool* isDetected);
+	void SetDenyFlag(bool Deny, bool* succes);
+	void IsDetected(bool* IsDetected);
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void doCmd_FirstDetectRetain_Menu_();
-	void delayedRegistCheck_detector_();
-	void StartMenu();
+	void STATIC_doCmd_FirstDetectRetain_Menu_();
+	void STATIC_delayedRegistCheck_detector_();
+	void STATIC_StartMenu();
 	void ActionStartButton(bool IsPress);
-	void FinishMenu();
+	void STATIC_FinishMenu();
 	void OpenInventory_EatEvent(int ItemId);
-	void Open_ItemWindow();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_MenuWindowManager(int EntryPoint);
+	void STATIC_Open_ItemWindow();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_MenuWindowManager(int EntryPoint);
 	void OnMenuClosed__DelegateSignature();
 };
 

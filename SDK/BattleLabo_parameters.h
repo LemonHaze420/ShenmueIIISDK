@@ -98,79 +98,16 @@ struct UActorManagementComponentBase_CheckManagedActor_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_ActionSolverComponent.TickActionTimers
-struct UBTL_ActionSolverComponent_TickActionTimers_Params
+// Function BattleLabo.BTL_AIController.SetCrowdSlowdownAtGoal
+struct ABTL_AIController_SetCrowdSlowdownAtGoal_Params
 {
-	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      CurrentIndex;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Enable;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_ActionSolverComponent.ResetCurrentActionTimer
-struct UBTL_ActionSolverComponent_ResetCurrentActionTimer_Params
+// Function BattleLabo.BTL_AIController.SetCrowdSeparationWeight
+struct ABTL_AIController_SetCrowdSeparationWeight_Params
 {
-	unsigned char                                      Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_ActionSolverComponent.InitializeActionTimers
-struct UBTL_ActionSolverComponent_InitializeActionTimers_Params
-{
-	int                                                Count;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_ActionSolverComponent.GetTimePassedSinceAction
-struct UBTL_ActionSolverComponent_GetTimePassedSinceAction_Params
-{
-	unsigned char                                      Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_ActionSolverComponent.GetCurrentActionTimer
-struct UBTL_ActionSolverComponent_GetCurrentActionTimer_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_AnimInstance.SetRootTranslationScale
-struct UBTL_AnimInstance_SetRootTranslationScale_Params
-{
-	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_AnimInstance.SearchClosestMontage
-struct UBTL_AnimInstance_SearchClosestMontage_Params
-{
-	TArray<class UAnimMontage*>                        Candidates;                                               // (Parm, ZeroConstructor)
-	float                                              TargetEndYaw;                                             // (Parm, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_AnimInstance.ResetRootTranslationScale
-struct UBTL_AnimInstance_ResetRootTranslationScale_Params
-{
-};
-
-// Function BattleLabo.BTL_AnimInstance.GetClosest8DirectionIndex
-struct UBTL_AnimInstance_GetClosest8DirectionIndex_Params
-{
-	float                                              Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_AnimInstance.GetClosest8DirectionAngle
-struct UBTL_AnimInstance_GetClosest8DirectionAngle_Params
-{
-	float                                              InputAngle;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              FirstCheckAngle;                                          // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Hysteresis;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_AnimInstance.BiasTargetDirection
-struct UBTL_AnimInstance_BiasTargetDirection_Params
-{
-	float                                              TargetAngle;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              PreviousTarget;                                           // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	float                                              Weight;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BattleLabo.BTL_AnimNotifyContainer.Reset
@@ -221,77 +158,52 @@ struct UBTL_NamedCooldownContainer_ClearAllCooldowns_Params
 {
 };
 
-// Function BattleLabo.BTL_AttackHitSolverComponent.UpdateAttackCollisions
-struct UBTL_AttackHitSolverComponent_UpdateAttackCollisions_Params
+// Function BattleLabo.BTL_AnimInstance.SetRootTranslationScale
+struct UBTL_AnimInstance_SetRootTranslationScale_Params
 {
-	TArray<struct FName>                               Tags;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	float                                              Value;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_AttackHitSolverComponent.RegisterAttackCollider
-struct UBTL_AttackHitSolverComponent_RegisterAttackCollider_Params
+// Function BattleLabo.BTL_AnimInstance.SearchClosestMontage
+struct UBTL_AnimInstance_SearchClosestMontage_Params
 {
-	class UPrimitiveComponent*                         Collider;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       identifer;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class UAnimMontage*>                        Candidates;                                               // (Parm, ZeroConstructor)
+	float                                              TargetEndYaw;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_AttackHitSolverComponent.CacheColliderTransforms
-struct UBTL_AttackHitSolverComponent_CacheColliderTransforms_Params
+// Function BattleLabo.BTL_AnimInstance.ResetRootTranslationScale
+struct UBTL_AnimInstance_ResetRootTranslationScale_Params
 {
 };
 
-// Function BattleLabo.BTL_AIController.SetCrowdSlowdownAtGoal
-struct ABTL_AIController_SetCrowdSlowdownAtGoal_Params
+// Function BattleLabo.BTL_AnimInstance.GetClosest8DirectionIndex
+struct UBTL_AnimInstance_GetClosest8DirectionIndex_Params
 {
-	bool                                               Enable;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_AIController.SetCrowdSeparationWeight
-struct ABTL_AIController_SetCrowdSeparationWeight_Params
+// Function BattleLabo.BTL_AnimInstance.GetClosest8DirectionAngle
+struct UBTL_AnimInstance_GetClosest8DirectionAngle_Params
 {
-	float                                              Weight;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeTimeMSCFromFloat
-struct UBTL_BattleRallyFunctionLibrary_MakeTimeMSCFromFloat_Params
-{
-	float                                              Seconds;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FBTL_TimeMSC                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeFloatFromTimeMSC
-struct UBTL_BattleRallyFunctionLibrary_MakeFloatFromTimeMSC_Params
-{
-	struct FBTL_TimeMSC                                Time;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	float                                              InputAngle;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              FirstCheckAngle;                                          // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Hysteresis;                                               // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.IsTimeMSCZero
-struct UBTL_BattleRallyFunctionLibrary_IsTimeMSCZero_Params
+// Function BattleLabo.BTL_AnimInstance.BiasTargetDirection
+struct UBTL_AnimInstance_BiasTargetDirection_Params
 {
-	struct FBTL_TimeMSC                                Time;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	float                                              TargetAngle;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              PreviousTarget;                                           // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateRecordBook
-struct UBTL_BattleRallyFunctionLibrary_CreateRecordBook_Params
+// Function BattleLabo.BTL_BattleSpawner.LaunchDebugBattle
+struct ABTL_BattleSpawner_LaunchDebugBattle_Params
 {
-	TArray<class UBTL_CourseDataAsset*>                Courses;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	class UBTL_CourseRecordBook*                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateLeaderboard
-struct UBTL_BattleRallyFunctionLibrary_CreateLeaderboard_Params
-{
-	struct FName                                       Course;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	class UBTL_CourseLeaderboard*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateCourseDataAsset
-struct UBTL_BattleRallyFunctionLibrary_CreateCourseDataAsset_Params
-{
-	TArray<struct FDataTableRowHandle>                 Battles;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	class UBTL_CourseDataAsset*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function BattleLabo.BTL_BlueprintFunctionLibrary.FindUserClass
@@ -310,6 +222,24 @@ struct UBTL_BlueprintFunctionLibrary_ClosestPointOnSegment_Params
 	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
+// Function BattleLabo.BTL_AttackHitSolverComponent.UpdateAttackCollisions
+struct UBTL_AttackHitSolverComponent_UpdateAttackCollisions_Params
+{
+	TArray<struct FName>                               Tags;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+};
+
+// Function BattleLabo.BTL_AttackHitSolverComponent.RegisterAttackCollider
+struct UBTL_AttackHitSolverComponent_RegisterAttackCollider_Params
+{
+	class UPrimitiveComponent*                         Collider;                                                 // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       identifer;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_AttackHitSolverComponent.CacheColliderTransforms
+struct UBTL_AttackHitSolverComponent_CacheColliderTransforms_Params
+{
+};
+
 // Function BattleLabo.BTL_BRallyRacerAnimData.SelectIntroCutscene
 struct UBTL_BRallyRacerAnimData_SelectIntroCutscene_Params
 {
@@ -317,34 +247,6 @@ struct UBTL_BRallyRacerAnimData_SelectIntroCutscene_Params
 	bool                                               bAllowB;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
 	struct FBTL_BRallyCourseCutsceneData               OutData;                                                  // (Parm, OutParm)
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_BattleSpawner.LaunchDebugBattle
-struct ABTL_BattleSpawner_LaunchDebugBattle_Params
-{
-};
-
-// Function BattleLabo.BTL_CharacterDataAsset.SpawnCharacterWithDefaults
-struct UBTL_CharacterDataAsset_SpawnCharacterWithDefaults_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  SpawnTransform;                                           // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	class UBTL_CharacterDataAsset*                     Defaults;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	class ABTL_Character*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CharacterDataAsset.SpawnCharacter
-struct UBTL_CharacterDataAsset_SpawnCharacter_Params
-{
-	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  SpawnTransform;                                           // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	class ABTL_Character*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CharacterDataAsset.GetCharacterVoiceName
-struct UBTL_CharacterDataAsset_GetCharacterVoiceName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function BattleLabo.BTL_BRallyScoreKeeper.SortResults
@@ -396,6 +298,35 @@ struct UBTL_BRallyScoreKeeper_AddPointsByRatio_Params
 	float                                              Ratio;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BattleLabo.BTL_CharacterDataAsset.SpawnCharacterWithDefaults
+struct UBTL_CharacterDataAsset_SpawnCharacterWithDefaults_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  SpawnTransform;                                           // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	class UBTL_CharacterDataAsset*                     Defaults;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	class ABTL_Character*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CharacterDataAsset.SpawnCharacter
+struct UBTL_CharacterDataAsset_SpawnCharacter_Params
+{
+	class UObject*                                     WorldContextObject;                                       // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  SpawnTransform;                                           // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	class ABTL_Character*                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CharacterDataAsset.GetCharacterVoiceName
+struct UBTL_CharacterDataAsset_GetCharacterVoiceName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CharacterEnviromentInterface.GetAreaFlags
+struct UBTL_CharacterEnviromentInterface_GetAreaFlags_Params
+{
+	TArray<bool>                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function BattleLabo.BTL_CharacterMovementComponent.TestPath
 struct UBTL_CharacterMovementComponent_TestPath_Params
 {
@@ -430,12 +361,6 @@ struct UBTL_CharacterMovementComponent_AddLocalOffsetToRootMotion_Params
 struct UBTL_CharacterMovementComponent_AddDeltaYawWithRootMotion_Params
 {
 	float                                              DeltaRotation;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CharacterEnviromentInterface.GetAreaFlags
-struct UBTL_CharacterEnviromentInterface_GetAreaFlags_Params
-{
-	TArray<bool>                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function BattleLabo.BTL_CommandSolver.StartsWith_NameArray
@@ -576,24 +501,86 @@ struct UBTL_CourseMapData_AreLabelLocationsValid_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_CourseRecordBook.ReadSaveData
-struct UBTL_CourseRecordBook_ReadSaveData_Params
+// Function BattleLabo.BTL_CommandLibraryBase.MakeDefaultByteToNameMap
+struct UBTL_CommandLibraryBase_MakeDefaultByteToNameMap_Params
 {
-	TArray<struct FBTL_CourseSaveData>                 SaveData;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TMap<unsigned char, struct FName>                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
-// Function BattleLabo.BTL_CourseRecordBook.GetLeaderboard
-struct UBTL_CourseRecordBook_GetLeaderboard_Params
+// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquippable
+struct UBTL_CommandLibraryBase_IsSkillEquippable_Params
 {
-	struct FName                                       Course;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	class UBTL_CourseLeaderboard*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FName                                       SkillId;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_CourseRecordBook.CreatePlayerSaveData
-struct UBTL_CourseRecordBook_CreatePlayerSaveData_Params
+// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquappable
+struct UBTL_CommandLibraryBase_IsSkillEquappable_Params
 {
-	TArray<struct FName>                               PlayerCharacters;                                         // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FBTL_CourseSaveData>                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+	struct FName                                       SkillId;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.IsAttackEquippable
+struct UBTL_CommandLibraryBase_IsAttackEquippable_Params
+{
+	struct FName                                       AttackID;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.Initialize
+struct UBTL_CommandLibraryBase_Initialize_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.FindRequiredItem
+struct UBTL_CommandLibraryBase_FindRequiredItem_Params
+{
+	struct FName                                       Attack;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.FindAttackByItem
+struct UBTL_CommandLibraryBase_FindAttackByItem_Params
+{
+	struct FName                                       SkillItem;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandsByteToName
+struct UBTL_CommandLibraryBase_ConvertCommandsByteToName_Params
+{
+	TArray<unsigned char>                              Input;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandByteToName
+struct UBTL_CommandLibraryBase_ConvertCommandByteToName_Params
+{
+	unsigned char                                      Input;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.CheckPreviousAttacks
+struct UBTL_CommandLibraryBase_CheckPreviousAttacks_Params
+{
+	TArray<struct FName>                               ActualAttacks;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FName>                               PatternPrevAttacks;                                       // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.CacheComboAttack
+struct UBTL_CommandLibraryBase_CacheComboAttack_Params
+{
+	struct FName                                       Attack;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_CommandLibraryBase.CacheAttackLookupData
+struct UBTL_CommandLibraryBase_CacheAttackLookupData_Params
+{
+	struct FName                                       Attack;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+	struct FName                                       RequiredItem;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 };
 
 // Function BattleLabo.BTLDataTableFunctionLibrary.GetDataTableRowFromName
@@ -651,6 +638,38 @@ struct UBTL_EnemySearchPath_AddEdge_Params
 	int                                                NodeIndex;                                                // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                EdgeTo;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	float                                              EdgeCost;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ActionSolverComponent.TickActionTimers
+struct UBTL_ActionSolverComponent_TickActionTimers_Params
+{
+	float                                              DeltaTime;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      CurrentIndex;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ActionSolverComponent.ResetCurrentActionTimer
+struct UBTL_ActionSolverComponent_ResetCurrentActionTimer_Params
+{
+	unsigned char                                      Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ActionSolverComponent.InitializeActionTimers
+struct UBTL_ActionSolverComponent_InitializeActionTimers_Params
+{
+	int                                                Count;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ActionSolverComponent.GetTimePassedSinceAction
+struct UBTL_ActionSolverComponent_GetTimePassedSinceAction_Params
+{
+	unsigned char                                      Index;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ActionSolverComponent.GetCurrentActionTimer
+struct UBTL_ActionSolverComponent_GetCurrentActionTimer_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function BattleLabo.BTL_GoalpostBehavior.OnPlayerEntered
@@ -920,88 +939,6 @@ struct UBTL_NavigationFunctionLibrary_FindDistanceToWall_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.BTL_CommandLibraryBase.MakeDefaultByteToNameMap
-struct UBTL_CommandLibraryBase_MakeDefaultByteToNameMap_Params
-{
-	TMap<unsigned char, struct FName>                  ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquippable
-struct UBTL_CommandLibraryBase_IsSkillEquippable_Params
-{
-	struct FName                                       SkillId;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquappable
-struct UBTL_CommandLibraryBase_IsSkillEquappable_Params
-{
-	struct FName                                       SkillId;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.IsAttackEquippable
-struct UBTL_CommandLibraryBase_IsAttackEquippable_Params
-{
-	struct FName                                       AttackID;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.Initialize
-struct UBTL_CommandLibraryBase_Initialize_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.FindRequiredItem
-struct UBTL_CommandLibraryBase_FindRequiredItem_Params
-{
-	struct FName                                       Attack;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.FindAttackByItem
-struct UBTL_CommandLibraryBase_FindAttackByItem_Params
-{
-	struct FName                                       SkillItem;                                                // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandsByteToName
-struct UBTL_CommandLibraryBase_ConvertCommandsByteToName_Params
-{
-	TArray<unsigned char>                              Input;                                                    // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandByteToName
-struct UBTL_CommandLibraryBase_ConvertCommandByteToName_Params
-{
-	unsigned char                                      Input;                                                    // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.CheckPreviousAttacks
-struct UBTL_CommandLibraryBase_CheckPreviousAttacks_Params
-{
-	TArray<struct FName>                               ActualAttacks;                                            // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FName>                               PatternPrevAttacks;                                       // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.CacheComboAttack
-struct UBTL_CommandLibraryBase_CacheComboAttack_Params
-{
-	struct FName                                       Attack;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_CommandLibraryBase.CacheAttackLookupData
-struct UBTL_CommandLibraryBase_CacheAttackLookupData_Params
-{
-	struct FName                                       Attack;                                                   // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-	struct FName                                       RequiredItem;                                             // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-};
-
 // Function BattleLabo.BTL_NPCLODSystem.SetSpline
 struct UBTL_NPCLODSystem_SetSpline_Params
 {
@@ -1012,18 +949,6 @@ struct UBTL_NPCLODSystem_SetSpline_Params
 struct UBTL_NPCLODSystem_RegisterNPCs_Params
 {
 	TArray<class ABTL_Character*>                      NPCs;                                                     // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-};
-
-// Function BattleLabo.BTL_NPCLODComponent.GetState
-struct UBTL_NPCLODComponent_GetState_Params
-{
-	EBTL_NPCLODState                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_NPCLODComponent.GetSpawnLocation
-struct UBTL_NPCLODComponent_GetSpawnLocation_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
 };
 
 // Function BattleLabo.BTL_PawnSeperatorComponent.GetVirtualActorLocation
@@ -1117,6 +1042,79 @@ struct UBTL_RagdollSolverComponent_EnablePreRagdollCollision_Params
 	bool                                               Enable;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BattleLabo.BTL_NPCLODComponent.GetState
+struct UBTL_NPCLODComponent_GetState_Params
+{
+	EBTL_NPCLODState                                   ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_NPCLODComponent.GetSpawnLocation
+struct UBTL_NPCLODComponent_GetSpawnLocation_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeTimeMSCFromFloat
+struct UBTL_BattleRallyFunctionLibrary_MakeTimeMSCFromFloat_Params
+{
+	float                                              Seconds;                                                  // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FBTL_TimeMSC                                ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeFloatFromTimeMSC
+struct UBTL_BattleRallyFunctionLibrary_MakeFloatFromTimeMSC_Params
+{
+	struct FBTL_TimeMSC                                Time;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.IsTimeMSCZero
+struct UBTL_BattleRallyFunctionLibrary_IsTimeMSCZero_Params
+{
+	struct FBTL_TimeMSC                                Time;                                                     // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateRecordBook
+struct UBTL_BattleRallyFunctionLibrary_CreateRecordBook_Params
+{
+	TArray<class UBTL_CourseDataAsset*>                Courses;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	class UBTL_CourseRecordBook*                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateLeaderboard
+struct UBTL_BattleRallyFunctionLibrary_CreateLeaderboard_Params
+{
+	struct FName                                       Course;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class UDataTable*                                  DataTable;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	class UBTL_CourseLeaderboard*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateCourseDataAsset
+struct UBTL_BattleRallyFunctionLibrary_CreateCourseDataAsset_Params
+{
+	TArray<struct FDataTableRowHandle>                 Battles;                                                  // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	class UBTL_CourseDataAsset*                        ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ReplayRecordComponent.SetReplayRecordTime
+struct UBTL_ReplayRecordComponent_SetReplayRecordTime_Params
+{
+	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ReplayRecordComponent.GetStartGameTime
+struct UBTL_ReplayRecordComponent_GetStartGameTime_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.BTL_ReplayRecordComponent.GetEndGameTime
+struct UBTL_ReplayRecordComponent_GetEndGameTime_Params
+{
+	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function BattleLabo.BTL_ReplaySkeletalMeshComponent.ToggleReplayStopSwitch
 struct UBTL_ReplaySkeletalMeshComponent_ToggleReplayStopSwitch_Params
 {
@@ -1184,24 +1182,6 @@ struct UBTL_SequencePlayer_RegisterSwitchObject_Params
 // Function BattleLabo.BTL_SequencePlayer.CleanUpInternalSpawnedObjects
 struct UBTL_SequencePlayer_CleanUpInternalSpawnedObjects_Params
 {
-};
-
-// Function BattleLabo.BTL_ReplayRecordComponent.SetReplayRecordTime
-struct UBTL_ReplayRecordComponent_SetReplayRecordTime_Params
-{
-	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_ReplayRecordComponent.GetStartGameTime
-struct UBTL_ReplayRecordComponent_GetStartGameTime_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.BTL_ReplayRecordComponent.GetEndGameTime
-struct UBTL_ReplayRecordComponent_GetEndGameTime_Params
-{
-	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function BattleLabo.BTL_SplineFunctionLibrary.FindDistanceClosestToWorldLocation
@@ -1439,6 +1419,17 @@ struct UBTL_StatusComponent_HasHP_Params
 	bool                                               IsPositive;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
+// Function BattleLabo.CircleDrawComponent.ClearLength
+struct UCircleDrawComponent_ClearLength_Params
+{
+};
+
+// Function BattleLabo.CircleDrawComponent.AddLength
+struct UCircleDrawComponent_AddLength_Params
+{
+	float                                              Length;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
 // Function BattleLabo.SquareDrawComponent.ClearSquare
 struct USquareDrawComponent_ClearSquare_Params
 {
@@ -1453,107 +1444,24 @@ struct USquareDrawComponent_AddSquare_Params
 	struct FVector                                     RB;                                                       // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 };
 
-// Function BattleLabo.CircleDrawComponent.ClearLength
-struct UCircleDrawComponent_ClearLength_Params
+// Function BattleLabo.BTL_CourseRecordBook.ReadSaveData
+struct UBTL_CourseRecordBook_ReadSaveData_Params
 {
+	TArray<struct FBTL_CourseSaveData>                 SaveData;                                                 // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 };
 
-// Function BattleLabo.CircleDrawComponent.AddLength
-struct UCircleDrawComponent_AddLength_Params
+// Function BattleLabo.BTL_CourseRecordBook.GetLeaderboard
+struct UBTL_CourseRecordBook_GetLeaderboard_Params
 {
-	float                                              Length;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       Course;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	class UBTL_CourseLeaderboard*                      ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function BattleLabo.Json.LoadJson
-struct UJson_LoadJson_Params
+// Function BattleLabo.BTL_CourseRecordBook.CreatePlayerSaveData
+struct UBTL_CourseRecordBook_CreatePlayerSaveData_Params
 {
-	struct FString                                     Name;                                                     // (Parm, ZeroConstructor)
-	struct FJsonData                                   Data;                                                     // (Parm, OutParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.Json.GetString
-struct UJson_GetString_Params
-{
-	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
-	struct FString                                     String;                                                   // (Parm, OutParm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.Json.GetInt
-struct UJson_GetInt_Params
-{
-	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
-	int                                                Int;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.Json.GetFloat
-struct UJson_GetFloat_Params
-{
-	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
-	float                                              Float;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.Json.GetData
-struct UJson_GetData_Params
-{
-	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
-	struct FJsonData                                   Data;                                                     // (Parm, OutParm)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.Json.GetBool
-struct UJson_GetBool_Params
-{
-	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
-	bool                                               Bool;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.Json.GetArray
-struct UJson_GetArray_Params
-{
-	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
-	TArray<struct FString>                             Array;                                                    // (Parm, OutParm, ZeroConstructor)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.MyCharacterMovementComponent.UseRequestedVector
-struct UMyCharacterMovementComponent_UseRequestedVector_Params
-{
-	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.SortActorCompare.Compare
-struct USortActorCompare_Compare_Params
-{
-	class AActor*                                      A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.SortNameCompare.Compare
-struct USortNameCompare_Compare_Params
-{
-	struct FName                                       A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function BattleLabo.SortObjectCompare.Compare
-struct USortObjectCompare_Compare_Params
-{
-	class UObject*                                     A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	TArray<struct FName>                               PlayerCharacters;                                         // (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+	TArray<struct FBTL_CourseSaveData>                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 // Function BattleLabo.KeyConfig.SwitchKey
@@ -1690,6 +1598,98 @@ struct UKeyConfig_CreateObject_Params
 {
 	class UClass*                                      ObjectClass;                                              // (Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.Json.LoadJson
+struct UJson_LoadJson_Params
+{
+	struct FString                                     Name;                                                     // (Parm, ZeroConstructor)
+	struct FJsonData                                   Data;                                                     // (Parm, OutParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.Json.GetString
+struct UJson_GetString_Params
+{
+	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
+	struct FString                                     String;                                                   // (Parm, OutParm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.Json.GetInt
+struct UJson_GetInt_Params
+{
+	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
+	int                                                Int;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.Json.GetFloat
+struct UJson_GetFloat_Params
+{
+	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
+	float                                              Float;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.Json.GetData
+struct UJson_GetData_Params
+{
+	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
+	struct FJsonData                                   Data;                                                     // (Parm, OutParm)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.Json.GetBool
+struct UJson_GetBool_Params
+{
+	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
+	bool                                               Bool;                                                     // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.Json.GetArray
+struct UJson_GetArray_Params
+{
+	struct FJsonData                                   JsonData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	struct FString                                     Key;                                                      // (Parm, ZeroConstructor)
+	TArray<struct FString>                             Array;                                                    // (Parm, OutParm, ZeroConstructor)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.MyCharacterMovementComponent.UseRequestedVector
+struct UMyCharacterMovementComponent_UseRequestedVector_Params
+{
+	struct FVector                                     ReturnValue;                                              // (Parm, OutParm, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.SortNameCompare.Compare
+struct USortNameCompare_Compare_Params
+{
+	struct FName                                       A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.SortObjectCompare.Compare
+struct USortObjectCompare_Compare_Params
+{
+	class UObject*                                     A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function BattleLabo.SortActorCompare.Compare
+struct USortActorCompare_Compare_Params
+{
+	class AActor*                                      A;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      B;                                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

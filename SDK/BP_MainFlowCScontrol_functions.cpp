@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.CSEvent_Enable
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CutsceneName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           UseFade                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -36,12 +36,12 @@ void UBP_MainFlowCScontrol_C::CSEvent_Enable(const struct FName& CutsceneName, b
 
 
 // Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.CallCS_Event
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           End                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MainFlowCScontrol_C::CallCS_Event(const struct FName& EventName, bool End)
+void UBP_MainFlowCScontrol_C::STATIC_CallCS_Event(const struct FName& EventName, bool End)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.CallCS_Event");
 
@@ -50,6 +50,7 @@ void UBP_MainFlowCScontrol_C::CallCS_Event(const struct FName& EventName, bool E
 	params.End = End;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,15 +59,16 @@ void UBP_MainFlowCScontrol_C::CallCS_Event(const struct FName& EventName, bool E
 
 
 // Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.OnStartCutScene
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_MainFlowCScontrol_C::OnStartCutScene()
+void UBP_MainFlowCScontrol_C::STATIC_OnStartCutScene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.OnStartCutScene");
 
 	UBP_MainFlowCScontrol_C_OnStartCutScene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,15 +77,16 @@ void UBP_MainFlowCScontrol_C::OnStartCutScene()
 
 
 // Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.OnEndCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_MainFlowCScontrol_C::OnEndCutscene()
+void UBP_MainFlowCScontrol_C::STATIC_OnEndCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.OnEndCutscene");
 
 	UBP_MainFlowCScontrol_C_OnEndCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,11 +95,11 @@ void UBP_MainFlowCScontrol_C::OnEndCutscene()
 
 
 // Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.ExecuteUbergraph_BP_MainFlowCScontrol
-// ()
+// (Exec, Native, Event, Static, Public, Private, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_MainFlowCScontrol_C::ExecuteUbergraph_BP_MainFlowCScontrol(int EntryPoint)
+void UBP_MainFlowCScontrol_C::STATIC_ExecuteUbergraph_BP_MainFlowCScontrol(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MainFlowCScontrol.BP_MainFlowCScontrol_C.ExecuteUbergraph_BP_MainFlowCScontrol");
 
@@ -104,6 +107,7 @@ void UBP_MainFlowCScontrol_C::ExecuteUbergraph_BP_MainFlowCScontrol(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

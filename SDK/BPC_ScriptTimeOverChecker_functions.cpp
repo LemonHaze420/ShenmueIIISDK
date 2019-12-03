@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Native, NetMulticast, NetServer)
 
 void UBPC_ScriptTimeOverChecker_C::ReceiveBeginPlay()
 {
@@ -23,6 +23,7 @@ void UBPC_ScriptTimeOverChecker_C::ReceiveBeginPlay()
 	UBPC_ScriptTimeOverChecker_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBPC_ScriptTimeOverChecker_C::ReceiveBeginPlay()
 
 
 // Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.StopTimeOverCheck
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, NetServer)
 
 void UBPC_ScriptTimeOverChecker_C::StopTimeOverCheck()
 {
@@ -40,6 +41,7 @@ void UBPC_ScriptTimeOverChecker_C::StopTimeOverCheck()
 	UBPC_ScriptTimeOverChecker_C_StopTimeOverCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void UBPC_ScriptTimeOverChecker_C::StopTimeOverCheck()
 
 
 // Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.StartTimeOverCheck
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          GameStopTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +62,7 @@ void UBPC_ScriptTimeOverChecker_C::StartTimeOverCheck(float GameStopTime)
 	params.GameStopTime = GameStopTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +71,7 @@ void UBPC_ScriptTimeOverChecker_C::StartTimeOverCheck(float GameStopTime)
 
 
 // Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +83,7 @@ void UBPC_ScriptTimeOverChecker_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,7 +92,7 @@ void UBPC_ScriptTimeOverChecker_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.OnEndTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, NetServer)
 
 void UBPC_ScriptTimeOverChecker_C::OnEndTalk()
 {
@@ -97,6 +101,7 @@ void UBPC_ScriptTimeOverChecker_C::OnEndTalk()
 	UBPC_ScriptTimeOverChecker_C_OnEndTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,11 +110,11 @@ void UBPC_ScriptTimeOverChecker_C::OnEndTalk()
 
 
 // Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.ExecuteUbergraph_BPC_ScriptTimeOverChecker
-// ()
+// (NetReliable, Exec, Event, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ScriptTimeOverChecker_C::ExecuteUbergraph_BPC_ScriptTimeOverChecker(int EntryPoint)
+void UBPC_ScriptTimeOverChecker_C::STATIC_ExecuteUbergraph_BPC_ScriptTimeOverChecker(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.ExecuteUbergraph_BPC_ScriptTimeOverChecker");
 
@@ -125,11 +130,11 @@ void UBPC_ScriptTimeOverChecker_C::ExecuteUbergraph_BPC_ScriptTimeOverChecker(in
 
 
 // Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.OnGameTimeOverDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, Public, Protected, NetServer, NetClient, DLLImport)
 // Parameters:
 // float                          GameStopTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ScriptTimeOverChecker_C::OnGameTimeOverDispatcher__DelegateSignature(float GameStopTime)
+void UBPC_ScriptTimeOverChecker_C::STATIC_OnGameTimeOverDispatcher__DelegateSignature(float GameStopTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ScriptTimeOverChecker.BPC_ScriptTimeOverChecker_C.OnGameTimeOverDispatcher__DelegateSignature");
 

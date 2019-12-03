@@ -29,7 +29,7 @@ public:
 
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_TalkCameraAC_FixShot_SBH_03(int EntryPoint);
 };
 

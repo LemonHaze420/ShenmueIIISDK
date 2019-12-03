@@ -31,13 +31,13 @@ public:
 	}
 
 
-	bool IsVisibleIcon();
+	bool STATIC_IsVisibleIcon();
 	void SetPosCenter();
 	void SetPosRight();
 	void SetPos(const struct FVector2D& InPosition);
-	void SetVisible(bool Visible);
+	void STATIC_SetVisible(bool Visible);
 	void Construct();
-	void ExecuteUbergraph_BPW_UI_RStickIcon(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_UI_RStickIcon(int EntryPoint);
 };
 
 

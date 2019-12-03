@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTT_PlayAC.BTT_PlayAC_C.ReceiveExecuteAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTT_PlayAC_C::ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTT_PlayAC_C::STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTT_PlayAC.BTT_PlayAC_C.ReceiveExecuteAI");
 
@@ -36,7 +36,7 @@ void UBTT_PlayAC_C::ReceiveExecuteAI(class AAIController* OwnerController, class
 
 
 // Function BTT_PlayAC.BTT_PlayAC_C.ExecuteUbergraph_BTT_PlayAC
-// ()
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

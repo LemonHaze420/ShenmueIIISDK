@@ -47,37 +47,37 @@ public:
 	}
 
 
-	int GetPriority();
+	int STATIC_GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	float GetCurrentTargetSpeed();
+	float STATIC_GetCurrentTargetSpeed();
 	bool IsSitting();
-	void SetLookAheadSpline(class USplineComponent* spline);
+	void STATIC_SetLookAheadSpline(class USplineComponent* spline);
 	bool CanEnterBuilding(class ABP_S3BuildingStaticMeshActor_C* Building);
 	void TeleportToLeavePoint();
 	void StopMovement(bool bInstant);
-	bool IsIdle();
+	bool STATIC_IsIdle();
 	void GetEnableIK(bool* bIKEnabled);
-	void SetEnableIK(bool bInIKEnabled, bool* dummy);
-	void GetAnimVelocity(float* Velocity);
+	void STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy);
+	void STATIC_GetAnimVelocity(float* Velocity);
 	class UBPC_S3PlayerStairClimber_C* GetStairClimber();
 	void GetSpeed(float* Speed);
-	void SetTargetSpeed(float TargetSpeed);
+	void STATIC_SetTargetSpeed(float TargetSpeed);
 	bool IsTalking();
-	struct FRotator GetTalkRotation();
+	struct FRotator STATIC_GetTalkRotation();
 	void AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
 	void OnTalkStart(class US3TalkComponent* TalkComponent);
 	void Screen_Player();
 	void Screen_NPC();
-	void OnFinishedTurnRotate(class UBPC_TurnAround_C* SelfTurnAroundComponent);
+	void STATIC_OnFinishedTurnRotate(class UBPC_TurnAround_C* SelfTurnAroundComponent);
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void DecideDetectAction(ES3ActionIconType Type);
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_DecideDetectAction(ES3ActionIconType Type);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature();
 	void BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_1_OnEndStairUse__DelegateSignature();
-	void HandleTeleportSucceeded(bool bIsATest);
+	void STATIC_HandleTeleportSucceeded(bool bIsATest);
 	void ExecuteUbergraph_BP_NPC_Lead(int EntryPoint);
 };
 

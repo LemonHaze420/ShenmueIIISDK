@@ -27,8 +27,8 @@ public:
 
 
 	void StateEnter(float Delta, bool* bProcessing);
-	void StateUpdate(float Delta, bool* bDummy);
-	void UpdateTransitions(float DeltaSeconds);
+	void STATIC_StateUpdate(float Delta, bool* bDummy);
+	void STATIC_UpdateTransitions(float DeltaSeconds);
 	void ExecuteUbergraph_BP_State_Follow_UsePOI(int EntryPoint);
 };
 

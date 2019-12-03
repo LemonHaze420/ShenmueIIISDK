@@ -52,21 +52,6 @@ public:
 };
 
 
-// Class ClothingSystemRuntime.ClothingSimulationFactoryNv
-// 0x0000 (0x0028 - 0x0028)
-class UClothingSimulationFactoryNv : public UClothingSimulationFactory
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ClothingSystemRuntime.ClothingSimulationFactoryNv");
-		return ptr;
-	}
-
-};
-
-
 // Class ClothingSystemRuntime.ClothingSimulationInteractorNv
 // 0x0010 (0x0040 - 0x0030)
 class UClothingSimulationInteractorNv : public UClothingSimulationInteractor
@@ -85,6 +70,21 @@ public:
 	void SetAnimDriveDamperStiffness(float InStiffness);
 	void EnableGravityOverride(const struct FVector& InVector);
 	void DisableGravityOverride();
+};
+
+
+// Class ClothingSystemRuntime.ClothingSimulationFactoryNv
+// 0x0000 (0x0028 - 0x0028)
+class UClothingSimulationFactoryNv : public UClothingSimulationFactory
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ClothingSystemRuntime.ClothingSimulationFactoryNv");
+		return ptr;
+	}
+
 };
 
 

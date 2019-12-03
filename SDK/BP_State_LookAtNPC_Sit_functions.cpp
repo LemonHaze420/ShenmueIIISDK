@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookAngle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Sit_C::GetLookAngle(float* Angle)
+void UBP_State_LookAtNPC_Sit_C::STATIC_GetLookAngle(float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookAngle");
 
 	UBP_State_LookAtNPC_Sit_C_GetLookAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,17 +37,18 @@ void UBP_State_LookAtNPC_Sit_C::GetLookAngle(float* Angle)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookDistance
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Sit_C::GetLookDistance(float* Distance)
+void UBP_State_LookAtNPC_Sit_C::STATIC_GetLookDistance(float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.GetLookDistance");
 
 	UBP_State_LookAtNPC_Sit_C_GetLookDistance_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,12 +60,12 @@ void UBP_State_LookAtNPC_Sit_C::GetLookDistance(float* Distance)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateExit
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Sit_C::StateExit(float Delta, bool* bProcessing)
+void UBP_State_LookAtNPC_Sit_C::STATIC_StateExit(float Delta, bool* bProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateExit");
 
@@ -82,7 +84,7 @@ void UBP_State_LookAtNPC_Sit_C::StateExit(float Delta, bool* bProcessing)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateUpdate
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -106,7 +108,7 @@ void UBP_State_LookAtNPC_Sit_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_LookAtNPC_Sit.BP_State_LookAtNPC_Sit_C.StateEnter
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bProcessing                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)

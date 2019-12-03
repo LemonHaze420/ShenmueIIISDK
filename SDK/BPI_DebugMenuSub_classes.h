@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void SetInitialFocus();
-	void BuildMenu();
+	void STATIC_SetInitialFocus();
+	void STATIC_BuildMenu();
 };
 
 

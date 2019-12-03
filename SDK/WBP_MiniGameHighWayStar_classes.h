@@ -43,17 +43,17 @@ public:
 	}
 
 
-	void UpdateAddScoreDisplay();
-	void SetUpdateScore(bool Enabled);
+	void STATIC_UpdateAddScoreDisplay();
+	void STATIC_SetUpdateScore(bool Enabled);
 	struct FText Get_CurrentScore_Text_1();
-	void SetLastScore(int Num);
+	void STATIC_SetLastScore(int Num);
 	void SetVisibleScore(bool Visible);
-	void SetCurrentScore(int ScoreNum);
-	void SetVisibleIcon(bool Visible);
-	void Construct();
+	void STATIC_SetCurrentScore(int ScoreNum);
+	void STATIC_SetVisibleIcon(bool Visible);
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_WBP_MiniGameHighWayStar(int EntryPoint);
-	void OnChangeDisplayScore__DelegateSignature();
+	void STATIC_OnChangeDisplayScore__DelegateSignature();
 };
 
 

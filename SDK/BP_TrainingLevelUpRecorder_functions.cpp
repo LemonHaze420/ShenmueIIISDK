@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.HasStatProgressChange
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_SparringResultLevelUpData Data                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_TrainingLevelUpRecorder_C::HasStatProgressChange(const struct FST_SparringResultLevelUpData& Data)
+bool UBP_TrainingLevelUpRecorder_C::STATIC_HasStatProgressChange(const struct FST_SparringResultLevelUpData& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.HasStatProgressChange");
 
@@ -27,6 +27,7 @@ bool UBP_TrainingLevelUpRecorder_C::HasStatProgressChange(const struct FST_Sparr
 	params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +38,7 @@ bool UBP_TrainingLevelUpRecorder_C::HasStatProgressChange(const struct FST_Sparr
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.HasRecordedProgressChange
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, NetResponse, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -58,13 +59,13 @@ bool UBP_TrainingLevelUpRecorder_C::HasRecordedProgressChange()
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.GetLevelUpData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_SparringResultLevelUpData Player                         (Parm, OutParm)
 // struct FST_SparringResultLevelUpData ATK                            (Parm, OutParm)
 // struct FST_SparringResultLevelUpData VIT                            (Parm, OutParm)
 
-void UBP_TrainingLevelUpRecorder_C::GetLevelUpData(struct FST_SparringResultLevelUpData* Player, struct FST_SparringResultLevelUpData* ATK, struct FST_SparringResultLevelUpData* VIT)
+void UBP_TrainingLevelUpRecorder_C::STATIC_GetLevelUpData(struct FST_SparringResultLevelUpData* Player, struct FST_SparringResultLevelUpData* ATK, struct FST_SparringResultLevelUpData* VIT)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.GetLevelUpData");
 
@@ -86,12 +87,12 @@ void UBP_TrainingLevelUpRecorder_C::GetLevelUpData(struct FST_SparringResultLeve
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.HasRecordedStatLevelUp
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_SparringResultLevelUpData Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_TrainingLevelUpRecorder_C::HasRecordedStatLevelUp(const struct FST_SparringResultLevelUpData& Data)
+bool UBP_TrainingLevelUpRecorder_C::STATIC_HasRecordedStatLevelUp(const struct FST_SparringResultLevelUpData& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.HasRecordedStatLevelUp");
 
@@ -99,6 +100,7 @@ bool UBP_TrainingLevelUpRecorder_C::HasRecordedStatLevelUp(const struct FST_Spar
 	params.Data = Data;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,11 +111,11 @@ bool UBP_TrainingLevelUpRecorder_C::HasRecordedStatLevelUp(const struct FST_Spar
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.HasRecordedLevelUp
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Static, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_TrainingLevelUpRecorder_C::HasRecordedLevelUp()
+bool UBP_TrainingLevelUpRecorder_C::STATIC_HasRecordedLevelUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.HasRecordedLevelUp");
 
@@ -130,12 +132,12 @@ bool UBP_TrainingLevelUpRecorder_C::HasRecordedLevelUp()
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.UpdateStatData
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class US3DerivedPlayerLevel*   Stat                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_SparringResultLevelUpData Data                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
-void UBP_TrainingLevelUpRecorder_C::UpdateStatData(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data)
+void UBP_TrainingLevelUpRecorder_C::STATIC_UpdateStatData(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.UpdateStatData");
 
@@ -143,6 +145,7 @@ void UBP_TrainingLevelUpRecorder_C::UpdateStatData(class US3DerivedPlayerLevel* 
 	params.Stat = Stat;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,7 +157,7 @@ void UBP_TrainingLevelUpRecorder_C::UpdateStatData(class US3DerivedPlayerLevel* 
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.RecordCurrentState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
 void UBP_TrainingLevelUpRecorder_C::RecordCurrentState()
 {
@@ -163,6 +166,7 @@ void UBP_TrainingLevelUpRecorder_C::RecordCurrentState()
 	UBP_TrainingLevelUpRecorder_C_RecordCurrentState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,7 +175,7 @@ void UBP_TrainingLevelUpRecorder_C::RecordCurrentState()
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.GetInitialStatState
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class US3DerivedPlayerLevel*   Stat                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_SparringResultLevelUpData Data                           (Parm, OutParm)
@@ -184,6 +188,7 @@ void UBP_TrainingLevelUpRecorder_C::GetInitialStatState(class US3DerivedPlayerLe
 	params.Stat = Stat;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +200,7 @@ void UBP_TrainingLevelUpRecorder_C::GetInitialStatState(class US3DerivedPlayerLe
 
 
 // Function BP_TrainingLevelUpRecorder.BP_TrainingLevelUpRecorder_C.RecordInitialState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_TrainingLevelUpRecorder_C::RecordInitialState()
 {

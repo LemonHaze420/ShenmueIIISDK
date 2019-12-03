@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.isLive
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           LIVE                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_AppointKSchild_C::isLive(bool* LIVE)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.ExecSelfKill
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Forced                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -48,6 +48,7 @@ void ABP_AppointKSchild_C::ExecSelfKill(bool Forced)
 	params.Forced = Forced;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,9 +57,9 @@ void ABP_AppointKSchild_C::ExecSelfKill(bool Forced)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.ExecExspFlagSet
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void ABP_AppointKSchild_C::ExecExspFlagSet()
+void ABP_AppointKSchild_C::STATIC_ExecExspFlagSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointKSchild.BP_AppointKSchild_C.ExecExspFlagSet");
 
@@ -73,11 +74,11 @@ void ABP_AppointKSchild_C::ExecExspFlagSet()
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.GetJumpRot
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Static, MulticastDelegate, Private, NetServer, HasOutParms, Const)
 // Parameters:
 // float                          Jump_point                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointKSchild_C::GetJumpRot(float* Jump_point)
+void ABP_AppointKSchild_C::STATIC_GetJumpRot(float* Jump_point)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointKSchild.BP_AppointKSchild_C.GetJumpRot");
 
@@ -95,7 +96,7 @@ void ABP_AppointKSchild_C::GetJumpRot(float* Jump_point)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.GetJumpTime
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Hour                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Min                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -120,7 +121,7 @@ void ABP_AppointKSchild_C::GetJumpTime(int* Hour, int* Min)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.SetKSinfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // int                            EnableTimeMin                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            EnableTimeMax                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -150,6 +151,7 @@ void ABP_AppointKSchild_C::SetKSinfo(int EnableTimeMin, int EnableTimeMax, int J
 	params.ExspControl = ExspControl;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,7 +160,7 @@ void ABP_AppointKSchild_C::SetKSinfo(int EnableTimeMin, int EnableTimeMax, int J
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.GetJumpInfo
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Jump_point                     (Parm, OutParm, IsPlainOldData)
 
@@ -180,7 +182,7 @@ void ABP_AppointKSchild_C::GetJumpInfo(struct FVector* Jump_point)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.GetEyeCatchID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   eyecatch_id                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -191,6 +193,7 @@ void ABP_AppointKSchild_C::GetEyeCatchID(struct FName* eyecatch_id)
 	ABP_AppointKSchild_C_GetEyeCatchID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,7 +205,7 @@ void ABP_AppointKSchild_C::GetEyeCatchID(struct FName* eyecatch_id)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.GetKsLabelID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ks_id                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -213,6 +216,7 @@ void ABP_AppointKSchild_C::GetKsLabelID(struct FName* ks_id)
 	ABP_AppointKSchild_C_GetKsLabelID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -224,7 +228,7 @@ void ABP_AppointKSchild_C::GetKsLabelID(struct FName* ks_id)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.CheckEnableTime
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Private, Delegate, HasOutParms, HasDefaults, Const)
 
 void ABP_AppointKSchild_C::CheckEnableTime()
 {
@@ -233,6 +237,7 @@ void ABP_AppointKSchild_C::CheckEnableTime()
 	ABP_AppointKSchild_C_CheckEnableTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,7 +246,7 @@ void ABP_AppointKSchild_C::CheckEnableTime()
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AppointKSchild_C::UserConstructionScript()
 {
@@ -258,7 +263,7 @@ void ABP_AppointKSchild_C::UserConstructionScript()
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -278,11 +283,11 @@ void ABP_AppointKSchild_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.ExecuteUbergraph_BP_AppointKSchild
-// ()
+// (Net, NetRequest, Native, Event, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AppointKSchild_C::ExecuteUbergraph_BP_AppointKSchild(int EntryPoint)
+void ABP_AppointKSchild_C::STATIC_ExecuteUbergraph_BP_AppointKSchild(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AppointKSchild.BP_AppointKSchild_C.ExecuteUbergraph_BP_AppointKSchild");
 
@@ -290,6 +295,7 @@ void ABP_AppointKSchild_C::ExecuteUbergraph_BP_AppointKSchild(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -298,7 +304,7 @@ void ABP_AppointKSchild_C::ExecuteUbergraph_BP_AppointKSchild(int EntryPoint)
 
 
 // Function BP_AppointKSchild.BP_AppointKSchild_C.ApsChild_TimeOver__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AppointKSchild_C::ApsChild_TimeOver__DelegateSignature()
 {

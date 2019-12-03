@@ -45,29 +45,29 @@ public:
 	}
 
 
-	void TestPlayerState(bool* Normal);
-	void SetEventStatus(bool bStartEvent);
+	void STATIC_TestPlayerState(bool* Normal);
+	void STATIC_SetEventStatus(bool bStartEvent);
 	bool CanActionByBehaviorState();
 	bool IsSubtitleDone();
 	void CheckCanBack(const struct FVector& HitLocation, bool* Back);
-	void PlayAction(bool* Success);
-	void GetPlaybackDir(const struct FVector& ImpactDir, const struct FVector& NormalDir, struct FVector* PlaybackDIr);
-	void PlayAnimation();
-	void GetTextWithRandom(int SubtitleIndex, struct FName* Text_Label);
+	void STATIC_PlayAction(bool* Success);
+	void STATIC_GetPlaybackDir(const struct FVector& ImpactDir, const struct FVector& NormalDir, struct FVector* PlaybackDIr);
+	void STATIC_PlayAnimation();
+	void STATIC_GetTextWithRandom(int SubtitleIndex, struct FName* Text_Label);
 	void ExistNextText(bool* Exist);
 	void StartSubtitle();
 	void UserConstructionScript();
-	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ReceiveTick(float DeltaSeconds);
-	void OnSubtitlePlayFinished();
+	void STATIC_BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_OnSubtitlePlayFinished();
 	void BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void OnEnterStepAndTime();
-	void OnExitStepAndTime();
-	void SetShouldBeObstacle(bool Value);
-	void ExecuteUbergraph_BP_Player180ReturnTrigger(int EntryPoint);
-	void EndTurnAround__DelegateSignature();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_OnEnterStepAndTime();
+	void STATIC_OnExitStepAndTime();
+	void STATIC_SetShouldBeObstacle(bool Value);
+	void STATIC_ExecuteUbergraph_BP_Player180ReturnTrigger(int EntryPoint);
+	void STATIC_EndTurnAround__DelegateSignature();
 };
 
 

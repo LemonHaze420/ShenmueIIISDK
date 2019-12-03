@@ -26,7 +26,7 @@ public:
 	}
 
 
-	bool PerformConditionCheck(class AActor* OwnerActor);
+	bool STATIC_PerformConditionCheck(class AActor* OwnerActor);
 };
 
 

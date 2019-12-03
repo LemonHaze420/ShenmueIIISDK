@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.OnKeyDown
-// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBP_S3SaveLoadSelectWidget_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UBP_S3SaveLoadSelectWidget_C::STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.OnKeyDown");
 
@@ -39,15 +39,16 @@ struct FEventReply UBP_S3SaveLoadSelectWidget_C::OnKeyDown(const struct FGeometr
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::Construct()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Construct");
 
 	UBP_S3SaveLoadSelectWidget_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,15 +57,16 @@ void UBP_S3SaveLoadSelectWidget_C::Construct()
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.BndEvt__Save_K2Node_ComponentBoundEvent_886_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::BndEvt__Save_K2Node_ComponentBoundEvent_886_OnButtonClickedEvent__DelegateSignature()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_BndEvt__Save_K2Node_ComponentBoundEvent_886_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.BndEvt__Save_K2Node_ComponentBoundEvent_886_OnButtonClickedEvent__DelegateSignature");
 
 	UBP_S3SaveLoadSelectWidget_C_BndEvt__Save_K2Node_ComponentBoundEvent_886_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,15 +75,16 @@ void UBP_S3SaveLoadSelectWidget_C::BndEvt__Save_K2Node_ComponentBoundEvent_886_O
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.BndEvt__Load_K2Node_ComponentBoundEvent_907_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::BndEvt__Load_K2Node_ComponentBoundEvent_907_OnButtonClickedEvent__DelegateSignature()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_BndEvt__Load_K2Node_ComponentBoundEvent_907_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.BndEvt__Load_K2Node_ComponentBoundEvent_907_OnButtonClickedEvent__DelegateSignature");
 
 	UBP_S3SaveLoadSelectWidget_C_BndEvt__Load_K2Node_ComponentBoundEvent_907_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,15 +93,16 @@ void UBP_S3SaveLoadSelectWidget_C::BndEvt__Load_K2Node_ComponentBoundEvent_907_O
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.BndEvt__Button_2_K2Node_ComponentBoundEvent_138_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_138_OnButtonClickedEvent__DelegateSignature()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_BndEvt__Button_2_K2Node_ComponentBoundEvent_138_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.BndEvt__Button_2_K2Node_ComponentBoundEvent_138_OnButtonClickedEvent__DelegateSignature");
 
 	UBP_S3SaveLoadSelectWidget_C_BndEvt__Button_2_K2Node_ComponentBoundEvent_138_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,15 +111,16 @@ void UBP_S3SaveLoadSelectWidget_C::BndEvt__Button_2_K2Node_ComponentBoundEvent_1
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::Destruct()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Destruct");
 
 	UBP_S3SaveLoadSelectWidget_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,15 +129,16 @@ void UBP_S3SaveLoadSelectWidget_C::Destruct()
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Finish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::Finish()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_Finish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Finish");
 
 	UBP_S3SaveLoadSelectWidget_C_Finish_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,12 +147,12 @@ void UBP_S3SaveLoadSelectWidget_C::Finish()
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Event, NetResponse, Static, Public, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadSelectWidget_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBP_S3SaveLoadSelectWidget_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.Tick");
 
@@ -163,11 +169,11 @@ void UBP_S3SaveLoadSelectWidget_C::Tick(const struct FGeometry& MyGeometry, floa
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.ExecuteUbergraph_BP_S3SaveLoadSelectWidget
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadSelectWidget_C::ExecuteUbergraph_BP_S3SaveLoadSelectWidget(int EntryPoint)
+void UBP_S3SaveLoadSelectWidget_C::STATIC_ExecuteUbergraph_BP_S3SaveLoadSelectWidget(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.ExecuteUbergraph_BP_S3SaveLoadSelectWidget");
 
@@ -175,6 +181,7 @@ void UBP_S3SaveLoadSelectWidget_C::ExecuteUbergraph_BP_S3SaveLoadSelectWidget(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,7 +190,7 @@ void UBP_S3SaveLoadSelectWidget_C::ExecuteUbergraph_BP_S3SaveLoadSelectWidget(in
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.ED_Load__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, Public, Delegate, HasOutParms, BlueprintEvent)
 
 void UBP_S3SaveLoadSelectWidget_C::ED_Load__DelegateSignature()
 {
@@ -192,6 +199,7 @@ void UBP_S3SaveLoadSelectWidget_C::ED_Load__DelegateSignature()
 	UBP_S3SaveLoadSelectWidget_C_ED_Load__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,15 +208,16 @@ void UBP_S3SaveLoadSelectWidget_C::ED_Load__DelegateSignature()
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.ED_Save__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Public, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::ED_Save__DelegateSignature()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_ED_Save__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.ED_Save__DelegateSignature");
 
 	UBP_S3SaveLoadSelectWidget_C_ED_Save__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,15 +226,16 @@ void UBP_S3SaveLoadSelectWidget_C::ED_Save__DelegateSignature()
 
 
 // Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.ED_Cancel__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBP_S3SaveLoadSelectWidget_C::ED_Cancel__DelegateSignature()
+void UBP_S3SaveLoadSelectWidget_C::STATIC_ED_Cancel__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadSelectWidget.BP_S3SaveLoadSelectWidget_C.ED_Cancel__DelegateSignature");
 
 	UBP_S3SaveLoadSelectWidget_C_ED_Cancel__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

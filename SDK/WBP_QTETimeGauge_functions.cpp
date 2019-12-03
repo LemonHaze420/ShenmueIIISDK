@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.SetCircleRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          GaugeRate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UWBP_QTETimeGauge_C::SetCircleRate(float GaugeRate)
 
 
 // Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Public, Delegate, NetServer)
 
 void UWBP_QTETimeGauge_C::Construct()
 {
@@ -51,11 +51,11 @@ void UWBP_QTETimeGauge_C::Construct()
 
 
 // Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.ExecuteUbergraph_WBP_QTETimeGauge
-// ()
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTETimeGauge_C::ExecuteUbergraph_WBP_QTETimeGauge(int EntryPoint)
+void UWBP_QTETimeGauge_C::STATIC_ExecuteUbergraph_WBP_QTETimeGauge(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTETimeGauge.WBP_QTETimeGauge_C.ExecuteUbergraph_WBP_QTETimeGauge");
 

@@ -35,10 +35,10 @@ public:
 	}
 
 
-	void SplineMovingProcess(bool* Result);
+	void STATIC_SplineMovingProcess(bool* Result);
 	void ReceiveBeginPlay();
 	void ForceMoveSpline();
-	void ExecuteUbergraph_BPC_SplineMovementTalkActorCamera(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_SplineMovementTalkActorCamera(int EntryPoint);
 };
 
 

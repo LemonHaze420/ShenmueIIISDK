@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.PrelaunchBattle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_BattleMediatorBase_C::PrelaunchBattle(bool* dummy)
 	ABP_BattleMediatorBase_C_PrelaunchBattle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,12 +37,12 @@ void ABP_BattleMediatorBase_C::PrelaunchBattle(bool* dummy)
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.SelectLoadingHint
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Found                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FST_LoadingHintWindowParam Hint                           (Parm, OutParm)
 
-void ABP_BattleMediatorBase_C::SelectLoadingHint(bool* Found, struct FST_LoadingHintWindowParam* Hint)
+void ABP_BattleMediatorBase_C::STATIC_SelectLoadingHint(bool* Found, struct FST_LoadingHintWindowParam* Hint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.SelectLoadingHint");
 
@@ -61,7 +62,7 @@ void ABP_BattleMediatorBase_C::SelectLoadingHint(bool* Found, struct FST_Loading
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.CountHeldRecoveryItems
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -72,6 +73,7 @@ int ABP_BattleMediatorBase_C::CountHeldRecoveryItems()
 	ABP_BattleMediatorBase_C_CountHeldRecoveryItems_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +84,7 @@ int ABP_BattleMediatorBase_C::CountHeldRecoveryItems()
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.AllowsRecoveryItems
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -93,6 +95,7 @@ bool ABP_BattleMediatorBase_C::AllowsRecoveryItems()
 	ABP_BattleMediatorBase_C_AllowsRecoveryItems_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,7 +106,7 @@ bool ABP_BattleMediatorBase_C::AllowsRecoveryItems()
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.IsSparring
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -114,6 +117,7 @@ void ABP_BattleMediatorBase_C::IsSparring(bool* Enabled)
 	ABP_BattleMediatorBase_C_IsSparring_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,7 +129,7 @@ void ABP_BattleMediatorBase_C::IsSparring(bool* Enabled)
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.GetRequiredLevels
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FName>           Levels                         (Parm, OutParm, ZeroConstructor)
 // bool                           OneOrMore                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -137,6 +141,7 @@ void ABP_BattleMediatorBase_C::GetRequiredLevels(TArray<struct FName>* Levels, b
 	ABP_BattleMediatorBase_C_GetRequiredLevels_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,17 +155,18 @@ void ABP_BattleMediatorBase_C::GetRequiredLevels(TArray<struct FName>* Levels, b
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.StartLoadingLaunchData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UBTL_LaunchParameters_C* LaunchDataObject               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleMediatorBase_C::StartLoadingLaunchData(class UBTL_LaunchParameters_C** LaunchDataObject)
+void ABP_BattleMediatorBase_C::STATIC_StartLoadingLaunchData(class UBTL_LaunchParameters_C** LaunchDataObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.StartLoadingLaunchData");
 
 	ABP_BattleMediatorBase_C_StartLoadingLaunchData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -172,17 +178,18 @@ void ABP_BattleMediatorBase_C::StartLoadingLaunchData(class UBTL_LaunchParameter
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.CreateLaunchDataObject
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBTL_LaunchParameters_C* Object                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleMediatorBase_C::CreateLaunchDataObject(class UBTL_LaunchParameters_C** Object)
+void ABP_BattleMediatorBase_C::STATIC_CreateLaunchDataObject(class UBTL_LaunchParameters_C** Object)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.CreateLaunchDataObject");
 
 	ABP_BattleMediatorBase_C_CreateLaunchDataObject_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,17 +201,18 @@ void ABP_BattleMediatorBase_C::CreateLaunchDataObject(class UBTL_LaunchParameter
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.GetBattleID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleMediatorBase_C::GetBattleID(struct FName* ID)
+void ABP_BattleMediatorBase_C::STATIC_GetBattleID(struct FName* ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.GetBattleID");
 
 	ABP_BattleMediatorBase_C_GetBattleID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -216,13 +224,13 @@ void ABP_BattleMediatorBase_C::GetBattleID(struct FName* ID)
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.StartBattle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_BattleManagerBase_C* BattleManager                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBTL_LaunchParameters_C* LaunchData                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BattleMediatorBase_C::StartBattle(class ABP_BattleManagerBase_C* BattleManager, class UBTL_LaunchParameters_C* LaunchData, bool* dummy)
+void ABP_BattleMediatorBase_C::STATIC_StartBattle(class ABP_BattleManagerBase_C* BattleManager, class UBTL_LaunchParameters_C* LaunchData, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.StartBattle");
 
@@ -231,6 +239,7 @@ void ABP_BattleMediatorBase_C::StartBattle(class ABP_BattleManagerBase_C* Battle
 	params.LaunchData = LaunchData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,7 +251,7 @@ void ABP_BattleMediatorBase_C::StartBattle(class ABP_BattleManagerBase_C* Battle
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.ShutdownBattle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_BattleManagerBase_C* Manager                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -255,6 +264,7 @@ void ABP_BattleMediatorBase_C::ShutdownBattle(class ABP_BattleManagerBase_C* Man
 	params.Manager = Manager;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -266,7 +276,7 @@ void ABP_BattleMediatorBase_C::ShutdownBattle(class ABP_BattleManagerBase_C* Man
 
 
 // Function BP_BattleMediatorBase.BP_BattleMediatorBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BattleMediatorBase_C::UserConstructionScript()
 {

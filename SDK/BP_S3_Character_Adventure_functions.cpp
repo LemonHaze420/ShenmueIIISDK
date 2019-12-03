@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetGroundFoot
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_FOOT_GROUND_STATE> Grounded                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::GetGroundFoot(TEnumAsByte<EN_FOOT_GROUND_STATE>* Grounded)
+void ABP_S3_Character_Adventure_C::STATIC_GetGroundFoot(TEnumAsByte<EN_FOOT_GROUND_STATE>* Grounded)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetGroundFoot");
 
@@ -36,11 +36,11 @@ void ABP_S3_Character_Adventure_C::GetGroundFoot(TEnumAsByte<EN_FOOT_GROUND_STAT
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.FootFrontLRCalc
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::FootFrontLRCalc(bool* flag)
+void ABP_S3_Character_Adventure_C::STATIC_FootFrontLRCalc(bool* flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.FootFrontLRCalc");
 
@@ -58,11 +58,11 @@ void ABP_S3_Character_Adventure_C::FootFrontLRCalc(bool* flag)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetStairClimber
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBPC_S3PlayerStairClimber_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UBPC_S3PlayerStairClimber_C* ABP_S3_Character_Adventure_C::GetStairClimber()
+class UBPC_S3PlayerStairClimber_C* ABP_S3_Character_Adventure_C::STATIC_GetStairClimber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetStairClimber");
 
@@ -79,11 +79,11 @@ class UBPC_S3PlayerStairClimber_C* ABP_S3_Character_Adventure_C::GetStairClimber
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IsTalking
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3_Character_Adventure_C::IsTalking()
+bool ABP_S3_Character_Adventure_C::STATIC_IsTalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IsTalking");
 
@@ -100,7 +100,7 @@ bool ABP_S3_Character_Adventure_C::IsTalking()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.UpdateCollisionResponses
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<ECollisionChannel> JustChangedChannel             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -120,11 +120,11 @@ void ABP_S3_Character_Adventure_C::UpdateCollisionResponses(TEnumAsByte<ECollisi
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.RemoveIgnoreCollisionRequests
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::RemoveIgnoreCollisionRequests(class UObject* Requester)
+void ABP_S3_Character_Adventure_C::STATIC_RemoveIgnoreCollisionRequests(class UObject* Requester)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.RemoveIgnoreCollisionRequests");
 
@@ -132,6 +132,7 @@ void ABP_S3_Character_Adventure_C::RemoveIgnoreCollisionRequests(class UObject* 
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,12 +141,12 @@ void ABP_S3_Character_Adventure_C::RemoveIgnoreCollisionRequests(class UObject* 
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.HasIgnoreCollisionChannelRequest
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<ECollisionChannel> Channel                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3_Character_Adventure_C::HasIgnoreCollisionChannelRequest(TEnumAsByte<ECollisionChannel> Channel)
+bool ABP_S3_Character_Adventure_C::STATIC_HasIgnoreCollisionChannelRequest(TEnumAsByte<ECollisionChannel> Channel)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.HasIgnoreCollisionChannelRequest");
 
@@ -163,13 +164,13 @@ bool ABP_S3_Character_Adventure_C::HasIgnoreCollisionChannelRequest(TEnumAsByte<
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IgnoreCollisionChannel
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ECollisionChannel> Channel                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           StartIgnore                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::IgnoreCollisionChannel(TEnumAsByte<ECollisionChannel> Channel, bool StartIgnore, class UObject* Requester)
+void ABP_S3_Character_Adventure_C::STATIC_IgnoreCollisionChannel(TEnumAsByte<ECollisionChannel> Channel, bool StartIgnore, class UObject* Requester)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IgnoreCollisionChannel");
 
@@ -179,6 +180,7 @@ void ABP_S3_Character_Adventure_C::IgnoreCollisionChannel(TEnumAsByte<ECollision
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,11 +189,11 @@ void ABP_S3_Character_Adventure_C::IgnoreCollisionChannel(TEnumAsByte<ECollision
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetEnableIK
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bIKEnabled                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::GetEnableIK(bool* bIKEnabled)
+void ABP_S3_Character_Adventure_C::STATIC_GetEnableIK(bool* bIKEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetEnableIK");
 
@@ -209,17 +211,18 @@ void ABP_S3_Character_Adventure_C::GetEnableIK(bool* bIKEnabled)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReturnOutOfWorld
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3_Character_Adventure_C::ReturnOutOfWorld()
+bool ABP_S3_Character_Adventure_C::STATIC_ReturnOutOfWorld()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReturnOutOfWorld");
 
 	ABP_S3_Character_Adventure_C_ReturnOutOfWorld_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,11 +233,11 @@ bool ABP_S3_Character_Adventure_C::ReturnOutOfWorld()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetSearchMode
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_PC_SearchMode>  SearchMode                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::GetSearchMode(TEnumAsByte<EN_PC_SearchMode>* SearchMode)
+void ABP_S3_Character_Adventure_C::STATIC_GetSearchMode(TEnumAsByte<EN_PC_SearchMode>* SearchMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetSearchMode");
 
@@ -252,11 +255,11 @@ void ABP_S3_Character_Adventure_C::GetSearchMode(TEnumAsByte<EN_PC_SearchMode>* 
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.SetSearchMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_PC_SearchMode>  Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::SetSearchMode(TEnumAsByte<EN_PC_SearchMode> Mode)
+void ABP_S3_Character_Adventure_C::STATIC_SetSearchMode(TEnumAsByte<EN_PC_SearchMode> Mode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.SetSearchMode");
 
@@ -272,13 +275,13 @@ void ABP_S3_Character_Adventure_C::SetSearchMode(TEnumAsByte<EN_PC_SearchMode> M
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.SetMovementMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMovementMode>     MovementMode                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  NewCustomMode                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::SetMovementMode(class UObject* Executor, TEnumAsByte<EMovementMode> MovementMode, unsigned char NewCustomMode)
+void ABP_S3_Character_Adventure_C::STATIC_SetMovementMode(class UObject* Executor, TEnumAsByte<EMovementMode> MovementMode, unsigned char NewCustomMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.SetMovementMode");
 
@@ -296,7 +299,7 @@ void ABP_S3_Character_Adventure_C::SetMovementMode(class UObject* Executor, TEnu
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReactToTeleported
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3_Character_Adventure_C::ReactToTeleported()
 {
@@ -305,6 +308,7 @@ void ABP_S3_Character_Adventure_C::ReactToTeleported()
 	ABP_S3_Character_Adventure_C_ReactToTeleported_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -313,12 +317,12 @@ void ABP_S3_Character_Adventure_C::ReactToTeleported()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.TeleportWithCamera
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 NewLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                NewRotation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::TeleportWithCamera(const struct FVector& NewLocation, const struct FRotator& NewRotation)
+void ABP_S3_Character_Adventure_C::STATIC_TeleportWithCamera(const struct FVector& NewLocation, const struct FRotator& NewRotation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.TeleportWithCamera");
 
@@ -327,6 +331,7 @@ void ABP_S3_Character_Adventure_C::TeleportWithCamera(const struct FVector& NewL
 	params.NewRotation = NewRotation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -335,7 +340,7 @@ void ABP_S3_Character_Adventure_C::TeleportWithCamera(const struct FVector& NewL
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.AddReflectorBoard
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 
 void ABP_S3_Character_Adventure_C::AddReflectorBoard()
 {
@@ -344,6 +349,7 @@ void ABP_S3_Character_Adventure_C::AddReflectorBoard()
 	ABP_S3_Character_Adventure_C_AddReflectorBoard_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -352,7 +358,7 @@ void ABP_S3_Character_Adventure_C::AddReflectorBoard()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.SetEnableIK
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           bInIKEnabled                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -365,6 +371,7 @@ void ABP_S3_Character_Adventure_C::SetEnableIK(bool bInIKEnabled, bool* dummy)
 	params.bInIKEnabled = bInIKEnabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -376,7 +383,7 @@ void ABP_S3_Character_Adventure_C::SetEnableIK(bool bInIKEnabled, bool* dummy)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.UpdateDoorActor
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3_Character_Adventure_C::UpdateDoorActor()
 {
@@ -385,6 +392,7 @@ void ABP_S3_Character_Adventure_C::UpdateDoorActor()
 	ABP_S3_Character_Adventure_C_UpdateDoorActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -393,7 +401,7 @@ void ABP_S3_Character_Adventure_C::UpdateDoorActor()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.GetClosestDoor
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class AS3GimmickOpenDoor*      OutDoor                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -415,17 +423,18 @@ void ABP_S3_Character_Adventure_C::GetClosestDoor(class AS3GimmickOpenDoor** Out
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IsInDoorTrigger
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           bInTrigger                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::IsInDoorTrigger(bool* bInTrigger)
+void ABP_S3_Character_Adventure_C::STATIC_IsInDoorTrigger(bool* bInTrigger)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IsInDoorTrigger");
 
 	ABP_S3_Character_Adventure_C_IsInDoorTrigger_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -437,7 +446,7 @@ void ABP_S3_Character_Adventure_C::IsInDoorTrigger(bool* bInTrigger)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ExpandNPCSensorDistance
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          MinDistance                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -457,15 +466,16 @@ void ABP_S3_Character_Adventure_C::ExpandNPCSensorDistance(float MinDistance)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.UpdatePlayerFade
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport)
 
-void ABP_S3_Character_Adventure_C::UpdatePlayerFade()
+void ABP_S3_Character_Adventure_C::STATIC_UpdatePlayerFade()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.UpdatePlayerFade");
 
 	ABP_S3_Character_Adventure_C_UpdatePlayerFade_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -474,7 +484,7 @@ void ABP_S3_Character_Adventure_C::UpdatePlayerFade()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.AddTurnAroundComponent
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UBPC_TurnAround_C*       Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -485,6 +495,7 @@ void ABP_S3_Character_Adventure_C::AddTurnAroundComponent(class UBPC_TurnAround_
 	ABP_S3_Character_Adventure_C_AddTurnAroundComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -496,7 +507,7 @@ void ABP_S3_Character_Adventure_C::AddTurnAroundComponent(class UBPC_TurnAround_
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.SetActorLocationAndRotationWithCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 NewLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                NewRotation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -514,6 +525,7 @@ void ABP_S3_Character_Adventure_C::SetActorLocationAndRotationWithCamera(const s
 	params.Teleport = Teleport;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -522,7 +534,7 @@ void ABP_S3_Character_Adventure_C::SetActorLocationAndRotationWithCamera(const s
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ClearNotice
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::ClearNotice()
 {
@@ -531,6 +543,7 @@ void ABP_S3_Character_Adventure_C::ClearNotice()
 	ABP_S3_Character_Adventure_C_ClearNotice_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -539,7 +552,7 @@ void ABP_S3_Character_Adventure_C::ClearNotice()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.TalkStopMotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::TalkStopMotion()
 {
@@ -548,6 +561,7 @@ void ABP_S3_Character_Adventure_C::TalkStopMotion()
 	ABP_S3_Character_Adventure_C_TalkStopMotion_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -556,7 +570,7 @@ void ABP_S3_Character_Adventure_C::TalkStopMotion()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.TalkPlayMotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           SitFlag                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -568,6 +582,7 @@ void ABP_S3_Character_Adventure_C::TalkPlayMotion(bool SitFlag)
 	params.SitFlag = SitFlag;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -576,34 +591,35 @@ void ABP_S3_Character_Adventure_C::TalkPlayMotion(bool SitFlag)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IsDenyInput
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
-// bool                           deny                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           Deny                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::IsDenyInput(bool* deny)
+void ABP_S3_Character_Adventure_C::STATIC_IsDenyInput(bool* Deny)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.IsDenyInput");
 
 	ABP_S3_Character_Adventure_C_IsDenyInput_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (deny != nullptr)
-		*deny = params.deny;
+	if (Deny != nullptr)
+		*Deny = params.Deny;
 }
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.CheckInputAxis
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bWasInput                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::CheckInputAxis(float AxisValue, bool* bWasInput)
+void ABP_S3_Character_Adventure_C::STATIC_CheckInputAxis(float AxisValue, bool* bWasInput)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.CheckInputAxis");
 
@@ -611,6 +627,7 @@ void ABP_S3_Character_Adventure_C::CheckInputAxis(float AxisValue, bool* bWasInp
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -622,9 +639,9 @@ void ABP_S3_Character_Adventure_C::CheckInputAxis(float AxisValue, bool* bWasInp
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3_Character_Adventure_C::UserConstructionScript()
+void ABP_S3_Character_Adventure_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.UserConstructionScript");
 
@@ -639,7 +656,7 @@ void ABP_S3_Character_Adventure_C::UserConstructionScript()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.BindCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::BindCutscene()
 {
@@ -648,6 +665,7 @@ void ABP_S3_Character_Adventure_C::BindCutscene()
 	ABP_S3_Character_Adventure_C_BindCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -656,7 +674,7 @@ void ABP_S3_Character_Adventure_C::BindCutscene()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.UnbindCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::UnbindCutscene()
 {
@@ -665,6 +683,7 @@ void ABP_S3_Character_Adventure_C::UnbindCutscene()
 	ABP_S3_Character_Adventure_C_UnbindCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -673,7 +692,7 @@ void ABP_S3_Character_Adventure_C::UnbindCutscene()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.StartCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::StartCutscene()
 {
@@ -682,6 +701,7 @@ void ABP_S3_Character_Adventure_C::StartCutscene()
 	ABP_S3_Character_Adventure_C_StartCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -690,7 +710,7 @@ void ABP_S3_Character_Adventure_C::StartCutscene()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.EndCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::EndCutscene()
 {
@@ -699,6 +719,7 @@ void ABP_S3_Character_Adventure_C::EndCutscene()
 	ABP_S3_Character_Adventure_C_EndCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -707,7 +728,7 @@ void ABP_S3_Character_Adventure_C::EndCutscene()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.OnTalkStart
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -719,6 +740,7 @@ void ABP_S3_Character_Adventure_C::OnTalkStart(class US3TalkComponent* TalkCompo
 	params.TalkComponent = TalkComponent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -727,7 +749,7 @@ void ABP_S3_Character_Adventure_C::OnTalkStart(class US3TalkComponent* TalkCompo
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.OnTalkFinished
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -741,6 +763,7 @@ void ABP_S3_Character_Adventure_C::OnTalkFinished(class US3TalkComponent* TalkCo
 	params.interrupted = interrupted;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -749,7 +772,7 @@ void ABP_S3_Character_Adventure_C::OnTalkFinished(class US3TalkComponent* TalkCo
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.Screen_Player
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::Screen_Player()
 {
@@ -758,6 +781,7 @@ void ABP_S3_Character_Adventure_C::Screen_Player()
 	ABP_S3_Character_Adventure_C_Screen_Player_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -766,7 +790,7 @@ void ABP_S3_Character_Adventure_C::Screen_Player()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.Screen_NPC
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::Screen_NPC()
 {
@@ -775,6 +799,7 @@ void ABP_S3_Character_Adventure_C::Screen_NPC()
 	ABP_S3_Character_Adventure_C_Screen_NPC_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -783,7 +808,7 @@ void ABP_S3_Character_Adventure_C::Screen_NPC()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -795,6 +820,7 @@ void ABP_S3_Character_Adventure_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -803,7 +829,7 @@ void ABP_S3_Character_Adventure_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::ReceiveBeginPlay()
 {
@@ -812,6 +838,7 @@ void ABP_S3_Character_Adventure_C::ReceiveBeginPlay()
 	ABP_S3_Character_Adventure_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -820,7 +847,7 @@ void ABP_S3_Character_Adventure_C::ReceiveBeginPlay()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReceivePossessed
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AController*             NewController                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -832,6 +859,7 @@ void ABP_S3_Character_Adventure_C::ReceivePossessed(class AController* NewContro
 	params.NewController = NewController;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -840,7 +868,7 @@ void ABP_S3_Character_Adventure_C::ReceivePossessed(class AController* NewContro
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// (Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::ReceiveDestroyed()
 {
@@ -849,6 +877,7 @@ void ABP_S3_Character_Adventure_C::ReceiveDestroyed()
 	ABP_S3_Character_Adventure_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -857,7 +886,7 @@ void ABP_S3_Character_Adventure_C::ReceiveDestroyed()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.StartNock
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::StartNock()
 {
@@ -866,6 +895,7 @@ void ABP_S3_Character_Adventure_C::StartNock()
 	ABP_S3_Character_Adventure_C_StartNock_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -874,7 +904,7 @@ void ABP_S3_Character_Adventure_C::StartNock()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.BndEvt__NPCSensor_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -904,14 +934,14 @@ void ABP_S3_Character_Adventure_C::BndEvt__NPCSensor_K2Node_ComponentBoundEvent_
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.BndEvt__NPCSensor_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_Character_Adventure_C::BndEvt__NPCSensor_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_S3_Character_Adventure_C::STATIC_BndEvt__NPCSensor_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.BndEvt__NPCSensor_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -922,6 +952,7 @@ void ABP_S3_Character_Adventure_C::BndEvt__NPCSensor_K2Node_ComponentBoundEvent_
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -930,7 +961,7 @@ void ABP_S3_Character_Adventure_C::BndEvt__NPCSensor_K2Node_ComponentBoundEvent_
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.OnDoorAreaBeginOverlap
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -942,6 +973,7 @@ void ABP_S3_Character_Adventure_C::OnDoorAreaBeginOverlap(class AS3GimmickOpenDo
 	params.Door = Door;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -950,7 +982,7 @@ void ABP_S3_Character_Adventure_C::OnDoorAreaBeginOverlap(class AS3GimmickOpenDo
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.OnDoorAreaEndOverlap
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -970,7 +1002,7 @@ void ABP_S3_Character_Adventure_C::OnDoorAreaEndOverlap(class AS3GimmickOpenDoor
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -990,7 +1022,7 @@ void ABP_S3_Character_Adventure_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> En
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.HandleTeleportSucceeded
-// (Event, Public, BlueprintEvent)
+// (Net, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           bIsATest                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1010,7 +1042,7 @@ void ABP_S3_Character_Adventure_C::HandleTeleportSucceeded(bool bIsATest)
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.CleanUpNullListEntries
-// (BlueprintCallable, BlueprintEvent)
+// (NetResponse, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::CleanUpNullListEntries()
 {
@@ -1027,7 +1059,7 @@ void ABP_S3_Character_Adventure_C::CleanUpNullListEntries()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.FinishedLevelLoad
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::FinishedLevelLoad()
 {
@@ -1036,6 +1068,7 @@ void ABP_S3_Character_Adventure_C::FinishedLevelLoad()
 	ABP_S3_Character_Adventure_C_FinishedLevelLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1044,7 +1077,7 @@ void ABP_S3_Character_Adventure_C::FinishedLevelLoad()
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_3_OnEndStairUse__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_3_OnEndStairUse__DelegateSignature()
 {
@@ -1053,6 +1086,7 @@ void ABP_S3_Character_Adventure_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_Compo
 	ABP_S3_Character_Adventure_C_BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_3_OnEndStairUse__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1061,7 +1095,7 @@ void ABP_S3_Character_Adventure_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_Compo
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_Character_Adventure_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature()
 {
@@ -1070,6 +1104,7 @@ void ABP_S3_Character_Adventure_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_Compo
 	ABP_S3_Character_Adventure_C_BndEvt__BPC_S3PlayerStairClimber_K2Node_ComponentBoundEvent_0_OnStartStairUse__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1078,7 +1113,7 @@ void ABP_S3_Character_Adventure_C::BndEvt__BPC_S3PlayerStairClimber_K2Node_Compo
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.K2_OnEndViewTarget
-// (Event, Public, BlueprintEvent)
+// (NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class APlayerController*       PC                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1098,7 +1133,7 @@ void ABP_S3_Character_Adventure_C::K2_OnEndViewTarget(class APlayerController* P
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.K2_OnBecomeViewTarget
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class APlayerController*       PC                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1110,6 +1145,7 @@ void ABP_S3_Character_Adventure_C::K2_OnBecomeViewTarget(class APlayerController
 	params.PC = PC;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1118,7 +1154,7 @@ void ABP_S3_Character_Adventure_C::K2_OnBecomeViewTarget(class APlayerController
 
 
 // Function BP_S3_Character_Adventure.BP_S3_Character_Adventure_C.ExecuteUbergraph_BP_S3_Character_Adventure
-// (HasDefaults)
+// (NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

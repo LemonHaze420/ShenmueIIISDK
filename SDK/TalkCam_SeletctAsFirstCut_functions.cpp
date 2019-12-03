@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SeletctAsFirstCut.TalkCam_SeletctAsFirstCut_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -38,11 +38,11 @@ void UTalkCam_SeletctAsFirstCut_C::ReceiveTickAI(class AAIController* OwnerContr
 
 
 // Function TalkCam_SeletctAsFirstCut.TalkCam_SeletctAsFirstCut_C.ExecuteUbergraph_TalkCam_SeletctAsFirstCut
-// (HasDefaults)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SeletctAsFirstCut_C::ExecuteUbergraph_TalkCam_SeletctAsFirstCut(int EntryPoint)
+void UTalkCam_SeletctAsFirstCut_C::STATIC_ExecuteUbergraph_TalkCam_SeletctAsFirstCut(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SeletctAsFirstCut.TalkCam_SeletctAsFirstCut_C.ExecuteUbergraph_TalkCam_SeletctAsFirstCut");
 
@@ -50,6 +50,7 @@ void UTalkCam_SeletctAsFirstCut_C::ExecuteUbergraph_TalkCam_SeletctAsFirstCut(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

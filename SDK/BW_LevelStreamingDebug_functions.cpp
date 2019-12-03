@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBW_LevelStreamingDebug_C::Construct()
 {
@@ -23,6 +23,7 @@ void UBW_LevelStreamingDebug_C::Construct()
 	UBW_LevelStreamingDebug_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,12 +32,12 @@ void UBW_LevelStreamingDebug_C::Construct()
 
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_LevelStreamingDebug_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBW_LevelStreamingDebug_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.Tick");
 
@@ -45,6 +46,7 @@ void UBW_LevelStreamingDebug_C::Tick(const struct FGeometry& MyGeometry, float I
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +55,7 @@ void UBW_LevelStreamingDebug_C::Tick(const struct FGeometry& MyGeometry, float I
 
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.UpdateLevelData
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBW_LevelStreamingDebug_C::UpdateLevelData()
 {
@@ -62,6 +64,7 @@ void UBW_LevelStreamingDebug_C::UpdateLevelData()
 	UBW_LevelStreamingDebug_C_UpdateLevelData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,11 +73,11 @@ void UBW_LevelStreamingDebug_C::UpdateLevelData()
 
 
 // Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.ExecuteUbergraph_BW_LevelStreamingDebug
-// (HasDefaults)
+// (NetReliable, NetRequest, Event, Static, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_LevelStreamingDebug_C::ExecuteUbergraph_BW_LevelStreamingDebug(int EntryPoint)
+void UBW_LevelStreamingDebug_C::STATIC_ExecuteUbergraph_BW_LevelStreamingDebug(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_LevelStreamingDebug.BW_LevelStreamingDebug_C.ExecuteUbergraph_BW_LevelStreamingDebug");
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoPage_Map_Chobu_2.WBP_MemoPage_Map_Chobu_1_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UWBP_MemoPage_Map_Chobu_1_C::Construct()
+void UWBP_MemoPage_Map_Chobu_1_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Chobu_2.WBP_MemoPage_Map_Chobu_1_C.Construct");
 
 	UWBP_MemoPage_Map_Chobu_1_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UWBP_MemoPage_Map_Chobu_1_C::Construct()
 
 
 // Function WBP_MemoPage_Map_Chobu_2.WBP_MemoPage_Map_Chobu_1_C.ExecuteUbergraph_WBP_MemoPage_Map_Chobu_2
-// (HasDefaults)
+// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

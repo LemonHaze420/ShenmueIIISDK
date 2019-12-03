@@ -28,12 +28,12 @@ public:
 	}
 
 
-	void Activate();
-	void BindShopEvents();
-	void OnFinishedShop();
-	void UnbindShopEvents(class ABP_ShopEventManager_C* ShopManager);
-	void OnEndBuyShop();
-	void OnEndNoBuyShop();
+	void STATIC_Activate();
+	void STATIC_BindShopEvents();
+	void STATIC_OnFinishedShop();
+	void STATIC_UnbindShopEvents(class ABP_ShopEventManager_C* ShopManager);
+	void STATIC_OnEndBuyShop();
+	void STATIC_OnEndNoBuyShop();
 	void ExecuteUbergraph_BP_TalkProcess_Shop(int EntryPoint);
 };
 

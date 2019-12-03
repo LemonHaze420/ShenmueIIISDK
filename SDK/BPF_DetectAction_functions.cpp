@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_DetectAction.BPF_DetectAction_C.ForbidAllDetectAction
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DetectAction_C::STATIC_ForbidAllDetectAction(class AActor* Actor, class UObject* __WorldContext)
+void UBPF_DetectAction_C::ForbidAllDetectAction(class AActor* Actor, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DetectAction.BPF_DetectAction_C.ForbidAllDetectAction");
 
@@ -28,6 +28,7 @@ void UBPF_DetectAction_C::STATIC_ForbidAllDetectAction(class AActor* Actor, clas
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,12 +37,12 @@ void UBPF_DetectAction_C::STATIC_ForbidAllDetectAction(class AActor* Actor, clas
 
 
 // Function BPF_DetectAction.BPF_DetectAction_C.PermitAllDetectAction
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DetectAction_C::STATIC_PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext)
+void UBPF_DetectAction_C::PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DetectAction.BPF_DetectAction_C.PermitAllDetectAction");
 
@@ -58,7 +59,7 @@ void UBPF_DetectAction_C::STATIC_PermitAllDetectAction(class AActor* Actor, clas
 
 
 // Function BPF_DetectAction.BPF_DetectAction_C.ForbidWindowUI
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, Private, Protected, Delegate, HasDefaults, NetClient, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -72,6 +73,7 @@ void UBPF_DetectAction_C::STATIC_ForbidWindowUI(class AActor* Actor, class UObje
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +82,7 @@ void UBPF_DetectAction_C::STATIC_ForbidWindowUI(class AActor* Actor, class UObje
 
 
 // Function BPF_DetectAction.BPF_DetectAction_C.PermitWindowUI
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -94,6 +96,7 @@ void UBPF_DetectAction_C::STATIC_PermitWindowUI(class AActor* Actor, class UObje
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,12 +105,12 @@ void UBPF_DetectAction_C::STATIC_PermitWindowUI(class AActor* Actor, class UObje
 
 
 // Function BPF_DetectAction.BPF_DetectAction_C.getS3DetectAction
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, NetMulticast, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3DetectAction_C*    BP_S3DetectAction              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DetectAction_C::STATIC_getS3DetectAction(class UObject* __WorldContext, class ABP_S3DetectAction_C** BP_S3DetectAction)
+void UBPF_DetectAction_C::getS3DetectAction(class UObject* __WorldContext, class ABP_S3DetectAction_C** BP_S3DetectAction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DetectAction.BPF_DetectAction_C.getS3DetectAction");
 
@@ -115,6 +118,7 @@ void UBPF_DetectAction_C::STATIC_getS3DetectAction(class UObject* __WorldContext
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

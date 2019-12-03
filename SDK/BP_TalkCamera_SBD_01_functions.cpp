@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_SBD_01_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_TalkCamera_SBD_01_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_SBD_01_C::ReceiveBeginPlay()
 {
@@ -48,7 +48,7 @@ void ABP_TalkCamera_SBD_01_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +68,7 @@ void ABP_TalkCamera_SBD_01_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_SBD_01.BP_TalkCamera_SBD_01_C.ExecuteUbergraph_BP_TalkCamera_SBD_01
-// ()
+// (Event, NetResponse, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

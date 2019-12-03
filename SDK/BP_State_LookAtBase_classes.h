@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void ResetLookAtParamater(bool bResetTarget);
+	void STATIC_ResetLookAtParamater(bool bResetTarget);
 	void GetStateOwner(class AActor** OwnerActor);
-	void StateOnInitialize();
+	void STATIC_StateOnInitialize();
 	void ExecuteUbergraph_BP_State_LookAtBase(int EntryPoint);
 };
 

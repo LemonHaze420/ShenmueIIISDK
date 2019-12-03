@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
+	void STATIC_ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
 	void ExecuteUbergraph_TalkCam_GetAutoCameraSequence(int EntryPoint);
 };
 

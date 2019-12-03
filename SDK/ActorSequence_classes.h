@@ -12,23 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class ActorSequence.ActorSequence
-// 0x0028 (0x0370 - 0x0348)
-class UActorSequence : public UMovieSceneSequence
-{
-public:
-	class UMovieScene*                                 MovieScene;                                               // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FActorSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0350(0x0020)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ActorSequence.ActorSequence");
-		return ptr;
-	}
-
-};
-
-
 // Class ActorSequence.ActorSequenceComponent
 // 0x0058 (0x0148 - 0x00F0)
 class UActorSequenceComponent : public UActorComponent
@@ -43,6 +26,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ActorSequence.ActorSequenceComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class ActorSequence.ActorSequence
+// 0x0028 (0x0370 - 0x0348)
+class UActorSequence : public UMovieSceneSequence
+{
+public:
+	class UMovieScene*                                 MovieScene;                                               // 0x0348(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FActorSequenceObjectReferenceMap            ObjectReferences;                                         // 0x0350(0x0020)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ActorSequence.ActorSequence");
 		return ptr;
 	}
 

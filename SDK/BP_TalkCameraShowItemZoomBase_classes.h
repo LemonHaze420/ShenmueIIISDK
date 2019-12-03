@@ -29,10 +29,10 @@ public:
 
 
 	struct FVector GetLookTargetSocketLocation(const struct FName& InSocketName);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_TalkCameraShowItemZoomBase(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_TalkCameraShowItemZoomBase(int EntryPoint);
 };
 
 

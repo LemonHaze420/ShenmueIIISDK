@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.SetAllValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, Public, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          MinRate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          MaxRate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -42,14 +42,14 @@ void UBW_DebugMiniGameListStat_C::SetAllValue(float MinRate, float MaxRate, floa
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.SetValueText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          PercentBase                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          MinRate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTextBlock*              Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_DebugMiniGameListStat_C::SetValueText(float Rate, float PercentBase, float MinRate, class UTextBlock* Target)
+void UBW_DebugMiniGameListStat_C::STATIC_SetValueText(float Rate, float PercentBase, float MinRate, class UTextBlock* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.SetValueText");
 
@@ -68,7 +68,7 @@ void UBW_DebugMiniGameListStat_C::SetValueText(float Rate, float PercentBase, fl
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +80,7 @@ void UBW_DebugMiniGameListStat_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,9 +89,9 @@ void UBW_DebugMiniGameListStat_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugMiniGameListStat_C::BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__Button_AddHP_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
@@ -105,9 +106,9 @@ void UBW_DebugMiniGameListStat_C::BndEvt__Button_AddHP_K2Node_ComponentBoundEven
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugMiniGameListStat_C::BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__Button_MinusHP_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
@@ -122,7 +123,7 @@ void UBW_DebugMiniGameListStat_C::BndEvt__Button_MinusHP_K2Node_ComponentBoundEv
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.ResetFocus
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -134,6 +135,7 @@ void UBW_DebugMiniGameListStat_C::ResetFocus(class APlayerController* PlayerCont
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,9 +144,9 @@ void UBW_DebugMiniGameListStat_C::ResetFocus(class APlayerController* PlayerCont
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_128_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugMiniGameListStat_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_128_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_128_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_128_OnButtonClickedEvent__DelegateSignature");
 
@@ -159,9 +161,9 @@ void UBW_DebugMiniGameListStat_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__S3Button_1_K2Node_ComponentBoundEvent_145_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugMiniGameListStat_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_145_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_BndEvt__S3Button_1_K2Node_ComponentBoundEvent_145_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.BndEvt__S3Button_1_K2Node_ComponentBoundEvent_145_OnButtonClickedEvent__DelegateSignature");
 
@@ -176,7 +178,7 @@ void UBW_DebugMiniGameListStat_C::BndEvt__S3Button_1_K2Node_ComponentBoundEvent_
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.ExecuteUbergraph_BW_DebugMiniGameListStat
-// ()
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -196,9 +198,9 @@ void UBW_DebugMiniGameListStat_C::ExecuteUbergraph_BW_DebugMiniGameListStat(int 
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnMinusMax__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBW_DebugMiniGameListStat_C::OnMinusMax__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_OnMinusMax__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnMinusMax__DelegateSignature");
 
@@ -213,9 +215,9 @@ void UBW_DebugMiniGameListStat_C::OnMinusMax__DelegateSignature()
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnPlusMax__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBW_DebugMiniGameListStat_C::OnPlusMax__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_OnPlusMax__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnPlusMax__DelegateSignature");
 
@@ -230,9 +232,9 @@ void UBW_DebugMiniGameListStat_C::OnPlusMax__DelegateSignature()
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnMinusMin__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBW_DebugMiniGameListStat_C::OnMinusMin__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_OnMinusMin__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnMinusMin__DelegateSignature");
 
@@ -247,9 +249,9 @@ void UBW_DebugMiniGameListStat_C::OnMinusMin__DelegateSignature()
 
 
 // Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnPlusMin__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBW_DebugMiniGameListStat_C::OnPlusMin__DelegateSignature()
+void UBW_DebugMiniGameListStat_C::STATIC_OnPlusMin__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugMiniGameListStat.BW_DebugMiniGameListStat_C.OnPlusMin__DelegateSignature");
 

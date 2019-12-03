@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetSelectSellItem
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_SelectSellItem      SelectSellItem                 (Parm, OutParm)
 
-void UBPW_UI_ItemIcon_C::GetSelectSellItem(int PageIndex, struct FST_SelectSellItem* SelectSellItem)
+void UBPW_UI_ItemIcon_C::STATIC_GetSelectSellItem(int PageIndex, struct FST_SelectSellItem* SelectSellItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetSelectSellItem");
 
@@ -38,9 +38,9 @@ void UBPW_UI_ItemIcon_C::GetSelectSellItem(int PageIndex, struct FST_SelectSellI
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.ResetSelectSellItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_UI_ItemIcon_C::ResetSelectSellItem()
+void UBPW_UI_ItemIcon_C::STATIC_ResetSelectSellItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.ResetSelectSellItem");
 
@@ -55,12 +55,12 @@ void UBPW_UI_ItemIcon_C::ResetSelectSellItem()
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.CalcHaveItemNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            HaveItemNum                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemIcon_C::CalcHaveItemNum(int PageIndex, int* HaveItemNum)
+void UBPW_UI_ItemIcon_C::STATIC_CalcHaveItemNum(int PageIndex, int* HaveItemNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.CalcHaveItemNum");
 
@@ -79,11 +79,11 @@ void UBPW_UI_ItemIcon_C::CalcHaveItemNum(int PageIndex, int* HaveItemNum)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetSelectSellItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FST_SelectSellItem      SelectSellItemID               (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_UI_ItemIcon_C::SetSelectSellItem(const struct FST_SelectSellItem& SelectSellItemID)
+void UBPW_UI_ItemIcon_C::STATIC_SetSelectSellItem(const struct FST_SelectSellItem& SelectSellItemID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetSelectSellItem");
 
@@ -99,15 +99,16 @@ void UBPW_UI_ItemIcon_C::SetSelectSellItem(const struct FST_SelectSellItem& Sele
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetSkillImage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPW_UI_ItemIcon_C::SetSkillImage()
+void UBPW_UI_ItemIcon_C::STATIC_SetSkillImage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetSkillImage");
 
 	UBPW_UI_ItemIcon_C_SetSkillImage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +117,7 @@ void UBPW_UI_ItemIcon_C::SetSkillImage()
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetImageBrightness
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsBright                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -136,11 +137,11 @@ void UBPW_UI_ItemIcon_C::SetImageBrightness(bool IsBright)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetFrameType
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_IconFramePos>   newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemIcon_C::SetFrameType(TEnumAsByte<EN_IconFramePos> newParam)
+void UBPW_UI_ItemIcon_C::STATIC_SetFrameType(TEnumAsByte<EN_IconFramePos> newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetFrameType");
 
@@ -148,6 +149,7 @@ void UBPW_UI_ItemIcon_C::SetFrameType(TEnumAsByte<EN_IconFramePos> newParam)
 	params.newParam = newParam;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,11 +158,11 @@ void UBPW_UI_ItemIcon_C::SetFrameType(TEnumAsByte<EN_IconFramePos> newParam)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.ItemImageLight
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsLight                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemIcon_C::ItemImageLight(bool IsLight)
+void UBPW_UI_ItemIcon_C::STATIC_ItemImageLight(bool IsLight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.ItemImageLight");
 
@@ -176,11 +178,11 @@ void UBPW_UI_ItemIcon_C::ItemImageLight(bool IsLight)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetItemNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ItemNum                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemIcon_C::GetItemNum(int* ItemNum)
+void UBPW_UI_ItemIcon_C::STATIC_GetItemNum(int* ItemNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetItemNum");
 
@@ -198,7 +200,7 @@ void UBPW_UI_ItemIcon_C::GetItemNum(int* ItemNum)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetNum
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Public, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Num                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            PageNum                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -212,6 +214,7 @@ void UBPW_UI_ItemIcon_C::SetNum(int Num, int PageNum)
 	params.PageNum = PageNum;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,11 +223,11 @@ void UBPW_UI_ItemIcon_C::SetNum(int Num, int PageNum)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetItemID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ItemId                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemIcon_C::GetItemID(int* ItemId)
+void UBPW_UI_ItemIcon_C::STATIC_GetItemID(int* ItemId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.GetItemID");
 
@@ -242,11 +245,11 @@ void UBPW_UI_ItemIcon_C::GetItemID(int* ItemId)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.IconVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemIcon_C::IconVisibility(ESlateVisibility InVisibility)
+void UBPW_UI_ItemIcon_C::STATIC_IconVisibility(ESlateVisibility InVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.IconVisibility");
 
@@ -254,6 +257,7 @@ void UBPW_UI_ItemIcon_C::IconVisibility(ESlateVisibility InVisibility)
 	params.InVisibility = InVisibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -262,7 +266,7 @@ void UBPW_UI_ItemIcon_C::IconVisibility(ESlateVisibility InVisibility)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.PropotionIconSize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ItemIconSize                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -282,7 +286,7 @@ void UBPW_UI_ItemIcon_C::PropotionIconSize(float ItemIconSize)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.FocusIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           IsSelect                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -302,7 +306,7 @@ void UBPW_UI_ItemIcon_C::FocusIcon(bool IsSelect)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.SetIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -322,7 +326,7 @@ void UBPW_UI_ItemIcon_C::SetIcon(int ItemId)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.ProportionFontSize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ItemIconSize                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -342,9 +346,9 @@ void UBPW_UI_ItemIcon_C::ProportionFontSize(float ItemIconSize)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UBPW_UI_ItemIcon_C::Construct()
+void UBPW_UI_ItemIcon_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.Construct");
 
@@ -359,11 +363,11 @@ void UBPW_UI_ItemIcon_C::Construct()
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_ItemIcon_C::PreConstruct(bool IsDesignTime)
+void UBPW_UI_ItemIcon_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.PreConstruct");
 
@@ -371,6 +375,7 @@ void UBPW_UI_ItemIcon_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -379,7 +384,7 @@ void UBPW_UI_ItemIcon_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_UI_ItemIcon.BPW_UI_ItemIcon_C.ExecuteUbergraph_BPW_UI_ItemIcon
-// ()
+// (Net, NetReliable, Exec, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

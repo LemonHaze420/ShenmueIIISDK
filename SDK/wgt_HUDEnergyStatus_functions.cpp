@@ -14,16 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.SetMinimapMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// bool                           MiniMap                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Minimap                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HUDEnergyStatus_C::SetMinimapMode(bool MiniMap)
+void Uwgt_HUDEnergyStatus_C::STATIC_SetMinimapMode(bool Minimap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.SetMinimapMode");
 
 	Uwgt_HUDEnergyStatus_C_SetMinimapMode_Params params;
-	params.MiniMap = MiniMap;
+	params.Minimap = Minimap;
 
 	auto flags = fn->FunctionFlags;
 
@@ -34,7 +34,7 @@ void Uwgt_HUDEnergyStatus_C::SetMinimapMode(bool MiniMap)
 
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.SetVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,7 +54,7 @@ void Uwgt_HUDEnergyStatus_C::SetVisible(bool Visible)
 
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.FadeOut
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void Uwgt_HUDEnergyStatus_C::FadeOut()
 {
@@ -63,6 +63,7 @@ void Uwgt_HUDEnergyStatus_C::FadeOut()
 	Uwgt_HUDEnergyStatus_C_FadeOut_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,9 +72,9 @@ void Uwgt_HUDEnergyStatus_C::FadeOut()
 
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.FadeIn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void Uwgt_HUDEnergyStatus_C::FadeIn()
+void Uwgt_HUDEnergyStatus_C::STATIC_FadeIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.FadeIn");
 
@@ -88,12 +89,12 @@ void Uwgt_HUDEnergyStatus_C::FadeIn()
 
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HUDEnergyStatus_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_HUDEnergyStatus_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.Tick");
 
@@ -110,11 +111,11 @@ void Uwgt_HUDEnergyStatus_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_HUDEnergyStatus_C::PreConstruct(bool IsDesignTime)
+void Uwgt_HUDEnergyStatus_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.PreConstruct");
 
@@ -122,6 +123,7 @@ void Uwgt_HUDEnergyStatus_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,7 +132,7 @@ void Uwgt_HUDEnergyStatus_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.ExecuteUbergraph_wgt_HUDEnergyStatus
-// (HasDefaults)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -142,6 +144,7 @@ void Uwgt_HUDEnergyStatus_C::ExecuteUbergraph_wgt_HUDEnergyStatus(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

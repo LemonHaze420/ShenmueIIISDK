@@ -27,8 +27,8 @@ public:
 
 
 	void UserConstructionScript();
-	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key);
-	void ExecuteUbergraph_BP_MiniGame_Sunken_Input(int EntryPoint);
+	void STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_Sunken_Input(int EntryPoint);
 };
 
 

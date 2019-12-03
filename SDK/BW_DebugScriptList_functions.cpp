@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.FindFirstScript
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Public, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void UBW_DebugScriptList_C::FindFirstScript(bool* Success)
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.GetNPCCharacter
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class ABP_ScheduleNPC_C*       NPC                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +47,7 @@ void UBW_DebugScriptList_C::GetNPCCharacter(class ABP_ScheduleNPC_C** NPC)
 	UBW_DebugScriptList_C_GetNPCCharacter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +59,7 @@ void UBW_DebugScriptList_C::GetNPCCharacter(class ABP_ScheduleNPC_C** NPC)
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.GetCheatManager
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class UBP_CheatManager_C*      CheatManager                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -80,11 +81,11 @@ void UBW_DebugScriptList_C::GetCheatManager(class UBP_CheatManager_C** CheatMana
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.SelectScript
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ScriptName                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBW_DebugScriptList_C::SelectScript(const struct FString& ScriptName)
+void UBW_DebugScriptList_C::STATIC_SelectScript(const struct FString& ScriptName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugScriptList.BW_DebugScriptList_C.SelectScript");
 
@@ -100,12 +101,12 @@ void UBW_DebugScriptList_C::SelectScript(const struct FString& ScriptName)
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.CanTalk
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class US3NPCDefinition*        Definition                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugScriptList_C::CanTalk(class US3NPCDefinition* Definition, bool* CAN)
+void UBW_DebugScriptList_C::STATIC_CanTalk(class US3NPCDefinition* Definition, bool* CAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugScriptList.BW_DebugScriptList_C.CanTalk");
 
@@ -113,6 +114,7 @@ void UBW_DebugScriptList_C::CanTalk(class US3NPCDefinition* Definition, bool* CA
 	params.Definition = Definition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +126,7 @@ void UBW_DebugScriptList_C::CanTalk(class US3NPCDefinition* Definition, bool* CA
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.UpdateScriptList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -136,6 +138,7 @@ void UBW_DebugScriptList_C::UpdateScriptList(const struct FString& CharaName)
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,7 +147,7 @@ void UBW_DebugScriptList_C::UpdateScriptList(const struct FString& CharaName)
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.MakeNPC_List
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetClient, Const)
 
 void UBW_DebugScriptList_C::MakeNPC_List()
 {
@@ -161,7 +164,7 @@ void UBW_DebugScriptList_C::MakeNPC_List()
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.On_NPC_List_GenerateWidget_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FString                 Item                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UWidget*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
@@ -174,6 +177,7 @@ class UWidget* UBW_DebugScriptList_C::On_NPC_List_GenerateWidget_1(const struct 
 	params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -184,7 +188,7 @@ class UWidget* UBW_DebugScriptList_C::On_NPC_List_GenerateWidget_1(const struct 
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.OnLoaded_DF6DB0F24FB757ADD0DEB9B481A12BEF
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -196,6 +200,7 @@ void UBW_DebugScriptList_C::OnLoaded_DF6DB0F24FB757ADD0DEB9B481A12BEF(class UObj
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,7 +209,7 @@ void UBW_DebugScriptList_C::OnLoaded_DF6DB0F24FB757ADD0DEB9B481A12BEF(class UObj
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBW_DebugScriptList_C::Construct()
 {
@@ -213,6 +218,7 @@ void UBW_DebugScriptList_C::Construct()
 	UBW_DebugScriptList_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -221,12 +227,12 @@ void UBW_DebugScriptList_C::Construct()
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.BndEvt__NPC_List_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugScriptList_C::BndEvt__NPC_List_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+void UBW_DebugScriptList_C::STATIC_BndEvt__NPC_List_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugScriptList.BW_DebugScriptList_C.BndEvt__NPC_List_K2Node_ComponentBoundEvent_0_OnSelectionChangedEvent__DelegateSignature");
 
@@ -243,7 +249,7 @@ void UBW_DebugScriptList_C::BndEvt__NPC_List_K2Node_ComponentBoundEvent_0_OnSele
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_121_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBW_DebugScriptList_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_121_OnButtonPressedEvent__DelegateSignature()
 {
@@ -252,6 +258,7 @@ void UBW_DebugScriptList_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_121_On
 	UBW_DebugScriptList_C_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_121_OnButtonPressedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -260,12 +267,12 @@ void UBW_DebugScriptList_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_121_On
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.BndEvt__ScriptList_K2Node_ComponentBoundEvent_137_OnSelectionChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugScriptList_C::BndEvt__ScriptList_K2Node_ComponentBoundEvent_137_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+void UBW_DebugScriptList_C::STATIC_BndEvt__ScriptList_K2Node_ComponentBoundEvent_137_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugScriptList.BW_DebugScriptList_C.BndEvt__ScriptList_K2Node_ComponentBoundEvent_137_OnSelectionChangedEvent__DelegateSignature");
 
@@ -282,7 +289,7 @@ void UBW_DebugScriptList_C::BndEvt__ScriptList_K2Node_ComponentBoundEvent_137_On
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.EndTalk
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBW_DebugScriptList_C::EndTalk()
 {
@@ -291,6 +298,7 @@ void UBW_DebugScriptList_C::EndTalk()
 	UBW_DebugScriptList_C_EndTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +307,7 @@ void UBW_DebugScriptList_C::EndTalk()
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.BndEvt__FirstButton_K2Node_ComponentBoundEvent_158_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBW_DebugScriptList_C::BndEvt__FirstButton_K2Node_ComponentBoundEvent_158_OnButtonClickedEvent__DelegateSignature()
 {
@@ -308,6 +316,7 @@ void UBW_DebugScriptList_C::BndEvt__FirstButton_K2Node_ComponentBoundEvent_158_O
 	UBW_DebugScriptList_C_BndEvt__FirstButton_K2Node_ComponentBoundEvent_158_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -316,7 +325,7 @@ void UBW_DebugScriptList_C::BndEvt__FirstButton_K2Node_ComponentBoundEvent_158_O
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_114_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBW_DebugScriptList_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_114_OnButtonClickedEvent__DelegateSignature()
 {
@@ -325,6 +334,7 @@ void UBW_DebugScriptList_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_114_On
 	UBW_DebugScriptList_C_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_114_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -333,7 +343,7 @@ void UBW_DebugScriptList_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_114_On
 
 
 // Function BW_DebugScriptList.BW_DebugScriptList_C.ExecuteUbergraph_BW_DebugScriptList
-// ()
+// (Exec, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

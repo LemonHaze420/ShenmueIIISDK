@@ -31,9 +31,9 @@ public:
 
 
 	void UpdateDisplay(const struct FString& Body, const struct FST_RubyInfo& RubyInfo, int MemoId, bool* newParam);
-	void Construct();
-	void Destruct();
-	void ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_Destruct();
+	void STATIC_ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby(int EntryPoint);
 };
 
 

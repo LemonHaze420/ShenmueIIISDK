@@ -61,14 +61,14 @@ public:
 
 
 	bool ZeroedOutInput();
-	void Clear();
+	void STATIC_Clear();
 	void CalcNPCSteer(class AS3Character* NPC, const struct FVector& PlayerLocation, const struct FVector& InputDirection, float* OutStrength, float* OutPriority, struct FVector* OutDirection);
-	void SampleFloatCurveWithLinearDefault(class UCurveFloat* Curve, float InputValue, float* OutputValue);
-	void GetNPCAngleN(const struct FVector& NPCLocation, const struct FVector& PlayerLocation, float PlayerNPCDistance, float NPCRadius, float InputAngleWS, float* Angle);
+	void STATIC_SampleFloatCurveWithLinearDefault(class UCurveFloat* Curve, float InputValue, float* OutputValue);
+	void STATIC_GetNPCAngleN(const struct FVector& NPCLocation, const struct FVector& PlayerLocation, float PlayerNPCDistance, float NPCRadius, float InputAngleWS, float* Angle);
 	void ClearHints();
-	void Update(const struct FVector& InputDirWS, bool ActiveInput, float InputMagnitude, float* OutStrength, struct FVector* OutDirection, float* OutMagnitude);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_S3PlayerSteering(int EntryPoint);
+	void STATIC_Update(const struct FVector& InputDirWS, bool ActiveInput, float InputMagnitude, float* OutStrength, struct FVector* OutDirection, float* OutMagnitude);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BPC_S3PlayerSteering(int EntryPoint);
 };
 
 

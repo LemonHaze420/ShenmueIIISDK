@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.GetBGM
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class USoundAtomCue*           BGM                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::GetBGM(class USoundAtomCue** BGM)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_GetBGM(class USoundAtomCue** BGM)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.GetBGM");
 
@@ -36,12 +36,12 @@ void ABP_S3BuildingStaticMeshActor_C::GetBGM(class USoundAtomCue** BGM)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.IsOverlappingCutsceneActor
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Const)
 // Parameters:
 // struct FName                   CharacterName                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsOverlap                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::IsOverlappingCutsceneActor(const struct FName& CharacterName, bool* IsOverlap)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_IsOverlappingCutsceneActor(const struct FName& CharacterName, bool* IsOverlap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.IsOverlappingCutsceneActor");
 
@@ -49,6 +49,7 @@ void ABP_S3BuildingStaticMeshActor_C::IsOverlappingCutsceneActor(const struct FN
 	params.CharacterName = CharacterName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,15 +61,16 @@ void ABP_S3BuildingStaticMeshActor_C::IsOverlappingCutsceneActor(const struct FN
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.OverlapPlayer_Impl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, NetClient, Const)
 
-void ABP_S3BuildingStaticMeshActor_C::OverlapPlayer_Impl()
+void ABP_S3BuildingStaticMeshActor_C::STATIC_OverlapPlayer_Impl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.OverlapPlayer_Impl");
 
 	ABP_S3BuildingStaticMeshActor_C_OverlapPlayer_Impl_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,11 +79,11 @@ void ABP_S3BuildingStaticMeshActor_C::OverlapPlayer_Impl()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.GetCurrentBGM
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class USoundAtomCue*           Sound                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::GetCurrentBGM(class USoundAtomCue** Sound)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_GetCurrentBGM(class USoundAtomCue** Sound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.GetCurrentBGM");
 
@@ -99,7 +101,7 @@ void ABP_S3BuildingStaticMeshActor_C::GetCurrentBGM(class USoundAtomCue** Sound)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.InitTick
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
 void ABP_S3BuildingStaticMeshActor_C::InitTick()
 {
@@ -116,7 +118,7 @@ void ABP_S3BuildingStaticMeshActor_C::InitTick()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.StopSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Delegate, NetClient, Const)
 
 void ABP_S3BuildingStaticMeshActor_C::StopSE()
 {
@@ -133,7 +135,7 @@ void ABP_S3BuildingStaticMeshActor_C::StopSE()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.PlaySE
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, NetServer, NetClient, Const)
 
 void ABP_S3BuildingStaticMeshActor_C::PlaySE()
 {
@@ -149,16 +151,16 @@ void ABP_S3BuildingStaticMeshActor_C::PlaySE()
 }
 
 
-// Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBgm
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBGM
+// (Exec, Event, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // bool                           Play                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::JudgeBgm(bool Play)
+void ABP_S3BuildingStaticMeshActor_C::JudgeBGM(bool Play)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBgm");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBGM");
 
-	ABP_S3BuildingStaticMeshActor_C_JudgeBgm_Params params;
+	ABP_S3BuildingStaticMeshActor_C_JudgeBGM_Params params;
 	params.Play = Play;
 
 	auto flags = fn->FunctionFlags;
@@ -170,17 +172,18 @@ void ABP_S3BuildingStaticMeshActor_C::JudgeBgm(bool Play)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.IsNeedCheckSound
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, NetClient, Const)
 // Parameters:
 // bool                           Need                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::IsNeedCheckSound(bool* Need)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_IsNeedCheckSound(bool* Need)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.IsNeedCheckSound");
 
 	ABP_S3BuildingStaticMeshActor_C_IsNeedCheckSound_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,7 +195,7 @@ void ABP_S3BuildingStaticMeshActor_C::IsNeedCheckSound(bool* Need)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.UpdatePostProcess
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3BuildingStaticMeshActor_C::UpdatePostProcess()
 {
@@ -209,7 +212,7 @@ void ABP_S3BuildingStaticMeshActor_C::UpdatePostProcess()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.IsPlayerInVolume
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Event, NetMulticast, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           In                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -231,7 +234,7 @@ void ABP_S3BuildingStaticMeshActor_C::IsPlayerInVolume(bool* In)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.CheckSound
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3BuildingStaticMeshActor_C::CheckSound()
 {
@@ -240,6 +243,7 @@ void ABP_S3BuildingStaticMeshActor_C::CheckSound()
 	ABP_S3BuildingStaticMeshActor_C_CheckSound_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -248,11 +252,11 @@ void ABP_S3BuildingStaticMeshActor_C::CheckSound()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetBGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetClient, Const)
 // Parameters:
 // bool                           Play                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::SetBGM(bool Play)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_SetBGM(bool Play)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetBGM");
 
@@ -260,6 +264,7 @@ void ABP_S3BuildingStaticMeshActor_C::SetBGM(bool Play)
 	params.Play = Play;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,15 +273,16 @@ void ABP_S3BuildingStaticMeshActor_C::SetBGM(bool Play)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetShadowGain
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetClient, Const)
 
-void ABP_S3BuildingStaticMeshActor_C::SetShadowGain()
+void ABP_S3BuildingStaticMeshActor_C::STATIC_SetShadowGain()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetShadowGain");
 
 	ABP_S3BuildingStaticMeshActor_C_SetShadowGain_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,9 +291,9 @@ void ABP_S3BuildingStaticMeshActor_C::SetShadowGain()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetGain
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Event, Static, NetMulticast, MulticastDelegate, Delegate, NetClient, Const)
 
-void ABP_S3BuildingStaticMeshActor_C::SetGain()
+void ABP_S3BuildingStaticMeshActor_C::STATIC_SetGain()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetGain");
 
@@ -302,7 +308,7 @@ void ABP_S3BuildingStaticMeshActor_C::SetGain()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetGamma
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetClient, Const)
 
 void ABP_S3BuildingStaticMeshActor_C::SetGamma()
 {
@@ -319,11 +325,11 @@ void ABP_S3BuildingStaticMeshActor_C::SetGamma()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetPostProcessSetting
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Play                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::SetPostProcessSetting(bool Play)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_SetPostProcessSetting(bool Play)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.SetPostProcessSetting");
 
@@ -339,7 +345,7 @@ void ABP_S3BuildingStaticMeshActor_C::SetPostProcessSetting(bool Play)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.GetLeavePoint
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Event, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 Location                       (Parm, OutParm, IsPlainOldData)
 // struct FRotator                Rotation                       (Parm, OutParm, IsPlainOldData)
@@ -364,12 +370,12 @@ void ABP_S3BuildingStaticMeshActor_C::GetLeavePoint(struct FVector* Location, st
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.IsOverlappingActorByName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CharacterName                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsOverlap                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::IsOverlappingActorByName(const struct FName& CharacterName, bool* IsOverlap)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_IsOverlappingActorByName(const struct FName& CharacterName, bool* IsOverlap)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.IsOverlappingActorByName");
 
@@ -377,6 +383,7 @@ void ABP_S3BuildingStaticMeshActor_C::IsOverlappingActorByName(const struct FNam
 	params.CharacterName = CharacterName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,9 +395,9 @@ void ABP_S3BuildingStaticMeshActor_C::IsOverlappingActorByName(const struct FNam
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient, Const)
 
-void ABP_S3BuildingStaticMeshActor_C::UserConstructionScript()
+void ABP_S3BuildingStaticMeshActor_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.UserConstructionScript");
 
@@ -405,9 +412,9 @@ void ABP_S3BuildingStaticMeshActor_C::UserConstructionScript()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_S3BuildingStaticMeshActor_C::ReceiveBeginPlay()
+void ABP_S3BuildingStaticMeshActor_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ReceiveBeginPlay");
 
@@ -422,11 +429,11 @@ void ABP_S3BuildingStaticMeshActor_C::ReceiveBeginPlay()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::ReceiveTick(float DeltaSeconds)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ReceiveTick");
 
@@ -442,11 +449,11 @@ void ABP_S3BuildingStaticMeshActor_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ReceiveEndPlay");
 
@@ -462,7 +469,7 @@ void ABP_S3BuildingStaticMeshActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason>
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -492,14 +499,14 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox1_K2Node_ComponentBoundEve
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, NetClient, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_BndEvt__HouseBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox1_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -510,6 +517,7 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox1_K2Node_ComponentBoundEve
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -518,7 +526,7 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox1_K2Node_ComponentBoundEve
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox2_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -548,14 +556,14 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox2_K2Node_ComponentBoundEve
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_BndEvt__HouseBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox2_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -566,6 +574,7 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox2_K2Node_ComponentBoundEve
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -574,7 +583,7 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox2_K2Node_ComponentBoundEve
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox3_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -604,14 +613,14 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox3_K2Node_ComponentBoundEve
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox3_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox3_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_BndEvt__HouseBox3_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.BndEvt__HouseBox3_K2Node_ComponentBoundEvent_5_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -622,6 +631,7 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox3_K2Node_ComponentBoundEve
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -630,11 +640,11 @@ void ABP_S3BuildingStaticMeshActor_C::BndEvt__HouseBox3_K2Node_ComponentBoundEve
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ChangeGameTimeEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::ChangeGameTimeEvent(ES3DayTimeEvent EventType)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_ChangeGameTimeEvent(ES3DayTimeEvent EventType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ChangeGameTimeEvent");
 
@@ -650,7 +660,7 @@ void ABP_S3BuildingStaticMeshActor_C::ChangeGameTimeEvent(ES3DayTimeEvent EventT
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.OverlapPlayer
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -674,9 +684,9 @@ void ABP_S3BuildingStaticMeshActor_C::OverlapPlayer(class AActor* Actor, class U
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.StartCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_S3BuildingStaticMeshActor_C::StartCutscene()
+void ABP_S3BuildingStaticMeshActor_C::STATIC_StartCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.StartCutscene");
 
@@ -691,9 +701,9 @@ void ABP_S3BuildingStaticMeshActor_C::StartCutscene()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.EndCutscene
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_S3BuildingStaticMeshActor_C::EndCutscene()
+void ABP_S3BuildingStaticMeshActor_C::STATIC_EndCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.EndCutscene");
 
@@ -708,11 +718,11 @@ void ABP_S3BuildingStaticMeshActor_C::EndCutscene()
 
 
 // Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ExecuteUbergraph_BP_S3BuildingStaticMeshActor
-// (HasDefaults)
+// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BuildingStaticMeshActor_C::ExecuteUbergraph_BP_S3BuildingStaticMeshActor(int EntryPoint)
+void ABP_S3BuildingStaticMeshActor_C::STATIC_ExecuteUbergraph_BP_S3BuildingStaticMeshActor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.ExecuteUbergraph_BP_S3BuildingStaticMeshActor");
 

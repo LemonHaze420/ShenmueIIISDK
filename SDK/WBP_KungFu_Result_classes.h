@@ -43,14 +43,14 @@ public:
 
 
 	class UBPW_UI_GeneralWindow_Button_C* GetNextButton();
-	bool NextScreen();
-	void HideNextButton();
+	bool STATIC_NextScreen();
+	void STATIC_HideNextButton();
 	void SetLocalizeText();
-	void ShowNextButton();
-	void SetSceneCaptureImage(class UMaterialInterface* Material);
+	void STATIC_ShowNextButton();
+	void STATIC_SetSceneCaptureImage(class UMaterialInterface* Material);
 	void SetLevelUpData(const struct FST_SparringResultLevelUpData& Attack, const struct FST_SparringResultLevelUpData& Vitality, const struct FST_SparringResultLevelUpData& Player);
 	void SetLevelUpTextVisible(bool Visibility);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void Construct();
 	void BndEvt__wgt_SkillTotals_K2Node_ComponentBoundEvent_0_OnLevelUpAnimationDone__DelegateSignature();
 	void DelayCallOnAnimFinished();

@@ -30,10 +30,10 @@ public:
 
 
 	void CSEvent_Enable(const struct FName& CutsceneName, bool UseFade);
-	void CallCS_Event(const struct FName& EventName, bool End);
-	void OnStartCutScene();
-	void OnEndCutscene();
-	void ExecuteUbergraph_BP_MainFlowCScontrol(int EntryPoint);
+	void STATIC_CallCS_Event(const struct FName& EventName, bool End);
+	void STATIC_OnStartCutScene();
+	void STATIC_OnEndCutscene();
+	void STATIC_ExecuteUbergraph_BP_MainFlowCScontrol(int EntryPoint);
 };
 
 

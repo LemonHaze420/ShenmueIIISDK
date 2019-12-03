@@ -52,12 +52,12 @@ public:
 
 	bool IsLowEnergy();
 	void SelectLowEnergyMessageList(TArray<struct FName>* Array);
-	void TryStartEatEvent(bool* Starting);
+	void STATIC_TryStartEatEvent(bool* Starting);
 	void TryMessageLowEnergyStatus();
 	void DrainEnergyByRunningTick(float DeltaSeconds);
-	void RegerateEnergy(float DeltaSeconds);
+	void STATIC_RegerateEnergy(float DeltaSeconds);
 	void DrainEnergyByRunning();
-	void Setup(class AS3GameTimeManager* TimeMan);
+	void STATIC_Setup(class AS3GameTimeManager* TimeMan);
 	void DrainEnergyByTime();
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
@@ -69,7 +69,7 @@ public:
 	void ReenableLowEnergyMessage();
 	void StartMessageReenableTimer();
 	void DrainRunEnergy();
-	void ExecuteUbergraph_BP_S3EnergyManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_S3EnergyManager(int EntryPoint);
 };
 
 

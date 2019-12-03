@@ -47,12 +47,12 @@ public:
 	void UpdateAnim();
 	void SetResultCamera();
 	void ResetCamera();
-	void DeleteRodMeshData();
-	void SetRodMeshData(class USkeletalMesh* MeshData, class UMaterialInstance* Material, bool IsBacker);
-	void UserConstructionScript();
-	void Set_Active(bool is_active);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
+	void STATIC_DeleteRodMeshData();
+	void STATIC_SetRodMeshData(class USkeletalMesh* MeshData, class UMaterialInstance* Material, bool IsBacker);
+	void STATIC_UserConstructionScript();
+	void STATIC_Set_Active(bool is_active);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_Fishing_Ryo(int EntryPoint);
 };
 

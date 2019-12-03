@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.ShowUI
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_GambleAreaTrigger_C::ShowUI()
+void ABP_GambleAreaTrigger_C::STATIC_ShowUI()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.ShowUI");
 
 	ABP_GambleAreaTrigger_C_ShowUI_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_GambleAreaTrigger_C::ShowUI()
 
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.HideUI
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_GambleAreaTrigger_C::HideUI()
 {
@@ -40,6 +41,7 @@ void ABP_GambleAreaTrigger_C::HideUI()
 	ABP_GambleAreaTrigger_C_HideUI_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void ABP_GambleAreaTrigger_C::HideUI()
 
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_GambleAreaTrigger_C::UserConstructionScript()
 {
@@ -57,6 +59,7 @@ void ABP_GambleAreaTrigger_C::UserConstructionScript()
 	ABP_GambleAreaTrigger_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +68,7 @@ void ABP_GambleAreaTrigger_C::UserConstructionScript()
 
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Native, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_GambleAreaTrigger_C::ReceiveBeginPlay()
 {
@@ -74,6 +77,7 @@ void ABP_GambleAreaTrigger_C::ReceiveBeginPlay()
 	ABP_GambleAreaTrigger_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,7 +86,7 @@ void ABP_GambleAreaTrigger_C::ReceiveBeginPlay()
 
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -112,7 +116,7 @@ void ABP_GambleAreaTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEv
 
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Native, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -130,6 +134,7 @@ void ABP_GambleAreaTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEv
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,11 +143,11 @@ void ABP_GambleAreaTrigger_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEv
 
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Event, NetResponse, Static, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GambleAreaTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_GambleAreaTrigger_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.ReceiveEndPlay");
 
@@ -158,11 +163,11 @@ void ABP_GambleAreaTrigger_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.ExecuteUbergraph_BP_GambleAreaTrigger
-// (HasDefaults)
+// (Exec, Native, NetResponse, Static, NetMulticast, Public, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GambleAreaTrigger_C::ExecuteUbergraph_BP_GambleAreaTrigger(int EntryPoint)
+void ABP_GambleAreaTrigger_C::STATIC_ExecuteUbergraph_BP_GambleAreaTrigger(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GambleAreaTrigger.BP_GambleAreaTrigger_C.ExecuteUbergraph_BP_GambleAreaTrigger");
 
@@ -170,6 +175,7 @@ void ABP_GambleAreaTrigger_C::ExecuteUbergraph_BP_GambleAreaTrigger(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

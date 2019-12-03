@@ -38,19 +38,19 @@ public:
 	}
 
 
-	float GetFadeTime();
+	float STATIC_GetFadeTime();
 	void GetCharFadeComponent(class AActor* Target, bool* IsValid, class UBTL_MeshFaderComponent** MeshFader);
-	void SetFadeTime(float FadeTime);
+	void STATIC_SetFadeTime(float FadeTime);
 	void AddIgnoreActor(class AActor* Actor);
 	void CanEndOverlapEvent(bool* CAN);
 	void SetVisibleControlRadius(float NewRadius);
-	void SetEnbledVisibleControl(bool Enabled);
-	void ShowNPC(class AActor* Actor);
+	void STATIC_SetEnbledVisibleControl(bool Enabled);
+	void STATIC_ShowNPC(class AActor* Actor);
 	void HideNPC(class AActor* Actor, bool* Hide);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void BndEvt__VisibleControlArea_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ExecuteUbergraph_BP_ActorVisibleControl(int EntryPoint);
 };

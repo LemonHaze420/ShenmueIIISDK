@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.GetNextButton
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetResponse, NetServer)
 // Parameters:
 // class UBPW_UI_GeneralWindow_Button_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -35,11 +35,11 @@ class UBPW_UI_GeneralWindow_Button_C* UWBP_KungFu_Result_C::GetNextButton()
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.NextScreen
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWBP_KungFu_Result_C::NextScreen()
+bool UWBP_KungFu_Result_C::STATIC_NextScreen()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Result.WBP_KungFu_Result_C.NextScreen");
 
@@ -56,9 +56,9 @@ bool UWBP_KungFu_Result_C::NextScreen()
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.HideNextButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_KungFu_Result_C::HideNextButton()
+void UWBP_KungFu_Result_C::STATIC_HideNextButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Result.WBP_KungFu_Result_C.HideNextButton");
 
@@ -73,7 +73,7 @@ void UWBP_KungFu_Result_C::HideNextButton()
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.SetLocalizeText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, NetClient, BlueprintPure)
 
 void UWBP_KungFu_Result_C::SetLocalizeText()
 {
@@ -90,9 +90,9 @@ void UWBP_KungFu_Result_C::SetLocalizeText()
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.ShowNextButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_KungFu_Result_C::ShowNextButton()
+void UWBP_KungFu_Result_C::STATIC_ShowNextButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Result.WBP_KungFu_Result_C.ShowNextButton");
 
@@ -107,11 +107,11 @@ void UWBP_KungFu_Result_C::ShowNextButton()
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.SetSceneCaptureImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UMaterialInterface*      Material                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Result_C::SetSceneCaptureImage(class UMaterialInterface* Material)
+void UWBP_KungFu_Result_C::STATIC_SetSceneCaptureImage(class UMaterialInterface* Material)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Result.WBP_KungFu_Result_C.SetSceneCaptureImage");
 
@@ -127,7 +127,7 @@ void UWBP_KungFu_Result_C::SetSceneCaptureImage(class UMaterialInterface* Materi
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.SetLevelUpData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FST_SparringResultLevelUpData Attack                         (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_SparringResultLevelUpData Vitality                       (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -151,7 +151,7 @@ void UWBP_KungFu_Result_C::SetLevelUpData(const struct FST_SparringResultLevelUp
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.SetLevelUpTextVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Visibility                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -163,6 +163,7 @@ void UWBP_KungFu_Result_C::SetLevelUpTextVisible(bool Visibility)
 	params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,11 +172,11 @@ void UWBP_KungFu_Result_C::SetLevelUpTextVisible(bool Visibility)
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_KungFu_Result_C::PreConstruct(bool IsDesignTime)
+void UWBP_KungFu_Result_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_KungFu_Result.WBP_KungFu_Result_C.PreConstruct");
 
@@ -191,7 +192,7 @@ void UWBP_KungFu_Result_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, NetResponse, NetServer)
 
 void UWBP_KungFu_Result_C::Construct()
 {
@@ -208,7 +209,7 @@ void UWBP_KungFu_Result_C::Construct()
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.BndEvt__wgt_SkillTotals_K2Node_ComponentBoundEvent_0_OnLevelUpAnimationDone__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetResponse, NetServer)
 
 void UWBP_KungFu_Result_C::BndEvt__wgt_SkillTotals_K2Node_ComponentBoundEvent_0_OnLevelUpAnimationDone__DelegateSignature()
 {
@@ -225,7 +226,7 @@ void UWBP_KungFu_Result_C::BndEvt__wgt_SkillTotals_K2Node_ComponentBoundEvent_0_
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.DelayCallOnAnimFinished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, NetServer)
 
 void UWBP_KungFu_Result_C::DelayCallOnAnimFinished()
 {
@@ -242,7 +243,7 @@ void UWBP_KungFu_Result_C::DelayCallOnAnimFinished()
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.ExecuteUbergraph_WBP_KungFu_Result
-// ()
+// (Exec, Native, Event, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -254,6 +255,7 @@ void UWBP_KungFu_Result_C::ExecuteUbergraph_WBP_KungFu_Result(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -262,7 +264,7 @@ void UWBP_KungFu_Result_C::ExecuteUbergraph_WBP_KungFu_Result(int EntryPoint)
 
 
 // Function WBP_KungFu_Result.WBP_KungFu_Result_C.OnAnimFinished__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UWBP_KungFu_Result_C::OnAnimFinished__DelegateSignature()
 {

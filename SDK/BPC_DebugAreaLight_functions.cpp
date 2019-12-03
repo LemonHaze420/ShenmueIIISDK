@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_DebugAreaLight.BPC_DebugAreaLight_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UBPC_DebugAreaLight_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,15 +35,16 @@ void UBPC_DebugAreaLight_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_DebugAreaLight.BPC_DebugAreaLight_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBPC_DebugAreaLight_C::ReceiveBeginPlay()
+void UBPC_DebugAreaLight_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DebugAreaLight.BPC_DebugAreaLight_C.ReceiveBeginPlay");
 
 	UBPC_DebugAreaLight_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,11 +53,11 @@ void UBPC_DebugAreaLight_C::ReceiveBeginPlay()
 
 
 // Function BPC_DebugAreaLight.BPC_DebugAreaLight_C.ExecuteUbergraph_BPC_DebugAreaLight
-// (HasDefaults)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DebugAreaLight_C::ExecuteUbergraph_BPC_DebugAreaLight(int EntryPoint)
+void UBPC_DebugAreaLight_C::STATIC_ExecuteUbergraph_BPC_DebugAreaLight(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DebugAreaLight.BPC_DebugAreaLight_C.ExecuteUbergraph_BPC_DebugAreaLight");
 

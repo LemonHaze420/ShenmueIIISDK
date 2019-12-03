@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_DebugMenuSub.BPI_DebugMenuSub_C.SetInitialFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void UBPI_DebugMenuSub_C::SetInitialFocus()
+void UBPI_DebugMenuSub_C::STATIC_SetInitialFocus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_DebugMenuSub.BPI_DebugMenuSub_C.SetInitialFocus");
 
@@ -31,15 +31,16 @@ void UBPI_DebugMenuSub_C::SetInitialFocus()
 
 
 // Function BPI_DebugMenuSub.BPI_DebugMenuSub_C.BuildMenu
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void UBPI_DebugMenuSub_C::BuildMenu()
+void UBPI_DebugMenuSub_C::STATIC_BuildMenu()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_DebugMenuSub.BPI_DebugMenuSub_C.BuildMenu");
 
 	UBPI_DebugMenuSub_C_BuildMenu_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

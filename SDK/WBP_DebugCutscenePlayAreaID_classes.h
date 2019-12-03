@@ -28,7 +28,7 @@ public:
 
 
 	void UpdateText();
-	void SetCutsceneID(const struct FName& InCutsceneID);
+	void STATIC_SetCutsceneID(const struct FName& InCutsceneID);
 };
 
 

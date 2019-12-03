@@ -27,7 +27,7 @@ public:
 	}
 
 
-	bool EnableDefaultEndConditions();
+	bool STATIC_EnableDefaultEndConditions();
 	void SetBattleManager(class ABP_BattleManagerBase_C* Manager);
 	void Update(float DeltaTime);
 	void StartBattle();

@@ -12,6 +12,16 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
+// Enum DatasmithContent.EDatasmithImportHierarchy
+enum class EDatasmithImportHierarchy : uint8_t
+{
+	EDatasmithImportHierarchy__UseMultipleActors = 0,
+	EDatasmithImportHierarchy__UseSingleActor = 1,
+	EDatasmithImportHierarchy__UseOneBlueprint = 2,
+	EDatasmithImportHierarchy__EDatasmithImportHierarchy_MAX = 3
+};
+
+
 // Enum DatasmithContent.EDatasmithAreaLightActorShape
 enum class EDatasmithAreaLightActorShape : uint8_t
 {
@@ -20,16 +30,6 @@ enum class EDatasmithAreaLightActorShape : uint8_t
 	EDatasmithAreaLightActorShape__Sphere = 2,
 	EDatasmithAreaLightActorShape__Cylinder = 3,
 	EDatasmithAreaLightActorShape__EDatasmithAreaLightActorShape_MAX = 4
-};
-
-
-// Enum DatasmithContent.EDatasmithImportHierarchy
-enum class EDatasmithImportHierarchy : uint8_t
-{
-	EDatasmithImportHierarchy__UseMultipleActors = 0,
-	EDatasmithImportHierarchy__UseSingleActor = 1,
-	EDatasmithImportHierarchy__UseOneBlueprint = 2,
-	EDatasmithImportHierarchy__EDatasmithImportHierarchy_MAX = 3
 };
 
 
@@ -54,19 +54,6 @@ enum class EDatasmithImportLightmapMax : uint8_t
 	EDatasmithImportLightmapMax__LIGHTMAP05 = 5,
 	EDatasmithImportLightmapMax__LIGHTMAP06 = 6,
 	EDatasmithImportLightmapMax__LIGHTMAP_MAX = 7
-};
-
-
-// Enum DatasmithContent.EDatasmithImportLightmapMin
-enum class EDatasmithImportLightmapMin : uint8_t
-{
-	EDatasmithImportLightmapMin__LIGHTMAP = 0,
-	EDatasmithImportLightmapMin__LIGHTMAP01 = 1,
-	EDatasmithImportLightmapMin__LIGHTMAP02 = 2,
-	EDatasmithImportLightmapMin__LIGHTMAP03 = 3,
-	EDatasmithImportLightmapMin__LIGHTMAP04 = 4,
-	EDatasmithImportLightmapMin__LIGHTMAP05 = 5,
-	EDatasmithImportLightmapMin__LIGHTMAP_MAX = 6
 };
 
 
@@ -107,6 +94,19 @@ enum class EDatasmithImportSearchPackagePolicy : uint8_t
 	EDatasmithImportSearchPackagePolicy__Current = 0,
 	EDatasmithImportSearchPackagePolicy__All = 1,
 	EDatasmithImportSearchPackagePolicy__EDatasmithImportSearchPackagePolicy_MAX = 2
+};
+
+
+// Enum DatasmithContent.EDatasmithImportLightmapMin
+enum class EDatasmithImportLightmapMin : uint8_t
+{
+	EDatasmithImportLightmapMin__LIGHTMAP = 0,
+	EDatasmithImportLightmapMin__LIGHTMAP01 = 1,
+	EDatasmithImportLightmapMin__LIGHTMAP02 = 2,
+	EDatasmithImportLightmapMin__LIGHTMAP03 = 3,
+	EDatasmithImportLightmapMin__LIGHTMAP04 = 4,
+	EDatasmithImportLightmapMin__LIGHTMAP05 = 5,
+	EDatasmithImportLightmapMin__LIGHTMAP_MAX = 6
 };
 
 

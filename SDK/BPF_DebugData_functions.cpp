@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_DebugData.BPF_DebugData_C.GetSubmissionConfig
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3SubmissionConfig*     Config                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DebugData_C::STATIC_GetSubmissionConfig(class UObject* __WorldContext, class US3SubmissionConfig** Config)
+void UBPF_DebugData_C::GetSubmissionConfig(class UObject* __WorldContext, class US3SubmissionConfig** Config)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DebugData.BPF_DebugData_C.GetSubmissionConfig");
 
@@ -38,7 +38,7 @@ void UBPF_DebugData_C::STATIC_GetSubmissionConfig(class UObject* __WorldContext,
 
 
 // Function BPF_DebugData.BPF_DebugData_C.IsDebugStepInRange
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InRange                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -51,6 +51,7 @@ void UBPF_DebugData_C::STATIC_IsDebugStepInRange(class UObject* __WorldContext, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +63,7 @@ void UBPF_DebugData_C::STATIC_IsDebugStepInRange(class UObject* __WorldContext, 
 
 
 // Function BPF_DebugData.BPF_DebugData_C.IsDebugDisableCutscene
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Disable                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -75,6 +76,7 @@ void UBPF_DebugData_C::STATIC_IsDebugDisableCutscene(class UObject* __WorldConte
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,12 +88,12 @@ void UBPF_DebugData_C::STATIC_IsDebugDisableCutscene(class UObject* __WorldConte
 
 
 // Function BPF_DebugData.BPF_DebugData_C.IsDebugDisableMainFlow
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Disable                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DebugData_C::STATIC_IsDebugDisableMainFlow(class UObject* __WorldContext, bool* Disable)
+void UBPF_DebugData_C::IsDebugDisableMainFlow(class UObject* __WorldContext, bool* Disable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DebugData.BPF_DebugData_C.IsDebugDisableMainFlow");
 
@@ -110,7 +112,7 @@ void UBPF_DebugData_C::STATIC_IsDebugDisableMainFlow(class UObject* __WorldConte
 
 
 // Function BPF_DebugData.BPF_DebugData_C.IsDebugDisableNPC
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Disable                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -123,6 +125,7 @@ void UBPF_DebugData_C::STATIC_IsDebugDisableNPC(class UObject* __WorldContext, b
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,12 +137,12 @@ void UBPF_DebugData_C::STATIC_IsDebugDisableNPC(class UObject* __WorldContext, b
 
 
 // Function BPF_DebugData.BPF_DebugData_C.GetDebugData
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3DebugDataAsset*       Debug_Data_Asset               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DebugData_C::STATIC_GetDebugData(class UObject* __WorldContext, class US3DebugDataAsset** Debug_Data_Asset)
+void UBPF_DebugData_C::GetDebugData(class UObject* __WorldContext, class US3DebugDataAsset** Debug_Data_Asset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DebugData.BPF_DebugData_C.GetDebugData");
 

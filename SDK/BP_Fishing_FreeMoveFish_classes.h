@@ -54,19 +54,19 @@ public:
 
 	void SetTargetLocation(const struct FVector& TargetLocation, struct FVector* Output_Get);
 	void MoveToTaget(bool InputPin);
-	void IsNeedTargetUpdate(bool* Need);
+	void STATIC_IsNeedTargetUpdate(bool* Need);
 	void UpdateTargetLocation(float AdditiveAngle);
-	void SetBaseLocation(const struct FVector& BaseLocation);
-	void Initialize();
-	void UpdateMove(bool ForceReplace);
+	void STATIC_SetBaseLocation(const struct FVector& BaseLocation);
+	void STATIC_Initialize();
+	void STATIC_UpdateMove(bool ForceReplace);
 	void UserConstructionScript();
-	void UpdateFadeTimeLine__FinishedFunc();
-	void UpdateFadeTimeLine__UpdateFunc();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
+	void STATIC_UpdateFadeTimeLine__FinishedFunc();
+	void STATIC_UpdateFadeTimeLine__UpdateFunc();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
 	void BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void DestroyReady();
-	void InitializeFadeMaterial();
+	void STATIC_DestroyReady();
+	void STATIC_InitializeFadeMaterial();
 	void ExecuteUbergraph_BP_Fishing_FreeMoveFish(int EntryPoint);
 };
 

@@ -32,16 +32,16 @@ public:
 	}
 
 
-	bool DoesPlayerHaveFood();
+	bool STATIC_DoesPlayerHaveFood();
 	bool StillRunning();
-	void TickTransitions(float DeltaTime);
+	void STATIC_TickTransitions(float DeltaTime);
 	bool IsLowHP();
 	void SetGlobalHPResultFlag(bool bIsFull);
 	void UpdateGlobalHPResultFlag();
-	void CollectDependencies();
+	void STATIC_CollectDependencies();
 	void DestroyUI();
-	bool SpawnUI(class UClass* Class);
-	bool ShouldShowMeter();
+	bool STATIC_SpawnUI(class UClass* Class);
+	bool STATIC_ShouldShowMeter();
 	void OnLoaded_6A9A1405492543F002206D8B74ACA2FA(class UClass* Loaded);
 	void Activate();
 	void Finalize();

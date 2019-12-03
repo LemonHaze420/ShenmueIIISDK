@@ -30,14 +30,14 @@ public:
 	}
 
 
-	void GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor);
-	void MoveStateEnter(bool* bDummy);
+	void STATIC_GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor);
+	void STATIC_MoveStateEnter(bool* bDummy);
 	void StateEnter(float Delta, bool* bProcessing);
-	void StateUpdate(float Delta, bool* bDummy);
+	void STATIC_StateUpdate(float Delta, bool* bDummy);
 	void UpdateTransitions(float DeltaSeconds);
-	void CancelPath();
-	void FinishPath();
-	void ExecuteUbergraph_BP_State_Follow_FollowLeader(int EntryPoint);
+	void STATIC_CancelPath();
+	void STATIC_FinishPath();
+	void STATIC_ExecuteUbergraph_BP_State_Follow_FollowLeader(int EntryPoint);
 };
 
 

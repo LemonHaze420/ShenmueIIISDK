@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_BattleResult.BP_TalkProcess_BattleResult_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UBP_TalkProcess_BattleResult_C::Activate()
+void UBP_TalkProcess_BattleResult_C::STATIC_Activate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_BattleResult.BP_TalkProcess_BattleResult_C.Activate");
 
 	UBP_TalkProcess_BattleResult_C_Activate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBP_TalkProcess_BattleResult_C::Activate()
 
 
 // Function BP_TalkProcess_BattleResult.BP_TalkProcess_BattleResult_C.ExecuteUbergraph_BP_TalkProcess_BattleResult
-// ()
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

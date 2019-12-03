@@ -28,13 +28,13 @@ public:
 	}
 
 
-	void IsTargetComponentInBuilding(class UPrimitiveComponent* Primitive, bool UsePoint, class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn);
-	void GetBuildingByCharaName(const struct FName& CharaName, class ABP_S3BuildingStaticMeshActor_C** Building);
+	void STATIC_IsTargetComponentInBuilding(class UPrimitiveComponent* Primitive, bool UsePoint, class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn);
+	void STATIC_GetBuildingByCharaName(const struct FName& CharaName, class ABP_S3BuildingStaticMeshActor_C** Building);
 	void GetLeavePoint(class AActor* Actor, bool* InBuilding, struct FVector* Location, struct FRotator* Rotation);
-	void GetBuildingByName(const struct FString& BuildingName, class ABP_S3BuildingStaticMeshActor_C** Building);
+	void STATIC_GetBuildingByName(const struct FString& BuildingName, class ABP_S3BuildingStaticMeshActor_C** Building);
 	void IsPlayerInBuilding(class ABP_S3BuildingStaticMeshActor_C** Building, bool* isIn);
-	void SetBuilding(class ABP_S3BuildingStaticMeshActor_C* Building, bool Remove);
-	void UserConstructionScript();
+	void STATIC_SetBuilding(class ABP_S3BuildingStaticMeshActor_C* Building, bool Remove);
+	void STATIC_UserConstructionScript();
 };
 
 

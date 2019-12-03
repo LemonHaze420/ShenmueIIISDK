@@ -29,7 +29,7 @@ public:
 
 
 	bool IsEnabledForceTimeOfDay();
-	float GetForceTimeOfDayValue();
+	float STATIC_GetForceTimeOfDayValue();
 	void UserConstructionScript();
 };
 

@@ -14,44 +14,6 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function FiniteStateMachine.FiniteStateBase.StateUpdate
-struct UFiniteStateBase_StateUpdate_Params
-{
-	float                                              Delta;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bDummy;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FiniteStateMachine.FiniteStateBase.StateOnSuspend
-struct UFiniteStateBase_StateOnSuspend_Params
-{
-	bool                                               bDummy;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FiniteStateMachine.FiniteStateBase.StateOnResume
-struct UFiniteStateBase_StateOnResume_Params
-{
-	bool                                               bDummy;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FiniteStateMachine.FiniteStateBase.StateOnInitialize
-struct UFiniteStateBase_StateOnInitialize_Params
-{
-};
-
-// Function FiniteStateMachine.FiniteStateBase.StateExit
-struct UFiniteStateBase_StateExit_Params
-{
-	float                                              Delta;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bProcessing;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function FiniteStateMachine.FiniteStateBase.StateEnter
-struct UFiniteStateBase_StateEnter_Params
-{
-	float                                              Delta;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bProcessing;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-};
-
 // Function FiniteStateMachine.FiniteStateMachineComponent.UpdateState
 struct UFiniteStateMachineComponent_UpdateState_Params
 {
@@ -108,6 +70,44 @@ struct UFiniteStateMachineComponent_ChangeStateLazy_Params
 struct UFiniteStateMachineComponent_ChangeState_Params
 {
 	struct FName                                       NewStateName;                                             // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FiniteStateMachine.FiniteStateBase.StateUpdate
+struct UFiniteStateBase_StateUpdate_Params
+{
+	float                                              Delta;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bDummy;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FiniteStateMachine.FiniteStateBase.StateOnSuspend
+struct UFiniteStateBase_StateOnSuspend_Params
+{
+	bool                                               bDummy;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FiniteStateMachine.FiniteStateBase.StateOnResume
+struct UFiniteStateBase_StateOnResume_Params
+{
+	bool                                               bDummy;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FiniteStateMachine.FiniteStateBase.StateOnInitialize
+struct UFiniteStateBase_StateOnInitialize_Params
+{
+};
+
+// Function FiniteStateMachine.FiniteStateBase.StateExit
+struct UFiniteStateBase_StateExit_Params
+{
+	float                                              Delta;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bProcessing;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function FiniteStateMachine.FiniteStateBase.StateEnter
+struct UFiniteStateBase_StateEnter_Params
+{
+	float                                              Delta;                                                    // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bProcessing;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 }

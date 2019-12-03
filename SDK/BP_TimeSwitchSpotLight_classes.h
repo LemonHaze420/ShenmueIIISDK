@@ -38,15 +38,15 @@ public:
 
 
 	void isLightOnTimezone(bool* Light);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void Timeline__FinishedFunc();
 	void Timeline__UpdateFunc();
 	void ReceiveBeginPlay();
-	void DayTimeEvent(ES3DayTimeEvent EventType);
-	void ShopTimeEvent(ES3ShopTimeEvent EventType);
-	void catch_onTimeJump(float jumpTime);
+	void STATIC_DayTimeEvent(ES3DayTimeEvent EventType);
+	void STATIC_ShopTimeEvent(ES3ShopTimeEvent EventType);
+	void STATIC_catch_onTimeJump(float jumpTime);
 	void ToggleLight();
-	void OnSetLightEnable(bool bNewLightEnable);
+	void STATIC_OnSetLightEnable(bool bNewLightEnable);
 	void OnSetLightCastShadow(bool bNewLightCastShadow);
 	void ExecuteUbergraph_BP_TimeSwitchSpotLight(int EntryPoint);
 };

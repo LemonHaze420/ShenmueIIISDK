@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_ChairDebug.BPC_ChairDebug_C.AppendBaseText
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // struct FString                 String                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBPC_ChairDebug_C::AppendBaseText(const struct FString& String)
+struct FString UBPC_ChairDebug_C::STATIC_AppendBaseText(const struct FString& String)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ChairDebug.BPC_ChairDebug_C.AppendBaseText");
 
@@ -37,15 +37,16 @@ struct FString UBPC_ChairDebug_C::AppendBaseText(const struct FString& String)
 
 
 // Function BPC_ChairDebug.BPC_ChairDebug_C.DrawDebugText
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 
-void UBPC_ChairDebug_C::DrawDebugText()
+void UBPC_ChairDebug_C::STATIC_DrawDebugText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ChairDebug.BPC_ChairDebug_C.DrawDebugText");
 
 	UBPC_ChairDebug_C_DrawDebugText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +55,7 @@ void UBPC_ChairDebug_C::DrawDebugText()
 
 
 // Function BPC_ChairDebug.BPC_ChairDebug_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void UBPC_ChairDebug_C::ReceiveBeginPlay()
 {
@@ -63,6 +64,7 @@ void UBPC_ChairDebug_C::ReceiveBeginPlay()
 	UBPC_ChairDebug_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +73,7 @@ void UBPC_ChairDebug_C::ReceiveBeginPlay()
 
 
 // Function BPC_ChairDebug.BPC_ChairDebug_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -91,11 +93,11 @@ void UBPC_ChairDebug_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_ChairDebug.BPC_ChairDebug_C.ExecuteUbergraph_BPC_ChairDebug
-// ()
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ChairDebug_C::ExecuteUbergraph_BPC_ChairDebug(int EntryPoint)
+void UBPC_ChairDebug_C::STATIC_ExecuteUbergraph_BPC_ChairDebug(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ChairDebug.BPC_ChairDebug_C.ExecuteUbergraph_BPC_ChairDebug");
 

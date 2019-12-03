@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.SetCNWidgetTexture
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MiniGame_UE_de_Yattari_C::SetCNWidgetTexture()
 {
@@ -31,11 +31,11 @@ void ABP_MiniGame_UE_de_Yattari_C::SetCNWidgetTexture()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.InitAsyncLoad
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UE_de_Yattari_C::InitAsyncLoad(bool* dummy)
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_InitAsyncLoad(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.InitAsyncLoad");
 
@@ -53,7 +53,7 @@ void ABP_MiniGame_UE_de_Yattari_C::InitAsyncLoad(bool* dummy)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.GetDiceTwoNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            SumNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Num1                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -67,6 +67,7 @@ void ABP_MiniGame_UE_de_Yattari_C::GetDiceTwoNum(int SumNum, int* Num1, int* Num
 	params.SumNum = SumNum;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +81,7 @@ void ABP_MiniGame_UE_de_Yattari_C::GetDiceTwoNum(int SumNum, int* Num1, int* Num
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -91,6 +92,7 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_UE_de_Yattari_C::GetDetectActio
 	ABP_MiniGame_UE_de_Yattari_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -101,11 +103,11 @@ TArray<struct FS3DetectActionParam> ABP_MiniGame_UE_de_Yattari_C::GetDetectActio
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.GetClothMeshComponent
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UMeshComponent* ABP_MiniGame_UE_de_Yattari_C::GetClothMeshComponent()
+class UMeshComponent* ABP_MiniGame_UE_de_Yattari_C::STATIC_GetClothMeshComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.GetClothMeshComponent");
 
@@ -122,7 +124,7 @@ class UMeshComponent* ABP_MiniGame_UE_de_Yattari_C::GetClothMeshComponent()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.DecideDiceNum
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Protected, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           RyoWin                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -142,9 +144,9 @@ void ABP_MiniGame_UE_de_Yattari_C::DecideDiceNum(bool RyoWin)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.SetBoardInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_MiniGame_UE_de_Yattari_C::SetBoardInfo()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_SetBoardInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.SetBoardInfo");
 
@@ -159,11 +161,11 @@ void ABP_MiniGame_UE_de_Yattari_C::SetBoardInfo()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.SetEnableAroundCollision
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UE_de_Yattari_C::SetEnableAroundCollision(bool Enable)
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_SetEnableAroundCollision(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.SetEnableAroundCollision");
 
@@ -179,7 +181,7 @@ void ABP_MiniGame_UE_de_Yattari_C::SetEnableAroundCollision(bool Enable)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.GetDiceNumRandom
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Min                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -205,7 +207,7 @@ void ABP_MiniGame_UE_de_Yattari_C::GetDiceNumRandom(int Min, int Max, int* DiceN
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.SpawnInputControlActor
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -226,7 +228,7 @@ class ABP_MiniGameInputBase_C* ABP_MiniGame_UE_de_Yattari_C::SpawnInputControlAc
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ThrowDiceFromTotalNum
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            TotalNum                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -246,7 +248,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ThrowDiceFromTotalNum(int TotalNum)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ResetCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_MiniGame_UE_de_Yattari_C::ResetCamera()
 {
@@ -263,7 +265,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ResetCamera()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.CameraUpdate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -275,6 +277,7 @@ void ABP_MiniGame_UE_de_Yattari_C::CameraUpdate(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -283,11 +286,11 @@ void ABP_MiniGame_UE_de_Yattari_C::CameraUpdate(float DeltaSeconds)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.GetDiceNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Static, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            DiceNum                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UE_de_Yattari_C::GetDiceNum(int* DiceNum)
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_GetDiceNum(int* DiceNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.GetDiceNum");
 
@@ -305,7 +308,7 @@ void ABP_MiniGame_UE_de_Yattari_C::GetDiceNum(int* DiceNum)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.DestroyDice
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MiniGame_UE_de_Yattari_C::DestroyDice()
 {
@@ -314,6 +317,7 @@ void ABP_MiniGame_UE_de_Yattari_C::DestroyDice()
 	ABP_MiniGame_UE_de_Yattari_C_DestroyDice_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -322,11 +326,11 @@ void ABP_MiniGame_UE_de_Yattari_C::DestroyDice()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.IsStopDice
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // bool                           Stop                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UE_de_Yattari_C::IsStopDice(bool* Stop)
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_IsStopDice(bool* Stop)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.IsStopDice");
 
@@ -344,9 +348,9 @@ void ABP_MiniGame_UE_de_Yattari_C::IsStopDice(bool* Stop)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::UserConstructionScript()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.UserConstructionScript");
 
@@ -361,7 +365,7 @@ void ABP_MiniGame_UE_de_Yattari_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.WinMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::WinMiniGame()
 {
@@ -378,7 +382,7 @@ void ABP_MiniGame_UE_de_Yattari_C::WinMiniGame()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.LoseMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::LoseMiniGame()
 {
@@ -387,6 +391,7 @@ void ABP_MiniGame_UE_de_Yattari_C::LoseMiniGame()
 	ABP_MiniGame_UE_de_Yattari_C_LoseMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -395,7 +400,7 @@ void ABP_MiniGame_UE_de_Yattari_C::LoseMiniGame()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.DrawMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::DrawMiniGame()
 {
@@ -404,6 +409,7 @@ void ABP_MiniGame_UE_de_Yattari_C::DrawMiniGame()
 	ABP_MiniGame_UE_de_Yattari_C_DrawMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -412,7 +418,7 @@ void ABP_MiniGame_UE_de_Yattari_C::DrawMiniGame()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::StartMiniGame()
 {
@@ -421,6 +427,7 @@ void ABP_MiniGame_UE_de_Yattari_C::StartMiniGame()
 	ABP_MiniGame_UE_de_Yattari_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -429,7 +436,7 @@ void ABP_MiniGame_UE_de_Yattari_C::StartMiniGame()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::EndMiniGame()
 {
@@ -438,6 +445,7 @@ void ABP_MiniGame_UE_de_Yattari_C::EndMiniGame()
 	ABP_MiniGame_UE_de_Yattari_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -446,7 +454,7 @@ void ABP_MiniGame_UE_de_Yattari_C::EndMiniGame()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.FinalizeTalk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::FinalizeTalk()
 {
@@ -455,6 +463,7 @@ void ABP_MiniGame_UE_de_Yattari_C::FinalizeTalk()
 	ABP_MiniGame_UE_de_Yattari_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -463,9 +472,9 @@ void ABP_MiniGame_UE_de_Yattari_C::FinalizeTalk()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.OnFinishedFade
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::OnFinishedFade()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_OnFinishedFade()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.OnFinishedFade");
 
@@ -480,7 +489,7 @@ void ABP_MiniGame_UE_de_Yattari_C::OnFinishedFade()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::ReceiveBeginPlay()
 {
@@ -489,6 +498,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ReceiveBeginPlay()
 	ABP_MiniGame_UE_de_Yattari_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -497,7 +507,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Native, Event, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -509,6 +519,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -517,9 +528,9 @@ void ABP_MiniGame_UE_de_Yattari_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature");
 
@@ -534,9 +545,9 @@ void ABP_MiniGame_UE_de_Yattari_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Co
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature");
 
@@ -551,9 +562,9 @@ void ABP_MiniGame_UE_de_Yattari_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_Co
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ResetFlowDoOnce
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::ResetFlowDoOnce()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_ResetFlowDoOnce()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ResetFlowDoOnce");
 
@@ -568,9 +579,9 @@ void ABP_MiniGame_UE_de_Yattari_C::ResetFlowDoOnce()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.NPCDiceThrow
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::NPCDiceThrow()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_NPCDiceThrow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.NPCDiceThrow");
 
@@ -585,9 +596,9 @@ void ABP_MiniGame_UE_de_Yattari_C::NPCDiceThrow()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.PlayerDiceThrow
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::PlayerDiceThrow()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_PlayerDiceThrow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.PlayerDiceThrow");
 
@@ -602,9 +613,9 @@ void ABP_MiniGame_UE_de_Yattari_C::PlayerDiceThrow()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.InputButtonRight
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::InputButtonRight()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_InputButtonRight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.InputButtonRight");
 
@@ -619,9 +630,9 @@ void ABP_MiniGame_UE_de_Yattari_C::InputButtonRight()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.InitThrowIdle
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::InitThrowIdle()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_InitThrowIdle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.InitThrowIdle");
 
@@ -636,7 +647,7 @@ void ABP_MiniGame_UE_de_Yattari_C::InitThrowIdle()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.BndEvt__Bowl_K2Node_ComponentBoundEvent_4_ComponentHitSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -656,6 +667,7 @@ void ABP_MiniGame_UE_de_Yattari_C::BndEvt__Bowl_K2Node_ComponentBoundEvent_4_Com
 	params.Hit = Hit;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -664,9 +676,9 @@ void ABP_MiniGame_UE_de_Yattari_C::BndEvt__Bowl_K2Node_ComponentBoundEvent_4_Com
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.EnableForwardAndBackCollision
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::EnableForwardAndBackCollision()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_EnableForwardAndBackCollision()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.EnableForwardAndBackCollision");
 
@@ -681,9 +693,9 @@ void ABP_MiniGame_UE_de_Yattari_C::EnableForwardAndBackCollision()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.StartForceMoveDice
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::StartForceMoveDice()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_StartForceMoveDice()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.StartForceMoveDice");
 
@@ -698,7 +710,7 @@ void ABP_MiniGame_UE_de_Yattari_C::StartForceMoveDice()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.Event_EndMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::Event_EndMiniGame()
 {
@@ -707,6 +719,7 @@ void ABP_MiniGame_UE_de_Yattari_C::Event_EndMiniGame()
 	ABP_MiniGame_UE_de_Yattari_C_Event_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -715,11 +728,11 @@ void ABP_MiniGame_UE_de_Yattari_C::Event_EndMiniGame()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.OnTalkScriptEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_UE_de_Yattari_C::OnTalkScriptEvent(int EventNumber)
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.OnTalkScriptEvent");
 
@@ -727,6 +740,7 @@ void ABP_MiniGame_UE_de_Yattari_C::OnTalkScriptEvent(int EventNumber)
 	params.EventNumber = EventNumber;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -735,11 +749,11 @@ void ABP_MiniGame_UE_de_Yattari_C::OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ResumeMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_MiniGame_UE_de_Yattari_C::ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ResumeMiniGame");
 
@@ -747,6 +761,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ResumeMiniGame(const struct FString& ResumeKe
 	params.ResumeKeyword = ResumeKeyword;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -755,7 +770,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ResumeMiniGame(const struct FString& ResumeKe
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.CancelMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGame_UE_de_Yattari_C::CancelMiniGame()
 {
@@ -764,6 +779,7 @@ void ABP_MiniGame_UE_de_Yattari_C::CancelMiniGame()
 	ABP_MiniGame_UE_de_Yattari_C_CancelMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -772,9 +788,9 @@ void ABP_MiniGame_UE_de_Yattari_C::CancelMiniGame()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ResetCancelDoOnce
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::ResetCancelDoOnce()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_ResetCancelDoOnce()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ResetCancelDoOnce");
 
@@ -789,9 +805,9 @@ void ABP_MiniGame_UE_de_Yattari_C::ResetCancelDoOnce()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.DelayedInitialize
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::DelayedInitialize()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_DelayedInitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.DelayedInitialize");
 
@@ -806,9 +822,9 @@ void ABP_MiniGame_UE_de_Yattari_C::DelayedInitialize()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.OpponentResult
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::OpponentResult()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_OpponentResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.OpponentResult");
 
@@ -823,9 +839,9 @@ void ABP_MiniGame_UE_de_Yattari_C::OpponentResult()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.RyoResult
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_UE_de_Yattari_C::RyoResult()
+void ABP_MiniGame_UE_de_Yattari_C::STATIC_RyoResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.RyoResult");
 
@@ -840,7 +856,7 @@ void ABP_MiniGame_UE_de_Yattari_C::RyoResult()
 
 
 // Function BP_MiniGame_UE_de_Yattari.BP_MiniGame_UE_de_Yattari_C.ExecuteUbergraph_BP_MiniGame_UE_de_Yattari
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -852,6 +868,7 @@ void ABP_MiniGame_UE_de_Yattari_C::ExecuteUbergraph_BP_MiniGame_UE_de_Yattari(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

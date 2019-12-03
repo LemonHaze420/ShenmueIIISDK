@@ -32,12 +32,12 @@ public:
 	}
 
 
-	void RemoveWidget();
-	void SubMoney(int SubMoney, int* AfterHaveMoney);
-	void AddMoney(int AddMoney, int* AfterHaveMoney);
+	void STATIC_RemoveWidget();
+	void STATIC_SubMoney(int SubMoney, int* AfterHaveMoney);
+	void STATIC_AddMoney(int AddMoney, int* AfterHaveMoney);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_HaveMoneyManager(int EntryPoint);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_HaveMoneyManager(int EntryPoint);
 };
 
 

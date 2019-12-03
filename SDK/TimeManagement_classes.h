@@ -61,11 +61,11 @@ public:
 	}
 
 
-	struct FFrameTime STATIC_Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate);
-	struct FTimecode STATIC_GetTimecode();
-	struct FString STATIC_Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay);
-	float STATIC_Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime);
-	float STATIC_Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate);
+	struct FFrameTime Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate);
+	struct FTimecode GetTimecode();
+	struct FString Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay);
+	float Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime);
+	float Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate);
 };
 
 

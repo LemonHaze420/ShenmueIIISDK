@@ -31,7 +31,7 @@ public:
 	}
 
 
-	void CanPlay(bool* CAN);
+	void STATIC_CanPlay(bool* CAN);
 	void SetSelectorLabel(class UAtomComponent* Component);
 	struct FString GetNotifyName();
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);

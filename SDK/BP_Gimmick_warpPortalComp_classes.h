@@ -39,15 +39,15 @@ public:
 
 	void ModPlayerForTeleport(bool ToTeleport);
 	void FadePlayer(bool Fade);
-	void SetPortalTransform(const struct FTransform& Transform);
-	void GetPortalTransform(struct FTransform* Transform);
-	void isAvailable_player_(class AActor* OtherActor, bool* Result);
-	void ReceiveBeginPlay();
-	void ReturnPlayerState();
+	void STATIC_SetPortalTransform(const struct FTransform& Transform);
+	void STATIC_GetPortalTransform(struct FTransform* Transform);
+	void STATIC_isAvailable_player_(class AActor* OtherActor, bool* Result);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReturnPlayerState();
 	void onTeleport(class AActor* OtherActor);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_Gimmick_warpPortalComp(int EntryPoint);
-	void teleport__DelegateSignature(class AActor* OtherActor);
+	void STATIC_ExecuteUbergraph_BP_Gimmick_warpPortalComp(int EntryPoint);
+	void STATIC_teleport__DelegateSignature(class AActor* OtherActor);
 };
 
 

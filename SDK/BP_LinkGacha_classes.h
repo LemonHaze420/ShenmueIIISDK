@@ -46,24 +46,24 @@ public:
 	}
 
 
-	void GetGachaID(struct FName* GachaId);
+	void STATIC_GetGachaID(struct FName* GachaId);
 	void DestroyLoadObject(bool* dummy);
-	void InitAsyncLoad(bool* dummy);
+	void STATIC_InitAsyncLoad(bool* dummy);
 	struct FVector GetSightCheckLocation();
 	bool IsTalking();
-	TArray<struct FS3DetectActionParam> GetDetectAction();
+	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
 	void IsDispArrow(bool* IsDisp);
-	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
-	void InputCancel();
-	void InputAction();
+	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	void STATIC_InputCancel();
+	void STATIC_InputAction();
 	void InputLeft();
 	void InputRight();
-	void DeleteArrow();
-	void MakeArrow();
+	void STATIC_DeleteArrow();
+	void STATIC_MakeArrow();
 	void Tick_Select(float ArgDeltaSec);
 	void GetOldTargetGacha(class ABP_MiniGame_Gacha_C** newParam);
 	void StartLinkGacha();
-	void Init();
+	void STATIC_Init();
 	void GetTargetGacha(class ABP_MiniGame_Gacha_C** newParam);
 	void UserConstructionScript();
 	void GachaRewardWathing();
@@ -73,7 +73,7 @@ public:
 	void EndMiniGame();
 	void OnTalkScriptEvent(int EventNumber);
 	void StartMiniGame();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void CancelMiniGame();
 	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);

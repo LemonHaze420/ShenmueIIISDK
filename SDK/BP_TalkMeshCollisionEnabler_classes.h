@@ -28,8 +28,8 @@ public:
 	}
 
 
-	void EnableQueryCollisionOnActorsWithIgnore(TArray<class AActor*>* Actors, TArray<class AActor*>* ignoreActors);
-	void EnableQueryCollisionForTalk(TArray<class AActor*>* Actors, TArray<class UPrimitiveComponent*>* BackupComponents);
+	void STATIC_EnableQueryCollisionOnActorsWithIgnore(TArray<class AActor*>* Actors, TArray<class AActor*>* ignoreActors);
+	void STATIC_EnableQueryCollisionForTalk(TArray<class AActor*>* Actors, TArray<class UPrimitiveComponent*>* BackupComponents);
 	void EnableQueryCollisionOnActors(TArray<class AActor*>* Actors);
 	void RestoreQueryCollision();
 	void EnableQueryCollision(class UPrimitiveComponent* Primitives);

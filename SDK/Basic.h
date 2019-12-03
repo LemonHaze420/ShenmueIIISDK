@@ -1,20 +1,20 @@
 #pragma once
 #pragma warning(disable: 4267)
+#define GOBJECTS_OFFSET_V102		0x32C9838
+#define GOBJECTS_COUNT_OFFSET_V102	0x32C985C
+#define GNAMES_OFFSET_V102			0x32C0BA0
 
-
-#define GOBJECTS_OFFSET_V102	0x32C9848
-#define GNAMES_OFFSET_V102		0x32C0BA0
-#define UE4_VERSTRING_V102		0x22EF8F0
-#define UE4_VERSTRING_V10201	0x22EF7F0
+#define UE4_VERSTRING_V102			0x22EF8F0
+#define UE4_VERSTRING_V10201		0x22EF7F0
 
 #define WIN32_LEAN_AND_MEAN         // Exclude rarely-used stuff from Windows headers
 
 #include <vector>
 #include <locale>
 #include <set>
-
 #include <Windows.h>
 #include <Psapi.h>
+
 
 // Name: Shenmue3, Version: 1.0.2
 
@@ -22,11 +22,8 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "MinHook.h"
-
 #undef CreateWindow
 #undef PF_MAX
-
 namespace SDK
 {
 	int init(std::string ModuleName = "Shenmue3-Win64-Shipping.exe");
@@ -44,7 +41,7 @@ namespace SDK
 		ProcessEvent_t hook;
 	};
 
-	inline void CreateProcessEventHook(std::string hookName, std::string functionName, ProcessEvent_t hook);
+	void CreateProcessEventHook(std::string hookName, std::string functionName, ProcessEvent_t hook);
 	/*
 		*	v1.02
 					Version:	1.02.00
@@ -109,7 +106,7 @@ namespace SDK
 	{
 		enum
 		{
-			NumElementsPerChunk = 64 * 1040,
+			NumElementsPerChunk = 64 * 1024,
 		};
 	public:
 		inline int32_t Num() const

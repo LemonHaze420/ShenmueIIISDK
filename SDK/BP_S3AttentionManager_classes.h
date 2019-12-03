@@ -59,9 +59,9 @@ public:
 	void CollectActors();
 	void SetSetting(class AActor* Actor);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void PlayBGMFromCue();
-	void Event_OnChangePlayerCtrl(class APlayerController* PlayerController);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_PlayBGMFromCue();
+	void STATIC_Event_OnChangePlayerCtrl(class APlayerController* PlayerController);
 	void ExecuteUbergraph_BP_S3AttentionManager(int EntryPoint);
 };
 

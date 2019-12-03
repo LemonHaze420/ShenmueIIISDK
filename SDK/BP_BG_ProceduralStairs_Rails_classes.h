@@ -48,10 +48,10 @@ public:
 
 
 	void SpawnRailsAndPoles(bool SpawnRight, bool SpawnLeft, bool PoleOnly, struct FBox* StepBounds);
-	void SpawnRailAndPole(bool RightSide, bool PoleOnly, struct FBox* StepBounds);
+	void STATIC_SpawnRailAndPole(bool RightSide, bool PoleOnly, struct FBox* StepBounds);
 	void GetScaledMeshBoundingBox(class UStaticMesh* Mesh, struct FBox* OutBounds);
-	void GenerateRandomMeshRotation(struct FRotator* Random);
-	void UserConstructionScript();
+	void STATIC_GenerateRandomMeshRotation(struct FRotator* Random);
+	void STATIC_UserConstructionScript();
 };
 
 

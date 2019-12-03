@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.GetMeshName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   MeshName                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UWBP_DebugTeleportToNPCList_C::GetMeshName(const struct FName& CharaName, s
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UWBP_DebugTeleportToNPCList_C::GetMeshName(const struct FName& CharaName, s
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.FindNPC_fromMesh
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Private, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FName                   CharaId                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -62,7 +63,7 @@ void UWBP_DebugTeleportToNPCList_C::FindNPC_fromMesh(const struct FString& Text,
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.UpdateFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UWBP_DebugTeleportToNPCList_C::UpdateFocus()
 {
@@ -71,6 +72,7 @@ void UWBP_DebugTeleportToNPCList_C::UpdateFocus()
 	UWBP_DebugTeleportToNPCList_C_UpdateFocus_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,7 +81,7 @@ void UWBP_DebugTeleportToNPCList_C::UpdateFocus()
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.SetFocusToItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -91,6 +93,7 @@ void UWBP_DebugTeleportToNPCList_C::SetFocusToItem(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,7 +102,7 @@ void UWBP_DebugTeleportToNPCList_C::SetFocusToItem(int Index)
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.OnPreviewKeyDown
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Delegate)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -114,6 +117,7 @@ struct FEventReply UWBP_DebugTeleportToNPCList_C::OnPreviewKeyDown(const struct 
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -124,7 +128,7 @@ struct FEventReply UWBP_DebugTeleportToNPCList_C::OnPreviewKeyDown(const struct 
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.BuildTeleportToNPCList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UWBP_DebugTeleportToNPCList_C::BuildTeleportToNPCList()
 {
@@ -141,7 +145,7 @@ void UWBP_DebugTeleportToNPCList_C::BuildTeleportToNPCList()
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.BndEvt__NPCName_K2Node_ComponentBoundEvent_50_OnEditableTextBoxChangedEvent__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   Text                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -153,6 +157,7 @@ void UWBP_DebugTeleportToNPCList_C::BndEvt__NPCName_K2Node_ComponentBoundEvent_5
 	params.Text = Text;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,15 +166,16 @@ void UWBP_DebugTeleportToNPCList_C::BndEvt__NPCName_K2Node_ComponentBoundEvent_5
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugTeleportToNPCList_C::Construct()
+void UWBP_DebugTeleportToNPCList_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.Construct");
 
 	UWBP_DebugTeleportToNPCList_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,15 +184,16 @@ void UWBP_DebugTeleportToNPCList_C::Construct()
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.BndEvt__ModeButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugTeleportToNPCList_C::BndEvt__ModeButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature()
+void UWBP_DebugTeleportToNPCList_C::STATIC_BndEvt__ModeButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.BndEvt__ModeButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature");
 
 	UWBP_DebugTeleportToNPCList_C_BndEvt__ModeButton_K2Node_ComponentBoundEvent_85_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +202,7 @@ void UWBP_DebugTeleportToNPCList_C::BndEvt__ModeButton_K2Node_ComponentBoundEven
 
 
 // Function WBP_DebugTeleportToNPCList.WBP_DebugTeleportToNPCList_C.ExecuteUbergraph_WBP_DebugTeleportToNPCList
-// (HasDefaults)
+// (Net, NetReliable, Native, NetResponse, MulticastDelegate, Delegate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -207,6 +214,7 @@ void UWBP_DebugTeleportToNPCList_C::ExecuteUbergraph_WBP_DebugTeleportToNPCList(
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

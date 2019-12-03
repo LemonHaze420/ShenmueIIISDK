@@ -33,14 +33,14 @@ public:
 	}
 
 
-	int GetPriority();
+	int STATIC_GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void CheckBehavior(bool* Enable);
-	void RegistDetect(bool Unregister);
+	void STATIC_RegistDetect(bool Unregister);
 	void UserConstructionScript();
-	void BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void DecideDetectAction(ES3ActionIconType Type);
+	void STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_BndEvt__Range_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void STATIC_DecideDetectAction(ES3ActionIconType Type);
 	void ExecuteUbergraph_BP_EventIconDispRange(int EntryPoint);
 };
 

@@ -14,18 +14,19 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.SkipToEnd
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
-// bool                           Debug                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           DEBUG                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::SkipToEnd(bool Debug)
+void ABP_CutsceneManager_C::STATIC_SkipToEnd(bool DEBUG)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.SkipToEnd");
 
 	ABP_CutsceneManager_C_SkipToEnd_Params params;
-	params.Debug = Debug;
+	params.DEBUG = DEBUG;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void ABP_CutsceneManager_C::SkipToEnd(bool Debug)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedUnloadCutsceneLevelWithBattleLevelStreaming
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InId                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,11 +55,11 @@ void ABP_CutsceneManager_C::OnFinishedUnloadCutsceneLevelWithBattleLevelStreamin
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedLoadCutsceneLevelWithBattleLevelStreaming
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InId                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::OnFinishedLoadCutsceneLevelWithBattleLevelStreaming(const struct FName& InId)
+void ABP_CutsceneManager_C::STATIC_OnFinishedLoadCutsceneLevelWithBattleLevelStreaming(const struct FName& InId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedLoadCutsceneLevelWithBattleLevelStreaming");
 
@@ -66,6 +67,7 @@ void ABP_CutsceneManager_C::OnFinishedLoadCutsceneLevelWithBattleLevelStreaming(
 	params.InId = InId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,15 +76,16 @@ void ABP_CutsceneManager_C::OnFinishedLoadCutsceneLevelWithBattleLevelStreaming(
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.RequestUnloadCurrentCutsceneLevel
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::RequestUnloadCurrentCutsceneLevel()
+void ABP_CutsceneManager_C::STATIC_RequestUnloadCurrentCutsceneLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.RequestUnloadCurrentCutsceneLevel");
 
 	ABP_CutsceneManager_C_RequestUnloadCurrentCutsceneLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,9 +94,9 @@ void ABP_CutsceneManager_C::RequestUnloadCurrentCutsceneLevel()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.RequestLoadCurrentCutsceneLevel
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, Delegate, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::RequestLoadCurrentCutsceneLevel()
+void ABP_CutsceneManager_C::STATIC_RequestLoadCurrentCutsceneLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.RequestLoadCurrentCutsceneLevel");
 
@@ -108,11 +111,11 @@ void ABP_CutsceneManager_C::RequestLoadCurrentCutsceneLevel()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetIsQTEForceSuccess
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::DebugGetIsQTEForceSuccess()
+bool ABP_CutsceneManager_C::STATIC_DebugGetIsQTEForceSuccess()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetIsQTEForceSuccess");
 
@@ -129,7 +132,7 @@ bool ABP_CutsceneManager_C::DebugGetIsQTEForceSuccess()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugSetIsQTEForceSuccess
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bForceSuccess                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -149,7 +152,7 @@ void ABP_CutsceneManager_C::DebugSetIsQTEForceSuccess(bool bForceSuccess)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateFinishingFinishLoadingScreen
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_CutsceneManager_C::UpdateFinishingFinishLoadingScreen()
 {
@@ -158,6 +161,7 @@ void ABP_CutsceneManager_C::UpdateFinishingFinishLoadingScreen()
 	ABP_CutsceneManager_C_UpdateFinishingFinishLoadingScreen_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +170,7 @@ void ABP_CutsceneManager_C::UpdateFinishingFinishLoadingScreen()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateFinishingWaitLevelStreamingLoadLevel
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 
 void ABP_CutsceneManager_C::UpdateFinishingWaitLevelStreamingLoadLevel()
 {
@@ -183,7 +187,7 @@ void ABP_CutsceneManager_C::UpdateFinishingWaitLevelStreamingLoadLevel()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateFinishingUnloadLevel
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (MulticastDelegate, Public, NetServer, NetClient, Const)
 
 void ABP_CutsceneManager_C::UpdateFinishingUnloadLevel()
 {
@@ -200,7 +204,7 @@ void ABP_CutsceneManager_C::UpdateFinishingUnloadLevel()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.SetupCurrentCutscenePlayerEndFadeInfo
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_CutsceneManager_C::SetupCurrentCutscenePlayerEndFadeInfo()
 {
@@ -209,6 +213,7 @@ void ABP_CutsceneManager_C::SetupCurrentCutscenePlayerEndFadeInfo()
 	ABP_CutsceneManager_C_SetupCurrentCutscenePlayerEndFadeInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,7 +222,7 @@ void ABP_CutsceneManager_C::SetupCurrentCutscenePlayerEndFadeInfo()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ResumeGameTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 
 void ABP_CutsceneManager_C::ResumeGameTime()
 {
@@ -234,9 +239,9 @@ void ABP_CutsceneManager_C::ResumeGameTime()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.StopGameTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void ABP_CutsceneManager_C::StopGameTime()
+void ABP_CutsceneManager_C::STATIC_StopGameTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.StopGameTime");
 
@@ -251,15 +256,16 @@ void ABP_CutsceneManager_C::StopGameTime()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateStartingFinishLoadingScreen
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, Delegate, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::UpdateStartingFinishLoadingScreen()
+void ABP_CutsceneManager_C::STATIC_UpdateStartingFinishLoadingScreen()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateStartingFinishLoadingScreen");
 
 	ABP_CutsceneManager_C_UpdateStartingFinishLoadingScreen_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,9 +274,9 @@ void ABP_CutsceneManager_C::UpdateStartingFinishLoadingScreen()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateStartingLoadOther
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 
-void ABP_CutsceneManager_C::UpdateStartingLoadOther()
+void ABP_CutsceneManager_C::STATIC_UpdateStartingLoadOther()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateStartingLoadOther");
 
@@ -285,15 +291,16 @@ void ABP_CutsceneManager_C::UpdateStartingLoadOther()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateStartingLoadLevel
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Delegate, HasOutParms, HasDefaults, Const)
 
-void ABP_CutsceneManager_C::UpdateStartingLoadLevel()
+void ABP_CutsceneManager_C::STATIC_UpdateStartingLoadLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateStartingLoadLevel");
 
 	ABP_CutsceneManager_C_UpdateStartingLoadLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -302,7 +309,7 @@ void ABP_CutsceneManager_C::UpdateStartingLoadLevel()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateStartingFadeOut
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 
 void ABP_CutsceneManager_C::UpdateStartingFadeOut()
 {
@@ -311,6 +318,7 @@ void ABP_CutsceneManager_C::UpdateStartingFadeOut()
 	ABP_CutsceneManager_C_UpdateStartingFadeOut_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -319,7 +327,7 @@ void ABP_CutsceneManager_C::UpdateStartingFadeOut()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetRequiredUnloadLevelList
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -342,12 +350,12 @@ TArray<struct FName> ABP_CutsceneManager_C::GetRequiredUnloadLevelList(const str
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.CheckLoadLevelTarget
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FName                   InLevelName                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::CheckLoadLevelTarget(const struct FName& InLevelName)
+bool ABP_CutsceneManager_C::STATIC_CheckLoadLevelTarget(const struct FName& InLevelName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.CheckLoadLevelTarget");
 
@@ -355,6 +363,7 @@ bool ABP_CutsceneManager_C::CheckLoadLevelTarget(const struct FName& InLevelName
 	params.InLevelName = InLevelName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,7 +374,7 @@ bool ABP_CutsceneManager_C::CheckLoadLevelTarget(const struct FName& InLevelName
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetLastCutsceneCharaReplaceRotation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Event, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -388,7 +397,7 @@ struct FRotator ABP_CutsceneManager_C::GetLastCutsceneCharaReplaceRotation(const
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetLastCutsceneCharaReplaceLocation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Event, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -411,7 +420,7 @@ struct FVector ABP_CutsceneManager_C::GetLastCutsceneCharaReplaceLocation(const 
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetLastCutsceneCharaReplaceTransform
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -434,12 +443,12 @@ struct FTransform ABP_CutsceneManager_C::GetLastCutsceneCharaReplaceTransform(co
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DoesLastCutsceneCharaReplaceInfoExist
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, Private, Protected, Delegate, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::DoesLastCutsceneCharaReplaceInfoExist(const struct FName& CharaName)
+bool ABP_CutsceneManager_C::STATIC_DoesLastCutsceneCharaReplaceInfoExist(const struct FName& CharaName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DoesLastCutsceneCharaReplaceInfoExist");
 
@@ -447,6 +456,7 @@ bool ABP_CutsceneManager_C::DoesLastCutsceneCharaReplaceInfoExist(const struct F
 	params.CharaName = CharaName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -457,7 +467,7 @@ bool ABP_CutsceneManager_C::DoesLastCutsceneCharaReplaceInfoExist(const struct F
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateLastCutsceneCharaReplaceInfo
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, Public, Delegate, HasOutParms, HasDefaults, Const)
 
 void ABP_CutsceneManager_C::UpdateLastCutsceneCharaReplaceInfo()
 {
@@ -474,15 +484,16 @@ void ABP_CutsceneManager_C::UpdateLastCutsceneCharaReplaceInfo()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.HideLoadingScreen
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::HideLoadingScreen()
+void ABP_CutsceneManager_C::STATIC_HideLoadingScreen()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.HideLoadingScreen");
 
 	ABP_CutsceneManager_C_HideLoadingScreen_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -491,9 +502,9 @@ void ABP_CutsceneManager_C::HideLoadingScreen()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ShowLoadingScreen
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_CutsceneManager_C::ShowLoadingScreen()
+void ABP_CutsceneManager_C::STATIC_ShowLoadingScreen()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.ShowLoadingScreen");
 
@@ -508,9 +519,9 @@ void ABP_CutsceneManager_C::ShowLoadingScreen()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedLoadLevelAfterPlayerFinished
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 
-void ABP_CutsceneManager_C::OnFinishedLoadLevelAfterPlayerFinished()
+void ABP_CutsceneManager_C::STATIC_OnFinishedLoadLevelAfterPlayerFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedLoadLevelAfterPlayerFinished");
 
@@ -525,7 +536,7 @@ void ABP_CutsceneManager_C::OnFinishedLoadLevelAfterPlayerFinished()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnCutscenePlayerStartSequence
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_CutsceneManager_C::OnCutscenePlayerStartSequence()
 {
@@ -542,9 +553,9 @@ void ABP_CutsceneManager_C::OnCutscenePlayerStartSequence()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishLoadingScreen
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 
-void ABP_CutsceneManager_C::OnFinishLoadingScreen()
+void ABP_CutsceneManager_C::STATIC_OnFinishLoadingScreen()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishLoadingScreen");
 
@@ -559,7 +570,7 @@ void ABP_CutsceneManager_C::OnFinishLoadingScreen()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.SetupFadeData
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Private, Protected, Delegate, NetClient, Const)
 
 void ABP_CutsceneManager_C::SetupFadeData()
 {
@@ -568,6 +579,7 @@ void ABP_CutsceneManager_C::SetupFadeData()
 	ABP_CutsceneManager_C_SetupFadeData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -576,7 +588,7 @@ void ABP_CutsceneManager_C::SetupFadeData()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.StartCutscene
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Delegate, DLLImport, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           UseFadeOut                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -601,7 +613,7 @@ bool ABP_CutsceneManager_C::StartCutscene(const struct FName& CutsceneId, bool U
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.IsUsingForceWeather
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -612,6 +624,7 @@ bool ABP_CutsceneManager_C::IsUsingForceWeather()
 	ABP_CutsceneManager_C_IsUsingForceWeather_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -622,7 +635,7 @@ bool ABP_CutsceneManager_C::IsUsingForceWeather()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetRequiredLoadLevelList
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
@@ -635,6 +648,7 @@ TArray<struct FName> ABP_CutsceneManager_C::GetRequiredLoadLevelList(const struc
 	params.CutsceneId = CutsceneId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -645,7 +659,7 @@ TArray<struct FName> ABP_CutsceneManager_C::GetRequiredLoadLevelList(const struc
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.IsExistLevelData
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, MulticastDelegate, Public, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -658,6 +672,7 @@ bool ABP_CutsceneManager_C::IsExistLevelData(const struct FName& CutsceneId)
 	params.CutsceneId = CutsceneId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -668,15 +683,16 @@ bool ABP_CutsceneManager_C::IsExistLevelData(const struct FName& CutsceneId)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ExecuteOnFinishedUnloadCutsceneLevel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, NetServer, NetClient)
 
-void ABP_CutsceneManager_C::ExecuteOnFinishedUnloadCutsceneLevel()
+void ABP_CutsceneManager_C::STATIC_ExecuteOnFinishedUnloadCutsceneLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.ExecuteOnFinishedUnloadCutsceneLevel");
 
 	ABP_CutsceneManager_C_ExecuteOnFinishedUnloadCutsceneLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -685,17 +701,18 @@ void ABP_CutsceneManager_C::ExecuteOnFinishedUnloadCutsceneLevel()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetUseAnotherShenfa
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::DebugGetUseAnotherShenfa()
+bool ABP_CutsceneManager_C::STATIC_DebugGetUseAnotherShenfa()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetUseAnotherShenfa");
 
 	ABP_CutsceneManager_C_DebugGetUseAnotherShenfa_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -706,17 +723,18 @@ bool ABP_CutsceneManager_C::DebugGetUseAnotherShenfa()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetAnotherShenfaMesh
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class USkeletalMesh*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class USkeletalMesh* ABP_CutsceneManager_C::DebugGetAnotherShenfaMesh()
+class USkeletalMesh* ABP_CutsceneManager_C::STATIC_DebugGetAnotherShenfaMesh()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetAnotherShenfaMesh");
 
 	ABP_CutsceneManager_C_DebugGetAnotherShenfaMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -727,11 +745,11 @@ class USkeletalMesh* ABP_CutsceneManager_C::DebugGetAnotherShenfaMesh()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugSetAnotherShenfaMesh
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class USkeletalMesh*           Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::DebugSetAnotherShenfaMesh(class USkeletalMesh* Mesh)
+void ABP_CutsceneManager_C::STATIC_DebugSetAnotherShenfaMesh(class USkeletalMesh* Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugSetAnotherShenfaMesh");
 
@@ -739,6 +757,7 @@ void ABP_CutsceneManager_C::DebugSetAnotherShenfaMesh(class USkeletalMesh* Mesh)
 	params.Mesh = Mesh;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -747,9 +766,9 @@ void ABP_CutsceneManager_C::DebugSetAnotherShenfaMesh(class USkeletalMesh* Mesh)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugSetupAnotherShenfa
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_CutsceneManager_C::DebugSetupAnotherShenfa()
+void ABP_CutsceneManager_C::STATIC_DebugSetupAnotherShenfa()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugSetupAnotherShenfa");
 
@@ -764,17 +783,18 @@ void ABP_CutsceneManager_C::DebugSetupAnotherShenfa()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetIsUseAnotherShenfa
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::DebugGetIsUseAnotherShenfa()
+bool ABP_CutsceneManager_C::STATIC_DebugGetIsUseAnotherShenfa()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugGetIsUseAnotherShenfa");
 
 	ABP_CutsceneManager_C_DebugGetIsUseAnotherShenfa_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -785,11 +805,11 @@ bool ABP_CutsceneManager_C::DebugGetIsUseAnotherShenfa()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugSetIsUseAnotherShenfa
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           bUse                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::DebugSetIsUseAnotherShenfa(bool bUse)
+void ABP_CutsceneManager_C::STATIC_DebugSetIsUseAnotherShenfa(bool bUse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugSetIsUseAnotherShenfa");
 
@@ -797,6 +817,7 @@ void ABP_CutsceneManager_C::DebugSetIsUseAnotherShenfa(bool bUse)
 	params.bUse = bUse;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -805,11 +826,11 @@ void ABP_CutsceneManager_C::DebugSetIsUseAnotherShenfa(bool bUse)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.TmpGetSkyForceTimeOfDayValue
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_CutsceneManager_C::TmpGetSkyForceTimeOfDayValue()
+float ABP_CutsceneManager_C::STATIC_TmpGetSkyForceTimeOfDayValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.TmpGetSkyForceTimeOfDayValue");
 
@@ -826,17 +847,18 @@ float ABP_CutsceneManager_C::TmpGetSkyForceTimeOfDayValue()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetForceTimeOfDayValue
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float ABP_CutsceneManager_C::GetForceTimeOfDayValue()
+float ABP_CutsceneManager_C::STATIC_GetForceTimeOfDayValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.GetForceTimeOfDayValue");
 
 	ABP_CutsceneManager_C_GetForceTimeOfDayValue_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -847,11 +869,11 @@ float ABP_CutsceneManager_C::GetForceTimeOfDayValue()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.IsUsingForceTimeOfDay
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::IsUsingForceTimeOfDay()
+bool ABP_CutsceneManager_C::STATIC_IsUsingForceTimeOfDay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.IsUsingForceTimeOfDay");
 
@@ -868,9 +890,9 @@ bool ABP_CutsceneManager_C::IsUsingForceTimeOfDay()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugToggleDispSkeletalMeshInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_CutsceneManager_C::DebugToggleDispSkeletalMeshInfo()
+void ABP_CutsceneManager_C::STATIC_DebugToggleDispSkeletalMeshInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugToggleDispSkeletalMeshInfo");
 
@@ -885,12 +907,12 @@ void ABP_CutsceneManager_C::DebugToggleDispSkeletalMeshInfo()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugIsFormalMesh
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, NetResponse, Static, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FString                 MeshName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::DebugIsFormalMesh(const struct FString& MeshName)
+bool ABP_CutsceneManager_C::STATIC_DebugIsFormalMesh(const struct FString& MeshName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugIsFormalMesh");
 
@@ -908,12 +930,12 @@ bool ABP_CutsceneManager_C::DebugIsFormalMesh(const struct FString& MeshName)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugIsFormalSkeleton
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, NetClient)
 // Parameters:
 // struct FString                 SkeletonName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::DebugIsFormalSkeleton(const struct FString& SkeletonName)
+bool ABP_CutsceneManager_C::STATIC_DebugIsFormalSkeleton(const struct FString& SkeletonName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugIsFormalSkeleton");
 
@@ -921,6 +943,7 @@ bool ABP_CutsceneManager_C::DebugIsFormalSkeleton(const struct FString& Skeleton
 	params.SkeletonName = SkeletonName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -931,9 +954,9 @@ bool ABP_CutsceneManager_C::DebugIsFormalSkeleton(const struct FString& Skeleton
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DebugDispSkeletalMeshInfo
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::DebugDispSkeletalMeshInfo()
+void ABP_CutsceneManager_C::STATIC_DebugDispSkeletalMeshInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DebugDispSkeletalMeshInfo");
 
@@ -948,9 +971,9 @@ void ABP_CutsceneManager_C::DebugDispSkeletalMeshInfo()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.DisableReplacePlayer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_CutsceneManager_C::DisableReplacePlayer()
+void ABP_CutsceneManager_C::STATIC_DisableReplacePlayer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.DisableReplacePlayer");
 
@@ -965,9 +988,9 @@ void ABP_CutsceneManager_C::DisableReplacePlayer()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateLastCutsceneQTEResult
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Const)
 
-void ABP_CutsceneManager_C::UpdateLastCutsceneQTEResult()
+void ABP_CutsceneManager_C::STATIC_UpdateLastCutsceneQTEResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.UpdateLastCutsceneQTEResult");
 
@@ -982,12 +1005,12 @@ void ABP_CutsceneManager_C::UpdateLastCutsceneQTEResult()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.getLevelData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3CutsceneLevelData*    LevelData                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::getLevelData(const struct FName& CutsceneId, class US3CutsceneLevelData** LevelData)
+void ABP_CutsceneManager_C::STATIC_getLevelData(const struct FName& CutsceneId, class US3CutsceneLevelData** LevelData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.getLevelData");
 
@@ -995,6 +1018,7 @@ void ABP_CutsceneManager_C::getLevelData(const struct FName& CutsceneId, class U
 	params.CutsceneId = CutsceneId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1006,7 +1030,7 @@ void ABP_CutsceneManager_C::getLevelData(const struct FName& CutsceneId, class U
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ExecuteOnFinishedCutscenePlayer
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Public, NetServer, NetClient, Const)
 
 void ABP_CutsceneManager_C::ExecuteOnFinishedCutscenePlayer()
 {
@@ -1023,7 +1047,7 @@ void ABP_CutsceneManager_C::ExecuteOnFinishedCutscenePlayer()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ExecuteOnFinishedLoadCutsceneLevel
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, Const)
 
 void ABP_CutsceneManager_C::ExecuteOnFinishedLoadCutsceneLevel()
 {
@@ -1040,17 +1064,18 @@ void ABP_CutsceneManager_C::ExecuteOnFinishedLoadCutsceneLevel()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetCurrentCutscenePlayer
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Protected, Delegate, Const)
 // Parameters:
 // class ABP_CutscenePlayer_C*    CutscenePlayer                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::GetCurrentCutscenePlayer(class ABP_CutscenePlayer_C** CutscenePlayer)
+void ABP_CutsceneManager_C::STATIC_GetCurrentCutscenePlayer(class ABP_CutscenePlayer_C** CutscenePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.GetCurrentCutscenePlayer");
 
 	ABP_CutsceneManager_C_GetCurrentCutscenePlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1062,17 +1087,18 @@ void ABP_CutsceneManager_C::GetCurrentCutscenePlayer(class ABP_CutscenePlayer_C*
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.GetCurrentCutscene
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FName                   Cutscene                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::GetCurrentCutscene(struct FName* Cutscene)
+void ABP_CutsceneManager_C::STATIC_GetCurrentCutscene(struct FName* Cutscene)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.GetCurrentCutscene");
 
 	ABP_CutsceneManager_C_GetCurrentCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1084,11 +1110,11 @@ void ABP_CutsceneManager_C::GetCurrentCutscene(struct FName* Cutscene)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.IsWaitingFinishFadeOut
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::IsWaitingFinishFadeOut()
+bool ABP_CutsceneManager_C::STATIC_IsWaitingFinishFadeOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.IsWaitingFinishFadeOut");
 
@@ -1105,12 +1131,12 @@ bool ABP_CutsceneManager_C::IsWaitingFinishFadeOut()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.IsLoadCompleted
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_CutsceneManager_C::IsLoadCompleted(const struct FName& CutsceneId)
+bool ABP_CutsceneManager_C::STATIC_IsLoadCompleted(const struct FName& CutsceneId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.IsLoadCompleted");
 
@@ -1118,6 +1144,7 @@ bool ABP_CutsceneManager_C::IsLoadCompleted(const struct FName& CutsceneId)
 	params.CutsceneId = CutsceneId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1128,13 +1155,13 @@ bool ABP_CutsceneManager_C::IsLoadCompleted(const struct FName& CutsceneId)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.FindCutscenePlayer
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           isFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class ABP_CutscenePlayer_C*    FoundPlayer                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::FindCutscenePlayer(const struct FName& CutsceneId, bool* isFound, class ABP_CutscenePlayer_C** FoundPlayer)
+void ABP_CutsceneManager_C::STATIC_FindCutscenePlayer(const struct FName& CutsceneId, bool* IsFound, class ABP_CutscenePlayer_C** FoundPlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.FindCutscenePlayer");
 
@@ -1142,20 +1169,21 @@ void ABP_CutsceneManager_C::FindCutscenePlayer(const struct FName& CutsceneId, b
 	params.CutsceneId = CutsceneId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (isFound != nullptr)
-		*isFound = params.isFound;
+	if (IsFound != nullptr)
+		*IsFound = params.IsFound;
 	if (FoundPlayer != nullptr)
 		*FoundPlayer = params.FoundPlayer;
 }
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.SetPlayInfos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // TArray<struct FST_CutscenePlayInfo> newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -1177,7 +1205,7 @@ void ABP_CutsceneManager_C::SetPlayInfos(TArray<struct FST_CutscenePlayInfo>* ne
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.SetPlayInfo
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           LoadLevels                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1191,6 +1219,7 @@ void ABP_CutsceneManager_C::SetPlayInfo(const struct FName& CutsceneId, TArray<s
 	params.CutsceneId = CutsceneId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1204,13 +1233,13 @@ void ABP_CutsceneManager_C::SetPlayInfo(const struct FName& CutsceneId, TArray<s
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.FindPlayInfo
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FName                   CutsceneId                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           isFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           IsFound                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::FindPlayInfo(const struct FName& CutsceneId, bool* isFound, int* Index)
+void ABP_CutsceneManager_C::STATIC_FindPlayInfo(const struct FName& CutsceneId, bool* IsFound, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.FindPlayInfo");
 
@@ -1218,28 +1247,30 @@ void ABP_CutsceneManager_C::FindPlayInfo(const struct FName& CutsceneId, bool* i
 	params.CutsceneId = CutsceneId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (isFound != nullptr)
-		*isFound = params.isFound;
+	if (IsFound != nullptr)
+		*IsFound = params.IsFound;
 	if (Index != nullptr)
 		*Index = params.Index;
 }
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 
-void ABP_CutsceneManager_C::UserConstructionScript()
+void ABP_CutsceneManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.UserConstructionScript");
 
 	ABP_CutsceneManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1248,7 +1279,7 @@ void ABP_CutsceneManager_C::UserConstructionScript()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1260,6 +1291,7 @@ void ABP_CutsceneManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1268,15 +1300,16 @@ void ABP_CutsceneManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedCutscenePlayer
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::OnFinishedCutscenePlayer()
+void ABP_CutsceneManager_C::STATIC_OnFinishedCutscenePlayer()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedCutscenePlayer");
 
 	ABP_CutsceneManager_C_OnFinishedCutscenePlayer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1285,15 +1318,16 @@ void ABP_CutsceneManager_C::OnFinishedCutscenePlayer()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.BindOnFinishedCutscenePlayerEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::BindOnFinishedCutscenePlayerEvent()
+void ABP_CutsceneManager_C::STATIC_BindOnFinishedCutscenePlayerEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.BindOnFinishedCutscenePlayerEvent");
 
 	ABP_CutsceneManager_C_BindOnFinishedCutscenePlayerEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1302,15 +1336,16 @@ void ABP_CutsceneManager_C::BindOnFinishedCutscenePlayerEvent()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.UnbindOnFinishedCutscenePlayerEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::UnbindOnFinishedCutscenePlayerEvent()
+void ABP_CutsceneManager_C::STATIC_UnbindOnFinishedCutscenePlayerEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.UnbindOnFinishedCutscenePlayerEvent");
 
 	ABP_CutsceneManager_C_UnbindOnFinishedCutscenePlayerEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1319,15 +1354,16 @@ void ABP_CutsceneManager_C::UnbindOnFinishedCutscenePlayerEvent()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_CutsceneManager_C::ReceiveBeginPlay()
+void ABP_CutsceneManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.ReceiveBeginPlay");
 
 	ABP_CutsceneManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1336,11 +1372,11 @@ void ABP_CutsceneManager_C::ReceiveBeginPlay()
 
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.ExecuteUbergraph_BP_CutsceneManager
-// ()
+// (Net, Static, Protected, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_CutsceneManager_C::ExecuteUbergraph_BP_CutsceneManager(int EntryPoint)
+void ABP_CutsceneManager_C::STATIC_ExecuteUbergraph_BP_CutsceneManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CutsceneManager.BP_CutsceneManager_C.ExecuteUbergraph_BP_CutsceneManager");
 

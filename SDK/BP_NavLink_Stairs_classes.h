@@ -30,10 +30,10 @@ public:
 
 
 	void GetStairsGimmickInfo(class AActor** StairsGimmick, struct FTransform* ActorTransform, struct FTransform* RelativeTransform, struct FVector* StepDimensions, int* Steps, int* Widths);
-	void UpdateStairsInfo();
+	void STATIC_UpdateStairsInfo();
 	void UpdateDebugStairs();
-	void UserConstructionScript();
-	void ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination);
 	void ExecuteUbergraph_BP_NavLink_Stairs(int EntryPoint);
 };
 

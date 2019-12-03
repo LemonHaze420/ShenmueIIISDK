@@ -82,8 +82,8 @@ public:
 	void Init(class ACharacter* Character);
 	void TickFunc(float DeltaSec);
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_LCComponent(int EntryPoint);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_LCComponent(int EntryPoint);
 };
 
 

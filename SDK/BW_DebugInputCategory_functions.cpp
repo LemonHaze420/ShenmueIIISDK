@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugInputCategory.BW_DebugInputCategory_C.OnFocusReceived
-// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FFocusEvent             InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -29,6 +29,7 @@ struct FEventReply UBW_DebugInputCategory_C::OnFocusReceived(const struct FGeome
 	params.InFocusEvent = InFocusEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,17 +40,18 @@ struct FEventReply UBW_DebugInputCategory_C::OnFocusReceived(const struct FGeome
 
 
 // Function BW_DebugInputCategory.BW_DebugInputCategory_C.GetCategoryColor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSlateColor UBW_DebugInputCategory_C::GetCategoryColor()
+struct FSlateColor UBW_DebugInputCategory_C::STATIC_GetCategoryColor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugInputCategory.BW_DebugInputCategory_C.GetCategoryColor");
 
 	UBW_DebugInputCategory_C_GetCategoryColor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,17 +62,18 @@ struct FSlateColor UBW_DebugInputCategory_C::GetCategoryColor()
 
 
 // Function BW_DebugInputCategory.BW_DebugInputCategory_C.GetCategoryName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_DebugInputCategory_C::GetCategoryName()
+struct FText UBW_DebugInputCategory_C::STATIC_GetCategoryName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugInputCategory.BW_DebugInputCategory_C.GetCategoryName");
 
 	UBW_DebugInputCategory_C_GetCategoryName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -81,11 +84,11 @@ struct FText UBW_DebugInputCategory_C::GetCategoryName()
 
 
 // Function BW_DebugInputCategory.BW_DebugInputCategory_C.AddWidgetToCategory
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UWidget*                 Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_DebugInputCategory_C::AddWidgetToCategory(class UWidget* Widget)
+void UBW_DebugInputCategory_C::STATIC_AddWidgetToCategory(class UWidget* Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugInputCategory.BW_DebugInputCategory_C.AddWidgetToCategory");
 
@@ -101,7 +104,7 @@ void UBW_DebugInputCategory_C::AddWidgetToCategory(class UWidget* Widget)
 
 
 // Function BW_DebugInputCategory.BW_DebugInputCategory_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -123,15 +126,16 @@ void UBW_DebugInputCategory_C::Tick(const struct FGeometry& MyGeometry, float In
 
 
 // Function BW_DebugInputCategory.BW_DebugInputCategory_C.BndEvt__Button_393_K2Node_ComponentBoundEvent_282_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugInputCategory_C::BndEvt__Button_393_K2Node_ComponentBoundEvent_282_OnButtonClickedEvent__DelegateSignature()
+void UBW_DebugInputCategory_C::STATIC_BndEvt__Button_393_K2Node_ComponentBoundEvent_282_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugInputCategory.BW_DebugInputCategory_C.BndEvt__Button_393_K2Node_ComponentBoundEvent_282_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_DebugInputCategory_C_BndEvt__Button_393_K2Node_ComponentBoundEvent_282_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,11 +144,11 @@ void UBW_DebugInputCategory_C::BndEvt__Button_393_K2Node_ComponentBoundEvent_282
 
 
 // Function BW_DebugInputCategory.BW_DebugInputCategory_C.ExecuteUbergraph_BW_DebugInputCategory
-// (HasDefaults)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugInputCategory_C::ExecuteUbergraph_BW_DebugInputCategory(int EntryPoint)
+void UBW_DebugInputCategory_C::STATIC_ExecuteUbergraph_BW_DebugInputCategory(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugInputCategory.BW_DebugInputCategory_C.ExecuteUbergraph_BW_DebugInputCategory");
 

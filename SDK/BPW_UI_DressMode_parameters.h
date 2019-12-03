@@ -32,7 +32,7 @@ struct UBPW_UI_DressMode_C_ResetRotation_Params
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.RotationModel
 struct UBPW_UI_DressMode_C_RotationModel_Params
 {
-	float                                              Axis_Value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              axis_value;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BPW_UI_DressMode.BPW_UI_DressMode_C.UpdateCharaCloth

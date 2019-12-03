@@ -36,11 +36,11 @@ public:
 	}
 
 
-	int AdjustForDifficultySetting(int PlayerLevelsAbove);
+	int STATIC_AdjustForDifficultySetting(int PlayerLevelsAbove);
 	void CalcEnemyTeamAdjust(int LevelRef, int* MaxSimultaneousAttacks);
-	void CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep);
-	struct FString DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short);
-	void PrintExampleStats();
+	void STATIC_CalcEnemyAdjust(int PlayerLevelAbove, int* AIStep);
+	struct FString STATIC_DebugPrintEffects(int RelativeLevel, float InDamage, float OutDamage, int Adjust, bool Short);
+	void STATIC_PrintExampleStats();
 	void CalcPlayerAdjust(int PlayerLevelsAbove, bool* Apply, float* InDamageRatio, float* OutDamageRatio);
 };
 

@@ -34,9 +34,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void BndEvt__Capsule_K2Node_ComponentBoundEvent_42_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void ExecuteUbergraph_BP_OD_Nail(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_OD_Nail(int EntryPoint);
 };
 
 

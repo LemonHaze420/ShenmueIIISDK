@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PopupItem.BP_PopupItem_C.IsNextStock
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CheckId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAvailable                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void ABP_PopupItem_C::IsNextStock(const struct FName& CheckId, bool* bAvailable)
 	params.CheckId = CheckId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,14 +39,14 @@ void ABP_PopupItem_C::IsNextStock(const struct FName& CheckId, bool* bAvailable)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.GetPopupInfoByID
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, Public, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            PopupId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FST_PopupItemInfo       Info                           (Parm, OutParm)
 // int                            ArrayIndex                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::GetPopupInfoByID(int PopupId, bool* bSuccess, struct FST_PopupItemInfo* Info, int* ArrayIndex)
+void ABP_PopupItem_C::STATIC_GetPopupInfoByID(int PopupId, bool* bSuccess, struct FST_PopupItemInfo* Info, int* ArrayIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.GetPopupInfoByID");
 
@@ -68,7 +69,7 @@ void ABP_PopupItem_C::GetPopupInfoByID(int PopupId, bool* bSuccess, struct FST_P
 
 
 // Function BP_PopupItem.BP_PopupItem_C.CanPopupUI
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bCan                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -90,7 +91,7 @@ void ABP_PopupItem_C::CanPopupUI(bool* bCan)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.IsCheckBet
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // struct FName                   CheckId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAvailable                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -103,6 +104,7 @@ void ABP_PopupItem_C::IsCheckBet(const struct FName& CheckId, bool* bAvailable)
 	params.CheckId = CheckId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,12 +116,12 @@ void ABP_PopupItem_C::IsCheckBet(const struct FName& CheckId, bool* bAvailable)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.IsCheckMoney
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // struct FName                   CheckId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAvailable                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::IsCheckMoney(const struct FName& CheckId, bool* bAvailable)
+void ABP_PopupItem_C::STATIC_IsCheckMoney(const struct FName& CheckId, bool* bAvailable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.IsCheckMoney");
 
@@ -138,7 +140,7 @@ void ABP_PopupItem_C::IsCheckMoney(const struct FName& CheckId, bool* bAvailable
 
 
 // Function BP_PopupItem.BP_PopupItem_C.ForceHidePopup
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_PopupItem_C::ForceHidePopup()
 {
@@ -155,7 +157,7 @@ void ABP_PopupItem_C::ForceHidePopup()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.ShowPopupItem
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          WaitTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -163,7 +165,7 @@ void ABP_PopupItem_C::ForceHidePopup()
 // bool                           bApplyData                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            PopupId                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::ShowPopupItem(const struct FName& ItemId, float WaitTime, bool bDisableAutoHide, bool bApplyData, int* PopupId)
+void ABP_PopupItem_C::STATIC_ShowPopupItem(const struct FName& ItemId, float WaitTime, bool bDisableAutoHide, bool bApplyData, int* PopupId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.ShowPopupItem");
 
@@ -174,6 +176,7 @@ void ABP_PopupItem_C::ShowPopupItem(const struct FName& ItemId, float WaitTime, 
 	params.bApplyData = bApplyData;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,11 +188,11 @@ void ABP_PopupItem_C::ShowPopupItem(const struct FName& ItemId, float WaitTime, 
 
 
 // Function BP_PopupItem.BP_PopupItem_C.HidePopup
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            PopupId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::HidePopup(int PopupId)
+void ABP_PopupItem_C::STATIC_HidePopup(int PopupId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.HidePopup");
 
@@ -197,6 +200,7 @@ void ABP_PopupItem_C::HidePopup(int PopupId)
 	params.PopupId = PopupId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,7 +209,7 @@ void ABP_PopupItem_C::HidePopup(int PopupId)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.FinishUI
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_PopupItem_C::FinishUI()
 {
@@ -214,6 +218,7 @@ void ABP_PopupItem_C::FinishUI()
 	ABP_PopupItem_C_FinishUI_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,9 +227,9 @@ void ABP_PopupItem_C::FinishUI()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.StartPopup
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::StartPopup()
+void ABP_PopupItem_C::STATIC_StartPopup()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.StartPopup");
 
@@ -239,9 +244,9 @@ void ABP_PopupItem_C::StartPopup()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.StepWaitForEndEvent
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::StepWaitForEndEvent()
+void ABP_PopupItem_C::STATIC_StepWaitForEndEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.StepWaitForEndEvent");
 
@@ -256,9 +261,9 @@ void ABP_PopupItem_C::StepWaitForEndEvent()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.StepShowUI
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, Private, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_PopupItem_C::StepShowUI()
+void ABP_PopupItem_C::STATIC_StepShowUI()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.StepShowUI");
 
@@ -273,15 +278,16 @@ void ABP_PopupItem_C::StepShowUI()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.StepWaitTimeCheck
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::StepWaitTimeCheck()
+void ABP_PopupItem_C::STATIC_StepWaitTimeCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.StepWaitTimeCheck");
 
 	ABP_PopupItem_C_StepWaitTimeCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,7 +296,7 @@ void ABP_PopupItem_C::StepWaitTimeCheck()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.StepStackCheck
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_PopupItem_C::StepStackCheck()
 {
@@ -299,6 +305,7 @@ void ABP_PopupItem_C::StepStackCheck()
 	ABP_PopupItem_C_StepStackCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -307,12 +314,12 @@ void ABP_PopupItem_C::StepStackCheck()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.IsCheckItemId
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // struct FName                   CheckId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAvailable                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::IsCheckItemId(const struct FName& CheckId, bool* bAvailable)
+void ABP_PopupItem_C::STATIC_IsCheckItemId(const struct FName& CheckId, bool* bAvailable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.IsCheckItemId");
 
@@ -331,7 +338,7 @@ void ABP_PopupItem_C::IsCheckItemId(const struct FName& CheckId, bool* bAvailabl
 
 
 // Function BP_PopupItem.BP_PopupItem_C.IncrementPopupId
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            PopupId                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -342,6 +349,7 @@ void ABP_PopupItem_C::IncrementPopupId(int* PopupId)
 	ABP_PopupItem_C_IncrementPopupId_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -353,7 +361,7 @@ void ABP_PopupItem_C::IncrementPopupId(int* PopupId)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.ShowPopupMoney
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            IncreaseOrDecreaseMoney        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          WaitTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -383,9 +391,9 @@ void ABP_PopupItem_C::ShowPopupMoney(int IncreaseOrDecreaseMoney, float WaitTime
 
 
 // Function BP_PopupItem.BP_PopupItem_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::UserConstructionScript()
+void ABP_PopupItem_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.UserConstructionScript");
 
@@ -400,7 +408,7 @@ void ABP_PopupItem_C::UserConstructionScript()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.SetupItemUI
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bAutoClose                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -426,7 +434,7 @@ void ABP_PopupItem_C::SetupItemUI(const struct FName& ItemId, bool bAutoClose, i
 
 
 // Function BP_PopupItem.BP_PopupItem_C.SetupMoneyUI
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            HaveMoney                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            IncreaseOrDecreaseMoney        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -452,15 +460,16 @@ void ABP_PopupItem_C::SetupMoneyUI(int HaveMoney, int IncreaseOrDecreaseMoney, b
 
 
 // Function BP_PopupItem.BP_PopupItem_C.OnClosedItemNameDisp
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::OnClosedItemNameDisp()
+void ABP_PopupItem_C::STATIC_OnClosedItemNameDisp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.OnClosedItemNameDisp");
 
 	ABP_PopupItem_C_OnClosedItemNameDisp_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -469,15 +478,16 @@ void ABP_PopupItem_C::OnClosedItemNameDisp()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.OnFinishedUI
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::OnFinishedUI()
+void ABP_PopupItem_C::STATIC_OnFinishedUI()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.OnFinishedUI");
 
 	ABP_PopupItem_C_OnFinishedUI_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -486,15 +496,16 @@ void ABP_PopupItem_C::OnFinishedUI()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.ClearHandle_OnFinishedUI
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::ClearHandle_OnFinishedUI()
+void ABP_PopupItem_C::STATIC_ClearHandle_OnFinishedUI()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.ClearHandle_OnFinishedUI");
 
 	ABP_PopupItem_C_ClearHandle_OnFinishedUI_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -503,15 +514,16 @@ void ABP_PopupItem_C::ClearHandle_OnFinishedUI()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.Evt_StartAnmEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::Evt_StartAnmEnd()
+void ABP_PopupItem_C::STATIC_Evt_StartAnmEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.Evt_StartAnmEnd");
 
 	ABP_PopupItem_C_Evt_StartAnmEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -520,15 +532,16 @@ void ABP_PopupItem_C::Evt_StartAnmEnd()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::ReceiveBeginPlay()
+void ABP_PopupItem_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.ReceiveBeginPlay");
 
 	ABP_PopupItem_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -537,11 +550,11 @@ void ABP_PopupItem_C::ReceiveBeginPlay()
 
 
 // Function BP_PopupItem.BP_PopupItem_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::ReceiveTick(float DeltaSeconds)
+void ABP_PopupItem_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.ReceiveTick");
 
@@ -557,11 +570,11 @@ void ABP_PopupItem_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.ExecuteUbergraph_BP_PopupItem
-// (HasDefaults)
+// (Net, Static, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::ExecuteUbergraph_BP_PopupItem(int EntryPoint)
+void ABP_PopupItem_C::STATIC_ExecuteUbergraph_BP_PopupItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.ExecuteUbergraph_BP_PopupItem");
 
@@ -577,11 +590,11 @@ void ABP_PopupItem_C::ExecuteUbergraph_BP_PopupItem(int EntryPoint)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.OnFinishedPopupDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            PopupId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PopupItem_C::OnFinishedPopupDispatcher__DelegateSignature(int PopupId)
+void ABP_PopupItem_C::STATIC_OnFinishedPopupDispatcher__DelegateSignature(int PopupId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.OnFinishedPopupDispatcher__DelegateSignature");
 
@@ -597,9 +610,9 @@ void ABP_PopupItem_C::OnFinishedPopupDispatcher__DelegateSignature(int PopupId)
 
 
 // Function BP_PopupItem.BP_PopupItem_C.OnAllFinishedPopupDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PopupItem_C::OnAllFinishedPopupDispatcher__DelegateSignature()
+void ABP_PopupItem_C::STATIC_OnAllFinishedPopupDispatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PopupItem.BP_PopupItem_C.OnAllFinishedPopupDispatcher__DelegateSignature");
 

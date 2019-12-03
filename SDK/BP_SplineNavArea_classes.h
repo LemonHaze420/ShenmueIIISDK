@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_SplineNavArea(int EntryPoint);
 };

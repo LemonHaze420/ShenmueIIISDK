@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_LevelStreamingDebugRow.BW_LevelStreamingDebugRow_C.Get_LoadTimeWidget_Text
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_LevelStreamingDebugRow_C::Get_LoadTimeWidget_Text()
+struct FText UBW_LevelStreamingDebugRow_C::STATIC_Get_LoadTimeWidget_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_LevelStreamingDebugRow.BW_LevelStreamingDebugRow_C.Get_LoadTimeWidget_Text");
 
@@ -35,11 +35,11 @@ struct FText UBW_LevelStreamingDebugRow_C::Get_LoadTimeWidget_Text()
 
 
 // Function BW_LevelStreamingDebugRow.BW_LevelStreamingDebugRow_C.Get_VisibilityTime_Text
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_LevelStreamingDebugRow_C::Get_VisibilityTime_Text()
+struct FText UBW_LevelStreamingDebugRow_C::STATIC_Get_VisibilityTime_Text()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_LevelStreamingDebugRow.BW_LevelStreamingDebugRow_C.Get_VisibilityTime_Text");
 
@@ -56,7 +56,7 @@ struct FText UBW_LevelStreamingDebugRow_C::Get_VisibilityTime_Text()
 
 
 // Function BW_LevelStreamingDebugRow.BW_LevelStreamingDebugRow_C.Get_LevelName_Text
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Event, NetResponse, Public, NetServer)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -77,7 +77,7 @@ struct FText UBW_LevelStreamingDebugRow_C::Get_LevelName_Text()
 
 
 // Function BW_LevelStreamingDebugRow.BW_LevelStreamingDebugRow_C.Get_LevelName_ColorAndOpacity
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 

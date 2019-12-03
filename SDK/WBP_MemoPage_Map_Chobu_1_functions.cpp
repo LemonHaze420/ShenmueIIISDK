@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void UWBP_MemoPage_Map_Chobu_0_C::Construct()
+void UWBP_MemoPage_Map_Chobu_0_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.Construct");
 
@@ -31,11 +31,11 @@ void UWBP_MemoPage_Map_Chobu_0_C::Construct()
 
 
 // Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1
-// (HasDefaults)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MemoPage_Map_Chobu_0_C::ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1(int EntryPoint)
+void UWBP_MemoPage_Map_Chobu_0_C::STATIC_ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Chobu_1.WBP_MemoPage_Map_Chobu_0_C.ExecuteUbergraph_WBP_MemoPage_Map_Chobu_1");
 

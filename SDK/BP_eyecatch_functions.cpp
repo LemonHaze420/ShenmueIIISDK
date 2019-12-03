@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_eyecatch.BP_eyecatch_C.UpdateDateTime
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 
 void ABP_eyecatch_C::UpdateDateTime()
 {
@@ -31,15 +31,16 @@ void ABP_eyecatch_C::UpdateDateTime()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.HideWidget
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 
-void ABP_eyecatch_C::HideWidget()
+void ABP_eyecatch_C::STATIC_HideWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.HideWidget");
 
 	ABP_eyecatch_C_HideWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,17 +49,18 @@ void ABP_eyecatch_C::HideWidget()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.IsVisible
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_eyecatch_C::IsVisible(bool* Visible)
+void ABP_eyecatch_C::STATIC_IsVisible(bool* Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.IsVisible");
 
 	ABP_eyecatch_C_IsVisible_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,11 +72,11 @@ void ABP_eyecatch_C::IsVisible(bool* Visible)
 
 
 // Function BP_eyecatch.BP_eyecatch_C.SetVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_eyecatch_C::SetVisibility(bool Visible)
+void ABP_eyecatch_C::STATIC_SetVisibility(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.SetVisibility");
 
@@ -90,7 +92,7 @@ void ABP_eyecatch_C::SetVisibility(bool Visible)
 
 
 // Function BP_eyecatch.BP_eyecatch_C.setTitle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // struct FText                   main1                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   sub1                           (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -112,7 +114,7 @@ void ABP_eyecatch_C::setTitle(const struct FText& main1, const struct FText& sub
 
 
 // Function BP_eyecatch.BP_eyecatch_C.setWaitTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -132,7 +134,7 @@ void ABP_eyecatch_C::setWaitTime(float Value)
 
 
 // Function BP_eyecatch.BP_eyecatch_C.UpdateWidget
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
 
 void ABP_eyecatch_C::UpdateWidget()
 {
@@ -141,6 +143,7 @@ void ABP_eyecatch_C::UpdateWidget()
 	ABP_eyecatch_C_UpdateWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +152,7 @@ void ABP_eyecatch_C::UpdateWidget()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.ShowEyecatch
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // struct FText                   main1                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   sub1                           (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -165,6 +168,7 @@ void ABP_eyecatch_C::ShowEyecatch(const struct FText& main1, const struct FText&
 	params.Fade = Fade;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,7 +177,7 @@ void ABP_eyecatch_C::ShowEyecatch(const struct FText& main1, const struct FText&
 
 
 // Function BP_eyecatch.BP_eyecatch_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
 
 void ABP_eyecatch_C::UserConstructionScript()
 {
@@ -182,6 +186,7 @@ void ABP_eyecatch_C::UserConstructionScript()
 	ABP_eyecatch_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -190,9 +195,9 @@ void ABP_eyecatch_C::UserConstructionScript()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::ReceiveBeginPlay()
+void ABP_eyecatch_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.ReceiveBeginPlay");
 
@@ -207,9 +212,9 @@ void ABP_eyecatch_C::ReceiveBeginPlay()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.catchFadeInFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::catchFadeInFinished()
+void ABP_eyecatch_C::STATIC_catchFadeInFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.catchFadeInFinished");
 
@@ -224,9 +229,9 @@ void ABP_eyecatch_C::catchFadeInFinished()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.waitEasy
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::waitEasy()
+void ABP_eyecatch_C::STATIC_waitEasy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.waitEasy");
 
@@ -241,9 +246,9 @@ void ABP_eyecatch_C::waitEasy()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.catchEndWaitEasy
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::catchEndWaitEasy()
+void ABP_eyecatch_C::STATIC_catchEndWaitEasy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.catchEndWaitEasy");
 
@@ -258,9 +263,9 @@ void ABP_eyecatch_C::catchEndWaitEasy()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.endEasy
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::endEasy()
+void ABP_eyecatch_C::STATIC_endEasy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.endEasy");
 
@@ -275,9 +280,9 @@ void ABP_eyecatch_C::endEasy()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.catchFadeOutFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::catchFadeOutFinished()
+void ABP_eyecatch_C::STATIC_catchFadeOutFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.catchFadeOutFinished");
 
@@ -292,9 +297,9 @@ void ABP_eyecatch_C::catchFadeOutFinished()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.finishEasy
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::finishEasy()
+void ABP_eyecatch_C::STATIC_finishEasy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.finishEasy");
 
@@ -309,9 +314,9 @@ void ABP_eyecatch_C::finishEasy()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.BindFinishFadeIn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::BindFinishFadeIn()
+void ABP_eyecatch_C::STATIC_BindFinishFadeIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.BindFinishFadeIn");
 
@@ -326,9 +331,9 @@ void ABP_eyecatch_C::BindFinishFadeIn()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.branch_easy(in)
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::branch_easy_in_()
+void ABP_eyecatch_C::STATIC_branch_easy_in_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.branch_easy(in)");
 
@@ -343,9 +348,9 @@ void ABP_eyecatch_C::branch_easy_in_()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.BindFinishFadeOut
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::BindFinishFadeOut()
+void ABP_eyecatch_C::STATIC_BindFinishFadeOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.BindFinishFadeOut");
 
@@ -360,9 +365,9 @@ void ABP_eyecatch_C::BindFinishFadeOut()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.branch_easy(out)
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::branch_easy_out_()
+void ABP_eyecatch_C::STATIC_branch_easy_out_()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.branch_easy(out)");
 
@@ -377,9 +382,9 @@ void ABP_eyecatch_C::branch_easy_out_()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.startEasy
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void ABP_eyecatch_C::startEasy()
+void ABP_eyecatch_C::STATIC_startEasy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.startEasy");
 
@@ -394,11 +399,11 @@ void ABP_eyecatch_C::startEasy()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.ExecuteUbergraph_BP_eyecatch
-// (HasDefaults)
+// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_eyecatch_C::ExecuteUbergraph_BP_eyecatch(int EntryPoint)
+void ABP_eyecatch_C::STATIC_ExecuteUbergraph_BP_eyecatch(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_eyecatch.BP_eyecatch_C.ExecuteUbergraph_BP_eyecatch");
 
@@ -414,7 +419,7 @@ void ABP_eyecatch_C::ExecuteUbergraph_BP_eyecatch(int EntryPoint)
 
 
 // Function BP_eyecatch.BP_eyecatch_C.onFadeStart(out)__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
 
 void ABP_eyecatch_C::onFadeStart_out___DelegateSignature()
 {
@@ -423,6 +428,7 @@ void ABP_eyecatch_C::onFadeStart_out___DelegateSignature()
 	ABP_eyecatch_C_onFadeStart_out___DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -431,7 +437,7 @@ void ABP_eyecatch_C::onFadeStart_out___DelegateSignature()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.onFadeStart(in)__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
 
 void ABP_eyecatch_C::onFadeStart_in___DelegateSignature()
 {
@@ -440,6 +446,7 @@ void ABP_eyecatch_C::onFadeStart_in___DelegateSignature()
 	ABP_eyecatch_C_onFadeStart_in___DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,7 +455,7 @@ void ABP_eyecatch_C::onFadeStart_in___DelegateSignature()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.onFadeFinish(out)__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
 
 void ABP_eyecatch_C::onFadeFinish_out___DelegateSignature()
 {
@@ -457,6 +464,7 @@ void ABP_eyecatch_C::onFadeFinish_out___DelegateSignature()
 	ABP_eyecatch_C_onFadeFinish_out___DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -465,7 +473,7 @@ void ABP_eyecatch_C::onFadeFinish_out___DelegateSignature()
 
 
 // Function BP_eyecatch.BP_eyecatch_C.onFadeFinish(in)__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
 
 void ABP_eyecatch_C::onFadeFinish_in___DelegateSignature()
 {
@@ -474,6 +482,7 @@ void ABP_eyecatch_C::onFadeFinish_in___DelegateSignature()
 	ABP_eyecatch_C_onFadeFinish_in___DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

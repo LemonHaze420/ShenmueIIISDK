@@ -23,7 +23,7 @@ public:
 	float                                              _______2_cv_loc_z_263E67B64926CB0BCCC6D3A5BB7A7374;       // 0x0748(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    _______2__Direction_263E67B64926CB0BCCC6D3A5BB7A7374;     // 0x074C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x074D(0x0003) MISSED OFFSET
-	class UTimelineComponent*                          UnknownVar01;                                             // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UTimelineComponent*                          UnknownVar01;                                          // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               ButtonExec;                                               // 0x0758(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -34,19 +34,19 @@ public:
 
 
 	void StartSelectAnim(float* AnimTime);
-	void HiddenCursor(bool Hidden);
+	void STATIC_HiddenCursor(bool Hidden);
 	void PushButton(const struct FVector2D& CursorPosition);
-	void AddressBook_NextPage(bool IsNext, bool* Success);
-	void UserConstructionScript();
+	void STATIC_AddressBook_NextPage(bool IsNext, bool* Success);
+	void STATIC_UserConstructionScript();
 	void UnknownFunc01();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void Destroy();
-	void SetCaptureMempPAdPart();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_Destroy();
+	void STATIC_SetCaptureMempPAdPart();
 	void OpenBook();
-	void PushNewPage(bool IsR2);
-	void NextPage(bool bRight, bool IsLast);
-	void NextPageContinueTurning(bool bRight);
+	void STATIC_PushNewPage(bool IsR2);
+	void STATIC_NextPage(bool bRight, bool IsLast);
+	void STATIC_NextPageContinueTurning(bool bRight);
 	void ExecuteUbergraph_BP_AddressBook(int EntryPoint);
 };
 

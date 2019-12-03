@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BattleAdviceData.BattleAdviceData_C.IsLevelSufficient
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,12 +35,12 @@ bool UBattleAdviceData_C::IsLevelSufficient()
 
 
 // Function BattleAdviceData.BattleAdviceData_C.AddAdvice
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, Delegate, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EBattleAdvice>     Advice                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Score                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBattleAdviceData_C::AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Score)
+void UBattleAdviceData_C::STATIC_AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Score)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleAdviceData.BattleAdviceData_C.AddAdvice");
 
@@ -49,6 +49,7 @@ void UBattleAdviceData_C::AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Sco
 	params.Score = Score;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +58,7 @@ void UBattleAdviceData_C::AddAdvice(TEnumAsByte<EBattleAdvice> Advice, float Sco
 
 
 // Function BattleAdviceData.BattleAdviceData_C.IsRelevant
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // TEnumAsByte<EBattleAdvice>     ItemToFind                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -80,7 +81,7 @@ bool UBattleAdviceData_C::IsRelevant(TEnumAsByte<EBattleAdvice> ItemToFind)
 
 
 // Function BattleAdviceData.BattleAdviceData_C.GetMostRelevantAdvice
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, NetResponse, MulticastDelegate, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EBattleAdvice>     Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -102,7 +103,7 @@ void UBattleAdviceData_C::GetMostRelevantAdvice(TEnumAsByte<EBattleAdvice>* Outp
 
 
 // Function BattleAdviceData.BattleAdviceData_C.CalculateAdvice
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 
 void UBattleAdviceData_C::CalculateAdvice()
 {

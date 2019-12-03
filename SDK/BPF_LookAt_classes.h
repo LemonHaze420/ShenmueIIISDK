@@ -25,7 +25,7 @@ public:
 	}
 
 
-	class UBPC_LookAtFSM_C* STATIC_TryGetLookAtFSMComponent(class AActor* TargetActor, class UObject* __WorldContext);
+	class UBPC_LookAtFSM_C* TryGetLookAtFSMComponent(class AActor* TargetActor, class UObject* __WorldContext);
 	void STATIC_IsWithinASpecifiedAngle180(const struct FVector& TargetLocation, class AActor* SelfActor, float Angle, class UObject* __WorldContext, bool* bIsWithin, struct FRotator* LookAtRotation, float* TargetAngle);
 	void STATIC_LookAtSetup_Initialize(class UBPC_LookAt_C* LookAt, class UObject* __WorldContext);
 	void STATIC_LookAtSetup_ParamaterDefault(class UBPC_LookAt_C* LookAt, class UObject* __WorldContext);

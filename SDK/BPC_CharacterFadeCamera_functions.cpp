@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.IsFarCharacter
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Far                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_CharacterFadeCamera_C::IsFarCharacter(bool* Far)
+void UBPC_CharacterFadeCamera_C::STATIC_IsFarCharacter(bool* Far)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.IsFarCharacter");
 
@@ -36,17 +36,18 @@ void UBPC_CharacterFadeCamera_C::IsFarCharacter(bool* Far)
 
 
 // Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.IsNearCharacter
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bNear                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_CharacterFadeCamera_C::IsNearCharacter(bool* bNear)
+void UBPC_CharacterFadeCamera_C::STATIC_IsNearCharacter(bool* bNear)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.IsNearCharacter");
 
 	UBPC_CharacterFadeCamera_C_IsNearCharacter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,15 +59,16 @@ void UBPC_CharacterFadeCamera_C::IsNearCharacter(bool* bNear)
 
 
 // Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, NetServer)
 
-void UBPC_CharacterFadeCamera_C::ReceiveBeginPlay()
+void UBPC_CharacterFadeCamera_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.ReceiveBeginPlay");
 
 	UBPC_CharacterFadeCamera_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,15 +77,16 @@ void UBPC_CharacterFadeCamera_C::ReceiveBeginPlay()
 
 
 // Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.EnabledFadeCheck
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, NetServer)
 
-void UBPC_CharacterFadeCamera_C::EnabledFadeCheck()
+void UBPC_CharacterFadeCamera_C::STATIC_EnabledFadeCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.EnabledFadeCheck");
 
 	UBPC_CharacterFadeCamera_C_EnabledFadeCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,15 +95,16 @@ void UBPC_CharacterFadeCamera_C::EnabledFadeCheck()
 
 
 // Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.DisabledFadeCheck
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, NetServer)
 
-void UBPC_CharacterFadeCamera_C::DisabledFadeCheck()
+void UBPC_CharacterFadeCamera_C::STATIC_DisabledFadeCheck()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.DisabledFadeCheck");
 
 	UBPC_CharacterFadeCamera_C_DisabledFadeCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,11 +113,11 @@ void UBPC_CharacterFadeCamera_C::DisabledFadeCheck()
 
 
 // Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_CharacterFadeCamera_C::ReceiveTick(float DeltaSeconds)
+void UBPC_CharacterFadeCamera_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.ReceiveTick");
 
@@ -129,11 +133,11 @@ void UBPC_CharacterFadeCamera_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.ExecuteUbergraph_BPC_CharacterFadeCamera
-// ()
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_CharacterFadeCamera_C::ExecuteUbergraph_BPC_CharacterFadeCamera(int EntryPoint)
+void UBPC_CharacterFadeCamera_C::STATIC_ExecuteUbergraph_BPC_CharacterFadeCamera(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_CharacterFadeCamera.BPC_CharacterFadeCamera_C.ExecuteUbergraph_BPC_CharacterFadeCamera");
 

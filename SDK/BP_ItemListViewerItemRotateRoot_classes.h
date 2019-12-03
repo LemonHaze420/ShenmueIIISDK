@@ -41,14 +41,14 @@ public:
 	}
 
 
-	void UpdRotate();
+	void STATIC_UpdRotate();
 	void SetCalcSize(float Size);
-	void ChangeMesh(class UStaticMesh* Mesh, class USkeletalMesh* SkelMesh, class UAnimationAsset* NewAnimToPlay);
+	void STATIC_ChangeMesh(class UStaticMesh* Mesh, class USkeletalMesh* SkelMesh, class UAnimationAsset* NewAnimToPlay);
 	void SetBaseSize(float Size);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_ItemListViewerItemRotateRoot(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_ItemListViewerItemRotateRoot(int EntryPoint);
 };
 
 

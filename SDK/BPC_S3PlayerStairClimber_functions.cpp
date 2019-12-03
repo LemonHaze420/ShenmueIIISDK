@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.IsInteracting
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_S3PlayerStairClimber_C::IsInteracting()
+bool UBPC_S3PlayerStairClimber_C::STATIC_IsInteracting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.IsInteracting");
 
 	UBPC_S3PlayerStairClimber_C_IsInteracting_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,17 +36,18 @@ bool UBPC_S3PlayerStairClimber_C::IsInteracting()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.IsAbleToMove
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_S3PlayerStairClimber_C::IsAbleToMove()
+bool UBPC_S3PlayerStairClimber_C::STATIC_IsAbleToMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.IsAbleToMove");
 
 	UBPC_S3PlayerStairClimber_C_IsAbleToMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,17 +58,18 @@ bool UBPC_S3PlayerStairClimber_C::IsAbleToMove()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.IsHeightFixEnabled
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // bool                           bEnabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3PlayerStairClimber_C::IsHeightFixEnabled(bool* bEnabled)
+void UBPC_S3PlayerStairClimber_C::STATIC_IsHeightFixEnabled(bool* bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.IsHeightFixEnabled");
 
 	UBPC_S3PlayerStairClimber_C_IsHeightFixEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +81,7 @@ void UBPC_S3PlayerStairClimber_C::IsHeightFixEnabled(bool* bEnabled)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.BottomToCenterLocationWithOffset
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector                 Bottom                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Center                         (Parm, OutParm, IsPlainOldData)
@@ -91,6 +94,7 @@ void UBPC_S3PlayerStairClimber_C::BottomToCenterLocationWithOffset(const struct 
 	params.Bottom = Bottom;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -102,7 +106,7 @@ void UBPC_S3PlayerStairClimber_C::BottomToCenterLocationWithOffset(const struct 
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ShouldStartInteracting
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -123,13 +127,13 @@ bool UBPC_S3PlayerStairClimber_C::ShouldStartInteracting()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.CheckLeaving
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Event, Static, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          FudgeDist                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FudgeAngle                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_S3PlayerStairClimber_C::CheckLeaving(float FudgeDist, float FudgeAngle)
+bool UBPC_S3PlayerStairClimber_C::STATIC_CheckLeaving(float FudgeDist, float FudgeAngle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.CheckLeaving");
 
@@ -148,11 +152,11 @@ bool UBPC_S3PlayerStairClimber_C::CheckLeaving(float FudgeDist, float FudgeAngle
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ShouldKeepInteracting
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_S3PlayerStairClimber_C::ShouldKeepInteracting()
+bool UBPC_S3PlayerStairClimber_C::STATIC_ShouldKeepInteracting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ShouldKeepInteracting");
 
@@ -169,15 +173,16 @@ bool UBPC_S3PlayerStairClimber_C::ShouldKeepInteracting()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.AlignToStairInstant
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, Public, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
 
-void UBPC_S3PlayerStairClimber_C::AlignToStairInstant()
+void UBPC_S3PlayerStairClimber_C::STATIC_AlignToStairInstant()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.AlignToStairInstant");
 
 	UBPC_S3PlayerStairClimber_C_AlignToStairInstant_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,7 +191,7 @@ void UBPC_S3PlayerStairClimber_C::AlignToStairInstant()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.CalcStopMontageTime
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Private, Protected, Delegate)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -207,11 +212,11 @@ float UBPC_S3PlayerStairClimber_C::CalcStopMontageTime()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.GetStairAlignmentForward
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector UBPC_S3PlayerStairClimber_C::GetStairAlignmentForward()
+struct FVector UBPC_S3PlayerStairClimber_C::STATIC_GetStairAlignmentForward()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.GetStairAlignmentForward");
 
@@ -228,7 +233,7 @@ struct FVector UBPC_S3PlayerStairClimber_C::GetStairAlignmentForward()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.PlayMontageFrom
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UAnimMontage*            Montage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Position                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -242,6 +247,7 @@ void UBPC_S3PlayerStairClimber_C::PlayMontageFrom(class UAnimMontage* Montage, f
 	params.Position = Position;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,7 +256,7 @@ void UBPC_S3PlayerStairClimber_C::PlayMontageFrom(class UAnimMontage* Montage, f
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.CalcWalkCycleFromMontageRatio
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DirUp                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -265,6 +271,7 @@ void UBPC_S3PlayerStairClimber_C::CalcWalkCycleFromMontageRatio(float A, bool Di
 	params.DirUp = DirUp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -276,7 +283,7 @@ void UBPC_S3PlayerStairClimber_C::CalcWalkCycleFromMontageRatio(float A, bool Di
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.PlayMontage
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UAnimMontage*            Montage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -288,6 +295,7 @@ void UBPC_S3PlayerStairClimber_C::PlayMontage(class UAnimMontage* Montage)
 	params.Montage = Montage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -296,32 +304,33 @@ void UBPC_S3PlayerStairClimber_C::PlayMontage(class UAnimMontage* Montage)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ConsumeOutput
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
-// bool                           Turning                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// bool                           turning                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 TurnDirection                  (Parm, OutParm, IsPlainOldData)
 
-void UBPC_S3PlayerStairClimber_C::ConsumeOutput(bool* Turning, struct FVector* TurnDirection)
+void UBPC_S3PlayerStairClimber_C::ConsumeOutput(bool* turning, struct FVector* TurnDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ConsumeOutput");
 
 	UBPC_S3PlayerStairClimber_C_ConsumeOutput_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
-	if (Turning != nullptr)
-		*Turning = params.Turning;
+	if (turning != nullptr)
+		*turning = params.turning;
 	if (TurnDirection != nullptr)
 		*TurnDirection = params.TurnDirection;
 }
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.SetState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_PC_Stair>       State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -341,7 +350,7 @@ void UBPC_S3PlayerStairClimber_C::SetState(TEnumAsByte<EN_PC_Stair> State)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.rotate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 TargetDirection                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -361,7 +370,7 @@ void UBPC_S3PlayerStairClimber_C::rotate(const struct FVector& TargetDirection)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.MoveToLocation
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -381,7 +390,7 @@ void UBPC_S3PlayerStairClimber_C::MoveToLocation(const struct FVector& Location)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.GetRegularWalkCycle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Cycle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -403,11 +412,11 @@ void UBPC_S3PlayerStairClimber_C::GetRegularWalkCycle(float* Cycle)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.EnterFSMState
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_PC_Stair>       State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3PlayerStairClimber_C::EnterFSMState(TEnumAsByte<EN_PC_Stair> State)
+void UBPC_S3PlayerStairClimber_C::STATIC_EnterFSMState(TEnumAsByte<EN_PC_Stair> State)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.EnterFSMState");
 
@@ -423,17 +432,18 @@ void UBPC_S3PlayerStairClimber_C::EnterFSMState(TEnumAsByte<EN_PC_Stair> State)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.GetABP
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UAnimInstance*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimInstance* UBPC_S3PlayerStairClimber_C::GetABP()
+class UAnimInstance* UBPC_S3PlayerStairClimber_C::STATIC_GetABP()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.GetABP");
 
 	UBPC_S3PlayerStairClimber_C_GetABP_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -444,7 +454,7 @@ class UAnimInstance* UBPC_S3PlayerStairClimber_C::GetABP()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.GetStairWalkCycle
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UAnimMontage*            WalkLoopMontage                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Cycle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -468,7 +478,7 @@ void UBPC_S3PlayerStairClimber_C::GetStairWalkCycle(class UAnimMontage* WalkLoop
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.TickFSMTransitions
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPC_S3PlayerStairClimber_C::TickFSMTransitions()
 {
@@ -485,7 +495,7 @@ void UBPC_S3PlayerStairClimber_C::TickFSMTransitions()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.TickFSMBehavior
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -505,7 +515,7 @@ void UBPC_S3PlayerStairClimber_C::TickFSMBehavior(float DeltaSeconds)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.DeactivateFSM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, HasOutParms, HasDefaults, DLLImport)
 
 void UBPC_S3PlayerStairClimber_C::DeactivateFSM()
 {
@@ -522,7 +532,7 @@ void UBPC_S3PlayerStairClimber_C::DeactivateFSM()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ActivateFSM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EN_PC_Stair>       State                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -534,6 +544,7 @@ void UBPC_S3PlayerStairClimber_C::ActivateFSM(TEnumAsByte<EN_PC_Stair> State)
 	params.State = State;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,7 +553,7 @@ void UBPC_S3PlayerStairClimber_C::ActivateFSM(TEnumAsByte<EN_PC_Stair> State)
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBPC_S3PlayerStairClimber_C::ReceiveBeginPlay()
 {
@@ -559,7 +570,7 @@ void UBPC_S3PlayerStairClimber_C::ReceiveBeginPlay()
 
 
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ExecuteUbergraph_BPC_S3PlayerStairClimber
-// ()
+// (NetReliable, Exec, Native, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -571,6 +582,7 @@ void UBPC_S3PlayerStairClimber_C::ExecuteUbergraph_BPC_S3PlayerStairClimber(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

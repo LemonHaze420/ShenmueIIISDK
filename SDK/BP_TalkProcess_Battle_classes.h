@@ -35,13 +35,13 @@ public:
 	}
 
 
-	void EnableGameTime(bool bEnabled);
+	void STATIC_EnableGameTime(bool bEnabled);
 	void ResettingLookAtTargetActors();
 	void CachedLookAtTargetActors();
 	void OnLoaded_F2C0EA96403370D7C0981B823EF8717B(class UObject* Loaded);
 	void Activate();
-	void OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result);
-	void ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint);
+	void STATIC_OnEndBattle(TEnumAsByte<EBattleWinLoseResult> Result);
+	void STATIC_ExecuteUbergraph_BP_TalkProcess_Battle(int EntryPoint);
 };
 
 

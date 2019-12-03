@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_BPF_SafeRemoveWidget(class UObject* __WorldContext, class UWidget** Widget);
+	void BPF_SafeRemoveWidget(class UObject* __WorldContext, class UWidget** Widget);
 	void STATIC_BPF_ReaddWidgetToHorizontalBox(class UHorizontalBox* Target, class UWidget* Content, class UObject* __WorldContext);
 };
 

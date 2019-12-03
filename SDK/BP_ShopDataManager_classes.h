@@ -28,9 +28,9 @@ public:
 
 
 	void GetProductList(int ShopID, TArray<int>* ItemIDs);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_ShopDataManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_ShopDataManager(int EntryPoint);
 };
 
 

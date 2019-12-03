@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectLookActor.TalkCam_SelectLookActor_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -30,6 +30,7 @@ void UTalkCam_SelectLookActor_C::ReceiveTickAI(class AAIController* OwnerControl
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,11 +39,11 @@ void UTalkCam_SelectLookActor_C::ReceiveTickAI(class AAIController* OwnerControl
 
 
 // Function TalkCam_SelectLookActor.TalkCam_SelectLookActor_C.ExecuteUbergraph_TalkCam_SelectLookActor
-// ()
+// (Net, Native, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SelectLookActor_C::ExecuteUbergraph_TalkCam_SelectLookActor(int EntryPoint)
+void UTalkCam_SelectLookActor_C::STATIC_ExecuteUbergraph_TalkCam_SelectLookActor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SelectLookActor.TalkCam_SelectLookActor_C.ExecuteUbergraph_TalkCam_SelectLookActor");
 
@@ -50,6 +51,7 @@ void UTalkCam_SelectLookActor_C::ExecuteUbergraph_TalkCam_SelectLookActor(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

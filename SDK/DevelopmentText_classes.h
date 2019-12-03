@@ -39,12 +39,12 @@ public:
 
 	void UpdateDevelopText();
 	void UpdateGameTime();
-	void UpdateACName();
+	void STATIC_UpdateACName();
 	struct FText GetDevelopText();
-	ESlateVisibility GetDevelopTextVisibility();
+	ESlateVisibility STATIC_GetDevelopTextVisibility();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_DevelopmentText(int EntryPoint);
+	void STATIC_ExecuteUbergraph_DevelopmentText(int EntryPoint);
 };
 
 

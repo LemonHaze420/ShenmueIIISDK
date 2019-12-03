@@ -34,9 +34,9 @@ public:
 
 
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void UpdateLevelData();
-	void ExecuteUbergraph_BW_LevelStreamingDebug(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BW_LevelStreamingDebug(int EntryPoint);
 };
 
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTESimonLight.WBP_QTESimonLight_C.PlayLightAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTESimonLight_C::PlayLightAnimation()
+void UWBP_QTESimonLight_C::STATIC_PlayLightAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESimonLight.WBP_QTESimonLight_C.PlayLightAnimation");
 
 	UWBP_QTESimonLight_C_PlayLightAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

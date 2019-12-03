@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_NPCDebugTrace.BPC_NPCDebugTrace_C.Trace
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent)
 
 void UBPC_NPCDebugTrace_C::Trace()
 {
@@ -23,6 +23,7 @@ void UBPC_NPCDebugTrace_C::Trace()
 	UBPC_NPCDebugTrace_C_Trace_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void UBPC_NPCDebugTrace_C::Trace()
 
 
 // Function BPC_NPCDebugTrace.BPC_NPCDebugTrace_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBPC_NPCDebugTrace_C::ReceiveBeginPlay()
+void UBPC_NPCDebugTrace_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_NPCDebugTrace.BPC_NPCDebugTrace_C.ReceiveBeginPlay");
 
 	UBPC_NPCDebugTrace_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +50,7 @@ void UBPC_NPCDebugTrace_C::ReceiveBeginPlay()
 
 
 // Function BPC_NPCDebugTrace.BPC_NPCDebugTrace_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,7 +70,7 @@ void UBPC_NPCDebugTrace_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_NPCDebugTrace.BPC_NPCDebugTrace_C.ExecuteUbergraph_BPC_NPCDebugTrace
-// ()
+// (NetRequest, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -38,21 +38,21 @@ public:
 	}
 
 
-	void GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
+	void STATIC_GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
 	void EnabledMeshTarget();
-	void AddSuccessCount();
-	void IsGolfHoleType(bool* IsGolfHole);
+	void STATIC_AddSuccessCount();
+	void STATIC_IsGolfHoleType(bool* IsGolfHole);
 	void IsStoped(bool* bStoped);
 	void UserConstructionScript();
 	void EnterMiniGame(float EnterTime);
-	void FinalizeTalk();
-	void StartMiniGame();
-	void EndMiniGame();
-	void WinMiniGame();
-	void LoseMiniGame();
-	void DrawMiniGame();
-	void RestartMiniGame();
-	void ReceiveBeginPlay();
+	void STATIC_FinalizeTalk();
+	void STATIC_StartMiniGame();
+	void STATIC_EndMiniGame();
+	void STATIC_WinMiniGame();
+	void STATIC_LoseMiniGame();
+	void STATIC_DrawMiniGame();
+	void STATIC_RestartMiniGame();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_MiniGame_ThrowTargetBase(int EntryPoint);
 };

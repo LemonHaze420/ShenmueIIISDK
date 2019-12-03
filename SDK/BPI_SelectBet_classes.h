@@ -25,10 +25,10 @@ public:
 	}
 
 
-	void DecideCancel();
-	void DecideBet();
-	void SelectCancel();
-	void SelectMaxBet();
+	void STATIC_DecideCancel();
+	void STATIC_DecideBet();
+	void STATIC_SelectCancel();
+	void STATIC_SelectMaxBet();
 	void SelectBetDown();
 	void SelectBetUp();
 };

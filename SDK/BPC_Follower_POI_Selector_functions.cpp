@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.InRange
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, MulticastDelegate, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_Follower_POI_C*      POI                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bInRange                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBPC_Follower_POI_Selector_C::InRange(class ABP_Follower_POI_C* POI, bool* 
 	params.POI = POI;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,13 +39,13 @@ void UBPC_Follower_POI_Selector_C::InRange(class ABP_Follower_POI_C* POI, bool* 
 
 
 // Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.ScorePOI
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // class ABP_Follower_POI_C*      POI                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           TestLeaderLoS                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Score                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_Follower_POI_Selector_C::ScorePOI(class ABP_Follower_POI_C* POI, bool TestLeaderLoS, float* Score)
+void UBPC_Follower_POI_Selector_C::STATIC_ScorePOI(class ABP_Follower_POI_C* POI, bool TestLeaderLoS, float* Score)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.ScorePOI");
 
@@ -64,13 +65,13 @@ void UBPC_Follower_POI_Selector_C::ScorePOI(class ABP_Follower_POI_C* POI, bool 
 
 
 // Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.IsNavStraightLine
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // class AS3Character*            Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_Follower_POI_C*      POI                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bIsStraight                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_Follower_POI_Selector_C::IsNavStraightLine(class AS3Character* Character, class ABP_Follower_POI_C* POI, bool* bIsStraight)
+void UBPC_Follower_POI_Selector_C::STATIC_IsNavStraightLine(class AS3Character* Character, class ABP_Follower_POI_C* POI, bool* bIsStraight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.IsNavStraightLine");
 
@@ -90,7 +91,7 @@ void UBPC_Follower_POI_Selector_C::IsNavStraightLine(class AS3Character* Charact
 
 
 // Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.UpdateHistory
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_Follower_POI_C*      Selected                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,14 +111,14 @@ void UBPC_Follower_POI_Selector_C::UpdateHistory(class ABP_Follower_POI_C* Selec
 
 
 // Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.SearchForPOI
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bIgnoreTimer                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bTestLeaderLOS                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_Follower_POI_C*      POI                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bRanQuery                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_Follower_POI_Selector_C::SearchForPOI(bool bIgnoreTimer, bool bTestLeaderLOS, class ABP_Follower_POI_C** POI, bool* bRanQuery)
+void UBPC_Follower_POI_Selector_C::STATIC_SearchForPOI(bool bIgnoreTimer, bool bTestLeaderLOS, class ABP_Follower_POI_C** POI, bool* bRanQuery)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.SearchForPOI");
 
@@ -139,7 +140,7 @@ void UBPC_Follower_POI_Selector_C::SearchForPOI(bool bIgnoreTimer, bool bTestLea
 
 
 // Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -151,6 +152,7 @@ void UBPC_Follower_POI_Selector_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -159,7 +161,7 @@ void UBPC_Follower_POI_Selector_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_Follower_POI_Selector.BPC_Follower_POI_Selector_C.ExecuteUbergraph_BPC_Follower_POI_Selector
-// ()
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -171,6 +173,7 @@ void UBPC_Follower_POI_Selector_C::ExecuteUbergraph_BPC_Follower_POI_Selector(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_BPF_CreateRequestCounter(class UObject* __WorldContext, class URequestCounter_C** Reference);
+	void BPF_CreateRequestCounter(class UObject* __WorldContext, class URequestCounter_C** Reference);
 	void STATIC_BPF_RemoveRequest(class UObject* RequestingObject, class UObject* __WorldContext, class URequestCounter_C** RequestCounterReference, bool* NewlyRemoved);
 	void STATIC_BPF_AddRequest(class UObject* RequestingObject, class URequestCounter_C* RequestCounter, class UObject* __WorldContext, class URequestCounter_C** Reference, bool* NewlyRequested);
 };

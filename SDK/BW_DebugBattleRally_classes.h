@@ -34,12 +34,12 @@ public:
 	void ListUpRewards();
 	void BuildMenu();
 	void SetInitialFocus();
-	void OnUserToggledAward(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
-	void OnUserChangeAwardCount(int Value, class UBW_IntegerProperty_C* Context);
+	void STATIC_OnUserToggledAward(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
+	void STATIC_OnUserChangeAwardCount(int Value, class UBW_IntegerProperty_C* Context);
 	void BndEvt__S3Button_58_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
 	void BndEvt__Button_Save_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
-	void OnScrollBoxItemFocused(class UWidget* Widget);
-	void ExecuteUbergraph_BW_DebugBattleRally(int EntryPoint);
+	void STATIC_OnScrollBoxItemFocused(class UWidget* Widget);
+	void STATIC_ExecuteUbergraph_BW_DebugBattleRally(int EntryPoint);
 };
 
 

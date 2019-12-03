@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3EyecatchManager(class UObject* __WorldContext, class ABP_eyecatch_C** BP_eyecatch);
+	void getS3EyecatchManager(class UObject* __WorldContext, class ABP_eyecatch_C** BP_eyecatch);
 };
 
 

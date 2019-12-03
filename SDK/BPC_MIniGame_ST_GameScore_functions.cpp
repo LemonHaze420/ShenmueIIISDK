@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MIniGame_ST_GameScore.BPC_MIniGame_ST_GameScore_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, BlueprintCallable)
 
-void UBPC_MIniGame_ST_GameScore_C::Reset()
+void UBPC_MIniGame_ST_GameScore_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MIniGame_ST_GameScore.BPC_MIniGame_ST_GameScore_C.Reset");
 
 	UBPC_MIniGame_ST_GameScore_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBPC_MIniGame_ST_GameScore_C::Reset()
 
 
 // Function BPC_MIniGame_ST_GameScore.BPC_MIniGame_ST_GameScore_C.IncrementSuccessCount
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport)
 
 void UBPC_MIniGame_ST_GameScore_C::IncrementSuccessCount()
 {
@@ -48,12 +49,12 @@ void UBPC_MIniGame_ST_GameScore_C::IncrementSuccessCount()
 
 
 // Function BPC_MIniGame_ST_GameScore.BPC_MIniGame_ST_GameScore_C.AddPoint
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Total                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MIniGame_ST_GameScore_C::AddPoint(int Add, int* Total)
+void UBPC_MIniGame_ST_GameScore_C::STATIC_AddPoint(int Add, int* Total)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MIniGame_ST_GameScore.BPC_MIniGame_ST_GameScore_C.AddPoint");
 
@@ -61,6 +62,7 @@ void UBPC_MIniGame_ST_GameScore_C::AddPoint(int Add, int* Total)
 	params.Add = Add;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,11 +74,11 @@ void UBPC_MIniGame_ST_GameScore_C::AddPoint(int Add, int* Total)
 
 
 // Function BPC_MIniGame_ST_GameScore.BPC_MIniGame_ST_GameScore_C.ExecuteUbergraph_BPC_MIniGame_ST_GameScore
-// ()
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MIniGame_ST_GameScore_C::ExecuteUbergraph_BPC_MIniGame_ST_GameScore(int EntryPoint)
+void UBPC_MIniGame_ST_GameScore_C::STATIC_ExecuteUbergraph_BPC_MIniGame_ST_GameScore(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MIniGame_ST_GameScore.BPC_MIniGame_ST_GameScore_C.ExecuteUbergraph_BPC_MIniGame_ST_GameScore");
 
@@ -84,6 +86,7 @@ void UBPC_MIniGame_ST_GameScore_C::ExecuteUbergraph_BPC_MIniGame_ST_GameScore(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

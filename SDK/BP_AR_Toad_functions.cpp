@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AR_Toad.BP_AR_Toad_C.IsUsingSpecialData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           UseSpecial                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_AR_Toad_C::IsUsingSpecialData(bool* UseSpecial)
 	ABP_AR_Toad_C_IsUsingSpecialData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,17 +37,18 @@ void ABP_AR_Toad_C::IsUsingSpecialData(bool* UseSpecial)
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.PlayerBetAction
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Toad_C::PlayerBetAction(bool* dummy)
+void ABP_AR_Toad_C::STATIC_PlayerBetAction(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.PlayerBetAction");
 
 	ABP_AR_Toad_C_PlayerBetAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,17 +60,18 @@ void ABP_AR_Toad_C::PlayerBetAction(bool* dummy)
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.GetJumpDistance
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          Distance                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Toad_C::GetJumpDistance(float* Distance)
+void ABP_AR_Toad_C::STATIC_GetJumpDistance(float* Distance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.GetJumpDistance");
 
 	ABP_AR_Toad_C_GetJumpDistance_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +83,7 @@ void ABP_AR_Toad_C::GetJumpDistance(float* Distance)
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.getSettingInfo
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          motion_rate                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          jump_height                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -108,15 +111,16 @@ void ABP_AR_Toad_C::getSettingInfo(float* motion_rate, float* jump_height, float
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_AR_Toad_C::UserConstructionScript()
+void ABP_AR_Toad_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.UserConstructionScript");
 
 	ABP_AR_Toad_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,11 +129,11 @@ void ABP_AR_Toad_C::UserConstructionScript()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Toad_C::ReceiveTick(float DeltaSeconds)
+void ABP_AR_Toad_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.ReceiveTick");
 
@@ -137,6 +141,7 @@ void ABP_AR_Toad_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,15 +150,16 @@ void ABP_AR_Toad_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::ReceiveBeginPlay()
+void ABP_AR_Toad_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.ReceiveBeginPlay");
 
 	ABP_AR_Toad_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,15 +168,16 @@ void ABP_AR_Toad_C::ReceiveBeginPlay()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.UpdateWalkRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::UpdateWalkRate()
+void ABP_AR_Toad_C::STATIC_UpdateWalkRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.UpdateWalkRate");
 
 	ABP_AR_Toad_C_UpdateWalkRate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,15 +186,16 @@ void ABP_AR_Toad_C::UpdateWalkRate()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::Reset()
+void ABP_AR_Toad_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.Reset");
 
 	ABP_AR_Toad_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,11 +204,11 @@ void ABP_AR_Toad_C::Reset()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.SetMotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_AR_Motion_Type>  mot_type                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Toad_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
+void ABP_AR_Toad_C::STATIC_SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.SetMotion");
 
@@ -208,6 +216,7 @@ void ABP_AR_Toad_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 	params.mot_type = mot_type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -216,11 +225,11 @@ void ABP_AR_Toad_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.ChangeShape
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Toad_C::ChangeShape(int Index)
+void ABP_AR_Toad_C::STATIC_ChangeShape(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.ChangeShape");
 
@@ -228,6 +237,7 @@ void ABP_AR_Toad_C::ChangeShape(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,15 +246,16 @@ void ABP_AR_Toad_C::ChangeShape(int Index)
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.MoveUpdate
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::MoveUpdate()
+void ABP_AR_Toad_C::STATIC_MoveUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.MoveUpdate");
 
 	ABP_AR_Toad_C_MoveUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -253,9 +264,9 @@ void ABP_AR_Toad_C::MoveUpdate()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.IdleEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::IdleEnd()
+void ABP_AR_Toad_C::STATIC_IdleEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.IdleEnd");
 
@@ -270,9 +281,9 @@ void ABP_AR_Toad_C::IdleEnd()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.MoveAnimEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::MoveAnimEnd()
+void ABP_AR_Toad_C::STATIC_MoveAnimEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.MoveAnimEnd");
 
@@ -287,9 +298,9 @@ void ABP_AR_Toad_C::MoveAnimEnd()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.SetSideRate
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::SetSideRate()
+void ABP_AR_Toad_C::STATIC_SetSideRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.SetSideRate");
 
@@ -304,9 +315,9 @@ void ABP_AR_Toad_C::SetSideRate()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.MoveZero
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::MoveZero()
+void ABP_AR_Toad_C::STATIC_MoveZero()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.MoveZero");
 
@@ -321,9 +332,9 @@ void ABP_AR_Toad_C::MoveZero()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.MaxJump
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::MaxJump()
+void ABP_AR_Toad_C::STATIC_MaxJump()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.MaxJump");
 
@@ -338,9 +349,9 @@ void ABP_AR_Toad_C::MaxJump()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.ResetLocation
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::ResetLocation()
+void ABP_AR_Toad_C::STATIC_ResetLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.ResetLocation");
 
@@ -355,9 +366,9 @@ void ABP_AR_Toad_C::ResetLocation()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.Jump Start
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::Jump_Start()
+void ABP_AR_Toad_C::STATIC_Jump_Start()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.Jump Start");
 
@@ -372,9 +383,9 @@ void ABP_AR_Toad_C::Jump_Start()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.walk Start
-// (BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::walk_Start()
+void ABP_AR_Toad_C::STATIC_walk_Start()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.walk Start");
 
@@ -389,9 +400,9 @@ void ABP_AR_Toad_C::walk_Start()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.WalkStEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::WalkStEnd()
+void ABP_AR_Toad_C::STATIC_WalkStEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.WalkStEnd");
 
@@ -406,9 +417,9 @@ void ABP_AR_Toad_C::WalkStEnd()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.Event_PlaySEWalk
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::Event_PlaySEWalk()
+void ABP_AR_Toad_C::STATIC_Event_PlaySEWalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.Event_PlaySEWalk");
 
@@ -423,9 +434,9 @@ void ABP_AR_Toad_C::Event_PlaySEWalk()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.Event_PlaySECry
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::Event_PlaySECry()
+void ABP_AR_Toad_C::STATIC_Event_PlaySECry()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.Event_PlaySECry");
 
@@ -440,9 +451,9 @@ void ABP_AR_Toad_C::Event_PlaySECry()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.CheerAnimalBoost
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_Toad_C::CheerAnimalBoost()
+void ABP_AR_Toad_C::STATIC_CheerAnimalBoost()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.CheerAnimalBoost");
 
@@ -457,7 +468,7 @@ void ABP_AR_Toad_C::CheerAnimalBoost()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.DoubleJump
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AR_Toad_C::DoubleJump()
 {
@@ -466,6 +477,7 @@ void ABP_AR_Toad_C::DoubleJump()
 	ABP_AR_Toad_C_DoubleJump_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -474,11 +486,11 @@ void ABP_AR_Toad_C::DoubleJump()
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.SetAnimNotRaceStartPos
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Start                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_Toad_C::SetAnimNotRaceStartPos(float Start)
+void ABP_AR_Toad_C::STATIC_SetAnimNotRaceStartPos(float Start)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_Toad.BP_AR_Toad_C.SetAnimNotRaceStartPos");
 
@@ -486,6 +498,7 @@ void ABP_AR_Toad_C::SetAnimNotRaceStartPos(float Start)
 	params.Start = Start;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -494,7 +507,7 @@ void ABP_AR_Toad_C::SetAnimNotRaceStartPos(float Start)
 
 
 // Function BP_AR_Toad.BP_AR_Toad_C.ExecuteUbergraph_BP_AR_Toad
-// (HasDefaults)
+// (NetReliable, Public, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

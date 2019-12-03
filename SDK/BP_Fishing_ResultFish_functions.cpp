@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.SetResultAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UAnimationAsset*         NewAnimToPlay                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_ResultFish_C::SetResultAnimation(class UAnimationAsset* NewAnimToPlay)
+void ABP_Fishing_ResultFish_C::STATIC_SetResultAnimation(class UAnimationAsset* NewAnimToPlay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.SetResultAnimation");
 
@@ -34,9 +34,9 @@ void ABP_Fishing_ResultFish_C::SetResultAnimation(class UAnimationAsset* NewAnim
 
 
 // Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_Fishing_ResultFish_C::UserConstructionScript()
+void ABP_Fishing_ResultFish_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_ResultFish.BP_Fishing_ResultFish_C.UserConstructionScript");
 

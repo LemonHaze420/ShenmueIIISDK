@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MenuFrame.WBP_MenuFrame_C.InitBGTint
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 
 void UWBP_MenuFrame_C::InitBGTint()
 {
@@ -31,11 +31,11 @@ void UWBP_MenuFrame_C::InitBGTint()
 
 
 // Function WBP_MenuFrame.WBP_MenuFrame_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrame_C::PreConstruct(bool IsDesignTime)
+void UWBP_MenuFrame_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrame.WBP_MenuFrame_C.PreConstruct");
 
@@ -51,11 +51,11 @@ void UWBP_MenuFrame_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_MenuFrame.WBP_MenuFrame_C.ExecuteUbergraph_WBP_MenuFrame
-// ()
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MenuFrame_C::ExecuteUbergraph_WBP_MenuFrame(int EntryPoint)
+void UWBP_MenuFrame_C::STATIC_ExecuteUbergraph_WBP_MenuFrame(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MenuFrame.WBP_MenuFrame_C.ExecuteUbergraph_WBP_MenuFrame");
 

@@ -26,6 +26,7 @@ public:
 
 
 	struct FString GetNotifyName();
+	void GetNotifyID(struct FName* NotifyID);
 };
 
 

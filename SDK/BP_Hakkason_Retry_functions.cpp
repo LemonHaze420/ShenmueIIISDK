@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.StopSetGameTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_Hakkason_Retry_C::StopSetGameTime()
 {
@@ -31,7 +31,7 @@ void ABP_Hakkason_Retry_C::StopSetGameTime()
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InitSet
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Need_EndFade                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Qte_Retry                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -59,9 +59,9 @@ void ABP_Hakkason_Retry_C::InitSet(bool Need_EndFade, bool Qte_Retry, float Batt
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Hakkason_Retry_C::UserConstructionScript()
+void ABP_Hakkason_Retry_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.UserConstructionScript");
 
@@ -76,11 +76,11 @@ void ABP_Hakkason_Retry_C::UserConstructionScript()
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchTopButton_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Hakkason_Retry_C::InpActEvt_SearchTopButton_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_Hakkason_Retry_C::STATIC_InpActEvt_SearchTopButton_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchTopButton_K2Node_InputActionEvent_8");
 
@@ -96,11 +96,11 @@ void ABP_Hakkason_Retry_C::InpActEvt_SearchTopButton_K2Node_InputActionEvent_8(c
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Hakkason_Retry_C::InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_Hakkason_Retry_C::STATIC_InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7");
 
@@ -116,11 +116,11 @@ void ABP_Hakkason_Retry_C::InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7(
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_6
-// (BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Hakkason_Retry_C::InpActEvt_SearchRightButton_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_Hakkason_Retry_C::STATIC_InpActEvt_SearchRightButton_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchRightButton_K2Node_InputActionEvent_6");
 
@@ -136,11 +136,11 @@ void ABP_Hakkason_Retry_C::InpActEvt_SearchRightButton_K2Node_InputActionEvent_6
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5
-// (BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_Hakkason_Retry_C::InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_Hakkason_Retry_C::STATIC_InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5");
 
@@ -156,11 +156,11 @@ void ABP_Hakkason_Retry_C::InpActEvt_SearchBottomButton_K2Node_InputActionEvent_
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_Retry_C::ReceiveTick(float DeltaSeconds)
+void ABP_Hakkason_Retry_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.ReceiveTick");
 
@@ -176,12 +176,12 @@ void ABP_Hakkason_Retry_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.RenewalActorCount
-// (BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_MainFlowActorID> ActorId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // unsigned char                  RenewalCounter                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_Retry_C::RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter)
+void ABP_Hakkason_Retry_C::STATIC_RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.RenewalActorCount");
 
@@ -198,7 +198,7 @@ void ABP_Hakkason_Retry_C::RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> Act
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.TickChangeCheckKill
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_Hakkason_Retry_C::TickChangeCheckKill()
 {
@@ -215,11 +215,11 @@ void ABP_Hakkason_Retry_C::TickChangeCheckKill()
 
 
 // Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.ExecuteUbergraph_BP_Hakkason_Retry
-// (HasDefaults)
+// (Exec, Native, NetResponse, Static, Private, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Hakkason_Retry_C::ExecuteUbergraph_BP_Hakkason_Retry(int EntryPoint)
+void ABP_Hakkason_Retry_C::STATIC_ExecuteUbergraph_BP_Hakkason_Retry(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Hakkason_Retry.BP_Hakkason_Retry_C.ExecuteUbergraph_BP_Hakkason_Retry");
 
@@ -227,6 +227,7 @@ void ABP_Hakkason_Retry_C::ExecuteUbergraph_BP_Hakkason_Retry(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

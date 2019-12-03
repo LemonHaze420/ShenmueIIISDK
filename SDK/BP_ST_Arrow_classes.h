@@ -25,7 +25,7 @@ public:
 	TArray<class USplineMeshComponent*>                SplineMeshList;                                           // 0x0350(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	float                                              SplineLength;                                             // 0x0360(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Velocity;                                                 // 0x0364(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              degree;                                                   // 0x0368(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Degree;                                                   // 0x0368(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Gravity;                                                  // 0x036C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<struct FVector>                             SplinePosList;                                            // 0x0370(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	int                                                Accuracy;                                                 // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -48,27 +48,27 @@ public:
 
 
 	void EnabledSplineMesh(bool Enabled);
-	void SetArrowNumRate(float Value);
+	void STATIC_SetArrowNumRate(float Value);
 	void SetArrowMaskSize(const struct FVector2D& InSize);
-	void SetHorizonTaperedScale(float Rate);
-	void SetMaxAlpha(float MaxAlpha);
-	void Reset(float Velocity, float degree, float Gravity);
-	void SetReverseRate(float Rate);
-	void SetArrowLength(float Length);
-	void Initialize();
-	void UpdateVisibleArrow(float DeltaSeconds);
+	void STATIC_SetHorizonTaperedScale(float Rate);
+	void STATIC_SetMaxAlpha(float MaxAlpha);
+	void STATIC_Reset(float Velocity, float Degree, float Gravity);
+	void STATIC_SetReverseRate(float Rate);
+	void STATIC_SetArrowLength(float Length);
+	void STATIC_Initialize();
+	void STATIC_UpdateVisibleArrow(float DeltaSeconds);
 	void SetVisibleArrow(bool Visible);
-	void SetGradationPower(float Power);
+	void STATIC_SetGradationPower(float Power);
 	void SetGradationSpeed(float Speed);
-	void SetSplinePos(float Velocity, float degree, float Gravity);
-	void GetXYZ(float Time, struct FVector* Location);
-	void GetHeight(float Time, float* Height);
-	void getDistance(float Time, float* Distance);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void SetRenderTargetTickEnabled(bool bEnabled);
-	void ExecuteUbergraph_BP_ST_Arrow(int EntryPoint);
+	void STATIC_SetSplinePos(float Velocity, float Degree, float Gravity);
+	void STATIC_GetXYZ(float Time, struct FVector* Location);
+	void STATIC_GetHeight(float Time, float* Height);
+	void STATIC_getDistance(float Time, float* Distance);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_SetRenderTargetTickEnabled(bool bEnabled);
+	void STATIC_ExecuteUbergraph_BP_ST_Arrow(int EntryPoint);
 };
 
 

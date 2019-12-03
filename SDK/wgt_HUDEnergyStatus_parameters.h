@@ -17,7 +17,7 @@ namespace SDK
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.SetMinimapMode
 struct Uwgt_HUDEnergyStatus_C_SetMinimapMode_Params
 {
-	bool                                               MiniMap;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Minimap;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function wgt_HUDEnergyStatus.wgt_HUDEnergyStatus_C.SetVisible

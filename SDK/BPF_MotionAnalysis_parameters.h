@@ -14,6 +14,16 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function BPF_MotionAnalysis.BPF_MotionAnalysis_C.BPF_FindOverlappingNotifyState
+struct UBPF_MotionAnalysis_C_BPF_FindOverlappingNotifyState_Params
+{
+	class UAnimMontage*                                Montage;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      FindStateClass;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyState*                            StateRef;                                                 // (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyState*                            OutState;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

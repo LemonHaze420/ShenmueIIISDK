@@ -32,9 +32,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_DrivePoint(int EntryPoint);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_DrivePoint(int EntryPoint);
 };
 
 

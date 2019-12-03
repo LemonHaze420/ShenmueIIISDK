@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.ResetValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_MIniGame_WM_Score_C::ResetValue()
 {
@@ -23,6 +23,7 @@ void ABP_MIniGame_WM_Score_C::ResetValue()
 	ABP_MIniGame_WM_Score_C_ResetValue_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void ABP_MIniGame_WM_Score_C::ResetValue()
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.SetVisiblity
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MIniGame_WM_Score_C::SetVisiblity(bool Visible)
+void ABP_MIniGame_WM_Score_C::STATIC_SetVisiblity(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.SetVisiblity");
 
@@ -51,15 +52,16 @@ void ABP_MIniGame_WM_Score_C::SetVisiblity(bool Visible)
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.UpdateNumber
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_MIniGame_WM_Score_C::UpdateNumber()
+void ABP_MIniGame_WM_Score_C::STATIC_UpdateNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.UpdateNumber");
 
 	ABP_MIniGame_WM_Score_C_UpdateNumber_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,11 +70,11 @@ void ABP_MIniGame_WM_Score_C::UpdateNumber()
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.Initialize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            DigitsNumber                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MIniGame_WM_Score_C::Initialize(int DigitsNumber)
+void ABP_MIniGame_WM_Score_C::STATIC_Initialize(int DigitsNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.Initialize");
 
@@ -88,12 +90,12 @@ void ABP_MIniGame_WM_Score_C::Initialize(int DigitsNumber)
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.SetNumber
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Number                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsStage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MIniGame_WM_Score_C::SetNumber(int Number, bool IsStage)
+void ABP_MIniGame_WM_Score_C::STATIC_SetNumber(int Number, bool IsStage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.SetNumber");
 
@@ -102,6 +104,7 @@ void ABP_MIniGame_WM_Score_C::SetNumber(int Number, bool IsStage)
 	params.IsStage = IsStage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -110,7 +113,7 @@ void ABP_MIniGame_WM_Score_C::SetNumber(int Number, bool IsStage)
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.GetUVs
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, Private, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Num                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FVector2D>       Array                          (Parm, OutParm, ZeroConstructor)
@@ -123,6 +126,7 @@ void ABP_MIniGame_WM_Score_C::GetUVs(int Num, TArray<struct FVector2D>* Array)
 	params.Num = Num;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,15 +138,16 @@ void ABP_MIniGame_WM_Score_C::GetUVs(int Num, TArray<struct FVector2D>* Array)
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_MIniGame_WM_Score_C::UserConstructionScript()
+void ABP_MIniGame_WM_Score_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.UserConstructionScript");
 
 	ABP_MIniGame_WM_Score_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,15 +156,16 @@ void ABP_MIniGame_WM_Score_C::UserConstructionScript()
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 
-void ABP_MIniGame_WM_Score_C::ReceiveBeginPlay()
+void ABP_MIniGame_WM_Score_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.ReceiveBeginPlay");
 
 	ABP_MIniGame_WM_Score_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -168,11 +174,11 @@ void ABP_MIniGame_WM_Score_C::ReceiveBeginPlay()
 
 
 // Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.ExecuteUbergraph_BP_MIniGame_WM_Score
-// ()
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MIniGame_WM_Score_C::ExecuteUbergraph_BP_MIniGame_WM_Score(int EntryPoint)
+void ABP_MIniGame_WM_Score_C::STATIC_ExecuteUbergraph_BP_MIniGame_WM_Score(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MIniGame_WM_Score.BP_MIniGame_WM_Score_C.ExecuteUbergraph_BP_MIniGame_WM_Score");
 
@@ -180,6 +186,7 @@ void ABP_MIniGame_WM_Score_C::ExecuteUbergraph_BP_MIniGame_WM_Score(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

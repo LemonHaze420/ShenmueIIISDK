@@ -28,14 +28,14 @@ public:
 
 
 	void UserConstructionScript();
-	void InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16(const struct FKey& Key);
-	void InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_15(const struct FKey& Key);
-	void InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_14(const struct FKey& Key);
-	void InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_13(const struct FKey& Key);
-	void InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_12(const struct FKey& Key);
-	void InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_11(const struct FKey& Key);
-	void InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_10(const struct FKey& Key);
-	void InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_16(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_15(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_14(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_13(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_12(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_11(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_10(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9(const struct FKey& Key);
 	void ExecuteUbergraph_BP_QTETitle_Input(int EntryPoint);
 };
 

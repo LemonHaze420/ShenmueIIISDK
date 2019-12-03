@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ApexDestruction.DestructibleComponent.SetDestructibleMesh
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UDestructibleMesh*       NewMesh                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMes
 	params.NewMesh = NewMesh;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UDestructibleComponent::SetDestructibleMesh(class UDestructibleMesh* NewMes
 
 
 // Function ApexDestruction.DestructibleComponent.GetDestructibleMesh
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UDestructibleMesh*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -46,7 +45,6 @@ class UDestructibleMesh* UDestructibleComponent::GetDestructibleMesh()
 	UDestructibleComponent_GetDestructibleMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,7 +55,7 @@ class UDestructibleMesh* UDestructibleComponent::GetDestructibleMesh()
 
 
 // Function ApexDestruction.DestructibleComponent.ApplyRadiusDamage
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // float                          BaseDamage                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HurtOrigin                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -77,7 +75,6 @@ void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FV
 	params.bFullDamage = bFullDamage;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,7 +83,7 @@ void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const struct FV
 
 
 // Function ApexDestruction.DestructibleComponent.ApplyDamage
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // float                          DamageAmount                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 HitLocation                    (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -104,7 +101,6 @@ void UDestructibleComponent::ApplyDamage(float DamageAmount, const struct FVecto
 	params.ImpulseStrength = ImpulseStrength;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

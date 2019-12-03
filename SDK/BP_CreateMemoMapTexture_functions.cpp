@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CreateMemoMapTexture.BP_CreateMemoMapTexture_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_CreateMemoMapTexture_C::UserConstructionScript()
 {
@@ -23,6 +23,7 @@ void ABP_CreateMemoMapTexture_C::UserConstructionScript()
 	ABP_CreateMemoMapTexture_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_CreateMemoMapTexture_C::UserConstructionScript()
 
 
 // Function BP_CreateMemoMapTexture.BP_CreateMemoMapTexture_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_CreateMemoMapTexture_C::ReceiveBeginPlay()
 {
@@ -48,7 +49,7 @@ void ABP_CreateMemoMapTexture_C::ReceiveBeginPlay()
 
 
 // Function BP_CreateMemoMapTexture.BP_CreateMemoMapTexture_C.ExecuteUbergraph_BP_CreateMemoMapTexture
-// ()
+// (Net, Exec, Native, Event, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +61,7 @@ void ABP_CreateMemoMapTexture_C::ExecuteUbergraph_BP_CreateMemoMapTexture(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

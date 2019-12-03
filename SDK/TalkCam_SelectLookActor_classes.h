@@ -30,7 +30,7 @@ public:
 
 
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
-	void ExecuteUbergraph_TalkCam_SelectLookActor(int EntryPoint);
+	void STATIC_ExecuteUbergraph_TalkCam_SelectLookActor(int EntryPoint);
 };
 
 

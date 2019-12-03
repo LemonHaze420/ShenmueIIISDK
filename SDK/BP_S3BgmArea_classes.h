@@ -30,11 +30,11 @@ public:
 	}
 
 
-	void GetBGM(class USoundAtomCue** BGM);
-	void InitCue();
-	struct FS3BgmAreaSourceInfo GetSourceInfo();
+	void STATIC_GetBGM(class USoundAtomCue** BGM);
+	void STATIC_InitCue();
+	struct FS3BgmAreaSourceInfo STATIC_GetSourceInfo();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_S3BgmArea(int EntryPoint);
 };
 

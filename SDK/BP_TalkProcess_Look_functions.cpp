@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void UBP_TalkProcess_Look_C::Activate()
+void UBP_TalkProcess_Look_C::STATIC_Activate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Activate");
 
 	UBP_TalkProcess_Look_C_Activate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void UBP_TalkProcess_Look_C::Activate()
 
 
 // Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Update
-// (Event, Public, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Look_C::Update(float DeltaTime)
+void UBP_TalkProcess_Look_C::STATIC_Update(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.Update");
 
@@ -43,6 +44,7 @@ void UBP_TalkProcess_Look_C::Update(float DeltaTime)
 	params.DeltaTime = DeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,11 +53,11 @@ void UBP_TalkProcess_Look_C::Update(float DeltaTime)
 
 
 // Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.ExecuteUbergraph_BP_TalkProcess_Look
-// ()
+// (NetReliable, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_Look_C::ExecuteUbergraph_BP_TalkProcess_Look(int EntryPoint)
+void UBP_TalkProcess_Look_C::STATIC_ExecuteUbergraph_BP_TalkProcess_Look(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_Look.BP_TalkProcess_Look_C.ExecuteUbergraph_BP_TalkProcess_Look");
 

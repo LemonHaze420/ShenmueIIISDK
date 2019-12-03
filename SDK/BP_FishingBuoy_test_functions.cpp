@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetRefractionRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::SetRefractionRate(float Rate)
+void ABP_FishingBuoy_test_C::STATIC_SetRefractionRate(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetRefractionRate");
 
@@ -26,6 +26,7 @@ void ABP_FishingBuoy_test_C::SetRefractionRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,12 +35,12 @@ void ABP_FishingBuoy_test_C::SetRefractionRate(float Rate)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.InitializeBuoyTransform
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FVector                 PreBuoyLocation                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 BaseDirection                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::InitializeBuoyTransform(const struct FVector& PreBuoyLocation, const struct FVector& BaseDirection)
+void ABP_FishingBuoy_test_C::STATIC_InitializeBuoyTransform(const struct FVector& PreBuoyLocation, const struct FVector& BaseDirection)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.InitializeBuoyTransform");
 
@@ -48,6 +49,7 @@ void ABP_FishingBuoy_test_C::InitializeBuoyTransform(const struct FVector& PreBu
 	params.BaseDirection = BaseDirection;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,11 +58,11 @@ void ABP_FishingBuoy_test_C::InitializeBuoyTransform(const struct FVector& PreBu
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetPreBuoyLocation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 PreBuoyLocation                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::SetPreBuoyLocation(const struct FVector& PreBuoyLocation)
+void ABP_FishingBuoy_test_C::STATIC_SetPreBuoyLocation(const struct FVector& PreBuoyLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetPreBuoyLocation");
 
@@ -76,11 +78,11 @@ void ABP_FishingBuoy_test_C::SetPreBuoyLocation(const struct FVector& PreBuoyLoc
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateBuoyTransform
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ForceUpdate                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::UpdateBuoyTransform(bool ForceUpdate)
+void ABP_FishingBuoy_test_C::STATIC_UpdateBuoyTransform(bool ForceUpdate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateBuoyTransform");
 
@@ -88,6 +90,7 @@ void ABP_FishingBuoy_test_C::UpdateBuoyTransform(bool ForceUpdate)
 	params.ForceUpdate = ForceUpdate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,17 +99,18 @@ void ABP_FishingBuoy_test_C::UpdateBuoyTransform(bool ForceUpdate)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.GetCableLengthRate
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          CableLengthRate                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::GetCableLengthRate(float* CableLengthRate)
+void ABP_FishingBuoy_test_C::STATIC_GetCableLengthRate(float* CableLengthRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.GetCableLengthRate");
 
 	ABP_FishingBuoy_test_C_GetCableLengthRate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,15 +122,16 @@ void ABP_FishingBuoy_test_C::GetCableLengthRate(float* CableLengthRate)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ResetIdleMove
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::ResetIdleMove()
+void ABP_FishingBuoy_test_C::STATIC_ResetIdleMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ResetIdleMove");
 
 	ABP_FishingBuoy_test_C_ResetIdleMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -135,9 +140,9 @@ void ABP_FishingBuoy_test_C::ResetIdleMove()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateIdleMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::UpdateIdleMove()
+void ABP_FishingBuoy_test_C::STATIC_UpdateIdleMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateIdleMove");
 
@@ -152,7 +157,7 @@ void ABP_FishingBuoy_test_C::UpdateIdleMove()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdatePull
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_FishingBuoy_test_C::UpdatePull()
 {
@@ -161,6 +166,7 @@ void ABP_FishingBuoy_test_C::UpdatePull()
 	ABP_FishingBuoy_test_C_UpdatePull_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,12 +175,12 @@ void ABP_FishingBuoy_test_C::UpdatePull()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.AddPower
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FVector                 ArgVector                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          ArgPow                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::AddPower(const struct FVector& ArgVector, float ArgPow)
+void ABP_FishingBuoy_test_C::STATIC_AddPower(const struct FVector& ArgVector, float ArgPow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.AddPower");
 
@@ -183,6 +189,7 @@ void ABP_FishingBuoy_test_C::AddPower(const struct FVector& ArgVector, float Arg
 	params.ArgPow = ArgPow;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,7 +198,7 @@ void ABP_FishingBuoy_test_C::AddPower(const struct FVector& ArgVector, float Arg
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.GetBPMinigameFishing
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class ABP_Minigame_Fishing_Test_C* RetBPFishing                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -202,6 +209,7 @@ void ABP_FishingBuoy_test_C::GetBPMinigameFishing(class ABP_Minigame_Fishing_Tes
 	ABP_FishingBuoy_test_C_GetBPMinigameFishing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,7 +221,7 @@ void ABP_FishingBuoy_test_C::GetBPMinigameFishing(class ABP_Minigame_Fishing_Tes
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ProjectileStopFunc
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_FishingBuoy_test_C::ProjectileStopFunc()
 {
@@ -222,6 +230,7 @@ void ABP_FishingBuoy_test_C::ProjectileStopFunc()
 	ABP_FishingBuoy_test_C_ProjectileStopFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,9 +239,9 @@ void ABP_FishingBuoy_test_C::ProjectileStopFunc()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateGuideArrowMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::UpdateGuideArrowMove()
+void ABP_FishingBuoy_test_C::STATIC_UpdateGuideArrowMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateGuideArrowMove");
 
@@ -247,12 +256,12 @@ void ABP_FishingBuoy_test_C::UpdateGuideArrowMove()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetupGuideArrow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_Fishing_Arrow_C*     ArgArrow                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ArgArrowPow                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::SetupGuideArrow(class ABP_Fishing_Arrow_C* ArgArrow, float ArgArrowPow)
+void ABP_FishingBuoy_test_C::STATIC_SetupGuideArrow(class ABP_Fishing_Arrow_C* ArgArrow, float ArgArrowPow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetupGuideArrow");
 
@@ -261,6 +270,7 @@ void ABP_FishingBuoy_test_C::SetupGuideArrow(class ABP_Fishing_Arrow_C* ArgArrow
 	params.ArgArrowPow = ArgArrowPow;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -269,9 +279,9 @@ void ABP_FishingBuoy_test_C::SetupGuideArrow(class ABP_Fishing_Arrow_C* ArgArrow
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateDelayHoming
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::UpdateDelayHoming()
+void ABP_FishingBuoy_test_C::STATIC_UpdateDelayHoming()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UpdateDelayHoming");
 
@@ -286,15 +296,16 @@ void ABP_FishingBuoy_test_C::UpdateDelayHoming()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ResetHoming
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 
-void ABP_FishingBuoy_test_C::ResetHoming()
+void ABP_FishingBuoy_test_C::STATIC_ResetHoming()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ResetHoming");
 
 	ABP_FishingBuoy_test_C_ResetHoming_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -303,7 +314,7 @@ void ABP_FishingBuoy_test_C::ResetHoming()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.StartProjectileAndHoming
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USceneComponent*         ArgHomingPos                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          ArgDelayTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -317,6 +328,7 @@ void ABP_FishingBuoy_test_C::StartProjectileAndHoming(class USceneComponent* Arg
 	params.ArgDelayTime = ArgDelayTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -325,7 +337,7 @@ void ABP_FishingBuoy_test_C::StartProjectileAndHoming(class USceneComponent* Arg
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetupTargetHoming
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Protected, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class USceneComponent*         ArgTargetActor                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -345,7 +357,7 @@ void ABP_FishingBuoy_test_C::SetupTargetHoming(class USceneComponent* ArgTargetA
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetCaptureActive
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -357,6 +369,7 @@ void ABP_FishingBuoy_test_C::SetCaptureActive(bool bEnabled)
 	params.bEnabled = bEnabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,15 +378,16 @@ void ABP_FishingBuoy_test_C::SetCaptureActive(bool bEnabled)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::UserConstructionScript()
+void ABP_FishingBuoy_test_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.UserConstructionScript");
 
 	ABP_FishingBuoy_test_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -382,15 +396,16 @@ void ABP_FishingBuoy_test_C::UserConstructionScript()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Small UpDown__FinishedFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Small_UpDown__FinishedFunc()
+void ABP_FishingBuoy_test_C::STATIC_Small_UpDown__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Small UpDown__FinishedFunc");
 
 	ABP_FishingBuoy_test_C_Small_UpDown__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -399,15 +414,16 @@ void ABP_FishingBuoy_test_C::Small_UpDown__FinishedFunc()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Small UpDown__UpdateFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Small_UpDown__UpdateFunc()
+void ABP_FishingBuoy_test_C::STATIC_Small_UpDown__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Small UpDown__UpdateFunc");
 
 	ABP_FishingBuoy_test_C_Small_UpDown__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -416,15 +432,16 @@ void ABP_FishingBuoy_test_C::Small_UpDown__UpdateFunc()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Big UpDown__FinishedFunc
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Big_UpDown__FinishedFunc()
+void ABP_FishingBuoy_test_C::STATIC_Big_UpDown__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Big UpDown__FinishedFunc");
 
 	ABP_FishingBuoy_test_C_Big_UpDown__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,15 +450,16 @@ void ABP_FishingBuoy_test_C::Big_UpDown__FinishedFunc()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Big UpDown__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Big_UpDown__UpdateFunc()
+void ABP_FishingBuoy_test_C::STATIC_Big_UpDown__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Big UpDown__UpdateFunc");
 
 	ABP_FishingBuoy_test_C_Big_UpDown__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -450,15 +468,16 @@ void ABP_FishingBuoy_test_C::Big_UpDown__UpdateFunc()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.BouyMoveTimeline__FinishedFunc
-// (BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::BouyMoveTimeline__FinishedFunc()
+void ABP_FishingBuoy_test_C::STATIC_BouyMoveTimeline__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.BouyMoveTimeline__FinishedFunc");
 
 	ABP_FishingBuoy_test_C_BouyMoveTimeline__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -467,15 +486,16 @@ void ABP_FishingBuoy_test_C::BouyMoveTimeline__FinishedFunc()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.BouyMoveTimeline__UpdateFunc
-// (BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::BouyMoveTimeline__UpdateFunc()
+void ABP_FishingBuoy_test_C::STATIC_BouyMoveTimeline__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.BouyMoveTimeline__UpdateFunc");
 
 	ABP_FishingBuoy_test_C_BouyMoveTimeline__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -484,11 +504,11 @@ void ABP_FishingBuoy_test_C::BouyMoveTimeline__UpdateFunc()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.BndEvt__ProjectileMovement_K2Node_ComponentBoundEvent_1_OnProjectileStopDelegate__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FHitResult              ImpactResult                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::BndEvt__ProjectileMovement_K2Node_ComponentBoundEvent_1_OnProjectileStopDelegate__DelegateSignature(const struct FHitResult& ImpactResult)
+void ABP_FishingBuoy_test_C::STATIC_BndEvt__ProjectileMovement_K2Node_ComponentBoundEvent_1_OnProjectileStopDelegate__DelegateSignature(const struct FHitResult& ImpactResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.BndEvt__ProjectileMovement_K2Node_ComponentBoundEvent_1_OnProjectileStopDelegate__DelegateSignature");
 
@@ -496,6 +516,7 @@ void ABP_FishingBuoy_test_C::BndEvt__ProjectileMovement_K2Node_ComponentBoundEve
 	params.ImpactResult = ImpactResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -504,15 +525,16 @@ void ABP_FishingBuoy_test_C::BndEvt__ProjectileMovement_K2Node_ComponentBoundEve
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Stop Small UpDown
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Stop_Small_UpDown()
+void ABP_FishingBuoy_test_C::STATIC_Stop_Small_UpDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Stop Small UpDown");
 
 	ABP_FishingBuoy_test_C_Stop_Small_UpDown_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -521,15 +543,16 @@ void ABP_FishingBuoy_test_C::Stop_Small_UpDown()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Start Big UpDown
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Start_Big_UpDown()
+void ABP_FishingBuoy_test_C::STATIC_Start_Big_UpDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Start Big UpDown");
 
 	ABP_FishingBuoy_test_C_Start_Big_UpDown_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -538,15 +561,16 @@ void ABP_FishingBuoy_test_C::Start_Big_UpDown()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Stop Big UpDown
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Stop_Big_UpDown()
+void ABP_FishingBuoy_test_C::STATIC_Stop_Big_UpDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Stop Big UpDown");
 
 	ABP_FishingBuoy_test_C_Stop_Big_UpDown_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -555,11 +579,11 @@ void ABP_FishingBuoy_test_C::Stop_Big_UpDown()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Set Active
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           is_active                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::Set_Active(bool is_active)
+void ABP_FishingBuoy_test_C::STATIC_Set_Active(bool is_active)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Set Active");
 
@@ -567,6 +591,7 @@ void ABP_FishingBuoy_test_C::Set_Active(bool is_active)
 	params.is_active = is_active;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -575,7 +600,7 @@ void ABP_FishingBuoy_test_C::Set_Active(bool is_active)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetLureMesh
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UStaticMesh*             Mesh                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -589,6 +614,7 @@ void ABP_FishingBuoy_test_C::SetLureMesh(class UStaticMesh* Mesh, float Scale)
 	params.Scale = Scale;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -597,11 +623,11 @@ void ABP_FishingBuoy_test_C::SetLureMesh(class UStaticMesh* Mesh, float Scale)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_FishingBuoy_test_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveEndPlay");
 
@@ -609,6 +635,7 @@ void ABP_FishingBuoy_test_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -617,15 +644,16 @@ void ABP_FishingBuoy_test_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayR
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Start Small UpDown
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Start_Small_UpDown()
+void ABP_FishingBuoy_test_C::STATIC_Start_Small_UpDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Start Small UpDown");
 
 	ABP_FishingBuoy_test_C_Start_Small_UpDown_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -634,11 +662,11 @@ void ABP_FishingBuoy_test_C::Start_Small_UpDown()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetActiveBuoyVelocityDir
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Active                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::SetActiveBuoyVelocityDir(bool Active)
+void ABP_FishingBuoy_test_C::STATIC_SetActiveBuoyVelocityDir(bool Active)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.SetActiveBuoyVelocityDir");
 
@@ -646,6 +674,7 @@ void ABP_FishingBuoy_test_C::SetActiveBuoyVelocityDir(bool Active)
 	params.Active = Active;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -654,15 +683,16 @@ void ABP_FishingBuoy_test_C::SetActiveBuoyVelocityDir(bool Active)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.StopBuoyVelocityMove
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::StopBuoyVelocityMove()
+void ABP_FishingBuoy_test_C::STATIC_StopBuoyVelocityMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.StopBuoyVelocityMove");
 
 	ABP_FishingBuoy_test_C_StopBuoyVelocityMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -671,15 +701,16 @@ void ABP_FishingBuoy_test_C::StopBuoyVelocityMove()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.PlayBuoyVelocityMove
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::PlayBuoyVelocityMove()
+void ABP_FishingBuoy_test_C::STATIC_PlayBuoyVelocityMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.PlayBuoyVelocityMove");
 
 	ABP_FishingBuoy_test_C_PlayBuoyVelocityMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -688,11 +719,11 @@ void ABP_FishingBuoy_test_C::PlayBuoyVelocityMove()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::ReceiveTick(float DeltaSeconds)
+void ABP_FishingBuoy_test_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveTick");
 
@@ -700,6 +731,7 @@ void ABP_FishingBuoy_test_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -708,11 +740,11 @@ void ABP_FishingBuoy_test_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveActorBeginOverlap
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
+void ABP_FishingBuoy_test_C::STATIC_ReceiveActorBeginOverlap(class AActor* OtherActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveActorBeginOverlap");
 
@@ -720,6 +752,7 @@ void ABP_FishingBuoy_test_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 	params.OtherActor = OtherActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -728,15 +761,16 @@ void ABP_FishingBuoy_test_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::ReceiveBeginPlay()
+void ABP_FishingBuoy_test_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ReceiveBeginPlay");
 
 	ABP_FishingBuoy_test_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -745,15 +779,16 @@ void ABP_FishingBuoy_test_C::ReceiveBeginPlay()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_FishingBuoy_test_C::Update()
+void ABP_FishingBuoy_test_C::STATIC_Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.Update");
 
 	ABP_FishingBuoy_test_C_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -762,11 +797,11 @@ void ABP_FishingBuoy_test_C::Update()
 
 
 // Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ExecuteUbergraph_BP_FishingBuoy_test
-// (HasDefaults)
+// (Net, NetReliable, Native, Static, NetMulticast, MulticastDelegate, Private, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_FishingBuoy_test_C::ExecuteUbergraph_BP_FishingBuoy_test(int EntryPoint)
+void ABP_FishingBuoy_test_C::STATIC_ExecuteUbergraph_BP_FishingBuoy_test(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_FishingBuoy_test.BP_FishingBuoy_test_C.ExecuteUbergraph_BP_FishingBuoy_test");
 
@@ -774,6 +809,7 @@ void ABP_FishingBuoy_test_C::ExecuteUbergraph_BP_FishingBuoy_test(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

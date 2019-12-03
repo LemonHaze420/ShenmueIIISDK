@@ -30,10 +30,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_PlayerFollowPawn(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_PlayerFollowPawn(int EntryPoint);
 };
 
 

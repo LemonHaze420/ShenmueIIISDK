@@ -93,35 +93,6 @@ public:
 };
 
 
-// Class ControlRig.ControlRigControl
-// 0x0058 (0x0380 - 0x0328)
-class AControlRigControl : public AActor
-{
-public:
-	struct FString                                     PropertyPath;                                             // 0x0328(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0338(0x0008) MISSED OFFSET
-	struct FTransform                                  Transform;                                                // 0x0340(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, IsPlainOldData)
-	unsigned char                                      bEnabled : 1;                                             // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
-	unsigned char                                      bSelected : 1;                                            // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
-	unsigned char                                      bHovered : 1;                                             // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
-	unsigned char                                      bManipulating : 1;                                        // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x0371(0x000F) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ControlRig.ControlRigControl");
-		return ptr;
-	}
-
-
-	void OnTransformChanged(const struct FTransform& NewTransform);
-	void OnSelectionChanged(bool bIsSelected);
-	void OnManipulatingChanged(bool bIsManipulating);
-	void OnHoveredChanged(bool bIsSelected);
-	void OnEnabledChanged(bool bIsEnabled);
-};
-
-
 // Class ControlRig.ControlRigLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UControlRigLibrary : public UBlueprintFunctionLibrary
@@ -150,6 +121,35 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class ControlRig.ControlRigControl
+// 0x0058 (0x0380 - 0x0328)
+class AControlRigControl : public AActor
+{
+public:
+	struct FString                                     PropertyPath;                                             // 0x0328(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0338(0x0008) MISSED OFFSET
+	struct FTransform                                  Transform;                                                // 0x0340(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst, IsPlainOldData)
+	unsigned char                                      bEnabled : 1;                                             // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	unsigned char                                      bSelected : 1;                                            // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	unsigned char                                      bHovered : 1;                                             // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	unsigned char                                      bManipulating : 1;                                        // 0x0370(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	unsigned char                                      UnknownData01[0xF];                                       // 0x0371(0x000F) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ControlRig.ControlRigControl");
+		return ptr;
+	}
+
+
+	void OnTransformChanged(const struct FTransform& NewTransform);
+	void OnSelectionChanged(bool bIsSelected);
+	void OnManipulatingChanged(bool bIsManipulating);
+	void OnHoveredChanged(bool bIsSelected);
+	void OnEnabledChanged(bool bIsEnabled);
 };
 
 

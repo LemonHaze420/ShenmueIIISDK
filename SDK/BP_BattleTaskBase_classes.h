@@ -42,7 +42,7 @@ public:
 	}
 
 
-	class UObject* GetAssetReferenceHolder();
+	class UObject* STATIC_GetAssetReferenceHolder();
 	void StartBattle();
 	void EndBattle(TEnumAsByte<EBattleWinLoseResult> Result, bool* newParam);
 	void UserConstructionScript();

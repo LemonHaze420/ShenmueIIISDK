@@ -53,20 +53,20 @@ public:
 	}
 
 
-	void SetValue(float InValue);
-	float GetIntToFloatConvertValue();
-	void Reset();
+	void STATIC_SetValue(float InValue);
+	float STATIC_GetIntToFloatConvertValue();
+	void STATIC_Reset();
 	void ClampNewValue(int InValue, int* OutValue);
 	struct FEventReply OnAnalogValueChanged(const struct FGeometry& MyGeometry, const struct FAnalogInputEvent& InAnalogInputEvent);
-	void SetIntegerParameterValue(int NewValue, bool CallDispatcher);
+	void STATIC_SetIntegerParameterValue(int NewValue, bool CallDispatcher);
 	int GetIntegerParameterValue();
-	struct FText GetParameterName();
-	void Construct();
+	struct FText STATIC_GetParameterName();
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
-	void GetMinMax();
-	void BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
-	void PropertyChanged();
+	void STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue);
+	void STATIC_GetMinMax();
+	void STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod);
+	void STATIC_PropertyChanged();
 	void ExecuteUbergraph_BW_IntegerProperty(int EntryPoint);
 	void IntegerPropertyChangedWithData__DelegateSignature(int Value, class UBW_IntegerProperty_C* Context);
 	void IntegerPropertyChanged__DelegateSignature();

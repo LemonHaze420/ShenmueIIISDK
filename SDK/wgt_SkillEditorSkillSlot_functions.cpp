@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillEditorSkillSlot.wgt_SkillEditorSkillSlot_C.SetSelect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Select                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditorSkillSlot_C::SetSelect(bool Select)
+void Uwgt_SkillEditorSkillSlot_C::STATIC_SetSelect(bool Select)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorSkillSlot.wgt_SkillEditorSkillSlot_C.SetSelect");
 
@@ -26,6 +26,7 @@ void Uwgt_SkillEditorSkillSlot_C::SetSelect(bool Select)
 	params.Select = Select;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,11 +35,11 @@ void Uwgt_SkillEditorSkillSlot_C::SetSelect(bool Select)
 
 
 // Function wgt_SkillEditorSkillSlot.wgt_SkillEditorSkillSlot_C.SetFocus
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Focus                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditorSkillSlot_C::SetFocus(bool Focus)
+void Uwgt_SkillEditorSkillSlot_C::STATIC_SetFocus(bool Focus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorSkillSlot.wgt_SkillEditorSkillSlot_C.SetFocus");
 
@@ -46,6 +47,7 @@ void Uwgt_SkillEditorSkillSlot_C::SetFocus(bool Focus)
 	params.Focus = Focus;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +56,11 @@ void Uwgt_SkillEditorSkillSlot_C::SetFocus(bool Focus)
 
 
 // Function wgt_SkillEditorSkillSlot.wgt_SkillEditorSkillSlot_C.SetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void Uwgt_SkillEditorSkillSlot_C::SetText(const struct FText& InText)
+void Uwgt_SkillEditorSkillSlot_C::STATIC_SetText(const struct FText& InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditorSkillSlot.wgt_SkillEditorSkillSlot_C.SetText");
 

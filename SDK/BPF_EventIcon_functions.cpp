@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_EventIcon.BPF_EventIcon_C.GetEventIconManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_EventIconDispRangeManager_C* newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_EventIcon_C::STATIC_GetEventIconManager(class UObject* __WorldContext, class ABP_EventIconDispRangeManager_C** newParam)
+void UBPF_EventIcon_C::GetEventIconManager(class UObject* __WorldContext, class ABP_EventIconDispRangeManager_C** newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_EventIcon.BPF_EventIcon_C.GetEventIconManager");
 

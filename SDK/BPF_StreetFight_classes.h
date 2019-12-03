@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_GetStreetFightManager(class UObject* __WorldContext, class ABP_StreetFightManager_C** Manager);
+	void GetStreetFightManager(class UObject* __WorldContext, class ABP_StreetFightManager_C** Manager);
 	void STATIC_GetStreetFightTrigger(class UObject* __WorldContext, class AS3StreetFightTrigger** Manager);
 };
 

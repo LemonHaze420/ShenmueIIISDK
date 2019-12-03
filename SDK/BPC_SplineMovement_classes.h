@@ -37,17 +37,17 @@ public:
 
 	void UpdateSpline(float Delta, bool* bArrived);
 	void GetSplineCurrentLocationAndRotation(float Length, bool Loop, struct FVector* Location, struct FVector* Direction, struct FRotator* Rotation);
-	void ForceMoveSpline();
+	void STATIC_ForceMoveSpline();
 	void SetSpline(class USplineComponent* RefSpline, float Speed, bool StartForceMove);
 	void PauseSpline(bool IsPause);
 	void SplineMovingProcess(bool* Result);
 	void AddSplineMoveDistance(float AddDistance);
-	void SetSplineMoveDistance(float NewDistance);
+	void STATIC_SetSplineMoveDistance(float NewDistance);
 	void GetSplineLength(float* Length);
-	void IsArrivedSpline(bool* IsArrived);
+	void STATIC_IsArrivedSpline(bool* IsArrived);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_SplineMovement(int EntryPoint);
-	void ArrivedEvent__DelegateSignature();
+	void STATIC_ArrivedEvent__DelegateSignature();
 };
 
 

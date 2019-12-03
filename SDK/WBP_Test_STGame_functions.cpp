@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetGradationSpeed
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Test_STGame_C::SetGradationSpeed(float Speed)
+void UWBP_Test_STGame_C::STATIC_SetGradationSpeed(float Speed)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.SetGradationSpeed");
 
@@ -26,6 +26,7 @@ void UWBP_Test_STGame_C::SetGradationSpeed(float Speed)
 	params.Speed = Speed;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UWBP_Test_STGame_C::SetGradationSpeed(float Speed)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetGradationPower
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Power                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,6 +47,7 @@ void UWBP_Test_STGame_C::SetGradationPower(float Power)
 	params.Power = Power;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +56,7 @@ void UWBP_Test_STGame_C::SetGradationPower(float Power)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetGradationScrollVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,6 +68,7 @@ void UWBP_Test_STGame_C::SetGradationScrollVisible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +77,7 @@ void UWBP_Test_STGame_C::SetGradationScrollVisible(bool Visible)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetThrowResult
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // bool                           IsSuccess                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Point                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -88,6 +91,7 @@ void UWBP_Test_STGame_C::SetThrowResult(bool IsSuccess, int Point)
 	params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,7 +100,7 @@ void UWBP_Test_STGame_C::SetThrowResult(bool IsSuccess, int Point)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetSuccessRate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // int                            SuccessCount                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -116,11 +120,11 @@ void UWBP_Test_STGame_C::SetSuccessRate(int SuccessCount)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetThrowResultVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Test_STGame_C::SetThrowResultVisible(bool IsVisible)
+void UWBP_Test_STGame_C::STATIC_SetThrowResultVisible(bool IsVisible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.SetThrowResultVisible");
 
@@ -136,7 +140,7 @@ void UWBP_Test_STGame_C::SetThrowResultVisible(bool IsVisible)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.GetThrowResultVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -147,6 +151,7 @@ ESlateVisibility UWBP_Test_STGame_C::GetThrowResultVisibility()
 	UWBP_Test_STGame_C_GetThrowResultVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,16 +161,16 @@ ESlateVisibility UWBP_Test_STGame_C::GetThrowResultVisibility()
 }
 
 
-// Function WBP_Test_STGame.WBP_Test_STGame_C.SetResultVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_Test_STGame.WBP_Test_STGame_C.SetResultVIsible
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Test_STGame_C::SetResultVisible(bool IsVisible)
+void UWBP_Test_STGame_C::STATIC_SetResultVIsible(bool IsVisible)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.SetResultVisible");
+	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.SetResultVIsible");
 
-	UWBP_Test_STGame_C_SetResultVisible_Params params;
+	UWBP_Test_STGame_C_SetResultVIsible_Params params;
 	params.IsVisible = IsVisible;
 
 	auto flags = fn->FunctionFlags;
@@ -177,11 +182,11 @@ void UWBP_Test_STGame_C::SetResultVisible(bool IsVisible)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetNormalVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsVisible                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Test_STGame_C::SetNormalVisible(bool IsVisible)
+void UWBP_Test_STGame_C::STATIC_SetNormalVisible(bool IsVisible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.SetNormalVisible");
 
@@ -197,7 +202,7 @@ void UWBP_Test_STGame_C::SetNormalVisible(bool IsVisible)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.GetResultVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -218,7 +223,7 @@ ESlateVisibility UWBP_Test_STGame_C::GetResultVisibility()
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.GetNormalVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -239,11 +244,11 @@ ESlateVisibility UWBP_Test_STGame_C::GetNormalVisibility()
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetScore
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            InScore                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Test_STGame_C::SetScore(int InScore)
+void UWBP_Test_STGame_C::STATIC_SetScore(int InScore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.SetScore");
 
@@ -259,11 +264,11 @@ void UWBP_Test_STGame_C::SetScore(int InScore)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.SetThrowCount
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_Test_STGame_C::SetThrowCount(int newParam)
+void UWBP_Test_STGame_C::STATIC_SetThrowCount(int newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.SetThrowCount");
 
@@ -271,6 +276,7 @@ void UWBP_Test_STGame_C::SetThrowCount(int newParam)
 	params.newParam = newParam;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,9 +285,9 @@ void UWBP_Test_STGame_C::SetThrowCount(int newParam)
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_Test_STGame_C::Construct()
+void UWBP_Test_STGame_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Test_STGame.WBP_Test_STGame_C.Construct");
 
@@ -296,7 +302,7 @@ void UWBP_Test_STGame_C::Construct()
 
 
 // Function WBP_Test_STGame.WBP_Test_STGame_C.ExecuteUbergraph_WBP_Test_STGame
-// ()
+// (Exec, Native, NetResponse, NetMulticast, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -308,6 +314,7 @@ void UWBP_Test_STGame_C::ExecuteUbergraph_WBP_Test_STGame(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

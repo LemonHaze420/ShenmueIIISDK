@@ -29,26 +29,6 @@ struct UGameplayTask_EndTask_Params
 {
 };
 
-// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources
-struct UGameplayTask_ClaimResource_ClaimResources_Params
-{
-	TScriptInterface<class UGameplayTaskOwnerInterface> InTaskOwner;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              ResourceClasses;                                          // (Parm, ZeroConstructor)
-	unsigned char                                      Priority;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       TaskInstanceName;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	class UGameplayTask_ClaimResource*                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource
-struct UGameplayTask_ClaimResource_ClaimResource_Params
-{
-	TScriptInterface<class UGameplayTaskOwnerInterface> InTaskOwner;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ResourceClass;                                            // (Parm, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      Priority;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       TaskInstanceName;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	class UGameplayTask_ClaimResource*                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
 // Function GameplayTasks.GameplayTask_SpawnActor.SpawnActor
 struct UGameplayTask_SpawnActor_SpawnActor_Params
 {
@@ -75,18 +55,24 @@ struct UGameplayTask_SpawnActor_BeginSpawningActor_Params
 	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
-struct UGameplayTask_WaitDelay_TaskWaitDelay_Params
+// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources
+struct UGameplayTask_ClaimResource_ClaimResources_Params
 {
-	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                // (Parm, ZeroConstructor, IsPlainOldData)
-	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	TScriptInterface<class UGameplayTaskOwnerInterface> InTaskOwner;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              ResourceClasses;                                          // (Parm, ZeroConstructor)
 	unsigned char                                      Priority;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	class UGameplayTask_WaitDelay*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+	struct FName                                       TaskInstanceName;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class UGameplayTask_ClaimResource*                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature
-struct UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params
+// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource
+struct UGameplayTask_ClaimResource_ClaimResource_Params
 {
+	TScriptInterface<class UGameplayTaskOwnerInterface> InTaskOwner;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      ResourceClass;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Priority;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       TaskInstanceName;                                         // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class UGameplayTask_ClaimResource*                 ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 // Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks
@@ -103,6 +89,20 @@ struct UGameplayTasksComponent_K2_RunGameplayTask_Params
 	TArray<class UClass*>                              AdditionalRequiredResources;                              // (Parm, ZeroConstructor)
 	TArray<class UClass*>                              AdditionalClaimedResources;                               // (Parm, ZeroConstructor)
 	EGameplayTaskRunResult                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function GameplayTasks.GameplayTask_WaitDelay.TaskWaitDelay
+struct UGameplayTask_WaitDelay_TaskWaitDelay_Params
+{
+	TScriptInterface<class UGameplayTaskOwnerInterface> TaskOwner;                                                // (Parm, ZeroConstructor, IsPlainOldData)
+	float                                              Time;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      Priority;                                                 // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	class UGameplayTask_WaitDelay*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// DelegateFunction GameplayTasks.GameplayTask_WaitDelay.TaskDelayDelegate__DelegateSignature
+struct UGameplayTask_WaitDelay_TaskDelayDelegate__DelegateSignature_Params
+{
 };
 
 }

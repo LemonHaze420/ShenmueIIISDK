@@ -53,23 +53,23 @@ public:
 
 
 	void RelayOnSceneCapture();
-	void SetSkillLibrary(class UBTL_CommandLibraryBase* CommandLibrary);
-	bool IsLoadingFinished();
-	bool IsRenderObjectReady();
+	void STATIC_SetSkillLibrary(class UBTL_CommandLibraryBase* CommandLibrary);
+	bool STATIC_IsLoadingFinished();
+	bool STATIC_IsRenderObjectReady();
 	struct FTransform CalculateRenderObjectTransform();
-	void DestroyRenderObject();
+	void STATIC_DestroyRenderObject();
 	void PlaySingleFrame(const struct FName& InputPin, bool* bSuccess);
-	void StopMotion(bool* bSuccess);
+	void STATIC_StopMotion(bool* bSuccess);
 	void PlayMotionForItem(const struct FName& InputPin, bool* bSuccess);
 	void SpawnRenderObject(class UClass* InputPin, bool* newParam);
-	void SetRenderTex(class UTextureRenderTarget2D* Value);
-	void OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C(class UObject* Loaded);
-	void OnLoaded_6B67131F435381D27123BE8560D7EF88(class UClass* Loaded);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_SetRenderTex(class UTextureRenderTarget2D* Value);
+	void STATIC_OnLoaded_887C3B4A44C26F627DEC4EAAECA73E5C(class UObject* Loaded);
+	void STATIC_OnLoaded_6B67131F435381D27123BE8560D7EF88(class UClass* Loaded);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Destruct();
 	void RespawnRenderObject();
 	void Construct();
-	void ExecuteUbergraph_wgt_BTL_MontagePlayer(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_BTL_MontagePlayer(int EntryPoint);
 	void OnSceneCapture__DelegateSignature();
 };
 

@@ -37,7 +37,7 @@ public:
 	void OnAnimationFinished(class UWidgetAnimation* Animation);
 	void Construct();
 	void ExecuteUbergraph_wgt_S3DetectButtonBase(int EntryPoint);
-	void onAnimEnd__DelegateSignature();
+	void STATIC_onAnimEnd__DelegateSignature();
 };
 
 

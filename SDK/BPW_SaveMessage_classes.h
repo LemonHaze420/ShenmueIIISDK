@@ -34,9 +34,9 @@ public:
 
 	void ShowMessage(TEnumAsByte<ESaveMessageType> Type);
 	void Construct();
-	void OnAnimationFinished(class UWidgetAnimation* Animation);
+	void STATIC_OnAnimationFinished(class UWidgetAnimation* Animation);
 	void ExecuteUbergraph_BPW_SaveMessage(int EntryPoint);
-	void OnFinishedSaveMessage__DelegateSignature();
+	void STATIC_OnFinishedSaveMessage__DelegateSignature();
 };
 
 

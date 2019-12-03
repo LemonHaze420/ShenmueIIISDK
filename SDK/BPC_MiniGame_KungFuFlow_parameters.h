@@ -89,7 +89,7 @@ struct UBPC_MiniGame_KungFuFlow_C_SetWidgetArrowSettings_Params
 {
 	float                                              moveSpeed;                                                // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	float                                              MoveTime;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	float                                              IntervalTime;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              IntervalTIme;                                             // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BPC_MiniGame_KungFuFlow.BPC_MiniGame_KungFuFlow_C.EnabledButtonIconUI

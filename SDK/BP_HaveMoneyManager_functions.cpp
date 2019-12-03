@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.RemoveWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_HaveMoneyManager_C::RemoveWidget()
+void ABP_HaveMoneyManager_C::STATIC_RemoveWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.RemoveWidget");
 
 	ABP_HaveMoneyManager_C_RemoveWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,12 +32,12 @@ void ABP_HaveMoneyManager_C::RemoveWidget()
 
 
 // Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.SubMoney
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            SubMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AfterHaveMoney                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HaveMoneyManager_C::SubMoney(int SubMoney, int* AfterHaveMoney)
+void ABP_HaveMoneyManager_C::STATIC_SubMoney(int SubMoney, int* AfterHaveMoney)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.SubMoney");
 
@@ -44,6 +45,7 @@ void ABP_HaveMoneyManager_C::SubMoney(int SubMoney, int* AfterHaveMoney)
 	params.SubMoney = SubMoney;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,12 +57,12 @@ void ABP_HaveMoneyManager_C::SubMoney(int SubMoney, int* AfterHaveMoney)
 
 
 // Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.AddMoney
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            AddMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AfterHaveMoney                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HaveMoneyManager_C::AddMoney(int AddMoney, int* AfterHaveMoney)
+void ABP_HaveMoneyManager_C::STATIC_AddMoney(int AddMoney, int* AfterHaveMoney)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.AddMoney");
 
@@ -79,7 +81,7 @@ void ABP_HaveMoneyManager_C::AddMoney(int AddMoney, int* AfterHaveMoney)
 
 
 // Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_HaveMoneyManager_C::UserConstructionScript()
 {
@@ -88,6 +90,7 @@ void ABP_HaveMoneyManager_C::UserConstructionScript()
 	ABP_HaveMoneyManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,9 +99,9 @@ void ABP_HaveMoneyManager_C::UserConstructionScript()
 
 
 // Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_HaveMoneyManager_C::ReceiveBeginPlay()
+void ABP_HaveMoneyManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.ReceiveBeginPlay");
 
@@ -113,11 +116,11 @@ void ABP_HaveMoneyManager_C::ReceiveBeginPlay()
 
 
 // Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.ExecuteUbergraph_BP_HaveMoneyManager
-// ()
+// (Net, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HaveMoneyManager_C::ExecuteUbergraph_BP_HaveMoneyManager(int EntryPoint)
+void ABP_HaveMoneyManager_C::STATIC_ExecuteUbergraph_BP_HaveMoneyManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HaveMoneyManager.BP_HaveMoneyManager_C.ExecuteUbergraph_BP_HaveMoneyManager");
 

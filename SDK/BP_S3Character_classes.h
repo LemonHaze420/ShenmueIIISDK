@@ -33,24 +33,24 @@ public:
 	}
 
 
-	void AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
+	void STATIC_AddTurnAroundComponent(class UBPC_TurnAround_C** Component);
 	void RemoveTurnAroundComponent(bool* bSuccess);
-	void GetTurnAroundComponent(class UBPC_TurnAround_C** Component);
+	void STATIC_GetTurnAroundComponent(class UBPC_TurnAround_C** Component);
 	void IsInShelter(bool* Sheltered);
 	bool IsTalking();
 	class AS3GimmickOpenDoor* GetDoorActor();
 	void GetNearSideTargetTransform(bool* ValidDoor, struct FTransform* TargetTransform);
 	void GetNearSideTargetPos(bool* ValidDoor, struct FVector* pos);
-	void GetCharaToDoorPointDiff(struct FVector* pos, float* AngleDeg);
+	void STATIC_GetCharaToDoorPointDiff(struct FVector* pos, float* AngleDeg);
 	void ChangePosition();
-	void MoveDoorPoint(float DeltaSeconds);
-	void NotifyFinishNock();
-	void NotifyFinishMove();
-	void OpenDoor();
-	void CheckCanUseDoor(bool* IsUseDoor);
-	void UserConstructionScript();
+	void STATIC_MoveDoorPoint(float DeltaSeconds);
+	void STATIC_NotifyFinishNock();
+	void STATIC_NotifyFinishMove();
+	void STATIC_OpenDoor();
+	void STATIC_CheckCanUseDoor(bool* IsUseDoor);
+	void STATIC_UserConstructionScript();
 	void OnTalkStart(class US3TalkComponent* TalkComponent);
-	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
+	void STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
 	void Screen_Player();
 	void Screen_NPC();
 	void ReceiveBeginPlay();
@@ -58,7 +58,7 @@ public:
 	void OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* Door);
 	void OnDoorAreaEndOverlap(class AS3GimmickOpenDoor* Door);
 	void OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpenDoor* Door);
-	void OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door);
+	void STATIC_OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door);
 	void ExecuteUbergraph_BP_S3Character(int EntryPoint);
 	void StartNockDoor__DelegateSignature();
 };

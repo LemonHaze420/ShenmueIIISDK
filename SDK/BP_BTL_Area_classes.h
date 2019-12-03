@@ -27,13 +27,13 @@ public:
 
 
 	void InsideEntireArea(const struct FVector& Point, bool* bIsInside);
-	struct FVector GetPathfindingRefLocation();
+	struct FVector STATIC_GetPathfindingRefLocation();
 	bool TestStraightPathInside(const struct FVector& Location);
-	void ClampLocation(const struct FVector& InLocation, struct FVector* OutLocation);
+	void STATIC_ClampLocation(const struct FVector& InLocation, struct FVector* OutLocation);
 	struct FVector NudgeDirTowardsCenter(const struct FVector& Direction, const struct FVector& ToCenter);
 	void EnableCollision(bool Enabled, bool* dummy);
 	void IsReturnedInside(const struct FVector& InLocation, bool* Returned);
-	void ScaleMovement(const struct FVector& Location, const struct FVector& Direction, struct FVector* Redirected);
+	void STATIC_ScaleMovement(const struct FVector& Location, const struct FVector& Direction, struct FVector* Redirected);
 	void InsideFreeArea(const struct FVector& Point, bool* bIsInside);
 	void UserConstructionScript();
 };

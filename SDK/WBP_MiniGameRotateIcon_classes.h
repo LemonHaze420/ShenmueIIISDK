@@ -44,12 +44,12 @@ public:
 
 
 	void PlayShakeStickAnim(bool isPlay);
-	void SetVisibleIcon(bool Visible);
+	void STATIC_SetVisibleIcon(bool Visible);
 	void PlayFadeAnim(bool IsAppear);
 	void PlayRotationAnim(bool IsRightRotate, float PlaybackSpeed, bool ShakeRotateIcon);
-	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_WBP_MiniGameRotateIcon(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_ExecuteUbergraph_WBP_MiniGameRotateIcon(int EntryPoint);
 };
 
 

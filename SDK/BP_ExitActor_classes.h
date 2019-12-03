@@ -33,7 +33,7 @@ public:
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void SelectDecide(class AActor* Actor);
 	void SelectCancel(class AActor* Actor);
-	void ExecuteUbergraph_BP_ExitActor(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_ExitActor(int EntryPoint);
 };
 
 

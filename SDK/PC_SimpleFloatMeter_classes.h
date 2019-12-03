@@ -32,9 +32,9 @@ public:
 	}
 
 
-	void MaxOut();
-	void Reset();
-	void Tick(bool Increase, float DeltaTime);
+	void STATIC_MaxOut();
+	void STATIC_Reset();
+	void STATIC_Tick(bool Increase, float DeltaTime);
 };
 
 

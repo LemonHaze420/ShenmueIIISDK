@@ -32,9 +32,9 @@ public:
 	}
 
 
-	void Update(float DeltaSeconds);
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_PlayerShove(int EntryPoint);
+	void STATIC_Update(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BPC_PlayerShove(int EntryPoint);
 };
 
 

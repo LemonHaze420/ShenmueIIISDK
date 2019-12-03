@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_Nail.BP_OD_Nail_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_OD_Nail_C::UserConstructionScript()
+void ABP_OD_Nail_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Nail.BP_OD_Nail_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_OD_Nail_C::UserConstructionScript()
 
 
 // Function BP_OD_Nail.BP_OD_Nail_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_42_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -53,6 +53,7 @@ void ABP_OD_Nail_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_42_ComponentBegin
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,11 +62,11 @@ void ABP_OD_Nail_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_42_ComponentBegin
 
 
 // Function BP_OD_Nail.BP_OD_Nail_C.ExecuteUbergraph_BP_OD_Nail
-// (HasDefaults)
+// (Net, NetReliable, Event, NetResponse, Static, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Nail_C::ExecuteUbergraph_BP_OD_Nail(int EntryPoint)
+void ABP_OD_Nail_C::STATIC_ExecuteUbergraph_BP_OD_Nail(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Nail.BP_OD_Nail_C.ExecuteUbergraph_BP_OD_Nail");
 

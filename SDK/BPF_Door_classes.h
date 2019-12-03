@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_GetDoorManager(class UObject* __WorldContext, class ABP_DoorManager_C** DoorManager);
+	void GetDoorManager(class UObject* __WorldContext, class ABP_DoorManager_C** DoorManager);
 };
 
 

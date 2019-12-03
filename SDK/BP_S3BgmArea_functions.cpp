@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3BgmArea.BP_S3BgmArea_C.GetBGM
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Exec, Native, Event, Static, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USoundAtomCue*           BGM                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmArea_C::GetBGM(class USoundAtomCue** BGM)
+void ABP_S3BgmArea_C::STATIC_GetBGM(class USoundAtomCue** BGM)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea.BP_S3BgmArea_C.GetBGM");
 
 	ABP_S3BgmArea_C_GetBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void ABP_S3BgmArea_C::GetBGM(class USoundAtomCue** BGM)
 
 
 // Function BP_S3BgmArea.BP_S3BgmArea_C.InitCue
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_S3BgmArea_C::InitCue()
+void ABP_S3BgmArea_C::STATIC_InitCue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea.BP_S3BgmArea_C.InitCue");
 
 	ABP_S3BgmArea_C_InitCue_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,17 +55,18 @@ void ABP_S3BgmArea_C::InitCue()
 
 
 // Function BP_S3BgmArea.BP_S3BgmArea_C.GetSourceInfo
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FS3BgmAreaSourceInfo    ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FS3BgmAreaSourceInfo ABP_S3BgmArea_C::GetSourceInfo()
+struct FS3BgmAreaSourceInfo ABP_S3BgmArea_C::STATIC_GetSourceInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea.BP_S3BgmArea_C.GetSourceInfo");
 
 	ABP_S3BgmArea_C_GetSourceInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +77,7 @@ struct FS3BgmAreaSourceInfo ABP_S3BgmArea_C::GetSourceInfo()
 
 
 // Function BP_S3BgmArea.BP_S3BgmArea_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3BgmArea_C::UserConstructionScript()
 {
@@ -91,9 +94,9 @@ void ABP_S3BgmArea_C::UserConstructionScript()
 
 
 // Function BP_S3BgmArea.BP_S3BgmArea_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_S3BgmArea_C::ReceiveBeginPlay()
+void ABP_S3BgmArea_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmArea.BP_S3BgmArea_C.ReceiveBeginPlay");
 
@@ -108,7 +111,7 @@ void ABP_S3BgmArea_C::ReceiveBeginPlay()
 
 
 // Function BP_S3BgmArea.BP_S3BgmArea_C.ExecuteUbergraph_BP_S3BgmArea
-// ()
+// (Net, NetRequest, Exec, NetResponse, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

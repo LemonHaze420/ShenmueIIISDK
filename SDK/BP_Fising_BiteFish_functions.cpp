@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.DisableBite
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_Fising_BiteFish_C::DisableBite()
+void ABP_Fising_BiteFish_C::STATIC_DisableBite()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.DisableBite");
 
@@ -31,7 +31,7 @@ void ABP_Fising_BiteFish_C::DisableBite()
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.MoveToTargetInTime
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Fising_BiteFish_C::MoveToTargetInTime()
 {
@@ -40,6 +40,7 @@ void ABP_Fising_BiteFish_C::MoveToTargetInTime()
 	ABP_Fising_BiteFish_C_MoveToTargetInTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,12 +49,12 @@ void ABP_Fising_BiteFish_C::MoveToTargetInTime()
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.SetTargetLocation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FVector                 TargetLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Output_Get                     (Parm, OutParm, IsPlainOldData)
 
-void ABP_Fising_BiteFish_C::SetTargetLocation(const struct FVector& TargetLocation, struct FVector* Output_Get)
+void ABP_Fising_BiteFish_C::STATIC_SetTargetLocation(const struct FVector& TargetLocation, struct FVector* Output_Get)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.SetTargetLocation");
 
@@ -61,6 +62,7 @@ void ABP_Fising_BiteFish_C::SetTargetLocation(const struct FVector& TargetLocati
 	params.TargetLocation = TargetLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,7 +74,7 @@ void ABP_Fising_BiteFish_C::SetTargetLocation(const struct FVector& TargetLocati
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.UpdateBite
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Fising_BiteFish_C::UpdateBite()
 {
@@ -89,7 +91,7 @@ void ABP_Fising_BiteFish_C::UpdateBite()
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Fising_BiteFish_C::UserConstructionScript()
 {
@@ -106,11 +108,11 @@ void ABP_Fising_BiteFish_C::UserConstructionScript()
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fising_BiteFish_C::ReceiveTick(float DeltaSeconds)
+void ABP_Fising_BiteFish_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.ReceiveTick");
 
@@ -126,15 +128,16 @@ void ABP_Fising_BiteFish_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fising_BiteFish_C::Initialize()
+void ABP_Fising_BiteFish_C::STATIC_Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.Initialize");
 
 	ABP_Fising_BiteFish_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,9 +146,9 @@ void ABP_Fising_BiteFish_C::Initialize()
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fising_BiteFish_C::ReceiveBeginPlay()
+void ABP_Fising_BiteFish_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.ReceiveBeginPlay");
 
@@ -160,9 +163,9 @@ void ABP_Fising_BiteFish_C::ReceiveBeginPlay()
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.DestroyReady
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fising_BiteFish_C::DestroyReady()
+void ABP_Fising_BiteFish_C::STATIC_DestroyReady()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.DestroyReady");
 
@@ -177,11 +180,11 @@ void ABP_Fising_BiteFish_C::DestroyReady()
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.ExecuteUbergraph_BP_Fising_BiteFish
-// (HasDefaults)
+// (NetReliable, Native, Event, Static, NetMulticast, Public, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fising_BiteFish_C::ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint)
+void ABP_Fising_BiteFish_C::STATIC_ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.ExecuteUbergraph_BP_Fising_BiteFish");
 
@@ -189,6 +192,7 @@ void ABP_Fising_BiteFish_C::ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -197,9 +201,9 @@ void ABP_Fising_BiteFish_C::ExecuteUbergraph_BP_Fising_BiteFish(int EntryPoint)
 
 
 // Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.OnPerfectBiteDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_Fising_BiteFish_C::OnPerfectBiteDispacher__DelegateSignature()
+void ABP_Fising_BiteFish_C::STATIC_OnPerfectBiteDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fising_BiteFish.BP_Fising_BiteFish_C.OnPerfectBiteDispacher__DelegateSignature");
 

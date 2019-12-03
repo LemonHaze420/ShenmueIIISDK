@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Clipper.BPF_Clipper_C.getS3ClipperManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Event, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_Clipper_C*           AsBP_Clipper                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Clipper_C::STATIC_getS3ClipperManager(class UObject* __WorldContext, class ABP_Clipper_C** AsBP_Clipper)
+void UBPF_Clipper_C::getS3ClipperManager(class UObject* __WorldContext, class ABP_Clipper_C** AsBP_Clipper)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Clipper.BPF_Clipper_C.getS3ClipperManager");
 

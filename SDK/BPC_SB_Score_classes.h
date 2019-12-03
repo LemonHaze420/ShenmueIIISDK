@@ -29,9 +29,9 @@ public:
 	}
 
 
-	void GetScore(int* Score);
-	void AddScore();
-	void ExecuteUbergraph_BPC_SB_Score(int EntryPoint);
+	void STATIC_GetScore(int* Score);
+	void STATIC_AddScore();
+	void STATIC_ExecuteUbergraph_BPC_SB_Score(int EntryPoint);
 	void OnAddScore__DelegateSignature(int GiveScore);
 };
 

@@ -33,19 +33,19 @@ public:
 
 
 	void IsActiveMiniGameScript(bool* MiniGame);
-	void GetActiveComponents(TArray<class UBPC_S3_TalkComponent_C*>* TalkComponents);
+	void STATIC_GetActiveComponents(TArray<class UBPC_S3_TalkComponent_C*>* TalkComponents);
 	void ParseSubQuestControl(const struct FName& CharaName);
 	void IsEnabledDetectIcon(ES3TalkType Type, bool* bEnabled);
 	void GetCurrentTalkComponent(class US3TalkComponentBase** OutComponent);
 	bool FindComponent(ES3TalkType Type, class US3TalkComponentBase** Value);
 	void CanNPCTalk(bool* bCan);
-	void IsTalking(bool* bTalking);
-	void getActionType(TArray<struct FS3DetectActionParam>* Params);
-	void RegisterTalkComponent(ES3TalkType TalkType, class US3TalkComponentBase* Component);
-	void OnStart();
-	void OnFinished();
-	void ReceiveBeginPlay();
-	void DecideDetectAction(ES3ActionIconType ActionType);
+	void STATIC_IsTalking(bool* bTalking);
+	void STATIC_GetActionType(TArray<struct FS3DetectActionParam>* Params);
+	void STATIC_RegisterTalkComponent(ES3TalkType TalkType, class US3TalkComponentBase* Component);
+	void STATIC_OnStart();
+	void STATIC_OnFinished();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_DecideDetectAction(ES3ActionIconType ActionType);
 	void ExecuteUbergraph_BPC_NPCTalkDetectController(int EntryPoint);
 };
 

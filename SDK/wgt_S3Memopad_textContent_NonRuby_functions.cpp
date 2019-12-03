@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3Memopad_textContent_NonRuby.wgt_S3Memopad_textContent_NonRuby_C.UpdateDisplay
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 Body                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FST_RubyInfo            RubyInfo                       (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -42,15 +42,16 @@ void Uwgt_S3Memopad_textContent_NonRuby_C::UpdateDisplay(const struct FString& B
 
 
 // Function wgt_S3Memopad_textContent_NonRuby.wgt_S3Memopad_textContent_NonRuby_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void Uwgt_S3Memopad_textContent_NonRuby_C::Construct()
+void Uwgt_S3Memopad_textContent_NonRuby_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_NonRuby.wgt_S3Memopad_textContent_NonRuby_C.Construct");
 
 	Uwgt_S3Memopad_textContent_NonRuby_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,15 +60,16 @@ void Uwgt_S3Memopad_textContent_NonRuby_C::Construct()
 
 
 // Function wgt_S3Memopad_textContent_NonRuby.wgt_S3Memopad_textContent_NonRuby_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void Uwgt_S3Memopad_textContent_NonRuby_C::Destruct()
+void Uwgt_S3Memopad_textContent_NonRuby_C::STATIC_Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_NonRuby.wgt_S3Memopad_textContent_NonRuby_C.Destruct");
 
 	Uwgt_S3Memopad_textContent_NonRuby_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +78,11 @@ void Uwgt_S3Memopad_textContent_NonRuby_C::Destruct()
 
 
 // Function wgt_S3Memopad_textContent_NonRuby.wgt_S3Memopad_textContent_NonRuby_C.ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby
-// ()
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_S3Memopad_textContent_NonRuby_C::ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby(int EntryPoint)
+void Uwgt_S3Memopad_textContent_NonRuby_C::STATIC_ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3Memopad_textContent_NonRuby.wgt_S3Memopad_textContent_NonRuby_C.ExecuteUbergraph_wgt_S3Memopad_textContent_NonRuby");
 
@@ -88,6 +90,7 @@ void Uwgt_S3Memopad_textContent_NonRuby_C::ExecuteUbergraph_wgt_S3Memopad_textCo
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

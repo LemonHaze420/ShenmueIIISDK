@@ -59,6 +59,20 @@ enum class EAITaskPriority : uint8_t
 };
 
 
+// Enum AIModule.EGenericAICheck
+enum class EGenericAICheck : uint8_t
+{
+	EGenericAICheck__Less          = 0,
+	EGenericAICheck__LessOrEqual   = 1,
+	EGenericAICheck__Equal         = 2,
+	EGenericAICheck__NotEqual      = 3,
+	EGenericAICheck__GreaterOrEqual = 4,
+	EGenericAICheck__Greater       = 5,
+	EGenericAICheck__IsTrue        = 6,
+	EGenericAICheck__MAX           = 7
+};
+
+
 // Enum AIModule.EAILockSource
 enum class EAILockSource : uint8_t
 {
@@ -79,19 +93,6 @@ enum class EAIRequestPriority : uint8_t
 	EAIRequestPriority__Reaction   = 3,
 	EAIRequestPriority__Ultimate   = 4,
 	EAIRequestPriority__MAX        = 5
-};
-
-
-// Enum AIModule.EPawnActionEventType
-enum class EPawnActionEventType : uint8_t
-{
-	EPawnActionEventType__Invalid  = 0,
-	EPawnActionEventType__FailedToStart = 1,
-	EPawnActionEventType__InstantAbort = 2,
-	EPawnActionEventType__FinishedAborting = 3,
-	EPawnActionEventType__FinishedExecution = 4,
-	EPawnActionEventType__Push     = 5,
-	EPawnActionEventType__EPawnActionEventType_MAX = 6
 };
 
 
@@ -136,6 +137,19 @@ enum class EAIOptionFlag : uint8_t
 	EAIOptionFlag__Enable          = 1,
 	EAIOptionFlag__Disable         = 2,
 	EAIOptionFlag__MAX             = 3
+};
+
+
+// Enum AIModule.EPawnActionEventType
+enum class EPawnActionEventType : uint8_t
+{
+	EPawnActionEventType__Invalid  = 0,
+	EPawnActionEventType__FailedToStart = 1,
+	EPawnActionEventType__InstantAbort = 2,
+	EPawnActionEventType__FinishedAborting = 3,
+	EPawnActionEventType__FinishedExecution = 4,
+	EPawnActionEventType__Push     = 5,
+	EPawnActionEventType__EPawnActionEventType_MAX = 6
 };
 
 
@@ -203,12 +217,15 @@ enum class EBTParallelMode : uint8_t
 };
 
 
-// Enum AIModule.EBTBlackboardRestart
-enum class EBTBlackboardRestart : uint8_t
+// Enum AIModule.EBTDecoratorLogic
+enum class EBTDecoratorLogic : uint8_t
 {
-	EBTBlackboardRestart__ValueChange = 0,
-	EBTBlackboardRestart__ResultChange = 1,
-	EBTBlackboardRestart__EBTBlackboardRestart_MAX = 2
+	EBTDecoratorLogic__Invalid     = 0,
+	EBTDecoratorLogic__Test        = 1,
+	EBTDecoratorLogic__And         = 2,
+	EBTDecoratorLogic__Or          = 3,
+	EBTDecoratorLogic__Not         = 4,
+	EBTDecoratorLogic__EBTDecoratorLogic_MAX = 5
 };
 
 
@@ -221,13 +238,12 @@ enum class EBTChildIndex : uint8_t
 };
 
 
-// Enum AIModule.EPathExistanceQueryType
-enum class EPathExistanceQueryType : uint8_t
+// Enum AIModule.EBTBlackboardRestart
+enum class EBTBlackboardRestart : uint8_t
 {
-	EPathExistanceQueryType__NavmeshRaycast2D = 0,
-	EPathExistanceQueryType__HierarchicalQuery = 1,
-	EPathExistanceQueryType__RegularPathFinding = 2,
-	EPathExistanceQueryType__EPathExistanceQueryType_MAX = 3
+	EBTBlackboardRestart__ValueChange = 0,
+	EBTBlackboardRestart__ResultChange = 1,
+	EBTBlackboardRestart__EBTBlackboardRestart_MAX = 2
 };
 
 
@@ -240,15 +256,13 @@ enum class EBlackBoardEntryComparison : uint8_t
 };
 
 
-// Enum AIModule.EBTDecoratorLogic
-enum class EBTDecoratorLogic : uint8_t
+// Enum AIModule.EPathExistanceQueryType
+enum class EPathExistanceQueryType : uint8_t
 {
-	EBTDecoratorLogic__Invalid     = 0,
-	EBTDecoratorLogic__Test        = 1,
-	EBTDecoratorLogic__And         = 2,
-	EBTDecoratorLogic__Or          = 3,
-	EBTDecoratorLogic__Not         = 4,
-	EBTDecoratorLogic__EBTDecoratorLogic_MAX = 5
+	EPathExistanceQueryType__NavmeshRaycast2D = 0,
+	EPathExistanceQueryType__HierarchicalQuery = 1,
+	EPathExistanceQueryType__RegularPathFinding = 2,
+	EPathExistanceQueryType__EPathExistanceQueryType_MAX = 3
 };
 
 
@@ -267,6 +281,17 @@ enum class EEnvTestDot : uint8_t
 	EEnvTestDot__Dot3D             = 0,
 	EEnvTestDot__Dot2D             = 1,
 	EEnvTestDot__EEnvTestDot_MAX   = 2
+};
+
+
+// Enum AIModule.EEnvTestDistance
+enum class EEnvTestDistance : uint8_t
+{
+	EEnvTestDistance__Distance3D   = 0,
+	EEnvTestDistance__Distance2D   = 1,
+	EEnvTestDistance__DistanceZ    = 2,
+	EEnvTestDistance__DistanceAbsoluteZ = 3,
+	EEnvTestDistance__EEnvTestDistance_MAX = 4
 };
 
 
@@ -290,37 +315,12 @@ enum class EEnvQueryTestClamping : uint8_t
 };
 
 
-// Enum AIModule.EEnvTestDistance
-enum class EEnvTestDistance : uint8_t
-{
-	EEnvTestDistance__Distance3D   = 0,
-	EEnvTestDistance__Distance2D   = 1,
-	EEnvTestDistance__DistanceZ    = 2,
-	EEnvTestDistance__DistanceAbsoluteZ = 3,
-	EEnvTestDistance__EEnvTestDistance_MAX = 4
-};
-
-
 // Enum AIModule.EEnvDirection
 enum class EEnvDirection : uint8_t
 {
 	EEnvDirection__TwoPoints       = 0,
 	EEnvDirection__Rotation        = 1,
 	EEnvDirection__EEnvDirection_MAX = 2
-};
-
-
-// Enum AIModule.EGenericAICheck
-enum class EGenericAICheck : uint8_t
-{
-	EGenericAICheck__Less          = 0,
-	EGenericAICheck__LessOrEqual   = 1,
-	EGenericAICheck__Equal         = 2,
-	EGenericAICheck__NotEqual      = 3,
-	EGenericAICheck__GreaterOrEqual = 4,
-	EGenericAICheck__Greater       = 5,
-	EGenericAICheck__IsTrue        = 6,
-	EGenericAICheck__MAX           = 7
 };
 
 
@@ -356,12 +356,13 @@ enum class EEnvQueryTrace : uint8_t
 };
 
 
-// Enum AIModule.EPointOnCircleSpacingMethod
-enum class EPointOnCircleSpacingMethod : uint8_t
+// Enum AIModule.EAIParamType
+enum class EAIParamType : uint8_t
 {
-	EPointOnCircleSpacingMethod__BySpaceBetween = 0,
-	EPointOnCircleSpacingMethod__ByNumberOfPoints = 1,
-	EPointOnCircleSpacingMethod__EPointOnCircleSpacingMethod_MAX = 2
+	EAIParamType__Float            = 0,
+	EAIParamType__Int              = 1,
+	EAIParamType__Bool             = 2,
+	EAIParamType__MAX              = 3
 };
 
 
@@ -396,13 +397,21 @@ enum class EEnvTestScoreOperator : uint8_t
 };
 
 
-// Enum AIModule.EAIParamType
-enum class EAIParamType : uint8_t
+// Enum AIModule.EEnvTestFilterOperator
+enum class EEnvTestFilterOperator : uint8_t
 {
-	EAIParamType__Float            = 0,
-	EAIParamType__Int              = 1,
-	EAIParamType__Bool             = 2,
-	EAIParamType__MAX              = 3
+	EEnvTestFilterOperator__AllPass = 0,
+	EEnvTestFilterOperator__AnyPass = 1,
+	EEnvTestFilterOperator__EEnvTestFilterOperator_MAX = 2
+};
+
+
+// Enum AIModule.EPointOnCircleSpacingMethod
+enum class EPointOnCircleSpacingMethod : uint8_t
+{
+	EPointOnCircleSpacingMethod__BySpaceBetween = 0,
+	EPointOnCircleSpacingMethod__ByNumberOfPoints = 1,
+	EPointOnCircleSpacingMethod__EPointOnCircleSpacingMethod_MAX = 2
 };
 
 
@@ -413,37 +422,6 @@ enum class EEnvTestCost : uint8_t
 	EEnvTestCost__Medium           = 1,
 	EEnvTestCost__High             = 2,
 	EEnvTestCost__EEnvTestCost_MAX = 3
-};
-
-
-// Enum AIModule.EEnvTestScoreEquation
-enum class EEnvTestScoreEquation : uint8_t
-{
-	EEnvTestScoreEquation__Linear  = 0,
-	EEnvTestScoreEquation__Square  = 1,
-	EEnvTestScoreEquation__InverseLinear = 2,
-	EEnvTestScoreEquation__SquareRoot = 3,
-	EEnvTestScoreEquation__Constant = 4,
-	EEnvTestScoreEquation__EEnvTestScoreEquation_MAX = 5
-};
-
-
-// Enum AIModule.EEnvTestFilterOperator
-enum class EEnvTestFilterOperator : uint8_t
-{
-	EEnvTestFilterOperator__AllPass = 0,
-	EEnvTestFilterOperator__AnyPass = 1,
-	EEnvTestFilterOperator__EEnvTestFilterOperator_MAX = 2
-};
-
-
-// Enum AIModule.EEnvTestPurpose
-enum class EEnvTestPurpose : uint8_t
-{
-	EEnvTestPurpose__Filter        = 0,
-	EEnvTestPurpose__Score         = 1,
-	EEnvTestPurpose__FilterAndScore = 2,
-	EEnvTestPurpose__EEnvTestPurpose_MAX = 3
 };
 
 
@@ -460,35 +438,36 @@ enum class EEnvTestWeight : uint8_t
 };
 
 
-// Enum AIModule.ETeamAttitude
-enum class ETeamAttitude : uint8_t
+// Enum AIModule.EEnvTestScoreEquation
+enum class EEnvTestScoreEquation : uint8_t
 {
-	ETeamAttitude__Friendly        = 0,
-	ETeamAttitude__Neutral         = 1,
-	ETeamAttitude__Hostile         = 2,
-	ETeamAttitude__ETeamAttitude_MAX = 3
+	EEnvTestScoreEquation__Linear  = 0,
+	EEnvTestScoreEquation__Square  = 1,
+	EEnvTestScoreEquation__InverseLinear = 2,
+	EEnvTestScoreEquation__SquareRoot = 3,
+	EEnvTestScoreEquation__Constant = 4,
+	EEnvTestScoreEquation__EEnvTestScoreEquation_MAX = 5
 };
 
 
-// Enum AIModule.EPathFollowingRequestResult
-enum class EPathFollowingRequestResult : uint8_t
+// Enum AIModule.EEnvTestFilterType
+enum class EEnvTestFilterType : uint8_t
 {
-	EPathFollowingRequestResult__Failed = 0,
-	EPathFollowingRequestResult__AlreadyAtGoal = 1,
-	EPathFollowingRequestResult__RequestSuccessful = 2,
-	EPathFollowingRequestResult__EPathFollowingRequestResult_MAX = 3
+	EEnvTestFilterType__Minimum    = 0,
+	EEnvTestFilterType__Maximum    = 1,
+	EEnvTestFilterType__Range      = 2,
+	EEnvTestFilterType__Match      = 3,
+	EEnvTestFilterType__EEnvTestFilterType_MAX = 4
 };
 
 
-// Enum AIModule.EPathFollowingAction
-enum class EPathFollowingAction : uint8_t
+// Enum AIModule.EEnvTestPurpose
+enum class EEnvTestPurpose : uint8_t
 {
-	EPathFollowingAction__Error    = 0,
-	EPathFollowingAction__NoMove   = 1,
-	EPathFollowingAction__DirectMove = 2,
-	EPathFollowingAction__PartialPath = 3,
-	EPathFollowingAction__PathToGoal = 4,
-	EPathFollowingAction__EPathFollowingAction_MAX = 5
+	EEnvTestPurpose__Filter        = 0,
+	EEnvTestPurpose__Score         = 1,
+	EEnvTestPurpose__FilterAndScore = 2,
+	EEnvTestPurpose__EEnvTestPurpose_MAX = 3
 };
 
 
@@ -502,6 +481,16 @@ enum class EEnvQueryHightlightMode : uint8_t
 };
 
 
+// Enum AIModule.ETeamAttitude
+enum class ETeamAttitude : uint8_t
+{
+	ETeamAttitude__Friendly        = 0,
+	ETeamAttitude__Neutral         = 1,
+	ETeamAttitude__Hostile         = 2,
+	ETeamAttitude__ETeamAttitude_MAX = 3
+};
+
+
 // Enum AIModule.EPathFollowingStatus
 enum class EPathFollowingStatus : uint8_t
 {
@@ -510,6 +499,27 @@ enum class EPathFollowingStatus : uint8_t
 	EPathFollowingStatus__Paused   = 2,
 	EPathFollowingStatus__Moving   = 3,
 	EPathFollowingStatus__EPathFollowingStatus_MAX = 4
+};
+
+
+// Enum AIModule.EPawnActionFailHandling
+enum class EPawnActionFailHandling : uint8_t
+{
+	EPawnActionFailHandling__RequireSuccess = 0,
+	EPawnActionFailHandling__IgnoreFailure = 1,
+	EPawnActionFailHandling__EPawnActionFailHandling_MAX = 2
+};
+
+
+// Enum AIModule.EPathFollowingAction
+enum class EPathFollowingAction : uint8_t
+{
+	EPathFollowingAction__Error    = 0,
+	EPathFollowingAction__NoMove   = 1,
+	EPathFollowingAction__DirectMove = 2,
+	EPathFollowingAction__PartialPath = 3,
+	EPathFollowingAction__PathToGoal = 4,
+	EPathFollowingAction__EPathFollowingAction_MAX = 5
 };
 
 
@@ -531,23 +541,13 @@ enum class EPawnActionMoveMode : uint8_t
 };
 
 
-// Enum AIModule.EPawnActionFailHandling
-enum class EPawnActionFailHandling : uint8_t
+// Enum AIModule.EPathFollowingRequestResult
+enum class EPathFollowingRequestResult : uint8_t
 {
-	EPawnActionFailHandling__RequireSuccess = 0,
-	EPawnActionFailHandling__IgnoreFailure = 1,
-	EPawnActionFailHandling__EPawnActionFailHandling_MAX = 2
-};
-
-
-// Enum AIModule.EEnvTestFilterType
-enum class EEnvTestFilterType : uint8_t
-{
-	EEnvTestFilterType__Minimum    = 0,
-	EEnvTestFilterType__Maximum    = 1,
-	EEnvTestFilterType__Range      = 2,
-	EEnvTestFilterType__Match      = 3,
-	EEnvTestFilterType__EEnvTestFilterType_MAX = 4
+	EPathFollowingRequestResult__Failed = 0,
+	EPathFollowingRequestResult__AlreadyAtGoal = 1,
+	EPathFollowingRequestResult__RequestSuccessful = 2,
+	EPathFollowingRequestResult__EPathFollowingRequestResult_MAX = 3
 };
 
 
@@ -635,6 +635,15 @@ struct FAIDamageEvent
 	class AActor*                                      Instigator;                                               // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct AIModule.AIPredictionEvent
+// 0x0018
+struct FAIPredictionEvent
+{
+	class AActor*                                      Requestor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      PredictedActor;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
+};
+
 // ScriptStruct AIModule.AINoiseEvent
 // 0x0030
 struct FAINoiseEvent
@@ -646,15 +655,6 @@ struct FAINoiseEvent
 	class AActor*                                      Instigator;                                               // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FName                                       Tag;                                                      // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct AIModule.AIPredictionEvent
-// 0x0018
-struct FAIPredictionEvent
-{
-	class AActor*                                      Requestor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      PredictedActor;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.AITeamStimulusEvent
@@ -886,13 +886,6 @@ struct FPawnActionEvent
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 };
 
-// ScriptStruct AIModule.AIDataProviderStructValue
-// 0x0010 (0x0030 - 0x0020)
-struct FAIDataProviderStructValue : public FAIDataProviderValue
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0020(0x0010) MISSED OFFSET
-};
-
 // ScriptStruct AIModule.AISightEvent
 // 0x0018
 struct FAISightEvent
@@ -900,6 +893,13 @@ struct FAISightEvent
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 	class AActor*                                      SeenActor;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Observer;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AIModule.AIDataProviderStructValue
+// 0x0010 (0x0030 - 0x0020)
+struct FAIDataProviderStructValue : public FAIDataProviderValue
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0020(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct AIModule.EnvQueryRequest

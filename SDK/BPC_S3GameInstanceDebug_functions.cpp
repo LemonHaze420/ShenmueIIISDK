@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_S3GameInstanceDebug.BPC_S3GameInstanceDebug_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3GameInstanceDebug_C::ReceiveTick(float DeltaSeconds)
+void UBPC_S3GameInstanceDebug_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3GameInstanceDebug.BPC_S3GameInstanceDebug_C.ReceiveTick");
 
@@ -26,6 +26,7 @@ void UBPC_S3GameInstanceDebug_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,15 +35,16 @@ void UBPC_S3GameInstanceDebug_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_S3GameInstanceDebug.BPC_S3GameInstanceDebug_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, Private, BlueprintEvent, BlueprintPure)
 
-void UBPC_S3GameInstanceDebug_C::ReceiveBeginPlay()
+void UBPC_S3GameInstanceDebug_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3GameInstanceDebug.BPC_S3GameInstanceDebug_C.ReceiveBeginPlay");
 
 	UBPC_S3GameInstanceDebug_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +53,7 @@ void UBPC_S3GameInstanceDebug_C::ReceiveBeginPlay()
 
 
 // Function BPC_S3GameInstanceDebug.BPC_S3GameInstanceDebug_C.ExecuteUbergraph_BPC_S3GameInstanceDebug
-// (HasDefaults)
+// (NetRequest, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

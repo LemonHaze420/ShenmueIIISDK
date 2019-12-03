@@ -32,9 +32,9 @@ public:
 	}
 
 
-	void SetPlayPrice(int PlayPrice);
+	void STATIC_SetPlayPrice(int PlayPrice);
 	void Construct();
-	void ExecuteUbergraph_BPW_PlayPrice(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_PlayPrice(int EntryPoint);
 };
 
 

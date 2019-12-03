@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.CheckSkip
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3GamemodeBase_C::CheckSkip(bool* dummy)
+void ABP_S3GamemodeBase_C::STATIC_CheckSkip(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.CheckSkip");
 
 	ABP_S3GamemodeBase_C_CheckSkip_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_S3GamemodeBase_C::CheckSkip(bool* dummy)
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.SpawnDefaultPawnFor
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class AController*             NewPlayer                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  StartSpot                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -51,6 +52,7 @@ class APawn* ABP_S3GamemodeBase_C::SpawnDefaultPawnFor(class AController* NewPla
 	params.StartSpot = StartSpot;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,15 +63,16 @@ class APawn* ABP_S3GamemodeBase_C::SpawnDefaultPawnFor(class AController* NewPla
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3GamemodeBase_C::UserConstructionScript()
+void ABP_S3GamemodeBase_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.UserConstructionScript");
 
 	ABP_S3GamemodeBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +81,7 @@ void ABP_S3GamemodeBase_C::UserConstructionScript()
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Native, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void ABP_S3GamemodeBase_C::ReceiveBeginPlay()
 {
@@ -87,6 +90,7 @@ void ABP_S3GamemodeBase_C::ReceiveBeginPlay()
 	ABP_S3GamemodeBase_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,11 +99,11 @@ void ABP_S3GamemodeBase_C::ReceiveBeginPlay()
 
 
 // Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.ExecuteUbergraph_BP_S3GamemodeBase
-// ()
+// (Net, Exec, Native, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3GamemodeBase_C::ExecuteUbergraph_BP_S3GamemodeBase(int EntryPoint)
+void ABP_S3GamemodeBase_C::STATIC_ExecuteUbergraph_BP_S3GamemodeBase(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3GamemodeBase.BP_S3GamemodeBase_C.ExecuteUbergraph_BP_S3GamemodeBase");
 
@@ -107,6 +111,7 @@ void ABP_S3GamemodeBase_C::ExecuteUbergraph_BP_S3GamemodeBase(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

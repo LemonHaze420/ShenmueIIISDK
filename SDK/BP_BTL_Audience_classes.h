@@ -38,17 +38,17 @@ public:
 	}
 
 
-	struct FVector CalcCenter();
-	void PlayRandomCenterReaction(TArray<class USoundAtomCue*>* Sounds);
-	void PlayReaction(TArray<class USoundAtomCue*>* Sounds);
-	bool IsActive();
-	void PlaySurroundSoundReactions(TArray<class USoundAtomCue*>* Sounds);
+	struct FVector STATIC_CalcCenter();
+	void STATIC_PlayRandomCenterReaction(TArray<class USoundAtomCue*>* Sounds);
+	void STATIC_PlayReaction(TArray<class USoundAtomCue*>* Sounds);
+	bool STATIC_IsActive();
+	void STATIC_PlaySurroundSoundReactions(TArray<class USoundAtomCue*>* Sounds);
 	void SetActive(bool Active);
-	void ReactToHit();
-	void ReactToKO();
+	void STATIC_ReactToHit();
+	void STATIC_ReactToKO();
 	void UserConstructionScript();
-	void StartCooldownHit();
-	void StartCooldownKO();
+	void STATIC_StartCooldownHit();
+	void STATIC_StartCooldownKO();
 	void ExecuteUbergraph_BP_BTL_Audience(int EntryPoint);
 };
 

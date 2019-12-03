@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BPC_MiniGameStandaloneTalkScript(int EntryPoint);
 };

@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void SetValue(int Value, bool NotAnim);
+	void STATIC_SetValue(int Value, bool NotAnim);
 };
 
 

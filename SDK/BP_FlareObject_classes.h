@@ -36,10 +36,10 @@ public:
 	}
 
 
-	void InitiateFlares();
+	void STATIC_InitiateFlares();
 	void UpdateFlareVisibility();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_FlareObject(int EntryPoint);
 };

@@ -32,14 +32,14 @@ public:
 	void STATIC_GetVolumeAdjustValue(class UObject* __WorldContext, float* Volume);
 	void STATIC_GetSEVolume(class UObject* __WorldContext, float* Volume);
 	void STATIC_GetWeatherLabel(class UObject* __WorldContext, struct FString* Selector, struct FString* Label);
-	void STATIC_GetBGMbyID(const struct FName& InId, class UObject* __WorldContext, struct FS3BgmTable* Data);
+	void GetBGMbyID(const struct FName& InId, class UObject* __WorldContext, struct FS3BgmTable* Data);
 	void STATIC_PlayCommonSound(ECommonSEType Type, class UObject* __WorldContext);
 	void STATIC_PlaySoundWithVolume(class USoundAtomCue* Sound, float Volume, class UObject* __WorldContext);
 	void STATIC_ChoiceTimeEventBGM(ES3DayTimeEvent CurrentEvent, class USoundAtomCue* CurrentCue, class USoundAtomCue* DefaultCue, class UObject* __WorldContext, TArray<struct FS3BgmChangeInfo>* InfoArray, class USoundAtomCue** Cue);
 	void STATIC_PlaySoundAttachedComponent(class USoundAtomCue* Sound, class USceneComponent* Component, const struct FName& SocketName, class USoundAttenuation* Attenuation, bool AutoDestroy, class UObject* __WorldContext, class ABP_S3SoundPlayer_C** SoundPlayer);
 	void STATIC_PlaySoundAttached(class USoundAtomCue* Sound, class AActor* Actor, class USoundAttenuation* Attenuation, bool AutoDestroy, class UObject* __WorldContext, class ABP_S3SoundPlayer_C** SoundPlayer);
 	void STATIC_PlaySoundAtLocation(class USoundAtomCue* Sound, const struct FVector& Location, class USoundAttenuation* Attenuation, bool AutoDestroy, bool AutoPlay, class UObject* __WorldContext, class ABP_S3SoundPlayer_C** SoundPlayer);
-	void STATIC_GetDuration(class USoundAtomCue* Cue, class UObject* __WorldContext, float* Duration, bool* Result);
+	void GetDuration(class USoundAtomCue* Cue, class UObject* __WorldContext, float* Duration, bool* Result);
 	void STATIC_GetS3SoundManager(class UObject* __WorldContext, class ABP_SoundManager_C** BP_SoundManager);
 };
 

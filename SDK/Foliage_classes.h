@@ -12,23 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class Foliage.FoliageInstancedStaticMeshComponent
-// 0x0020 (0x0790 - 0x0770)
-class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
-{
-public:
-	struct FScriptMulticastDelegate                    OnInstanceTakePointDamage;                                // 0x0770(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x0780(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class Foliage.FoliageStatistics
 // 0x0000 (0x0028 - 0x0028)
 class UFoliageStatistics : public UBlueprintFunctionLibrary
@@ -42,8 +25,8 @@ public:
 	}
 
 
-	int STATIC_FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius);
-	int STATIC_FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box);
+	int FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius);
+	int FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box);
 };
 
 
@@ -155,6 +138,23 @@ public:
 };
 
 
+// Class Foliage.FoliageInstancedStaticMeshComponent
+// 0x0020 (0x0790 - 0x0770)
+class UFoliageInstancedStaticMeshComponent : public UHierarchicalInstancedStaticMeshComponent
+{
+public:
+	struct FScriptMulticastDelegate                    OnInstanceTakePointDamage;                                // 0x0770(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnInstanceTakeRadialDamage;                               // 0x0780(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Foliage.FoliageInstancedStaticMeshComponent");
+		return ptr;
+	}
+
+};
+
+
 // Class Foliage.InstancedFoliageActor
 // 0x0050 (0x0378 - 0x0328)
 class AInstancedFoliageActor : public AActor
@@ -235,6 +235,66 @@ public:
 };
 
 
+// Class Foliage.ProceduralFoliageTile
+// 0x0130 (0x0158 - 0x0028)
+class UProceduralFoliageTile : public UObject
+{
+public:
+	class UProceduralFoliageSpawner*                   FoliageSpawner;                                           // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xA0];                                      // 0x0030(0x00A0) MISSED OFFSET
+	TArray<struct FProceduralFoliageInstance>          InstancesArray;                                           // 0x00D0(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x78];                                      // 0x00E0(0x0078) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
+		return ptr;
+	}
+
+};
+
+
+// Class Foliage.ProceduralFoliageVolume
+// 0x0008 (0x0368 - 0x0360)
+class AProceduralFoliageVolume : public AVolume
+{
+public:
+	class UProceduralFoliageComponent*                 ProceduralComponent;                                      // 0x0360(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
+		return ptr;
+	}
+
+};
+
+
+// Class Foliage.ProceduralFoliageSpawner
+// 0x0048 (0x0070 - 0x0028)
+class UProceduralFoliageSpawner : public UObject
+{
+public:
+	int                                                RandomSeed;                                               // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              TileSize;                                                 // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                NumUniqueTiles;                                           // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              MinimumQuadTreeSize;                                      // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
+	TArray<struct FFoliageTypeObject>                  FoliageTypes;                                             // 0x0040(0x0010) (Edit, ZeroConstructor)
+	bool                                               bNeedsSimulation;                                         // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1F];                                      // 0x0051(0x001F) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
+		return ptr;
+	}
+
+
+	void Simulate(int NumSteps);
+};
+
+
 // Class Foliage.FoliageType_InstancedStaticMesh
 // 0x0020 (0x0378 - 0x0358)
 class UFoliageType_InstancedStaticMesh : public UFoliageType
@@ -267,66 +327,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageComponent");
-		return ptr;
-	}
-
-};
-
-
-// Class Foliage.ProceduralFoliageSpawner
-// 0x0048 (0x0070 - 0x0028)
-class UProceduralFoliageSpawner : public UObject
-{
-public:
-	int                                                RandomSeed;                                               // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              TileSize;                                                 // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                NumUniqueTiles;                                           // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              MinimumQuadTreeSize;                                      // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
-	TArray<struct FFoliageTypeObject>                  FoliageTypes;                                             // 0x0040(0x0010) (Edit, ZeroConstructor)
-	bool                                               bNeedsSimulation;                                         // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1F];                                      // 0x0051(0x001F) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageSpawner");
-		return ptr;
-	}
-
-
-	void Simulate(int NumSteps);
-};
-
-
-// Class Foliage.ProceduralFoliageTile
-// 0x0130 (0x0158 - 0x0028)
-class UProceduralFoliageTile : public UObject
-{
-public:
-	class UProceduralFoliageSpawner*                   FoliageSpawner;                                           // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xA0];                                      // 0x0030(0x00A0) MISSED OFFSET
-	TArray<struct FProceduralFoliageInstance>          InstancesArray;                                           // 0x00D0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x78];                                      // 0x00E0(0x0078) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageTile");
-		return ptr;
-	}
-
-};
-
-
-// Class Foliage.ProceduralFoliageVolume
-// 0x0008 (0x0368 - 0x0360)
-class AProceduralFoliageVolume : public AVolume
-{
-public:
-	class UProceduralFoliageComponent*                 ProceduralComponent;                                      // 0x0360(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Foliage.ProceduralFoliageVolume");
 		return ptr;
 	}
 

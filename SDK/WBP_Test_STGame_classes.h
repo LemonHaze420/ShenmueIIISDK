@@ -58,20 +58,20 @@ public:
 	}
 
 
-	void SetGradationSpeed(float Speed);
+	void STATIC_SetGradationSpeed(float Speed);
 	void SetGradationPower(float Power);
 	void SetGradationScrollVisible(bool Visible);
 	void SetThrowResult(bool IsSuccess, int Point);
 	void SetSuccessRate(int SuccessCount);
-	void SetThrowResultVisible(bool IsVisible);
+	void STATIC_SetThrowResultVisible(bool IsVisible);
 	ESlateVisibility GetThrowResultVisibility();
-	void SetResultVisible(bool IsVisible);
-	void SetNormalVisible(bool IsVisible);
+	void STATIC_SetResultVIsible(bool IsVisible);
+	void STATIC_SetNormalVisible(bool IsVisible);
 	ESlateVisibility GetResultVisibility();
 	ESlateVisibility GetNormalVisibility();
-	void SetScore(int InScore);
-	void SetThrowCount(int newParam);
-	void Construct();
+	void STATIC_SetScore(int InScore);
+	void STATIC_SetThrowCount(int newParam);
+	void STATIC_Construct();
 	void ExecuteUbergraph_WBP_Test_STGame(int EntryPoint);
 };
 

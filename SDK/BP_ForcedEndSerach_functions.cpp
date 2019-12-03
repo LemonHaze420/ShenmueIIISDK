@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_ForcedEndSerach_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_ForcedEndSerach_C::UserConstructionScript()
 
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.EvtFreeState
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_ForcedEndSerach_C::EvtFreeState()
 {
@@ -40,6 +40,7 @@ void ABP_ForcedEndSerach_C::EvtFreeState()
 	ABP_ForcedEndSerach_C_EvtFreeState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +49,7 @@ void ABP_ForcedEndSerach_C::EvtFreeState()
 
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_ForcedEndSerach_C::ReceiveBeginPlay()
 {
@@ -57,6 +58,7 @@ void ABP_ForcedEndSerach_C::ReceiveBeginPlay()
 	ABP_ForcedEndSerach_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,11 +67,11 @@ void ABP_ForcedEndSerach_C::ReceiveBeginPlay()
 
 
 // Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.ExecuteUbergraph_BP_ForcedEndSerach
-// ()
+// (NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ForcedEndSerach_C::ExecuteUbergraph_BP_ForcedEndSerach(int EntryPoint)
+void ABP_ForcedEndSerach_C::STATIC_ExecuteUbergraph_BP_ForcedEndSerach(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ForcedEndSerach.BP_ForcedEndSerach_C.ExecuteUbergraph_BP_ForcedEndSerach");
 
@@ -77,6 +79,7 @@ void ABP_ForcedEndSerach_C::ExecuteUbergraph_BP_ForcedEndSerach(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

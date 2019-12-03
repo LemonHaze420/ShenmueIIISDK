@@ -24,6 +24,8 @@ public:
 		return ptr;
 	}
 
+
+	void STATIC_BPF_FindOverlappingNotifyState(class UAnimMontage* Montage, class UClass* FindStateClass, class UAnimNotifyState* StateRef, class UObject* __WorldContext, class UAnimNotifyState** OutState);
 };
 
 

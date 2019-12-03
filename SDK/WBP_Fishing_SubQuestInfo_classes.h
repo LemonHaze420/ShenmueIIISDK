@@ -39,10 +39,10 @@ public:
 	}
 
 
-	void SetNumValue(class UTextBlock* Text, int Value);
+	void STATIC_SetNumValue(class UTextBlock* Text, int Value);
 	void UpdateInfo();
 	void SetCurrentInfo(const struct FString& CurrentTopText, int RivalFlagIndex, const struct FString& CurrentTopUnit, const struct FString& RyoLocalizeName, int RyoNum);
-	void Construct();
+	void STATIC_Construct();
 	void OnRivalFlagChanged(int ArrayIndex, int SetFlags);
 	void ExecuteUbergraph_WBP_Fishing_SubQuestInfo(int EntryPoint);
 };

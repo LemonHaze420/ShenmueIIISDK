@@ -25,15 +25,15 @@ public:
 	}
 
 
-	class US3DerivedPlayerLevel* STATIC_BPF_GetPlayerStat_Vitality(class UObject* __WorldContext);
-	class US3PlayerExpCollection* STATIC_BPF_GetPlayerStats_Kunfu(class UObject* __WorldContext);
-	void STATIC_BPF_AddKunFuLevel(const struct FName& Key, int AddLPevel, class UObject* __WorldContext);
-	void STATIC_BPF_GetKunFuLevel(const struct FName& Key, class UObject* __WorldContext, int* OutLevel, float* OutNextRatio);
+	class US3DerivedPlayerLevel* BPF_GetPlayerStat_Vitality(class UObject* __WorldContext);
+	class US3PlayerExpCollection* BPF_GetPlayerStats_Kunfu(class UObject* __WorldContext);
+	void BPF_AddKunFuLevel(const struct FName& Key, int AddLPevel, class UObject* __WorldContext);
+	void BPF_GetKunFuLevel(const struct FName& Key, class UObject* __WorldContext, int* OutLevel, float* OutNextRatio);
 	void STATIC_BPF_GetKunFuLevelRange(const struct FName& Key, class UObject* __WorldContext, int* Min, int* Max);
 	void STATIC_BPF_SetKunFuLevel(const struct FName& Key, int Level, class UObject* __WorldContext);
 	void STATIC_BPF_SetKunfuRatio(const struct FName& Type, float Ratio, class UObject* __WorldContext);
 	void STATIC_BPF_AddKunfuRatio(const struct FName& Type, float Ratio, class UObject* __WorldContext);
-	void STATIC_BPF_SetKunfuPoints(const struct FName& Type, float Value, class UObject* __WorldContext);
+	void BPF_SetKunfuPoints(const struct FName& Type, float Value, class UObject* __WorldContext);
 	void STATIC_BPF_AddKunfuPoints(const struct FName& Type, float Amt, class UObject* __WorldContext);
 };
 

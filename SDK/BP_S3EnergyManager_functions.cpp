@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.IsLowEnergy
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ bool ABP_S3EnergyManager_C::IsLowEnergy()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.SelectLowEnergyMessageList
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FName>           Array                          (Parm, OutParm, ZeroConstructor)
 
@@ -46,6 +46,7 @@ void ABP_S3EnergyManager_C::SelectLowEnergyMessageList(TArray<struct FName>* Arr
 	ABP_S3EnergyManager_C_SelectLowEnergyMessageList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,11 +58,11 @@ void ABP_S3EnergyManager_C::SelectLowEnergyMessageList(TArray<struct FName>* Arr
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.TryStartEatEvent
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Starting                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3EnergyManager_C::TryStartEatEvent(bool* Starting)
+void ABP_S3EnergyManager_C::STATIC_TryStartEatEvent(bool* Starting)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3EnergyManager.BP_S3EnergyManager_C.TryStartEatEvent");
 
@@ -79,7 +80,7 @@ void ABP_S3EnergyManager_C::TryStartEatEvent(bool* Starting)
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.TryMessageLowEnergyStatus
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3EnergyManager_C::TryMessageLowEnergyStatus()
 {
@@ -96,7 +97,7 @@ void ABP_S3EnergyManager_C::TryMessageLowEnergyStatus()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.DrainEnergyByRunningTick
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -116,11 +117,11 @@ void ABP_S3EnergyManager_C::DrainEnergyByRunningTick(float DeltaSeconds)
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.RegerateEnergy
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3EnergyManager_C::RegerateEnergy(float DeltaSeconds)
+void ABP_S3EnergyManager_C::STATIC_RegerateEnergy(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3EnergyManager.BP_S3EnergyManager_C.RegerateEnergy");
 
@@ -128,6 +129,7 @@ void ABP_S3EnergyManager_C::RegerateEnergy(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +138,7 @@ void ABP_S3EnergyManager_C::RegerateEnergy(float DeltaSeconds)
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.DrainEnergyByRunning
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3EnergyManager_C::DrainEnergyByRunning()
 {
@@ -153,11 +155,11 @@ void ABP_S3EnergyManager_C::DrainEnergyByRunning()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.Setup
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AS3GameTimeManager*      TimeMan                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3EnergyManager_C::Setup(class AS3GameTimeManager* TimeMan)
+void ABP_S3EnergyManager_C::STATIC_Setup(class AS3GameTimeManager* TimeMan)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3EnergyManager.BP_S3EnergyManager_C.Setup");
 
@@ -173,7 +175,7 @@ void ABP_S3EnergyManager_C::Setup(class AS3GameTimeManager* TimeMan)
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.DrainEnergyByTime
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
 void ABP_S3EnergyManager_C::DrainEnergyByTime()
 {
@@ -190,7 +192,7 @@ void ABP_S3EnergyManager_C::DrainEnergyByTime()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3EnergyManager_C::UserConstructionScript()
 {
@@ -207,7 +209,7 @@ void ABP_S3EnergyManager_C::UserConstructionScript()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -227,7 +229,7 @@ void ABP_S3EnergyManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3EnergyManager_C::ReceiveBeginPlay()
 {
@@ -244,7 +246,7 @@ void ABP_S3EnergyManager_C::ReceiveBeginPlay()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.OnPlayerBehaviorIdChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, MulticastDelegate, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3PlayerBehavior              NewId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PlayerBehavior              OldId                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -266,7 +268,7 @@ void ABP_S3EnergyManager_C::OnPlayerBehaviorIdChanged(ES3PlayerBehavior NewId, E
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -286,7 +288,7 @@ void ABP_S3EnergyManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRe
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.Reset
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3EnergyManager_C::Reset()
 {
@@ -303,7 +305,7 @@ void ABP_S3EnergyManager_C::Reset()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.ResetBattleFlag
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3EnergyManager_C::ResetBattleFlag()
 {
@@ -320,7 +322,7 @@ void ABP_S3EnergyManager_C::ResetBattleFlag()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.ReenableLowEnergyMessage
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3EnergyManager_C::ReenableLowEnergyMessage()
 {
@@ -337,7 +339,7 @@ void ABP_S3EnergyManager_C::ReenableLowEnergyMessage()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.StartMessageReenableTimer
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3EnergyManager_C::StartMessageReenableTimer()
 {
@@ -354,7 +356,7 @@ void ABP_S3EnergyManager_C::StartMessageReenableTimer()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.DrainRunEnergy
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_S3EnergyManager_C::DrainRunEnergy()
 {
@@ -371,11 +373,11 @@ void ABP_S3EnergyManager_C::DrainRunEnergy()
 
 
 // Function BP_S3EnergyManager.BP_S3EnergyManager_C.ExecuteUbergraph_BP_S3EnergyManager
-// (HasDefaults)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3EnergyManager_C::ExecuteUbergraph_BP_S3EnergyManager(int EntryPoint)
+void ABP_S3EnergyManager_C::STATIC_ExecuteUbergraph_BP_S3EnergyManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3EnergyManager.BP_S3EnergyManager_C.ExecuteUbergraph_BP_S3EnergyManager");
 

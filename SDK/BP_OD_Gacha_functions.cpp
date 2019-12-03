@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.GetBottomPocketMaterial
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Static, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstance*       return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Gacha_C::GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value)
+void ABP_OD_Gacha_C::STATIC_GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Gacha.BP_OD_Gacha_C.GetBottomPocketMaterial");
 
@@ -27,6 +27,7 @@ void ABP_OD_Gacha_C::GetBottomPocketMaterial(int Index, class UMaterialInstance*
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void ABP_OD_Gacha_C::GetBottomPocketMaterial(int Index, class UMaterialInstance*
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.GetBottomPocketCount
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // int                            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -60,7 +61,7 @@ void ABP_OD_Gacha_C::GetBottomPocketCount(int* Output)
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.GetBottomPocket
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Dimension_1                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -84,11 +85,11 @@ void ABP_OD_Gacha_C::GetBottomPocket(int Dimension_1, int* Output)
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.GetItemID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString ABP_OD_Gacha_C::GetItemID()
+struct FString ABP_OD_Gacha_C::STATIC_GetItemID()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Gacha.BP_OD_Gacha_C.GetItemID");
 
@@ -105,11 +106,11 @@ struct FString ABP_OD_Gacha_C::GetItemID()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.SpawnInputControlActor
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Static, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_OD_Gacha_C::SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_OD_Gacha_C::STATIC_SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Gacha.BP_OD_Gacha_C.SpawnInputControlActor");
 
@@ -126,9 +127,9 @@ class ABP_MiniGameInputBase_C* ABP_OD_Gacha_C::SpawnInputControlActor()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_OD_Gacha_C::UserConstructionScript()
+void ABP_OD_Gacha_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Gacha.BP_OD_Gacha_C.UserConstructionScript");
 
@@ -143,7 +144,7 @@ void ABP_OD_Gacha_C::UserConstructionScript()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Gacha_C::ReceiveBeginPlay()
 {
@@ -152,6 +153,7 @@ void ABP_OD_Gacha_C::ReceiveBeginPlay()
 	ABP_OD_Gacha_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,11 +162,11 @@ void ABP_OD_Gacha_C::ReceiveBeginPlay()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Native, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Gacha_C::ReceiveTick(float DeltaSeconds)
+void ABP_OD_Gacha_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Gacha.BP_OD_Gacha_C.ReceiveTick");
 
@@ -172,6 +174,7 @@ void ABP_OD_Gacha_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -180,7 +183,7 @@ void ABP_OD_Gacha_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_OD_Gacha_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
@@ -197,7 +200,7 @@ void ABP_OD_Gacha_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEv
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_OD_Gacha_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
@@ -214,7 +217,7 @@ void ABP_OD_Gacha_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEv
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.ResumeMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -234,7 +237,7 @@ void ABP_OD_Gacha_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.OnTalkScriptEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -254,7 +257,7 @@ void ABP_OD_Gacha_C::OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.RestartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Gacha_C::RestartMiniGame()
 {
@@ -263,6 +266,7 @@ void ABP_OD_Gacha_C::RestartMiniGame()
 	ABP_OD_Gacha_C_RestartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,7 +275,7 @@ void ABP_OD_Gacha_C::RestartMiniGame()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.HitCheck
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_OD_Gacha_C::HitCheck()
 {
@@ -288,7 +292,7 @@ void ABP_OD_Gacha_C::HitCheck()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Gacha_C::EndMiniGame()
 {
@@ -297,6 +301,7 @@ void ABP_OD_Gacha_C::EndMiniGame()
 	ABP_OD_Gacha_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -305,7 +310,7 @@ void ABP_OD_Gacha_C::EndMiniGame()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.Finalize_Check
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_OD_Gacha_C::Finalize_Check()
 {
@@ -322,7 +327,7 @@ void ABP_OD_Gacha_C::Finalize_Check()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_Gacha_C::StartMiniGame()
 {
@@ -331,6 +336,7 @@ void ABP_OD_Gacha_C::StartMiniGame()
 	ABP_OD_Gacha_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,7 +345,7 @@ void ABP_OD_Gacha_C::StartMiniGame()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.EnabledPlayerOnDecide
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_OD_Gacha_C::EnabledPlayerOnDecide()
 {
@@ -356,11 +362,11 @@ void ABP_OD_Gacha_C::EnabledPlayerOnDecide()
 
 
 // Function BP_OD_Gacha.BP_OD_Gacha_C.ExecuteUbergraph_BP_OD_Gacha
-// ()
+// (Native, NetResponse, Static, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_Gacha_C::ExecuteUbergraph_BP_OD_Gacha(int EntryPoint)
+void ABP_OD_Gacha_C::STATIC_ExecuteUbergraph_BP_OD_Gacha(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_Gacha.BP_OD_Gacha_C.ExecuteUbergraph_BP_OD_Gacha");
 
@@ -368,6 +374,7 @@ void ABP_OD_Gacha_C::ExecuteUbergraph_BP_OD_Gacha(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

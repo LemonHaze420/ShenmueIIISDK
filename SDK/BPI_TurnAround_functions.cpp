@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_TurnAround.BPI_TurnAround_C.GetTurnAroundComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UBPC_TurnAround_C*       Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPI_TurnAround_C::GetTurnAroundComponent(class UBPC_TurnAround_C** Component)
+void UBPI_TurnAround_C::STATIC_GetTurnAroundComponent(class UBPC_TurnAround_C** Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_TurnAround.BPI_TurnAround_C.GetTurnAroundComponent");
 
@@ -36,11 +36,11 @@ void UBPI_TurnAround_C::GetTurnAroundComponent(class UBPC_TurnAround_C** Compone
 
 
 // Function BPI_TurnAround.BPI_TurnAround_C.RemoveTurnAroundComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_TurnAround_C::RemoveTurnAroundComponent(bool* bSuccess)
+void UBPI_TurnAround_C::STATIC_RemoveTurnAroundComponent(bool* bSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_TurnAround.BPI_TurnAround_C.RemoveTurnAroundComponent");
 
@@ -58,11 +58,11 @@ void UBPI_TurnAround_C::RemoveTurnAroundComponent(bool* bSuccess)
 
 
 // Function BPI_TurnAround.BPI_TurnAround_C.AddTurnAroundComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UBPC_TurnAround_C*       Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPI_TurnAround_C::AddTurnAroundComponent(class UBPC_TurnAround_C** Component)
+void UBPI_TurnAround_C::STATIC_AddTurnAroundComponent(class UBPC_TurnAround_C** Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_TurnAround.BPI_TurnAround_C.AddTurnAroundComponent");
 

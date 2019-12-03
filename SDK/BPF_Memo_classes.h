@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_GetS3MemoTextureDataManager(class UObject* __WorldContext, class ABP_MemoTextureDataManager_C** BP_MemoTextureDataManager);
-	void STATIC_getS3MemopadManager(class UObject* __WorldContext, class ABP_S3MemopadManager_C** BPS3MemopadManager);
+	void getS3MemopadManager(class UObject* __WorldContext, class ABP_S3MemopadManager_C** BPS3MemopadManager);
 };
 
 

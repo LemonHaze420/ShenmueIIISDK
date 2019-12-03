@@ -12,25 +12,14 @@ namespace SDK
 // Enums
 //---------------------------------------------------------------------------
 
-// Enum MediaAssets.EMediaVideoCaptureDeviceFilter
-enum class EMediaVideoCaptureDeviceFilter : uint8_t
+// Enum MediaAssets.EMediaWebcamCaptureDeviceFilter
+enum class EMediaWebcamCaptureDeviceFilter : uint8_t
 {
-	EMediaVideoCaptureDeviceFilter__Card = 0,
-	EMediaVideoCaptureDeviceFilter__Software = 1,
-	EMediaVideoCaptureDeviceFilter__Unknown = 2,
-	EMediaVideoCaptureDeviceFilter__Webcam = 3,
-	EMediaVideoCaptureDeviceFilter__EMediaVideoCaptureDeviceFilter_MAX = 4
-};
-
-
-// Enum MediaAssets.EMediaAudioCaptureDeviceFilter
-enum class EMediaAudioCaptureDeviceFilter : uint8_t
-{
-	EMediaAudioCaptureDeviceFilter__Card = 0,
-	EMediaAudioCaptureDeviceFilter__Microphone = 1,
-	EMediaAudioCaptureDeviceFilter__Software = 2,
-	EMediaAudioCaptureDeviceFilter__Unknown = 3,
-	EMediaAudioCaptureDeviceFilter__EMediaAudioCaptureDeviceFilter_MAX = 4
+	EMediaWebcamCaptureDeviceFilter__DepthSensor = 0,
+	EMediaWebcamCaptureDeviceFilter__Front = 1,
+	EMediaWebcamCaptureDeviceFilter__Rear = 2,
+	EMediaWebcamCaptureDeviceFilter__Unknown = 3,
+	EMediaWebcamCaptureDeviceFilter__EMediaWebcamCaptureDeviceFilter_MAX = 4
 };
 
 
@@ -48,6 +37,17 @@ enum class EMediaPlayerTrack : uint8_t
 };
 
 
+// Enum MediaAssets.EMediaVideoCaptureDeviceFilter
+enum class EMediaVideoCaptureDeviceFilter : uint8_t
+{
+	EMediaVideoCaptureDeviceFilter__Card = 0,
+	EMediaVideoCaptureDeviceFilter__Software = 1,
+	EMediaVideoCaptureDeviceFilter__Unknown = 2,
+	EMediaVideoCaptureDeviceFilter__Webcam = 3,
+	EMediaVideoCaptureDeviceFilter__EMediaVideoCaptureDeviceFilter_MAX = 4
+};
+
+
 // Enum MediaAssets.EMediaSoundChannels
 enum class EMediaSoundChannels : uint8_t
 {
@@ -58,14 +58,14 @@ enum class EMediaSoundChannels : uint8_t
 };
 
 
-// Enum MediaAssets.EMediaWebcamCaptureDeviceFilter
-enum class EMediaWebcamCaptureDeviceFilter : uint8_t
+// Enum MediaAssets.EMediaAudioCaptureDeviceFilter
+enum class EMediaAudioCaptureDeviceFilter : uint8_t
 {
-	EMediaWebcamCaptureDeviceFilter__DepthSensor = 0,
-	EMediaWebcamCaptureDeviceFilter__Front = 1,
-	EMediaWebcamCaptureDeviceFilter__Rear = 2,
-	EMediaWebcamCaptureDeviceFilter__Unknown = 3,
-	EMediaWebcamCaptureDeviceFilter__EMediaWebcamCaptureDeviceFilter_MAX = 4
+	EMediaAudioCaptureDeviceFilter__Card = 0,
+	EMediaAudioCaptureDeviceFilter__Microphone = 1,
+	EMediaAudioCaptureDeviceFilter__Software = 2,
+	EMediaAudioCaptureDeviceFilter__Unknown = 3,
+	EMediaAudioCaptureDeviceFilter__EMediaAudioCaptureDeviceFilter_MAX = 4
 };
 
 

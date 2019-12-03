@@ -30,10 +30,10 @@ public:
 
 
 	void IsInputEnabled(bool* InputEnabled);
-	void TickSoftwareCursor(struct FVector2D* MoveAxii, bool* JoystickOn);
+	void STATIC_TickSoftwareCursor(struct FVector2D* MoveAxii, bool* JoystickOn);
 	void EnableVirtualJoystick(bool bEnable);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BPC_AdventureMouseControl(int EntryPoint);
 };
 

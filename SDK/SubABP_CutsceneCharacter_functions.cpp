@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.IsUseFluctuationEmotion
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, NetResponse, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ bool USubABP_CutsceneCharacter_C::IsUseFluctuationEmotion()
 
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.InitFaceMotages
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, DLLImport, Const)
 // Parameters:
 // bool                           Succsess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -57,7 +57,7 @@ void USubABP_CutsceneCharacter_C::InitFaceMotages(bool* Succsess)
 
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.CalcLookAt
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void USubABP_CutsceneCharacter_C::CalcLookAt()
 {
@@ -66,6 +66,7 @@ void USubABP_CutsceneCharacter_C::CalcLookAt()
 	USubABP_CutsceneCharacter_C_CalcLookAt_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,7 +75,7 @@ void USubABP_CutsceneCharacter_C::CalcLookAt()
 
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -86,6 +87,7 @@ void USubABP_CutsceneCharacter_C::BlueprintUpdateAnimation(float DeltaTimeX)
 	params.DeltaTimeX = DeltaTimeX;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,9 +96,9 @@ void USubABP_CutsceneCharacter_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.CalcEmotion
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void USubABP_CutsceneCharacter_C::CalcEmotion()
+void USubABP_CutsceneCharacter_C::STATIC_CalcEmotion()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.CalcEmotion");
 
@@ -111,7 +113,7 @@ void USubABP_CutsceneCharacter_C::CalcEmotion()
 
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.CalcClipper
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void USubABP_CutsceneCharacter_C::CalcClipper()
 {
@@ -128,7 +130,7 @@ void USubABP_CutsceneCharacter_C::CalcClipper()
 
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.CalcEyeBlink
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
 void USubABP_CutsceneCharacter_C::CalcEyeBlink()
 {
@@ -145,11 +147,11 @@ void USubABP_CutsceneCharacter_C::CalcEyeBlink()
 
 
 // Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.ExecuteUbergraph_SubABP_CutsceneCharacter
-// ()
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void USubABP_CutsceneCharacter_C::ExecuteUbergraph_SubABP_CutsceneCharacter(int EntryPoint)
+void USubABP_CutsceneCharacter_C::STATIC_ExecuteUbergraph_SubABP_CutsceneCharacter(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function SubABP_CutsceneCharacter.SubABP_CutsceneCharacter_C.ExecuteUbergraph_SubABP_CutsceneCharacter");
 
@@ -157,6 +159,7 @@ void USubABP_CutsceneCharacter_C::ExecuteUbergraph_SubABP_CutsceneCharacter(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

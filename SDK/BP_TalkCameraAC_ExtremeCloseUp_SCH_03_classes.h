@@ -27,10 +27,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_TalkCameraAC_ExtremeCloseUp_SCH_03(int EntryPoint);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_TalkCameraAC_ExtremeCloseUp_SCH_03(int EntryPoint);
 };
 
 

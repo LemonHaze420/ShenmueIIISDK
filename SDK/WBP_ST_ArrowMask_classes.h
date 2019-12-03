@@ -28,9 +28,9 @@ public:
 	}
 
 
-	void SetTriangleSize(const struct FVector2D& InSize);
+	void STATIC_SetTriangleSize(const struct FVector2D& InSize);
 	void AddTrianglePos(const struct FVector2D& Add);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void Construct();
 	void ExecuteUbergraph_WBP_ST_ArrowMask(int EntryPoint);
 };

@@ -33,9 +33,9 @@ public:
 	}
 
 
-	void GetDialogStringId();
+	void STATIC_GetDialogStringId();
 	void PlaySoundEffect(bool bConfirm);
-	void MakeDialogParameter(struct FST_GeneralWindowParam* DialogParam);
+	void STATIC_MakeDialogParameter(struct FST_GeneralWindowParam* DialogParam);
 	void BindRewardScreenEvents();
 	void UnbindRewardScreenEvents();
 	void OnRewardScreenEnd();
@@ -46,9 +46,9 @@ public:
 	void UnbindDialogEvents();
 	void BindDialogClose();
 	void Activate();
-	void Update(float DeltaTime);
+	void STATIC_Update(float DeltaTime);
 	void Finalize();
-	void ExecuteUbergraph_BP_TalkProcess_Dialog(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_TalkProcess_Dialog(int EntryPoint);
 };
 
 

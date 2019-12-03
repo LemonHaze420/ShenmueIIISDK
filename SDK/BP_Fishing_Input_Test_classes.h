@@ -31,13 +31,13 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_4(const struct FKey& Key);
-	void InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue);
-	void InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_3(float AxisValue);
-	void InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7(float AxisValue);
-	void InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_13(float AxisValue);
+	void STATIC_UserConstructionScript();
+	void STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_4(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_3(const struct FKey& Key);
+	void STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue);
+	void STATIC_InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_3(float AxisValue);
+	void STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_7(float AxisValue);
+	void STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_13(float AxisValue);
 	void ExecuteUbergraph_BP_Fishing_Input_Test(int EntryPoint);
 };
 

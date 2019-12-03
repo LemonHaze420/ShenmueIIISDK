@@ -28,8 +28,8 @@ public:
 
 
 	void SetVisibleIcon(bool Visible);
-	void Construct();
-	void ExecuteUbergraph_WBP_MiniGameMoveIcon(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_WBP_MiniGameMoveIcon(int EntryPoint);
 };
 
 

@@ -32,14 +32,14 @@ public:
 
 
 	bool CheckDoorOnPath();
-	void CalculateFollowSpeed(float DistanceToLeader, float LeaderSpeed, float FollowDistanceEnd, float* OutSpeed);
-	void TryLogPathFailure();
+	void STATIC_CalculateFollowSpeed(float DistanceToLeader, float LeaderSpeed, float FollowDistanceEnd, float* OutSpeed);
+	void STATIC_TryLogPathFailure();
 	void MoveStateEnter(bool* bDummy);
 	void StateEnter(float Delta, bool* bProcessing);
 	void GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor);
 	void OnFail_27825A3A4DCF934B8E42E09B783488FD(TEnumAsByte<EPathFollowingResult> MovementResult);
 	void OnSuccess_27825A3A4DCF934B8E42E09B783488FD(TEnumAsByte<EPathFollowingResult> MovementResult);
-	void Pathfind();
+	void STATIC_Pathfind();
 	void ExecuteUbergraph_BP_State_Follow_MoveBase(int EntryPoint);
 };
 

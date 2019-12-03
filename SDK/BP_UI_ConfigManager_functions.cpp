@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ int ABP_UI_ConfigManager_C::GetPriority()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -46,6 +46,7 @@ TArray<struct FS3DetectActionParam> ABP_UI_ConfigManager_C::GetDetectAction()
 	ABP_UI_ConfigManager_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +57,7 @@ TArray<struct FS3DetectActionParam> ABP_UI_ConfigManager_C::GetDetectAction()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.CanDecideInput
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, Const)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -78,7 +79,7 @@ void ABP_UI_ConfigManager_C::CanDecideInput(bool* CAN)
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.CancelPasswordWidget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, MulticastDelegate, Public, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -100,7 +101,7 @@ void ABP_UI_ConfigManager_C::CancelPasswordWidget(bool* Success)
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.CheckFocusConfig
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -121,7 +122,7 @@ bool ABP_UI_ConfigManager_C::CheckFocusConfig()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.CanInput
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -143,7 +144,7 @@ void ABP_UI_ConfigManager_C::CanInput(bool* CAN)
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::UserConstructionScript()
 {
@@ -152,6 +153,7 @@ void ABP_UI_ConfigManager_C::UserConstructionScript()
 	ABP_UI_ConfigManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,7 +162,7 @@ void ABP_UI_ConfigManager_C::UserConstructionScript()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -180,7 +182,7 @@ void ABP_UI_ConfigManager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.CreateDressModeWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::CreateDressModeWidget()
 {
@@ -197,7 +199,7 @@ void ABP_UI_ConfigManager_C::CreateDressModeWidget()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.CreatePasswordWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::CreatePasswordWidget()
 {
@@ -214,7 +216,7 @@ void ABP_UI_ConfigManager_C::CreatePasswordWidget()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.FinishDressMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Apply                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -234,7 +236,7 @@ void ABP_UI_ConfigManager_C::FinishDressMode(bool Apply)
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.CancelDressWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::CancelDressWidget()
 {
@@ -251,7 +253,7 @@ void ABP_UI_ConfigManager_C::CancelDressWidget()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.PushRight
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::PushRight()
 {
@@ -268,7 +270,7 @@ void ABP_UI_ConfigManager_C::PushRight()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.PushLeft
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::PushLeft()
 {
@@ -285,7 +287,7 @@ void ABP_UI_ConfigManager_C::PushLeft()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.FinishFadeIn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::FinishFadeIn()
 {
@@ -302,7 +304,7 @@ void ABP_UI_ConfigManager_C::FinishFadeIn()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.PushUp
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::PushUp()
 {
@@ -319,7 +321,7 @@ void ABP_UI_ConfigManager_C::PushUp()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.PushDown
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::PushDown()
 {
@@ -336,7 +338,7 @@ void ABP_UI_ConfigManager_C::PushDown()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.PushDressDecide
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::PushDressDecide()
 {
@@ -353,7 +355,7 @@ void ABP_UI_ConfigManager_C::PushDressDecide()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.PushCancelButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::PushCancelButton()
 {
@@ -370,7 +372,7 @@ void ABP_UI_ConfigManager_C::PushCancelButton()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.LeanRightStick
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -390,7 +392,7 @@ void ABP_UI_ConfigManager_C::LeanRightStick(float AxisValue)
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.PushRightStick
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ConfigManager_C::PushRightStick()
 {
@@ -407,11 +409,11 @@ void ABP_UI_ConfigManager_C::PushRightStick()
 
 
 // Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.ExecuteUbergraph_BP_UI_ConfigManager
-// (HasDefaults)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ConfigManager_C::ExecuteUbergraph_BP_UI_ConfigManager(int EntryPoint)
+void ABP_UI_ConfigManager_C::STATIC_ExecuteUbergraph_BP_UI_ConfigManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ConfigManager.BP_UI_ConfigManager_C.ExecuteUbergraph_BP_UI_ConfigManager");
 
@@ -419,6 +421,7 @@ void ABP_UI_ConfigManager_C::ExecuteUbergraph_BP_UI_ConfigManager(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

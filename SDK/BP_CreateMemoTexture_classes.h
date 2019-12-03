@@ -51,7 +51,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void Update();
-	void ExecuteUbergraph_BP_CreateMemoTexture(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_CreateMemoTexture(int EntryPoint);
 };
 
 

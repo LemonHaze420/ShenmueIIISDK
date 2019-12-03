@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_GeneralWindow_Text.BPW_UI_GeneralWindow_Text_C.SetData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, Private, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // int                            FontSize                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextJustify>      Justification                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_Text_C::SetData(const struct FText& Text, int FontSize, TEnumAsByte<ETextJustify> Justification)
+void UBPW_UI_GeneralWindow_Text_C::STATIC_SetData(const struct FText& Text, int FontSize, TEnumAsByte<ETextJustify> Justification)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Text.BPW_UI_GeneralWindow_Text_C.SetData");
 
@@ -30,6 +30,7 @@ void UBPW_UI_GeneralWindow_Text_C::SetData(const struct FText& Text, int FontSiz
 	params.Justification = Justification;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UBPW_UI_GeneralWindow_Text_C::SetData(const struct FText& Text, int FontSiz
 
 
 // Function BPW_UI_GeneralWindow_Text.BPW_UI_GeneralWindow_Text_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void UBPW_UI_GeneralWindow_Text_C::Construct()
 {
@@ -55,12 +56,12 @@ void UBPW_UI_GeneralWindow_Text_C::Construct()
 
 
 // Function BPW_UI_GeneralWindow_Text.BPW_UI_GeneralWindow_Text_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Protected, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_Text_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_UI_GeneralWindow_Text_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Text.BPW_UI_GeneralWindow_Text_C.Tick");
 
@@ -69,6 +70,7 @@ void UBPW_UI_GeneralWindow_Text_C::Tick(const struct FGeometry& MyGeometry, floa
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,11 +79,11 @@ void UBPW_UI_GeneralWindow_Text_C::Tick(const struct FGeometry& MyGeometry, floa
 
 
 // Function BPW_UI_GeneralWindow_Text.BPW_UI_GeneralWindow_Text_C.ExecuteUbergraph_BPW_UI_GeneralWindow_Text
-// (HasDefaults)
+// (NetReliable, Event, NetResponse, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_Text_C::ExecuteUbergraph_BPW_UI_GeneralWindow_Text(int EntryPoint)
+void UBPW_UI_GeneralWindow_Text_C::STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow_Text(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow_Text.BPW_UI_GeneralWindow_Text_C.ExecuteUbergraph_BPW_UI_GeneralWindow_Text");
 

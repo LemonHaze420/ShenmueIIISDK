@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.IsVisibleRStickCenterPos
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsCenter                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,21 +36,22 @@ void ABP_UI_PawnshManager_C::IsVisibleRStickCenterPos(bool* IsCenter)
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckClothItemNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
-// ES3ItemDataGroup               CurrentCategory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ES3ItemDataGroup               currentCategory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ItemDataGroup               ItemListGroup                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add_List                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_PawnshManager_C::CheckClothItemNum(ES3ItemDataGroup CurrentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List)
+void ABP_UI_PawnshManager_C::CheckClothItemNum(ES3ItemDataGroup currentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckClothItemNum");
 
 	ABP_UI_PawnshManager_C_CheckClothItemNum_Params params;
-	params.CurrentCategory = CurrentCategory;
+	params.currentCategory = currentCategory;
 	params.ItemListGroup = ItemListGroup;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +63,7 @@ void ABP_UI_PawnshManager_C::CheckClothItemNum(ES3ItemDataGroup CurrentCategory,
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.IsVisibleRStickOnlyViewMode
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -83,7 +84,7 @@ bool ABP_UI_PawnshManager_C::IsVisibleRStickOnlyViewMode()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckEnabledByArea
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ItemLabel                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -96,6 +97,7 @@ void ABP_UI_PawnshManager_C::CheckEnabledByArea(const struct FName& ItemLabel, b
 	params.ItemLabel = ItemLabel;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,7 +109,7 @@ void ABP_UI_PawnshManager_C::CheckEnabledByArea(const struct FName& ItemLabel, b
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckItemGroup
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // int                            item_id                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ItemDataGroup               Group                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -131,18 +133,18 @@ void ABP_UI_PawnshManager_C::CheckItemGroup(int item_id, ES3ItemDataGroup* Group
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckRewardGacha
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
-// ES3ItemDataGroup               CurrentCategory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ES3ItemDataGroup               currentCategory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ItemDataGroup               ItemListGroup                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add_List                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_PawnshManager_C::CheckRewardGacha(ES3ItemDataGroup CurrentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List)
+void ABP_UI_PawnshManager_C::CheckRewardGacha(ES3ItemDataGroup currentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckRewardGacha");
 
 	ABP_UI_PawnshManager_C_CheckRewardGacha_Params params;
-	params.CurrentCategory = CurrentCategory;
+	params.currentCategory = currentCategory;
 	params.ItemListGroup = ItemListGroup;
 
 	auto flags = fn->FunctionFlags;
@@ -157,18 +159,18 @@ void ABP_UI_PawnshManager_C::CheckRewardGacha(ES3ItemDataGroup CurrentCategory, 
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckClothItem
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, NetMulticast, Public, Private, HasOutParms, HasDefaults, Const)
 // Parameters:
-// ES3ItemDataGroup               CurrentCategory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// ES3ItemDataGroup               currentCategory                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ItemDataGroup               ItemListGroup                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add_List                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_PawnshManager_C::CheckClothItem(ES3ItemDataGroup CurrentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List)
+void ABP_UI_PawnshManager_C::CheckClothItem(ES3ItemDataGroup currentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckClothItem");
 
 	ABP_UI_PawnshManager_C_CheckClothItem_Params params;
-	params.CurrentCategory = CurrentCategory;
+	params.currentCategory = currentCategory;
 	params.ItemListGroup = ItemListGroup;
 
 	auto flags = fn->FunctionFlags;
@@ -183,7 +185,7 @@ void ABP_UI_PawnshManager_C::CheckClothItem(ES3ItemDataGroup CurrentCategory, ES
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.GetItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Protected, DLLImport, Const)
 
 void ABP_UI_PawnshManager_C::GetItem()
 {
@@ -200,15 +202,16 @@ void ABP_UI_PawnshManager_C::GetItem()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.SetPrice
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_PawnshManager_C::SetPrice()
+void ABP_UI_PawnshManager_C::STATIC_SetPrice()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.SetPrice");
 
 	ABP_UI_PawnshManager_C_SetPrice_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,7 +220,7 @@ void ABP_UI_PawnshManager_C::SetPrice()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.SetRightWindow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Private, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_UI_PawnshManager_C::SetRightWindow()
 {
@@ -234,7 +237,7 @@ void ABP_UI_PawnshManager_C::SetRightWindow()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.RightWindowChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_PawnshManager_C::RightWindowChange()
 {
@@ -251,7 +254,7 @@ void ABP_UI_PawnshManager_C::RightWindowChange()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MakeItemDataList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, Const)
 
 void ABP_UI_PawnshManager_C::MakeItemDataList()
 {
@@ -260,6 +263,7 @@ void ABP_UI_PawnshManager_C::MakeItemDataList()
 	ABP_UI_PawnshManager_C_MakeItemDataList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,7 +272,7 @@ void ABP_UI_PawnshManager_C::MakeItemDataList()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.PawnshUpdateItemIDList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_PawnshManager_C::PawnshUpdateItemIDList()
 {
@@ -277,6 +281,7 @@ void ABP_UI_PawnshManager_C::PawnshUpdateItemIDList()
 	ABP_UI_PawnshManager_C_PawnshUpdateItemIDList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,11 +290,11 @@ void ABP_UI_PawnshManager_C::PawnshUpdateItemIDList()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.PawnshChangePage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Private, Protected, DLLImport, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_PawnshManager_C::PawnshChangePage(int Value)
+void ABP_UI_PawnshManager_C::STATIC_PawnshChangePage(int Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.PawnshChangePage");
 
@@ -297,6 +302,7 @@ void ABP_UI_PawnshManager_C::PawnshChangePage(int Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -304,14 +310,14 @@ void ABP_UI_PawnshManager_C::PawnshChangePage(int Value)
 }
 
 
-// Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MakeItemIDList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MakeItemIdList
+// (MulticastDelegate, Public, Delegate, DLLImport, Const)
 
-void ABP_UI_PawnshManager_C::MakeItemIDList()
+void ABP_UI_PawnshManager_C::MakeItemIdList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MakeItemIDList");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MakeItemIdList");
 
-	ABP_UI_PawnshManager_C_MakeItemIDList_Params params;
+	ABP_UI_PawnshManager_C_MakeItemIdList_Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -322,7 +328,7 @@ void ABP_UI_PawnshManager_C::MakeItemIDList()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.InitItemDataLength
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, Const)
 
 void ABP_UI_PawnshManager_C::InitItemDataLength()
 {
@@ -339,9 +345,9 @@ void ABP_UI_PawnshManager_C::InitItemDataLength()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_UI_PawnshManager_C::UserConstructionScript()
+void ABP_UI_PawnshManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.UserConstructionScript");
 
@@ -356,7 +362,7 @@ void ABP_UI_PawnshManager_C::UserConstructionScript()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer)
 
 void ABP_UI_PawnshManager_C::ReceiveBeginPlay()
 {
@@ -373,7 +379,7 @@ void ABP_UI_PawnshManager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -393,7 +399,7 @@ void ABP_UI_PawnshManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckVisibleAddButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_PawnshManager_C::CheckVisibleAddButton()
 {
@@ -402,6 +408,7 @@ void ABP_UI_PawnshManager_C::CheckVisibleAddButton()
 	ABP_UI_PawnshManager_C_CheckVisibleAddButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -410,7 +417,7 @@ void ABP_UI_PawnshManager_C::CheckVisibleAddButton()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CheckVisibleSubButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_PawnshManager_C::CheckVisibleSubButton()
 {
@@ -427,7 +434,7 @@ void ABP_UI_PawnshManager_C::CheckVisibleSubButton()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.ChangePage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -439,6 +446,7 @@ void ABP_UI_PawnshManager_C::ChangePage(int Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -447,7 +455,7 @@ void ABP_UI_PawnshManager_C::ChangePage(int Value)
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.UpdateItemIDList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_PawnshManager_C::UpdateItemIDList()
 {
@@ -456,6 +464,7 @@ void ABP_UI_PawnshManager_C::UpdateItemIDList()
 	ABP_UI_PawnshManager_C_UpdateItemIDList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -464,7 +473,7 @@ void ABP_UI_PawnshManager_C::UpdateItemIDList()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.MoveCategoryFocusAfter
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_PawnshManager_C::MoveCategoryFocusAfter()
 {
@@ -473,6 +482,7 @@ void ABP_UI_PawnshManager_C::MoveCategoryFocusAfter()
 	ABP_UI_PawnshManager_C_MoveCategoryFocusAfter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -481,9 +491,9 @@ void ABP_UI_PawnshManager_C::MoveCategoryFocusAfter()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CustomEvent_2
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_PawnshManager_C::CustomEvent_2()
+void ABP_UI_PawnshManager_C::STATIC_CustomEvent_2()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CustomEvent_2");
 
@@ -498,7 +508,7 @@ void ABP_UI_PawnshManager_C::CustomEvent_2()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.PushCheckDialog
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_UI_Button>      PushButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -510,6 +520,7 @@ void ABP_UI_PawnshManager_C::PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButto
 	params.PushButton = PushButton;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -518,7 +529,7 @@ void ABP_UI_PawnshManager_C::PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButto
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.CustomEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 
 void ABP_UI_PawnshManager_C::CustomEvent()
 {
@@ -527,6 +538,7 @@ void ABP_UI_PawnshManager_C::CustomEvent()
 	ABP_UI_PawnshManager_C_CustomEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -535,7 +547,7 @@ void ABP_UI_PawnshManager_C::CustomEvent()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.SetSkillWindow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_PawnshManager_C::SetSkillWindow()
 {
@@ -544,6 +556,7 @@ void ABP_UI_PawnshManager_C::SetSkillWindow()
 	ABP_UI_PawnshManager_C_SetSkillWindow_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -552,7 +565,7 @@ void ABP_UI_PawnshManager_C::SetSkillWindow()
 
 
 // Function BP_UI_PawnshManager.BP_UI_PawnshManager_C.ExecuteUbergraph_BP_UI_PawnshManager
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Private, HasOutParms, HasDefaults)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -564,6 +577,7 @@ void ABP_UI_PawnshManager_C::ExecuteUbergraph_BP_UI_PawnshManager(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

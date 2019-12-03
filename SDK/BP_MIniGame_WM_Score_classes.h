@@ -37,14 +37,14 @@ public:
 
 
 	void ResetValue();
-	void SetVisiblity(bool Visible);
-	void UpdateNumber();
-	void Initialize(int DigitsNumber);
-	void SetNumber(int Number, bool IsStage);
+	void STATIC_SetVisiblity(bool Visible);
+	void STATIC_UpdateNumber();
+	void STATIC_Initialize(int DigitsNumber);
+	void STATIC_SetNumber(int Number, bool IsStage);
 	void GetUVs(int Num, TArray<struct FVector2D>* Array);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_MIniGame_WM_Score(int EntryPoint);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_MIniGame_WM_Score(int EntryPoint);
 };
 
 

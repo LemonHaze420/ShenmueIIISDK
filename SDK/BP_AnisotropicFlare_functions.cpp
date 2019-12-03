@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnisotropicFlare.BP_AnisotropicFlare_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 
-void ABP_AnisotropicFlare_C::UserConstructionScript()
+void ABP_AnisotropicFlare_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnisotropicFlare.BP_AnisotropicFlare_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_AnisotropicFlare_C::UserConstructionScript()
 
 
 // Function BP_AnisotropicFlare.BP_AnisotropicFlare_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Native, Event, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +43,7 @@ void ABP_AnisotropicFlare_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +52,7 @@ void ABP_AnisotropicFlare_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AnisotropicFlare.BP_AnisotropicFlare_C.ExecuteUbergraph_BP_AnisotropicFlare
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.CheckNpcAlpha
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           NPCVisible                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_NpcSpawnWait_C::CheckNpcAlpha(bool* NPCVisible)
 	ABP_NpcSpawnWait_C_CheckNpcAlpha_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,13 +37,13 @@ void ABP_NpcSpawnWait_C::CheckNpcAlpha(bool* NPCVisible)
 
 
 // Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.InitSet
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FGameplayTag            NPCID                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // float                          ChangeSpawnFadeTime            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CheckNpcAlpha                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NpcSpawnWait_C::InitSet(const struct FGameplayTag& NPCID, float ChangeSpawnFadeTime, bool CheckNpcAlpha)
+void ABP_NpcSpawnWait_C::STATIC_InitSet(const struct FGameplayTag& NPCID, float ChangeSpawnFadeTime, bool CheckNpcAlpha)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.InitSet");
 
@@ -52,6 +53,7 @@ void ABP_NpcSpawnWait_C::InitSet(const struct FGameplayTag& NPCID, float ChangeS
 	params.CheckNpcAlpha = CheckNpcAlpha;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +62,7 @@ void ABP_NpcSpawnWait_C::InitSet(const struct FGameplayTag& NPCID, float ChangeS
 
 
 // Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_NpcSpawnWait_C::UserConstructionScript()
 {
@@ -77,7 +79,7 @@ void ABP_NpcSpawnWait_C::UserConstructionScript()
 
 
 // Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.EndNpcSpawnWait
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_NpcSpawnWait_C::EndNpcSpawnWait()
 {
@@ -86,6 +88,7 @@ void ABP_NpcSpawnWait_C::EndNpcSpawnWait()
 	ABP_NpcSpawnWait_C_EndNpcSpawnWait_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,11 +97,11 @@ void ABP_NpcSpawnWait_C::EndNpcSpawnWait()
 
 
 // Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.NPCSpawn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FGameplayTag            NPCID                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_NpcSpawnWait_C::NPCSpawn(const struct FGameplayTag& NPCID)
+void ABP_NpcSpawnWait_C::STATIC_NPCSpawn(const struct FGameplayTag& NPCID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.NPCSpawn");
 
@@ -114,11 +117,11 @@ void ABP_NpcSpawnWait_C::NPCSpawn(const struct FGameplayTag& NPCID)
 
 
 // Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.ExecuteUbergraph_BP_NpcSpawnWait
-// (HasDefaults)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NpcSpawnWait_C::ExecuteUbergraph_BP_NpcSpawnWait(int EntryPoint)
+void ABP_NpcSpawnWait_C::STATIC_ExecuteUbergraph_BP_NpcSpawnWait(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NpcSpawnWait.BP_NpcSpawnWait_C.ExecuteUbergraph_BP_NpcSpawnWait");
 
@@ -126,6 +129,7 @@ void ABP_NpcSpawnWait_C::ExecuteUbergraph_BP_NpcSpawnWait(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

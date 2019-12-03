@@ -42,15 +42,15 @@ public:
 
 	void StopSetGameTime();
 	void InitSet(bool Need_EndFade, bool Qte_Retry, float Battle_Start_Energy, const struct FName& Battle_ID_Name, const struct FName& FilterID);
-	void UserConstructionScript();
-	void InpActEvt_SearchTopButton_K2Node_InputActionEvent_8(const struct FKey& Key);
-	void InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void InpActEvt_SearchRightButton_K2Node_InputActionEvent_6(const struct FKey& Key);
-	void InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void ReceiveTick(float DeltaSeconds);
-	void RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter);
+	void STATIC_UserConstructionScript();
+	void STATIC_InpActEvt_SearchTopButton_K2Node_InputActionEvent_8(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchLeftButton_K2Node_InputActionEvent_7(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchRightButton_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchBottomButton_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter);
 	void TickChangeCheckKill();
-	void ExecuteUbergraph_BP_Hakkason_Retry(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_Hakkason_Retry(int EntryPoint);
 };
 
 

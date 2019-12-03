@@ -24,6 +24,9 @@ public:
 		return ptr;
 	}
 
+
+	void GetAttackCollisionEnum(TEnumAsByte<EBattleAttackCollision>* Enum);
+	void STATIC_GetNotifyID(struct FName* NotifyID);
 };
 
 

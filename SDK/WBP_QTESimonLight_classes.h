@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void PlayLightAnimation();
+	void STATIC_PlayLightAnimation();
 };
 
 

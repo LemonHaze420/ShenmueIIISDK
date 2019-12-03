@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MiniGame_Ue_de_Yattari.WBP_MiniGame_Ue_de_Yattari_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_MiniGame_Ue_de_Yattari_C::Construct()
+void UWBP_MiniGame_Ue_de_Yattari_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Ue_de_Yattari.WBP_MiniGame_Ue_de_Yattari_C.Construct");
 
@@ -31,11 +31,11 @@ void UWBP_MiniGame_Ue_de_Yattari_C::Construct()
 
 
 // Function WBP_MiniGame_Ue_de_Yattari.WBP_MiniGame_Ue_de_Yattari_C.ExecuteUbergraph_WBP_MiniGame_Ue_de_Yattari
-// ()
+// (Net, NetRequest, Exec, Static, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MiniGame_Ue_de_Yattari_C::ExecuteUbergraph_WBP_MiniGame_Ue_de_Yattari(int EntryPoint)
+void UWBP_MiniGame_Ue_de_Yattari_C::STATIC_ExecuteUbergraph_WBP_MiniGame_Ue_de_Yattari(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MiniGame_Ue_de_Yattari.WBP_MiniGame_Ue_de_Yattari_C.ExecuteUbergraph_WBP_MiniGame_Ue_de_Yattari");
 

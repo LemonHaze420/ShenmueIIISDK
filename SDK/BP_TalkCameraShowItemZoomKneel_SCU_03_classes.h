@@ -26,10 +26,10 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_TalkCameraShowItemZoomKneel_SCU_03(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_TalkCameraShowItemZoomKneel_SCU_03(int EntryPoint);
 };
 
 

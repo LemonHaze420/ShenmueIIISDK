@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_GetS3SkipController(class UObject* __WorldContext, class ABP_SkipController_C** AsBP_Skip_Controller);
+	void GetS3SkipController(class UObject* __WorldContext, class ABP_SkipController_C** AsBP_Skip_Controller);
 };
 
 

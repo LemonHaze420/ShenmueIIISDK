@@ -27,18 +27,18 @@ public:
 	}
 
 
-	void UpdateAnimationState();
-	void DebugQTEForceSuccessUpdateInternal();
-	float GetLengthBeforeCountInputLimitTime();
+	void STATIC_UpdateAnimationState();
+	void STATIC_DebugQTEForceSuccessUpdateInternal();
+	float STATIC_GetLengthBeforeCountInputLimitTime();
 	void SetupQTE(const struct FName& InSuccessAction);
 	void PlayInputFailedAnimation();
-	void PlayInputSuccessAnimation();
+	void STATIC_PlayInputSuccessAnimation();
 	bool IsPlayingInAnimation();
-	void PlayTimeUpFailedAnimation();
-	void PlayInAnimation();
-	void SetTimeGaugeRate(float InGaugeRate);
-	void ExecuteInputAction(const struct FName& InInputAction);
-	void Finalize();
+	void STATIC_PlayTimeUpFailedAnimation();
+	void STATIC_PlayInAnimation();
+	void STATIC_SetTimeGaugeRate(float InGaugeRate);
+	void STATIC_ExecuteInputAction(const struct FName& InInputAction);
+	void STATIC_Finalize();
 	void Initialize();
 };
 

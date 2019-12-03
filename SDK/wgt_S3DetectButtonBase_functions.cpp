@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.FadeBase
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void Uwgt_S3DetectButtonBase_C::FadeBase(bool In)
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.OnAnimationFinished
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Native, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UWidgetAnimation*        Animation                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -46,6 +46,7 @@ void Uwgt_S3DetectButtonBase_C::OnAnimationFinished(class UWidgetAnimation* Anim
 	params.Animation = Animation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +55,7 @@ void Uwgt_S3DetectButtonBase_C::OnAnimationFinished(class UWidgetAnimation* Anim
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void Uwgt_S3DetectButtonBase_C::Construct()
 {
@@ -71,7 +72,7 @@ void Uwgt_S3DetectButtonBase_C::Construct()
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.ExecuteUbergraph_wgt_S3DetectButtonBase
-// (HasDefaults)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -91,15 +92,16 @@ void Uwgt_S3DetectButtonBase_C::ExecuteUbergraph_wgt_S3DetectButtonBase(int Entr
 
 
 // Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.onAnimEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void Uwgt_S3DetectButtonBase_C::onAnimEnd__DelegateSignature()
+void Uwgt_S3DetectButtonBase_C::STATIC_onAnimEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_S3DetectButtonBase.wgt_S3DetectButtonBase_C.onAnimEnd__DelegateSignature");
 
 	Uwgt_S3DetectButtonBase_C_onAnimEnd__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

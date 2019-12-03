@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.RegisterSteering
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  RegisterActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayer_SplineMoveActor_C::RegisterSteering(class AActor* RegisterActor)
+void APlayer_SplineMoveActor_C::STATIC_RegisterSteering(class AActor* RegisterActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Player_SplineMoveActor.Player_SplineMoveActor_C.RegisterSteering");
 
@@ -26,6 +26,7 @@ void APlayer_SplineMoveActor_C::RegisterSteering(class AActor* RegisterActor)
 	params.RegisterActor = RegisterActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void APlayer_SplineMoveActor_C::RegisterSteering(class AActor* RegisterActor)
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.RegisterWithPlayer
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Register                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,6 +47,7 @@ void APlayer_SplineMoveActor_C::RegisterWithPlayer(bool Register)
 	params.Register = Register;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,9 +56,9 @@ void APlayer_SplineMoveActor_C::RegisterWithPlayer(bool Register)
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.SnapPointsToGround
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 
-void APlayer_SplineMoveActor_C::SnapPointsToGround()
+void APlayer_SplineMoveActor_C::STATIC_SnapPointsToGround()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Player_SplineMoveActor.Player_SplineMoveActor_C.SnapPointsToGround");
 
@@ -71,7 +73,7 @@ void APlayer_SplineMoveActor_C::SnapPointsToGround()
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.EvaluateStrengthCurve
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UCurveFloat*             Curve                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InTime                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -86,6 +88,7 @@ void APlayer_SplineMoveActor_C::EvaluateStrengthCurve(class UCurveFloat* Curve, 
 	params.InTime = InTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,9 +100,9 @@ void APlayer_SplineMoveActor_C::EvaluateStrengthCurve(class UCurveFloat* Curve, 
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.InitSpline
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 
-void APlayer_SplineMoveActor_C::InitSpline()
+void APlayer_SplineMoveActor_C::STATIC_InitSpline()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Player_SplineMoveActor.Player_SplineMoveActor_C.InitSpline");
 
@@ -114,7 +117,7 @@ void APlayer_SplineMoveActor_C::InitSpline()
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 
 void APlayer_SplineMoveActor_C::UserConstructionScript()
 {
@@ -131,15 +134,16 @@ void APlayer_SplineMoveActor_C::UserConstructionScript()
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
-void APlayer_SplineMoveActor_C::ReceiveBeginPlay()
+void APlayer_SplineMoveActor_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Player_SplineMoveActor.Player_SplineMoveActor_C.ReceiveBeginPlay");
 
 	APlayer_SplineMoveActor_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -148,7 +152,7 @@ void APlayer_SplineMoveActor_C::ReceiveBeginPlay()
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.BndEvt__DefaultTrigger_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -170,6 +174,7 @@ void APlayer_SplineMoveActor_C::BndEvt__DefaultTrigger_K2Node_ComponentBoundEven
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,7 +183,7 @@ void APlayer_SplineMoveActor_C::BndEvt__DefaultTrigger_K2Node_ComponentBoundEven
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.BndEvt__DefaultTrigger_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -196,6 +201,7 @@ void APlayer_SplineMoveActor_C::BndEvt__DefaultTrigger_K2Node_ComponentBoundEven
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,11 +210,11 @@ void APlayer_SplineMoveActor_C::BndEvt__DefaultTrigger_K2Node_ComponentBoundEven
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Event, NetResponse, Static, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void APlayer_SplineMoveActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void APlayer_SplineMoveActor_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function Player_SplineMoveActor.Player_SplineMoveActor_C.ReceiveEndPlay");
 
@@ -224,7 +230,7 @@ void APlayer_SplineMoveActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 
 
 // Function Player_SplineMoveActor.Player_SplineMoveActor_C.ExecuteUbergraph_Player_SplineMoveActor
-// (HasDefaults)
+// (NetRequest, Exec, Native, Event, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -236,6 +242,7 @@ void APlayer_SplineMoveActor_C::ExecuteUbergraph_Player_SplineMoveActor(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

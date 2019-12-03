@@ -38,18 +38,18 @@ public:
 
 
 	void CheckDirection(const struct FVector& HitLocation, bool* Enabled);
-	void GetNearAttentionPos(const struct FVector& AttentionPos, struct FVector* NearPos);
-	void SetEnabledControl(bool Enabled);
-	void UserConstructionScript();
-	void OnFinishedStartFadeOut();
-	void OnFinishedLoadLevel(const struct FName& ID);
-	void OnStartAttention(const struct FVector& AttentionPos);
-	void OnFinishedLevelUnloadEndGame(const struct FName& ID);
-	void OnEndAttention();
-	void SetDummyActorVisible(bool Condition);
-	void OnExitAttention();
-	void ForceStartAttention(const struct FVector& AttentionPos);
-	void ExecuteUbergraph_BP_AttentionLoadLevel(int EntryPoint);
+	void STATIC_GetNearAttentionPos(const struct FVector& AttentionPos, struct FVector* NearPos);
+	void STATIC_SetEnabledControl(bool Enabled);
+	void STATIC_UserConstructionScript();
+	void STATIC_OnFinishedStartFadeOut();
+	void STATIC_OnFinishedLoadLevel(const struct FName& ID);
+	void STATIC_OnStartAttention(const struct FVector& AttentionPos);
+	void STATIC_OnFinishedLevelUnloadEndGame(const struct FName& ID);
+	void STATIC_OnEndAttention();
+	void STATIC_SetDummyActorVisible(bool Condition);
+	void STATIC_OnExitAttention();
+	void STATIC_ForceStartAttention(const struct FVector& AttentionPos);
+	void STATIC_ExecuteUbergraph_BP_AttentionLoadLevel(int EntryPoint);
 };
 
 

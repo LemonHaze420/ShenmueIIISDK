@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_AdventureHealthBar_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_AdventureHealthBar_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.Tick");
 
@@ -36,11 +36,11 @@ void Uwgt_AdventureHealthBar_C::Tick(const struct FGeometry& MyGeometry, float I
 
 
 // Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_AdventureHealthBar_C::PreConstruct(bool IsDesignTime)
+void Uwgt_AdventureHealthBar_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.PreConstruct");
 
@@ -56,7 +56,7 @@ void Uwgt_AdventureHealthBar_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_AdventureHealthBar.wgt_AdventureHealthBar_C.ExecuteUbergraph_wgt_AdventureHealthBar
-// (HasDefaults)
+// (NetReliable, NetRequest, Event, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

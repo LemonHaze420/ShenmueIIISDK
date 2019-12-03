@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_ShopTalk.BPC_ShopTalk_C.GetStartTalkActionType
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bCanTalk                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3DetectActionParam    Params                         (Parm, OutParm)
 
-void UBPC_ShopTalk_C::GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params)
+void UBPC_ShopTalk_C::STATIC_GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ShopTalk.BPC_ShopTalk_C.GetStartTalkActionType");
 
@@ -37,17 +37,17 @@ void UBPC_ShopTalk_C::GetStartTalkActionType(bool bCanTalk, struct FS3DetectActi
 }
 
 
-// Function BPC_ShopTalk.BPC_ShopTalk_C.getActionType
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_ShopTalk.BPC_ShopTalk_C.GetActionType
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Sight                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FS3DetectActionParam> Params                         (Parm, OutParm, ZeroConstructor)
 
-void UBPC_ShopTalk_C::getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
+void UBPC_ShopTalk_C::GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BPC_ShopTalk.BPC_ShopTalk_C.getActionType");
+	static auto fn = UObject::FindObject<UFunction>("Function BPC_ShopTalk.BPC_ShopTalk_C.GetActionType");
 
-	UBPC_ShopTalk_C_getActionType_Params params;
+	UBPC_ShopTalk_C_GetActionType_Params params;
 	params.Sight = Sight;
 
 	auto flags = fn->FunctionFlags;
@@ -62,11 +62,11 @@ void UBPC_ShopTalk_C::getActionType(bool Sight, TArray<struct FS3DetectActionPar
 
 
 // Function BPC_ShopTalk.BPC_ShopTalk_C.DecideDetectAction
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // ES3ActionIconType              ActionType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ShopTalk_C::DecideDetectAction(ES3ActionIconType ActionType)
+void UBPC_ShopTalk_C::STATIC_DecideDetectAction(ES3ActionIconType ActionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ShopTalk.BPC_ShopTalk_C.DecideDetectAction");
 
@@ -74,6 +74,7 @@ void UBPC_ShopTalk_C::DecideDetectAction(ES3ActionIconType ActionType)
 	params.ActionType = ActionType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,11 +83,11 @@ void UBPC_ShopTalk_C::DecideDetectAction(ES3ActionIconType ActionType)
 
 
 // Function BPC_ShopTalk.BPC_ShopTalk_C.ExecuteUbergraph_BPC_ShopTalk
-// ()
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ShopTalk_C::ExecuteUbergraph_BPC_ShopTalk(int EntryPoint)
+void UBPC_ShopTalk_C::STATIC_ExecuteUbergraph_BPC_ShopTalk(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ShopTalk.BPC_ShopTalk_C.ExecuteUbergraph_BPC_ShopTalk");
 

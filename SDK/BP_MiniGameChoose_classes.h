@@ -55,14 +55,14 @@ public:
 	void FinalizeMoneyInfo();
 	void InitializeMoneyInfo();
 	void UpdateOnePriceInfo();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void DecideDetectAction(ES3ActionIconType Type);
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_MiniGameChoose(int EntryPoint);
-	void OnCancelMiniGameDispatcher__DelegateSignature();
-	void OnChooseMiniGameDispatcher__DelegateSignature(class AActor* ChooseActor);
+	void STATIC_OnCancelMiniGameDispatcher__DelegateSignature();
+	void STATIC_OnChooseMiniGameDispatcher__DelegateSignature(class AActor* ChooseActor);
 };
 
 

@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
+	void STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
 };
 
 

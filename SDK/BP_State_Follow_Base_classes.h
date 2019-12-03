@@ -27,10 +27,10 @@ public:
 	}
 
 
-	void GetPawn(class ABP_NPC_Lead_C** Pawn);
+	void STATIC_GetPawn(class ABP_NPC_Lead_C** Pawn);
 	void IsDebugDrawingEnabled(bool* DrawDebug);
-	void UpdateTransitions(float DeltaSeconds);
-	void IsCurrentState(bool* bIsCurrent);
+	void STATIC_UpdateTransitions(float DeltaSeconds);
+	void STATIC_IsCurrentState(bool* bIsCurrent);
 	void StateOnInitialize();
 	void ExecuteUbergraph_BP_State_Follow_Base(int EntryPoint);
 };

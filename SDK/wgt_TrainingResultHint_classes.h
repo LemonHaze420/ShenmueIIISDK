@@ -36,7 +36,7 @@ public:
 	bool IsValidHint();
 	void SetHintType(int Selection);
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_wgt_TrainingResultHint(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_TrainingResultHint(int EntryPoint);
 };
 
 

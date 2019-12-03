@@ -30,9 +30,9 @@ public:
 
 
 	void SetButtonImage(class UTexture2D* Image);
-	void PlayInput();
-	void PlayInstruction();
-	void Reset();
+	void STATIC_PlayInput();
+	void STATIC_PlayInstruction();
+	void STATIC_Reset();
 };
 
 

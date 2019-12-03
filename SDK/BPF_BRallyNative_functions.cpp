@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BRallyNative.BPF_BRallyNative_C.BPF_IsBattleRallyGamemode
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_BRallyNative_C::STATIC_BPF_IsBattleRallyGamemode(class UObject* __WorldContext)
+bool UBPF_BRallyNative_C::BPF_IsBattleRallyGamemode(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BRallyNative.BPF_BRallyNative_C.BPF_IsBattleRallyGamemode");
 
@@ -27,6 +27,7 @@ bool UBPF_BRallyNative_C::STATIC_BPF_IsBattleRallyGamemode(class UObject* __Worl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,12 +38,12 @@ bool UBPF_BRallyNative_C::STATIC_BPF_IsBattleRallyGamemode(class UObject* __Worl
 
 
 // Function BPF_BRallyNative.BPF_BRallyNative_C.BPF_GetBRallyAwardComponent
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Exec, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3_BRallyAwardSystem*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class US3_BRallyAwardSystem* UBPF_BRallyNative_C::STATIC_BPF_GetBRallyAwardComponent(class UObject* __WorldContext)
+class US3_BRallyAwardSystem* UBPF_BRallyNative_C::BPF_GetBRallyAwardComponent(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BRallyNative.BPF_BRallyNative_C.BPF_GetBRallyAwardComponent");
 

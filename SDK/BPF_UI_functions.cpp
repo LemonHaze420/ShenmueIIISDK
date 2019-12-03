@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_UI.BPF_UI_C.SetHeelDrinkNum_dispWidget
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class UTextBlock*              TextWidget                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -28,6 +28,7 @@ void UBPF_UI_C::STATIC_SetHeelDrinkNum_dispWidget(class UTextBlock* TextWidget, 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void UBPF_UI_C::STATIC_SetHeelDrinkNum_dispWidget(class UTextBlock* TextWidget, 
 
 
 // Function BPF_UI.BPF_UI_C.FormatMoneyText_dispWidget
-// (Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Min                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -44,7 +45,7 @@ void UBPF_UI_C::STATIC_SetHeelDrinkNum_dispWidget(class UTextBlock* TextWidget, 
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBPF_UI_C::STATIC_FormatMoneyText_dispWidget(int Value, int Min, int Max, class UObject* __WorldContext)
+struct FText UBPF_UI_C::FormatMoneyText_dispWidget(int Value, int Min, int Max, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_UI.BPF_UI_C.FormatMoneyText_dispWidget");
 
@@ -65,7 +66,7 @@ struct FText UBPF_UI_C::STATIC_FormatMoneyText_dispWidget(int Value, int Min, in
 
 
 // Function BPF_UI.BPF_UI_C.SetDayTime_dispWidget
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UTextBlock*              Day                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UTextBlock*              Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -89,7 +90,7 @@ void UBPF_UI_C::STATIC_SetDayTime_dispWidget(class UTextBlock* Day, class UTextB
 
 
 // Function BPF_UI.BPF_UI_C.SetCursorVisibility_dispWidget
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Delegate, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UImage*                  Down                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -123,7 +124,7 @@ void UBPF_UI_C::STATIC_SetCursorVisibility_dispWidget(bool Condition, class UIma
 
 
 // Function BPF_UI.BPF_UI_C.SetMoneyStatus_dispWidget
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class UTextBlock*              BetMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UTextBlock*              Money                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -131,7 +132,7 @@ void UBPF_UI_C::STATIC_SetCursorVisibility_dispWidget(bool Condition, class UIma
 // class UTextBlock*              HeelDrink                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_UI_C::STATIC_SetMoneyStatus_dispWidget(class UTextBlock* BetMoney, class UTextBlock* Money, class UTextBlock* Meter, class UTextBlock* HeelDrink, class UObject* __WorldContext)
+void UBPF_UI_C::SetMoneyStatus_dispWidget(class UTextBlock* BetMoney, class UTextBlock* Money, class UTextBlock* Meter, class UTextBlock* HeelDrink, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_UI.BPF_UI_C.SetMoneyStatus_dispWidget");
 

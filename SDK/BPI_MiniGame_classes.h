@@ -25,15 +25,15 @@ public:
 	}
 
 
-	void GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
-	void FinalizeTalk();
-	void RestartMiniGame();
-	void EnterMiniGame(float EnterTime);
-	void DrawMiniGame();
-	void LoseMiniGame();
-	void WinMiniGame();
-	void EndMiniGame();
-	void StartMiniGame();
+	void STATIC_GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type);
+	void STATIC_FinalizeTalk();
+	void STATIC_RestartMiniGame();
+	void STATIC_EnterMiniGame(float EnterTime);
+	void STATIC_DrawMiniGame();
+	void STATIC_LoseMiniGame();
+	void STATIC_WinMiniGame();
+	void STATIC_EndMiniGame();
+	void STATIC_StartMiniGame();
 };
 
 

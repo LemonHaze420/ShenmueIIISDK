@@ -14,6 +14,173 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault
+struct UMotionTrackedDeviceFunctionLibrary_SetIsControllerMotionTrackingEnabledByDefault_Params
+{
+	bool                                               Enable;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForSource
+struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForSource_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice
+struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForDevice_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	EControllerHand                                    Hand;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent
+struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForComponent_Params
+{
+	class UMotionControllerComponent*                  MotionControllerComponent;                                // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary
+struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackedDeviceCountManagementNecessary_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionSourceTracking
+struct UMotionTrackedDeviceFunctionLibrary_IsMotionSourceTracking_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount
+struct UMotionTrackedDeviceFunctionLibrary_GetMotionTrackingEnabledControllerCount_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount
+struct UMotionTrackedDeviceFunctionLibrary_GetMaximumMotionTrackedControllerCount_Params
+{
+	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetActiveTrackingSystemName
+struct UMotionTrackedDeviceFunctionLibrary_GetActiveTrackingSystemName_Params
+{
+	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources
+struct UMotionTrackedDeviceFunctionLibrary_EnumerateMotionSources_Params
+{
+	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfSource
+struct UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfSource_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice
+struct UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfDevice_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	EControllerHand                                    Hand;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent
+struct UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingForComponent_Params
+{
+	class UMotionControllerComponent*                  MotionControllerComponent;                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfSource
+struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfSource_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice
+struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfDevice_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+	EControllerHand                                    Hand;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer
+struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfControllersForPlayer_Params
+{
+	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfAllControllers
+struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfAllControllers_Params
+{
+};
+
+// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent
+struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingForComponent_Params
+{
+	class UMotionControllerComponent*                  MotionControllerComponent;                                // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.XRAssetFunctionLibrary.AddNamedDeviceVisualizationComponentBlocking
+struct UXRAssetFunctionLibrary_AddNamedDeviceVisualizationComponentBlocking_Params
+{
+	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SystemName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       DeviceName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FXRDeviceId                                 XRDeviceId;                                               // (Parm, OutParm)
+	class UPrimitiveComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.XRAssetFunctionLibrary.AddDeviceVisualizationComponentBlocking
+struct UXRAssetFunctionLibrary_AddDeviceVisualizationComponentBlocking_Params
+{
+	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FXRDeviceId                                 XRDeviceId;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	class UPrimitiveComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddNamedDeviceVisualizationComponentAsync
+struct UAsyncTask_LoadXRDeviceVisComponent_AddNamedDeviceVisualizationComponentAsync_Params
+{
+	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SystemName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FName                                       DeviceName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	struct FXRDeviceId                                 XRDeviceId;                                               // (Parm, OutParm)
+	class UPrimitiveComponent*                         NewComponent;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAsyncTask_LoadXRDeviceVisComponent*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddDeviceVisualizationComponentAsync
+struct UAsyncTask_LoadXRDeviceVisComponent_AddDeviceVisualizationComponentAsync_Params
+{
+	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FXRDeviceId                                 XRDeviceId;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
+	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
+	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+	class UPrimitiveComponent*                         NewComponent;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAsyncTask_LoadXRDeviceVisComponent*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function HeadMountedDisplay.HeadMountedDisplayFunctionLibrary.SetWorldToMetersScale
 struct UHeadMountedDisplayFunctionLibrary_SetWorldToMetersScale_Params
 {
@@ -294,173 +461,6 @@ struct UMotionControllerComponent_GetParameterValue_Params
 	struct FName                                       InName;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               bValueFound;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.SetIsControllerMotionTrackingEnabledByDefault
-struct UMotionTrackedDeviceFunctionLibrary_SetIsControllerMotionTrackingEnabledByDefault_Params
-{
-	bool                                               Enable;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForSource
-struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForSource_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForDevice
-struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForDevice_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	EControllerHand                                    Hand;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackingEnabledForComponent
-struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackingEnabledForComponent_Params
-{
-	class UMotionControllerComponent*                  MotionControllerComponent;                                // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionTrackedDeviceCountManagementNecessary
-struct UMotionTrackedDeviceFunctionLibrary_IsMotionTrackedDeviceCountManagementNecessary_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.IsMotionSourceTracking
-struct UMotionTrackedDeviceFunctionLibrary_IsMotionSourceTracking_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMotionTrackingEnabledControllerCount
-struct UMotionTrackedDeviceFunctionLibrary_GetMotionTrackingEnabledControllerCount_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetMaximumMotionTrackedControllerCount
-struct UMotionTrackedDeviceFunctionLibrary_GetMaximumMotionTrackedControllerCount_Params
-{
-	int                                                ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.GetActiveTrackingSystemName
-struct UMotionTrackedDeviceFunctionLibrary_GetActiveTrackingSystemName_Params
-{
-	struct FName                                       ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnumerateMotionSources
-struct UMotionTrackedDeviceFunctionLibrary_EnumerateMotionSources_Params
-{
-	TArray<struct FName>                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfSource
-struct UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfSource_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingOfDevice
-struct UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingOfDevice_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	EControllerHand                                    Hand;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.EnableMotionTrackingForComponent
-struct UMotionTrackedDeviceFunctionLibrary_EnableMotionTrackingForComponent_Params
-{
-	class UMotionControllerComponent*                  MotionControllerComponent;                                // (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfSource
-struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfSource_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourceName;                                               // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfDevice
-struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfDevice_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-	EControllerHand                                    Hand;                                                     // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfControllersForPlayer
-struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfControllersForPlayer_Params
-{
-	int                                                PlayerIndex;                                              // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingOfAllControllers
-struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingOfAllControllers_Params
-{
-};
-
-// Function HeadMountedDisplay.MotionTrackedDeviceFunctionLibrary.DisableMotionTrackingForComponent
-struct UMotionTrackedDeviceFunctionLibrary_DisableMotionTrackingForComponent_Params
-{
-	class UMotionControllerComponent*                  MotionControllerComponent;                                // (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.XRAssetFunctionLibrary.AddNamedDeviceVisualizationComponentBlocking
-struct UXRAssetFunctionLibrary_AddNamedDeviceVisualizationComponentBlocking_Params
-{
-	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SystemName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       DeviceName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct FXRDeviceId                                 XRDeviceId;                                               // (Parm, OutParm)
-	class UPrimitiveComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.XRAssetFunctionLibrary.AddDeviceVisualizationComponentBlocking
-struct UXRAssetFunctionLibrary_AddDeviceVisualizationComponentBlocking_Params
-{
-	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FXRDeviceId                                 XRDeviceId;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	class UPrimitiveComponent*                         ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddNamedDeviceVisualizationComponentAsync
-struct UAsyncTask_LoadXRDeviceVisComponent_AddNamedDeviceVisualizationComponentAsync_Params
-{
-	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SystemName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	struct FName                                       DeviceName;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	struct FXRDeviceId                                 XRDeviceId;                                               // (Parm, OutParm)
-	class UPrimitiveComponent*                         NewComponent;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAsyncTask_LoadXRDeviceVisComponent*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function HeadMountedDisplay.AsyncTask_LoadXRDeviceVisComponent.AddDeviceVisualizationComponentAsync
-struct UAsyncTask_LoadXRDeviceVisComponent_AddDeviceVisualizationComponentAsync_Params
-{
-	class AActor*                                      Target;                                                   // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FXRDeviceId                                 XRDeviceId;                                               // (ConstParm, Parm, OutParm, ReferenceParm)
-	bool                                               bManualAttachment;                                        // (Parm, ZeroConstructor, IsPlainOldData)
-	struct FTransform                                  RelativeTransform;                                        // (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-	class UPrimitiveComponent*                         NewComponent;                                             // (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UAsyncTask_LoadXRDeviceVisComponent*         ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

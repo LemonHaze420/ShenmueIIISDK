@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.GetStairsGimmickInfo
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class AActor*                  StairsGimmick                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FTransform              ActorTransform                 (Parm, OutParm, IsPlainOldData)
@@ -30,6 +30,7 @@ void ABP_NavLink_Stairs_C::GetStairsGimmickInfo(class AActor** StairsGimmick, st
 	ABP_NavLink_Stairs_C_GetStairsGimmickInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,15 +52,16 @@ void ABP_NavLink_Stairs_C::GetStairsGimmickInfo(class AActor** StairsGimmick, st
 
 
 // Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.UpdateStairsInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, Private, Protected, Delegate, NetClient, Const)
 
-void ABP_NavLink_Stairs_C::UpdateStairsInfo()
+void ABP_NavLink_Stairs_C::STATIC_UpdateStairsInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.UpdateStairsInfo");
 
 	ABP_NavLink_Stairs_C_UpdateStairsInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +70,7 @@ void ABP_NavLink_Stairs_C::UpdateStairsInfo()
 
 
 // Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.UpdateDebugStairs
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Delegate, NetClient, Const)
 
 void ABP_NavLink_Stairs_C::UpdateDebugStairs()
 {
@@ -85,9 +87,9 @@ void ABP_NavLink_Stairs_C::UpdateDebugStairs()
 
 
 // Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_NavLink_Stairs_C::UserConstructionScript()
+void ABP_NavLink_Stairs_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.UserConstructionScript");
 
@@ -102,12 +104,12 @@ void ABP_NavLink_Stairs_C::UserConstructionScript()
 
 
 // Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.ReceiveSmartLinkReached
-// (Event, Public, HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AActor*                  Agent                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Destination                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_NavLink_Stairs_C::ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination)
+void ABP_NavLink_Stairs_C::STATIC_ReceiveSmartLinkReached(class AActor* Agent, const struct FVector& Destination)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.ReceiveSmartLinkReached");
 
@@ -124,7 +126,7 @@ void ABP_NavLink_Stairs_C::ReceiveSmartLinkReached(class AActor* Agent, const st
 
 
 // Function BP_NavLink_Stairs.BP_NavLink_Stairs_C.ExecuteUbergraph_BP_NavLink_Stairs
-// (HasDefaults)
+// (Exec, Native, Event, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -136,6 +138,7 @@ void ABP_NavLink_Stairs_C::ExecuteUbergraph_BP_NavLink_Stairs(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

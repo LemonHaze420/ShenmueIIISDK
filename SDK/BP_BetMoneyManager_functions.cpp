@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_BetMoneyManager_C::GetPriority()
+int ABP_BetMoneyManager_C::STATIC_GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.GetPriority");
 
 	ABP_BetMoneyManager_C_GetPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,17 +36,18 @@ int ABP_BetMoneyManager_C::GetPriority()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FS3DetectActionParam> ABP_BetMoneyManager_C::GetDetectAction()
+TArray<struct FS3DetectActionParam> ABP_BetMoneyManager_C::STATIC_GetDetectAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.GetDetectAction");
 
 	ABP_BetMoneyManager_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +58,7 @@ TArray<struct FS3DetectActionParam> ABP_BetMoneyManager_C::GetDetectAction()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.GetPlayCount
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            PlayCount                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -78,7 +80,7 @@ void ABP_BetMoneyManager_C::GetPlayCount(int* PlayCount)
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.GetBetMoney
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            BetMoney                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -89,6 +91,7 @@ void ABP_BetMoneyManager_C::GetBetMoney(int* BetMoney)
 	ABP_BetMoneyManager_C_GetBetMoney_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,7 +103,7 @@ void ABP_BetMoneyManager_C::GetBetMoney(int* BetMoney)
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::UserConstructionScript()
 {
@@ -117,11 +120,11 @@ void ABP_BetMoneyManager_C::UserConstructionScript()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_BetMoneyManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_BetMoneyManager_C::STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8");
 
@@ -129,6 +132,7 @@ void ABP_BetMoneyManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -137,11 +141,11 @@ void ABP_BetMoneyManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_BetMoneyManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_BetMoneyManager_C::STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7");
 
@@ -149,6 +153,7 @@ void ABP_BetMoneyManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,11 +162,11 @@ void ABP_BetMoneyManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_BetMoneyManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_BetMoneyManager_C::STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6");
 
@@ -169,6 +174,7 @@ void ABP_BetMoneyManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(c
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -177,11 +183,11 @@ void ABP_BetMoneyManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(c
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_BetMoneyManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_BetMoneyManager_C::STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5");
 
@@ -197,7 +203,7 @@ void ABP_BetMoneyManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ReceiveBeginPlay()
 {
@@ -214,11 +220,11 @@ void ABP_BetMoneyManager_C::ReceiveBeginPlay()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BetMoneyManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_BetMoneyManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.ReceiveTick");
 
@@ -226,6 +232,7 @@ void ABP_BetMoneyManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,11 +241,11 @@ void ABP_BetMoneyManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BetMoneyManager_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_BetMoneyManager_C::STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1");
 
@@ -246,6 +253,7 @@ void ABP_BetMoneyManager_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,11 +262,11 @@ void ABP_BetMoneyManager_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BetMoneyManager_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float AxisValue)
+void ABP_BetMoneyManager_C::STATIC_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3");
 
@@ -266,6 +274,7 @@ void ABP_BetMoneyManager_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float A
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -274,11 +283,11 @@ void ABP_BetMoneyManager_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_3(float A
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BetMoneyManager_C::DecideDetectAction(ES3ActionIconType Type)
+void ABP_BetMoneyManager_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.DecideDetectAction");
 
@@ -286,6 +295,7 @@ void ABP_BetMoneyManager_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -294,7 +304,7 @@ void ABP_BetMoneyManager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.EndBet
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_BetMoneyManager_C::EndBet()
 {
@@ -311,11 +321,11 @@ void ABP_BetMoneyManager_C::EndBet()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ExecuteUbergraph_BP_BetMoneyManager
-// (HasDefaults)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BetMoneyManager_C::ExecuteUbergraph_BP_BetMoneyManager(int EntryPoint)
+void ABP_BetMoneyManager_C::STATIC_ExecuteUbergraph_BP_BetMoneyManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BetMoneyManager.BP_BetMoneyManager_C.ExecuteUbergraph_BP_BetMoneyManager");
 
@@ -331,7 +341,7 @@ void ABP_BetMoneyManager_C::ExecuteUbergraph_BP_BetMoneyManager(int EntryPoint)
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_PreDecideReturn__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_PreDecideReturn__DelegateSignature()
 {
@@ -348,7 +358,7 @@ void ABP_BetMoneyManager_C::ED_PreDecideReturn__DelegateSignature()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_PreDecideBet__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_PreDecideBet__DelegateSignature()
 {
@@ -365,7 +375,7 @@ void ABP_BetMoneyManager_C::ED_PreDecideBet__DelegateSignature()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_PostDecideReturn__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_PostDecideReturn__DelegateSignature()
 {
@@ -382,7 +392,7 @@ void ABP_BetMoneyManager_C::ED_PostDecideReturn__DelegateSignature()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_PostDecideBet__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_PostDecideBet__DelegateSignature()
 {
@@ -399,7 +409,7 @@ void ABP_BetMoneyManager_C::ED_PostDecideBet__DelegateSignature()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_DecideCancel__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_DecideCancel__DelegateSignature()
 {
@@ -416,7 +426,7 @@ void ABP_BetMoneyManager_C::ED_DecideCancel__DelegateSignature()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_DecideMaxBet__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_DecideMaxBet__DelegateSignature()
 {
@@ -433,7 +443,7 @@ void ABP_BetMoneyManager_C::ED_DecideMaxBet__DelegateSignature()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_DecideBetDown__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_DecideBetDown__DelegateSignature()
 {
@@ -450,7 +460,7 @@ void ABP_BetMoneyManager_C::ED_DecideBetDown__DelegateSignature()
 
 
 // Function BP_BetMoneyManager.BP_BetMoneyManager_C.ED_DecideBetUp__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BetMoneyManager_C::ED_DecideBetUp__DelegateSignature()
 {

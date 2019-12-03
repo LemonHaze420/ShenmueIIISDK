@@ -40,7 +40,7 @@ struct ABP_UI_ItemCapture_C_InputAxis_Left_Params
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.UpdateCamera
 struct ABP_UI_ItemCapture_C_UpdateCamera_Params
 {
-	float                                              DeltaSEcond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaSecond;                                              // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_UI_ItemCapture.BP_UI_ItemCapture_C.InputAxis_Right

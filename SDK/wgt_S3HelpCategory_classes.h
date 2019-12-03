@@ -35,8 +35,8 @@ public:
 	}
 
 
-	void Construct();
-	void ExecuteUbergraph_wgt_S3HelpCategory(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_wgt_S3HelpCategory(int EntryPoint);
 };
 
 

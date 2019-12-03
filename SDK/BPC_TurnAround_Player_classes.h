@@ -28,13 +28,13 @@ public:
 
 
 	bool TryPreTalkJump();
-	class AActor* GetTalkedMinigame();
+	class AActor* STATIC_GetTalkedMinigame();
 	void CanTurnAround(bool* bCan);
-	void ReturnPreTalkRotationActor();
-	void ReceiveBeginPlay();
+	void STATIC_ReturnPreTalkRotationActor();
+	void STATIC_ReceiveBeginPlay();
 	void ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
-	void TurnAroundTickFinish();
-	void ExecuteUbergraph_BPC_TurnAround_Player(int EntryPoint);
+	void STATIC_TurnAroundTickFinish();
+	void STATIC_ExecuteUbergraph_BPC_TurnAround_Player(int EntryPoint);
 };
 
 

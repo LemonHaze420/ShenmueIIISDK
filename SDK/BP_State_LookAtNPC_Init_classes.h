@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void StateEnter(float Delta, bool* bProcessing);
+	void STATIC_StateEnter(float Delta, bool* bProcessing);
 };
 
 

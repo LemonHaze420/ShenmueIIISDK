@@ -30,7 +30,7 @@ public:
 
 	void Set_Mode(TEnumAsByte<EN_DressMode_SelectMode> Mode);
 	void SetFocusAndSelect(bool IsFocus, bool IsSelect);
-	void SetImage(class UTexture2D* Texture);
+	void STATIC_SetImage(class UTexture2D* Texture);
 };
 
 

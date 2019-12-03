@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PauseLevelBGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // bool                           bRequest                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 Requester                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::PauseLevelBGM(bool bRequest, class UObject* Requester)
+void ABP_S3BgmManager_C::STATIC_PauseLevelBGM(bool bRequest, class UObject* Requester)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.PauseLevelBGM");
 
@@ -28,6 +28,7 @@ void ABP_S3BgmManager_C::PauseLevelBGM(bool bRequest, class UObject* Requester)
 	params.Requester = Requester;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +37,11 @@ void ABP_S3BgmManager_C::PauseLevelBGM(bool bRequest, class UObject* Requester)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ShouldBePaused
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3BgmManager_C::ShouldBePaused()
+bool ABP_S3BgmManager_C::STATIC_ShouldBePaused()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ShouldBePaused");
 
@@ -57,18 +58,19 @@ bool ABP_S3BgmManager_C::ShouldBePaused()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.GetHighestPriority
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Exec, Native, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // EBgmPriority                   OutPriority                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-bool ABP_S3BgmManager_C::GetHighestPriority(EBgmPriority* OutPriority)
+bool ABP_S3BgmManager_C::STATIC_GetHighestPriority(EBgmPriority* OutPriority)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.GetHighestPriority");
 
 	ABP_S3BgmManager_C_GetHighestPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,15 +84,16 @@ bool ABP_S3BgmManager_C::GetHighestPriority(EBgmPriority* OutPriority)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.StopForceBGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3BgmManager_C::StopForceBGM()
+void ABP_S3BgmManager_C::STATIC_StopForceBGM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.StopForceBGM");
 
 	ABP_S3BgmManager_C_StopForceBGM_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,11 +102,11 @@ void ABP_S3BgmManager_C::StopForceBGM()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.IsForceBGM
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // bool                           Force                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::IsForceBGM(bool* Force)
+void ABP_S3BgmManager_C::STATIC_IsForceBGM(bool* Force)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.IsForceBGM");
 
@@ -121,11 +124,11 @@ void ABP_S3BgmManager_C::IsForceBGM(bool* Force)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PlayForceBGM
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::PlayForceBGM(class USoundAtomCue* Cue)
+void ABP_S3BgmManager_C::STATIC_PlayForceBGM(class USoundAtomCue* Cue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.PlayForceBGM");
 
@@ -141,9 +144,9 @@ void ABP_S3BgmManager_C::PlayForceBGM(class USoundAtomCue* Cue)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PauseSimple
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 
-void ABP_S3BgmManager_C::PauseSimple()
+void ABP_S3BgmManager_C::STATIC_PauseSimple()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.PauseSimple");
 
@@ -158,12 +161,12 @@ void ABP_S3BgmManager_C::PauseSimple()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.Stop
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Event, Static, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3BgmManager_C::Stop(const struct FName& ID)
+bool ABP_S3BgmManager_C::STATIC_Stop(const struct FName& ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.Stop");
 
@@ -181,11 +184,11 @@ bool ABP_S3BgmManager_C::Stop(const struct FName& ID)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ResetVolume
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::ResetVolume(class AActor* Executor)
+void ABP_S3BgmManager_C::STATIC_ResetVolume(class AActor* Executor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ResetVolume");
 
@@ -193,6 +196,7 @@ void ABP_S3BgmManager_C::ResetVolume(class AActor* Executor)
 	params.Executor = Executor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -201,7 +205,7 @@ void ABP_S3BgmManager_C::ResetVolume(class AActor* Executor)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.GetCurrentVolume
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // float                          Volume                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -212,6 +216,7 @@ void ABP_S3BgmManager_C::GetCurrentVolume(float* Volume)
 	ABP_S3BgmManager_C_GetCurrentVolume_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -223,7 +228,7 @@ void ABP_S3BgmManager_C::GetCurrentVolume(float* Volume)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.SetVolume
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Public, Delegate, NetServer, BlueprintCallable)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -245,11 +250,11 @@ void ABP_S3BgmManager_C::SetVolume(class AActor* Executor, float Volume)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.SetSystemVolume
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::SetSystemVolume(float Volume)
+void ABP_S3BgmManager_C::STATIC_SetSystemVolume(float Volume)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.SetSystemVolume");
 
@@ -265,7 +270,7 @@ void ABP_S3BgmManager_C::SetSystemVolume(float Volume)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.StopWithDestroy
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Public, Private, Delegate, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -285,9 +290,9 @@ void ABP_S3BgmManager_C::StopWithDestroy(const struct FName& ID)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.RestartFromCutscene
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::RestartFromCutscene()
+void ABP_S3BgmManager_C::STATIC_RestartFromCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.RestartFromCutscene");
 
@@ -302,9 +307,9 @@ void ABP_S3BgmManager_C::RestartFromCutscene()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.RestartSimple
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 
-void ABP_S3BgmManager_C::RestartSimple()
+void ABP_S3BgmManager_C::STATIC_RestartSimple()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.RestartSimple");
 
@@ -319,13 +324,13 @@ void ABP_S3BgmManager_C::RestartSimple()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.CanUpdatePlay
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class ABP_S3BgmPlayer_C*       Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Pause                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CAN                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::CanUpdatePlay(class ABP_S3BgmPlayer_C* Player, bool Pause, bool* CAN)
+void ABP_S3BgmManager_C::STATIC_CanUpdatePlay(class ABP_S3BgmPlayer_C* Player, bool Pause, bool* CAN)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.CanUpdatePlay");
 
@@ -345,7 +350,7 @@ void ABP_S3BgmManager_C::CanUpdatePlay(class ABP_S3BgmPlayer_C* Player, bool Pau
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PauseFromCutscene
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 
 void ABP_S3BgmManager_C::PauseFromCutscene()
 {
@@ -354,6 +359,7 @@ void ABP_S3BgmManager_C::PauseFromCutscene()
 	ABP_S3BgmManager_C_PauseFromCutscene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -362,17 +368,18 @@ void ABP_S3BgmManager_C::PauseFromCutscene()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.GetPlayingBgm
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // class USoundAtomCue*           Sound                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::GetPlayingBgm(class USoundAtomCue** Sound)
+void ABP_S3BgmManager_C::STATIC_GetPlayingBgm(class USoundAtomCue** Sound)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.GetPlayingBgm");
 
 	ABP_S3BgmManager_C_GetPlayingBgm_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -384,7 +391,7 @@ void ABP_S3BgmManager_C::GetPlayingBgm(class USoundAtomCue** Sound)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromCue
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -393,7 +400,7 @@ void ABP_S3BgmManager_C::GetPlayingBgm(class USoundAtomCue** Sound)
 // float                          StartTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AS3BgmPlayer*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AS3BgmPlayer* ABP_S3BgmManager_C::PlayFromCue(class UObject* Cue, const struct FName& ID, EBgmPriority Priority, bool AutoDestroy, float StartTime)
+class AS3BgmPlayer* ABP_S3BgmManager_C::STATIC_PlayFromCue(class UObject* Cue, const struct FName& ID, EBgmPriority Priority, bool AutoDestroy, float StartTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromCue");
 
@@ -415,9 +422,9 @@ class AS3BgmPlayer* ABP_S3BgmManager_C::PlayFromCue(class UObject* Cue, const st
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.StopCutsceneBGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, DLLImport)
 
-void ABP_S3BgmManager_C::StopCutsceneBGM()
+void ABP_S3BgmManager_C::STATIC_StopCutsceneBGM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.StopCutsceneBGM");
 
@@ -432,12 +439,12 @@ void ABP_S3BgmManager_C::StopCutsceneBGM()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.GetPlayerByPriority
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Event, Static, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // EBgmPriority                   Priority                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3BgmPlayer_C*       Player                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::GetPlayerByPriority(EBgmPriority Priority, class ABP_S3BgmPlayer_C** Player)
+void ABP_S3BgmManager_C::STATIC_GetPlayerByPriority(EBgmPriority Priority, class ABP_S3BgmPlayer_C** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.GetPlayerByPriority");
 
@@ -456,7 +463,7 @@ void ABP_S3BgmManager_C::GetPlayerByPriority(EBgmPriority Priority, class ABP_S3
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromSequencer_Impl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SoundId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -464,7 +471,7 @@ void ABP_S3BgmManager_C::GetPlayerByPriority(EBgmPriority Priority, class ABP_S3
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch)
+void ABP_S3BgmManager_C::STATIC_PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromSequencer_Impl");
 
@@ -476,6 +483,7 @@ void ABP_S3BgmManager_C::PlayFromSequencer_Impl(class USoundAtomCue* Cue, const 
 	params.Pitch = Pitch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -484,13 +492,13 @@ void ABP_S3BgmManager_C::PlayFromSequencer_Impl(class USoundAtomCue* Cue, const 
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.GetPlayerById
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3BgmPlayer_C*       Player                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::GetPlayerById(const struct FName& ID, class ABP_S3BgmPlayer_C** Player, int* Index)
+void ABP_S3BgmManager_C::STATIC_GetPlayerById(const struct FName& ID, class ABP_S3BgmPlayer_C** Player, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.GetPlayerById");
 
@@ -498,6 +506,7 @@ void ABP_S3BgmManager_C::GetPlayerById(const struct FName& ID, class ABP_S3BgmPl
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -511,11 +520,11 @@ void ABP_S3BgmManager_C::GetPlayerById(const struct FName& ID, class ABP_S3BgmPl
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromInfo
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FS3BgmAreaSourceInfo    SourceInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3BgmManager_C::PlayFromInfo(const struct FS3BgmAreaSourceInfo& SourceInfo)
+void ABP_S3BgmManager_C::STATIC_PlayFromInfo(const struct FS3BgmAreaSourceInfo& SourceInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromInfo");
 
@@ -523,6 +532,7 @@ void ABP_S3BgmManager_C::PlayFromInfo(const struct FS3BgmAreaSourceInfo& SourceI
 	params.SourceInfo = SourceInfo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -531,12 +541,12 @@ void ABP_S3BgmManager_C::PlayFromInfo(const struct FS3BgmAreaSourceInfo& SourceI
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.AddPlayer
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // class ABP_S3BgmPlayer_C*       Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::AddPlayer(class ABP_S3BgmPlayer_C* Player, float StartTime)
+void ABP_S3BgmManager_C::STATIC_AddPlayer(class ABP_S3BgmPlayer_C* Player, float StartTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.AddPlayer");
 
@@ -545,6 +555,7 @@ void ABP_S3BgmManager_C::AddPlayer(class ABP_S3BgmPlayer_C* Player, float StartT
 	params.StartTime = StartTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -553,9 +564,9 @@ void ABP_S3BgmManager_C::AddPlayer(class ABP_S3BgmPlayer_C* Player, float StartT
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.UpdateBGM
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Delegate, NetServer, BlueprintCallable)
 
-void ABP_S3BgmManager_C::UpdateBGM()
+void ABP_S3BgmManager_C::STATIC_UpdateBGM()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.UpdateBGM");
 
@@ -570,12 +581,12 @@ void ABP_S3BgmManager_C::UpdateBGM()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ChangeBgm
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::ChangeBgm(class UObject* Sound, const struct FName& ID)
+void ABP_S3BgmManager_C::STATIC_ChangeBgm(class UObject* Sound, const struct FName& ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ChangeBgm");
 
@@ -592,7 +603,7 @@ void ABP_S3BgmManager_C::ChangeBgm(class UObject* Sound, const struct FName& ID)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 
 void ABP_S3BgmManager_C::UserConstructionScript()
 {
@@ -601,6 +612,7 @@ void ABP_S3BgmManager_C::UserConstructionScript()
 	ABP_S3BgmManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -609,9 +621,9 @@ void ABP_S3BgmManager_C::UserConstructionScript()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::ReceiveBeginPlay()
+void ABP_S3BgmManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ReceiveBeginPlay");
 
@@ -626,11 +638,11 @@ void ABP_S3BgmManager_C::ReceiveBeginPlay()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.OnBeginTouchArea
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AS3BgmArea*              AreaActor                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::OnBeginTouchArea(class AS3BgmArea* AreaActor)
+void ABP_S3BgmManager_C::STATIC_OnBeginTouchArea(class AS3BgmArea* AreaActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.OnBeginTouchArea");
 
@@ -638,6 +650,7 @@ void ABP_S3BgmManager_C::OnBeginTouchArea(class AS3BgmArea* AreaActor)
 	params.AreaActor = AreaActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -646,11 +659,11 @@ void ABP_S3BgmManager_C::OnBeginTouchArea(class AS3BgmArea* AreaActor)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.OnEndTouchArea
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AS3BgmArea*              AreaActor                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::OnEndTouchArea(class AS3BgmArea* AreaActor)
+void ABP_S3BgmManager_C::STATIC_OnEndTouchArea(class AS3BgmArea* AreaActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.OnEndTouchArea");
 
@@ -658,6 +671,7 @@ void ABP_S3BgmManager_C::OnEndTouchArea(class AS3BgmArea* AreaActor)
 	params.AreaActor = AreaActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -666,11 +680,11 @@ void ABP_S3BgmManager_C::OnEndTouchArea(class AS3BgmArea* AreaActor)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.OnAreaBgmChanged
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AS3BgmArea*              area                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::OnAreaBgmChanged(class AS3BgmArea* area)
+void ABP_S3BgmManager_C::STATIC_OnAreaBgmChanged(class AS3BgmArea* area)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.OnAreaBgmChanged");
 
@@ -678,6 +692,7 @@ void ABP_S3BgmManager_C::OnAreaBgmChanged(class AS3BgmArea* area)
 	params.area = area;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -686,7 +701,7 @@ void ABP_S3BgmManager_C::OnAreaBgmChanged(class AS3BgmArea* area)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromPlayer
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class AS3BgmPlayer*            BgmPlayer                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -700,6 +715,7 @@ void ABP_S3BgmManager_C::PlayFromPlayer(class AS3BgmPlayer* BgmPlayer, float Sta
 	params.StartTime = StartTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -708,15 +724,16 @@ void ABP_S3BgmManager_C::PlayFromPlayer(class AS3BgmPlayer* BgmPlayer, float Sta
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.Pause
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::Pause()
+void ABP_S3BgmManager_C::STATIC_Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.Pause");
 
 	ABP_S3BgmManager_C_Pause_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -725,15 +742,16 @@ void ABP_S3BgmManager_C::Pause()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.Restart
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::Restart()
+void ABP_S3BgmManager_C::STATIC_Restart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.Restart");
 
 	ABP_S3BgmManager_C_Restart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -742,7 +760,7 @@ void ABP_S3BgmManager_C::Restart()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromSequencer
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SoundId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -750,7 +768,7 @@ void ABP_S3BgmManager_C::Restart()
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch)
+void ABP_S3BgmManager_C::STATIC_PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, float StartTime, float Volume, float Pitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.PlayFromSequencer");
 
@@ -770,11 +788,11 @@ void ABP_S3BgmManager_C::PlayFromSequencer(class USoundAtomCue* Cue, const struc
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3BgmManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ReceiveEndPlay");
 
@@ -782,6 +800,7 @@ void ABP_S3BgmManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -790,11 +809,11 @@ void ABP_S3BgmManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_S3BgmManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ReceiveTick");
 
@@ -802,6 +821,7 @@ void ABP_S3BgmManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -810,9 +830,9 @@ void ABP_S3BgmManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.StartFadeIn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::StartFadeIn()
+void ABP_S3BgmManager_C::STATIC_StartFadeIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.StartFadeIn");
 
@@ -827,9 +847,9 @@ void ABP_S3BgmManager_C::StartFadeIn()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.StartFadeOut
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::StartFadeOut()
+void ABP_S3BgmManager_C::STATIC_StartFadeOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.StartFadeOut");
 
@@ -844,11 +864,11 @@ void ABP_S3BgmManager_C::StartFadeOut()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.SwitchController
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::SwitchController(class APlayerController* PlayerController)
+void ABP_S3BgmManager_C::STATIC_SwitchController(class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.SwitchController");
 
@@ -856,6 +876,7 @@ void ABP_S3BgmManager_C::SwitchController(class APlayerController* PlayerControl
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -864,9 +885,9 @@ void ABP_S3BgmManager_C::SwitchController(class APlayerController* PlayerControl
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ShowEyecatch
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::ShowEyecatch()
+void ABP_S3BgmManager_C::STATIC_ShowEyecatch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ShowEyecatch");
 
@@ -881,9 +902,9 @@ void ABP_S3BgmManager_C::ShowEyecatch()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.HideEyecatch
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, BlueprintCallable)
 
-void ABP_S3BgmManager_C::HideEyecatch()
+void ABP_S3BgmManager_C::STATIC_HideEyecatch()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.HideEyecatch");
 
@@ -898,11 +919,11 @@ void ABP_S3BgmManager_C::HideEyecatch()
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ChangeSystemVolume
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // ES3SoundVolume                 Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::ChangeSystemVolume(ES3SoundVolume Type)
+void ABP_S3BgmManager_C::STATIC_ChangeSystemVolume(ES3SoundVolume Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ChangeSystemVolume");
 
@@ -910,6 +931,7 @@ void ABP_S3BgmManager_C::ChangeSystemVolume(ES3SoundVolume Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -918,11 +940,11 @@ void ABP_S3BgmManager_C::ChangeSystemVolume(ES3SoundVolume Type)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.SetTalkVolume
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::SetTalkVolume(bool bReset)
+void ABP_S3BgmManager_C::STATIC_SetTalkVolume(bool bReset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.SetTalkVolume");
 
@@ -930,6 +952,7 @@ void ABP_S3BgmManager_C::SetTalkVolume(bool bReset)
 	params.bReset = bReset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -938,11 +961,11 @@ void ABP_S3BgmManager_C::SetTalkVolume(bool bReset)
 
 
 // Function BP_S3BgmManager.BP_S3BgmManager_C.ExecuteUbergraph_BP_S3BgmManager
-// (HasDefaults)
+// (Net, NetResponse, Static, MulticastDelegate, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3BgmManager_C::ExecuteUbergraph_BP_S3BgmManager(int EntryPoint)
+void ABP_S3BgmManager_C::STATIC_ExecuteUbergraph_BP_S3BgmManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3BgmManager.BP_S3BgmManager_C.ExecuteUbergraph_BP_S3BgmManager");
 

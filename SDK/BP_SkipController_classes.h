@@ -36,20 +36,20 @@ public:
 	}
 
 
-	void GetCurentRate(float* Rate);
+	void STATIC_GetCurentRate(float* Rate);
 	void SetGenericCall(int z_order);
 	void CheckVisible(ES3PlayerBehavior ID);
 	void DisableSkipScene();
 	void EnableSkipScene();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_4(const struct FKey& Key);
 	void InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_3(const struct FKey& Key);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
+	void STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_SkipController(int EntryPoint);
-	void OnSkip__DelegateSignature();
+	void STATIC_OnSkip__DelegateSignature();
 };
 
 

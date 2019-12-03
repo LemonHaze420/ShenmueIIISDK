@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.ResetLookAtParamater
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bResetTarget                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtBase_C::ResetLookAtParamater(bool bResetTarget)
+void UBP_State_LookAtBase_C::STATIC_ResetLookAtParamater(bool bResetTarget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtBase.BP_State_LookAtBase_C.ResetLookAtParamater");
 
@@ -34,7 +34,7 @@ void UBP_State_LookAtBase_C::ResetLookAtParamater(bool bResetTarget)
 
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.GetStateOwner
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  OwnerActor                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -56,9 +56,9 @@ void UBP_State_LookAtBase_C::GetStateOwner(class AActor** OwnerActor)
 
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.StateOnInitialize
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBP_State_LookAtBase_C::StateOnInitialize()
+void UBP_State_LookAtBase_C::STATIC_StateOnInitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtBase.BP_State_LookAtBase_C.StateOnInitialize");
 
@@ -73,7 +73,7 @@ void UBP_State_LookAtBase_C::StateOnInitialize()
 
 
 // Function BP_State_LookAtBase.BP_State_LookAtBase_C.ExecuteUbergraph_BP_State_LookAtBase
-// ()
+// (Net, NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

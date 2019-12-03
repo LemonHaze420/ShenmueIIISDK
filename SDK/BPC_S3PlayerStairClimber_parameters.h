@@ -100,7 +100,7 @@ struct UBPC_S3PlayerStairClimber_C_PlayMontage_Params
 // Function BPC_S3PlayerStairClimber.BPC_S3PlayerStairClimber_C.ConsumeOutput
 struct UBPC_S3PlayerStairClimber_C_ConsumeOutput_Params
 {
-	bool                                               Turning;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               turning;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     TurnDirection;                                            // (Parm, OutParm, IsPlainOldData)
 };
 

@@ -35,11 +35,11 @@ public:
 
 
 	float GetMaxDeviationDistSqr();
-	void Update(float DeltaSeconds);
+	void STATIC_Update(float DeltaSeconds);
 	void Initialize(class USceneComponent* PositionSource, int Samples, float WindowTime);
 	bool CompletedWindow();
-	void Reset();
-	struct FVector GetAverageLocation();
+	void STATIC_Reset();
+	struct FVector STATIC_GetAverageLocation();
 	void OnWindowCompleted__DelegateSignature();
 };
 

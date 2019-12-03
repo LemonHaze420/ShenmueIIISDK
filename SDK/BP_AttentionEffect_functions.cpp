@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AttentionEffect.BP_AttentionEffect_C.IsFinished
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsFinished                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,11 +36,11 @@ void ABP_AttentionEffect_C::IsFinished(bool* IsFinished)
 
 
 // Function BP_AttentionEffect.BP_AttentionEffect_C.UpdateEffect
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UCameraComponent*        Camera                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_AttentionEffect_C::UpdateEffect(class UCameraComponent* Camera)
+void ABP_AttentionEffect_C::STATIC_UpdateEffect(class UCameraComponent* Camera)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionEffect.BP_AttentionEffect_C.UpdateEffect");
 
@@ -56,15 +56,16 @@ void ABP_AttentionEffect_C::UpdateEffect(class UCameraComponent* Camera)
 
 
 // Function BP_AttentionEffect.BP_AttentionEffect_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_AttentionEffect_C::UserConstructionScript()
+void ABP_AttentionEffect_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionEffect.BP_AttentionEffect_C.UserConstructionScript");
 
 	ABP_AttentionEffect_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

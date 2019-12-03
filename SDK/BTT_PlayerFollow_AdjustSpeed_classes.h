@@ -27,8 +27,8 @@ public:
 
 
 	void ReceiveTickAI(class AAIController* OwnerController, class APawn* ControlledPawn, float DeltaSeconds);
-	void ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed(int EntryPoint);
+	void STATIC_ReceiveAbortAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ExecuteUbergraph_BTT_PlayerFollow_AdjustSpeed(int EntryPoint);
 };
 
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_CC_SpawnPoint.BP_MiniGame_CC_SpawnPoint_C.GetSpawnPosition
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, BlueprintEvent)
 // Parameters:
 // struct FVector                 pos                            (Parm, OutParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_MiniGame_CC_SpawnPoint_C::GetSpawnPosition(struct FVector* pos)
 	ABP_MiniGame_CC_SpawnPoint_C_GetSpawnPosition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_MiniGame_CC_SpawnPoint_C::GetSpawnPosition(struct FVector* pos)
 
 
 // Function BP_MiniGame_CC_SpawnPoint.BP_MiniGame_CC_SpawnPoint_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 
 void ABP_MiniGame_CC_SpawnPoint_C::UserConstructionScript()
 {
@@ -45,6 +46,7 @@ void ABP_MiniGame_CC_SpawnPoint_C::UserConstructionScript()
 	ABP_MiniGame_CC_SpawnPoint_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

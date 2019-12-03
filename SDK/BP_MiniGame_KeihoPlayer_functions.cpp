@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.SetEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KeihoPlayer_C::SetEnabled(bool Enabled)
+void ABP_MiniGame_KeihoPlayer_C::STATIC_SetEnabled(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.SetEnabled");
 
@@ -26,6 +26,7 @@ void ABP_MiniGame_KeihoPlayer_C::SetEnabled(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,15 +35,16 @@ void ABP_MiniGame_KeihoPlayer_C::SetEnabled(bool Enabled)
 
 
 // Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MiniGame_KeihoPlayer_C::UserConstructionScript()
+void ABP_MiniGame_KeihoPlayer_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.UserConstructionScript");
 
 	ABP_MiniGame_KeihoPlayer_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,9 +53,9 @@ void ABP_MiniGame_KeihoPlayer_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_KeihoPlayer_C::ReceiveBeginPlay()
+void ABP_MiniGame_KeihoPlayer_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.ReceiveBeginPlay");
 
@@ -68,11 +70,11 @@ void ABP_MiniGame_KeihoPlayer_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.ExecuteUbergraph_BP_MiniGame_KeihoPlayer
-// ()
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_KeihoPlayer_C::ExecuteUbergraph_BP_MiniGame_KeihoPlayer(int EntryPoint)
+void ABP_MiniGame_KeihoPlayer_C::STATIC_ExecuteUbergraph_BP_MiniGame_KeihoPlayer(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_KeihoPlayer.BP_MiniGame_KeihoPlayer_C.ExecuteUbergraph_BP_MiniGame_KeihoPlayer");
 
@@ -80,6 +82,7 @@ void ABP_MiniGame_KeihoPlayer_C::ExecuteUbergraph_BP_MiniGame_KeihoPlayer(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

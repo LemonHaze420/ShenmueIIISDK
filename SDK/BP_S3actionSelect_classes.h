@@ -51,43 +51,43 @@ public:
 	}
 
 
-	void Disable_StickIn();
-	void doCmd_TimeOver();
-	void degreeToPadinput(float degree, TEnumAsByte<EN_padSwitch>* Input, bool* isInput);
+	void STATIC_Disable_StickIn();
+	void STATIC_doCmd_TimeOver();
+	void degreeToPadinput(float Degree, TEnumAsByte<EN_padSwitch>* Input, bool* isInput);
 	void doCmd_cancelTimer();
 	void catch_onTimeover();
-	void doCmd_pauseTimer(bool Pause);
-	void doCmd_startTimer(float Time);
-	void doCmd_sendInput(TEnumAsByte<EN_padSwitch> Button, bool press);
-	void doCmd_setText(int Index, const struct FText& Text);
+	void STATIC_doCmd_pauseTimer(bool Pause);
+	void STATIC_doCmd_startTimer(float Time);
+	void STATIC_doCmd_sendInput(TEnumAsByte<EN_padSwitch> Button, bool press);
+	void STATIC_doCmd_setText(int Index, const struct FText& Text);
 	void doCmd_changeText(int Index, const struct FText& Text);
-	void doCmd_addItem(int Index, const struct FText& Text);
-	void doCmd_cancelSelection();
-	void doCmd_startSelection();
+	void STATIC_doCmd_addItem(int Index, const struct FText& Text);
+	void STATIC_doCmd_cancelSelection();
+	void STATIC_doCmd_startSelection();
 	void catch_onEndFinishSelection();
 	void catch_onEndStartSelection();
-	void catch_onSelected(int Index);
-	void UserConstructionScript();
-	void InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
-	void InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
-	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
-	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue);
+	void STATIC_catch_onSelected(int Index);
+	void STATIC_UserConstructionScript();
+	void STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_8(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_7(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_5(const struct FKey& Key);
+	void STATIC_InpAxisEvt_MoveForward_K2Node_InputAxisEvent_1(float AxisValue);
+	void STATIC_InpAxisEvt_MoveRight_K2Node_InputAxisEvent_2(float AxisValue);
 	void ReceiveBeginPlay();
 	void OnPressedUp();
 	void OnPressedLeft();
 	void OnPressedRight();
 	void OnPressedDown();
 	void OnAnimationFinished();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void EvtSizeSetEnd();
 	void ExecuteUbergraph_BP_S3actionSelect(int EntryPoint);
-	void onTimerover__DelegateSignature();
-	void command_startSelection__DelegateSignature();
-	void onEndStartSelection__DelegateSignature();
-	void onSelected__DelegateSignature(int Index);
+	void STATIC_onTimerover__DelegateSignature();
+	void STATIC_command_startSelection__DelegateSignature();
+	void STATIC_onEndStartSelection__DelegateSignature();
+	void STATIC_onSelected__DelegateSignature(int Index);
 };
 
 

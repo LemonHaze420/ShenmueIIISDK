@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Public, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_AR_BoxTurtle_C::UserConstructionScript()
 {
@@ -23,6 +23,7 @@ void ABP_AR_BoxTurtle_C::UserConstructionScript()
 	ABP_AR_BoxTurtle_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void ABP_AR_BoxTurtle_C::UserConstructionScript()
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_BoxTurtle_C::ReceiveBeginPlay()
+void ABP_AR_BoxTurtle_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.ReceiveBeginPlay");
 
@@ -48,11 +49,11 @@ void ABP_AR_BoxTurtle_C::ReceiveBeginPlay()
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_BoxTurtle_C::ReceiveTick(float DeltaSeconds)
+void ABP_AR_BoxTurtle_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.ReceiveTick");
 
@@ -60,6 +61,7 @@ void ABP_AR_BoxTurtle_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,9 +70,9 @@ void ABP_AR_BoxTurtle_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.UpdateWalkRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_BoxTurtle_C::UpdateWalkRate()
+void ABP_AR_BoxTurtle_C::STATIC_UpdateWalkRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.UpdateWalkRate");
 
@@ -85,9 +87,9 @@ void ABP_AR_BoxTurtle_C::UpdateWalkRate()
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_BoxTurtle_C::Reset()
+void ABP_AR_BoxTurtle_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.Reset");
 
@@ -102,11 +104,11 @@ void ABP_AR_BoxTurtle_C::Reset()
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetMotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_AR_Motion_Type>  mot_type                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_BoxTurtle_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
+void ABP_AR_BoxTurtle_C::STATIC_SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetMotion");
 
@@ -114,6 +116,7 @@ void ABP_AR_BoxTurtle_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 	params.mot_type = mot_type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -122,11 +125,11 @@ void ABP_AR_BoxTurtle_C::SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type)
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.ChangeShape
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_BoxTurtle_C::ChangeShape(int Index)
+void ABP_AR_BoxTurtle_C::STATIC_ChangeShape(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.ChangeShape");
 
@@ -134,6 +137,7 @@ void ABP_AR_BoxTurtle_C::ChangeShape(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,9 +146,9 @@ void ABP_AR_BoxTurtle_C::ChangeShape(int Index)
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.Event_PlaySECry
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_BoxTurtle_C::Event_PlaySECry()
+void ABP_AR_BoxTurtle_C::STATIC_Event_PlaySECry()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.Event_PlaySECry");
 
@@ -159,9 +163,9 @@ void ABP_AR_BoxTurtle_C::Event_PlaySECry()
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.Event_PlaySEWalk
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AR_BoxTurtle_C::Event_PlaySEWalk()
+void ABP_AR_BoxTurtle_C::STATIC_Event_PlaySEWalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.Event_PlaySEWalk");
 
@@ -176,11 +180,11 @@ void ABP_AR_BoxTurtle_C::Event_PlaySEWalk()
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetWalkRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_BoxTurtle_C::SetWalkRate(float Rate)
+void ABP_AR_BoxTurtle_C::STATIC_SetWalkRate(float Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetWalkRate");
 
@@ -188,6 +192,7 @@ void ABP_AR_BoxTurtle_C::SetWalkRate(float Rate)
 	params.Rate = Rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -196,11 +201,11 @@ void ABP_AR_BoxTurtle_C::SetWalkRate(float Rate)
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetAnimNotRaceStartPos
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Start                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_BoxTurtle_C::SetAnimNotRaceStartPos(float Start)
+void ABP_AR_BoxTurtle_C::STATIC_SetAnimNotRaceStartPos(float Start)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetAnimNotRaceStartPos");
 
@@ -208,6 +213,7 @@ void ABP_AR_BoxTurtle_C::SetAnimNotRaceStartPos(float Start)
 	params.Start = Start;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -216,11 +222,11 @@ void ABP_AR_BoxTurtle_C::SetAnimNotRaceStartPos(float Start)
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetAnimInRaceFlag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           InRace                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AR_BoxTurtle_C::SetAnimInRaceFlag(bool InRace)
+void ABP_AR_BoxTurtle_C::STATIC_SetAnimInRaceFlag(bool InRace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.SetAnimInRaceFlag");
 
@@ -228,6 +234,7 @@ void ABP_AR_BoxTurtle_C::SetAnimInRaceFlag(bool InRace)
 	params.InRace = InRace;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,7 +243,7 @@ void ABP_AR_BoxTurtle_C::SetAnimInRaceFlag(bool InRace)
 
 
 // Function BP_AR_BoxTurtle.BP_AR_BoxTurtle_C.ExecuteUbergraph_BP_AR_BoxTurtle
-// ()
+// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

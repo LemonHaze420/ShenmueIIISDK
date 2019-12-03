@@ -25,7 +25,7 @@ public:
 	}
 
 
-	int STATIC_BPF_RandomIndexNoRepeat(int ArrayNum, int NoRepeat, class UObject* __WorldContext);
+	int BPF_RandomIndexNoRepeat(int ArrayNum, int NoRepeat, class UObject* __WorldContext);
 };
 
 

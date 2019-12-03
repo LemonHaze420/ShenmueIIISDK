@@ -12,30 +12,6 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
-// Class ArchVisCharacter.ArchVisCharacter
-// 0x0070 (0x07B0 - 0x0740)
-class AArchVisCharacter : public ACharacter
-{
-public:
-	struct FString                                     LookUpAxisName;                                           // 0x0740(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	struct FString                                     LookUpAtRateAxisName;                                     // 0x0750(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	struct FString                                     TurnAxisName;                                             // 0x0760(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	struct FString                                     TurnAtRateAxisName;                                       // 0x0770(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	struct FString                                     MoveForwardAxisName;                                      // 0x0780(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	struct FString                                     MoveRightAxisName;                                        // 0x0790(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	float                                              MouseSensitivityScale_Pitch;                              // 0x07A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MouseSensitivityScale_Yaw;                                // 0x07A4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x07A8(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class ArchVisCharacter.ArchVisCharacter");
-		return ptr;
-	}
-
-};
-
-
 // Class ArchVisCharacter.ArchVisCharMovementComponent
 // 0x0050 (0x07C0 - 0x0770)
 class UArchVisCharMovementComponent : public UCharacterMovementComponent
@@ -54,6 +30,30 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class ArchVisCharacter.ArchVisCharMovementComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class ArchVisCharacter.ArchVisCharacter
+// 0x0070 (0x07B0 - 0x0740)
+class AArchVisCharacter : public ACharacter
+{
+public:
+	struct FString                                     LookUpAxisName;                                           // 0x0740(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	struct FString                                     LookUpAtRateAxisName;                                     // 0x0750(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	struct FString                                     TurnAxisName;                                             // 0x0760(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	struct FString                                     TurnAtRateAxisName;                                       // 0x0770(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	struct FString                                     MoveForwardAxisName;                                      // 0x0780(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	struct FString                                     MoveRightAxisName;                                        // 0x0790(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	float                                              MouseSensitivityScale_Pitch;                              // 0x07A0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MouseSensitivityScale_Yaw;                                // 0x07A4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x07A8(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class ArchVisCharacter.ArchVisCharacter");
 		return ptr;
 	}
 

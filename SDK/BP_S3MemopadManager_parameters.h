@@ -72,10 +72,10 @@ struct ABP_S3MemopadManager_C_SetBlink_Params
 {
 };
 
-// Function BP_S3MemopadManager.BP_S3MemopadManager_C.isDetected
-struct ABP_S3MemopadManager_C_isDetected_Params
+// Function BP_S3MemopadManager.BP_S3MemopadManager_C.IsDetected
+struct ABP_S3MemopadManager_C_IsDetected_Params
 {
-	bool                                               isDetected;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsDetected;                                               // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_S3MemopadManager.BP_S3MemopadManager_C._dbg_print(memoFlags)
@@ -97,10 +97,10 @@ struct ABP_S3MemopadManager_C_checkEvent_Params
 	bool                                               nowDisableMemopadEvent;                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
-// Function BP_S3MemopadManager.BP_S3MemopadManager_C.setDenyFlag
-struct ABP_S3MemopadManager_C_setDenyFlag_Params
+// Function BP_S3MemopadManager.BP_S3MemopadManager_C.SetDenyFlag
+struct ABP_S3MemopadManager_C_SetDenyFlag_Params
 {
-	bool                                               deny;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               Deny;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	bool                                               succes;                                                   // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

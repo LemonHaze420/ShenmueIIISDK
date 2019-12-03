@@ -28,8 +28,8 @@ public:
 
 
 	void CanTurnAround(bool* bCan);
-	void TryPostTeleportTurnaround(bool bTeleported);
-	void ExecuteUbergraph_BPC_TurnAround_ScheduleNPC2(int EntryPoint);
+	void STATIC_TryPostTeleportTurnaround(bool bTeleported);
+	void STATIC_ExecuteUbergraph_BPC_TurnAround_ScheduleNPC2(int EntryPoint);
 };
 
 

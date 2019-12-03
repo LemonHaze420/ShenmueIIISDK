@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectDefaultCameras.TalkCam_SelectDefaultCameras_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -30,6 +30,7 @@ void UTalkCam_SelectDefaultCameras_C::ReceiveTickAI(class AAIController* OwnerCo
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,11 +39,11 @@ void UTalkCam_SelectDefaultCameras_C::ReceiveTickAI(class AAIController* OwnerCo
 
 
 // Function TalkCam_SelectDefaultCameras.TalkCam_SelectDefaultCameras_C.ExecuteUbergraph_TalkCam_SelectDefaultCameras
-// (HasDefaults)
+// (NetReliable, NetRequest, Event, Static, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SelectDefaultCameras_C::ExecuteUbergraph_TalkCam_SelectDefaultCameras(int EntryPoint)
+void UTalkCam_SelectDefaultCameras_C::STATIC_ExecuteUbergraph_TalkCam_SelectDefaultCameras(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SelectDefaultCameras.TalkCam_SelectDefaultCameras_C.ExecuteUbergraph_TalkCam_SelectDefaultCameras");
 

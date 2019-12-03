@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Time.BPF_Time_C.toHMS(int)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Exec, Native, Event, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          GameTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -31,6 +31,7 @@ void UBPF_Time_C::STATIC_toHMS_int_(float GameTime, class UObject* __WorldContex
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -46,7 +47,7 @@ void UBPF_Time_C::STATIC_toHMS_int_(float GameTime, class UObject* __WorldContex
 
 
 // Function BPF_Time.BPF_Time_C.IsNight
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, Event, Static, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // ES3DayTimeEvent                DayTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -61,6 +62,7 @@ void UBPF_Time_C::STATIC_IsNight(ES3DayTimeEvent DayTime, class UObject* __World
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,7 +74,7 @@ void UBPF_Time_C::STATIC_IsNight(ES3DayTimeEvent DayTime, class UObject* __World
 
 
 // Function BPF_Time.BPF_Time_C.timeToGametime
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // float                          time_s_                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -87,6 +89,7 @@ void UBPF_Time_C::STATIC_timeToGametime(float time_s_, class UObject* __WorldCon
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,13 +101,13 @@ void UBPF_Time_C::STATIC_timeToGametime(float time_s_, class UObject* __WorldCon
 
 
 // Function BPF_Time.BPF_Time_C.gametimeToTime
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          gameTime_h_                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          time_s_                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_gametimeToTime(float gameTime_h_, class UObject* __WorldContext, float* time_s_)
+void UBPF_Time_C::gametimeToTime(float gameTime_h_, class UObject* __WorldContext, float* time_s_)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.gametimeToTime");
 
@@ -124,7 +127,7 @@ void UBPF_Time_C::STATIC_gametimeToTime(float gameTime_h_, class UObject* __Worl
 
 
 // Function BPF_Time.BPF_Time_C.isLightOnTimezone(glowMatID)(custom)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FGlowMatID              GlowMatID                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -139,6 +142,7 @@ void UBPF_Time_C::STATIC_isLightOnTimezone_glowMatID__custom_(const struct FGlow
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -150,13 +154,13 @@ void UBPF_Time_C::STATIC_isLightOnTimezone_glowMatID__custom_(const struct FGlow
 
 
 // Function BPF_Time.BPF_Time_C.isLightOnTimezone(glowMatID)(enum)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FGlowMatID              GlowMatID                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           lightOn                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_isLightOnTimezone_glowMatID__enum_(const struct FGlowMatID& GlowMatID, class UObject* __WorldContext, bool* lightOn)
+void UBPF_Time_C::isLightOnTimezone_glowMatID__enum_(const struct FGlowMatID& GlowMatID, class UObject* __WorldContext, bool* lightOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.isLightOnTimezone(glowMatID)(enum)");
 
@@ -165,6 +169,7 @@ void UBPF_Time_C::STATIC_isLightOnTimezone_glowMatID__enum_(const struct FGlowMa
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,7 +181,7 @@ void UBPF_Time_C::STATIC_isLightOnTimezone_glowMatID__enum_(const struct FGlowMa
 
 
 // Function BPF_Time.BPF_Time_C.isLightOnTimezone(glowMatID)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FGlowMatID              GlowMatID                      (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           useCustomTime                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -193,6 +198,7 @@ void UBPF_Time_C::STATIC_isLightOnTimezone_glowMatID_(const struct FGlowMatID& G
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -204,13 +210,13 @@ void UBPF_Time_C::STATIC_isLightOnTimezone_glowMatID_(const struct FGlowMatID& G
 
 
 // Function BPF_Time.BPF_Time_C.isLightOnTimezone
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // ES3GameTimeMode                Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           lightOn                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_isLightOnTimezone(ES3GameTimeMode Mode, class UObject* __WorldContext, bool* lightOn)
+void UBPF_Time_C::isLightOnTimezone(ES3GameTimeMode Mode, class UObject* __WorldContext, bool* lightOn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.isLightOnTimezone");
 
@@ -219,6 +225,7 @@ void UBPF_Time_C::STATIC_isLightOnTimezone(ES3GameTimeMode Mode, class UObject* 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,12 +237,12 @@ void UBPF_Time_C::STATIC_isLightOnTimezone(ES3GameTimeMode Mode, class UObject* 
 
 
 // Function BPF_Time.BPF_Time_C.getDateNameString(meridian)
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FText>           Result                         (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Time_C::STATIC_getDateNameString_meridian_(class UObject* __WorldContext, TArray<struct FText>* Result)
+void UBPF_Time_C::getDateNameString_meridian_(class UObject* __WorldContext, TArray<struct FText>* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.getDateNameString(meridian)");
 
@@ -243,6 +250,7 @@ void UBPF_Time_C::STATIC_getDateNameString_meridian_(class UObject* __WorldConte
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,12 +262,12 @@ void UBPF_Time_C::STATIC_getDateNameString_meridian_(class UObject* __WorldConte
 
 
 // Function BPF_Time.BPF_Time_C.getDateNameString(weekday)
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FText>           Result                         (Parm, OutParm, ZeroConstructor)
 
-void UBPF_Time_C::STATIC_getDateNameString_weekday_(class UObject* __WorldContext, TArray<struct FText>* Result)
+void UBPF_Time_C::getDateNameString_weekday_(class UObject* __WorldContext, TArray<struct FText>* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.getDateNameString(weekday)");
 
@@ -278,13 +286,13 @@ void UBPF_Time_C::STATIC_getDateNameString_weekday_(class UObject* __WorldContex
 
 
 // Function BPF_Time.BPF_Time_C.calcWeekday
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FDateTime               Date                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            weekday                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_calcWeekday(const struct FDateTime& Date, class UObject* __WorldContext, int* weekday)
+void UBPF_Time_C::calcWeekday(const struct FDateTime& Date, class UObject* __WorldContext, int* weekday)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.calcWeekday");
 
@@ -304,14 +312,14 @@ void UBPF_Time_C::STATIC_calcWeekday(const struct FDateTime& Date, class UObject
 
 
 // Function BPF_Time.BPF_Time_C.length(UE)toMinute
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // float                          Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          moveSpeed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          S3_minute                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_length_UE_toMinute(float Length, float moveSpeed, class UObject* __WorldContext, float* S3_minute)
+void UBPF_Time_C::length_UE_toMinute(float Length, float moveSpeed, class UObject* __WorldContext, float* S3_minute)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.length(UE)toMinute");
 
@@ -321,6 +329,7 @@ void UBPF_Time_C::STATIC_length_UE_toMinute(float Length, float moveSpeed, class
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -332,14 +341,14 @@ void UBPF_Time_C::STATIC_length_UE_toMinute(float Length, float moveSpeed, class
 
 
 // Function BPF_Time.BPF_Time_C.length(UE)toMinute(S3Minute)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // float                          Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          moveSpeed                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          S3_minute                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_length_UE_toMinute_S3Minute_(float Length, float moveSpeed, class UObject* __WorldContext, float* S3_minute)
+void UBPF_Time_C::length_UE_toMinute_S3Minute_(float Length, float moveSpeed, class UObject* __WorldContext, float* S3_minute)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.length(UE)toMinute(S3Minute)");
 
@@ -349,6 +358,7 @@ void UBPF_Time_C::STATIC_length_UE_toMinute_S3Minute_(float Length, float moveSp
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -360,7 +370,7 @@ void UBPF_Time_C::STATIC_length_UE_toMinute_S3Minute_(float Length, float moveSp
 
 
 // Function BPF_Time.BPF_Time_C.toHMS(float)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // float                          GameTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -369,7 +379,7 @@ void UBPF_Time_C::STATIC_length_UE_toMinute_S3Minute_(float Length, float moveSp
 // float                          Second                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          milliSec                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_toHMS_float_(float GameTime, class UObject* __WorldContext, float* Hour, float* Minute, float* Second, float* milliSec)
+void UBPF_Time_C::toHMS_float_(float GameTime, class UObject* __WorldContext, float* Hour, float* Minute, float* Second, float* milliSec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.toHMS(float)");
 
@@ -395,7 +405,7 @@ void UBPF_Time_C::STATIC_toHMS_float_(float GameTime, class UObject* __WorldCont
 
 
 // Function BPF_Time.BPF_Time_C.calcGameTimeHMS
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Hour                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -403,7 +413,7 @@ void UBPF_Time_C::STATIC_toHMS_float_(float GameTime, class UObject* __WorldCont
 // float                          Second                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          milliSec                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_calcGameTimeHMS(class UObject* __WorldContext, float* Hour, float* Minute, float* Second, float* milliSec)
+void UBPF_Time_C::calcGameTimeHMS(class UObject* __WorldContext, float* Hour, float* Minute, float* Second, float* milliSec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.calcGameTimeHMS");
 
@@ -428,7 +438,7 @@ void UBPF_Time_C::STATIC_calcGameTimeHMS(class UObject* __WorldContext, float* H
 
 
 // Function BPF_Time.BPF_Time_C.CalcGameTime
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          NowTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -436,7 +446,7 @@ void UBPF_Time_C::STATIC_calcGameTimeHMS(class UObject* __WorldContext, float* H
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Time_C::STATIC_CalcGameTime(float NowTime, float DeltaTime, float DeltaTimeBias, class UObject* __WorldContext, float* Time)
+void UBPF_Time_C::CalcGameTime(float NowTime, float DeltaTime, float DeltaTimeBias, class UObject* __WorldContext, float* Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Time.BPF_Time_C.CalcGameTime");
 

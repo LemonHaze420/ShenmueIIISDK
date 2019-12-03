@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_ExchangeArrow.wgt_ExchangeArrow_C.ChangeVisible_EffItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -36,9 +36,9 @@ void Uwgt_ExchangeArrow_C::ChangeVisible_EffItem(int Index, bool Visible)
 
 
 // Function wgt_ExchangeArrow.wgt_ExchangeArrow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void Uwgt_ExchangeArrow_C::Construct()
+void Uwgt_ExchangeArrow_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_ExchangeArrow.wgt_ExchangeArrow_C.Construct");
 
@@ -53,11 +53,11 @@ void Uwgt_ExchangeArrow_C::Construct()
 
 
 // Function wgt_ExchangeArrow.wgt_ExchangeArrow_C.ExecuteUbergraph_wgt_ExchangeArrow
-// ()
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_ExchangeArrow_C::ExecuteUbergraph_wgt_ExchangeArrow(int EntryPoint)
+void Uwgt_ExchangeArrow_C::STATIC_ExecuteUbergraph_wgt_ExchangeArrow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_ExchangeArrow.wgt_ExchangeArrow_C.ExecuteUbergraph_wgt_ExchangeArrow");
 
@@ -65,6 +65,7 @@ void Uwgt_ExchangeArrow_C::ExecuteUbergraph_wgt_ExchangeArrow(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

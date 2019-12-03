@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function UITextManager.UITextManager_C.GetLocalTxt
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 Text                           (Parm, OutParm, ZeroConstructor)
@@ -38,7 +38,7 @@ void AUITextManager_C::GetLocalTxt(const struct FString& Name, struct FString* T
 
 
 // Function UITextManager.UITextManager_C.GetLocalizedText
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EUIText_Enum>      ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 Text                           (Parm, OutParm, ZeroConstructor)
@@ -51,6 +51,7 @@ void AUITextManager_C::GetLocalizedText(TEnumAsByte<EUIText_Enum> ID, struct FSt
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,9 +63,9 @@ void AUITextManager_C::GetLocalizedText(TEnumAsByte<EUIText_Enum> ID, struct FSt
 
 
 // Function UITextManager.UITextManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 
-void AUITextManager_C::UserConstructionScript()
+void AUITextManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UITextManager.UITextManager_C.UserConstructionScript");
 
@@ -79,7 +80,7 @@ void AUITextManager_C::UserConstructionScript()
 
 
 // Function UITextManager.UITextManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void AUITextManager_C::ReceiveBeginPlay()
 {
@@ -96,11 +97,11 @@ void AUITextManager_C::ReceiveBeginPlay()
 
 
 // Function UITextManager.UITextManager_C.ExecuteUbergraph_UITextManager
-// ()
+// (Net, Exec, Event, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AUITextManager_C::ExecuteUbergraph_UITextManager(int EntryPoint)
+void AUITextManager_C::STATIC_ExecuteUbergraph_UITextManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function UITextManager.UITextManager_C.ExecuteUbergraph_UITextManager");
 

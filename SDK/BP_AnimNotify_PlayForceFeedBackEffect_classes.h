@@ -27,7 +27,7 @@ public:
 
 
 	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
-	struct FString GetNotifyName();
+	struct FString STATIC_GetNotifyName();
 };
 
 

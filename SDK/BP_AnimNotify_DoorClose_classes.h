@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void SetDoorFlag(class AS3GimmickOpenDoor* Door);
-	struct FString GetNotifyName();
-	void GetSound(class AS3GimmickOpenDoor* Door, class USoundAtomCue** Sound);
+	void STATIC_SetDoorFlag(class AS3GimmickOpenDoor* Door);
+	struct FString STATIC_GetNotifyName();
+	void STATIC_GetSound(class AS3GimmickOpenDoor* Door, class USoundAtomCue** Sound);
 };
 
 

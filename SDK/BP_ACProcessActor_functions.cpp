@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.CheckPrepare
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Complete                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_ACProcessActor_C::CheckPrepare(bool* Complete)
 	ABP_ACProcessActor_C_CheckPrepare_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,9 +37,9 @@ void ABP_ACProcessActor_C::CheckPrepare(bool* Complete)
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.Finalize
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, Const)
 
-void ABP_ACProcessActor_C::Finalize()
+void ABP_ACProcessActor_C::STATIC_Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACProcessActor.BP_ACProcessActor_C.Finalize");
 
@@ -53,9 +54,9 @@ void ABP_ACProcessActor_C::Finalize()
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.CheckLeadCharacter
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, Const)
 
-void ABP_ACProcessActor_C::CheckLeadCharacter()
+void ABP_ACProcessActor_C::STATIC_CheckLeadCharacter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACProcessActor.BP_ACProcessActor_C.CheckLeadCharacter");
 
@@ -70,7 +71,7 @@ void ABP_ACProcessActor_C::CheckLeadCharacter()
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.LoadLevels
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Private, Protected, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -91,7 +92,7 @@ bool ABP_ACProcessActor_C::LoadLevels()
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_ACProcessActor_C::UserConstructionScript()
 {
@@ -108,7 +109,7 @@ void ABP_ACProcessActor_C::UserConstructionScript()
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_ACProcessActor_C::ReceiveBeginPlay()
 {
@@ -117,6 +118,7 @@ void ABP_ACProcessActor_C::ReceiveBeginPlay()
 	ABP_ACProcessActor_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,7 +127,7 @@ void ABP_ACProcessActor_C::ReceiveBeginPlay()
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -137,6 +139,7 @@ void ABP_ACProcessActor_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,7 +148,7 @@ void ABP_ACProcessActor_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -157,6 +160,7 @@ void ABP_ACProcessActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -165,7 +169,7 @@ void ABP_ACProcessActor_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRea
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.HideLoading
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_ACProcessActor_C::HideLoading()
 {
@@ -174,6 +178,7 @@ void ABP_ACProcessActor_C::HideLoading()
 	ABP_ACProcessActor_C_HideLoading_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -182,7 +187,7 @@ void ABP_ACProcessActor_C::HideLoading()
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.LevelLoaded
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -194,6 +199,7 @@ void ABP_ACProcessActor_C::LevelLoaded(const struct FName& ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,11 +208,11 @@ void ABP_ACProcessActor_C::LevelLoaded(const struct FName& ID)
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.ExecuteUbergraph_BP_ACProcessActor
-// ()
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ACProcessActor_C::ExecuteUbergraph_BP_ACProcessActor(int EntryPoint)
+void ABP_ACProcessActor_C::STATIC_ExecuteUbergraph_BP_ACProcessActor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ACProcessActor.BP_ACProcessActor_C.ExecuteUbergraph_BP_ACProcessActor");
 
@@ -222,7 +228,7 @@ void ABP_ACProcessActor_C::ExecuteUbergraph_BP_ACProcessActor(int EntryPoint)
 
 
 // Function BP_ACProcessActor.BP_ACProcessActor_C.OnStartPlay__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_ACProcessActor_C::OnStartPlay__DelegateSignature()
 {

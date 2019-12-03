@@ -41,14 +41,14 @@ public:
 
 
 	void UpdateLocalizeText();
-	struct FText GetLocalizeFishNameText();
+	struct FText STATIC_GetLocalizeFishNameText();
 	struct FText GetFishGramText();
-	void SetImagePositionY(class UImage* ArgImage, float ArgPosY);
+	void STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY);
 	struct FText GetFishScaleText();
-	struct FText GetFishNameText();
-	void Construct();
-	void SetCaptcherVisible(ESlateVisibility InVisibility);
-	void ExecuteUbergraph_WBP_Fishing_ShopResult_LineData(int EntryPoint);
+	struct FText STATIC_GetFishNameText();
+	void STATIC_Construct();
+	void STATIC_SetCaptcherVisible(ESlateVisibility InVisibility);
+	void STATIC_ExecuteUbergraph_WBP_Fishing_ShopResult_LineData(int EntryPoint);
 };
 
 

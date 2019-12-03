@@ -37,8 +37,8 @@ public:
 
 
 	void InitBGTint();
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_WBP_MenuFrame(int EntryPoint);
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_ExecuteUbergraph_WBP_MenuFrame(int EntryPoint);
 };
 
 

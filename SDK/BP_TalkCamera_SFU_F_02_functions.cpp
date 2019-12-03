@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_SFU_F_02.BP_TalkCamera_SFU_F_02_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TalkCamera_SFU_F_02_C::UserConstructionScript()
 {
@@ -31,7 +31,7 @@ void ABP_TalkCamera_SFU_F_02_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_SFU_F_02.BP_TalkCamera_SFU_F_02_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_SFU_F_02_C::ReceiveBeginPlay()
 {
@@ -48,11 +48,11 @@ void ABP_TalkCamera_SFU_F_02_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_SFU_F_02.BP_TalkCamera_SFU_F_02_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCamera_SFU_F_02_C::ReceiveTick(float DeltaSeconds)
+void ABP_TalkCamera_SFU_F_02_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SFU_F_02.BP_TalkCamera_SFU_F_02_C.ReceiveTick");
 
@@ -68,11 +68,11 @@ void ABP_TalkCamera_SFU_F_02_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_SFU_F_02.BP_TalkCamera_SFU_F_02_C.ExecuteUbergraph_BP_TalkCamera_SFU_F_02
-// ()
+// (NetRequest, NetResponse, Static, Public, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCamera_SFU_F_02_C::ExecuteUbergraph_BP_TalkCamera_SFU_F_02(int EntryPoint)
+void ABP_TalkCamera_SFU_F_02_C::STATIC_ExecuteUbergraph_BP_TalkCamera_SFU_F_02(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SFU_F_02.BP_TalkCamera_SFU_F_02_C.ExecuteUbergraph_BP_TalkCamera_SFU_F_02");
 

@@ -36,8 +36,8 @@ public:
 
 
 	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_DressMode_CaptureChara(int EntryPoint);
 };
 

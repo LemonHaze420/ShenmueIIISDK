@@ -36,13 +36,13 @@ public:
 	}
 
 
-	void CalcBaseSize();
+	void STATIC_CalcBaseSize();
 	void ChangeItem(class UStaticMesh* Mesh, class USkeletalMesh* SkelMesh, class UAnimationAsset* NewAnimToPlay);
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveDestroyed();
-	void ExecuteUbergraph_BP_ItemListViewerItem001(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_ItemListViewerItem001(int EntryPoint);
 };
 
 

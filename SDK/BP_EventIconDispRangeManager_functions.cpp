@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_EventIconDispRangeManager.BP_EventIconDispRangeManager_C.SetEventIconDisp
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FString                 EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           Invalid                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_EventIconDispRangeManager_C::SetEventIconDisp(const struct FString& EventName, bool Invalid)
+void ABP_EventIconDispRangeManager_C::STATIC_SetEventIconDisp(const struct FString& EventName, bool Invalid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRangeManager.BP_EventIconDispRangeManager_C.SetEventIconDisp");
 
@@ -28,6 +28,7 @@ void ABP_EventIconDispRangeManager_C::SetEventIconDisp(const struct FString& Eve
 	params.Invalid = Invalid;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void ABP_EventIconDispRangeManager_C::SetEventIconDisp(const struct FString& Eve
 
 
 // Function BP_EventIconDispRangeManager.BP_EventIconDispRangeManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_EventIconDispRangeManager_C::UserConstructionScript()
+void ABP_EventIconDispRangeManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRangeManager.BP_EventIconDispRangeManager_C.UserConstructionScript");
 
 	ABP_EventIconDispRangeManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +55,11 @@ void ABP_EventIconDispRangeManager_C::UserConstructionScript()
 
 
 // Function BP_EventIconDispRangeManager.BP_EventIconDispRangeManager_C.CatchEventSign__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 EventName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_EventIconDispRangeManager_C::CatchEventSign__DelegateSignature(const struct FString& EventName)
+void ABP_EventIconDispRangeManager_C::STATIC_CatchEventSign__DelegateSignature(const struct FString& EventName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_EventIconDispRangeManager.BP_EventIconDispRangeManager_C.CatchEventSign__DelegateSignature");
 
@@ -65,6 +67,7 @@ void ABP_EventIconDispRangeManager_C::CatchEventSign__DelegateSignature(const st
 	params.EventName = EventName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

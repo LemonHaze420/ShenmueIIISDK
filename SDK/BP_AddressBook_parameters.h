@@ -45,7 +45,7 @@ struct ABP_AddressBook_C_UserConstructionScript_Params
 };
 
 // Function BP_AddressBook.BP_AddressBook_C.򠪦􆖐񍳔_
-struct ABP_AddressBook_C_UnknownFunc01__Params
+struct ABP_AddressBook_C__UnknownFunc01__Params
 {
 };
 

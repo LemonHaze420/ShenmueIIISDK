@@ -28,7 +28,7 @@ public:
 
 	void CreateSmoke();
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_AttachmentFryingPan(int EntryPoint);
 };
 

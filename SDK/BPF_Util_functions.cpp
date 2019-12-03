@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Util.BPF_Util_C.BPF_YawAngleToActor
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  To                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  From                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -42,7 +42,7 @@ void UBPF_Util_C::STATIC_BPF_YawAngleToActor(class AActor* To, class AActor* Fro
 
 
 // Function BPF_Util.BPF_Util_C.BPF_VectorToActor
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  To                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  From                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -59,6 +59,7 @@ struct FVector UBPF_Util_C::STATIC_BPF_VectorToActor(class AActor* To, class AAc
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,13 +70,13 @@ struct FVector UBPF_Util_C::STATIC_BPF_VectorToActor(class AActor* To, class AAc
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetCharacterTop
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class ACharacter*              Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Bottom                         (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_GetCharacterTop(class ACharacter* Character, class UObject* __WorldContext, struct FVector* Bottom)
+void UBPF_Util_C::BPF_GetCharacterTop(class ACharacter* Character, class UObject* __WorldContext, struct FVector* Bottom)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_GetCharacterTop");
 
@@ -84,6 +85,7 @@ void UBPF_Util_C::STATIC_BPF_GetCharacterTop(class ACharacter* Character, class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,13 +97,13 @@ void UBPF_Util_C::STATIC_BPF_GetCharacterTop(class ACharacter* Character, class 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_WorldSpaceYawToDirection
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          Yaw                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Direction                      (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_WorldSpaceYawToDirection(float Yaw, class UObject* __WorldContext, struct FVector* Direction)
+void UBPF_Util_C::BPF_WorldSpaceYawToDirection(float Yaw, class UObject* __WorldContext, struct FVector* Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_WorldSpaceYawToDirection");
 
@@ -110,6 +112,7 @@ void UBPF_Util_C::STATIC_BPF_WorldSpaceYawToDirection(float Yaw, class UObject* 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,7 +124,7 @@ void UBPF_Util_C::STATIC_BPF_WorldSpaceYawToDirection(float Yaw, class UObject* 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_IntStepTo
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            Current                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -148,14 +151,14 @@ int UBPF_Util_C::STATIC_BPF_IntStepTo(int Current, int Target, class UObject* __
 
 
 // Function BPF_Util.BPF_Util_C.BPF_FindActor2DLookAtRotation
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class AActor*                  Start                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FRotator UBPF_Util_C::STATIC_BPF_FindActor2DLookAtRotation(class AActor* Start, class AActor* Target, class UObject* __WorldContext)
+struct FRotator UBPF_Util_C::BPF_FindActor2DLookAtRotation(class AActor* Start, class AActor* Target, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_FindActor2DLookAtRotation");
 
@@ -175,14 +178,14 @@ struct FRotator UBPF_Util_C::STATIC_BPF_FindActor2DLookAtRotation(class AActor* 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_Find2DLookAtRotation
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FVector                 Start                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Target                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FRotator UBPF_Util_C::STATIC_BPF_Find2DLookAtRotation(const struct FVector& Start, const struct FVector& Target, class UObject* __WorldContext)
+struct FRotator UBPF_Util_C::BPF_Find2DLookAtRotation(const struct FVector& Start, const struct FVector& Target, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_Find2DLookAtRotation");
 
@@ -192,6 +195,7 @@ struct FRotator UBPF_Util_C::STATIC_BPF_Find2DLookAtRotation(const struct FVecto
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,7 +206,7 @@ struct FRotator UBPF_Util_C::STATIC_BPF_Find2DLookAtRotation(const struct FVecto
 
 
 // Function BPF_Util.BPF_Util_C.BPF_AddCharacterHalfHeight
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Static, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // class ACharacter*              Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Bottom                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -230,13 +234,13 @@ void UBPF_Util_C::STATIC_BPF_AddCharacterHalfHeight(class ACharacter* Character,
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetCharacterBottom
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, NetResponse, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class ACharacter*              Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Bottom                         (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_GetCharacterBottom(class ACharacter* Character, class UObject* __WorldContext, struct FVector* Bottom)
+void UBPF_Util_C::BPF_GetCharacterBottom(class ACharacter* Character, class UObject* __WorldContext, struct FVector* Bottom)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_GetCharacterBottom");
 
@@ -245,6 +249,7 @@ void UBPF_Util_C::STATIC_BPF_GetCharacterBottom(class ACharacter* Character, cla
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,7 +261,7 @@ void UBPF_Util_C::STATIC_BPF_GetCharacterBottom(class ACharacter* Character, cla
 
 
 // Function BPF_Util.BPF_Util_C.BPF_RotateVectorTo2DDamp
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 RotateMe                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 TowardsMe                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -277,6 +282,7 @@ struct FVector UBPF_Util_C::STATIC_BPF_RotateVectorTo2DDamp(const struct FVector
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -287,13 +293,13 @@ struct FVector UBPF_Util_C::STATIC_BPF_RotateVectorTo2DDamp(const struct FVector
 
 
 // Function BPF_Util.BPF_Util_C.BPF_RemoveVectorZ
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 InVector                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 OutVector                      (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_RemoveVectorZ(const struct FVector& InVector, class UObject* __WorldContext, struct FVector* OutVector)
+void UBPF_Util_C::BPF_RemoveVectorZ(const struct FVector& InVector, class UObject* __WorldContext, struct FVector* OutVector)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_RemoveVectorZ");
 
@@ -302,6 +308,7 @@ void UBPF_Util_C::STATIC_BPF_RemoveVectorZ(const struct FVector& InVector, class
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -313,7 +320,7 @@ void UBPF_Util_C::STATIC_BPF_RemoveVectorZ(const struct FVector& InVector, class
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetDeltaTimeAsRemainingFraction
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          NowTime                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -347,13 +354,13 @@ void UBPF_Util_C::STATIC_BPF_GetDeltaTimeAsRemainingFraction(float DeltaSeconds,
 
 
 // Function BPF_Util.BPF_Util_C.BPF_DirectionToWorldSpaceYaw
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          WorldSpaceYaw                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_DirectionToWorldSpaceYaw(const struct FVector& Direction, class UObject* __WorldContext, float* WorldSpaceYaw)
+void UBPF_Util_C::BPF_DirectionToWorldSpaceYaw(const struct FVector& Direction, class UObject* __WorldContext, float* WorldSpaceYaw)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_DirectionToWorldSpaceYaw");
 
@@ -373,7 +380,7 @@ void UBPF_Util_C::STATIC_BPF_DirectionToWorldSpaceYaw(const struct FVector& Dire
 
 
 // Function BPF_Util.BPF_Util_C.BPF_LerpAngle
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          B                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -403,7 +410,7 @@ void UBPF_Util_C::STATIC_BPF_LerpAngle(float A, float B, float Alpha, class UObj
 
 
 // Function BPF_Util.BPF_Util_C.BPF_LerpAngleSigned
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          B                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -422,6 +429,7 @@ void UBPF_Util_C::STATIC_BPF_LerpAngleSigned(float A, float B, float AlphaWithSi
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,7 +441,7 @@ void UBPF_Util_C::STATIC_BPF_LerpAngleSigned(float A, float B, float AlphaWithSi
 
 
 // Function BPF_Util.BPF_Util_C.BPF_AngleVector2DSignedDegrees
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 Target                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Source                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -461,14 +469,14 @@ void UBPF_Util_C::STATIC_BPF_AngleVector2DSignedDegrees(const struct FVector& Ta
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetSplineAreaAtPointVector3D
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // TArray<struct FVector>         PointVector                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FVector                 Offset                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FBox                    OutBounds                      (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_GetSplineAreaAtPointVector3D(const struct FVector& Offset, class UObject* __WorldContext, TArray<struct FVector>* PointVector, struct FBox* OutBounds)
+void UBPF_Util_C::BPF_GetSplineAreaAtPointVector3D(const struct FVector& Offset, class UObject* __WorldContext, TArray<struct FVector>* PointVector, struct FBox* OutBounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_GetSplineAreaAtPointVector3D");
 
@@ -490,7 +498,7 @@ void UBPF_Util_C::STATIC_BPF_GetSplineAreaAtPointVector3D(const struct FVector& 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_InterpolateAngleConstantNear
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Event, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          Source                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -520,7 +528,7 @@ void UBPF_Util_C::STATIC_BPF_InterpolateAngleConstantNear(float Source, float Ta
 
 
 // Function BPF_Util.BPF_Util_C.BPF_InterpolateAngleConstantSigned
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Event, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          Source                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -550,7 +558,7 @@ void UBPF_Util_C::STATIC_BPF_InterpolateAngleConstantSigned(float Source, float 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_ConvertAngleToSignDegrees
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          AngleDegrees                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Sign                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -567,6 +575,7 @@ void UBPF_Util_C::STATIC_BPF_ConvertAngleToSignDegrees(float AngleDegrees, float
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -578,7 +587,7 @@ void UBPF_Util_C::STATIC_BPF_ConvertAngleToSignDegrees(float AngleDegrees, float
 
 
 // Function BPF_Util.BPF_Util_C.BPF_AngleDifferenceSignedDegrees
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Source                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -595,6 +604,7 @@ void UBPF_Util_C::STATIC_BPF_AngleDifferenceSignedDegrees(float Target, float So
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -606,7 +616,7 @@ void UBPF_Util_C::STATIC_BPF_AngleDifferenceSignedDegrees(float Target, float So
 
 
 // Function BPF_Util.BPF_Util_C.BPF_ResumeCamera
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          BlendTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -620,6 +630,7 @@ void UBPF_Util_C::STATIC_BPF_ResumeCamera(float BlendTime, class UObject* __Worl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -628,7 +639,7 @@ void UBPF_Util_C::STATIC_BPF_ResumeCamera(float BlendTime, class UObject* __Worl
 
 
 // Function BPF_Util.BPF_Util_C.BPF_RInterpToQuaternion
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, Private, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FRotator                Current                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Target                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -659,7 +670,7 @@ struct FRotator UBPF_Util_C::STATIC_BPF_RInterpToQuaternion(const struct FRotato
 
 
 // Function BPF_Util.BPF_Util_C.BPF_RInterpToQuaternionLinear
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FRotator                Current                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FRotator                Target                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -668,7 +679,7 @@ struct FRotator UBPF_Util_C::STATIC_BPF_RInterpToQuaternion(const struct FRotato
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FRotator UBPF_Util_C::STATIC_BPF_RInterpToQuaternionLinear(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed, class UObject* __WorldContext)
+struct FRotator UBPF_Util_C::BPF_RInterpToQuaternionLinear(const struct FRotator& Current, const struct FRotator& Target, float DeltaTime, float InterpSpeed, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_RInterpToQuaternionLinear");
 
@@ -680,6 +691,7 @@ struct FRotator UBPF_Util_C::STATIC_BPF_RInterpToQuaternionLinear(const struct F
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -690,7 +702,7 @@ struct FRotator UBPF_Util_C::STATIC_BPF_RInterpToQuaternionLinear(const struct F
 
 
 // Function BPF_Util.BPF_Util_C.BPF_IsLineSightCheck
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -722,7 +734,7 @@ void UBPF_Util_C::STATIC_BPF_IsLineSightCheck(class AActor* Actor, class AActor*
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetEyeLocationAndRightVector
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -754,7 +766,7 @@ void UBPF_Util_C::STATIC_BPF_GetEyeLocationAndRightVector(class AActor* Actor, c
 
 
 // Function BPF_Util.BPF_Util_C.BPF_Vector2DLengthSquared
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Event, Static, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 v1                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 v2                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -782,7 +794,7 @@ void UBPF_Util_C::STATIC_BPF_Vector2DLengthSquared(const struct FVector& v1, con
 
 
 // Function BPF_Util.BPF_Util_C.BPF_AddDeltaTime
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -796,6 +808,7 @@ void UBPF_Util_C::STATIC_BPF_AddDeltaTime(class UObject* __WorldContext, float* 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -809,14 +822,14 @@ void UBPF_Util_C::STATIC_BPF_AddDeltaTime(class UObject* __WorldContext, float* 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetSplineRate
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          MoveDistance                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_GetSplineRate(class AActor* Actor, float MoveDistance, class UObject* __WorldContext, float* Rate)
+void UBPF_Util_C::BPF_GetSplineRate(class AActor* Actor, float MoveDistance, class UObject* __WorldContext, float* Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_GetSplineRate");
 
@@ -837,7 +850,7 @@ void UBPF_Util_C::STATIC_BPF_GetSplineRate(class AActor* Actor, float MoveDistan
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetSplineAreaAtSpline
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, Public, Protected, Delegate, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Offset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -847,7 +860,7 @@ void UBPF_Util_C::STATIC_BPF_GetSplineRate(class AActor* Actor, float MoveDistan
 // float                          y_max                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          y_min                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_GetSplineAreaAtSpline(class AActor* Actor, float Offset, class UObject* __WorldContext, float* x_max, float* x_min, float* y_max, float* y_min)
+void UBPF_Util_C::BPF_GetSplineAreaAtSpline(class AActor* Actor, float Offset, class UObject* __WorldContext, float* x_max, float* x_min, float* y_max, float* y_min)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_GetSplineAreaAtSpline");
 
@@ -874,7 +887,7 @@ void UBPF_Util_C::STATIC_BPF_GetSplineAreaAtSpline(class AActor* Actor, float Of
 
 
 // Function BPF_Util.BPF_Util_C.BPF_GetSplineAreaAtPointVector
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // TArray<struct FVector>         PointVector                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          Offset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -912,14 +925,14 @@ void UBPF_Util_C::STATIC_BPF_GetSplineAreaAtPointVector(float Offset, class UObj
 
 
 // Function BPF_Util.BPF_Util_C.BPF_Length1d
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          V0                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          v1                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Length                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_Length1d(float V0, float v1, class UObject* __WorldContext, float* Length)
+void UBPF_Util_C::BPF_Length1d(float V0, float v1, class UObject* __WorldContext, float* Length)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_Length1d");
 
@@ -940,7 +953,7 @@ void UBPF_Util_C::STATIC_BPF_Length1d(float V0, float v1, class UObject* __World
 
 
 // Function BPF_Util.BPF_Util_C.BPF_ReducedScaleChangeNoLimit
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Public, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          defult_len                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          change_over_len                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -959,6 +972,7 @@ void UBPF_Util_C::STATIC_BPF_ReducedScaleChangeNoLimit(float defult_len, float c
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -970,7 +984,7 @@ void UBPF_Util_C::STATIC_BPF_ReducedScaleChangeNoLimit(float defult_len, float c
 
 
 // Function BPF_Util.BPF_Util_C.BPF_InterVector
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, MulticastDelegate, Public, BlueprintCallable)
 // Parameters:
 // struct FVector                 v1                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 v2                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -978,7 +992,7 @@ void UBPF_Util_C::STATIC_BPF_ReducedScaleChangeNoLimit(float defult_len, float c
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 V0                             (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_InterVector(const struct FVector& v1, const struct FVector& v2, float Rate, class UObject* __WorldContext, struct FVector* V0)
+void UBPF_Util_C::BPF_InterVector(const struct FVector& v1, const struct FVector& v2, float Rate, class UObject* __WorldContext, struct FVector* V0)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_InterVector");
 
@@ -1000,7 +1014,7 @@ void UBPF_Util_C::STATIC_BPF_InterVector(const struct FVector& v1, const struct 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_QueryTagCharaName2Character
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1015,6 +1029,7 @@ void UBPF_Util_C::STATIC_BPF_QueryTagCharaName2Character(const struct FName& Cha
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1026,7 +1041,7 @@ void UBPF_Util_C::STATIC_BPF_QueryTagCharaName2Character(const struct FName& Cha
 
 
 // Function BPF_Util.BPF_Util_C.BPF_PadInput2SinTbl
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // float                          Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1052,7 +1067,7 @@ void UBPF_Util_C::STATIC_BPF_PadInput2SinTbl(float Input, class UObject* __World
 
 
 // Function BPF_Util.BPF_Util_C.BPF_LineWrongSideOut2d
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Private, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          PosX                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          PosY                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1063,7 +1078,7 @@ void UBPF_Util_C::STATIC_BPF_PadInput2SinTbl(float Input, class UObject* __World
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DstFlag                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_LineWrongSideOut2d(float PosX, float PosY, float Vx0, float Vy0, float Vx1, float Vy1, class UObject* __WorldContext, bool* DstFlag)
+void UBPF_Util_C::BPF_LineWrongSideOut2d(float PosX, float PosY, float Vx0, float Vy0, float Vx1, float Vy1, class UObject* __WorldContext, bool* DstFlag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_LineWrongSideOut2d");
 
@@ -1077,6 +1092,7 @@ void UBPF_Util_C::STATIC_BPF_LineWrongSideOut2d(float PosX, float PosY, float Vx
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1088,14 +1104,14 @@ void UBPF_Util_C::STATIC_BPF_LineWrongSideOut2d(float PosX, float PosY, float Vx
 
 
 // Function BPF_Util.BPF_Util_C.BPF_AngleVector
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Private, Protected, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 v1                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 v2                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RetRot                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_AngleVector(const struct FVector& v1, const struct FVector& v2, class UObject* __WorldContext, float* RetRot)
+void UBPF_Util_C::BPF_AngleVector(const struct FVector& v1, const struct FVector& v2, class UObject* __WorldContext, float* RetRot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_AngleVector");
 
@@ -1116,7 +1132,7 @@ void UBPF_Util_C::STATIC_BPF_AngleVector(const struct FVector& v1, const struct 
 
 
 // Function BPF_Util.BPF_Util_C.BPF_TriangleNormal
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FVector                 V0                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 v1                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -1135,6 +1151,7 @@ void UBPF_Util_C::STATIC_BPF_TriangleNormal(const struct FVector& V0, const stru
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1146,14 +1163,14 @@ void UBPF_Util_C::STATIC_BPF_TriangleNormal(const struct FVector& V0, const stru
 
 
 // Function BPF_Util.BPF_Util_C.BPF_LineDirection
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 V0                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 v1                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Dst                            (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_LineDirection(const struct FVector& V0, const struct FVector& v1, class UObject* __WorldContext, struct FVector* Dst)
+void UBPF_Util_C::BPF_LineDirection(const struct FVector& V0, const struct FVector& v1, class UObject* __WorldContext, struct FVector* Dst)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_LineDirection");
 
@@ -1163,6 +1180,7 @@ void UBPF_Util_C::STATIC_BPF_LineDirection(const struct FVector& V0, const struc
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1174,13 +1192,13 @@ void UBPF_Util_C::STATIC_BPF_LineDirection(const struct FVector& V0, const struc
 
 
 // Function BPF_Util.BPF_Util_C.BPF_DeltaTimeScale
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Private, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          Scale                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Dst                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_DeltaTimeScale(float Scale, class UObject* __WorldContext, float* Dst)
+void UBPF_Util_C::BPF_DeltaTimeScale(float Scale, class UObject* __WorldContext, float* Dst)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_DeltaTimeScale");
 
@@ -1200,7 +1218,7 @@ void UBPF_Util_C::STATIC_BPF_DeltaTimeScale(float Scale, class UObject* __WorldC
 
 
 // Function BPF_Util.BPF_Util_C.stringCompare
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FString                 stringA                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 stringB                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -1208,7 +1226,7 @@ void UBPF_Util_C::STATIC_BPF_DeltaTimeScale(float Scale, class UObject* __WorldC
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_stringCompare(const struct FString& stringA, const struct FString& stringB, bool i, class UObject* __WorldContext, int* Result)
+void UBPF_Util_C::stringCompare(const struct FString& stringA, const struct FString& stringB, bool i, class UObject* __WorldContext, int* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.stringCompare");
 
@@ -1230,7 +1248,7 @@ void UBPF_Util_C::STATIC_stringCompare(const struct FString& stringA, const stru
 
 
 // Function BPF_Util.BPF_Util_C.BPF_TraceIdast1dDeltaTime
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          V                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          TergetV                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1238,7 +1256,7 @@ void UBPF_Util_C::STATIC_stringCompare(const struct FString& stringA, const stru
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Dst                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Util_C::STATIC_BPF_TraceIdast1dDeltaTime(float V, float TergetV, float Speed, class UObject* __WorldContext, float* Dst)
+void UBPF_Util_C::BPF_TraceIdast1dDeltaTime(float V, float TergetV, float Speed, class UObject* __WorldContext, float* Dst)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Util.BPF_Util_C.BPF_TraceIdast1dDeltaTime");
 
@@ -1260,7 +1278,7 @@ void UBPF_Util_C::STATIC_BPF_TraceIdast1dDeltaTime(float V, float TergetV, float
 
 
 // Function BPF_Util.BPF_Util_C.toString(withDigit)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            digit                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1288,7 +1306,7 @@ void UBPF_Util_C::STATIC_toString_withDigit_(int Value, int digit, class UObject
 
 
 // Function BPF_Util.BPF_Util_C.BPF_FloatEqual
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Native, NetResponse, Static, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          B                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1305,6 +1323,7 @@ void UBPF_Util_C::STATIC_BPF_FloatEqual(float A, float B, class UObject* __World
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

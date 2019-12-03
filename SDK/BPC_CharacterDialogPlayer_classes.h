@@ -34,11 +34,11 @@ public:
 	void LimitToBehaviorState(ES3PlayerBehavior State);
 	void StopSubtitleDialog();
 	bool IsSpeaking();
-	void RandomLabelNoRepeat(TArray<struct FName>* Labels, int* LastIndex, struct FName* Selection);
+	void STATIC_RandomLabelNoRepeat(TArray<struct FName>* Labels, int* LastIndex, struct FName* Selection);
 	void CallOnEnd(bool IsLast);
-	void PlaySubtitleDialog(const struct FName& Label, ES3TextPathType Type, float MinTime);
+	void STATIC_PlaySubtitleDialog(const struct FName& Label, ES3TextPathType Type, float MinTime);
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BPC_CharacterDialogPlayer(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_CharacterDialogPlayer(int EntryPoint);
 };
 
 

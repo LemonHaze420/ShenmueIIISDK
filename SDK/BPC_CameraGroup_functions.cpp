@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_CameraGroup.BPC_CameraGroup_C.GetAllCameras
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<class UClass*>          AllCameras                     (Parm, OutParm, ZeroConstructor)
 
@@ -36,7 +36,7 @@ void UBPC_CameraGroup_C::GetAllCameras(TArray<class UClass*>* AllCameras)
 
 
 // Function BPC_CameraGroup.BPC_CameraGroup_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Native, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBPC_CameraGroup_C::ReceiveBeginPlay()
 {
@@ -45,6 +45,7 @@ void UBPC_CameraGroup_C::ReceiveBeginPlay()
 	UBPC_CameraGroup_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +54,7 @@ void UBPC_CameraGroup_C::ReceiveBeginPlay()
 
 
 // Function BPC_CameraGroup.BPC_CameraGroup_C.ExecuteUbergraph_BPC_CameraGroup
-// (HasDefaults)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -65,6 +66,7 @@ void UBPC_CameraGroup_C::ExecuteUbergraph_BPC_CameraGroup(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

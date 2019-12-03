@@ -17,7 +17,7 @@ namespace SDK
 class UBTL_AttackAnimMetaData_C : public UAnimMetaData
 {
 public:
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0028(0x0001) MISSED OFFSET
+	bool                                               bFreeAim;                                                 // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

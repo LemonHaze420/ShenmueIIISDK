@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.EnabledPlayerOnDecide
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPI_Otoshidama_C::EnabledPlayerOnDecide()
+void UBPI_Otoshidama_C::STATIC_EnabledPlayerOnDecide()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.EnabledPlayerOnDecide");
 
 	UBPI_Otoshidama_C_EnabledPlayerOnDecide_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void UBPI_Otoshidama_C::EnabledPlayerOnDecide()
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.SetChooseCameraTransform
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPI_Otoshidama_C::SetChooseCameraTransform()
+void UBPI_Otoshidama_C::STATIC_SetChooseCameraTransform()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.SetChooseCameraTransform");
 
 	UBPI_Otoshidama_C_SetChooseCameraTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,17 +50,18 @@ void UBPI_Otoshidama_C::SetChooseCameraTransform()
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.GetRewardFeed
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3RewardType                  Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_Otoshidama_C::GetRewardFeed(ES3RewardType* Type)
+void UBPI_Otoshidama_C::STATIC_GetRewardFeed(ES3RewardType* Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.GetRewardFeed");
 
 	UBPI_Otoshidama_C_GetRewardFeed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,11 +73,11 @@ void UBPI_Otoshidama_C::GetRewardFeed(ES3RewardType* Type)
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.SetEnabledPlayerEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_Otoshidama_C::SetEnabledPlayerEvent(bool Enabled)
+void UBPI_Otoshidama_C::STATIC_SetEnabledPlayerEvent(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.SetEnabledPlayerEvent");
 
@@ -82,6 +85,7 @@ void UBPI_Otoshidama_C::SetEnabledPlayerEvent(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,17 +94,18 @@ void UBPI_Otoshidama_C::SetEnabledPlayerEvent(bool Enabled)
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.GetCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UCameraComponent*        newParam                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPI_Otoshidama_C::GetCamera(class UCameraComponent** newParam)
+void UBPI_Otoshidama_C::STATIC_GetCamera(class UCameraComponent** newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.GetCamera");
 
 	UBPI_Otoshidama_C_GetCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,17 +117,18 @@ void UBPI_Otoshidama_C::GetCamera(class UCameraComponent** newParam)
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.GetBetZoomTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USceneComponent*         newParam                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPI_Otoshidama_C::GetBetZoomTarget(class USceneComponent** newParam)
+void UBPI_Otoshidama_C::STATIC_GetBetZoomTarget(class USceneComponent** newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.GetBetZoomTarget");
 
 	UBPI_Otoshidama_C_GetBetZoomTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,11 +140,11 @@ void UBPI_Otoshidama_C::GetBetZoomTarget(class USceneComponent** newParam)
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.GetZoomTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USceneComponent*         newParam                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBPI_Otoshidama_C::GetZoomTarget(class USceneComponent** newParam)
+void UBPI_Otoshidama_C::STATIC_GetZoomTarget(class USceneComponent** newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.GetZoomTarget");
 
@@ -156,15 +162,16 @@ void UBPI_Otoshidama_C::GetZoomTarget(class USceneComponent** newParam)
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.BindTalkEndEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPI_Otoshidama_C::BindTalkEndEvent()
+void UBPI_Otoshidama_C::STATIC_BindTalkEndEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.BindTalkEndEvent");
 
 	UBPI_Otoshidama_C_BindTalkEndEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,9 +180,9 @@ void UBPI_Otoshidama_C::BindTalkEndEvent()
 
 
 // Function BPI_Otoshidama.BPI_Otoshidama_C.CreateNailEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPI_Otoshidama_C::CreateNailEvent()
+void UBPI_Otoshidama_C::STATIC_CreateNailEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Otoshidama.BPI_Otoshidama_C.CreateNailEvent");
 

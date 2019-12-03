@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PlayerFollowPawn.BP_PlayerFollowPawn_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_PlayerFollowPawn_C::UserConstructionScript()
+void ABP_PlayerFollowPawn_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerFollowPawn.BP_PlayerFollowPawn_C.UserConstructionScript");
 
 	ABP_PlayerFollowPawn_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_PlayerFollowPawn_C::UserConstructionScript()
 
 
 // Function BP_PlayerFollowPawn.BP_PlayerFollowPawn_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Native, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +44,7 @@ void ABP_PlayerFollowPawn_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +53,7 @@ void ABP_PlayerFollowPawn_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_PlayerFollowPawn.BP_PlayerFollowPawn_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_PlayerFollowPawn_C::ReceiveBeginPlay()
 {
@@ -68,11 +70,11 @@ void ABP_PlayerFollowPawn_C::ReceiveBeginPlay()
 
 
 // Function BP_PlayerFollowPawn.BP_PlayerFollowPawn_C.ExecuteUbergraph_BP_PlayerFollowPawn
-// (HasDefaults)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerFollowPawn_C::ExecuteUbergraph_BP_PlayerFollowPawn(int EntryPoint)
+void ABP_PlayerFollowPawn_C::STATIC_ExecuteUbergraph_BP_PlayerFollowPawn(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerFollowPawn.BP_PlayerFollowPawn_C.ExecuteUbergraph_BP_PlayerFollowPawn");
 
@@ -80,6 +82,7 @@ void ABP_PlayerFollowPawn_C::ExecuteUbergraph_BP_PlayerFollowPawn(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

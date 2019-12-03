@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.IsVisibleRStickCenterPos
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsCenter                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_SetExchangeManager_C::IsVisibleRStickCenterPos(bool* IsCenter)
+void ABP_UI_SetExchangeManager_C::STATIC_IsVisibleRStickCenterPos(bool* IsCenter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.IsVisibleRStickCenterPos");
 
 	ABP_UI_SetExchangeManager_C_IsVisibleRStickCenterPos_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_UI_SetExchangeManager_C::IsVisibleRStickCenterPos(bool* IsCenter)
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.IsVisibleRStickOnlyViewMode
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -57,7 +58,7 @@ bool ABP_UI_SetExchangeManager_C::IsVisibleRStickOnlyViewMode()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MakeAreaItemIdList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Delegate, NetClient, Const)
 
 void ABP_UI_SetExchangeManager_C::MakeAreaItemIdList()
 {
@@ -66,6 +67,7 @@ void ABP_UI_SetExchangeManager_C::MakeAreaItemIdList()
 	ABP_UI_SetExchangeManager_C_MakeAreaItemIdList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,9 +76,9 @@ void ABP_UI_SetExchangeManager_C::MakeAreaItemIdList()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.GetItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
-void ABP_UI_SetExchangeManager_C::GetItem()
+void ABP_UI_SetExchangeManager_C::STATIC_GetItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.GetItem");
 
@@ -91,9 +93,9 @@ void ABP_UI_SetExchangeManager_C::GetItem()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.SetRightWindow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_SetExchangeManager_C::SetRightWindow()
+void ABP_UI_SetExchangeManager_C::STATIC_SetRightWindow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.SetRightWindow");
 
@@ -108,7 +110,7 @@ void ABP_UI_SetExchangeManager_C::SetRightWindow()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.SetExchangeChangePage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -127,16 +129,17 @@ void ABP_UI_SetExchangeManager_C::SetExchangeChangePage(int Value)
 }
 
 
-// Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MakeItemIDList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MakeItemIdList
+// (Net, NetRequest, Native, NetResponse, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure)
 
-void ABP_UI_SetExchangeManager_C::MakeItemIDList()
+void ABP_UI_SetExchangeManager_C::MakeItemIdList()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MakeItemIDList");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MakeItemIdList");
 
-	ABP_UI_SetExchangeManager_C_MakeItemIDList_Params params;
+	ABP_UI_SetExchangeManager_C_MakeItemIdList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,9 +148,9 @@ void ABP_UI_SetExchangeManager_C::MakeItemIDList()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_UI_SetExchangeManager_C::UserConstructionScript()
+void ABP_UI_SetExchangeManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.UserConstructionScript");
 
@@ -162,9 +165,9 @@ void ABP_UI_SetExchangeManager_C::UserConstructionScript()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_UI_SetExchangeManager_C::ReceiveBeginPlay()
+void ABP_UI_SetExchangeManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.ReceiveBeginPlay");
 
@@ -179,7 +182,7 @@ void ABP_UI_SetExchangeManager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -199,7 +202,7 @@ void ABP_UI_SetExchangeManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.MoveCategoryFocusAfter
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_SetExchangeManager_C::MoveCategoryFocusAfter()
 {
@@ -216,7 +219,7 @@ void ABP_UI_SetExchangeManager_C::MoveCategoryFocusAfter()
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.ChangePage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -236,7 +239,7 @@ void ABP_UI_SetExchangeManager_C::ChangePage(int Value)
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.PushCheckDialog
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_UI_Button>      PushButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -256,11 +259,11 @@ void ABP_UI_SetExchangeManager_C::PushCheckDialog(TEnumAsByte<EN_UI_Button> Push
 
 
 // Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.ExecuteUbergraph_BP_UI_SetExchangeManager
-// (HasDefaults)
+// (Net, Exec, Native, Static, NetMulticast, Public, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_SetExchangeManager_C::ExecuteUbergraph_BP_UI_SetExchangeManager(int EntryPoint)
+void ABP_UI_SetExchangeManager_C::STATIC_ExecuteUbergraph_BP_UI_SetExchangeManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_SetExchangeManager.BP_UI_SetExchangeManager_C.ExecuteUbergraph_BP_UI_SetExchangeManager");
 
@@ -268,6 +271,7 @@ void ABP_UI_SetExchangeManager_C::ExecuteUbergraph_BP_UI_SetExchangeManager(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

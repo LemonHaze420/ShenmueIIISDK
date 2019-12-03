@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.UpdateAnimationState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_QTEBaseComponent_C::UpdateAnimationState()
 {
@@ -23,6 +23,7 @@ void UBPC_QTEBaseComponent_C::UpdateAnimationState()
 	UBPC_QTEBaseComponent_C_UpdateAnimationState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void UBPC_QTEBaseComponent_C::UpdateAnimationState()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.DebugQTEForceSetResultSuccess
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, Delegate, NetServer)
 
-void UBPC_QTEBaseComponent_C::DebugQTEForceSetResultSuccess()
+void UBPC_QTEBaseComponent_C::STATIC_DebugQTEForceSetResultSuccess()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.DebugQTEForceSetResultSuccess");
 
@@ -48,7 +49,7 @@ void UBPC_QTEBaseComponent_C::DebugQTEForceSetResultSuccess()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayStartForceFeedback
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPC_QTEBaseComponent_C::PlayStartForceFeedback()
 {
@@ -57,6 +58,7 @@ void UBPC_QTEBaseComponent_C::PlayStartForceFeedback()
 	UBPC_QTEBaseComponent_C_PlayStartForceFeedback_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,17 +67,18 @@ void UBPC_QTEBaseComponent_C::PlayStartForceFeedback()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetQTEForceFeedbackTag
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName UBPC_QTEBaseComponent_C::GetQTEForceFeedbackTag()
+struct FName UBPC_QTEBaseComponent_C::STATIC_GetQTEForceFeedbackTag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetQTEForceFeedbackTag");
 
 	UBPC_QTEBaseComponent_C_GetQTEForceFeedbackTag_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,7 +89,7 @@ struct FName UBPC_QTEBaseComponent_C::GetQTEForceFeedbackTag()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.SetQTEForceFeedbackTag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // struct FName                   InTag                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -98,6 +101,7 @@ void UBPC_QTEBaseComponent_C::SetQTEForceFeedbackTag(const struct FName& InTag)
 	params.InTag = InTag;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -106,7 +110,7 @@ void UBPC_QTEBaseComponent_C::SetQTEForceFeedbackTag(const struct FName& InTag)
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayInputFailedForceFeedback
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPC_QTEBaseComponent_C::PlayInputFailedForceFeedback()
 {
@@ -115,6 +119,7 @@ void UBPC_QTEBaseComponent_C::PlayInputFailedForceFeedback()
 	UBPC_QTEBaseComponent_C_PlayInputFailedForceFeedback_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,7 +128,7 @@ void UBPC_QTEBaseComponent_C::PlayInputFailedForceFeedback()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayInputSuccessForceFeedback
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPC_QTEBaseComponent_C::PlayInputSuccessForceFeedback()
 {
@@ -132,6 +137,7 @@ void UBPC_QTEBaseComponent_C::PlayInputSuccessForceFeedback()
 	UBPC_QTEBaseComponent_C_PlayInputSuccessForceFeedback_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,17 +146,18 @@ void UBPC_QTEBaseComponent_C::PlayInputSuccessForceFeedback()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetCurrentInputTime
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_QTEBaseComponent_C::GetCurrentInputTime()
+float UBPC_QTEBaseComponent_C::STATIC_GetCurrentInputTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetCurrentInputTime");
 
 	UBPC_QTEBaseComponent_C_GetCurrentInputTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +168,7 @@ float UBPC_QTEBaseComponent_C::GetCurrentInputTime()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.DebugQTEForceSuccessUpdateInternal
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_QTEBaseComponent_C::DebugQTEForceSuccessUpdateInternal()
 {
@@ -170,6 +177,7 @@ void UBPC_QTEBaseComponent_C::DebugQTEForceSuccessUpdateInternal()
 	UBPC_QTEBaseComponent_C_DebugQTEForceSuccessUpdateInternal_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,15 +186,16 @@ void UBPC_QTEBaseComponent_C::DebugQTEForceSuccessUpdateInternal()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.DebugQTEForceSuccessUpdate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTEBaseComponent_C::DebugQTEForceSuccessUpdate()
+void UBPC_QTEBaseComponent_C::STATIC_DebugQTEForceSuccessUpdate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.DebugQTEForceSuccessUpdate");
 
 	UBPC_QTEBaseComponent_C_DebugQTEForceSuccessUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,7 +204,7 @@ void UBPC_QTEBaseComponent_C::DebugQTEForceSuccessUpdate()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.StartCountInputLimitTime
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, Public, Protected, NetServer)
 
 void UBPC_QTEBaseComponent_C::StartCountInputLimitTime()
 {
@@ -204,6 +213,7 @@ void UBPC_QTEBaseComponent_C::StartCountInputLimitTime()
 	UBPC_QTEBaseComponent_C_StartCountInputLimitTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -212,7 +222,7 @@ void UBPC_QTEBaseComponent_C::StartCountInputLimitTime()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.CanStartCountInputLimitTime
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -233,17 +243,18 @@ bool UBPC_QTEBaseComponent_C::CanStartCountInputLimitTime()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetLengthBeforeCountInputLimitTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_QTEBaseComponent_C::GetLengthBeforeCountInputLimitTime()
+float UBPC_QTEBaseComponent_C::STATIC_GetLengthBeforeCountInputLimitTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetLengthBeforeCountInputLimitTime");
 
 	UBPC_QTEBaseComponent_C_GetLengthBeforeCountInputLimitTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,7 +265,7 @@ float UBPC_QTEBaseComponent_C::GetLengthBeforeCountInputLimitTime()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.IsPlayingInAnimation
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -275,7 +286,7 @@ bool UBPC_QTEBaseComponent_C::IsPlayingInAnimation()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayTimeUpFailedAnimation
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_QTEBaseComponent_C::PlayTimeUpFailedAnimation()
 {
@@ -284,6 +295,7 @@ void UBPC_QTEBaseComponent_C::PlayTimeUpFailedAnimation()
 	UBPC_QTEBaseComponent_C_PlayTimeUpFailedAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -292,7 +304,7 @@ void UBPC_QTEBaseComponent_C::PlayTimeUpFailedAnimation()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayInAnimation
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_QTEBaseComponent_C::PlayInAnimation()
 {
@@ -309,9 +321,9 @@ void UBPC_QTEBaseComponent_C::PlayInAnimation()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.StopTimeCountSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBPC_QTEBaseComponent_C::StopTimeCountSE()
+void UBPC_QTEBaseComponent_C::STATIC_StopTimeCountSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.StopTimeCountSE");
 
@@ -326,15 +338,16 @@ void UBPC_QTEBaseComponent_C::StopTimeCountSE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayTimeCountSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTEBaseComponent_C::PlayTimeCountSE()
+void UBPC_QTEBaseComponent_C::STATIC_PlayTimeCountSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayTimeCountSE");
 
 	UBPC_QTEBaseComponent_C_PlayTimeCountSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -343,15 +356,16 @@ void UBPC_QTEBaseComponent_C::PlayTimeCountSE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayInputFailedSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTEBaseComponent_C::PlayInputFailedSE()
+void UBPC_QTEBaseComponent_C::STATIC_PlayInputFailedSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayInputFailedSE");
 
 	UBPC_QTEBaseComponent_C_PlayInputFailedSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -360,15 +374,16 @@ void UBPC_QTEBaseComponent_C::PlayInputFailedSE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayInputSuccessSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTEBaseComponent_C::PlayInputSuccessSE()
+void UBPC_QTEBaseComponent_C::STATIC_PlayInputSuccessSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayInputSuccessSE");
 
 	UBPC_QTEBaseComponent_C_PlayInputSuccessSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -377,15 +392,16 @@ void UBPC_QTEBaseComponent_C::PlayInputSuccessSE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayStartSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTEBaseComponent_C::PlayStartSE()
+void UBPC_QTEBaseComponent_C::STATIC_PlayStartSE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.PlayStartSE");
 
 	UBPC_QTEBaseComponent_C_PlayStartSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -394,7 +410,7 @@ void UBPC_QTEBaseComponent_C::PlayStartSE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.SetTimeGaugeRate
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          InGaugeRate                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -406,6 +422,7 @@ void UBPC_QTEBaseComponent_C::SetTimeGaugeRate(float InGaugeRate)
 	params.InGaugeRate = InGaugeRate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -414,7 +431,7 @@ void UBPC_QTEBaseComponent_C::SetTimeGaugeRate(float InGaugeRate)
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetCurrentInputTimeRate
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -425,6 +442,7 @@ float UBPC_QTEBaseComponent_C::GetCurrentInputTimeRate()
 	UBPC_QTEBaseComponent_C_GetCurrentInputTimeRate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -435,7 +453,7 @@ float UBPC_QTEBaseComponent_C::GetCurrentInputTimeRate()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.SetInputLimitTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // float                          InLimitTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -455,7 +473,7 @@ void UBPC_QTEBaseComponent_C::SetInputLimitTime(float InLimitTime)
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.ExecuteInputAction
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InInputAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -467,6 +485,7 @@ void UBPC_QTEBaseComponent_C::ExecuteInputAction(const struct FName& InInputActi
 	params.InInputAction = InInputAction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -475,7 +494,7 @@ void UBPC_QTEBaseComponent_C::ExecuteInputAction(const struct FName& InInputActi
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.InputQTE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InInputAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -487,6 +506,7 @@ void UBPC_QTEBaseComponent_C::InputQTE(const struct FName& InInputAction)
 	params.InInputAction = InInputAction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -495,7 +515,7 @@ void UBPC_QTEBaseComponent_C::InputQTE(const struct FName& InInputAction)
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.SetExecuteTargetInputActions
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // TArray<struct FName>           NewInputActions                (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -506,6 +526,7 @@ void UBPC_QTEBaseComponent_C::SetExecuteTargetInputActions(TArray<struct FName>*
 	UBPC_QTEBaseComponent_C_SetExecuteTargetInputActions_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -517,7 +538,7 @@ void UBPC_QTEBaseComponent_C::SetExecuteTargetInputActions(TArray<struct FName>*
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.SetResult
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           NewResult                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -529,6 +550,7 @@ void UBPC_QTEBaseComponent_C::SetResult(bool NewResult)
 	params.NewResult = NewResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -537,7 +559,7 @@ void UBPC_QTEBaseComponent_C::SetResult(bool NewResult)
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.GetResult
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -558,7 +580,7 @@ bool UBPC_QTEBaseComponent_C::GetResult()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.IsInQTE
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -579,7 +601,7 @@ bool UBPC_QTEBaseComponent_C::IsInQTE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.IsQTEStarted
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -600,7 +622,7 @@ bool UBPC_QTEBaseComponent_C::IsQTEStarted()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPC_QTEBaseComponent_C::Update()
 {
@@ -617,9 +639,9 @@ void UBPC_QTEBaseComponent_C::Update()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, Delegate, NetServer)
 
-void UBPC_QTEBaseComponent_C::Reset()
+void UBPC_QTEBaseComponent_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.Reset");
 
@@ -634,9 +656,9 @@ void UBPC_QTEBaseComponent_C::Reset()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.FinishQTE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, Delegate, NetServer)
 
-void UBPC_QTEBaseComponent_C::FinishQTE()
+void UBPC_QTEBaseComponent_C::STATIC_FinishQTE()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.FinishQTE");
 
@@ -651,7 +673,7 @@ void UBPC_QTEBaseComponent_C::FinishQTE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.StartQTE
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_QTEBaseComponent_C::StartQTE()
 {
@@ -660,6 +682,7 @@ void UBPC_QTEBaseComponent_C::StartQTE()
 	UBPC_QTEBaseComponent_C_StartQTE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -668,7 +691,7 @@ void UBPC_QTEBaseComponent_C::StartQTE()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.Finalize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetMulticast, Public, Protected, NetServer)
 
 void UBPC_QTEBaseComponent_C::Finalize()
 {
@@ -685,7 +708,7 @@ void UBPC_QTEBaseComponent_C::Finalize()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_QTEBaseComponent_C::Initialize()
 {
@@ -694,6 +717,7 @@ void UBPC_QTEBaseComponent_C::Initialize()
 	UBPC_QTEBaseComponent_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -702,11 +726,11 @@ void UBPC_QTEBaseComponent_C::Initialize()
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTEBaseComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void UBPC_QTEBaseComponent_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.ReceiveEndPlay");
 
@@ -714,6 +738,7 @@ void UBPC_QTEBaseComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -722,11 +747,11 @@ void UBPC_QTEBaseComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.ExecuteUbergraph_BPC_QTEBaseComponent
-// ()
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTEBaseComponent_C::ExecuteUbergraph_BPC_QTEBaseComponent(int EntryPoint)
+void UBPC_QTEBaseComponent_C::STATIC_ExecuteUbergraph_BPC_QTEBaseComponent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTEBaseComponent.BPC_QTEBaseComponent_C.ExecuteUbergraph_BPC_QTEBaseComponent");
 
@@ -734,6 +759,7 @@ void UBPC_QTEBaseComponent_C::ExecuteUbergraph_BPC_QTEBaseComponent(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

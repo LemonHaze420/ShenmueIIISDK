@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_SleepPoint_Template_C::GetPriority()
+int ABP_SleepPoint_Template_C::STATIC_GetPriority()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.GetPriority");
 
 	ABP_SleepPoint_Template_C_GetPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,17 +36,18 @@ int ABP_SleepPoint_Template_C::GetPriority()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<struct FS3DetectActionParam> ABP_SleepPoint_Template_C::GetDetectAction()
+TArray<struct FS3DetectActionParam> ABP_SleepPoint_Template_C::STATIC_GetDetectAction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.GetDetectAction");
 
 	ABP_SleepPoint_Template_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +58,7 @@ TArray<struct FS3DetectActionParam> ABP_SleepPoint_Template_C::GetDetectAction()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.CheckRay
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -78,7 +80,7 @@ void ABP_SleepPoint_Template_C::CheckRay(bool* Enable)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.ChangeSelectText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Private, NetServer, NetClient, BlueprintEvent)
 
 void ABP_SleepPoint_Template_C::ChangeSelectText()
 {
@@ -87,6 +89,7 @@ void ABP_SleepPoint_Template_C::ChangeSelectText()
 	ABP_SleepPoint_Template_C_ChangeSelectText_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +98,7 @@ void ABP_SleepPoint_Template_C::ChangeSelectText()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.LavelIDtoText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   LavelID                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   GetText                        (Parm, OutParm)
@@ -119,17 +122,18 @@ void ABP_SleepPoint_Template_C::LavelIDtoText(const struct FName& LavelID, struc
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.CheckBeginTriggerIn
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, NetClient)
 // Parameters:
 // bool                           BeginIn                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SleepPoint_Template_C::CheckBeginTriggerIn(bool* BeginIn)
+void ABP_SleepPoint_Template_C::STATIC_CheckBeginTriggerIn(bool* BeginIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.CheckBeginTriggerIn");
 
 	ABP_SleepPoint_Template_C_CheckBeginTriggerIn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -141,7 +145,7 @@ void ABP_SleepPoint_Template_C::CheckBeginTriggerIn(bool* BeginIn)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.ChangeBSEnable
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           BsEnable                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -153,6 +157,7 @@ void ABP_SleepPoint_Template_C::ChangeBSEnable(bool BsEnable)
 	params.BsEnable = BsEnable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +166,7 @@ void ABP_SleepPoint_Template_C::ChangeBSEnable(bool BsEnable)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.CheckItemValid
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Valid                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -183,7 +188,7 @@ void ABP_SleepPoint_Template_C::CheckItemValid(bool* Valid)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.BSAction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class UActorComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -203,9 +208,9 @@ void ABP_SleepPoint_Template_C::BSAction(class UActorComponent* Component)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.SetItemEnable
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void ABP_SleepPoint_Template_C::SetItemEnable()
+void ABP_SleepPoint_Template_C::STATIC_SetItemEnable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.SetItemEnable");
 
@@ -220,7 +225,7 @@ void ABP_SleepPoint_Template_C::SetItemEnable()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.RegisterDetect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UActorComponent*         Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           Register                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -234,6 +239,7 @@ void ABP_SleepPoint_Template_C::RegisterDetect(class UActorComponent* Component,
 	params.Register = Register;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,15 +248,16 @@ void ABP_SleepPoint_Template_C::RegisterDetect(class UActorComponent* Component,
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_SleepPoint_Template_C::UserConstructionScript()
+void ABP_SleepPoint_Template_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.UserConstructionScript");
 
 	ABP_SleepPoint_Template_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,11 +266,11 @@ void ABP_SleepPoint_Template_C::UserConstructionScript()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.Catch_OnSelect
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SleepPoint_Template_C::Catch_OnSelect(int Index)
+void ABP_SleepPoint_Template_C::STATIC_Catch_OnSelect(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.Catch_OnSelect");
 
@@ -271,6 +278,7 @@ void ABP_SleepPoint_Template_C::Catch_OnSelect(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -279,11 +287,11 @@ void ABP_SleepPoint_Template_C::Catch_OnSelect(int Index)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.Select_Cancel
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDeny                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SleepPoint_Template_C::Select_Cancel(bool IsDeny)
+void ABP_SleepPoint_Template_C::STATIC_Select_Cancel(bool IsDeny)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.Select_Cancel");
 
@@ -291,6 +299,7 @@ void ABP_SleepPoint_Template_C::Select_Cancel(bool IsDeny)
 	params.IsDeny = IsDeny;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +308,7 @@ void ABP_SleepPoint_Template_C::Select_Cancel(bool IsDeny)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.SaveLoadWidgetFinish
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::SaveLoadWidgetFinish()
 {
@@ -308,6 +317,7 @@ void ABP_SleepPoint_Template_C::SaveLoadWidgetFinish()
 	ABP_SleepPoint_Template_C_SaveLoadWidgetFinish_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -316,7 +326,7 @@ void ABP_SleepPoint_Template_C::SaveLoadWidgetFinish()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.OpenSyetemMenuSelect
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::OpenSyetemMenuSelect()
 {
@@ -333,7 +343,7 @@ void ABP_SleepPoint_Template_C::OpenSyetemMenuSelect()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -353,11 +363,11 @@ void ABP_SleepPoint_Template_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SleepPoint_Template_C::DecideDetectAction(ES3ActionIconType Type)
+void ABP_SleepPoint_Template_C::STATIC_DecideDetectAction(ES3ActionIconType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.DecideDetectAction");
 
@@ -365,6 +375,7 @@ void ABP_SleepPoint_Template_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -373,7 +384,7 @@ void ABP_SleepPoint_Template_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.BeginBsIn
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::BeginBsIn()
 {
@@ -390,7 +401,7 @@ void ABP_SleepPoint_Template_C::BeginBsIn()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.BndEvt__DetectArea_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -408,6 +419,7 @@ void ABP_SleepPoint_Template_C::BndEvt__DetectArea_K2Node_ComponentBoundEvent_1_
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -416,7 +428,7 @@ void ABP_SleepPoint_Template_C::BndEvt__DetectArea_K2Node_ComponentBoundEvent_1_
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -425,7 +437,7 @@ void ABP_SleepPoint_Template_C::BndEvt__DetectArea_K2Node_ComponentBoundEvent_1_
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_SleepPoint_Template_C::BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_SleepPoint_Template_C::STATIC_BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -446,7 +458,7 @@ void ABP_SleepPoint_Template_C::BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.CancelBsIn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::CancelBsIn()
 {
@@ -463,7 +475,7 @@ void ABP_SleepPoint_Template_C::CancelBsIn()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::ReceiveBeginPlay()
 {
@@ -480,7 +492,7 @@ void ABP_SleepPoint_Template_C::ReceiveBeginPlay()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.CheckLoadEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::CheckLoadEnd()
 {
@@ -497,7 +509,7 @@ void ABP_SleepPoint_Template_C::CheckLoadEnd()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.CheckFadein
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::CheckFadein()
 {
@@ -506,6 +518,7 @@ void ABP_SleepPoint_Template_C::CheckFadein()
 	ABP_SleepPoint_Template_C_CheckFadein_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -514,11 +527,11 @@ void ABP_SleepPoint_Template_C::CheckFadein()
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.ExecuteUbergraph_BP_SleepPoint_Template
-// (HasDefaults)
+// (Static, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SleepPoint_Template_C::ExecuteUbergraph_BP_SleepPoint_Template(int EntryPoint)
+void ABP_SleepPoint_Template_C::STATIC_ExecuteUbergraph_BP_SleepPoint_Template(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.ExecuteUbergraph_BP_SleepPoint_Template");
 
@@ -534,7 +547,7 @@ void ABP_SleepPoint_Template_C::ExecuteUbergraph_BP_SleepPoint_Template(int Entr
 
 
 // Function BP_SleepPoint_Template.BP_SleepPoint_Template_C.ED_DoSleep__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_SleepPoint_Template_C::ED_DoSleep__DelegateSignature()
 {
@@ -543,6 +556,7 @@ void ABP_SleepPoint_Template_C::ED_DoSleep__DelegateSignature()
 	ABP_SleepPoint_Template_C_ED_DoSleep__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

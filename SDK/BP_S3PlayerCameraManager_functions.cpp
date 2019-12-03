@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3PlayerCameraManager.BP_S3PlayerCameraManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3PlayerCameraManager_C::UserConstructionScript()
 {
@@ -31,9 +31,9 @@ void ABP_S3PlayerCameraManager_C::UserConstructionScript()
 
 
 // Function BP_S3PlayerCameraManager.BP_S3PlayerCameraManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3PlayerCameraManager_C::ReceiveBeginPlay()
+void ABP_S3PlayerCameraManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManager.BP_S3PlayerCameraManager_C.ReceiveBeginPlay");
 
@@ -48,11 +48,11 @@ void ABP_S3PlayerCameraManager_C::ReceiveBeginPlay()
 
 
 // Function BP_S3PlayerCameraManager.BP_S3PlayerCameraManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3PlayerCameraManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_S3PlayerCameraManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3PlayerCameraManager.BP_S3PlayerCameraManager_C.ReceiveTick");
 
@@ -60,6 +60,7 @@ void ABP_S3PlayerCameraManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +69,7 @@ void ABP_S3PlayerCameraManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3PlayerCameraManager.BP_S3PlayerCameraManager_C.ExecuteUbergraph_BP_S3PlayerCameraManager
-// (HasDefaults)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -80,6 +81,7 @@ void ABP_S3PlayerCameraManager_C::ExecuteUbergraph_BP_S3PlayerCameraManager(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

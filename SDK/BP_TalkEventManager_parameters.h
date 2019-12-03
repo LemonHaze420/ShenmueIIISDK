@@ -62,7 +62,7 @@ struct ABP_TalkEventManager_C_ExecFade_Params
 struct ABP_TalkEventManager_C_SkipTalk_Params
 {
 	bool                                               AC_Only;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Debug;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               DEBUG;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_TalkEventManager.BP_TalkEventManager_C.NotifyCameraChange
@@ -759,7 +759,7 @@ struct ABP_TalkEventManager_C_ExecKsLabelTask_Params
 struct ABP_TalkEventManager_C_TryGetItemIndex_Params
 {
 	struct FString                                     FlagStr;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
-	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                Index;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -870,7 +870,7 @@ struct ABP_TalkEventManager_C_FindSubStrings_Params
 {
 	struct FString                                     InStr;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 	TArray<struct FString>                             SubStrings;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FString>                             foundStrings;                                             // (Parm, OutParm, ZeroConstructor)
 };
 

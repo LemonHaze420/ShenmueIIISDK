@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void RequestActionName(const struct FName& ActionName);
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_SpawningAttachmentBase(int EntryPoint);

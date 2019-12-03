@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_EnergyWgt.BPF_EnergyWgt_C.GetAdventureBarColorEnum
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EHealthOrbColor>   AsEnum                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void UBPF_EnergyWgt_C::STATIC_GetAdventureBarColorEnum(class UObject* __WorldCon
 
 
 // Function BPF_EnergyWgt.BPF_EnergyWgt_C.GetAdventureBarColor
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            AsColor                        (Parm, OutParm, IsPlainOldData)
@@ -51,6 +51,7 @@ void UBPF_EnergyWgt_C::STATIC_GetAdventureBarColor(class UObject* __WorldContext
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,13 +63,13 @@ void UBPF_EnergyWgt_C::STATIC_GetAdventureBarColor(class UObject* __WorldContext
 
 
 // Function BPF_EnergyWgt.BPF_EnergyWgt_C.GetFormattedEnergyStrings
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 HP                             (Parm, OutParm, ZeroConstructor)
 // struct FString                 MaxHP                          (Parm, OutParm, ZeroConstructor)
 
-void UBPF_EnergyWgt_C::STATIC_GetFormattedEnergyStrings(class UObject* __WorldContext, struct FString* HP, struct FString* MaxHP)
+void UBPF_EnergyWgt_C::GetFormattedEnergyStrings(class UObject* __WorldContext, struct FString* HP, struct FString* MaxHP)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_EnergyWgt.BPF_EnergyWgt_C.GetFormattedEnergyStrings");
 
@@ -76,6 +77,7 @@ void UBPF_EnergyWgt_C::STATIC_GetFormattedEnergyStrings(class UObject* __WorldCo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -31,13 +31,13 @@ public:
 	}
 
 
-	void IsFarCharacter(bool* Far);
-	void IsNearCharacter(bool* bNear);
-	void ReceiveBeginPlay();
-	void EnabledFadeCheck();
-	void DisabledFadeCheck();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BPC_CharacterFadeCamera(int EntryPoint);
+	void STATIC_IsFarCharacter(bool* Far);
+	void STATIC_IsNearCharacter(bool* bNear);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_EnabledFadeCheck();
+	void STATIC_DisabledFadeCheck();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BPC_CharacterFadeCamera(int EntryPoint);
 };
 
 

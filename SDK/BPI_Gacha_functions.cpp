@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_Gacha.BPI_Gacha_C.GetGachaID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   GachaId                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_Gacha_C::GetGachaID(struct FName* GachaId)
+void UBPI_Gacha_C::STATIC_GetGachaID(struct FName* GachaId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_Gacha.BPI_Gacha_C.GetGachaID");
 
 	UBPI_Gacha_C_GetGachaID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

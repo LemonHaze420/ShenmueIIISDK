@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkMeshCollisionEnabler.BP_TalkMeshCollisionEnabler_C.EnableQueryCollisionOnActorsWithIgnore
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class AActor*>          Actors                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class AActor*>          ignoreActors                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_TalkMeshCollisionEnabler_C::EnableQueryCollisionOnActorsWithIgnore(TArray<class AActor*>* Actors, TArray<class AActor*>* ignoreActors)
+void UBP_TalkMeshCollisionEnabler_C::STATIC_EnableQueryCollisionOnActorsWithIgnore(TArray<class AActor*>* Actors, TArray<class AActor*>* ignoreActors)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkMeshCollisionEnabler.BP_TalkMeshCollisionEnabler_C.EnableQueryCollisionOnActorsWithIgnore");
 
@@ -39,12 +39,12 @@ void UBP_TalkMeshCollisionEnabler_C::EnableQueryCollisionOnActorsWithIgnore(TArr
 
 
 // Function BP_TalkMeshCollisionEnabler.BP_TalkMeshCollisionEnabler_C.EnableQueryCollisionForTalk
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class AActor*>          Actors                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<class UPrimitiveComponent*> BackupComponents               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_TalkMeshCollisionEnabler_C::EnableQueryCollisionForTalk(TArray<class AActor*>* Actors, TArray<class UPrimitiveComponent*>* BackupComponents)
+void UBP_TalkMeshCollisionEnabler_C::STATIC_EnableQueryCollisionForTalk(TArray<class AActor*>* Actors, TArray<class UPrimitiveComponent*>* BackupComponents)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkMeshCollisionEnabler.BP_TalkMeshCollisionEnabler_C.EnableQueryCollisionForTalk");
 
@@ -64,7 +64,7 @@ void UBP_TalkMeshCollisionEnabler_C::EnableQueryCollisionForTalk(TArray<class AA
 
 
 // Function BP_TalkMeshCollisionEnabler.BP_TalkMeshCollisionEnabler_C.EnableQueryCollisionOnActors
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Protected, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class AActor*>          Actors                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -75,6 +75,7 @@ void UBP_TalkMeshCollisionEnabler_C::EnableQueryCollisionOnActors(TArray<class A
 	UBP_TalkMeshCollisionEnabler_C_EnableQueryCollisionOnActors_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,7 +87,7 @@ void UBP_TalkMeshCollisionEnabler_C::EnableQueryCollisionOnActors(TArray<class A
 
 
 // Function BP_TalkMeshCollisionEnabler.BP_TalkMeshCollisionEnabler_C.RestoreQueryCollision
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_TalkMeshCollisionEnabler_C::RestoreQueryCollision()
 {
@@ -95,6 +96,7 @@ void UBP_TalkMeshCollisionEnabler_C::RestoreQueryCollision()
 	UBP_TalkMeshCollisionEnabler_C_RestoreQueryCollision_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,7 +105,7 @@ void UBP_TalkMeshCollisionEnabler_C::RestoreQueryCollision()
 
 
 // Function BP_TalkMeshCollisionEnabler.BP_TalkMeshCollisionEnabler_C.EnableQueryCollision
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     Primitives                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 

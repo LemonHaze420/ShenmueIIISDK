@@ -35,18 +35,18 @@ public:
 
 
 	bool SetCharaName(const struct FName& NewName);
-	bool SetTalkClipperInternal(const struct FString& TalkClipperString, const struct FName& CharaName, bool bVoice, class AS3SoundPlayer* VoicePlayer);
-	void UpdateElapsedTime(float DeltaSeconds);
+	bool STATIC_SetTalkClipperInternal(const struct FString& TalkClipperString, const struct FName& CharaName, bool bVoice, class AS3SoundPlayer* VoicePlayer);
+	void STATIC_UpdateElapsedTime(float DeltaSeconds);
 	void DebugLogMultiSample();
-	void CalcDeltaTime();
-	void TalkClipperStop();
-	void Init();
-	void UserConstructionScript();
-	void ClearFaceId();
+	void STATIC_CalcDeltaTime();
+	void STATIC_TalkClipperStop();
+	void STATIC_Init();
+	void STATIC_UserConstructionScript();
+	void STATIC_ClearFaceId();
 	void SetPlayRate(float NewRate);
-	void EndPause();
+	void STATIC_EndPause();
 	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_Clipper(int EntryPoint);
 };
 

@@ -142,8 +142,8 @@ struct UWBP_QTECommand_C_OnButtonInputAnimationFinished_Params
 {
 };
 
-// Function WBP_QTECommand.WBP_QTECommand_C.OnOutbackAnimationFinished
-struct UWBP_QTECommand_C_OnOutbackAnimationFinished_Params
+// Function WBP_QTECommand.WBP_QTECommand_C.OnOutBackAnimationFinished
+struct UWBP_QTECommand_C_OnOutBackAnimationFinished_Params
 {
 };
 

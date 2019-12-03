@@ -35,14 +35,14 @@ public:
 	}
 
 
-	void ChangeMaterial();
-	void CheckTimeEvent();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ChangeTimeEvent(ES3DayTimeEvent EventType);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor(int EntryPoint);
+	void STATIC_ChangeMaterial();
+	void STATIC_CheckTimeEvent();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ChangeTimeEvent(ES3DayTimeEvent EventType);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_ChangeMaterialStaticMeshActor(int EntryPoint);
 };
 
 

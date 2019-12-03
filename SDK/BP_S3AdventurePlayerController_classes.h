@@ -31,20 +31,20 @@ public:
 
 
 	void ForceStartAttentionLoadLevel_Location(const struct FVector& ForcedLocation);
-	void StartAttention_Location(const struct FVector& ForcedLocation);
-	void ExitAttention();
+	void STATIC_StartAttention_Location(const struct FVector& ForcedLocation);
+	void STATIC_ExitAttention();
 	void StartAttention();
 	void ResetZoom();
-	void IsLookActor(class AActor* OwnerActor, const struct FVector& TraceStart, bool* Look);
+	void STATIC_IsLookActor(class AActor* OwnerActor, const struct FVector& TraceStart, bool* Look);
 	void Init();
 	void CheckAttention();
-	void IsZoom(bool* Value);
+	void STATIC_IsZoom(bool* Value);
 	void UserConstructionScript();
-	void InpActEvt_SystemPause_K2Node_InputActionEvent_2(const struct FKey& Key);
+	void STATIC_InpActEvt_SystemPause_K2Node_InputActionEvent_2(const struct FKey& Key);
 	void ReceiveBeginPlay();
 	void StreamingDebug();
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void OpenHelp();
 	void ExecuteUbergraph_BP_S3AdventurePlayerController(int EntryPoint);
 };

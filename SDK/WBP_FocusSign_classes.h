@@ -66,13 +66,13 @@ public:
 	void IsEnabledOff(bool* Enabled);
 	void SetOutSide(bool IsOutSide);
 	void CalcOpacity(float* Opacity);
-	void updateOpacity();
+	void STATIC_UpdateOpacity();
 	void SetInterpOpacity(float Target, class UImage* Image, bool* Reach);
 	void SetVisibleState(bool Visible);
 	void SetCornersPos();
 	void UpdateFocusRate(float FocusRate);
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_FocusSign(int EntryPoint);
 };
 

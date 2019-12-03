@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.GetDataString
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
@@ -27,6 +27,7 @@ void UBPW_UI_GeneralWindow_C::GetDataString(const struct FName& Label, struct FS
 	params.Label = Label;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UBPW_UI_GeneralWindow_C::GetDataString(const struct FName& Label, struct FS
 
 
 // Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.CenterButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // bool                           RightButton                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -58,12 +59,12 @@ void UBPW_UI_GeneralWindow_C::CenterButton(bool RightButton)
 
 
 // Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.SetupButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, Private, NetServer, NetClient, DLLImport)
 // Parameters:
 // struct FST_GeneralWindow_Button Data                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Right                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_C::SetupButton(const struct FST_GeneralWindow_Button& Data, bool Right)
+void UBPW_UI_GeneralWindow_C::STATIC_SetupButton(const struct FST_GeneralWindow_Button& Data, bool Right)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.SetupButton");
 
@@ -72,6 +73,7 @@ void UBPW_UI_GeneralWindow_C::SetupButton(const struct FST_GeneralWindow_Button&
 	params.Right = Right;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +82,7 @@ void UBPW_UI_GeneralWindow_C::SetupButton(const struct FST_GeneralWindow_Button&
 
 
 // Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.SetData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 
 void UBPW_UI_GeneralWindow_C::SetData()
 {
@@ -97,7 +99,7 @@ void UBPW_UI_GeneralWindow_C::SetData()
 
 
 // Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Event, Public, Private, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -117,15 +119,16 @@ void UBPW_UI_GeneralWindow_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, BlueprintEvent)
 
-void UBPW_UI_GeneralWindow_C::Construct()
+void UBPW_UI_GeneralWindow_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.Construct");
 
 	UBPW_UI_GeneralWindow_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,11 +137,11 @@ void UBPW_UI_GeneralWindow_C::Construct()
 
 
 // Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.ExecuteUbergraph_BPW_UI_GeneralWindow
-// ()
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_GeneralWindow_C::ExecuteUbergraph_BPW_UI_GeneralWindow(int EntryPoint)
+void UBPW_UI_GeneralWindow_C::STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_GeneralWindow.BPW_UI_GeneralWindow_C.ExecuteUbergraph_BPW_UI_GeneralWindow");
 

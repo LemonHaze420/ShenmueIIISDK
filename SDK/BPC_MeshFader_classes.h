@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void RegisterSiblingMeshes();
-	void RegisterSiblingSkeletalMeshes();
-	class UMaterialInterface* CreateFadeMaterial(class UMaterialInterface* SourceMaterial);
+	void STATIC_RegisterSiblingMeshes();
+	void STATIC_RegisterSiblingSkeletalMeshes();
+	class UMaterialInterface* STATIC_CreateFadeMaterial(class UMaterialInterface* SourceMaterial);
 };
 
 

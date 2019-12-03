@@ -39,8 +39,8 @@ public:
 
 
 	void IsFinished(bool* IsFinished);
-	void UpdateEffect(class UCameraComponent* Camera);
-	void UserConstructionScript();
+	void STATIC_UpdateEffect(class UCameraComponent* Camera);
+	void STATIC_UserConstructionScript();
 };
 
 

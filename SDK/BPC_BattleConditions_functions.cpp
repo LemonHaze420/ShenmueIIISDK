@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_BattleConditions.BPC_BattleConditions_C.ShouldDelayHPCheckFor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Static, Private, Protected, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EBattleWinLoseResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_BattleConditions_C::ShouldDelayHPCheckFor(TEnumAsByte<EBattleWinLoseResult> Result)
+bool UBPC_BattleConditions_C::STATIC_ShouldDelayHPCheckFor(TEnumAsByte<EBattleWinLoseResult> Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleConditions.BPC_BattleConditions_C.ShouldDelayHPCheckFor");
 
@@ -37,7 +37,7 @@ bool UBPC_BattleConditions_C::ShouldDelayHPCheckFor(TEnumAsByte<EBattleWinLoseRe
 
 
 // Function BPC_BattleConditions.BPC_BattleConditions_C.ConvertActorsToIDs
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_BattleConditions_C::ConvertActorsToIDs()
 {
@@ -46,6 +46,7 @@ void UBPC_BattleConditions_C::ConvertActorsToIDs()
 	UBPC_BattleConditions_C_ConvertActorsToIDs_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +55,7 @@ void UBPC_BattleConditions_C::ConvertActorsToIDs()
 
 
 // Function BPC_BattleConditions.BPC_BattleConditions_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBPC_BattleConditions_C::ReceiveBeginPlay()
 {
@@ -71,11 +72,11 @@ void UBPC_BattleConditions_C::ReceiveBeginPlay()
 
 
 // Function BPC_BattleConditions.BPC_BattleConditions_C.ExecuteUbergraph_BPC_BattleConditions
-// ()
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_BattleConditions_C::ExecuteUbergraph_BPC_BattleConditions(int EntryPoint)
+void UBPC_BattleConditions_C::STATIC_ExecuteUbergraph_BPC_BattleConditions(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_BattleConditions.BPC_BattleConditions_C.ExecuteUbergraph_BPC_BattleConditions");
 
@@ -83,6 +84,7 @@ void UBPC_BattleConditions_C::ExecuteUbergraph_BPC_BattleConditions(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

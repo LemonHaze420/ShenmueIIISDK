@@ -26,7 +26,7 @@ public:
 	}
 
 
-	void GetTextureData(const struct FName& Label, struct FVector2D* Offset, class UTexture** TextureReference);
+	void STATIC_GetTextureData(const struct FName& Label, struct FVector2D* Offset, class UTexture** TextureReference);
 	void UserConstructionScript();
 };
 

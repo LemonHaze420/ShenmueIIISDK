@@ -25,9 +25,9 @@ public:
 	}
 
 
-	struct FVector STATIC_BPF_Spline_FindPredictedWorldLocationWithProjection(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
+	struct FVector BPF_Spline_FindPredictedWorldLocationWithProjection(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
 	float STATIC_BPF_Spline_FindDistanceClosestToWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, class UObject* __WorldContext);
-	struct FVector STATIC_BPF_Spline_FindPredictedWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
+	struct FVector BPF_Spline_FindPredictedWorldLocation(class USplineComponent* spline, const struct FVector& WorldLocation, float DistanceForward, class UObject* __WorldContext);
 	struct FVector STATIC_BPF_Spline_FindTangentClosestToWorldLocation(class USplineComponent* spline, class UObject* __WorldContext, struct FVector* WorldLocation);
 };
 

@@ -28,7 +28,7 @@ public:
 	}
 
 
-	void SetVisibleButton(bool Visible);
+	void STATIC_SetVisibleButton(bool Visible);
 	void Construct();
 	void ExecuteUbergraph_WBP_MiniGameNewStoneThrowing(int EntryPoint);
 };

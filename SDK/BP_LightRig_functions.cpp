@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_LightRig.BP_LightRig_C.GetMainLightIntensity
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, Event, Protected, Delegate, HasOutParms, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // float                          Intensity                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_LightRig_C::GetMainLightIntensity(float* Intensity)
 	ABP_LightRig_C_GetMainLightIntensity_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,9 +37,9 @@ void ABP_LightRig_C::GetMainLightIntensity(float* Intensity)
 
 
 // Function BP_LightRig.BP_LightRig_C.ClampShadowBias
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_LightRig_C::ClampShadowBias()
+void ABP_LightRig_C::STATIC_ClampShadowBias()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.ClampShadowBias");
 
@@ -53,12 +54,12 @@ void ABP_LightRig_C::ClampShadowBias()
 
 
 // Function BP_LightRig.BP_LightRig_C.CreateDMI
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class UPrimitiveComponent*     StaticMesh                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            ElementIndex                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_LightRig_C::CreateDMI(class UPrimitiveComponent* StaticMesh, int ElementIndex)
+void ABP_LightRig_C::STATIC_CreateDMI(class UPrimitiveComponent* StaticMesh, int ElementIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.CreateDMI");
 
@@ -67,6 +68,7 @@ void ABP_LightRig_C::CreateDMI(class UPrimitiveComponent* StaticMesh, int Elemen
 	params.ElementIndex = ElementIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -75,11 +77,11 @@ void ABP_LightRig_C::CreateDMI(class UPrimitiveComponent* StaticMesh, int Elemen
 
 
 // Function BP_LightRig.BP_LightRig_C.PreviewLights
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // bool                           bPreviewLightsInEditor         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_LightRig_C::PreviewLights(bool bPreviewLightsInEditor)
+void ABP_LightRig_C::STATIC_PreviewLights(bool bPreviewLightsInEditor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.PreviewLights");
 
@@ -95,7 +97,7 @@ void ABP_LightRig_C::PreviewLights(bool bPreviewLightsInEditor)
 
 
 // Function BP_LightRig.BP_LightRig_C.MakeEdgeLightArrays
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_LightRig_C::MakeEdgeLightArrays()
 {
@@ -112,7 +114,7 @@ void ABP_LightRig_C::MakeEdgeLightArrays()
 
 
 // Function BP_LightRig.BP_LightRig_C.IsEdgeLightInUse
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            Count                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Use                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -137,12 +139,12 @@ bool ABP_LightRig_C::IsEdgeLightInUse(int Count, bool Use)
 
 
 // Function BP_LightRig.BP_LightRig_C.PrintEdgeDebugInfo
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Location2                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_LightRig_C::PrintEdgeDebugInfo(const struct FVector& Location, const struct FVector& Location2)
+void ABP_LightRig_C::STATIC_PrintEdgeDebugInfo(const struct FVector& Location, const struct FVector& Location2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.PrintEdgeDebugInfo");
 
@@ -151,6 +153,7 @@ void ABP_LightRig_C::PrintEdgeDebugInfo(const struct FVector& Location, const st
 	params.Location2 = Location2;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -159,7 +162,7 @@ void ABP_LightRig_C::PrintEdgeDebugInfo(const struct FVector& Location, const st
 
 
 // Function BP_LightRig.BP_LightRig_C.MakeArrayStartPointLocation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // float                          Spacing                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              Transform                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -188,7 +191,7 @@ struct FVector ABP_LightRig_C::MakeArrayStartPointLocation(float Spacing, int Li
 
 
 // Function BP_LightRig.BP_LightRig_C.CreateEdgeLights
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Protected, HasDefaults, BlueprintEvent)
 
 void ABP_LightRig_C::CreateEdgeLights()
 {
@@ -197,6 +200,7 @@ void ABP_LightRig_C::CreateEdgeLights()
 	ABP_LightRig_C_CreateEdgeLights_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,12 +209,12 @@ void ABP_LightRig_C::CreateEdgeLights()
 
 
 // Function BP_LightRig.BP_LightRig_C.SetNewEdgeLightZHeight
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // struct FTransform              InputTransform                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FTransform              OutputTransform                (Parm, OutParm, IsPlainOldData)
 
-void ABP_LightRig_C::SetNewEdgeLightZHeight(const struct FTransform& InputTransform, struct FTransform* OutputTransform)
+void ABP_LightRig_C::STATIC_SetNewEdgeLightZHeight(const struct FTransform& InputTransform, struct FTransform* OutputTransform)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.SetNewEdgeLightZHeight");
 
@@ -218,6 +222,7 @@ void ABP_LightRig_C::SetNewEdgeLightZHeight(const struct FTransform& InputTransf
 	params.InputTransform = InputTransform;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,7 +234,7 @@ void ABP_LightRig_C::SetNewEdgeLightZHeight(const struct FTransform& InputTransf
 
 
 // Function BP_LightRig.BP_LightRig_C.UseCeilingHeightForEdgeLightTransforms
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_LightRig_C::UseCeilingHeightForEdgeLightTransforms()
 {
@@ -246,7 +251,7 @@ void ABP_LightRig_C::UseCeilingHeightForEdgeLightTransforms()
 
 
 // Function BP_LightRig.BP_LightRig_C.AddMidFillLights
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Protected, HasDefaults, NetClient, DLLImport, BlueprintPure, NetValidate)
 
 void ABP_LightRig_C::AddMidFillLights()
 {
@@ -263,7 +268,7 @@ void ABP_LightRig_C::AddMidFillLights()
 
 
 // Function BP_LightRig.BP_LightRig_C.AddCentreMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, NetMulticast, Private, HasOutParms, NetClient, DLLImport, BlueprintEvent, NetValidate)
 
 void ABP_LightRig_C::AddCentreMesh()
 {
@@ -280,7 +285,7 @@ void ABP_LightRig_C::AddCentreMesh()
 
 
 // Function BP_LightRig.BP_LightRig_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_LightRig_C::UserConstructionScript()
 {
@@ -297,9 +302,9 @@ void ABP_LightRig_C::UserConstructionScript()
 
 
 // Function BP_LightRig.BP_LightRig_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_LightRig_C::ReceiveBeginPlay()
+void ABP_LightRig_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.ReceiveBeginPlay");
 
@@ -314,7 +319,7 @@ void ABP_LightRig_C::ReceiveBeginPlay()
 
 
 // Function BP_LightRig.BP_LightRig_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, Protected, Delegate, BlueprintPure, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -334,7 +339,7 @@ void ABP_LightRig_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_LightRig.BP_LightRig_C.OnSetLightEnable
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, Protected, Delegate, BlueprintPure, NetValidate)
 // Parameters:
 // bool                           bNewLightEnable                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -354,9 +359,9 @@ void ABP_LightRig_C::OnSetLightEnable(bool bNewLightEnable)
 
 
 // Function BP_LightRig.BP_LightRig_C.UpdateIntensityRate
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_LightRig_C::UpdateIntensityRate()
+void ABP_LightRig_C::STATIC_UpdateIntensityRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.UpdateIntensityRate");
 
@@ -371,9 +376,9 @@ void ABP_LightRig_C::UpdateIntensityRate()
 
 
 // Function BP_LightRig.BP_LightRig_C.InitialDisable
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_LightRig_C::InitialDisable()
+void ABP_LightRig_C::STATIC_InitialDisable()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_LightRig.BP_LightRig_C.InitialDisable");
 
@@ -388,7 +393,7 @@ void ABP_LightRig_C::InitialDisable()
 
 
 // Function BP_LightRig.BP_LightRig_C.ExecuteUbergraph_BP_LightRig
-// ()
+// (Net, NetMulticast, Private, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

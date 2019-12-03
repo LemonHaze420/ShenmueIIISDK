@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void SetCount(int Count, int* CurrentCount);
+	void STATIC_SetCount(int Count, int* CurrentCount);
 };
 
 

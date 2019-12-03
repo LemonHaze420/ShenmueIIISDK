@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.StopTimeCountSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_old_QTEFreeCommandComponent_C::StopTimeCountSE()
 {
@@ -23,6 +23,7 @@ void UBPC_old_QTEFreeCommandComponent_C::StopTimeCountSE()
 	UBPC_old_QTEFreeCommandComponent_C_StopTimeCountSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBPC_old_QTEFreeCommandComponent_C::StopTimeCountSE()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.PlayTimeCountSE
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPC_old_QTEFreeCommandComponent_C::PlayTimeCountSE()
 {
@@ -40,6 +41,7 @@ void UBPC_old_QTEFreeCommandComponent_C::PlayTimeCountSE()
 	UBPC_old_QTEFreeCommandComponent_C_PlayTimeCountSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,17 +50,18 @@ void UBPC_old_QTEFreeCommandComponent_C::PlayTimeCountSE()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetMaxOutAnimationLength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_old_QTEFreeCommandComponent_C::GetMaxOutAnimationLength()
+float UBPC_old_QTEFreeCommandComponent_C::STATIC_GetMaxOutAnimationLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetMaxOutAnimationLength");
 
 	UBPC_old_QTEFreeCommandComponent_C_GetMaxOutAnimationLength_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +72,7 @@ float UBPC_old_QTEFreeCommandComponent_C::GetMaxOutAnimationLength()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetInAnimationLength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -90,7 +93,7 @@ float UBPC_old_QTEFreeCommandComponent_C::GetInAnimationLength()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.InputEndSuccess
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Native, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
 
 void UBPC_old_QTEFreeCommandComponent_C::InputEndSuccess()
 {
@@ -99,6 +102,7 @@ void UBPC_old_QTEFreeCommandComponent_C::InputEndSuccess()
 	UBPC_old_QTEFreeCommandComponent_C_InputEndSuccess_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,7 +111,7 @@ void UBPC_old_QTEFreeCommandComponent_C::InputEndSuccess()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.SetInputInterval
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // float                          Interval                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -127,7 +131,7 @@ void UBPC_old_QTEFreeCommandComponent_C::SetInputInterval(float Interval)
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.PlayOutOk
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPC_old_QTEFreeCommandComponent_C::PlayOutOk()
 {
@@ -144,12 +148,12 @@ void UBPC_old_QTEFreeCommandComponent_C::PlayOutOk()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetActionNameFromKey
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    InKey                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FName                   ActionName                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_old_QTEFreeCommandComponent_C::GetActionNameFromKey(const struct FKey& InKey, struct FName* ActionName)
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_GetActionNameFromKey(const struct FKey& InKey, struct FName* ActionName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetActionNameFromKey");
 
@@ -168,11 +172,11 @@ void UBPC_old_QTEFreeCommandComponent_C::GetActionNameFromKey(const struct FKey&
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.UpdateInputTimer
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_old_QTEFreeCommandComponent_C::UpdateInputTimer(float DeltaSeconds)
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_UpdateInputTimer(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.UpdateInputTimer");
 
@@ -180,6 +184,7 @@ void UBPC_old_QTEFreeCommandComponent_C::UpdateInputTimer(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -188,7 +193,7 @@ void UBPC_old_QTEFreeCommandComponent_C::UpdateInputTimer(float DeltaSeconds)
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.SetUseRealTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           UseRealTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -200,6 +205,7 @@ void UBPC_old_QTEFreeCommandComponent_C::SetUseRealTime(bool UseRealTime)
 	params.UseRealTime = UseRealTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,12 +214,12 @@ void UBPC_old_QTEFreeCommandComponent_C::SetUseRealTime(bool UseRealTime)
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.CheckCommandSucceable
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_old_BattleQTEExperimentFreeCommand FreeCommand                    (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Successable                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_old_QTEFreeCommandComponent_C::CheckCommandSucceable(const struct FST_old_BattleQTEExperimentFreeCommand& FreeCommand, bool* Successable)
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_CheckCommandSucceable(const struct FST_old_BattleQTEExperimentFreeCommand& FreeCommand, bool* Successable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.CheckCommandSucceable");
 
@@ -232,7 +238,7 @@ void UBPC_old_QTEFreeCommandComponent_C::CheckCommandSucceable(const struct FST_
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.CheckCurrentInput
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -254,7 +260,7 @@ void UBPC_old_QTEFreeCommandComponent_C::CheckCurrentInput(bool* Success)
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetResultCommand
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_old_BattleQTEExperimentFreeCommand ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -275,7 +281,7 @@ struct FST_old_BattleQTEExperimentFreeCommand UBPC_old_QTEFreeCommandComponent_C
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.IsInQTE
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Native, NetMulticast, Private, Delegate, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -286,6 +292,7 @@ bool UBPC_old_QTEFreeCommandComponent_C::IsInQTE()
 	UBPC_old_QTEFreeCommandComponent_C_IsInQTE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -296,7 +303,7 @@ bool UBPC_old_QTEFreeCommandComponent_C::IsInQTE()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetInputSuccessKey
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Action                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FKey>            SuccessKey                     (Parm, OutParm, ZeroConstructor)
@@ -309,6 +316,7 @@ void UBPC_old_QTEFreeCommandComponent_C::GetInputSuccessKey(const struct FName& 
 	params.Action = Action;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,7 +328,7 @@ void UBPC_old_QTEFreeCommandComponent_C::GetInputSuccessKey(const struct FName& 
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.ClearResult
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_old_QTEFreeCommandComponent_C::ClearResult()
 {
@@ -337,11 +345,11 @@ void UBPC_old_QTEFreeCommandComponent_C::ClearResult()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.InputFunction
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Public, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    InKey                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPC_old_QTEFreeCommandComponent_C::InputFunction(const struct FKey& InKey)
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_InputFunction(const struct FKey& InKey)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.InputFunction");
 
@@ -349,6 +357,7 @@ void UBPC_old_QTEFreeCommandComponent_C::InputFunction(const struct FKey& InKey)
 	params.InKey = InKey;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -357,15 +366,16 @@ void UBPC_old_QTEFreeCommandComponent_C::InputFunction(const struct FKey& InKey)
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.InputEndFunction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void UBPC_old_QTEFreeCommandComponent_C::InputEndFunction()
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_InputEndFunction()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.InputEndFunction");
 
 	UBPC_old_QTEFreeCommandComponent_C_InputEndFunction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -374,12 +384,12 @@ void UBPC_old_QTEFreeCommandComponent_C::InputEndFunction()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.InputStartFunction
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FST_old_BattleQTEExperimentFreeCommand> CommandList                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          InInputLimitTime               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_old_QTEFreeCommandComponent_C::InputStartFunction(float InInputLimitTime, TArray<struct FST_old_BattleQTEExperimentFreeCommand>* CommandList)
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_InputStartFunction(float InInputLimitTime, TArray<struct FST_old_BattleQTEExperimentFreeCommand>* CommandList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.InputStartFunction");
 
@@ -398,7 +408,7 @@ void UBPC_old_QTEFreeCommandComponent_C::InputStartFunction(float InInputLimitTi
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.EndFunction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void UBPC_old_QTEFreeCommandComponent_C::EndFunction()
 {
@@ -415,9 +425,9 @@ void UBPC_old_QTEFreeCommandComponent_C::EndFunction()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.Prepare
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void UBPC_old_QTEFreeCommandComponent_C::Prepare()
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_Prepare()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.Prepare");
 
@@ -432,12 +442,12 @@ void UBPC_old_QTEFreeCommandComponent_C::Prepare()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetButtonImage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   InputName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              Texture2D                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_old_QTEFreeCommandComponent_C::GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D)
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.GetButtonImage");
 
@@ -456,7 +466,7 @@ void UBPC_old_QTEFreeCommandComponent_C::GetButtonImage(const struct FName& Inpu
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -476,7 +486,7 @@ void UBPC_old_QTEFreeCommandComponent_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -496,11 +506,11 @@ void UBPC_old_QTEFreeCommandComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReas
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.ExecuteUbergraph_BPC_old_QTEFreeCommandComponent
-// ()
+// (Native, NetResponse, Static, Delegate, NetServer)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_old_QTEFreeCommandComponent_C::ExecuteUbergraph_BPC_old_QTEFreeCommandComponent(int EntryPoint)
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_ExecuteUbergraph_BPC_old_QTEFreeCommandComponent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.ExecuteUbergraph_BPC_old_QTEFreeCommandComponent");
 
@@ -508,6 +518,7 @@ void UBPC_old_QTEFreeCommandComponent_C::ExecuteUbergraph_BPC_old_QTEFreeCommand
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -516,7 +527,7 @@ void UBPC_old_QTEFreeCommandComponent_C::ExecuteUbergraph_BPC_old_QTEFreeCommand
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.ButtonDown__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Succeed                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -536,7 +547,7 @@ void UBPC_old_QTEFreeCommandComponent_C::ButtonDown__DelegateSignature(bool Succ
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.End__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_old_QTEFreeCommandComponent_C::End__DelegateSignature()
 {
@@ -545,6 +556,7 @@ void UBPC_old_QTEFreeCommandComponent_C::End__DelegateSignature()
 	UBPC_old_QTEFreeCommandComponent_C_End__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -553,9 +565,9 @@ void UBPC_old_QTEFreeCommandComponent_C::End__DelegateSignature()
 
 
 // Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.Success__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UBPC_old_QTEFreeCommandComponent_C::Success__DelegateSignature()
+void UBPC_old_QTEFreeCommandComponent_C::STATIC_Success__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_old_QTEFreeCommandComponent.BPC_old_QTEFreeCommandComponent_C.Success__DelegateSignature");
 

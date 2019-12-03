@@ -53,8 +53,8 @@ struct ABP_S3BuildingStaticMeshActor_C_PlaySE_Params
 {
 };
 
-// Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBgm
-struct ABP_S3BuildingStaticMeshActor_C_JudgeBgm_Params
+// Function BP_S3BuildingStaticMeshActor.BP_S3BuildingStaticMeshActor_C.JudgeBGM
+struct ABP_S3BuildingStaticMeshActor_C_JudgeBGM_Params
 {
 	bool                                               Play;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -46,13 +46,13 @@ public:
 
 
 	void SetCount(int Count);
-	void InitSet();
-	void SetIcon(int item_id);
-	void Construct();
-	void Destruct();
-	void Close();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_WBP_ItemNameDisp(int EntryPoint);
+	void STATIC_InitSet();
+	void STATIC_SetIcon(int item_id);
+	void STATIC_Construct();
+	void STATIC_Destruct();
+	void STATIC_Close();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_ExecuteUbergraph_WBP_ItemNameDisp(int EntryPoint);
 	void OnStartAnmEnd__DelegateSignature();
 	void OnClosedDispatcher__DelegateSignature();
 };

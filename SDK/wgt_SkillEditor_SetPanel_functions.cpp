@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.ButtonSelect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Select                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::ButtonSelect(bool Select)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_ButtonSelect(bool Select)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.ButtonSelect");
 
@@ -34,11 +34,11 @@ void Uwgt_SkillEditor_SetPanel_C::ButtonSelect(bool Select)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SetButtonImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           auto                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::SetButtonImage(bool Auto)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_SetButtonImage(bool Auto)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SetButtonImage");
 
@@ -46,6 +46,7 @@ void Uwgt_SkillEditor_SetPanel_C::SetButtonImage(bool Auto)
 	params.Auto = Auto;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,17 +55,18 @@ void Uwgt_SkillEditor_SetPanel_C::SetButtonImage(bool Auto)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.GetSelectedSkillItem(Int)
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ItemIntID                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::GetSelectedSkillItem_Int_(int* ItemIntID)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_GetSelectedSkillItem_Int_(int* ItemIntID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.GetSelectedSkillItem(Int)");
 
 	Uwgt_SkillEditor_SetPanel_C_GetSelectedSkillItem_Int__Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +78,11 @@ void Uwgt_SkillEditor_SetPanel_C::GetSelectedSkillItem_Int_(int* ItemIntID)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SetFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Focus                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::SetFocus(bool Focus)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_SetFocus(bool Focus)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SetFocus");
 
@@ -96,7 +98,7 @@ void Uwgt_SkillEditor_SetPanel_C::SetFocus(bool Focus)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.GetSelectedSkillItem(Name)
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ItemLabel                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -118,17 +120,18 @@ void Uwgt_SkillEditor_SetPanel_C::GetSelectedSkillItem_Name_(struct FName* ItemL
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.GetSelectedIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, NetResponse, Static, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::GetSelectedIndex(int* Index)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_GetSelectedIndex(int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.GetSelectedIndex");
 
 	Uwgt_SkillEditor_SetPanel_C_GetSelectedIndex_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,7 +143,7 @@ void Uwgt_SkillEditor_SetPanel_C::GetSelectedIndex(int* Index)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SetItemDisplayNames
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<struct FName>           Skills                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -151,6 +154,7 @@ void Uwgt_SkillEditor_SetPanel_C::SetItemDisplayNames(TArray<struct FName>* Skil
 	Uwgt_SkillEditor_SetPanel_C_SetItemDisplayNames_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,15 +166,16 @@ void Uwgt_SkillEditor_SetPanel_C::SetItemDisplayNames(TArray<struct FName>* Skil
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.ClearSelection
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void Uwgt_SkillEditor_SetPanel_C::ClearSelection()
+void Uwgt_SkillEditor_SetPanel_C::STATIC_ClearSelection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.ClearSelection");
 
 	Uwgt_SkillEditor_SetPanel_C_ClearSelection_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -179,11 +184,11 @@ void Uwgt_SkillEditor_SetPanel_C::ClearSelection()
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.MoveSelection
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::MoveSelection(bool Add)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_MoveSelection(bool Add)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.MoveSelection");
 
@@ -199,7 +204,7 @@ void Uwgt_SkillEditor_SetPanel_C::MoveSelection(bool Add)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.SelectSlot
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            SelectedSlotIndex              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -211,6 +216,7 @@ void Uwgt_SkillEditor_SetPanel_C::SelectSlot(int SelectedSlotIndex)
 	params.SelectedSlotIndex = SelectedSlotIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -219,11 +225,11 @@ void Uwgt_SkillEditor_SetPanel_C::SelectSlot(int SelectedSlotIndex)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::PreConstruct(bool IsDesignTime)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.PreConstruct");
 
@@ -231,6 +237,7 @@ void Uwgt_SkillEditor_SetPanel_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -239,15 +246,16 @@ void Uwgt_SkillEditor_SetPanel_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void Uwgt_SkillEditor_SetPanel_C::Construct()
+void Uwgt_SkillEditor_SetPanel_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.Construct");
 
 	Uwgt_SkillEditor_SetPanel_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,11 +264,11 @@ void Uwgt_SkillEditor_SetPanel_C::Construct()
 
 
 // Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.ExecuteUbergraph_wgt_SkillEditor_SetPanel
-// ()
+// (NetRequest, Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SetPanel_C::ExecuteUbergraph_wgt_SkillEditor_SetPanel(int EntryPoint)
+void Uwgt_SkillEditor_SetPanel_C::STATIC_ExecuteUbergraph_wgt_SkillEditor_SetPanel(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SetPanel.wgt_SkillEditor_SetPanel_C.ExecuteUbergraph_wgt_SkillEditor_SetPanel");
 
@@ -268,6 +276,7 @@ void Uwgt_SkillEditor_SetPanel_C::ExecuteUbergraph_wgt_SkillEditor_SetPanel(int 
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

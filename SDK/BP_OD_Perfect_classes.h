@@ -30,19 +30,19 @@ public:
 	}
 
 
-	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
-	int GetRewardMoney();
-	void UserConstructionScript();
-	void HitCheck();
+	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	int STATIC_GetRewardMoney();
+	void STATIC_UserConstructionScript();
+	void STATIC_HitCheck();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
 	void RestartMiniGame();
-	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
-	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
-	void ResumeMiniGame(const struct FString& ResumeKeyword);
-	void OnTalkScriptEvent(int EventNumber);
+	void STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
+	void STATIC_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
+	void STATIC_ResumeMiniGame(const struct FString& ResumeKeyword);
+	void STATIC_OnTalkScriptEvent(int EventNumber);
 	void EndMiniGame();
-	void Finalize_Check();
+	void STATIC_Finalize_Check();
 	void StartMiniGame();
 	void Otoshidama_End(bool is_success);
 	void ExecuteUbergraph_BP_OD_Perfect(int EntryPoint);

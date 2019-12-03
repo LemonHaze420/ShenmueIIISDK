@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MiniGame_CC_Input_C::UserConstructionScript()
+void ABP_MiniGame_CC_Input_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.UserConstructionScript");
 
@@ -31,11 +31,11 @@ void ABP_MiniGame_CC_Input_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_8(const struct FKey& Key)
+void ABP_MiniGame_CC_Input_C::STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_8(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_8");
 
@@ -51,11 +51,11 @@ void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_8(
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (NetReliable, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_7(const struct FKey& Key)
+void ABP_MiniGame_CC_Input_C::STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_7(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_7");
 
@@ -71,11 +71,11 @@ void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_7(c
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_6
-// (BlueprintEvent)
+// (NetReliable, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_MiniGame_CC_Input_C::STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_6");
 
@@ -91,11 +91,11 @@ void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActio
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_5
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_MiniGame_CC_Input_C::STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_5(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_5");
 
@@ -111,11 +111,11 @@ void ABP_MiniGame_CC_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActi
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_20
-// (BlueprintEvent)
+// (Net, NetRequest, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Input_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_20(float AxisValue)
+void ABP_MiniGame_CC_Input_C::STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_20(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_20");
 
@@ -131,11 +131,11 @@ void ABP_MiniGame_CC_Input_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEv
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_21
-// (BlueprintEvent)
+// (Net, NetRequest, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Input_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_21(float AxisValue)
+void ABP_MiniGame_CC_Input_C::STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_21(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_21");
 
@@ -151,11 +151,11 @@ void ABP_MiniGame_CC_Input_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxis
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_34
-// (BlueprintEvent)
+// (NetRequest, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Input_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_34(float AxisValue)
+void ABP_MiniGame_CC_Input_C::STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_34(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_34");
 
@@ -171,11 +171,11 @@ void ABP_MiniGame_CC_Input_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxi
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Input_C::ReceiveTick(float DeltaSeconds)
+void ABP_MiniGame_CC_Input_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.ReceiveTick");
 
@@ -191,11 +191,11 @@ void ABP_MiniGame_CC_Input_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.ExecuteUbergraph_BP_MiniGame_CC_Input
-// (HasDefaults)
+// (Exec, Event, NetResponse, Static, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_CC_Input_C::ExecuteUbergraph_BP_MiniGame_CC_Input(int EntryPoint)
+void ABP_MiniGame_CC_Input_C::STATIC_ExecuteUbergraph_BP_MiniGame_CC_Input(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_CC_Input.BP_MiniGame_CC_Input_C.ExecuteUbergraph_BP_MiniGame_CC_Input");
 

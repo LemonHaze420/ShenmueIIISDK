@@ -76,63 +76,6 @@ enum class ELifetimeCondition : uint8_t
 };
 
 
-// Enum CoreUObject.EUnit
-enum class EUnit : uint8_t
-{
-	EUnit__Micrometers             = 0,
-	EUnit__Millimeters             = 1,
-	EUnit__Centimeters             = 2,
-	EUnit__Meters                  = 3,
-	EUnit__Kilometers              = 4,
-	EUnit__Inches                  = 5,
-	EUnit__Feet                    = 6,
-	EUnit__Yards                   = 7,
-	EUnit__Miles                   = 8,
-	EUnit__Lightyears              = 9,
-	EUnit__Degrees                 = 10,
-	EUnit__Radians                 = 11,
-	EUnit__MetersPerSecond         = 12,
-	EUnit__KilometersPerHour       = 13,
-	EUnit__MilesPerHour            = 14,
-	EUnit__Celsius                 = 15,
-	EUnit__Farenheit               = 16,
-	EUnit__Kelvin                  = 17,
-	EUnit__Micrograms              = 18,
-	EUnit__Milligrams              = 19,
-	EUnit__Grams                   = 20,
-	EUnit__Kilograms               = 21,
-	EUnit__MetricTons              = 22,
-	EUnit__Ounces                  = 23,
-	EUnit__Pounds                  = 24,
-	EUnit__Stones                  = 25,
-	EUnit__Newtons                 = 26,
-	EUnit__PoundsForce             = 27,
-	EUnit__KilogramsForce          = 28,
-	EUnit__Hertz                   = 29,
-	EUnit__Kilohertz               = 30,
-	EUnit__Megahertz               = 31,
-	EUnit__Gigahertz               = 32,
-	EUnit__RevolutionsPerMinute    = 33,
-	EUnit__Bytes                   = 34,
-	EUnit__Kilobytes               = 35,
-	EUnit__Megabytes               = 36,
-	EUnit__Gigabytes               = 37,
-	EUnit__Terabytes               = 38,
-	EUnit__Lumens                  = 39,
-	EUnit__Milliseconds            = 40,
-	EUnit__Seconds                 = 41,
-	EUnit__Minutes                 = 42,
-	EUnit__Hours                   = 43,
-	EUnit__Days                    = 44,
-	EUnit__Months                  = 45,
-	EUnit__Years                   = 46,
-	EUnit__Multiplier              = 47,
-	EUnit__Percentage              = 48,
-	EUnit__Unspecified             = 49,
-	EUnit__EUnit_MAX               = 50
-};
-
-
 // Enum CoreUObject.EPixelFormat
 enum class EPixelFormat : uint8_t
 {
@@ -204,46 +147,6 @@ enum class EPixelFormat : uint8_t
 };
 
 
-// Enum CoreUObject.EAxis
-enum class EAxis : uint8_t
-{
-	EAxis__None                    = 0,
-	EAxis__X                       = 1,
-	EAxis__Y                       = 2,
-	EAxis__Z                       = 3,
-	EAxis__EAxis_MAX               = 4
-};
-
-
-// Enum CoreUObject.ELogTimes
-enum class ELogTimes : uint8_t
-{
-	ELogTimes__None                = 0,
-	ELogTimes__UTC                 = 1,
-	ELogTimes__SinceGStartTime     = 2,
-	ELogTimes__Local               = 3,
-	ELogTimes__ELogTimes_MAX       = 4
-};
-
-
-// Enum CoreUObject.ESearchDir
-enum class ESearchDir : uint8_t
-{
-	ESearchDir__FromStart          = 0,
-	ESearchDir__FromEnd            = 1,
-	ESearchDir__ESearchDir_MAX     = 2
-};
-
-
-// Enum CoreUObject.ESearchCase
-enum class ESearchCase : uint8_t
-{
-	ESearchCase__CaseSensitive     = 0,
-	ESearchCase__IgnoreCase        = 1,
-	ESearchCase__ESearchCase_MAX   = 2
-};
-
-
 // Enum CoreUObject.EMouseCursor
 enum class EMouseCursor : uint8_t
 {
@@ -262,6 +165,103 @@ enum class EMouseCursor : uint8_t
 	EMouseCursor__SlashedCircle    = 12,
 	EMouseCursor__EyeDropper       = 13,
 	EMouseCursor__EMouseCursor_MAX = 14
+};
+
+
+// Enum CoreUObject.EAxis
+enum class EAxis : uint8_t
+{
+	EAxis__None                    = 0,
+	EAxis__X                       = 1,
+	EAxis__Y                       = 2,
+	EAxis__Z                       = 3,
+	EAxis__EAxis_MAX               = 4
+};
+
+
+// Enum CoreUObject.ESearchDir
+enum class ESearchDir : uint8_t
+{
+	ESearchDir__FromStart          = 0,
+	ESearchDir__FromEnd            = 1,
+	ESearchDir__ESearchDir_MAX     = 2
+};
+
+
+// Enum CoreUObject.EUnit
+enum class EUnit : uint8_t
+{
+	EUnit__Micrometers             = 0,
+	EUnit__Millimeters             = 1,
+	EUnit__Centimeters             = 2,
+	EUnit__Meters                  = 3,
+	EUnit__Kilometers              = 4,
+	EUnit__Inches                  = 5,
+	EUnit__Feet                    = 6,
+	EUnit__Yards                   = 7,
+	EUnit__Miles                   = 8,
+	EUnit__Lightyears              = 9,
+	EUnit__Degrees                 = 10,
+	EUnit__Radians                 = 11,
+	EUnit__MetersPerSecond         = 12,
+	EUnit__KilometersPerHour       = 13,
+	EUnit__MilesPerHour            = 14,
+	EUnit__Celsius                 = 15,
+	EUnit__Farenheit               = 16,
+	EUnit__Kelvin                  = 17,
+	EUnit__Micrograms              = 18,
+	EUnit__Milligrams              = 19,
+	EUnit__Grams                   = 20,
+	EUnit__Kilograms               = 21,
+	EUnit__MetricTons              = 22,
+	EUnit__Ounces                  = 23,
+	EUnit__Pounds                  = 24,
+	EUnit__Stones                  = 25,
+	EUnit__Newtons                 = 26,
+	EUnit__PoundsForce             = 27,
+	EUnit__KilogramsForce          = 28,
+	EUnit__Hertz                   = 29,
+	EUnit__Kilohertz               = 30,
+	EUnit__Megahertz               = 31,
+	EUnit__Gigahertz               = 32,
+	EUnit__RevolutionsPerMinute    = 33,
+	EUnit__Bytes                   = 34,
+	EUnit__Kilobytes               = 35,
+	EUnit__Megabytes               = 36,
+	EUnit__Gigabytes               = 37,
+	EUnit__Terabytes               = 38,
+	EUnit__Lumens                  = 39,
+	EUnit__Milliseconds            = 40,
+	EUnit__Seconds                 = 41,
+	EUnit__Minutes                 = 42,
+	EUnit__Hours                   = 43,
+	EUnit__Days                    = 44,
+	EUnit__Months                  = 45,
+	EUnit__Years                   = 46,
+	EUnit__Multiplier              = 47,
+	EUnit__Percentage              = 48,
+	EUnit__Unspecified             = 49,
+	EUnit__EUnit_MAX               = 50
+};
+
+
+// Enum CoreUObject.ESearchCase
+enum class ESearchCase : uint8_t
+{
+	ESearchCase__CaseSensitive     = 0,
+	ESearchCase__IgnoreCase        = 1,
+	ESearchCase__ESearchCase_MAX   = 2
+};
+
+
+// Enum CoreUObject.ELogTimes
+enum class ELogTimes : uint8_t
+{
+	ELogTimes__None                = 0,
+	ELogTimes__UTC                 = 1,
+	ELogTimes__SinceGStartTime     = 2,
+	ELogTimes__Local               = 3,
+	ELogTimes__ELogTimes_MAX       = 4
 };
 
 
@@ -284,13 +284,6 @@ struct FJoinabilitySettings
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct CoreUObject.UniqueNetIdWrapper
-// 0x0001
-struct FUniqueNetIdWrapper
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
 // ScriptStruct CoreUObject.Guid
 // 0x0010
 struct FGuid
@@ -299,6 +292,13 @@ struct FGuid
 	int                                                B;                                                        // 0x0004(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
 	int                                                C;                                                        // 0x0008(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
 	int                                                D;                                                        // 0x000C(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+};
+
+// ScriptStruct CoreUObject.UniqueNetIdWrapper
+// 0x0001
+struct FUniqueNetIdWrapper
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.Vector
@@ -370,16 +370,6 @@ struct alignas(16) FQuat
 	float                                              Y;                                                        // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              Z;                                                        // 0x0008(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	float                                              W;                                                        // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
-};
-
-// ScriptStruct CoreUObject.PackedNormal
-// 0x0004
-struct FPackedNormal
-{
-	unsigned char                                      X;                                                        // 0x0000(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      Y;                                                        // 0x0001(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      Z;                                                        // 0x0002(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
-	unsigned char                                      W;                                                        // 0x0003(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct CoreUObject.PackedRGB10A2N
@@ -456,14 +446,14 @@ struct FBox
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct CoreUObject.Box2D
-// 0x0014
-struct FBox2D
+// ScriptStruct CoreUObject.PackedNormal
+// 0x0004
+struct FPackedNormal
 {
-	struct FVector2D                                   Min;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, SaveGame, IsPlainOldData)
-	struct FVector2D                                   Max;                                                      // 0x0008(0x0008) (Edit, BlueprintVisible, SaveGame, IsPlainOldData)
-	unsigned char                                      bIsValid;                                                 // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	unsigned char                                      X;                                                        // 0x0000(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      Y;                                                        // 0x0001(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      Z;                                                        // 0x0002(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+	unsigned char                                      W;                                                        // 0x0003(0x0001) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct CoreUObject.BoxSphereBounds
@@ -475,17 +465,14 @@ struct FBoxSphereBounds
 	float                                              SphereRadius;                                             // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
-// ScriptStruct CoreUObject.OrientedBox
-// 0x003C
-struct FOrientedBox
+// ScriptStruct CoreUObject.Box2D
+// 0x0014
+struct FBox2D
 {
-	struct FVector                                     Center;                                                   // 0x0000(0x000C) (Edit, SaveGame, IsPlainOldData)
-	struct FVector                                     AxisX;                                                    // 0x000C(0x000C) (Edit, SaveGame, IsPlainOldData)
-	struct FVector                                     AxisY;                                                    // 0x0018(0x000C) (Edit, SaveGame, IsPlainOldData)
-	struct FVector                                     AxisZ;                                                    // 0x0024(0x000C) (Edit, SaveGame, IsPlainOldData)
-	float                                              ExtentX;                                                  // 0x0030(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
-	float                                              ExtentY;                                                  // 0x0034(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
-	float                                              ExtentZ;                                                  // 0x0038(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+	struct FVector2D                                   Min;                                                      // 0x0000(0x0008) (Edit, BlueprintVisible, SaveGame, IsPlainOldData)
+	struct FVector2D                                   Max;                                                      // 0x0008(0x0008) (Edit, BlueprintVisible, SaveGame, IsPlainOldData)
+	unsigned char                                      bIsValid;                                                 // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.Matrix
@@ -508,6 +495,19 @@ struct FInterpCurvePointFloat
 	float                                              LeaveTangent;                                             // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EInterpCurveMode>                      InterpMode;                                               // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct CoreUObject.OrientedBox
+// 0x003C
+struct FOrientedBox
+{
+	struct FVector                                     Center;                                                   // 0x0000(0x000C) (Edit, SaveGame, IsPlainOldData)
+	struct FVector                                     AxisX;                                                    // 0x000C(0x000C) (Edit, SaveGame, IsPlainOldData)
+	struct FVector                                     AxisY;                                                    // 0x0018(0x000C) (Edit, SaveGame, IsPlainOldData)
+	struct FVector                                     AxisZ;                                                    // 0x0024(0x000C) (Edit, SaveGame, IsPlainOldData)
+	float                                              ExtentX;                                                  // 0x0030(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+	float                                              ExtentY;                                                  // 0x0034(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
+	float                                              ExtentZ;                                                  // 0x0038(0x0004) (Edit, ZeroConstructor, SaveGame, IsPlainOldData)
 };
 
 // ScriptStruct CoreUObject.InterpCurveFloat
@@ -621,6 +621,16 @@ struct FInterpCurvePointLinearColor
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
 };
 
+// ScriptStruct CoreUObject.InterpCurveLinearColor
+// 0x0018
+struct FInterpCurveLinearColor
+{
+	TArray<struct FInterpCurvePointLinearColor>        Points;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bIsLooped;                                                // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
+	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct CoreUObject.Transform
 // 0x0030
 struct alignas(16) FTransform
@@ -632,29 +642,12 @@ struct alignas(16) FTransform
 	unsigned char                                      UnknownData01[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct CoreUObject.InterpCurveLinearColor
-// 0x0018
-struct FInterpCurveLinearColor
-{
-	TArray<struct FInterpCurvePointLinearColor>        Points;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bIsLooped;                                                // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-	float                                              LoopKeyOffset;                                            // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct CoreUObject.RandomStream
 // 0x0008
 struct FRandomStream
 {
 	int                                                InitialSeed;                                              // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, SaveGame, IsPlainOldData)
 	int                                                Seed;                                                     // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct CoreUObject.DateTime
-// 0x0008
-struct FDateTime
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.FrameNumber
@@ -670,6 +663,13 @@ struct FFrameRate
 {
 	int                                                Numerator;                                                // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                Denominator;                                              // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct CoreUObject.DateTime
+// 0x0008
+struct FDateTime
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct CoreUObject.FrameTime
@@ -770,6 +770,14 @@ struct FInt32RangeBound
 	int                                                Value;                                                    // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct CoreUObject.FloatInterval
+// 0x0008
+struct FFloatInterval
+{
+	float                                              Min;                                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Max;                                                      // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct CoreUObject.Int32Range
 // 0x0010
 struct FInt32Range
@@ -784,14 +792,6 @@ struct FInt32Interval
 {
 	int                                                Min;                                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	int                                                Max;                                                      // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct CoreUObject.FloatInterval
-// 0x0008
-struct FFloatInterval
-{
-	float                                              Min;                                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Max;                                                      // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct CoreUObject.PolyglotTextData

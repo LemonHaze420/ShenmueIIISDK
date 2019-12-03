@@ -44,31 +44,31 @@ public:
 
 	bool CheckMinigameRotation(struct FRotator* Rotation);
 	class US3TalkComponent* GetTalkingMinigame();
-	bool TryPreTalkJump();
-	bool ShouldLookAtTalkCenter();
+	bool STATIC_TryPreTalkJump();
+	bool STATIC_ShouldLookAtTalkCenter();
 	struct FRotator CalcLookAtRotation(const struct FVector& Target);
 	void TryPostTeleportTurnaround(bool bTeleported);
 	bool CalcTurnAroundWithin();
 	void SetTurnAroundTarget(const struct FRotator& Rotator);
-	void TurnAroundTickFinish();
+	void STATIC_TurnAroundTickFinish();
 	struct FRotator GetLookAtCenterRotation();
 	void ForceFinishTurnAroundAuto();
-	void RemoveTurnAroundComponent();
-	void SetAdjustTurnAroundAngle();
-	void ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
+	void STATIC_RemoveTurnAroundComponent();
+	void STATIC_SetAdjustTurnAroundAngle();
+	void STATIC_ForceFinishTurnAround(bool bUpdateRotation, const struct FRotator& NewRotation);
 	void IsMultipleTalking(bool* IsTalking);
-	void ReturnPreTalkRotationActor();
+	void STATIC_ReturnPreTalkRotationActor();
 	void CachedPreTalkRotationActor();
-	void UpdateTurnAround(float Delta, bool* bFinish);
-	void IsTurnedAroundState(bool* bTurned);
-	void CanTurnAround(bool* bCan);
+	void STATIC_UpdateTurnAround(float Delta, bool* bFinish);
+	void STATIC_IsTurnedAroundState(bool* bTurned);
+	void STATIC_CanTurnAround(bool* bCan);
 	void ResetTurnAroundParamater();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void StartTurnAroundByRotation(float MotionDelayTime, const struct FRotator& TargetRotation, bool bAdjustTurnAroundAngle);
 	void StartTurnAroundByActor(float MotionDelayTime, class AActor* TargetActor, bool bAdjustTurnAroundAngle);
 	void InternalStartRotation(float Delay, const struct FRotator& TargetRotation, bool bAdjust);
 	void ExecuteUbergraph_BPC_TurnAround(int EntryPoint);
-	void OnFinishTurnAroundDispatcher__DelegateSignature(class UBPC_TurnAround_C* SelfTurnAroundComponent);
+	void STATIC_OnFinishTurnAroundDispatcher__DelegateSignature(class UBPC_TurnAround_C* SelfTurnAroundComponent);
 };
 
 

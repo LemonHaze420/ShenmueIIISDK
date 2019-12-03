@@ -33,14 +33,14 @@ public:
 	}
 
 
-	void GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value);
+	void STATIC_GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value);
 	void GetBottomPocketCount(int* Output);
 	void GetBottomPocket(int Dimension_1, int* Output);
-	struct FString GetItemID();
-	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
-	void UserConstructionScript();
+	struct FString STATIC_GetItemID();
+	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature();
 	void BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature();
 	void ResumeMiniGame(const struct FString& ResumeKeyword);
@@ -51,7 +51,7 @@ public:
 	void Finalize_Check();
 	void StartMiniGame();
 	void EnabledPlayerOnDecide();
-	void ExecuteUbergraph_BP_OD_Gacha(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_OD_Gacha(int EntryPoint);
 };
 
 

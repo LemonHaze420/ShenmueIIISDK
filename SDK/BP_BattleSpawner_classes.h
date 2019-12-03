@@ -30,16 +30,16 @@ public:
 	}
 
 
-	void EndBattle(TEnumAsByte<EBattleWinLoseResult> Result);
+	void STATIC_EndBattle(TEnumAsByte<EBattleWinLoseResult> Result);
 	void StartBattleTask_FromData(const struct FDataTableRowHandle& BattleId, const struct FName& WinEventID, const struct FName& LoseEventID, bool FadeBetweenModes, const struct FLinearColor& FadeColor, class ABP_BattleTaskBase_C** Task);
-	void RegisterMediator(class ABP_BattleMediatorBase_C* Mediator, bool Add);
-	void OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResult> Result);
-	void StartBattleTask(const struct FName& BattleId, const struct FName& LevelID, const struct FName& WinEventID, const struct FName& LoseEventID, bool FadeBetweenModes, class ABP_BattleMediatorBase_C* MediatorBase, const struct FLinearColor& FadeColor, class ABP_BattleTaskBase_C** Task);
-	void LaunchDebugBattleImpl();
-	void CheckBattleExist(bool* Exist);
-	void UserConstructionScript();
-	void LaunchDebugBattle();
-	void ExecuteUbergraph_BP_BattleSpawner(int EntryPoint);
+	void STATIC_RegisterMediator(class ABP_BattleMediatorBase_C* Mediator, bool Add);
+	void STATIC_OnBattleEndEvent(TEnumAsByte<EBattleWinLoseResult> Result);
+	void STATIC_StartBattleTask(const struct FName& BattleId, const struct FName& LevelID, const struct FName& WinEventID, const struct FName& LoseEventID, bool FadeBetweenModes, class ABP_BattleMediatorBase_C* MediatorBase, const struct FLinearColor& FadeColor, class ABP_BattleTaskBase_C** Task);
+	void STATIC_LaunchDebugBattleImpl();
+	void STATIC_CheckBattleExist(bool* Exist);
+	void STATIC_UserConstructionScript();
+	void STATIC_LaunchDebugBattle();
+	void STATIC_ExecuteUbergraph_BP_BattleSpawner(int EntryPoint);
 };
 
 

@@ -26,7 +26,7 @@ public:
 	}
 
 
-	bool Compare(const struct FName& A, const struct FName& B);
+	bool STATIC_Compare(const struct FName& A, const struct FName& B);
 };
 
 

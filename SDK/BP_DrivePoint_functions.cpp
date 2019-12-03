@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DrivePoint.BP_DrivePoint_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_DrivePoint_C::UserConstructionScript()
+void ABP_DrivePoint_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DrivePoint.BP_DrivePoint_C.UserConstructionScript");
 
 	ABP_DrivePoint_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void ABP_DrivePoint_C::UserConstructionScript()
 
 
 // Function BP_DrivePoint.BP_DrivePoint_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DrivePoint_C::ReceiveTick(float DeltaSeconds)
+void ABP_DrivePoint_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DrivePoint.BP_DrivePoint_C.ReceiveTick");
 
@@ -51,11 +52,11 @@ void ABP_DrivePoint_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_DrivePoint.BP_DrivePoint_C.ExecuteUbergraph_BP_DrivePoint
-// ()
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DrivePoint_C::ExecuteUbergraph_BP_DrivePoint(int EntryPoint)
+void ABP_DrivePoint_C::STATIC_ExecuteUbergraph_BP_DrivePoint(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DrivePoint.BP_DrivePoint_C.ExecuteUbergraph_BP_DrivePoint");
 

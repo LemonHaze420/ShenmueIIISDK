@@ -17,7 +17,7 @@ namespace SDK
 // Function BP_CutsceneManager.BP_CutsceneManager_C.SkipToEnd
 struct ABP_CutsceneManager_C_SkipToEnd_Params
 {
-	bool                                               Debug;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               DEBUG;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_CutsceneManager.BP_CutsceneManager_C.OnFinishedUnloadCutsceneLevelWithBattleLevelStreaming
@@ -347,7 +347,7 @@ struct ABP_CutsceneManager_C_IsLoadCompleted_Params
 struct ABP_CutsceneManager_C_FindCutscenePlayer_Params
 {
 	struct FName                                       CutsceneId;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	class ABP_CutscenePlayer_C*                        FoundPlayer;                                              // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
@@ -369,7 +369,7 @@ struct ABP_CutsceneManager_C_SetPlayInfo_Params
 struct ABP_CutsceneManager_C_FindPlayInfo_Params
 {
 	struct FName                                       CutsceneId;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               isFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               IsFound;                                                  // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 	int                                                Index;                                                    // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 

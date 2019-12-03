@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.CheckTableIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Static, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           In_Range                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestFishing_C::CheckTableIndex(int Index, int Length, bool* In_Range)
+void ABP_SubQuestFishing_C::STATIC_CheckTableIndex(int Index, int Length, bool* In_Range)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.CheckTableIndex");
 
@@ -40,7 +40,7 @@ void ABP_SubQuestFishing_C::CheckTableIndex(int Index, int Length, bool* In_Rang
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.CulcFlagValue
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Start_on_the_way               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            StartCount                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -71,7 +71,7 @@ void ABP_SubQuestFishing_C::CulcFlagValue(bool* Start_on_the_way, int* StartCoun
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.AddRandom
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintCallable, NetValidate)
 // Parameters:
 // bool                           Write                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -93,7 +93,7 @@ void ABP_SubQuestFishing_C::AddRandom(bool* Write)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.GetTableIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -119,7 +119,7 @@ void ABP_SubQuestFishing_C::GetTableIndex(int Index, int Length, int* change_ind
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.SetTimeChange
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetMulticast, Public, BlueprintPure, NetValidate)
 // Parameters:
 // int                            CountUp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Write                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -132,6 +132,7 @@ void ABP_SubQuestFishing_C::SetTimeChange(int CountUp, bool* Write)
 	params.CountUp = CountUp;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,7 +144,7 @@ void ABP_SubQuestFishing_C::SetTimeChange(int CountUp, bool* Write)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.CulcElapsedTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            CountUp                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -165,11 +166,11 @@ void ABP_SubQuestFishing_C::CulcElapsedTime(int* CountUp)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.GameTimeMark
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // bool                           StartMark                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestFishing_C::GameTimeMark(bool StartMark)
+void ABP_SubQuestFishing_C::STATIC_GameTimeMark(bool StartMark)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.GameTimeMark");
 
@@ -177,6 +178,7 @@ void ABP_SubQuestFishing_C::GameTimeMark(bool StartMark)
 	params.StartMark = StartMark;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -185,17 +187,18 @@ void ABP_SubQuestFishing_C::GameTimeMark(bool StartMark)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.isEventEnable
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestFishing_C::isEventEnable(bool* Enable)
+void ABP_SubQuestFishing_C::STATIC_isEventEnable(bool* Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.isEventEnable");
 
 	ABP_SubQuestFishing_C_isEventEnable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -207,15 +210,16 @@ void ABP_SubQuestFishing_C::isEventEnable(bool* Enable)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_SubQuestFishing_C::UserConstructionScript()
+void ABP_SubQuestFishing_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.UserConstructionScript");
 
 	ABP_SubQuestFishing_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -224,7 +228,7 @@ void ABP_SubQuestFishing_C::UserConstructionScript()
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.StartEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -238,6 +242,7 @@ void ABP_SubQuestFishing_C::StartEvent(int ArrayIndex, int SetFlags)
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -246,7 +251,7 @@ void ABP_SubQuestFishing_C::StartEvent(int ArrayIndex, int SetFlags)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -266,7 +271,7 @@ void ABP_SubQuestFishing_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.TimeChange
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // struct FName                   CutsceneName                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -286,9 +291,9 @@ void ABP_SubQuestFishing_C::TimeChange(const struct FName& CutsceneName)
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.Recharge
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_SubQuestFishing_C::Recharge()
+void ABP_SubQuestFishing_C::STATIC_Recharge()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.Recharge");
 
@@ -303,9 +308,9 @@ void ABP_SubQuestFishing_C::Recharge()
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.LoadStartIn
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_SubQuestFishing_C::LoadStartIn()
+void ABP_SubQuestFishing_C::STATIC_LoadStartIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.LoadStartIn");
 
@@ -320,9 +325,9 @@ void ABP_SubQuestFishing_C::LoadStartIn()
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, NetValidate)
 
-void ABP_SubQuestFishing_C::ReceiveBeginPlay()
+void ABP_SubQuestFishing_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.ReceiveBeginPlay");
 
@@ -337,11 +342,11 @@ void ABP_SubQuestFishing_C::ReceiveBeginPlay()
 
 
 // Function BP_SubQuestFishing.BP_SubQuestFishing_C.ExecuteUbergraph_BP_SubQuestFishing
-// ()
+// (Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SubQuestFishing_C::ExecuteUbergraph_BP_SubQuestFishing(int EntryPoint)
+void ABP_SubQuestFishing_C::STATIC_ExecuteUbergraph_BP_SubQuestFishing(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SubQuestFishing.BP_SubQuestFishing_C.ExecuteUbergraph_BP_SubQuestFishing");
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_Attach.BP_AnimNotify_Attach_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetResponse, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -35,13 +35,13 @@ struct FString UBP_AnimNotify_Attach_C::GetNotifyName()
 
 
 // Function BP_AnimNotify_Attach.BP_AnimNotify_Attach_C.Received_Notify
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBP_AnimNotify_Attach_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
+bool UBP_AnimNotify_Attach_C::STATIC_Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_Attach.BP_AnimNotify_Attach_C.Received_Notify");
 

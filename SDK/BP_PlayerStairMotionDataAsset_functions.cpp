@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_PlayerStairMotionDataAsset.BP_PlayerStairMotionDataAsset_C.GetLoopStartPoint
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UAnimMontage*            Montage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EM_LeftOrRight>    Foot                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBP_PlayerStairMotionDataAsset_C::GetLoopStartPoint(class UAnimMontage* Montage, TEnumAsByte<EM_LeftOrRight> Foot)
+float UBP_PlayerStairMotionDataAsset_C::STATIC_GetLoopStartPoint(class UAnimMontage* Montage, TEnumAsByte<EM_LeftOrRight> Foot)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerStairMotionDataAsset.BP_PlayerStairMotionDataAsset_C.GetLoopStartPoint");
 
@@ -29,6 +29,7 @@ float UBP_PlayerStairMotionDataAsset_C::GetLoopStartPoint(class UAnimMontage* Mo
 	params.Foot = Foot;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +40,7 @@ float UBP_PlayerStairMotionDataAsset_C::GetLoopStartPoint(class UAnimMontage* Mo
 
 
 // Function BP_PlayerStairMotionDataAsset.BP_PlayerStairMotionDataAsset_C.GetStopMotion
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           DirUp                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Right                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -64,13 +65,13 @@ class UAnimMontage* UBP_PlayerStairMotionDataAsset_C::GetStopMotion(bool DirUp, 
 
 
 // Function BP_PlayerStairMotionDataAsset.BP_PlayerStairMotionDataAsset_C.GetStartMotion
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           DirUp                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Right                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimMontage* UBP_PlayerStairMotionDataAsset_C::GetStartMotion(bool DirUp, bool Right)
+class UAnimMontage* UBP_PlayerStairMotionDataAsset_C::STATIC_GetStartMotion(bool DirUp, bool Right)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerStairMotionDataAsset.BP_PlayerStairMotionDataAsset_C.GetStartMotion");
 
@@ -79,6 +80,7 @@ class UAnimMontage* UBP_PlayerStairMotionDataAsset_C::GetStartMotion(bool DirUp,
 	params.Right = Right;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,13 +91,13 @@ class UAnimMontage* UBP_PlayerStairMotionDataAsset_C::GetStartMotion(bool DirUp,
 
 
 // Function BP_PlayerStairMotionDataAsset.BP_PlayerStairMotionDataAsset_C.GetLoopMotion
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           DirUp                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Run                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimMontage*            Montage                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_PlayerStairMotionDataAsset_C::GetLoopMotion(bool DirUp, bool Run, class UAnimMontage** Montage)
+void UBP_PlayerStairMotionDataAsset_C::STATIC_GetLoopMotion(bool DirUp, bool Run, class UAnimMontage** Montage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_PlayerStairMotionDataAsset.BP_PlayerStairMotionDataAsset_C.GetLoopMotion");
 

@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SoundManager.BP_SoundManager_C.EndSystemPause
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintPure)
 
-void ABP_SoundManager_C::EndSystemPause()
+void ABP_SoundManager_C::STATIC_EndSystemPause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.EndSystemPause");
 
@@ -31,7 +31,7 @@ void ABP_SoundManager_C::EndSystemPause()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.BeginSystemPause
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, Protected, NetServer, BlueprintCallable)
 
 void ABP_SoundManager_C::BeginSystemPause()
 {
@@ -40,6 +40,7 @@ void ABP_SoundManager_C::BeginSystemPause()
 	ABP_SoundManager_C_BeginSystemPause_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +49,7 @@ void ABP_SoundManager_C::BeginSystemPause()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ForbidStopAll
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetMulticast, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::ForbidStopAll()
 {
@@ -65,7 +66,7 @@ void ABP_SoundManager_C::ForbidStopAll()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetTalkVolume_Impl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Reset                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -85,12 +86,12 @@ void ABP_SoundManager_C::SetTalkVolume_Impl(bool Reset)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.StopWithDestroy
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Destroy                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::StopWithDestroy(const struct FName& ID, bool* Destroy)
+void ABP_SoundManager_C::STATIC_StopWithDestroy(const struct FName& ID, bool* Destroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.StopWithDestroy");
 
@@ -98,6 +99,7 @@ void ABP_SoundManager_C::StopWithDestroy(const struct FName& ID, bool* Destroy)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +111,7 @@ void ABP_SoundManager_C::StopWithDestroy(const struct FName& ID, bool* Destroy)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.EndCutscene_Impl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, NetMulticast, Protected, NetServer, BlueprintCallable)
 
 void ABP_SoundManager_C::EndCutscene_Impl()
 {
@@ -126,14 +128,14 @@ void ABP_SoundManager_C::EndCutscene_Impl()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.InitCutsceneSetting
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ESequenceSelectorType          Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::InitCutsceneSetting(class ABP_S3SoundPlayer_C* Player, class USoundAtomCue* Cue, const struct FName& ID, ESequenceSelectorType Type)
+void ABP_SoundManager_C::STATIC_InitCutsceneSetting(class ABP_S3SoundPlayer_C* Player, class USoundAtomCue* Cue, const struct FName& ID, ESequenceSelectorType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.InitCutsceneSetting");
 
@@ -152,9 +154,9 @@ void ABP_SoundManager_C::InitCutsceneSetting(class ABP_S3SoundPlayer_C* Player, 
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ForceGC
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, DLLImport, BlueprintEvent)
 
-void ABP_SoundManager_C::ForceGC()
+void ABP_SoundManager_C::STATIC_ForceGC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.ForceGC");
 
@@ -169,7 +171,7 @@ void ABP_SoundManager_C::ForceGC()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetSelector
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class ABP_S3SoundPlayer_C*     Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ESequenceSelectorType          Selector                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -191,14 +193,14 @@ void ABP_SoundManager_C::SetSelector(class ABP_S3SoundPlayer_C* Player, ESequenc
 
 
 // Function BP_SoundManager.BP_SoundManager_C.CreateNewPlayer
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Public, BlueprintCallable)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AutoDestroy                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AutoPlay                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3SoundPlayer_C*     Player                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::CreateNewPlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player)
+void ABP_SoundManager_C::STATIC_CreateNewPlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.CreateNewPlayer");
 
@@ -219,9 +221,9 @@ void ABP_SoundManager_C::CreateNewPlayer(class USoundAtomCue* Sound, bool AutoDe
 
 
 // Function BP_SoundManager.BP_SoundManager_C.DebugPrint
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, DLLImport, BlueprintEvent)
 
-void ABP_SoundManager_C::DebugPrint()
+void ABP_SoundManager_C::STATIC_DebugPrint()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.DebugPrint");
 
@@ -236,7 +238,7 @@ void ABP_SoundManager_C::DebugPrint()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetSystemVolume
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // ES3SoundVolume                 Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -256,7 +258,7 @@ void ABP_SoundManager_C::SetSystemVolume(ES3SoundVolume Type)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.CreatePlayerWithTransform
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USoundAttenuation*       Attenuation                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -288,7 +290,7 @@ void ABP_SoundManager_C::CreatePlayerWithTransform(class USoundAtomCue* Sound, c
 
 
 // Function BP_SoundManager.BP_SoundManager_C.StopAll
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::StopAll()
 {
@@ -305,7 +307,7 @@ void ABP_SoundManager_C::StopAll()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.PlayFromSequencer_Impl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SoundId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -315,7 +317,7 @@ void ABP_SoundManager_C::StopAll()
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, float StartTime, bool OneShot, float Volume, float Pitch)
+void ABP_SoundManager_C::STATIC_PlayFromSequencer_Impl(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, float StartTime, bool OneShot, float Volume, float Pitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.PlayFromSequencer_Impl");
 
@@ -329,6 +331,7 @@ void ABP_SoundManager_C::PlayFromSequencer_Impl(class USoundAtomCue* Cue, const 
 	params.Pitch = Pitch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -337,15 +340,16 @@ void ABP_SoundManager_C::PlayFromSequencer_Impl(class USoundAtomCue* Cue, const 
 
 
 // Function BP_SoundManager.BP_SoundManager_C.PermitPlayAll
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_SoundManager_C::PermitPlayAll()
+void ABP_SoundManager_C::STATIC_PermitPlayAll()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.PermitPlayAll");
 
 	ABP_SoundManager_C_PermitPlayAll_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +358,7 @@ void ABP_SoundManager_C::PermitPlayAll()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.GarbageCollection
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::GarbageCollection()
 {
@@ -371,7 +375,7 @@ void ABP_SoundManager_C::GarbageCollection()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetAtomSound
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class ABP_S3AtomSound_C*       Atom                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Register                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -393,11 +397,11 @@ void ABP_SoundManager_C::SetAtomSound(class ABP_S3AtomSound_C* Atom, bool Regist
 
 
 // Function BP_SoundManager.BP_SoundManager_C.StopTimerSound
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, MulticastDelegate, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::StopTimerSound(const struct FName& ID)
+void ABP_SoundManager_C::STATIC_StopTimerSound(const struct FName& ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.StopTimerSound");
 
@@ -405,6 +409,7 @@ void ABP_SoundManager_C::StopTimerSound(const struct FName& ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -413,12 +418,12 @@ void ABP_SoundManager_C::StopTimerSound(const struct FName& ID)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetTimerSound
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class ABP_S3AtomSoundTimer_C*  Timer                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Register                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::SetTimerSound(class ABP_S3AtomSoundTimer_C* Timer, bool Register)
+void ABP_SoundManager_C::STATIC_SetTimerSound(class ABP_S3AtomSoundTimer_C* Timer, bool Register)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.SetTimerSound");
 
@@ -427,6 +432,7 @@ void ABP_SoundManager_C::SetTimerSound(class ABP_S3AtomSoundTimer_C* Timer, bool
 	params.Register = Register;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -435,14 +441,14 @@ void ABP_SoundManager_C::SetTimerSound(class ABP_S3AtomSoundTimer_C* Timer, bool
 
 
 // Function BP_SoundManager.BP_SoundManager_C.CreatePlayer
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // class USoundAtomCue*           Sound                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AutoDestroy                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           AutoPlay                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3SoundPlayer_C*     Player                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::CreatePlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player)
+void ABP_SoundManager_C::STATIC_CreatePlayer(class USoundAtomCue* Sound, bool AutoDestroy, bool AutoPlay, class ABP_S3SoundPlayer_C** Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.CreatePlayer");
 
@@ -452,6 +458,7 @@ void ABP_SoundManager_C::CreatePlayer(class USoundAtomCue* Sound, bool AutoDestr
 	params.AutoPlay = AutoPlay;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -463,12 +470,12 @@ void ABP_SoundManager_C::CreatePlayer(class USoundAtomCue* Sound, bool AutoDestr
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetPlayer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class AS3SoundPlayer*          Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Register                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::SetPlayer(class AS3SoundPlayer* Player, bool Register)
+void ABP_SoundManager_C::STATIC_SetPlayer(class AS3SoundPlayer* Player, bool Register)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.SetPlayer");
 
@@ -485,12 +492,12 @@ void ABP_SoundManager_C::SetPlayer(class AS3SoundPlayer* Player, bool Register)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.PlayTimerSound
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, BlueprintCallable)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FS3SoundTimerParam      Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_SoundManager_C::PlayTimerSound(const struct FName& ID, const struct FS3SoundTimerParam& Param)
+void ABP_SoundManager_C::STATIC_PlayTimerSound(const struct FName& ID, const struct FS3SoundTimerParam& Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.PlayTimerSound");
 
@@ -507,7 +514,7 @@ void ABP_SoundManager_C::PlayTimerSound(const struct FName& ID, const struct FS3
 
 
 // Function BP_SoundManager.BP_SoundManager_C.GetAvailableComponent
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // class UAtomComponent*          Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -518,6 +525,7 @@ void ABP_SoundManager_C::GetAvailableComponent(class UAtomComponent** Component)
 	ABP_SoundManager_C_GetAvailableComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -529,7 +537,7 @@ void ABP_SoundManager_C::GetAvailableComponent(class UAtomComponent** Component)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.Play_Impl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -549,15 +557,16 @@ void ABP_SoundManager_C::Play_Impl(class USoundAtomCue* Cue)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_SoundManager_C::UserConstructionScript()
+void ABP_SoundManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.UserConstructionScript");
 
 	ABP_SoundManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -566,7 +575,7 @@ void ABP_SoundManager_C::UserConstructionScript()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::ReceiveBeginPlay()
 {
@@ -583,11 +592,11 @@ void ABP_SoundManager_C::ReceiveBeginPlay()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_SoundManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.ReceiveTick");
 
@@ -595,6 +604,7 @@ void ABP_SoundManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -603,11 +613,11 @@ void ABP_SoundManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.Play
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::Play(class USoundAtomCue* Cue)
+void ABP_SoundManager_C::STATIC_Play(class USoundAtomCue* Cue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.Play");
 
@@ -615,6 +625,7 @@ void ABP_SoundManager_C::Play(class USoundAtomCue* Cue)
 	params.Cue = Cue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -623,7 +634,7 @@ void ABP_SoundManager_C::Play(class USoundAtomCue* Cue)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.PlayFromSequencer
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   SoundId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -633,7 +644,7 @@ void ABP_SoundManager_C::Play(class USoundAtomCue* Cue)
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Pitch                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, bool bOneShot, float StartTime, float Volume, float Pitch)
+void ABP_SoundManager_C::STATIC_PlayFromSequencer(class USoundAtomCue* Cue, const struct FName& SoundId, ESequenceSelectorType Selector, bool bOneShot, float StartTime, float Volume, float Pitch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.PlayFromSequencer");
 
@@ -647,6 +658,7 @@ void ABP_SoundManager_C::PlayFromSequencer(class USoundAtomCue* Cue, const struc
 	params.Pitch = Pitch;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -655,11 +667,11 @@ void ABP_SoundManager_C::PlayFromSequencer(class USoundAtomCue* Cue, const struc
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_SoundManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.ReceiveEndPlay");
 
@@ -667,6 +679,7 @@ void ABP_SoundManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -675,11 +688,11 @@ void ABP_SoundManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReaso
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ChangeVolume
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // ES3SoundVolume                 Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::ChangeVolume(ES3SoundVolume Type)
+void ABP_SoundManager_C::STATIC_ChangeVolume(ES3SoundVolume Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.ChangeVolume");
 
@@ -687,6 +700,7 @@ void ABP_SoundManager_C::ChangeVolume(ES3SoundVolume Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -695,7 +709,7 @@ void ABP_SoundManager_C::ChangeVolume(ES3SoundVolume Type)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.StartFadeIn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::StartFadeIn()
 {
@@ -704,6 +718,7 @@ void ABP_SoundManager_C::StartFadeIn()
 	ABP_SoundManager_C_StartFadeIn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -712,7 +727,7 @@ void ABP_SoundManager_C::StartFadeIn()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.EndSequenser
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::EndSequenser()
 {
@@ -721,6 +736,7 @@ void ABP_SoundManager_C::EndSequenser()
 	ABP_SoundManager_C_EndSequenser_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -729,11 +745,11 @@ void ABP_SoundManager_C::EndSequenser()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetTalkVolume
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           bReset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::SetTalkVolume(bool bReset)
+void ABP_SoundManager_C::STATIC_SetTalkVolume(bool bReset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.SetTalkVolume");
 
@@ -741,6 +757,7 @@ void ABP_SoundManager_C::SetTalkVolume(bool bReset)
 	params.bReset = bReset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -749,7 +766,7 @@ void ABP_SoundManager_C::SetTalkVolume(bool bReset)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.BindFade
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::BindFade()
 {
@@ -758,6 +775,7 @@ void ABP_SoundManager_C::BindFade()
 	ABP_SoundManager_C_BindFade_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -766,11 +784,11 @@ void ABP_SoundManager_C::BindFade()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ChangePlayer
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // class APlayerController*       PlayerController               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::ChangePlayer(class APlayerController* PlayerController)
+void ABP_SoundManager_C::STATIC_ChangePlayer(class APlayerController* PlayerController)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.ChangePlayer");
 
@@ -778,6 +796,7 @@ void ABP_SoundManager_C::ChangePlayer(class APlayerController* PlayerController)
 	params.PlayerController = PlayerController;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -786,7 +805,7 @@ void ABP_SoundManager_C::ChangePlayer(class APlayerController* PlayerController)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.FinishFadeOut
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::FinishFadeOut()
 {
@@ -795,6 +814,7 @@ void ABP_SoundManager_C::FinishFadeOut()
 	ABP_SoundManager_C_FinishFadeOut_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -803,7 +823,7 @@ void ABP_SoundManager_C::FinishFadeOut()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.BeginPause
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::BeginPause()
 {
@@ -812,6 +832,7 @@ void ABP_SoundManager_C::BeginPause()
 	ABP_SoundManager_C_BeginPause_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -820,7 +841,7 @@ void ABP_SoundManager_C::BeginPause()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.EndPause
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_SoundManager_C::EndPause()
 {
@@ -837,11 +858,11 @@ void ABP_SoundManager_C::EndPause()
 
 
 // Function BP_SoundManager.BP_SoundManager_C.SetEnableFadePause
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, MulticastDelegate, Public, Private, DLLImport, BlueprintPure)
 // Parameters:
 // bool                           bEnable                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SoundManager_C::SetEnableFadePause(bool bEnable)
+void ABP_SoundManager_C::STATIC_SetEnableFadePause(bool bEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SoundManager.BP_SoundManager_C.SetEnableFadePause");
 
@@ -849,6 +870,7 @@ void ABP_SoundManager_C::SetEnableFadePause(bool bEnable)
 	params.bEnable = bEnable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -857,7 +879,7 @@ void ABP_SoundManager_C::SetEnableFadePause(bool bEnable)
 
 
 // Function BP_SoundManager.BP_SoundManager_C.ExecuteUbergraph_BP_SoundManager
-// ()
+// (Net, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

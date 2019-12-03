@@ -27,8 +27,8 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_ShowItemCameraBase(int EntryPoint);
 };
 

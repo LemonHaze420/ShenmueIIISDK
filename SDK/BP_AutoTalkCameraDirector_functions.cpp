@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.GetNextCutChangeTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          CutChangeTIme                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoTalkCameraDirector_C::GetNextCutChangeTime(float* CutChangeTIme)
+void ABP_AutoTalkCameraDirector_C::STATIC_GetNextCutChangeTime(float* CutChangeTIme)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.GetNextCutChangeTime");
 
 	ABP_AutoTalkCameraDirector_C_GetNextCutChangeTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_AutoTalkCameraDirector_C::GetNextCutChangeTime(float* CutChangeTIme)
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.PrintCameraInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_AutoCameraAnalizedInfo CameraInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -56,7 +57,7 @@ void ABP_AutoTalkCameraDirector_C::PrintCameraInfo(const struct FST_AutoCameraAn
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.SetCurrentCamera
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_AutoCameraAnalizedInfo Info                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -76,7 +77,7 @@ void ABP_AutoTalkCameraDirector_C::SetCurrentCamera(const struct FST_AutoCameraA
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.GetCurrentCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_AutoCameraAnalizedInfo ret                            (Parm, OutParm)
 
@@ -98,7 +99,7 @@ void ABP_AutoTalkCameraDirector_C::GetCurrentCamera(struct FST_AutoCameraAnalize
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.GetAllCamera
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Public, NetServer)
 // Parameters:
 // TArray<struct FST_AutoCameraAnalizedInfo> AnalizedInfo                   (Parm, OutParm, ZeroConstructor)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -123,7 +124,7 @@ void ABP_AutoTalkCameraDirector_C::GetAllCamera(TArray<struct FST_AutoCameraAnal
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.CalcNextCameraCut
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AutoTalkCameraDirector_C::CalcNextCameraCut()
 {
@@ -140,7 +141,7 @@ void ABP_AutoTalkCameraDirector_C::CalcNextCameraCut()
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.IsSimilarToCurrentCamera
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Public, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // struct FST_AutoCameraAnalizedInfo CameraInfo                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -164,12 +165,12 @@ void ABP_AutoTalkCameraDirector_C::IsSimilarToCurrentCamera(const struct FST_Aut
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.WhetherToChangeCamera
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   LookTargetCharacterID          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoTalkCameraDirector_C::WhetherToChangeCamera(const struct FName& LookTargetCharacterID, bool* Result)
+void ABP_AutoTalkCameraDirector_C::STATIC_WhetherToChangeCamera(const struct FName& LookTargetCharacterID, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.WhetherToChangeCamera");
 
@@ -188,7 +189,7 @@ void ABP_AutoTalkCameraDirector_C::WhetherToChangeCamera(const struct FName& Loo
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.GetSelectedCameras
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FST_AutoCameraSelectedResult> SelectedCameras                (Parm, OutParm, ZeroConstructor)
@@ -200,6 +201,7 @@ void ABP_AutoTalkCameraDirector_C::GetSelectedCameras(bool* Result, TArray<struc
 	ABP_AutoTalkCameraDirector_C_GetSelectedCameras_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,7 +215,7 @@ void ABP_AutoTalkCameraDirector_C::GetSelectedCameras(bool* Result, TArray<struc
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AutoTalkCameraDirector_C::UserConstructionScript()
 {
@@ -222,6 +224,7 @@ void ABP_AutoTalkCameraDirector_C::UserConstructionScript()
 	ABP_AutoTalkCameraDirector_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,7 +233,7 @@ void ABP_AutoTalkCameraDirector_C::UserConstructionScript()
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_AutoTalkCameraDirector_C::ReceiveBeginPlay()
 {
@@ -247,11 +250,11 @@ void ABP_AutoTalkCameraDirector_C::ReceiveBeginPlay()
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoTalkCameraDirector_C::ReceiveTick(float DeltaSeconds)
+void ABP_AutoTalkCameraDirector_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.ReceiveTick");
 
@@ -267,7 +270,7 @@ void ABP_AutoTalkCameraDirector_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.OnCameraChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_AutoTalkCameraDirector_C::OnCameraChanged()
 {
@@ -284,7 +287,7 @@ void ABP_AutoTalkCameraDirector_C::OnCameraChanged()
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.OnBeginTalkEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_AutoTalkCameraDirector_C::OnBeginTalkEvent()
 {
@@ -301,7 +304,7 @@ void ABP_AutoTalkCameraDirector_C::OnBeginTalkEvent()
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.OnEndTalkEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_AutoTalkCameraDirector_C::OnEndTalkEvent()
 {
@@ -318,11 +321,11 @@ void ABP_AutoTalkCameraDirector_C::OnEndTalkEvent()
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.OnSkipTalkTask
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          SkipTaskDuration               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoTalkCameraDirector_C::OnSkipTalkTask(float SkipTaskDuration)
+void ABP_AutoTalkCameraDirector_C::STATIC_OnSkipTalkTask(float SkipTaskDuration)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.OnSkipTalkTask");
 
@@ -338,7 +341,7 @@ void ABP_AutoTalkCameraDirector_C::OnSkipTalkTask(float SkipTaskDuration)
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.OnInputQuestDebugKey
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_AutoTalkCameraDirector_C::OnInputQuestDebugKey()
 {
@@ -355,11 +358,11 @@ void ABP_AutoTalkCameraDirector_C::OnInputQuestDebugKey()
 
 
 // Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.ExecuteUbergraph_BP_AutoTalkCameraDirector
-// (HasDefaults)
+// (Net, NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AutoTalkCameraDirector_C::ExecuteUbergraph_BP_AutoTalkCameraDirector(int EntryPoint)
+void ABP_AutoTalkCameraDirector_C::STATIC_ExecuteUbergraph_BP_AutoTalkCameraDirector(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AutoTalkCameraDirector.BP_AutoTalkCameraDirector_C.ExecuteUbergraph_BP_AutoTalkCameraDirector");
 

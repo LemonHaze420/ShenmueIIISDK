@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRegenMax(Ratio)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutEnergy                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRegenMax_Ratio_(class UObject* __WorldContext, float* OutEnergy)
+void UBPF_Energy_C::BPF_GetPlayerEnergyRegenMax_Ratio_(class UObject* __WorldContext, float* OutEnergy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRegenMax(Ratio)");
 
@@ -27,6 +27,7 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRegenMax_Ratio_(class UObject* __W
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRegenMax_Ratio_(class UObject* __W
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_ReducePlayerEnergy(Orbs)
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // float                          Orbs                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -60,7 +61,7 @@ void UBPF_Energy_C::STATIC_BPF_ReducePlayerEnergy_Orbs_(float Orbs, class UObjec
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_DrainEnergyByDeltaTime
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ParAmount                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -86,7 +87,7 @@ void UBPF_Energy_C::STATIC_BPF_DrainEnergyByDeltaTime(float DeltaTime, float Par
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyDrainMinPoints
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -99,6 +100,7 @@ float UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyDrainMinPoints(class UObject* __W
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +111,7 @@ float UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyDrainMinPoints(class UObject* __W
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerMaxEnergyPoints
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -122,6 +124,7 @@ float UBPF_Energy_C::STATIC_BPF_GetPlayerMaxEnergyPoints(class UObject* __WorldC
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,12 +135,12 @@ float UBPF_Energy_C::STATIC_BPF_GetPlayerMaxEnergyPoints(class UObject* __WorldC
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_SetPlayerEnergy(Ratio)
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // float                          Ratio                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_SetPlayerEnergy_Ratio_(float Ratio, class UObject* __WorldContext)
+void UBPF_Energy_C::BPF_SetPlayerEnergy_Ratio_(float Ratio, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_SetPlayerEnergy(Ratio)");
 
@@ -154,12 +157,12 @@ void UBPF_Energy_C::STATIC_BPF_SetPlayerEnergy_Ratio_(float Ratio, class UObject
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_SetPlayerEnergy(Points)
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, MulticastDelegate, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_SetPlayerEnergy_Points_(float Amount, class UObject* __WorldContext)
+void UBPF_Energy_C::BPF_SetPlayerEnergy_Points_(float Amount, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_SetPlayerEnergy(Points)");
 
@@ -176,7 +179,7 @@ void UBPF_Energy_C::STATIC_BPF_SetPlayerEnergy_Points_(float Amount, class UObje
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyMultiplier
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -199,12 +202,12 @@ float UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyMultiplier(class UObject* __World
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_IsEnergySystemValid
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPF_Energy_C::STATIC_BPF_IsEnergySystemValid(class UObject* __WorldContext)
+bool UBPF_Energy_C::BPF_IsEnergySystemValid(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_IsEnergySystemValid");
 
@@ -222,11 +225,11 @@ bool UBPF_Energy_C::STATIC_BPF_IsEnergySystemValid(class UObject* __WorldContext
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRegenRate
-// (Static, Public, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, Delegate, NetServer, NetClient)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRegenRate(class UObject* __WorldContext)
+void UBPF_Energy_C::BPF_GetPlayerEnergyRegenRate(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRegenRate");
 
@@ -234,6 +237,7 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRegenRate(class UObject* __WorldCo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,7 +246,7 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRegenRate(class UObject* __WorldCo
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyPoints
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Points                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -266,7 +270,7 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyPoints(class UObject* __WorldConte
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRegenMax(Points)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Protected, DLLImport, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutEnergy                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -290,11 +294,11 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRegenMax_Points_(class UObject* __
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_SetPlayerEnergyToMax
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_SetPlayerEnergyToMax(class UObject* __WorldContext)
+void UBPF_Energy_C::BPF_SetPlayerEnergyToMax(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_SetPlayerEnergyToMax");
 
@@ -310,12 +314,12 @@ void UBPF_Energy_C::STATIC_BPF_SetPlayerEnergyToMax(class UObject* __WorldContex
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRange(Ratio)
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, NetServer, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Range                          (Parm, OutParm, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRange_Ratio_(class UObject* __WorldContext, struct FVector2D* Range)
+void UBPF_Energy_C::BPF_GetPlayerEnergyRange_Ratio_(class UObject* __WorldContext, struct FVector2D* Range)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRange(Ratio)");
 
@@ -334,7 +338,7 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRange_Ratio_(class UObject* __Worl
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_ReducePlayerEnergy
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // float                          Amount                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -356,7 +360,7 @@ void UBPF_Energy_C::STATIC_BPF_ReducePlayerEnergy(float Amount, class UObject* _
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRange(Points)
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Static, Public, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Range                          (Parm, OutParm, IsPlainOldData)
@@ -380,12 +384,12 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRange_Points_(class UObject* __Wor
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_AddPlayerEnergy(float)
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, Protected, NetServer, NetClient, DLLImport)
 // Parameters:
 // float                          Amt                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_AddPlayerEnergy_float_(float Amt, class UObject* __WorldContext)
+void UBPF_Energy_C::BPF_AddPlayerEnergy_float_(float Amt, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_AddPlayerEnergy(float)");
 
@@ -402,7 +406,7 @@ void UBPF_Energy_C::STATIC_BPF_AddPlayerEnergy_float_(float Amt, class UObject* 
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerEnergyRatio
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Ratio                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -426,7 +430,7 @@ void UBPF_Energy_C::STATIC_BPF_GetPlayerEnergyRatio(class UObject* __WorldContex
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_IsPlayerEnergyMax
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -449,12 +453,12 @@ bool UBPF_Energy_C::STATIC_BPF_IsPlayerEnergyMax(class UObject* __WorldContext)
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_AddPlayerEnergy(Int)
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // int                            Amt                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Energy_C::STATIC_BPF_AddPlayerEnergy_Int_(int Amt, class UObject* __WorldContext)
+void UBPF_Energy_C::BPF_AddPlayerEnergy_Int_(int Amt, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Energy.BPF_Energy_C.BPF_AddPlayerEnergy(Int)");
 
@@ -463,6 +467,7 @@ void UBPF_Energy_C::STATIC_BPF_AddPlayerEnergy_Int_(int Amt, class UObject* __Wo
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -471,7 +476,7 @@ void UBPF_Energy_C::STATIC_BPF_AddPlayerEnergy_Int_(int Amt, class UObject* __Wo
 
 
 // Function BPF_Energy.BPF_Energy_C.BPF_GetPlayerBaseMaxEnergy
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Max                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)

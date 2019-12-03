@@ -40,17 +40,17 @@ public:
 
 	void CheckBGM();
 	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
-	void FinishShopping();
-	void DispKS();
-	void ReceiveBeginPlay();
-	void FinishShopNoBuy();
-	void SwitchDoBuy_Shop(bool DoBuy);
-	void SwitchDoBuy_Pawnsh(bool DoBuy);
-	void SwitchDoBuy_Exchange(bool DoBuy);
-	void buyEnd();
-	void noBuyEnd();
-	void SwitchDoBuy_SetEchange(bool DoBuy);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_FinishShopping();
+	void STATIC_DispKS();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_FinishShopNoBuy();
+	void STATIC_SwitchDoBuy_Shop(bool DoBuy);
+	void STATIC_SwitchDoBuy_Pawnsh(bool DoBuy);
+	void STATIC_SwitchDoBuy_Exchange(bool DoBuy);
+	void STATIC_buyEnd();
+	void STATIC_noBuyEnd();
+	void STATIC_SwitchDoBuy_SetEchange(bool DoBuy);
 	void ExecuteUbergraph_BP_ShopEventManager(int EntryPoint);
 	void endBuy__DelegateSignature();
 	void endNoBuy__DelegateSignature();

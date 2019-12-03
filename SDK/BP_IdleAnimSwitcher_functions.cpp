@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.EndIdle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            IdleVariation                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void UBP_IdleAnimSwitcher_C::EndIdle(int* IdleVariation)
 
 
 // Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.UpdateIdle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            IdleVariation                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -60,11 +60,11 @@ void UBP_IdleAnimSwitcher_C::UpdateIdle(float DeltaSeconds, int* IdleVariation)
 
 
 // Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.StartIdle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            IdleVariation                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UBP_IdleAnimSwitcher_C::StartIdle(int* IdleVariation)
+void UBP_IdleAnimSwitcher_C::STATIC_StartIdle(int* IdleVariation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_IdleAnimSwitcher.BP_IdleAnimSwitcher_C.StartIdle");
 

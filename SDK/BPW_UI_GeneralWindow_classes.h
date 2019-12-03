@@ -37,11 +37,11 @@ public:
 
 	void GetDataString(const struct FName& Label, struct FString* String);
 	void CenterButton(bool RightButton);
-	void SetupButton(const struct FST_GeneralWindow_Button& Data, bool Right);
+	void STATIC_SetupButton(const struct FST_GeneralWindow_Button& Data, bool Right);
 	void SetData();
 	void PreConstruct(bool IsDesignTime);
-	void Construct();
-	void ExecuteUbergraph_BPW_UI_GeneralWindow(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow(int EntryPoint);
 };
 
 

@@ -47,10 +47,10 @@ public:
 	}
 
 
-	bool ShouldDelayHPCheckFor(TEnumAsByte<EBattleWinLoseResult> Result);
+	bool STATIC_ShouldDelayHPCheckFor(TEnumAsByte<EBattleWinLoseResult> Result);
 	void ConvertActorsToIDs();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_BattleConditions(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_BattleConditions(int EntryPoint);
 };
 
 

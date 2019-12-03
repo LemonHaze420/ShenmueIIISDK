@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ItemViewer_ViewItem.BP_ItemViewer_ViewItem_C.SetItemData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UStaticMesh*             NewMesh                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ItemViewer_ViewItem_C::SetItemData(class UStaticMesh* NewMesh)
+void ABP_ItemViewer_ViewItem_C::STATIC_SetItemData(class UStaticMesh* NewMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ItemViewer_ViewItem.BP_ItemViewer_ViewItem_C.SetItemData");
 
@@ -34,7 +34,7 @@ void ABP_ItemViewer_ViewItem_C::SetItemData(class UStaticMesh* NewMesh)
 
 
 // Function BP_ItemViewer_ViewItem.BP_ItemViewer_ViewItem_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_ItemViewer_ViewItem_C::UserConstructionScript()
 {
@@ -43,6 +43,7 @@ void ABP_ItemViewer_ViewItem_C::UserConstructionScript()
 	ABP_ItemViewer_ViewItem_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +52,7 @@ void ABP_ItemViewer_ViewItem_C::UserConstructionScript()
 
 
 // Function BP_ItemViewer_ViewItem.BP_ItemViewer_ViewItem_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -71,7 +72,7 @@ void ABP_ItemViewer_ViewItem_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_ItemViewer_ViewItem.BP_ItemViewer_ViewItem_C.ExecuteUbergraph_BP_ItemViewer_ViewItem
-// ()
+// (Exec, Native, Event, NetResponse, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -83,6 +84,7 @@ void ABP_ItemViewer_ViewItem_C::ExecuteUbergraph_BP_ItemViewer_ViewItem(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

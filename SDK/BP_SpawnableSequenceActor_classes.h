@@ -28,11 +28,11 @@ public:
 
 
 	void UserConstructionScript();
-	void PlaySequenece(bool bRestart);
+	void STATIC_PlaySequenece(bool bRestart);
 	void PlayLoopingSequenece(bool bRestart, int NumLoops);
-	void StopSequenece();
+	void STATIC_StopSequenece();
 	void PauseSequence();
-	void ExecuteUbergraph_BP_SpawnableSequenceActor(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_SpawnableSequenceActor(int EntryPoint);
 };
 
 

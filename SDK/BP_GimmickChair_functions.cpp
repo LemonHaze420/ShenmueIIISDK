@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GimmickChair.BP_GimmickChair_C.GetChairForm
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // EChairForm                     ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ EChairForm ABP_GimmickChair_C::GetChairForm()
 	ABP_GimmickChair_C_GetChairForm_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ EChairForm ABP_GimmickChair_C::GetChairForm()
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.CalcStartRotation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Delegate, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FRotator                GoalRotate                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -60,7 +61,7 @@ struct FRotator ABP_GimmickChair_C::CalcStartRotation(int Index, const struct FR
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.GetNearStartPointDist
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, Private, Delegate, DLLImport, Const)
 // Parameters:
 // int                            poiIdx                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            stIdx                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -90,7 +91,7 @@ float ABP_GimmickChair_C::GetNearStartPointDist(const struct FTransform& Point, 
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.CalcZLocation
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Private, Delegate, BlueprintPure, NetValidate)
 
 void ABP_GimmickChair_C::CalcZLocation()
 {
@@ -107,7 +108,7 @@ void ABP_GimmickChair_C::CalcZLocation()
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.IsCharacterSitting
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, MulticastDelegate, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // class AS3Character*            Character                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -120,6 +121,7 @@ bool ABP_GimmickChair_C::IsCharacterSitting(class AS3Character* Character)
 	params.Character = Character;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,7 +132,7 @@ bool ABP_GimmickChair_C::IsCharacterSitting(class AS3Character* Character)
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.ModeChangeRequest
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FS3ChairResultStruct    Result                         (Parm, OutParm)
 // EChairOccupied                 Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -154,6 +156,7 @@ bool ABP_GimmickChair_C::ModeChangeRequest(EChairOccupied Mode, class AS3Charact
 	params.moveDist = moveDist;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,7 +170,7 @@ bool ABP_GimmickChair_C::ModeChangeRequest(EChairOccupied Mode, class AS3Charact
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.CreatePointData
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // struct FVector                 Point                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FS3ChairPointStruct     S3ChairPointStruct             (Parm, OutParm)
@@ -191,7 +194,7 @@ void ABP_GimmickChair_C::CreatePointData(const struct FVector& Point, struct FS3
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.GetOccupied
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // EChairOccupied                 Occupied                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -204,6 +207,7 @@ void ABP_GimmickChair_C::GetOccupied(int Index, EChairOccupied* Occupied)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -215,14 +219,14 @@ void ABP_GimmickChair_C::GetOccupied(int Index, EChairOccupied* Occupied)
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.SetOccupied
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // EChairOccupied                 Occupied                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AS3Character*            Target_Chara                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GimmickChair_C::SetOccupied(int Index, const struct FName& CharaName, EChairOccupied Occupied, class AS3Character* Target_Chara)
+void ABP_GimmickChair_C::STATIC_SetOccupied(int Index, const struct FName& CharaName, EChairOccupied Occupied, class AS3Character* Target_Chara)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GimmickChair.BP_GimmickChair_C.SetOccupied");
 
@@ -233,6 +237,7 @@ void ABP_GimmickChair_C::SetOccupied(int Index, const struct FName& CharaName, E
 	params.Target_Chara = Target_Chara;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -241,7 +246,7 @@ void ABP_GimmickChair_C::SetOccupied(int Index, const struct FName& CharaName, E
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.Reserve
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, Public, Private, Protected, HasDefaults, BlueprintEvent, BlueprintPure, NetValidate)
 // Parameters:
 // struct FVector                 Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -269,11 +274,11 @@ void ABP_GimmickChair_C::Reserve(const struct FVector& Location, const struct FN
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.SitDown
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, MulticastDelegate, Public, Private, NetServer, HasDefaults, BlueprintPure, NetValidate)
 // Parameters:
 // class ABP_S3Character_C*       Character                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_GimmickChair_C::SitDown(class ABP_S3Character_C* Character)
+void ABP_GimmickChair_C::STATIC_SitDown(class ABP_S3Character_C* Character)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GimmickChair.BP_GimmickChair_C.SitDown");
 
@@ -289,7 +294,7 @@ void ABP_GimmickChair_C::SitDown(class ABP_S3Character_C* Character)
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.CalcChairWidth
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, NetValidate)
 
 void ABP_GimmickChair_C::CalcChairWidth()
 {
@@ -306,7 +311,7 @@ void ABP_GimmickChair_C::CalcChairWidth()
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.CalcPointOffset
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Private, Delegate, BlueprintPure, NetValidate)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Offset                         (Parm, OutParm, IsPlainOldData)
@@ -319,6 +324,7 @@ void ABP_GimmickChair_C::CalcPointOffset(int Index, struct FVector* Offset)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -330,7 +336,7 @@ void ABP_GimmickChair_C::CalcPointOffset(int Index, struct FVector* Offset)
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetMulticast, Private, NetServer, HasDefaults, BlueprintPure, NetValidate)
 
 void ABP_GimmickChair_C::UserConstructionScript()
 {
@@ -347,15 +353,16 @@ void ABP_GimmickChair_C::UserConstructionScript()
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_GimmickChair_C::ReceiveBeginPlay()
+void ABP_GimmickChair_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_GimmickChair.BP_GimmickChair_C.ReceiveBeginPlay");
 
 	ABP_GimmickChair_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -364,7 +371,7 @@ void ABP_GimmickChair_C::ReceiveBeginPlay()
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -376,6 +383,7 @@ void ABP_GimmickChair_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -384,7 +392,7 @@ void ABP_GimmickChair_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_GimmickChair.BP_GimmickChair_C.ExecuteUbergraph_BP_GimmickChair
-// (HasDefaults)
+// (Exec, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

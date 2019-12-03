@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_ST_ArrowMaskGradation.WBP_ST_ArrowMaskGradation_C.SetMainImageSize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVector2D               InSize                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UWBP_ST_ArrowMaskGradation_C::SetMainImageSize(const struct FVector2D& InSize)
+void UWBP_ST_ArrowMaskGradation_C::STATIC_SetMainImageSize(const struct FVector2D& InSize)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ST_ArrowMaskGradation.WBP_ST_ArrowMaskGradation_C.SetMainImageSize");
 
@@ -34,11 +34,11 @@ void UWBP_ST_ArrowMaskGradation_C::SetMainImageSize(const struct FVector2D& InSi
 
 
 // Function WBP_ST_ArrowMaskGradation.WBP_ST_ArrowMaskGradation_C.AddMainImagePos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               Add                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UWBP_ST_ArrowMaskGradation_C::AddMainImagePos(const struct FVector2D& Add)
+void UWBP_ST_ArrowMaskGradation_C::STATIC_AddMainImagePos(const struct FVector2D& Add)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ST_ArrowMaskGradation.WBP_ST_ArrowMaskGradation_C.AddMainImagePos");
 
@@ -54,7 +54,7 @@ void UWBP_ST_ArrowMaskGradation_C::AddMainImagePos(const struct FVector2D& Add)
 
 
 // Function WBP_ST_ArrowMaskGradation.WBP_ST_ArrowMaskGradation_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,6 +66,7 @@ void UWBP_ST_ArrowMaskGradation_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +75,11 @@ void UWBP_ST_ArrowMaskGradation_C::PreConstruct(bool IsDesignTime)
 
 
 // Function WBP_ST_ArrowMaskGradation.WBP_ST_ArrowMaskGradation_C.ExecuteUbergraph_WBP_ST_ArrowMaskGradation
-// ()
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_ST_ArrowMaskGradation_C::ExecuteUbergraph_WBP_ST_ArrowMaskGradation(int EntryPoint)
+void UWBP_ST_ArrowMaskGradation_C::STATIC_ExecuteUbergraph_WBP_ST_ArrowMaskGradation(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ST_ArrowMaskGradation.WBP_ST_ArrowMaskGradation_C.ExecuteUbergraph_WBP_ST_ArrowMaskGradation");
 

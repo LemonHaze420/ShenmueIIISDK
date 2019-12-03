@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_ExChangeEffItem.wgt_ExChangeEffItem_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void Uwgt_ExChangeEffItem_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_ExChangeEffItem.wgt_ExChangeEffItem_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, DLLImport)
 
 void Uwgt_ExChangeEffItem_C::Construct()
 {
@@ -43,6 +43,7 @@ void Uwgt_ExChangeEffItem_C::Construct()
 	Uwgt_ExChangeEffItem_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,12 +52,12 @@ void Uwgt_ExChangeEffItem_C::Construct()
 
 
 // Function wgt_ExChangeEffItem.wgt_ExChangeEffItem_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_ExChangeEffItem_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void Uwgt_ExChangeEffItem_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_ExChangeEffItem.wgt_ExChangeEffItem_C.Tick");
 
@@ -65,6 +66,7 @@ void Uwgt_ExChangeEffItem_C::Tick(const struct FGeometry& MyGeometry, float InDe
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,11 +75,11 @@ void Uwgt_ExChangeEffItem_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 
 // Function wgt_ExChangeEffItem.wgt_ExChangeEffItem_C.ExecuteUbergraph_wgt_ExChangeEffItem
-// (HasDefaults)
+// (Net, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_ExChangeEffItem_C::ExecuteUbergraph_wgt_ExChangeEffItem(int EntryPoint)
+void Uwgt_ExChangeEffItem_C::STATIC_ExecuteUbergraph_wgt_ExChangeEffItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_ExChangeEffItem.wgt_ExChangeEffItem_C.ExecuteUbergraph_wgt_ExChangeEffItem");
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.UpdateAnimationState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void UBPC_QTESelectComponent_C::UpdateAnimationState()
 {
@@ -31,15 +31,16 @@ void UBPC_QTESelectComponent_C::UpdateAnimationState()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.DebugQTEForceSuccessUpdateInternal
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTESelectComponent_C::DebugQTEForceSuccessUpdateInternal()
+void UBPC_QTESelectComponent_C::STATIC_DebugQTEForceSuccessUpdateInternal()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.DebugQTEForceSuccessUpdateInternal");
 
 	UBPC_QTESelectComponent_C_DebugQTEForceSuccessUpdateInternal_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +49,11 @@ void UBPC_QTESelectComponent_C::DebugQTEForceSuccessUpdateInternal()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.GetLengthBeforeCountInputLimitTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Static, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_QTESelectComponent_C::GetLengthBeforeCountInputLimitTime()
+float UBPC_QTESelectComponent_C::STATIC_GetLengthBeforeCountInputLimitTime()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.GetLengthBeforeCountInputLimitTime");
 
@@ -69,7 +70,7 @@ float UBPC_QTESelectComponent_C::GetLengthBeforeCountInputLimitTime()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.IsInputedOther
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Native, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -80,6 +81,7 @@ bool UBPC_QTESelectComponent_C::IsInputedOther()
 	UBPC_QTESelectComponent_C_IsInputedOther_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,13 +92,13 @@ bool UBPC_QTESelectComponent_C::IsInputedOther()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.SetupQTE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InLeftAction                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   InRightAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   InSuccessAction                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTESelectComponent_C::SetupQTE(const struct FName& InLeftAction, const struct FName& InRightAction, const struct FName& InSuccessAction)
+void UBPC_QTESelectComponent_C::STATIC_SetupQTE(const struct FName& InLeftAction, const struct FName& InRightAction, const struct FName& InSuccessAction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.SetupQTE");
 
@@ -114,7 +116,7 @@ void UBPC_QTESelectComponent_C::SetupQTE(const struct FName& InLeftAction, const
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.PlayInputFailedAnimation
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPC_QTESelectComponent_C::PlayInputFailedAnimation()
 {
@@ -123,6 +125,7 @@ void UBPC_QTESelectComponent_C::PlayInputFailedAnimation()
 	UBPC_QTESelectComponent_C_PlayInputFailedAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,11 +134,11 @@ void UBPC_QTESelectComponent_C::PlayInputFailedAnimation()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.PlayInputSuccessAnimation
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           InRight                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTESelectComponent_C::PlayInputSuccessAnimation(bool InRight)
+void UBPC_QTESelectComponent_C::STATIC_PlayInputSuccessAnimation(bool InRight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.PlayInputSuccessAnimation");
 
@@ -151,7 +154,7 @@ void UBPC_QTESelectComponent_C::PlayInputSuccessAnimation(bool InRight)
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.IsPlayingInAnimation
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -172,15 +175,16 @@ bool UBPC_QTESelectComponent_C::IsPlayingInAnimation()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.PlayTimeUpFailedAnimation
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTESelectComponent_C::PlayTimeUpFailedAnimation()
+void UBPC_QTESelectComponent_C::STATIC_PlayTimeUpFailedAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.PlayTimeUpFailedAnimation");
 
 	UBPC_QTESelectComponent_C_PlayTimeUpFailedAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -189,15 +193,16 @@ void UBPC_QTESelectComponent_C::PlayTimeUpFailedAnimation()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.PlayInAnimation
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTESelectComponent_C::PlayInAnimation()
+void UBPC_QTESelectComponent_C::STATIC_PlayInAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.PlayInAnimation");
 
 	UBPC_QTESelectComponent_C_PlayInAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -206,11 +211,11 @@ void UBPC_QTESelectComponent_C::PlayInAnimation()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.SetTimeGaugeRate
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          InGaugeRate                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_QTESelectComponent_C::SetTimeGaugeRate(float InGaugeRate)
+void UBPC_QTESelectComponent_C::STATIC_SetTimeGaugeRate(float InGaugeRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.SetTimeGaugeRate");
 
@@ -226,7 +231,7 @@ void UBPC_QTESelectComponent_C::SetTimeGaugeRate(float InGaugeRate)
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.ExecuteInputAction
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   InInputAction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -238,6 +243,7 @@ void UBPC_QTESelectComponent_C::ExecuteInputAction(const struct FName& InInputAc
 	params.InInputAction = InInputAction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -246,7 +252,7 @@ void UBPC_QTESelectComponent_C::ExecuteInputAction(const struct FName& InInputAc
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetMulticast, Public, Protected, NetServer)
 
 void UBPC_QTESelectComponent_C::Reset()
 {
@@ -263,9 +269,9 @@ void UBPC_QTESelectComponent_C::Reset()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.Finalize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBPC_QTESelectComponent_C::Finalize()
+void UBPC_QTESelectComponent_C::STATIC_Finalize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.Finalize");
 
@@ -280,7 +286,7 @@ void UBPC_QTESelectComponent_C::Finalize()
 
 
 // Function BPC_QTESelectComponent.BPC_QTESelectComponent_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPC_QTESelectComponent_C::Initialize()
 {
@@ -289,6 +295,7 @@ void UBPC_QTESelectComponent_C::Initialize()
 	UBPC_QTESelectComponent_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

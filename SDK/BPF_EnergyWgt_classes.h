@@ -27,7 +27,7 @@ public:
 
 	void STATIC_GetAdventureBarColorEnum(class UObject* __WorldContext, TEnumAsByte<EHealthOrbColor>* AsEnum);
 	void STATIC_GetAdventureBarColor(class UObject* __WorldContext, struct FLinearColor* AsColor);
-	void STATIC_GetFormattedEnergyStrings(class UObject* __WorldContext, struct FString* HP, struct FString* MaxHP);
+	void GetFormattedEnergyStrings(class UObject* __WorldContext, struct FString* HP, struct FString* MaxHP);
 };
 
 

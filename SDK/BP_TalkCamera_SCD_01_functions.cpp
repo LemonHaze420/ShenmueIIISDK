@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCamera_SCD_01.BP_TalkCamera_SCD_01_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkCamera_SCD_01_C::UserConstructionScript()
+void ABP_TalkCamera_SCD_01_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SCD_01.BP_TalkCamera_SCD_01_C.UserConstructionScript");
 
 	ABP_TalkCamera_SCD_01_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_TalkCamera_SCD_01_C::UserConstructionScript()
 
 
 // Function BP_TalkCamera_SCD_01.BP_TalkCamera_SCD_01_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Event, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCamera_SCD_01_C::ReceiveBeginPlay()
 {
@@ -48,7 +49,7 @@ void ABP_TalkCamera_SCD_01_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCamera_SCD_01.BP_TalkCamera_SCD_01_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, NetResponse, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,11 +69,11 @@ void ABP_TalkCamera_SCD_01_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCamera_SCD_01.BP_TalkCamera_SCD_01_C.ExecuteUbergraph_BP_TalkCamera_SCD_01
-// ()
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCamera_SCD_01_C::ExecuteUbergraph_BP_TalkCamera_SCD_01(int EntryPoint)
+void ABP_TalkCamera_SCD_01_C::STATIC_ExecuteUbergraph_BP_TalkCamera_SCD_01(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCamera_SCD_01.BP_TalkCamera_SCD_01_C.ExecuteUbergraph_BP_TalkCamera_SCD_01");
 
@@ -80,6 +81,7 @@ void ABP_TalkCamera_SCD_01_C::ExecuteUbergraph_BP_TalkCamera_SCD_01(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

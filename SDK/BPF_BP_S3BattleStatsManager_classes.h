@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_BPF_GetBPS3BattleStatsManager(class UObject* __WorldContext, class UBP_S3BattleStatsManager_C** BPManager);
+	void BPF_GetBPS3BattleStatsManager(class UObject* __WorldContext, class UBP_S3BattleStatsManager_C** BPManager);
 };
 
 

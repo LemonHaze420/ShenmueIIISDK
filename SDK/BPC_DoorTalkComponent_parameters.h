@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.getActionType
-struct UBPC_DoorTalkComponent_C_getActionType_Params
+// Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.GetActionType
+struct UBPC_DoorTalkComponent_C_GetActionType_Params
 {
 	bool                                               Sight;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FS3DetectActionParam>                Params;                                                   // (Parm, OutParm, ZeroConstructor)

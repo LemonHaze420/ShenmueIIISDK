@@ -17,7 +17,9 @@ namespace SDK
 class UBP_AnimNotifyState_Invincible_C : public UBP_AnimNotifyState_Base_C
 {
 public:
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+	TEnumAsByte<EBattleInvincibleType>                 Type;                                                     // 0x0031(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
+	float                                              SuperArmorHP;                                             // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,6 +29,11 @@ public:
 
 
 	struct FString GetNotifyName();
+	bool STATIC_IsForceGuardMotion();
+	bool STATIC_IsVirtualGuardAction();
+	bool IsInvincible();
+	void IsSuperArmorEffective(float Damage, bool* bLock);
+	void GetNotifyID(struct FName* NotifyID);
 };
 
 

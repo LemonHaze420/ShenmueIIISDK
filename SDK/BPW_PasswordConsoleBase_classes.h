@@ -50,22 +50,22 @@ public:
 	}
 
 
-	void SetInPasswordEdit(bool bValue);
-	struct FName GetPasswordAsLabel();
+	void STATIC_SetInPasswordEdit(bool bValue);
+	struct FName STATIC_GetPasswordAsLabel();
 	void SetWidgetText(class UTextBlock* Widget, const struct FName& Label);
-	void SetInitialText();
-	void MakeCommonDialogParam(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, int FontSize, TArray<struct FName>* Labels, struct FST_GeneralWindowParam* Param);
+	void STATIC_SetInitialText();
+	void STATIC_MakeCommonDialogParam(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, int FontSize, TArray<struct FName>* Labels, struct FST_GeneralWindowParam* Param);
 	void MakeTextArray(TArray<struct FName>* LabelList);
-	struct FText GetText(const struct FName& Label, ES3TextPathType Type);
-	void DispSecondDialog();
-	void DispFirstDialog(bool Success);
+	struct FText STATIC_GetText(const struct FName& Label, ES3TextPathType Type);
+	void STATIC_DispSecondDialog();
+	void STATIC_DispFirstDialog(bool Success);
 	void PushRightButton();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void BndEvt__EditableTextBox_174_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod);
-	void FirstDialogEnd(class AActor* Actor);
-	void SecondDialogEnd(class AActor* Actor);
-	void Construct();
-	void ExecuteUbergraph_BPW_PasswordConsoleBase(int EntryPoint);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_BndEvt__EditableTextBox_174_K2Node_ComponentBoundEvent_0_OnEditableTextBoxCommittedEvent__DelegateSignature(const struct FText& Text, TEnumAsByte<ETextCommit> CommitMethod);
+	void STATIC_FirstDialogEnd(class AActor* Actor);
+	void STATIC_SecondDialogEnd(class AActor* Actor);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_BPW_PasswordConsoleBase(int EntryPoint);
 };
 
 

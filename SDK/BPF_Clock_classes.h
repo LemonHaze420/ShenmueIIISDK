@@ -25,8 +25,8 @@ public:
 	}
 
 
-	ESlateVisibility STATIC_CheckClockVisibility(class UObject* __WorldContext);
-	void STATIC_SetClockVisibility(bool Visible, class UObject* __WorldContext);
+	ESlateVisibility CheckClockVisibility(class UObject* __WorldContext);
+	void SetClockVisibility(bool Visible, class UObject* __WorldContext);
 };
 
 

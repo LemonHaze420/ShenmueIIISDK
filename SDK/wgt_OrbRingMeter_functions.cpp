@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetForegroundVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_OrbRingMeter_C::SetForegroundVisible(bool Visible)
+void Uwgt_OrbRingMeter_C::STATIC_SetForegroundVisible(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetForegroundVisible");
 
@@ -26,6 +26,7 @@ void Uwgt_OrbRingMeter_C::SetForegroundVisible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void Uwgt_OrbRingMeter_C::SetForegroundVisible(bool Visible)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetColorByEnum
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Private, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EHealthOrbColor>   Color                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -54,7 +55,7 @@ void Uwgt_OrbRingMeter_C::SetColorByEnum(TEnumAsByte<EHealthOrbColor> Color)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.SetBackgroundTexture
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UTexture2D*              Background                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,6 +67,7 @@ void Uwgt_OrbRingMeter_C::SetBackgroundTexture(class UTexture2D* Background)
 	params.Background = Background;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +76,11 @@ void Uwgt_OrbRingMeter_C::SetBackgroundTexture(class UTexture2D* Background)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_OrbRingMeter_C::PreConstruct(bool IsDesignTime)
+void Uwgt_OrbRingMeter_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.PreConstruct");
 
@@ -86,6 +88,7 @@ void Uwgt_OrbRingMeter_C::PreConstruct(bool IsDesignTime)
 	params.IsDesignTime = IsDesignTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +97,7 @@ void Uwgt_OrbRingMeter_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_OrbRingMeter.wgt_OrbRingMeter_C.ExecuteUbergraph_wgt_OrbRingMeter
-// ()
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -106,6 +109,7 @@ void Uwgt_OrbRingMeter_C::ExecuteUbergraph_wgt_OrbRingMeter(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

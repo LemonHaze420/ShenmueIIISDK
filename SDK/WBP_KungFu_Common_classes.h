@@ -67,24 +67,24 @@ public:
 
 	void SetEnabledMasterImage(bool Enabled);
 	void UpdateKungFuLevelInfo();
-	void ChangeKungFuNameToNext();
-	void SetCurrentTimeRate(float TimeRate);
+	void STATIC_ChangeKungFuNameToNext();
+	void STATIC_SetCurrentTimeRate(float TimeRate);
 	struct FText Get_KungFuName_Text_1();
 	void SetKungFuImage(TEnumAsByte<E_MiniGame_KungFuType> Type);
-	void SetArrowSettings(float moveSpeed, float MoveTime, float IntervalTime);
+	void STATIC_SetArrowSettings(float moveSpeed, float MoveTime, float IntervalTIme);
 	void DisabledAllArrow();
 	void SetEnabledArrow(bool Enabled, bool Up, bool Left);
-	void UpdateImageAlpha(class UImage* Image, float TargetAlpha, float DeltaTime, bool* Reach);
-	void UpdateButtonUI(float DeltaTime);
-	void EnabledButtonIconAnim(bool bEnabled);
-	void Count_Check();
+	void STATIC_UpdateImageAlpha(class UImage* Image, float TargetAlpha, float DeltaTime, bool* Reach);
+	void STATIC_UpdateButtonUI(float DeltaTime);
+	void STATIC_EnabledButtonIconAnim(bool bEnabled);
+	void STATIC_Count_Check();
 	void AddPushCount(int AddCount);
-	void Construct();
+	void STATIC_Construct();
 	void Reset();
 	void Event_ChangeNextNameWithAnim();
-	void Event_MaxLevelMasterdAnim();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_WBP_KungFu_Common(int EntryPoint);
+	void STATIC_Event_MaxLevelMasterdAnim();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_ExecuteUbergraph_WBP_KungFu_Common(int EntryPoint);
 	void CountMAX__DelegateSignature();
 };
 

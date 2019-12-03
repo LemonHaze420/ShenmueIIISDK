@@ -25,11 +25,11 @@ public:
 	}
 
 
-	void STATIC_ForbidAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
-	void STATIC_PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
+	void ForbidAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
+	void PermitAllDetectAction(class AActor* Actor, class UObject* __WorldContext);
 	void STATIC_ForbidWindowUI(class AActor* Actor, class UObject* __WorldContext);
 	void STATIC_PermitWindowUI(class AActor* Actor, class UObject* __WorldContext);
-	void STATIC_getS3DetectAction(class UObject* __WorldContext, class ABP_S3DetectAction_C** BP_S3DetectAction);
+	void getS3DetectAction(class UObject* __WorldContext, class ABP_S3DetectAction_C** BP_S3DetectAction);
 };
 
 

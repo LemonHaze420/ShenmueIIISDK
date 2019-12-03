@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.ChangeFlag_Impl
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -36,7 +36,7 @@ void ABP_StreetFightManager_C::ChangeFlag_Impl(int Index, int flag)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.Activate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Mode                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -48,6 +48,7 @@ void ABP_StreetFightManager_C::Activate(int Mode)
 	params.Mode = Mode;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,17 +57,18 @@ void ABP_StreetFightManager_C::Activate(int Mode)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.RandomBox
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            NextIndex                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StreetFightManager_C::RandomBox(int* NextIndex)
+void ABP_StreetFightManager_C::STATIC_RandomBox(int* NextIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StreetFightManager.BP_StreetFightManager_C.RandomBox");
 
 	ABP_StreetFightManager_C_RandomBox_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +80,7 @@ void ABP_StreetFightManager_C::RandomBox(int* NextIndex)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.IsIgnoreStep
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, NetResponse, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Ignore                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -100,7 +102,7 @@ void ABP_StreetFightManager_C::IsIgnoreStep(bool* Ignore)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.CheckMainFlowBattle
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_StreetFightManager_C::CheckMainFlowBattle()
 {
@@ -117,17 +119,18 @@ void ABP_StreetFightManager_C::CheckMainFlowBattle()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.GetNextFighter
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, NetResponse, Static, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString ABP_StreetFightManager_C::GetNextFighter()
+struct FString ABP_StreetFightManager_C::STATIC_GetNextFighter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StreetFightManager.BP_StreetFightManager_C.GetNextFighter");
 
 	ABP_StreetFightManager_C_GetNextFighter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +141,7 @@ struct FString ABP_StreetFightManager_C::GetNextFighter()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.JudgeBattle
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // TEnumAsByte<Enum_StreetFightResult> Reselt                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -158,9 +161,9 @@ void ABP_StreetFightManager_C::JudgeBattle(TEnumAsByte<Enum_StreetFightResult> R
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.UpdateFighter
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_StreetFightManager_C::UpdateFighter()
+void ABP_StreetFightManager_C::STATIC_UpdateFighter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StreetFightManager.BP_StreetFightManager_C.UpdateFighter");
 
@@ -175,15 +178,16 @@ void ABP_StreetFightManager_C::UpdateFighter()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.UpdateReward
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_StreetFightManager_C::UpdateReward()
+void ABP_StreetFightManager_C::STATIC_UpdateReward()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StreetFightManager.BP_StreetFightManager_C.UpdateReward");
 
 	ABP_StreetFightManager_C_UpdateReward_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,11 +196,11 @@ void ABP_StreetFightManager_C::UpdateReward()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.IsChampion
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Event, Static, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Champion                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StreetFightManager_C::IsChampion(bool* Champion)
+void ABP_StreetFightManager_C::STATIC_IsChampion(bool* Champion)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StreetFightManager.BP_StreetFightManager_C.IsChampion");
 
@@ -214,7 +218,7 @@ void ABP_StreetFightManager_C::IsChampion(bool* Champion)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.Reset
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_StreetFightManager_C::Reset()
 {
@@ -231,7 +235,7 @@ void ABP_StreetFightManager_C::Reset()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.UpdateEntryMoney
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Delegate, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_StreetFightManager_C::UpdateEntryMoney()
 {
@@ -248,17 +252,18 @@ void ABP_StreetFightManager_C::UpdateEntryMoney()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.GetReward
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StreetFightManager_C::GetReward(int* Value)
+void ABP_StreetFightManager_C::STATIC_GetReward(int* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StreetFightManager.BP_StreetFightManager_C.GetReward");
 
 	ABP_StreetFightManager_C_GetReward_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -270,7 +275,7 @@ void ABP_StreetFightManager_C::GetReward(int* Value)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.ConvertMinite
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Time                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Minite                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -283,6 +288,7 @@ void ABP_StreetFightManager_C::ConvertMinite(float Time, int* Minite)
 	params.Time = Time;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -294,7 +300,7 @@ void ABP_StreetFightManager_C::ConvertMinite(float Time, int* Minite)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.UpdateCheckTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_StreetFightManager_C::UpdateCheckTime()
 {
@@ -303,6 +309,7 @@ void ABP_StreetFightManager_C::UpdateCheckTime()
 	ABP_StreetFightManager_C_UpdateCheckTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -311,7 +318,7 @@ void ABP_StreetFightManager_C::UpdateCheckTime()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_StreetFightManager_C::UserConstructionScript()
 {
@@ -328,7 +335,7 @@ void ABP_StreetFightManager_C::UserConstructionScript()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_StreetFightManager_C::ReceiveBeginPlay()
 {
@@ -337,6 +344,7 @@ void ABP_StreetFightManager_C::ReceiveBeginPlay()
 	ABP_StreetFightManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -345,7 +353,7 @@ void ABP_StreetFightManager_C::ReceiveBeginPlay()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.FinishStreetFight
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<Enum_StreetFightResult> Result                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -357,6 +365,7 @@ void ABP_StreetFightManager_C::FinishStreetFight(TEnumAsByte<Enum_StreetFightRes
 	params.Result = Result;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -365,7 +374,7 @@ void ABP_StreetFightManager_C::FinishStreetFight(TEnumAsByte<Enum_StreetFightRes
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -377,6 +386,7 @@ void ABP_StreetFightManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -385,7 +395,7 @@ void ABP_StreetFightManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.BeginTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_StreetFightManager_C::BeginTalk()
 {
@@ -394,6 +404,7 @@ void ABP_StreetFightManager_C::BeginTalk()
 	ABP_StreetFightManager_C_BeginTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -402,7 +413,7 @@ void ABP_StreetFightManager_C::BeginTalk()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.EndTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void ABP_StreetFightManager_C::EndTalk()
 {
@@ -419,7 +430,7 @@ void ABP_StreetFightManager_C::EndTalk()
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.ChangeFlag
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -433,6 +444,7 @@ void ABP_StreetFightManager_C::ChangeFlag(int ArrayIndex, int SetFlags)
 	params.SetFlags = SetFlags;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -441,7 +453,7 @@ void ABP_StreetFightManager_C::ChangeFlag(int ArrayIndex, int SetFlags)
 
 
 // Function BP_StreetFightManager.BP_StreetFightManager_C.ExecuteUbergraph_BP_StreetFightManager
-// ()
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -453,6 +465,7 @@ void ABP_StreetFightManager_C::ExecuteUbergraph_BP_StreetFightManager(int EntryP
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

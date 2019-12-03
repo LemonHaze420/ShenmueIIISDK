@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficultyParams
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, Const)
+// (Net, Exec, NetMulticast, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_BattleDifficultyParams Out_Row                        (Parm, OutParm)
 
-void UBPF_BattleDifficulty_C::STATIC_BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row)
+void UBPF_BattleDifficulty_C::BPF_GetPlayerBattleDifficultyParams(class UObject* __WorldContext, struct FST_BattleDifficultyParams* Out_Row)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficultyParams");
 
@@ -38,7 +38,7 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_GetPlayerBattleDifficultyParams(class U
 
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_StepPlayerBattleDifficulty
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EUpOrDown>         Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -52,6 +52,7 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_StepPlayerBattleDifficulty(TEnumAsByte<
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +61,7 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_StepPlayerBattleDifficulty(TEnumAsByte<
 
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_SetPlayerBattleDifficulty
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EBattleDifficulty> Difficulty                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -74,6 +75,7 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_SetPlayerBattleDifficulty(TEnumAsByte<E
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -82,12 +84,12 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_SetPlayerBattleDifficulty(TEnumAsByte<E
 
 
 // Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficulty
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EBattleDifficulty> Difficulty                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BattleDifficulty_C::STATIC_BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty)
+void UBPF_BattleDifficulty_C::BPF_GetPlayerBattleDifficulty(class UObject* __WorldContext, TEnumAsByte<EBattleDifficulty>* Difficulty)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleDifficulty.BPF_BattleDifficulty_C.BPF_GetPlayerBattleDifficulty");
 
@@ -95,6 +97,7 @@ void UBPF_BattleDifficulty_C::STATIC_BPF_GetPlayerBattleDifficulty(class UObject
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

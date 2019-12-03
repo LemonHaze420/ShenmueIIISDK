@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTL_Launch_NPC.BTL_Launch_NPC_C.GetDataFromAsset
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, Protected, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UBTL_NPCDataAsset*       Asset                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_Launch_NPC_C::GetDataFromAsset(class UBTL_NPCDataAsset* Asset)
+void UBTL_Launch_NPC_C::STATIC_GetDataFromAsset(class UBTL_NPCDataAsset* Asset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_Launch_NPC.BTL_Launch_NPC_C.GetDataFromAsset");
 
@@ -26,6 +26,7 @@ void UBTL_Launch_NPC_C::GetDataFromAsset(class UBTL_NPCDataAsset* Asset)
 	params.Asset = Asset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UBTL_Launch_NPC_C::GetDataFromAsset(class UBTL_NPCDataAsset* Asset)
 
 
 // Function BTL_Launch_NPC.BTL_Launch_NPC_C.SetDefaultAsNeccessary
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UBTL_NPCDataAsset*       DefaultDataAsset               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -46,6 +47,7 @@ void UBTL_Launch_NPC_C::SetDefaultAsNeccessary(class UBTL_NPCDataAsset* DefaultD
 	params.DefaultDataAsset = DefaultDataAsset;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,11 +56,11 @@ void UBTL_Launch_NPC_C::SetDefaultAsNeccessary(class UBTL_NPCDataAsset* DefaultD
 
 
 // Function BTL_Launch_NPC.BTL_Launch_NPC_C.SetHardDataAsset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UBTL_NPCDataAsset*       Asset                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_Launch_NPC_C::SetHardDataAsset(class UBTL_NPCDataAsset* Asset)
+void UBTL_Launch_NPC_C::STATIC_SetHardDataAsset(class UBTL_NPCDataAsset* Asset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTL_Launch_NPC.BTL_Launch_NPC_C.SetHardDataAsset");
 
@@ -74,7 +76,7 @@ void UBTL_Launch_NPC_C::SetHardDataAsset(class UBTL_NPCDataAsset* Asset)
 
 
 // Function BTL_Launch_NPC.BTL_Launch_NPC_C.FinishedLoading__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBTL_Launch_NPC_C::FinishedLoading__DelegateSignature()
 {
@@ -83,6 +85,7 @@ void UBTL_Launch_NPC_C::FinishedLoading__DelegateSignature()
 	UBTL_Launch_NPC_C_FinishedLoading__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

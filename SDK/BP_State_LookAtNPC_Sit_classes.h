@@ -30,9 +30,9 @@ public:
 	}
 
 
-	void GetLookAngle(float* Angle);
-	void GetLookDistance(float* Distance);
-	void StateExit(float Delta, bool* bProcessing);
+	void STATIC_GetLookAngle(float* Angle);
+	void STATIC_GetLookDistance(float* Distance);
+	void STATIC_StateExit(float Delta, bool* bProcessing);
 	void StateUpdate(float Delta, bool* bDummy);
 	void StateEnter(float Delta, bool* bProcessing);
 };

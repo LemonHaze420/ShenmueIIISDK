@@ -17,7 +17,7 @@ namespace SDK
 class UBP_AnimNotifyTrigger_Base_C : public UAnimNotify
 {
 public:
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0038(0x0001) MISSED OFFSET
+	bool                                               Disable;                                                  // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -25,6 +25,9 @@ public:
 		return ptr;
 	}
 
+
+	void STATIC_GetNotifyID(struct FName* NotifyID);
+	bool Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation);
 };
 
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.DisableSoftwareCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
 
-void UBPW_AdventureCursorWindow_C::DisableSoftwareCursor()
+void UBPW_AdventureCursorWindow_C::STATIC_DisableSoftwareCursor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.DisableSoftwareCursor");
 
 	UBPW_AdventureCursorWindow_C_DisableSoftwareCursor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,15 +32,16 @@ void UBPW_AdventureCursorWindow_C::DisableSoftwareCursor()
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.OnMouseUp
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Private, BlueprintEvent, BlueprintPure)
 
-void UBPW_AdventureCursorWindow_C::OnMouseUp()
+void UBPW_AdventureCursorWindow_C::STATIC_OnMouseUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.OnMouseUp");
 
 	UBPW_AdventureCursorWindow_C_OnMouseUp_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,15 +50,16 @@ void UBPW_AdventureCursorWindow_C::OnMouseUp()
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.OnMouseDown
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, Private, BlueprintEvent, BlueprintPure)
 
-void UBPW_AdventureCursorWindow_C::OnMouseDown()
+void UBPW_AdventureCursorWindow_C::STATIC_OnMouseDown()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.OnMouseDown");
 
 	UBPW_AdventureCursorWindow_C_OnMouseDown_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +68,7 @@ void UBPW_AdventureCursorWindow_C::OnMouseDown()
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.UpdateSoftwareCursor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               MouseScreenSpace               (Parm, OutParm, IsPlainOldData)
 // struct FVector2D               VirtualAxii                    (Parm, OutParm, IsPlainOldData)
@@ -96,17 +99,18 @@ void UBPW_AdventureCursorWindow_C::UpdateSoftwareCursor(struct FVector2D* MouseS
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.CanTrapMouse
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, NetResponse, Static, Private, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPW_AdventureCursorWindow_C::CanTrapMouse()
+bool UBPW_AdventureCursorWindow_C::STATIC_CanTrapMouse()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.CanTrapMouse");
 
 	UBPW_AdventureCursorWindow_C_CanTrapMouse_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +121,7 @@ bool UBPW_AdventureCursorWindow_C::CanTrapMouse()
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.ConstrainViewportMousePosition
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Event, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -140,11 +144,11 @@ struct FVector2D UBPW_AdventureCursorWindow_C::ConstrainViewportMousePosition(co
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.EnableVirtualJoystick
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_AdventureCursorWindow_C::EnableVirtualJoystick(bool Enable)
+void UBPW_AdventureCursorWindow_C::STATIC_EnableVirtualJoystick(bool Enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.EnableVirtualJoystick");
 
@@ -152,6 +156,7 @@ void UBPW_AdventureCursorWindow_C::EnableVirtualJoystick(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,11 +165,11 @@ void UBPW_AdventureCursorWindow_C::EnableVirtualJoystick(bool Enable)
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.SetMouseCursorProperties
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           EnableWalkMode                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_AdventureCursorWindow_C::SetMouseCursorProperties(bool EnableWalkMode)
+void UBPW_AdventureCursorWindow_C::STATIC_SetMouseCursorProperties(bool EnableWalkMode)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.SetMouseCursorProperties");
 
@@ -180,18 +185,19 @@ void UBPW_AdventureCursorWindow_C::SetMouseCursorProperties(bool EnableWalkMode)
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.GetConstrainRect
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               Min                            (Parm, OutParm, IsPlainOldData)
 // struct FVector2D               Max                            (Parm, OutParm, IsPlainOldData)
 
-void UBPW_AdventureCursorWindow_C::GetConstrainRect(struct FVector2D* Min, struct FVector2D* Max)
+void UBPW_AdventureCursorWindow_C::STATIC_GetConstrainRect(struct FVector2D* Min, struct FVector2D* Max)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.GetConstrainRect");
 
 	UBPW_AdventureCursorWindow_C_GetConstrainRect_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,7 +211,7 @@ void UBPW_AdventureCursorWindow_C::GetConstrainRect(struct FVector2D* Min, struc
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.ConstrainAbsoluteMousePosition
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FEventReply             EventReply                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // struct FVector2D               Location                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -219,6 +225,7 @@ struct FEventReply UBPW_AdventureCursorWindow_C::ConstrainAbsoluteMousePosition(
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -232,15 +239,16 @@ struct FEventReply UBPW_AdventureCursorWindow_C::ConstrainAbsoluteMousePosition(
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, Private, BlueprintEvent, BlueprintPure)
 
-void UBPW_AdventureCursorWindow_C::Construct()
+void UBPW_AdventureCursorWindow_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.Construct");
 
 	UBPW_AdventureCursorWindow_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -249,7 +257,7 @@ void UBPW_AdventureCursorWindow_C::Construct()
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -263,6 +271,7 @@ void UBPW_AdventureCursorWindow_C::Tick(const struct FGeometry& MyGeometry, floa
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -271,11 +280,11 @@ void UBPW_AdventureCursorWindow_C::Tick(const struct FGeometry& MyGeometry, floa
 
 
 // Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.ExecuteUbergraph_BPW_AdventureCursorWindow
-// (HasDefaults)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_AdventureCursorWindow_C::ExecuteUbergraph_BPW_AdventureCursorWindow(int EntryPoint)
+void UBPW_AdventureCursorWindow_C::STATIC_ExecuteUbergraph_BPW_AdventureCursorWindow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_AdventureCursorWindow.BPW_AdventureCursorWindow_C.ExecuteUbergraph_BPW_AdventureCursorWindow");
 
@@ -283,6 +292,7 @@ void UBPW_AdventureCursorWindow_C::ExecuteUbergraph_BPW_AdventureCursorWindow(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

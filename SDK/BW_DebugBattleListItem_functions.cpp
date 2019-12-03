@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.SetFocusToButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBW_DebugBattleListItem_C::SetFocusToButton()
 {
@@ -23,6 +23,7 @@ void UBW_DebugBattleListItem_C::SetFocusToButton()
 	UBW_DebugBattleListItem_C_SetFocusToButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBW_DebugBattleListItem_C::SetFocusToButton()
 
 
 // Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBW_DebugBattleListItem_C::Construct()
 {
@@ -48,7 +49,7 @@ void UBW_DebugBattleListItem_C::Construct()
 
 
 // Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBW_DebugBattleListItem_C::BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature()
 {
@@ -65,7 +66,7 @@ void UBW_DebugBattleListItem_C::BndEvt__ItemButton_K2Node_ComponentBoundEvent_40
 
 
 // Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.OnAddedToFocusPath
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FFocusEvent             InFocusEvent                   (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -85,11 +86,11 @@ void UBW_DebugBattleListItem_C::OnAddedToFocusPath(const struct FFocusEvent& InF
 
 
 // Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.ExecuteUbergraph_BW_DebugBattleListItem
-// (HasDefaults)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, Delegate, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugBattleListItem_C::ExecuteUbergraph_BW_DebugBattleListItem(int EntryPoint)
+void UBW_DebugBattleListItem_C::STATIC_ExecuteUbergraph_BW_DebugBattleListItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.ExecuteUbergraph_BW_DebugBattleListItem");
 
@@ -105,7 +106,7 @@ void UBW_DebugBattleListItem_C::ExecuteUbergraph_BW_DebugBattleListItem(int Entr
 
 
 // Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.OnFocused__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // class US3Button*               Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -125,7 +126,7 @@ void UBW_DebugBattleListItem_C::OnFocused__DelegateSignature(class US3Button* Bu
 
 
 // Function BW_DebugBattleListItem.BW_DebugBattleListItem_C.OnStartBattle__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 
 void UBW_DebugBattleListItem_C::OnStartBattle__DelegateSignature()
 {

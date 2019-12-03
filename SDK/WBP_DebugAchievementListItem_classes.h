@@ -34,9 +34,9 @@ public:
 	}
 
 
-	void SetFocusToButton();
-	void Construct();
-	void BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_SetFocusToButton();
+	void STATIC_Construct();
+	void STATIC_BndEvt__Button_K2Node_ComponentBoundEvent_70_OnButtonClickedEvent__DelegateSignature();
 	void ExecuteUbergraph_WBP_DebugAchievementListItem(int EntryPoint);
 };
 

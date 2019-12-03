@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3_TagChara.BP_S3_TagChara_C.SetProfileFromTable
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, Private, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_S3_TagChara_C::SetProfileFromTable()
 {
@@ -23,6 +23,7 @@ void UBP_S3_TagChara_C::SetProfileFromTable()
 	UBP_S3_TagChara_C_SetProfileFromTable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void UBP_S3_TagChara_C::SetProfileFromTable()
 
 
 // Function BP_S3_TagChara.BP_S3_TagChara_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_S3_TagChara_C::ReceiveBeginPlay()
+void UBP_S3_TagChara_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_TagChara.BP_S3_TagChara_C.ReceiveBeginPlay");
 
@@ -48,11 +49,11 @@ void UBP_S3_TagChara_C::ReceiveBeginPlay()
 
 
 // Function BP_S3_TagChara.BP_S3_TagChara_C.ExecuteUbergraph_BP_S3_TagChara
-// ()
+// (NetReliable, Exec, Native, NetResponse, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3_TagChara_C::ExecuteUbergraph_BP_S3_TagChara(int EntryPoint)
+void UBP_S3_TagChara_C::STATIC_ExecuteUbergraph_BP_S3_TagChara(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_TagChara.BP_S3_TagChara_C.ExecuteUbergraph_BP_S3_TagChara");
 
@@ -60,6 +61,7 @@ void UBP_S3_TagChara_C::ExecuteUbergraph_BP_S3_TagChara(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

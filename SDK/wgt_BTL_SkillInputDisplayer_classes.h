@@ -41,15 +41,15 @@ public:
 
 
 	void SetInputWithShoulder(TEnumAsByte<EGamepadShoulder> Shoulder, TArray<struct FName>* InputActions);
-	void SetInputByActions(int StartIdx, TArray<struct FName>* InputActions);
+	void STATIC_SetInputByActions(int StartIdx, TArray<struct FName>* InputActions);
 	void CopyBoxSlotData(class UHorizontalBoxSlot* CopyFrom, class UHorizontalBoxSlot* CopyTo);
-	void HideInput();
-	void SetInput(EBTL_HoldInputType Option, TArray<struct FName>* InputActions);
-	void SetSkill_AttackLabel_(const struct FName& Attack);
-	void SetSkill_ItemLabel_(const struct FName& ItemName);
+	void STATIC_HideInput();
+	void STATIC_SetInput(EBTL_HoldInputType Option, TArray<struct FName>* InputActions);
+	void STATIC_SetSkill_AttackLabel_(const struct FName& Attack);
+	void STATIC_SetSkill_ItemLabel_(const struct FName& ItemName);
 	void SetSkillLibrary(class UBTL_CommandLibrary_C* Library);
-	void PreConstruct(bool IsDesignTime);
-	void Construct();
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_Construct();
 	void ExecuteUbergraph_wgt_BTL_SkillInputDisplayer(int EntryPoint);
 };
 

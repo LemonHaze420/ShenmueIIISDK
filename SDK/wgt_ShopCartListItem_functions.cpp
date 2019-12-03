@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_ShopCartListItem.wgt_ShopCartListItem_C.SetIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            item_no                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_ShopCartListItem_C::SetIcon(int item_no)
+void Uwgt_ShopCartListItem_C::STATIC_SetIcon(int item_no)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_ShopCartListItem.wgt_ShopCartListItem_C.SetIcon");
 
@@ -34,9 +34,9 @@ void Uwgt_ShopCartListItem_C::SetIcon(int item_no)
 
 
 // Function wgt_ShopCartListItem.wgt_ShopCartListItem_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void Uwgt_ShopCartListItem_C::Reset()
+void Uwgt_ShopCartListItem_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_ShopCartListItem.wgt_ShopCartListItem_C.Reset");
 
@@ -51,7 +51,7 @@ void Uwgt_ShopCartListItem_C::Reset()
 
 
 // Function wgt_ShopCartListItem.wgt_ShopCartListItem_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_ShopCartListItem_C::Construct()
 {
@@ -60,6 +60,7 @@ void Uwgt_ShopCartListItem_C::Construct()
 	Uwgt_ShopCartListItem_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,11 +69,11 @@ void Uwgt_ShopCartListItem_C::Construct()
 
 
 // Function wgt_ShopCartListItem.wgt_ShopCartListItem_C.ExecuteUbergraph_wgt_ShopCartListItem
-// ()
+// (NetReliable, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_ShopCartListItem_C::ExecuteUbergraph_wgt_ShopCartListItem(int EntryPoint)
+void Uwgt_ShopCartListItem_C::STATIC_ExecuteUbergraph_wgt_ShopCartListItem(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_ShopCartListItem.wgt_ShopCartListItem_C.ExecuteUbergraph_wgt_ShopCartListItem");
 

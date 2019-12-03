@@ -61,13 +61,13 @@ public:
 	bool ModeChangeRequest(EChairOccupied Mode, class AS3Character* Character, const struct FVector& pos, int poiIdx, int stIdx, float moveDist, struct FS3ChairResultStruct* Result);
 	void CreatePointData(const struct FVector& Point, struct FS3ChairPointStruct* S3ChairPointStruct);
 	void GetOccupied(int Index, EChairOccupied* Occupied);
-	void SetOccupied(int Index, const struct FName& CharaName, EChairOccupied Occupied, class AS3Character* Target_Chara);
+	void STATIC_SetOccupied(int Index, const struct FName& CharaName, EChairOccupied Occupied, class AS3Character* Target_Chara);
 	void Reserve(const struct FVector& Location, const struct FName& CharaName, class AS3Character* Target_Chara, int* Index);
-	void SitDown(class ABP_S3Character_C* Character);
+	void STATIC_SitDown(class ABP_S3Character_C* Character);
 	void CalcChairWidth();
 	void CalcPointOffset(int Index, struct FVector* Offset);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_GimmickChair(int EntryPoint);
 };

@@ -28,11 +28,11 @@ public:
 	}
 
 
-	struct FString AppendBaseText(const struct FString& String);
-	void DrawDebugText();
+	struct FString STATIC_AppendBaseText(const struct FString& String);
+	void STATIC_DrawDebugText();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BPC_ChairDebug(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_ChairDebug(int EntryPoint);
 };
 
 

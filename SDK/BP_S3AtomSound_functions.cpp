@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.SetLanguageSelector
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, DLLImport, BlueprintEvent)
 
 void ABP_S3AtomSound_C::SetLanguageSelector()
 {
@@ -23,6 +23,7 @@ void ABP_S3AtomSound_C::SetLanguageSelector()
 	ABP_S3AtomSound_C_SetLanguageSelector_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_S3AtomSound_C::SetLanguageSelector()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.SetSystemVolume
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // float                          Volume                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -51,9 +52,9 @@ void ABP_S3AtomSound_C::SetSystemVolume(float Volume)
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.Stop
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_S3AtomSound_C::Stop()
+void ABP_S3AtomSound_C::STATIC_Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.Stop");
 
@@ -68,9 +69,9 @@ void ABP_S3AtomSound_C::Stop()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.PlayOrActivate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_S3AtomSound_C::PlayOrActivate()
+void ABP_S3AtomSound_C::STATIC_PlayOrActivate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.PlayOrActivate");
 
@@ -85,12 +86,12 @@ void ABP_S3AtomSound_C::PlayOrActivate()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.SetDisableSound
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Disable                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSound_C::SetDisableSound(bool Disable, class AActor* Actor)
+void ABP_S3AtomSound_C::STATIC_SetDisableSound(bool Disable, class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.SetDisableSound");
 
@@ -99,6 +100,7 @@ void ABP_S3AtomSound_C::SetDisableSound(bool Disable, class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,7 +109,7 @@ void ABP_S3AtomSound_C::SetDisableSound(bool Disable, class AActor* Actor)
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.IsDisable
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Disabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -129,7 +131,7 @@ void ABP_S3AtomSound_C::IsDisable(bool* Disabled)
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.PermitPlay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_S3AtomSound_C::PermitPlay()
 {
@@ -138,6 +140,7 @@ void ABP_S3AtomSound_C::PermitPlay()
 	ABP_S3AtomSound_C_PermitPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,17 +149,18 @@ void ABP_S3AtomSound_C::PermitPlay()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.SetGameTimeSelector
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, Private, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Change                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSound_C::SetGameTimeSelector(bool* Change)
+void ABP_S3AtomSound_C::STATIC_SetGameTimeSelector(bool* Change)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.SetGameTimeSelector");
 
 	ABP_S3AtomSound_C_SetGameTimeSelector_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -168,7 +172,7 @@ void ABP_S3AtomSound_C::SetGameTimeSelector(bool* Change)
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.Replay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_S3AtomSound_C::Replay()
 {
@@ -185,7 +189,7 @@ void ABP_S3AtomSound_C::Replay()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.SetWeatherSelector
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Bind                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -197,6 +201,7 @@ void ABP_S3AtomSound_C::SetWeatherSelector(bool Bind)
 	params.Bind = Bind;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,15 +210,16 @@ void ABP_S3AtomSound_C::SetWeatherSelector(bool Bind)
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.SetSelectorLabel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintPure)
 
-void ABP_S3AtomSound_C::SetSelectorLabel()
+void ABP_S3AtomSound_C::STATIC_SetSelectorLabel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.SetSelectorLabel");
 
 	ABP_S3AtomSound_C_SetSelectorLabel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,9 +228,9 @@ void ABP_S3AtomSound_C::SetSelectorLabel()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_S3AtomSound_C::UserConstructionScript()
+void ABP_S3AtomSound_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.UserConstructionScript");
 
@@ -239,7 +245,7 @@ void ABP_S3AtomSound_C::UserConstructionScript()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.ChangeWeather
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_S3AtomSound_C::ChangeWeather()
 {
@@ -248,6 +254,7 @@ void ABP_S3AtomSound_C::ChangeWeather()
 	ABP_S3AtomSound_C_ChangeWeather_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,11 +263,11 @@ void ABP_S3AtomSound_C::ChangeWeather()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSound_C::ReceiveTick(float DeltaSeconds)
+void ABP_S3AtomSound_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.ReceiveTick");
 
@@ -276,7 +283,7 @@ void ABP_S3AtomSound_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Exec, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
 void ABP_S3AtomSound_C::ReceiveBeginPlay()
 {
@@ -285,6 +292,7 @@ void ABP_S3AtomSound_C::ReceiveBeginPlay()
 	ABP_S3AtomSound_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -293,11 +301,11 @@ void ABP_S3AtomSound_C::ReceiveBeginPlay()
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSound_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3AtomSound_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.ReceiveEndPlay");
 
@@ -313,11 +321,11 @@ void ABP_S3AtomSound_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason
 
 
 // Function BP_S3AtomSound.BP_S3AtomSound_C.ExecuteUbergraph_BP_S3AtomSound
-// ()
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AtomSound_C::ExecuteUbergraph_BP_S3AtomSound(int EntryPoint)
+void ABP_S3AtomSound_C::STATIC_ExecuteUbergraph_BP_S3AtomSound(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AtomSound.BP_S3AtomSound_C.ExecuteUbergraph_BP_S3AtomSound");
 

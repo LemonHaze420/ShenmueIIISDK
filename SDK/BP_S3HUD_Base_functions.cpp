@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.GetScreenFadeZOrder
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int ABP_S3HUD_Base_C::GetScreenFadeZOrder()
+int ABP_S3HUD_Base_C::STATIC_GetScreenFadeZOrder()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.GetScreenFadeZOrder");
 
@@ -35,7 +35,7 @@ int ABP_S3HUD_Base_C::GetScreenFadeZOrder()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.MakeCustomDialogParam
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintPure)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Labels                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -73,11 +73,11 @@ void ABP_S3HUD_Base_C::MakeCustomDialogParam(class AActor* Executor, int FontSiz
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ShowSaveMessage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ESaveMessageType>  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::ShowSaveMessage(TEnumAsByte<ESaveMessageType> Type)
+void ABP_S3HUD_Base_C::STATIC_ShowSaveMessage(TEnumAsByte<ESaveMessageType> Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ShowSaveMessage");
 
@@ -93,17 +93,18 @@ void ABP_S3HUD_Base_C::ShowSaveMessage(TEnumAsByte<ESaveMessageType> Type)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsVisibleLongLoading
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::IsVisibleLongLoading(bool* Visible)
+void ABP_S3HUD_Base_C::STATIC_IsVisibleLongLoading(bool* Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsVisibleLongLoading");
 
 	ABP_S3HUD_Base_C_IsVisibleLongLoading_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -115,7 +116,7 @@ void ABP_S3HUD_Base_C::IsVisibleLongLoading(bool* Visible)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.HideLongLoading
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent)
 
 void ABP_S3HUD_Base_C::HideLongLoading()
 {
@@ -132,7 +133,7 @@ void ABP_S3HUD_Base_C::HideLongLoading()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ShowLongLoading
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // ES3LoadingType                 Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -152,11 +153,11 @@ void ABP_S3HUD_Base_C::ShowLongLoading(ES3LoadingType Type)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsVisibleDialog
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3HUD_Base_C::IsVisibleDialog()
+bool ABP_S3HUD_Base_C::STATIC_IsVisibleDialog()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsVisibleDialog");
 
@@ -173,7 +174,7 @@ bool ABP_S3HUD_Base_C::IsVisibleDialog()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.GetMenuManagerActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -184,6 +185,7 @@ void ABP_S3HUD_Base_C::GetMenuManagerActor(class AActor** Actor)
 	ABP_S3HUD_Base_C_GetMenuManagerActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,11 +197,11 @@ void ABP_S3HUD_Base_C::GetMenuManagerActor(class AActor** Actor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.RemovePersistantWidget
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // class UUserWidget*             Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::RemovePersistantWidget(class UUserWidget* Widget)
+void ABP_S3HUD_Base_C::STATIC_RemovePersistantWidget(class UUserWidget* Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.RemovePersistantWidget");
 
@@ -215,12 +217,12 @@ void ABP_S3HUD_Base_C::RemovePersistantWidget(class UUserWidget* Widget)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.AddPersistantWidget
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, Delegate, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class UUserWidget*             Widget                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            ZOrder                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::AddPersistantWidget(class UUserWidget* Widget, int ZOrder)
+void ABP_S3HUD_Base_C::STATIC_AddPersistantWidget(class UUserWidget* Widget, int ZOrder)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.AddPersistantWidget");
 
@@ -229,6 +231,7 @@ void ABP_S3HUD_Base_C::AddPersistantWidget(class UUserWidget* Widget, int ZOrder
 	params.ZOrder = ZOrder;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -237,9 +240,9 @@ void ABP_S3HUD_Base_C::AddPersistantWidget(class UUserWidget* Widget, int ZOrder
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.CleanUpOnHUDChange
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 
-void ABP_S3HUD_Base_C::CleanUpOnHUDChange()
+void ABP_S3HUD_Base_C::STATIC_CleanUpOnHUDChange()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.CleanUpOnHUDChange");
 
@@ -254,7 +257,7 @@ void ABP_S3HUD_Base_C::CleanUpOnHUDChange()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.MakeCommonDialogParam
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, DLLImport, BlueprintPure)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Labels                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -289,7 +292,7 @@ void ABP_S3HUD_Base_C::MakeCommonDialogParam(class AActor* Executor, int FontSiz
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ForbidDetectAction_Impl
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -302,6 +305,7 @@ void ABP_S3HUD_Base_C::ForbidDetectAction_Impl(class AActor* Actor, bool* dummy)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -313,7 +317,7 @@ void ABP_S3HUD_Base_C::ForbidDetectAction_Impl(class AActor* Actor, bool* dummy)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.PermitDetectAction_Impl
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -326,6 +330,7 @@ void ABP_S3HUD_Base_C::PermitDetectAction_Impl(class AActor* Actor, bool* dummy)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -337,11 +342,11 @@ void ABP_S3HUD_Base_C::PermitDetectAction_Impl(class AActor* Actor, bool* dummy)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.CloseDialog_Impl
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::CloseDialog_Impl(class AActor* Actor)
+void ABP_S3HUD_Base_C::STATIC_CloseDialog_Impl(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.CloseDialog_Impl");
 
@@ -349,6 +354,7 @@ void ABP_S3HUD_Base_C::CloseDialog_Impl(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -357,14 +363,14 @@ void ABP_S3HUD_Base_C::CloseDialog_Impl(class AActor* Actor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.OpenCommonDialog_Impl
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Labels                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // ES3DialogType                  Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextJustify>      Justify                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::OpenCommonDialog_Impl(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, TArray<struct FName>* Labels)
+void ABP_S3HUD_Base_C::STATIC_OpenCommonDialog_Impl(class AActor* Executor, ES3DialogType Type, TEnumAsByte<ETextJustify> Justify, TArray<struct FName>* Labels)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.OpenCommonDialog_Impl");
 
@@ -385,12 +391,12 @@ void ABP_S3HUD_Base_C::OpenCommonDialog_Impl(class AActor* Executor, ES3DialogTy
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ForbidWindowUI_Impl
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::ForbidWindowUI_Impl(class AActor* Actor, bool* dummy)
+void ABP_S3HUD_Base_C::STATIC_ForbidWindowUI_Impl(class AActor* Actor, bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ForbidWindowUI_Impl");
 
@@ -409,7 +415,7 @@ void ABP_S3HUD_Base_C::ForbidWindowUI_Impl(class AActor* Actor, bool* dummy)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.PermitWindowUI_Impl
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, Public, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -433,11 +439,11 @@ void ABP_S3HUD_Base_C::PermitWindowUI_Impl(class AActor* Actor, bool* dummy)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.OpenCustomDialog
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FST_GeneralWindowParam  Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3HUD_Base_C::OpenCustomDialog(const struct FST_GeneralWindowParam& Param)
+void ABP_S3HUD_Base_C::STATIC_OpenCustomDialog(const struct FST_GeneralWindowParam& Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.OpenCustomDialog");
 
@@ -445,6 +451,7 @@ void ABP_S3HUD_Base_C::OpenCustomDialog(const struct FST_GeneralWindowParam& Par
 	params.Param = Param;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -453,12 +460,12 @@ void ABP_S3HUD_Base_C::OpenCustomDialog(const struct FST_GeneralWindowParam& Par
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.HideLoading
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, Delegate, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3HUD_Base_C::HideLoading(class AActor* Executor)
+bool ABP_S3HUD_Base_C::STATIC_HideLoading(class AActor* Executor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.HideLoading");
 
@@ -466,6 +473,7 @@ bool ABP_S3HUD_Base_C::HideLoading(class AActor* Executor)
 	params.Executor = Executor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -476,12 +484,12 @@ bool ABP_S3HUD_Base_C::HideLoading(class AActor* Executor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ShowLoading
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, Static, MulticastDelegate, Delegate, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3HUD_Base_C::ShowLoading(class AActor* Executor)
+bool ABP_S3HUD_Base_C::STATIC_ShowLoading(class AActor* Executor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ShowLoading");
 
@@ -489,6 +497,7 @@ bool ABP_S3HUD_Base_C::ShowLoading(class AActor* Executor)
 	params.Executor = Executor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -499,13 +508,13 @@ bool ABP_S3HUD_Base_C::ShowLoading(class AActor* Executor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ScreenFadeOut
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            FadeColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3HUD_Base_C::ScreenFadeOut(float FadeTime, const struct FLinearColor& FadeColor)
+bool ABP_S3HUD_Base_C::STATIC_ScreenFadeOut(float FadeTime, const struct FLinearColor& FadeColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ScreenFadeOut");
 
@@ -514,6 +523,7 @@ bool ABP_S3HUD_Base_C::ScreenFadeOut(float FadeTime, const struct FLinearColor& 
 	params.FadeColor = FadeColor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -524,12 +534,12 @@ bool ABP_S3HUD_Base_C::ScreenFadeOut(float FadeTime, const struct FLinearColor& 
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ScreenFadeInAutoColor
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3HUD_Base_C::ScreenFadeInAutoColor(float FadeTime)
+bool ABP_S3HUD_Base_C::STATIC_ScreenFadeInAutoColor(float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ScreenFadeInAutoColor");
 
@@ -547,7 +557,7 @@ bool ABP_S3HUD_Base_C::ScreenFadeInAutoColor(float FadeTime)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ScreenFadeIn
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            FadeColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -562,6 +572,7 @@ bool ABP_S3HUD_Base_C::ScreenFadeIn(float FadeTime, const struct FLinearColor& F
 	params.FadeColor = FadeColor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -572,9 +583,9 @@ bool ABP_S3HUD_Base_C::ScreenFadeIn(float FadeTime, const struct FLinearColor& F
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.DisableAutoFadeIn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::DisableAutoFadeIn()
+void ABP_S3HUD_Base_C::STATIC_DisableAutoFadeIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.DisableAutoFadeIn");
 
@@ -589,11 +600,11 @@ void ABP_S3HUD_Base_C::DisableAutoFadeIn()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsHiddenFade
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Exec, Event, NetResponse, Static, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           Hidden                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::IsHiddenFade(bool* Hidden)
+void ABP_S3HUD_Base_C::STATIC_IsHiddenFade(bool* Hidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsHiddenFade");
 
@@ -611,7 +622,7 @@ void ABP_S3HUD_Base_C::IsHiddenFade(bool* Hidden)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.GetFadeColor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // bool                           bIgnoreOpacity                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            ColorAndOpacity                (Parm, OutParm, IsPlainOldData)
@@ -624,6 +635,7 @@ void ABP_S3HUD_Base_C::GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* Co
 	params.bIgnoreOpacity = bIgnoreOpacity;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -635,7 +647,7 @@ void ABP_S3HUD_Base_C::GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* Co
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.InitOnHUDChange
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, MulticastDelegate, Public, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FLinearColor            InitialColor                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           EnableAutoFadeIn               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -650,6 +662,7 @@ void ABP_S3HUD_Base_C::InitOnHUDChange(const struct FLinearColor& InitialColor, 
 	params.EnableAutoFadeIn = EnableAutoFadeIn;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -661,9 +674,9 @@ void ABP_S3HUD_Base_C::InitOnHUDChange(const struct FLinearColor& InitialColor, 
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.CastChildActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::CastChildActor()
+void ABP_S3HUD_Base_C::STATIC_CastChildActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.CastChildActor");
 
@@ -678,17 +691,18 @@ void ABP_S3HUD_Base_C::CastChildActor()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.GetEyecatch
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Native, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class ABP_eyecatch_C*          BP_eyecatch                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::GetEyecatch(class ABP_eyecatch_C** BP_eyecatch)
+void ABP_S3HUD_Base_C::STATIC_GetEyecatch(class ABP_eyecatch_C** BP_eyecatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.GetEyecatch");
 
 	ABP_S3HUD_Base_C_GetEyecatch_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -700,9 +714,9 @@ void ABP_S3HUD_Base_C::GetEyecatch(class ABP_eyecatch_C** BP_eyecatch)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.DrawCameraLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_S3HUD_Base_C::DrawCameraLocation()
+void ABP_S3HUD_Base_C::STATIC_DrawCameraLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.DrawCameraLocation");
 
@@ -717,7 +731,7 @@ void ABP_S3HUD_Base_C::DrawCameraLocation()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsFinishedFadeOut
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent)
 // Parameters:
 // bool                           Finished                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -739,17 +753,18 @@ void ABP_S3HUD_Base_C::IsFinishedFadeOut(bool* Finished)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsScreenFading
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           Fading                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::IsScreenFading(bool* Fading)
+void ABP_S3HUD_Base_C::STATIC_IsScreenFading(bool* Fading)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.IsScreenFading");
 
 	ABP_S3HUD_Base_C_IsScreenFading_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -761,9 +776,9 @@ void ABP_S3HUD_Base_C::IsScreenFading(bool* Fading)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::UserConstructionScript()
+void ABP_S3HUD_Base_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.UserConstructionScript");
 
@@ -778,9 +793,9 @@ void ABP_S3HUD_Base_C::UserConstructionScript()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.TL_ScreenFade__FinishedFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::TL_ScreenFade__FinishedFunc()
+void ABP_S3HUD_Base_C::STATIC_TL_ScreenFade__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.TL_ScreenFade__FinishedFunc");
 
@@ -795,9 +810,9 @@ void ABP_S3HUD_Base_C::TL_ScreenFade__FinishedFunc()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.TL_ScreenFade__UpdateFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::TL_ScreenFade__UpdateFunc()
+void ABP_S3HUD_Base_C::STATIC_TL_ScreenFade__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.TL_ScreenFade__UpdateFunc");
 
@@ -812,9 +827,9 @@ void ABP_S3HUD_Base_C::TL_ScreenFade__UpdateFunc()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.BindSaveMessage
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::BindSaveMessage()
+void ABP_S3HUD_Base_C::STATIC_BindSaveMessage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.BindSaveMessage");
 
@@ -829,11 +844,11 @@ void ABP_S3HUD_Base_C::BindSaveMessage()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.StartAutoSave
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           bSystem                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::StartAutoSave(bool bSystem)
+void ABP_S3HUD_Base_C::STATIC_StartAutoSave(bool bSystem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.StartAutoSave");
 
@@ -841,6 +856,7 @@ void ABP_S3HUD_Base_C::StartAutoSave(bool bSystem)
 	params.bSystem = bSystem;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -849,11 +865,11 @@ void ABP_S3HUD_Base_C::StartAutoSave(bool bSystem)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.FinishAutoSave
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           bSuccess                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::FinishAutoSave(bool bSuccess)
+void ABP_S3HUD_Base_C::STATIC_FinishAutoSave(bool bSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.FinishAutoSave");
 
@@ -869,11 +885,11 @@ void ABP_S3HUD_Base_C::FinishAutoSave(bool bSuccess)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.FinishSystemSave
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           bSuccess                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::FinishSystemSave(bool bSuccess)
+void ABP_S3HUD_Base_C::STATIC_FinishSystemSave(bool bSuccess)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.FinishSystemSave");
 
@@ -889,9 +905,9 @@ void ABP_S3HUD_Base_C::FinishSystemSave(bool bSuccess)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.UnbindSaveMessage
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::UnbindSaveMessage()
+void ABP_S3HUD_Base_C::STATIC_UnbindSaveMessage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.UnbindSaveMessage");
 
@@ -906,13 +922,13 @@ void ABP_S3HUD_Base_C::UnbindSaveMessage()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.BeginScreenFade
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            FadeColor                      (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::BeginScreenFade(bool Visible, float FadeTime, const struct FLinearColor& FadeColor)
+void ABP_S3HUD_Base_C::STATIC_BeginScreenFade(bool Visible, float FadeTime, const struct FLinearColor& FadeColor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.BeginScreenFade");
 
@@ -922,6 +938,7 @@ void ABP_S3HUD_Base_C::BeginScreenFade(bool Visible, float FadeTime, const struc
 	params.FadeColor = FadeColor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -930,9 +947,9 @@ void ABP_S3HUD_Base_C::BeginScreenFade(bool Visible, float FadeTime, const struc
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::ReceiveBeginPlay()
+void ABP_S3HUD_Base_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ReceiveBeginPlay");
 
@@ -947,9 +964,9 @@ void ABP_S3HUD_Base_C::ReceiveBeginPlay()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::ReceiveDestroyed()
+void ABP_S3HUD_Base_C::STATIC_ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ReceiveDestroyed");
 
@@ -964,7 +981,7 @@ void ABP_S3HUD_Base_C::ReceiveDestroyed()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ReceiveDrawHUD
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Event, Public, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // int                            SizeX                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SizeY                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -986,15 +1003,16 @@ void ABP_S3HUD_Base_C::ReceiveDrawHUD(int SizeX, int SizeY)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.FinishedLoadLevel
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::FinishedLoadLevel()
+void ABP_S3HUD_Base_C::STATIC_FinishedLoadLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.FinishedLoadLevel");
 
 	ABP_S3HUD_Base_C_FinishedLoadLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1003,11 +1021,11 @@ void ABP_S3HUD_Base_C::FinishedLoadLevel()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.PermitWindowUI
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::PermitWindowUI(class AActor* Actor)
+void ABP_S3HUD_Base_C::STATIC_PermitWindowUI(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.PermitWindowUI");
 
@@ -1015,6 +1033,7 @@ void ABP_S3HUD_Base_C::PermitWindowUI(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1023,11 +1042,11 @@ void ABP_S3HUD_Base_C::PermitWindowUI(class AActor* Actor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ForbidWindowUI
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::ForbidWindowUI(class AActor* Actor)
+void ABP_S3HUD_Base_C::STATIC_ForbidWindowUI(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ForbidWindowUI");
 
@@ -1035,6 +1054,7 @@ void ABP_S3HUD_Base_C::ForbidWindowUI(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1043,7 +1063,7 @@ void ABP_S3HUD_Base_C::ForbidWindowUI(class AActor* Actor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.OpenCommonDialog
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, Public, Private, HasOutParms, HasDefaults, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FName>           Labels                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1061,6 +1081,7 @@ void ABP_S3HUD_Base_C::OpenCommonDialog(class AActor* Executor, TArray<struct FN
 	params.Justify = Justify;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1069,11 +1090,11 @@ void ABP_S3HUD_Base_C::OpenCommonDialog(class AActor* Executor, TArray<struct FN
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.CloseDialog
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Executor                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::CloseDialog(class AActor* Executor)
+void ABP_S3HUD_Base_C::STATIC_CloseDialog(class AActor* Executor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.CloseDialog");
 
@@ -1081,6 +1102,7 @@ void ABP_S3HUD_Base_C::CloseDialog(class AActor* Executor)
 	params.Executor = Executor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1089,11 +1111,11 @@ void ABP_S3HUD_Base_C::CloseDialog(class AActor* Executor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.PermitDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::PermitDetectAction(class AActor* Actor)
+void ABP_S3HUD_Base_C::STATIC_PermitDetectAction(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.PermitDetectAction");
 
@@ -1101,6 +1123,7 @@ void ABP_S3HUD_Base_C::PermitDetectAction(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1109,11 +1132,11 @@ void ABP_S3HUD_Base_C::PermitDetectAction(class AActor* Actor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ForbidDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::ForbidDetectAction(class AActor* Actor)
+void ABP_S3HUD_Base_C::STATIC_ForbidDetectAction(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ForbidDetectAction");
 
@@ -1121,6 +1144,7 @@ void ABP_S3HUD_Base_C::ForbidDetectAction(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1129,15 +1153,16 @@ void ABP_S3HUD_Base_C::ForbidDetectAction(class AActor* Actor)
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.DestroyLoading
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::DestroyLoading()
+void ABP_S3HUD_Base_C::STATIC_DestroyLoading()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.DestroyLoading");
 
 	ABP_S3HUD_Base_C_DestroyLoading_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1146,15 +1171,16 @@ void ABP_S3HUD_Base_C::DestroyLoading()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.DestroySaveMessage
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_S3HUD_Base_C::DestroySaveMessage()
+void ABP_S3HUD_Base_C::STATIC_DestroySaveMessage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.DestroySaveMessage");
 
 	ABP_S3HUD_Base_C_DestroySaveMessage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1163,11 +1189,11 @@ void ABP_S3HUD_Base_C::DestroySaveMessage()
 
 
 // Function BP_S3HUD_Base.BP_S3HUD_Base_C.ExecuteUbergraph_BP_S3HUD_Base
-// (HasDefaults)
+// (Net, NetReliable, NetResponse, Static, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3HUD_Base_C::ExecuteUbergraph_BP_S3HUD_Base(int EntryPoint)
+void ABP_S3HUD_Base_C::STATIC_ExecuteUbergraph_BP_S3HUD_Base(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3HUD_Base.BP_S3HUD_Base_C.ExecuteUbergraph_BP_S3HUD_Base");
 

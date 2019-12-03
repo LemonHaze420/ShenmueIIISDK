@@ -34,7 +34,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_BaseTalkCamera(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_BaseTalkCamera(int EntryPoint);
 };
 
 

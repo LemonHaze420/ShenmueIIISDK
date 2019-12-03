@@ -26,7 +26,7 @@ public:
 	}
 
 
-	void Activate();
+	void STATIC_Activate();
 	void ExecuteUbergraph_BP_TalkProcess_BattleResult(int EntryPoint);
 };
 

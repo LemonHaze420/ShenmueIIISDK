@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.SetFocusToTypeSelector
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugAchievement_C::SetFocusToTypeSelector()
+void UWBP_DebugAchievement_C::STATIC_SetFocusToTypeSelector()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievement.WBP_DebugAchievement_C.SetFocusToTypeSelector");
 
 	UWBP_DebugAchievement_C_SetFocusToTypeSelector_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void UWBP_DebugAchievement_C::SetFocusToTypeSelector()
 
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.UpdateFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_DebugAchievement_C::UpdateFocus()
+void UWBP_DebugAchievement_C::STATIC_UpdateFocus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievement.WBP_DebugAchievement_C.UpdateFocus");
 
@@ -48,11 +49,11 @@ void UWBP_DebugAchievement_C::UpdateFocus()
 
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.SetFocusToItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_DebugAchievement_C::SetFocusToItem(int Index)
+void UWBP_DebugAchievement_C::STATIC_SetFocusToItem(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievement.WBP_DebugAchievement_C.SetFocusToItem");
 
@@ -68,7 +69,7 @@ void UWBP_DebugAchievement_C::SetFocusToItem(int Index)
 
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.OnPreviewKeyDown
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, MulticastDelegate, Delegate)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -93,7 +94,7 @@ struct FEventReply UWBP_DebugAchievement_C::OnPreviewKeyDown(const struct FGeome
 
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.BuildAchievementList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UWBP_DebugAchievement_C::BuildAchievementList()
 {
@@ -110,9 +111,9 @@ void UWBP_DebugAchievement_C::BuildAchievementList()
 
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugAchievement_C::Construct()
+void UWBP_DebugAchievement_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievement.WBP_DebugAchievement_C.Construct");
 
@@ -127,9 +128,9 @@ void UWBP_DebugAchievement_C::Construct()
 
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.PropertyChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugAchievement_C::PropertyChanged()
+void UWBP_DebugAchievement_C::STATIC_PropertyChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievement.WBP_DebugAchievement_C.PropertyChanged");
 
@@ -144,11 +145,11 @@ void UWBP_DebugAchievement_C::PropertyChanged()
 
 
 // Function WBP_DebugAchievement.WBP_DebugAchievement_C.ExecuteUbergraph_WBP_DebugAchievement
-// ()
+// (Native, Static, MulticastDelegate, Public, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_DebugAchievement_C::ExecuteUbergraph_WBP_DebugAchievement(int EntryPoint)
+void UWBP_DebugAchievement_C::STATIC_ExecuteUbergraph_WBP_DebugAchievement(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugAchievement.WBP_DebugAchievement_C.ExecuteUbergraph_WBP_DebugAchievement");
 
@@ -156,6 +157,7 @@ void UWBP_DebugAchievement_C::ExecuteUbergraph_WBP_DebugAchievement(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.SpawnFreeFish
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_FishingArea_C::SpawnFreeFish()
+void ABP_MiniGame_FishingArea_C::STATIC_SpawnFreeFish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.SpawnFreeFish");
 
 	ABP_MiniGame_FishingArea_C_SpawnFreeFish_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,12 +32,12 @@ void ABP_MiniGame_FishingArea_C::SpawnFreeFish()
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.GetRareScale
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Static, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RareScale                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingArea_C::GetRareScale(int Index, float* RareScale)
+void ABP_MiniGame_FishingArea_C::STATIC_GetRareScale(int Index, float* RareScale)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.GetRareScale");
 
@@ -55,17 +56,18 @@ void ABP_MiniGame_FishingArea_C::GetRareScale(int Index, float* RareScale)
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.GetSpawnFishData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Static, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // TArray<struct FST_Fishing_FishSetting> SpawnFish                      (Parm, OutParm, ZeroConstructor)
 
-void ABP_MiniGame_FishingArea_C::GetSpawnFishData(TArray<struct FST_Fishing_FishSetting>* SpawnFish)
+void ABP_MiniGame_FishingArea_C::STATIC_GetSpawnFishData(TArray<struct FST_Fishing_FishSetting>* SpawnFish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.GetSpawnFishData");
 
 	ABP_MiniGame_FishingArea_C_GetSpawnFishData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,11 +79,11 @@ void ABP_MiniGame_FishingArea_C::GetSpawnFishData(TArray<struct FST_Fishing_Fish
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.SetEnabledArea
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingArea_C::SetEnabledArea(bool Enabled)
+void ABP_MiniGame_FishingArea_C::STATIC_SetEnabledArea(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.SetEnabledArea");
 
@@ -89,6 +91,7 @@ void ABP_MiniGame_FishingArea_C::SetEnabledArea(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,12 +100,12 @@ void ABP_MiniGame_FishingArea_C::SetEnabledArea(bool Enabled)
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.CheckOverlappingActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsOverlapping                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingArea_C::CheckOverlappingActor(class AActor* Actor, bool* IsOverlapping)
+void ABP_MiniGame_FishingArea_C::STATIC_CheckOverlappingActor(class AActor* Actor, bool* IsOverlapping)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.CheckOverlappingActor");
 
@@ -121,7 +124,7 @@ void ABP_MiniGame_FishingArea_C::CheckOverlappingActor(class AActor* Actor, bool
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.GetFishIdName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGame_FishType> FishType                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -134,6 +137,7 @@ void ABP_MiniGame_FishingArea_C::GetFishIdName(TEnumAsByte<E_MiniGame_FishType> 
 	params.FishType = FishType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,7 +149,7 @@ void ABP_MiniGame_FishingArea_C::GetFishIdName(TEnumAsByte<E_MiniGame_FishType> 
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MiniGame_FishingArea_C::UserConstructionScript()
 {
@@ -162,9 +166,9 @@ void ABP_MiniGame_FishingArea_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_MiniGame_FishingArea_C::ReceiveBeginPlay()
+void ABP_MiniGame_FishingArea_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.ReceiveBeginPlay");
 
@@ -179,7 +183,7 @@ void ABP_MiniGame_FishingArea_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -188,7 +192,7 @@ void ABP_MiniGame_FishingArea_C::ReceiveBeginPlay()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_MiniGame_FishingArea_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_MiniGame_FishingArea_C::STATIC_BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.BndEvt__Sphere_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -209,11 +213,11 @@ void ABP_MiniGame_FishingArea_C::BndEvt__Sphere_K2Node_ComponentBoundEvent_0_Com
 
 
 // Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.ExecuteUbergraph_BP_MiniGame_FishingArea
-// (HasDefaults)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingArea_C::ExecuteUbergraph_BP_MiniGame_FishingArea(int EntryPoint)
+void ABP_MiniGame_FishingArea_C::STATIC_ExecuteUbergraph_BP_MiniGame_FishingArea(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingArea.BP_MiniGame_FishingArea_C.ExecuteUbergraph_BP_MiniGame_FishingArea");
 
@@ -221,6 +225,7 @@ void ABP_MiniGame_FishingArea_C::ExecuteUbergraph_BP_MiniGame_FishingArea(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

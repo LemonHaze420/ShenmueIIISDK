@@ -67,24 +67,24 @@ public:
 
 	void GetCamera(class UCameraComponent** Camera);
 	void SortFloat(TArray<float>* inArray, TArray<int>* SortedIndex);
-	void SetTargetByActorIds();
-	void SortByAngle(TArray<class AActor*>* TargetArray, TArray<class AActor*>* SortedArray);
+	void STATIC_SetTargetByActorIds();
+	void STATIC_SortByAngle(TArray<class AActor*>* TargetArray, TArray<class AActor*>* SortedArray);
 	void UpdateDistance();
 	void UpdateFOV();
-	void UpdateAlpha();
-	void CalcYawAndPitch();
+	void STATIC_UpdateAlpha();
+	void STATIC_CalcYawAndPitch();
 	void SortTargetsClockwise();
-	void CreateSprine();
-	void DrawDebugNorm();
+	void STATIC_CreateSprine();
+	void STATIC_DrawDebugNorm();
 	void UpdateCameraTransform();
-	void FindTargetfromID();
-	void CulcTargetPos(TArray<class AS3Character*>* TargetActors, struct FVector* AverageVector);
+	void STATIC_FindTargetfromID();
+	void STATIC_CulcTargetPos(TArray<class AS3Character*>* TargetActors, struct FVector* AverageVector);
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void Update();
 	void Init();
 	void ReceiveBeginPlay();
-	void ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
+	void STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
 	void ExecuteUbergraph_BP_MultiplePersonCamera(int EntryPoint);
 };
 

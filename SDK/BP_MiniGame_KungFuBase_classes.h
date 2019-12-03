@@ -87,22 +87,22 @@ public:
 
 
 	void CheckEnabledFlagState(bool* UseFlag, bool* Enabled);
-	void CheckFirstDetection(bool* IsFirst);
+	void STATIC_CheckFirstDetection(bool* IsFirst);
 	void ChangeRelativePosZ(class USceneComponent* Target, float LocationZ);
-	ES3HelpPriority GetHelpPriority();
+	ES3HelpPriority STATIC_GetHelpPriority();
 	class UMeshComponent* GetClothMeshComponent();
-	void InitAsyncLoad(bool* dummy);
-	void UpdatePlayContinueScript();
+	void STATIC_InitAsyncLoad(bool* dummy);
+	void STATIC_UpdatePlayContinueScript();
 	void IsKungFuSuccess(bool* Success);
-	void CalcKungFuLevel(bool* ChangeDifficuty, bool* ChangeProgress);
-	void SetKungFuDifficulty(int Level);
+	void STATIC_CalcKungFuLevel(bool* ChangeDifficuty, bool* ChangeProgress);
+	void STATIC_SetKungFuDifficulty(int Level);
 	void CheckValueInRance(float CheckValue, float HighValue, float LowValue, bool* InRange, float* NearValue);
 	TArray<struct FS3DetectActionParam> GetDetectAction();
-	void GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
+	void STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
 	void PlayScriptLabel(const struct FName& Label, const struct FName& CharaName);
-	void UpdateElapsedTime(float DeltaSeconds);
-	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
-	void UserConstructionScript();
+	void STATIC_UpdateElapsedTime(float DeltaSeconds);
+	class ABP_MiniGameInputBase_C* STATIC_SpawnInputControlActor();
+	void STATIC_UserConstructionScript();
 	void InputAction_ButtonRight();
 	void InputAction_Top();
 	void InputAction_Bottom();
@@ -123,9 +123,9 @@ public:
 	void OnResultEnd();
 	void TimeUpEvent();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void STATIC_BndEvt__DetectorSensor_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void ExecuteUbergraph_BP_MiniGame_KungFuBase(int EntryPoint);
 };
 

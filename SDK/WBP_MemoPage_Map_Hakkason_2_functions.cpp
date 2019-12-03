@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoPage_Map_Hakkason_2.WBP_MemoPage_Map_Hakkason_1_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Native, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UWBP_MemoPage_Map_Hakkason_1_C::Construct()
+void UWBP_MemoPage_Map_Hakkason_1_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Hakkason_2.WBP_MemoPage_Map_Hakkason_1_C.Construct");
 
 	UWBP_MemoPage_Map_Hakkason_1_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void UWBP_MemoPage_Map_Hakkason_1_C::Construct()
 
 
 // Function WBP_MemoPage_Map_Hakkason_2.WBP_MemoPage_Map_Hakkason_1_C.ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_2
-// (HasDefaults)
+// (NetReliable, Static, NetMulticast, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_MemoPage_Map_Hakkason_1_C::ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_2(int EntryPoint)
+void UWBP_MemoPage_Map_Hakkason_1_C::STATIC_ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Hakkason_2.WBP_MemoPage_Map_Hakkason_1_C.ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_2");
 

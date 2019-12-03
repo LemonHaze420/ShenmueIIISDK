@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBPC_PCGroundSensor_C::Update()
 {
@@ -31,9 +31,9 @@ void UBPC_PCGroundSensor_C::Update()
 
 
 // Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void UBPC_PCGroundSensor_C::ReceiveBeginPlay()
+void UBPC_PCGroundSensor_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.ReceiveBeginPlay");
 
@@ -48,7 +48,7 @@ void UBPC_PCGroundSensor_C::ReceiveBeginPlay()
 
 
 // Function BPC_PCGroundSensor.BPC_PCGroundSensor_C.ExecuteUbergraph_BPC_PCGroundSensor
-// ()
+// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

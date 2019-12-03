@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.MakeExperienceMultiplier
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGame_KungFuType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Ramp                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPC_MiniGame_KungFuProgress_C::MakeExperienceMultiplier(TEnumAsByte<E_MiniGame_KungFuType> Type, float Ramp)
+float UBPC_MiniGame_KungFuProgress_C::STATIC_MakeExperienceMultiplier(TEnumAsByte<E_MiniGame_KungFuType> Type, float Ramp)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.MakeExperienceMultiplier");
 
@@ -39,12 +39,12 @@ float UBPC_MiniGame_KungFuProgress_C::MakeExperienceMultiplier(TEnumAsByte<E_Min
 
 
 // Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.SetKungFuProgress
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGame_KungFuType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            flag                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuProgress_C::SetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int flag)
+void UBPC_MiniGame_KungFuProgress_C::STATIC_SetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.SetKungFuProgress");
 
@@ -61,12 +61,12 @@ void UBPC_MiniGame_KungFuProgress_C::SetKungFuProgress(TEnumAsByte<E_MiniGame_Ku
 
 
 // Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.GetKungFuProgress
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Event, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<E_MiniGame_KungFuType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ProgressNum                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuProgress_C::GetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int* ProgressNum)
+void UBPC_MiniGame_KungFuProgress_C::STATIC_GetKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, int* ProgressNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.GetKungFuProgress");
 
@@ -85,12 +85,12 @@ void UBPC_MiniGame_KungFuProgress_C::GetKungFuProgress(TEnumAsByte<E_MiniGame_Ku
 
 
 // Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.AddKungFuProgress
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, NetMulticast, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGame_KungFuType> Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ScoreRatio                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MiniGame_KungFuProgress_C::AddKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, float ScoreRatio)
+void UBPC_MiniGame_KungFuProgress_C::STATIC_AddKungFuProgress(TEnumAsByte<E_MiniGame_KungFuType> Type, float ScoreRatio)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGame_KungFuProgress.BPC_MiniGame_KungFuProgress_C.AddKungFuProgress");
 
@@ -99,6 +99,7 @@ void UBPC_MiniGame_KungFuProgress_C::AddKungFuProgress(TEnumAsByte<E_MiniGame_Ku
 	params.ScoreRatio = ScoreRatio;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

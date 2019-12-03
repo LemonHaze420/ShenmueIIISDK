@@ -29,17 +29,17 @@ public:
 
 
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void UpdateWalkRate();
-	void Reset();
-	void SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type);
-	void ChangeShape(int Index);
-	void Event_PlaySECry();
-	void Event_PlaySEWalk();
-	void SetWalkRate(float Rate);
-	void SetAnimNotRaceStartPos(float Start);
-	void SetAnimInRaceFlag(bool InRace);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_UpdateWalkRate();
+	void STATIC_Reset();
+	void STATIC_SetMotion(TEnumAsByte<E_AR_Motion_Type> mot_type);
+	void STATIC_ChangeShape(int Index);
+	void STATIC_Event_PlaySECry();
+	void STATIC_Event_PlaySEWalk();
+	void STATIC_SetWalkRate(float Rate);
+	void STATIC_SetAnimNotRaceStartPos(float Start);
+	void STATIC_SetAnimInRaceFlag(bool InRace);
 	void ExecuteUbergraph_BP_AR_BoxTurtle(int EntryPoint);
 };
 

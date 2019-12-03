@@ -27,8 +27,8 @@ public:
 
 
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_SensorPointLight(int EntryPoint);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_SensorPointLight(int EntryPoint);
 };
 
 

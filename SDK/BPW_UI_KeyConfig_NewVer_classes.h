@@ -45,10 +45,10 @@ public:
 	}
 
 
-	void PushRightLeftCursor(int Add);
-	void PushUpDownCursor(int Value);
+	void STATIC_PushRightLeftCursor(int Add);
+	void STATIC_PushUpDownCursor(int Value);
 	void MakeSettingList();
-	void Construct();
+	void STATIC_Construct();
 	void ExecuteUbergraph_BPW_UI_KeyConfig_NewVer(int EntryPoint);
 };
 

@@ -35,12 +35,12 @@ public:
 
 	void GetVoiceDuration(bool* Result, float* Duration);
 	void Play_HintTalk(bool IsAutoStop, struct FName* Label, struct FName* CharaName);
-	void UserConstructionScript();
-	void PlayVoice(class UObject* VoiceData);
-	void OnPlaySound();
-	void Stop();
+	void STATIC_UserConstructionScript();
+	void STATIC_PlayVoice(class UObject* VoiceData);
+	void STATIC_OnPlaySound();
+	void STATIC_Stop();
 	void ClearSubtitle();
-	void Skip(class UTalkTask* SkippedTask);
+	void STATIC_Skip(class UTalkTask* SkippedTask);
 	void ExecuteUbergraph_BP_SubtitlePlayer_Talk(int EntryPoint);
 };
 

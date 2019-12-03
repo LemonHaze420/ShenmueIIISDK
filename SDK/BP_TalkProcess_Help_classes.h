@@ -29,7 +29,7 @@ public:
 
 	void Activate();
 	void CloseHelp();
-	void ExecuteUbergraph_BP_TalkProcess_Help(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_TalkProcess_Help(int EntryPoint);
 };
 
 

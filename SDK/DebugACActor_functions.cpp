@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function DebugACActor.DebugACActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 
-void ADebugACActor_C::UserConstructionScript()
+void ADebugACActor_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function DebugACActor.DebugACActor_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ADebugACActor_C::UserConstructionScript()
 
 
 // Function DebugACActor.DebugACActor_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ADebugACActor_C::ReceiveBeginPlay()
 {
@@ -48,7 +48,7 @@ void ADebugACActor_C::ReceiveBeginPlay()
 
 
 // Function DebugACActor.DebugACActor_C.ExecuteUbergraph_DebugACActor
-// (HasDefaults)
+// (Exec, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

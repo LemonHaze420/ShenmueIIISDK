@@ -44,25 +44,25 @@ public:
 	}
 
 
-	void StopTimeCountSE();
+	void STATIC_StopTimeCountSE();
 	void PlayTimeCountSE();
 	void UpdateAnimationState();
-	bool IsInQTE();
+	bool STATIC_IsInQTE();
 	float GetInAnimationLength();
-	bool IsPlayingIn();
-	void SetTimeGaugeRate(float Rate);
+	bool STATIC_IsPlayingIn();
+	void STATIC_SetTimeGaugeRate(float Rate);
 	void UpdateTime(float TickDeltaSeconds, float* CurrentDeltaSeconds);
 	void SetUseRealTime(bool UseRealTime);
 	void ClearResult();
-	void InputFunction(const struct FKey& InKey);
-	void InputEndFunction();
+	void STATIC_InputFunction(const struct FKey& InKey);
+	void STATIC_InputEndFunction();
 	void InputStartFunction(const struct FName& LeftAction, const struct FName& RightAction, const struct FName& SuccessAction);
-	void EndFunction();
-	void Prepare();
-	void GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
+	void STATIC_EndFunction();
+	void STATIC_Prepare();
+	void STATIC_GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BPC_old_QTESelectComponent(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_old_QTESelectComponent(int EntryPoint);
 	void ButtonDown__DelegateSignature(bool Succeed);
 	void End__DelegateSignature();
 	void Success__DelegateSignature();

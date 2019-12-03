@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_GetNavModifierVolumes(class UObject* __WorldContext, TArray<class ANavModifierVolume*>* Volumes);
+	void GetNavModifierVolumes(class UObject* __WorldContext, TArray<class ANavModifierVolume*>* Volumes);
 };
 
 

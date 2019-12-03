@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.SetLevelData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Progress                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -45,15 +45,16 @@ void Uwgt_SkillEditor_SkillLevel_C::SetLevelData(int Level, float Progress, int 
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.RefreshLevel
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void Uwgt_SkillEditor_SkillLevel_C::RefreshLevel()
+void Uwgt_SkillEditor_SkillLevel_C::STATIC_RefreshLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.RefreshLevel");
 
 	Uwgt_SkillEditor_SkillLevel_C_RefreshLevel_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,7 +63,7 @@ void Uwgt_SkillEditor_SkillLevel_C::RefreshLevel()
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.SetMasterLevel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Private, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -82,7 +83,7 @@ void Uwgt_SkillEditor_SkillLevel_C::SetMasterLevel(int Value)
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.IsMasterLevel
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -105,7 +106,7 @@ bool Uwgt_SkillEditor_SkillLevel_C::IsMasterLevel(int A)
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.PlayLevelUpAnimation
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void Uwgt_SkillEditor_SkillLevel_C::PlayLevelUpAnimation()
 {
@@ -122,12 +123,12 @@ void Uwgt_SkillEditor_SkillLevel_C::PlayLevelUpAnimation()
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.SetLevel
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           LevelChanged                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_SkillEditor_SkillLevel_C::SetLevel(int Level, bool* LevelChanged)
+void Uwgt_SkillEditor_SkillLevel_C::STATIC_SetLevel(int Level, bool* LevelChanged)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.SetLevel");
 
@@ -135,6 +136,7 @@ void Uwgt_SkillEditor_SkillLevel_C::SetLevel(int Level, bool* LevelChanged)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -146,7 +148,7 @@ void Uwgt_SkillEditor_SkillLevel_C::SetLevel(int Level, bool* LevelChanged)
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.SetFillRatio
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          FillRatio                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Changed                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -170,9 +172,9 @@ void Uwgt_SkillEditor_SkillLevel_C::SetFillRatio(float FillRatio, bool* Changed)
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void Uwgt_SkillEditor_SkillLevel_C::Construct()
+void Uwgt_SkillEditor_SkillLevel_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.Construct");
 
@@ -187,7 +189,7 @@ void Uwgt_SkillEditor_SkillLevel_C::Construct()
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Event, NetResponse, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -209,7 +211,7 @@ void Uwgt_SkillEditor_SkillLevel_C::Tick(const struct FGeometry& MyGeometry, flo
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -229,7 +231,7 @@ void Uwgt_SkillEditor_SkillLevel_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_SkillEditor_SkillLevel.wgt_SkillEditor_SkillLevel_C.ExecuteUbergraph_wgt_SkillEditor_SkillLevel
-// (HasDefaults)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -241,6 +243,7 @@ void Uwgt_SkillEditor_SkillLevel_C::ExecuteUbergraph_wgt_SkillEditor_SkillLevel(
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

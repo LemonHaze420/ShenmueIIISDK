@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.SetCount
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Public, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Count                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UWBP_ItemNameDisp_C::SetCount(int Count)
 	params.Count = Count;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,9 +35,9 @@ void UWBP_ItemNameDisp_C::SetCount(int Count)
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.InitSet
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UWBP_ItemNameDisp_C::InitSet()
+void UWBP_ItemNameDisp_C::STATIC_InitSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.InitSet");
 
@@ -51,11 +52,11 @@ void UWBP_ItemNameDisp_C::InitSet()
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.SetIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetResponse, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            item_id                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_ItemNameDisp_C::SetIcon(int item_id)
+void UWBP_ItemNameDisp_C::STATIC_SetIcon(int item_id)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.SetIcon");
 
@@ -63,6 +64,7 @@ void UWBP_ItemNameDisp_C::SetIcon(int item_id)
 	params.item_id = item_id;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,9 +73,9 @@ void UWBP_ItemNameDisp_C::SetIcon(int item_id)
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_ItemNameDisp_C::Construct()
+void UWBP_ItemNameDisp_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Construct");
 
@@ -88,9 +90,9 @@ void UWBP_ItemNameDisp_C::Construct()
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_ItemNameDisp_C::Destruct()
+void UWBP_ItemNameDisp_C::STATIC_Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Destruct");
 
@@ -105,9 +107,9 @@ void UWBP_ItemNameDisp_C::Destruct()
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Close
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UWBP_ItemNameDisp_C::Close()
+void UWBP_ItemNameDisp_C::STATIC_Close()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Close");
 
@@ -122,12 +124,12 @@ void UWBP_ItemNameDisp_C::Close()
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_ItemNameDisp_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_ItemNameDisp_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.Tick");
 
@@ -144,11 +146,11 @@ void UWBP_ItemNameDisp_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.ExecuteUbergraph_WBP_ItemNameDisp
-// (HasDefaults)
+// (Exec, Native, NetResponse, Static, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_ItemNameDisp_C::ExecuteUbergraph_WBP_ItemNameDisp(int EntryPoint)
+void UWBP_ItemNameDisp_C::STATIC_ExecuteUbergraph_WBP_ItemNameDisp(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.ExecuteUbergraph_WBP_ItemNameDisp");
 
@@ -156,6 +158,7 @@ void UWBP_ItemNameDisp_C::ExecuteUbergraph_WBP_ItemNameDisp(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -164,7 +167,7 @@ void UWBP_ItemNameDisp_C::ExecuteUbergraph_WBP_ItemNameDisp(int EntryPoint)
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.OnStartAnmEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UWBP_ItemNameDisp_C::OnStartAnmEnd__DelegateSignature()
 {
@@ -181,7 +184,7 @@ void UWBP_ItemNameDisp_C::OnStartAnmEnd__DelegateSignature()
 
 
 // Function WBP_ItemNameDisp.WBP_ItemNameDisp_C.OnClosedDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UWBP_ItemNameDisp_C::OnClosedDispatcher__DelegateSignature()
 {

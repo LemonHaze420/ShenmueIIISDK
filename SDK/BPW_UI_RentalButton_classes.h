@@ -31,7 +31,7 @@ public:
 
 
 	void SetNameAndPrice(const struct FText& Name, const struct FText& Price);
-	void SelectButton(bool Select);
+	void STATIC_SelectButton(bool Select);
 	void FocusButton(bool Focus);
 	void Construct();
 	void ExecuteUbergraph_BPW_UI_RentalButton(int EntryPoint);

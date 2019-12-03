@@ -12,6 +12,22 @@ namespace SDK
 // Classes
 //---------------------------------------------------------------------------
 
+// Class MediaCompositing.MovieSceneMediaTrack
+// 0x0010 (0x0068 - 0x0058)
+class UMovieSceneMediaTrack : public UMovieSceneNameableTrack
+{
+public:
+	TArray<class UMovieSceneSection*>                  MediaSections;                                            // 0x0058(0x0010) (ExportObject, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaTrack");
+		return ptr;
+	}
+
+};
+
+
 // Class MediaCompositing.MovieSceneMediaSection
 // 0x0028 (0x0108 - 0x00E0)
 class UMovieSceneMediaSection : public UMovieSceneSection
@@ -25,22 +41,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaSection");
-		return ptr;
-	}
-
-};
-
-
-// Class MediaCompositing.MovieSceneMediaTrack
-// 0x0010 (0x0068 - 0x0058)
-class UMovieSceneMediaTrack : public UMovieSceneNameableTrack
-{
-public:
-	TArray<class UMovieSceneSection*>                  MediaSections;                                            // 0x0058(0x0010) (ExportObject, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MediaCompositing.MovieSceneMediaTrack");
 		return ptr;
 	}
 

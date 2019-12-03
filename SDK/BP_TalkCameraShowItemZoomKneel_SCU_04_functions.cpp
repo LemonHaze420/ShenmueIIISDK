@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraShowItemZoomKneel_SCU_04.BP_TalkCameraShowItemZoomKneel_SCU_04_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::UserConstructionScript()
+void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraShowItemZoomKneel_SCU_04.BP_TalkCameraShowItemZoomKneel_SCU_04_C.UserConstructionScript");
 
 	ABP_TalkCameraShowItemZoomKneel_SCU_04_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::UserConstructionScript()
 
 
 // Function BP_TalkCameraShowItemZoomKneel_SCU_04.BP_TalkCameraShowItemZoomKneel_SCU_04_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::ReceiveBeginPlay()
+void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraShowItemZoomKneel_SCU_04.BP_TalkCameraShowItemZoomKneel_SCU_04_C.ReceiveBeginPlay");
 
@@ -48,7 +49,7 @@ void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::ReceiveBeginPlay()
 
 
 // Function BP_TalkCameraShowItemZoomKneel_SCU_04.BP_TalkCameraShowItemZoomKneel_SCU_04_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Public, Private, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +61,7 @@ void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +70,7 @@ void ABP_TalkCameraShowItemZoomKneel_SCU_04_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraShowItemZoomKneel_SCU_04.BP_TalkCameraShowItemZoomKneel_SCU_04_C.ExecuteUbergraph_BP_TalkCameraShowItemZoomKneel_SCU_04
-// ()
+// (Net, NetRequest, Exec, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

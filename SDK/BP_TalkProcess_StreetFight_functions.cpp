@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_StreetFight.BP_TalkProcess_StreetFight_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Exec, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBP_TalkProcess_StreetFight_C::Activate()
 {
@@ -31,7 +31,7 @@ void UBP_TalkProcess_StreetFight_C::Activate()
 
 
 // Function BP_TalkProcess_StreetFight.BP_TalkProcess_StreetFight_C.ExecuteUbergraph_BP_TalkProcess_StreetFight
-// ()
+// (NetRequest, Native, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +43,7 @@ void UBP_TalkProcess_StreetFight_C::ExecuteUbergraph_BP_TalkProcess_StreetFight(
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_FloatProperty.BW_FloatProperty_C.ClampNewValue
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutValue                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -27,6 +27,7 @@ void UBW_FloatProperty_C::ClampNewValue(float InValue, float* OutValue)
 	params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -38,7 +39,7 @@ void UBW_FloatProperty_C::ClampNewValue(float InValue, float* OutValue)
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.OnAnalogValueChanged
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FAnalogInputEvent       InAnalogInputEvent             (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -53,6 +54,7 @@ struct FEventReply UBW_FloatProperty_C::OnAnalogValueChanged(const struct FGeome
 	params.InAnalogInputEvent = InAnalogInputEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,12 +65,12 @@ struct FEventReply UBW_FloatProperty_C::OnAnalogValueChanged(const struct FGeome
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.SetFloatParameterValue
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, Static, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           CallDispatcher                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_FloatProperty_C::SetFloatParameterValue(float NewValue, bool CallDispatcher)
+void UBW_FloatProperty_C::STATIC_SetFloatParameterValue(float NewValue, bool CallDispatcher)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_FloatProperty.BW_FloatProperty_C.SetFloatParameterValue");
 
@@ -85,11 +87,11 @@ void UBW_FloatProperty_C::SetFloatParameterValue(float NewValue, bool CallDispat
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.GetFloatParameterValue
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBW_FloatProperty_C::GetFloatParameterValue()
+float UBW_FloatProperty_C::STATIC_GetFloatParameterValue()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_FloatProperty.BW_FloatProperty_C.GetFloatParameterValue");
 
@@ -106,7 +108,7 @@ float UBW_FloatProperty_C::GetFloatParameterValue()
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.GetParameterName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, Event, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -117,6 +119,7 @@ struct FText UBW_FloatProperty_C::GetParameterName()
 	UBW_FloatProperty_C_GetParameterName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,11 +130,11 @@ struct FText UBW_FloatProperty_C::GetParameterName()
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_FloatProperty_C::BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
+void UBW_FloatProperty_C::STATIC_BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature(float InValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_FloatProperty.BW_FloatProperty_C.BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_OnSpinBoxValueChangedEvent__DelegateSignature");
 
@@ -139,6 +142,7 @@ void UBW_FloatProperty_C::BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_On
 	params.InValue = InValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -147,7 +151,7 @@ void UBW_FloatProperty_C::BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_187_On
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -161,6 +165,7 @@ void UBW_FloatProperty_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,7 +174,7 @@ void UBW_FloatProperty_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.GetMinMax
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_FloatProperty_C::GetMinMax()
 {
@@ -178,6 +183,7 @@ void UBW_FloatProperty_C::GetMinMax()
 	UBW_FloatProperty_C_GetMinMax_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,7 +192,7 @@ void UBW_FloatProperty_C::GetMinMax()
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_FloatProperty_C::Construct()
 {
@@ -195,6 +201,7 @@ void UBW_FloatProperty_C::Construct()
 	UBW_FloatProperty_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,7 +210,7 @@ void UBW_FloatProperty_C::Construct()
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_OnSpinBoxValueCommittedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -225,7 +232,7 @@ void UBW_FloatProperty_C::BndEvt__FloatSpinBox_K2Node_ComponentBoundEvent_150_On
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.PropertyChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_FloatProperty_C::PropertyChanged()
 {
@@ -234,6 +241,7 @@ void UBW_FloatProperty_C::PropertyChanged()
 	UBW_FloatProperty_C_PropertyChanged_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,7 +250,7 @@ void UBW_FloatProperty_C::PropertyChanged()
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.ExecuteUbergraph_BW_FloatProperty
-// (HasDefaults)
+// (NetRequest, Exec, Event, NetResponse, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -262,9 +270,9 @@ void UBW_FloatProperty_C::ExecuteUbergraph_BW_FloatProperty(int EntryPoint)
 
 
 // Function BW_FloatProperty.BW_FloatProperty_C.FloatPropertyChanged__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_FloatProperty_C::FloatPropertyChanged__DelegateSignature()
+void UBW_FloatProperty_C::STATIC_FloatPropertyChanged__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_FloatProperty.BW_FloatProperty_C.FloatPropertyChanged__DelegateSignature");
 

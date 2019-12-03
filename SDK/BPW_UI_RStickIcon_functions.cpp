@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.IsVisibleIcon
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPW_UI_RStickIcon_C::IsVisibleIcon()
+bool UBPW_UI_RStickIcon_C::STATIC_IsVisibleIcon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.IsVisibleIcon");
 
@@ -35,7 +35,7 @@ bool UBPW_UI_RStickIcon_C::IsVisibleIcon()
 
 
 // Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.SetPosCenter
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_RStickIcon_C::SetPosCenter()
 {
@@ -52,7 +52,7 @@ void UBPW_UI_RStickIcon_C::SetPosCenter()
 
 
 // Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.SetPosRight
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_RStickIcon_C::SetPosRight()
 {
@@ -69,7 +69,7 @@ void UBPW_UI_RStickIcon_C::SetPosRight()
 
 
 // Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.SetPos
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               InPosition                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -89,11 +89,11 @@ void UBPW_UI_RStickIcon_C::SetPos(const struct FVector2D& InPosition)
 
 
 // Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.SetVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_RStickIcon_C::SetVisible(bool Visible)
+void UBPW_UI_RStickIcon_C::STATIC_SetVisible(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.SetVisible");
 
@@ -101,6 +101,7 @@ void UBPW_UI_RStickIcon_C::SetVisible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +110,7 @@ void UBPW_UI_RStickIcon_C::SetVisible(bool Visible)
 
 
 // Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_RStickIcon_C::Construct()
 {
@@ -126,11 +127,11 @@ void UBPW_UI_RStickIcon_C::Construct()
 
 
 // Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.ExecuteUbergraph_BPW_UI_RStickIcon
-// ()
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_RStickIcon_C::ExecuteUbergraph_BPW_UI_RStickIcon(int EntryPoint)
+void UBPW_UI_RStickIcon_C::STATIC_ExecuteUbergraph_BPW_UI_RStickIcon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_RStickIcon.BPW_UI_RStickIcon_C.ExecuteUbergraph_BPW_UI_RStickIcon");
 

@@ -30,13 +30,13 @@ public:
 	}
 
 
-	void IsDisable(bool* Disabled);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_IsDisable(bool* Disabled);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
 	void SetDisableSound(bool Disable, class AActor* Actor);
-	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3SoundAreaCallback__DelegateSignature();
-	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3SoundAreaCallback__DelegateSignature();
-	void ExecuteUbergraph_BP_S3AtomSoundArea(int EntryPoint);
+	void STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_2_S3SoundAreaCallback__DelegateSignature();
+	void STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_3_S3SoundAreaCallback__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BP_S3AtomSoundArea(int EntryPoint);
 };
 
 

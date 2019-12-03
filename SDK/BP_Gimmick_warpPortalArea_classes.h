@@ -30,11 +30,11 @@ public:
 	}
 
 
-	void GetPortalComponent(class UBP_Gimmick_warpPortalComp_C** PortalComponent);
+	void STATIC_GetPortalComponent(class UBP_Gimmick_warpPortalComp_C** PortalComponent);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void onTeleport(class AActor* OtherActor);
-	void ExecuteUbergraph_BP_Gimmick_warpPortalArea(int EntryPoint);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_onTeleport(class AActor* OtherActor);
+	void STATIC_ExecuteUbergraph_BP_Gimmick_warpPortalArea(int EntryPoint);
 	void teleport__DelegateSignature(class AActor* OtherActor);
 };
 

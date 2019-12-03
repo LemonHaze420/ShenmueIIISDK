@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void STATIC_BPF_SetButtonTextures(class UImage* Image, class UTexture* LightTex, class UTexture* DarkTex, class UTexture* GlowTex, class UObject* __WorldContext);
-	void STATIC_BPF_SetButtonSelected(class UImage* Image, class UTextBlock* Text, bool bSelected, class UObject* __WorldContext);
+	void BPF_SetButtonTextures(class UImage* Image, class UTexture* LightTex, class UTexture* DarkTex, class UTexture* GlowTex, class UObject* __WorldContext);
+	void BPF_SetButtonSelected(class UImage* Image, class UTextBlock* Text, bool bSelected, class UObject* __WorldContext);
 	void STATIC_BPF_EnableButtonCursor(class UImage* Image, class UTextBlock* Text, bool bEnabled, class UObject* __WorldContext);
 };
 

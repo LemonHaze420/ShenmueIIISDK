@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void IsVisibleRStickCenterPos(bool* IsCenter);
+	void STATIC_IsVisibleRStickCenterPos(bool* IsCenter);
 	bool IsVisibleRStickOnlyViewMode();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_UI_ExchangeManager(int EntryPoint);
 };

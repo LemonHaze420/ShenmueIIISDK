@@ -21,8 +21,8 @@ struct UBPC_MiniGameTalk_C_GetStartTalkActionType_Params
 	struct FS3DetectActionParam                        Params;                                                   // (Parm, OutParm)
 };
 
-// Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.getActionType
-struct UBPC_MiniGameTalk_C_getActionType_Params
+// Function BPC_MiniGameTalk.BPC_MiniGameTalk_C.GetActionType
+struct UBPC_MiniGameTalk_C_GetActionType_Params
 {
 	bool                                               Sight;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FS3DetectActionParam>                Params;                                                   // (Parm, OutParm, ZeroConstructor)

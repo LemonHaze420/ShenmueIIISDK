@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Random.BPF_Random_C.BPF_RandomIndexNoRepeat
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ArrayNum                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NoRepeat                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBPF_Random_C::STATIC_BPF_RandomIndexNoRepeat(int ArrayNum, int NoRepeat, class UObject* __WorldContext)
+int UBPF_Random_C::BPF_RandomIndexNoRepeat(int ArrayNum, int NoRepeat, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Random.BPF_Random_C.BPF_RandomIndexNoRepeat");
 
@@ -31,6 +31,7 @@ int UBPF_Random_C::STATIC_BPF_RandomIndexNoRepeat(int ArrayNum, int NoRepeat, cl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

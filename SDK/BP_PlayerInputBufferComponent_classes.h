@@ -31,11 +31,11 @@ public:
 	}
 
 
-	void DetermineState_TargetSwitch(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action);
+	void STATIC_DetermineState_TargetSwitch(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action);
 	void DetermineState_Jump(TEnumAsByte<EN_PC_State> State, unsigned char SubState, TEnumAsByte<EN_PC_InputRecord>* Action);
 	void Update(TEnumAsByte<EN_PC_State> InPCState, unsigned char INPCSubState);
 	void OnTargetSelectAction__DelegateSignature();
-	void OnJumpAction__DelegateSignature();
+	void STATIC_OnJumpAction__DelegateSignature();
 };
 
 

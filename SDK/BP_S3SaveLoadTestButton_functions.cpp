@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.SetDateTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasDefaults, NetClient, BlueprintEvent)
 // Parameters:
 // struct FDateTime               DateTime                       (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBP_S3SaveLoadTestButton_C::SetDateTime(const struct FDateTime& DateTime)
+void UBP_S3SaveLoadTestButton_C::STATIC_SetDateTime(const struct FDateTime& DateTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.SetDateTime");
 
@@ -26,6 +26,7 @@ void UBP_S3SaveLoadTestButton_C::SetDateTime(const struct FDateTime& DateTime)
 	params.DateTime = DateTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void UBP_S3SaveLoadTestButton_C::SetDateTime(const struct FDateTime& DateTime)
 
 
 // Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.SetOptionText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FString                 Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -54,7 +55,7 @@ void UBP_S3SaveLoadTestButton_C::SetOptionText(const struct FString& Text)
 
 
 // Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.SetStep
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            Step                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -66,6 +67,7 @@ void UBP_S3SaveLoadTestButton_C::SetStep(int Step)
 	params.Step = Step;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,9 +76,9 @@ void UBP_S3SaveLoadTestButton_C::SetStep(int Step)
 
 
 // Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadTestButton_C::Construct()
+void UBP_S3SaveLoadTestButton_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.Construct");
 
@@ -91,9 +93,9 @@ void UBP_S3SaveLoadTestButton_C::Construct()
 
 
 // Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void UBP_S3SaveLoadTestButton_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UBP_S3SaveLoadTestButton_C::STATIC_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
@@ -108,11 +110,11 @@ void UBP_S3SaveLoadTestButton_C::BndEvt__Button_K2Node_ComponentBoundEvent_0_OnB
 
 
 // Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.ExecuteUbergraph_BP_S3SaveLoadTestButton
-// ()
+// (Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_S3SaveLoadTestButton_C::ExecuteUbergraph_BP_S3SaveLoadTestButton(int EntryPoint)
+void UBP_S3SaveLoadTestButton_C::STATIC_ExecuteUbergraph_BP_S3SaveLoadTestButton(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.ExecuteUbergraph_BP_S3SaveLoadTestButton");
 
@@ -128,7 +130,7 @@ void UBP_S3SaveLoadTestButton_C::ExecuteUbergraph_BP_S3SaveLoadTestButton(int En
 
 
 // Function BP_S3SaveLoadTestButton.BP_S3SaveLoadTestButton_C.OnClicked__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, Public, Delegate, HasOutParms, BlueprintEvent)
 
 void UBP_S3SaveLoadTestButton_C::OnClicked__DelegateSignature()
 {

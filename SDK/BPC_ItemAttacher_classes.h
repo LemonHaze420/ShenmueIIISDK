@@ -31,13 +31,13 @@ public:
 
 
 	void TryGetItemSocketLocation(const struct FName& InputPin, struct FVector* Location, bool* Success);
-	bool IsItemSpawned();
-	void GetItemActor(class ABP_PlayerTalkItem_C** ItemBP);
+	bool STATIC_IsItemSpawned();
+	void STATIC_GetItemActor(class ABP_PlayerTalkItem_C** ItemBP);
 	void DestroyItem();
-	void SpawnItem(const struct FName& ItemName, bool ShowToOther);
+	void STATIC_SpawnItem(const struct FName& ItemName, bool ShowToOther);
 	void SetupItemMaterial();
-	void ReceiveBeginPlay();
-	void HiddenItem();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_HiddenItem();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BPC_ItemAttacher(int EntryPoint);
 };

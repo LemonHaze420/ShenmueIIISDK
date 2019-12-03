@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_DojoRank.BPF_DojoRank_C.BPF_GetDojoRankIndex
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EDojoPlace>        Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -40,13 +40,13 @@ void UBPF_DojoRank_C::STATIC_BPF_GetDojoRankIndex(TEnumAsByte<EDojoPlace> Dojo, 
 
 
 // Function BPF_DojoRank.BPF_DojoRank_C.BPF_GetPlayerDojoRank
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Public, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EDojoPlace>        Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3DojoRank                    Rank                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_DojoRank_C::STATIC_BPF_GetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo, class UObject* __WorldContext, ES3DojoRank* Rank)
+void UBPF_DojoRank_C::BPF_GetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo, class UObject* __WorldContext, ES3DojoRank* Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_DojoRank.BPF_DojoRank_C.BPF_GetPlayerDojoRank");
 
@@ -55,6 +55,7 @@ void UBPF_DojoRank_C::STATIC_BPF_GetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo,
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -66,7 +67,7 @@ void UBPF_DojoRank_C::STATIC_BPF_GetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo,
 
 
 // Function BPF_DojoRank.BPF_DojoRank_C.BPF_PlayerDojoRankGreaterOrEqual
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_DojoRankRequirement Requirement                    (BlueprintVisible, BlueprintReadOnly, Parm)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -91,7 +92,7 @@ bool UBPF_DojoRank_C::STATIC_BPF_PlayerDojoRankGreaterOrEqual(const struct FST_D
 
 
 // Function BPF_DojoRank.BPF_DojoRank_C.BPF_SetPlayerDojoRank
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EDojoPlace>        Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3DojoRank                    Rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -115,7 +116,7 @@ void UBPF_DojoRank_C::STATIC_BPF_SetPlayerDojoRank(TEnumAsByte<EDojoPlace> Dojo,
 
 
 // Function BPF_DojoRank.BPF_DojoRank_C.BPF_RankGreaterOrEqual
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TMap<TEnumAsByte<EDojoPlace>, ES3DojoRank> RanksEarned                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FST_DojoRankRequirement Requirement                    (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -131,6 +132,7 @@ bool UBPF_DojoRank_C::STATIC_BPF_RankGreaterOrEqual(const struct FST_DojoRankReq
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -144,7 +146,7 @@ bool UBPF_DojoRank_C::STATIC_BPF_RankGreaterOrEqual(const struct FST_DojoRankReq
 
 
 // Function BPF_DojoRank.BPF_DojoRank_C.BPF_CalcDojoRankAsCrossDojoInt
-// (Static, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EDojoPlace>        Dojo                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3DojoRank                    Rank                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

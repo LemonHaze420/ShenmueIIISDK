@@ -36,16 +36,16 @@ public:
 	}
 
 
-	void SetEffectImageTexture(class UTexture2D* EffectImage, class UTexture2D* FreaImage);
-	void SetBackImageTexture(class UTexture2D* Texture);
-	void PlayShowResult(int Num1, int Num2);
-	void PlayFadeOut();
-	void PlayFadeIn();
-	void Reset();
-	void OnAppearNum1();
-	void OnAppearNum2();
-	void OnAppearResult();
-	void OnCombineNum();
+	void STATIC_SetEffectImageTexture(class UTexture2D* EffectImage, class UTexture2D* FreaImage);
+	void STATIC_SetBackImageTexture(class UTexture2D* Texture);
+	void STATIC_PlayShowResult(int Num1, int Num2);
+	void STATIC_PlayFadeOut();
+	void STATIC_PlayFadeIn();
+	void STATIC_Reset();
+	void STATIC_OnAppearNum1();
+	void STATIC_OnAppearNum2();
+	void STATIC_OnAppearResult();
+	void STATIC_OnCombineNum();
 	void ExecuteUbergraph_WBP_MiniGame_Ue_de_Yattari_CNFlow(int EntryPoint);
 };
 

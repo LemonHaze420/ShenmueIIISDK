@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_AddressPage_2.wgt_AddressPage_1_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Native, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void Uwgt_AddressPage_1_C::Construct()
 {
@@ -23,6 +23,7 @@ void Uwgt_AddressPage_1_C::Construct()
 	Uwgt_AddressPage_1_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void Uwgt_AddressPage_1_C::Construct()
 
 
 // Function wgt_AddressPage_2.wgt_AddressPage_1_C.PushButton
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FVector2D               Position                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -51,7 +52,7 @@ void Uwgt_AddressPage_1_C::PushButton(const struct FVector2D& Position)
 
 
 // Function wgt_AddressPage_2.wgt_AddressPage_1_C.SetPageIndex
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -63,6 +64,7 @@ void Uwgt_AddressPage_1_C::SetPageIndex(int PageIndex)
 	params.PageIndex = PageIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +73,7 @@ void Uwgt_AddressPage_1_C::SetPageIndex(int PageIndex)
 
 
 // Function wgt_AddressPage_2.wgt_AddressPage_1_C.ExecuteUbergraph_wgt_AddressPage_2
-// (HasDefaults)
+// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

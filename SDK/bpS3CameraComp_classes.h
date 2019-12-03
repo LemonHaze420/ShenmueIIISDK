@@ -26,7 +26,7 @@ public:
 
 
 	void GetVerticalFOV(float* VerticalFOV);
-	void HorizonRatioToPitch(float HorizonRatio, float* Pitch);
+	void STATIC_HorizonRatioToPitch(float HorizonRatio, float* Pitch);
 };
 
 

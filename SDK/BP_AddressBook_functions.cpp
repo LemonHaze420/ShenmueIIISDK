@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AddressBook.BP_AddressBook_C.StartSelectAnim
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AnimTime                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_AddressBook_C::StartSelectAnim(float* AnimTime)
 	ABP_AddressBook_C_StartSelectAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +37,11 @@ void ABP_AddressBook_C::StartSelectAnim(float* AnimTime)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.HiddenCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Hidden                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AddressBook_C::HiddenCursor(bool Hidden)
+void ABP_AddressBook_C::STATIC_HiddenCursor(bool Hidden)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.HiddenCursor");
 
@@ -56,7 +57,7 @@ void ABP_AddressBook_C::HiddenCursor(bool Hidden)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.PushButton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, NetMulticast, Private, Delegate, NetClient, Const)
 // Parameters:
 // struct FVector2D               CursorPosition                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -76,12 +77,12 @@ void ABP_AddressBook_C::PushButton(const struct FVector2D& CursorPosition)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.AddressBook_NextPage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsNext                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AddressBook_C::AddressBook_NextPage(bool IsNext, bool* Success)
+void ABP_AddressBook_C::STATIC_AddressBook_NextPage(bool IsNext, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.AddressBook_NextPage");
 
@@ -89,6 +90,7 @@ void ABP_AddressBook_C::AddressBook_NextPage(bool IsNext, bool* Success)
 	params.IsNext = IsNext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -100,15 +102,16 @@ void ABP_AddressBook_C::AddressBook_NextPage(bool IsNext, bool* Success)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_AddressBook_C::UserConstructionScript()
+void ABP_AddressBook_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.UserConstructionScript");
 
 	ABP_AddressBook_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,13 +120,13 @@ void ABP_AddressBook_C::UserConstructionScript()
 
 
 // Function BP_AddressBook.BP_AddressBook_C.򠪦􆖐񍳔_
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_AddressBook_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.򠪦􆖐񍳔_");
 
-	ABP_AddressBook_C_UnknownFunc01__Params params;
+	ABP_AddressBook_C__UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -134,9 +137,9 @@ void ABP_AddressBook_C::UnknownFunc01()
 
 
 // Function BP_AddressBook.BP_AddressBook_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, Public, Delegate, NetServer)
 
-void ABP_AddressBook_C::ReceiveBeginPlay()
+void ABP_AddressBook_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.ReceiveBeginPlay");
 
@@ -151,11 +154,11 @@ void ABP_AddressBook_C::ReceiveBeginPlay()
 
 
 // Function BP_AddressBook.BP_AddressBook_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AddressBook_C::ReceiveTick(float DeltaSeconds)
+void ABP_AddressBook_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.ReceiveTick");
 
@@ -163,6 +166,7 @@ void ABP_AddressBook_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,9 +175,9 @@ void ABP_AddressBook_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.Destroy
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, Public, Delegate, NetServer)
 
-void ABP_AddressBook_C::Destroy()
+void ABP_AddressBook_C::STATIC_Destroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.Destroy");
 
@@ -188,9 +192,9 @@ void ABP_AddressBook_C::Destroy()
 
 
 // Function BP_AddressBook.BP_AddressBook_C.SetCaptureMempPAdPart
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_AddressBook_C::SetCaptureMempPAdPart()
+void ABP_AddressBook_C::STATIC_SetCaptureMempPAdPart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.SetCaptureMempPAdPart");
 
@@ -205,7 +209,7 @@ void ABP_AddressBook_C::SetCaptureMempPAdPart()
 
 
 // Function BP_AddressBook.BP_AddressBook_C.OpenBook
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_AddressBook_C::OpenBook()
 {
@@ -214,6 +218,7 @@ void ABP_AddressBook_C::OpenBook()
 	ABP_AddressBook_C_OpenBook_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,11 +227,11 @@ void ABP_AddressBook_C::OpenBook()
 
 
 // Function BP_AddressBook.BP_AddressBook_C.PushNewPage
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsR2                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AddressBook_C::PushNewPage(bool IsR2)
+void ABP_AddressBook_C::STATIC_PushNewPage(bool IsR2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.PushNewPage");
 
@@ -234,6 +239,7 @@ void ABP_AddressBook_C::PushNewPage(bool IsR2)
 	params.IsR2 = IsR2;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -242,12 +248,12 @@ void ABP_AddressBook_C::PushNewPage(bool IsR2)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.NextPage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bRight                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsLast                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AddressBook_C::NextPage(bool bRight, bool IsLast)
+void ABP_AddressBook_C::STATIC_NextPage(bool bRight, bool IsLast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.NextPage");
 
@@ -264,11 +270,11 @@ void ABP_AddressBook_C::NextPage(bool bRight, bool IsLast)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.NextPageContinueTurning
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bRight                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AddressBook_C::NextPageContinueTurning(bool bRight)
+void ABP_AddressBook_C::STATIC_NextPageContinueTurning(bool bRight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AddressBook.BP_AddressBook_C.NextPageContinueTurning");
 
@@ -276,6 +282,7 @@ void ABP_AddressBook_C::NextPageContinueTurning(bool bRight)
 	params.bRight = bRight;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -284,7 +291,7 @@ void ABP_AddressBook_C::NextPageContinueTurning(bool bRight)
 
 
 // Function BP_AddressBook.BP_AddressBook_C.ExecuteUbergraph_BP_AddressBook
-// (HasDefaults)
+// (NetReliable, Private, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

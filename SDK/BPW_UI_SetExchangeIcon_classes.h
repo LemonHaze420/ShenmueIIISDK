@@ -50,17 +50,17 @@ public:
 
 
 	void ResetScroll();
-	void ScrollSetName();
+	void STATIC_ScrollSetName();
 	void ChangeInventoryType();
 	void CanExchange(bool Exchange);
 	void GetItemID(int* ItemId);
 	void GetName(struct FString* Name);
-	void FocusIcon(bool IsSelect);
+	void STATIC_FocusIcon(bool IsSelect);
 	void GetDescription(struct FString* Description);
 	void SetData(int ItemId, const struct FString& Name);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_BPW_UI_SetExchangeIcon(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_UI_SetExchangeIcon(int EntryPoint);
 };
 
 

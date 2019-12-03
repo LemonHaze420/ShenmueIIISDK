@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetInputWithShoulder
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FName>           InputActions                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TEnumAsByte<EGamepadShoulder>  Shoulder                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -38,12 +38,12 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetInputWithShoulder(TEnumAsByte<EGamepadSh
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetInputByActions
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<struct FName>           InputActions                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            StartIdx                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_SkillInputDisplayer_C::SetInputByActions(int StartIdx, TArray<struct FName>* InputActions)
+void Uwgt_BTL_SkillInputDisplayer_C::STATIC_SetInputByActions(int StartIdx, TArray<struct FName>* InputActions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetInputByActions");
 
@@ -62,7 +62,7 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetInputByActions(int StartIdx, TArray<stru
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.CopyBoxSlotData
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UHorizontalBoxSlot*      CopyFrom                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UHorizontalBoxSlot*      CopyTo                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -76,6 +76,7 @@ void Uwgt_BTL_SkillInputDisplayer_C::CopyBoxSlotData(class UHorizontalBoxSlot* C
 	params.CopyTo = CopyTo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -84,9 +85,9 @@ void Uwgt_BTL_SkillInputDisplayer_C::CopyBoxSlotData(class UHorizontalBoxSlot* C
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.HideInput
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void Uwgt_BTL_SkillInputDisplayer_C::HideInput()
+void Uwgt_BTL_SkillInputDisplayer_C::STATIC_HideInput()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.HideInput");
 
@@ -101,12 +102,12 @@ void Uwgt_BTL_SkillInputDisplayer_C::HideInput()
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetInput
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<struct FName>           InputActions                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // EBTL_HoldInputType             Option                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_SkillInputDisplayer_C::SetInput(EBTL_HoldInputType Option, TArray<struct FName>* InputActions)
+void Uwgt_BTL_SkillInputDisplayer_C::STATIC_SetInput(EBTL_HoldInputType Option, TArray<struct FName>* InputActions)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetInput");
 
@@ -114,6 +115,7 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetInput(EBTL_HoldInputType Option, TArray<
 	params.Option = Option;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -125,11 +127,11 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetInput(EBTL_HoldInputType Option, TArray<
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetSkill(AttackLabel)
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   Attack                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_SkillInputDisplayer_C::SetSkill_AttackLabel_(const struct FName& Attack)
+void Uwgt_BTL_SkillInputDisplayer_C::STATIC_SetSkill_AttackLabel_(const struct FName& Attack)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetSkill(AttackLabel)");
 
@@ -137,6 +139,7 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetSkill_AttackLabel_(const struct FName& A
 	params.Attack = Attack;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,11 +148,11 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetSkill_AttackLabel_(const struct FName& A
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetSkill(ItemLabel)
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ItemName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_SkillInputDisplayer_C::SetSkill_ItemLabel_(const struct FName& ItemName)
+void Uwgt_BTL_SkillInputDisplayer_C::STATIC_SetSkill_ItemLabel_(const struct FName& ItemName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetSkill(ItemLabel)");
 
@@ -157,6 +160,7 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetSkill_ItemLabel_(const struct FName& Ite
 	params.ItemName = ItemName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -165,7 +169,7 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetSkill_ItemLabel_(const struct FName& Ite
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.SetSkillLibrary
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBTL_CommandLibrary_C*   Library                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -185,11 +189,11 @@ void Uwgt_BTL_SkillInputDisplayer_C::SetSkillLibrary(class UBTL_CommandLibrary_C
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_BTL_SkillInputDisplayer_C::PreConstruct(bool IsDesignTime)
+void Uwgt_BTL_SkillInputDisplayer_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.PreConstruct");
 
@@ -205,9 +209,9 @@ void Uwgt_BTL_SkillInputDisplayer_C::PreConstruct(bool IsDesignTime)
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, Event, Static, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void Uwgt_BTL_SkillInputDisplayer_C::Construct()
+void Uwgt_BTL_SkillInputDisplayer_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.Construct");
 
@@ -222,7 +226,7 @@ void Uwgt_BTL_SkillInputDisplayer_C::Construct()
 
 
 // Function wgt_BTL_SkillInputDisplayer.wgt_BTL_SkillInputDisplayer_C.ExecuteUbergraph_wgt_BTL_SkillInputDisplayer
-// (HasDefaults)
+// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

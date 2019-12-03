@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.ConvertTime
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Minutes                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Time                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ScriptTimer_C::ConvertTime(float Minutes, int* Time)
+void UBPC_ScriptTimer_C::STATIC_ConvertTime(float Minutes, int* Time)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ScriptTimer.BPC_ScriptTimer_C.ConvertTime");
 
@@ -38,15 +38,16 @@ void UBPC_ScriptTimer_C::ConvertTime(float Minutes, int* Time)
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.UpdateGlobalFlag
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBPC_ScriptTimer_C::UpdateGlobalFlag()
+void UBPC_ScriptTimer_C::STATIC_UpdateGlobalFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ScriptTimer.BPC_ScriptTimer_C.UpdateGlobalFlag");
 
 	UBPC_ScriptTimer_C_UpdateGlobalFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void UBPC_ScriptTimer_C::UpdateGlobalFlag()
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, NetServer)
 
 void UBPC_ScriptTimer_C::ReceiveBeginPlay()
 {
@@ -72,7 +73,7 @@ void UBPC_ScriptTimer_C::ReceiveBeginPlay()
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.BindGameTimeManager
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, NetServer)
 
 void UBPC_ScriptTimer_C::BindGameTimeManager()
 {
@@ -89,7 +90,7 @@ void UBPC_ScriptTimer_C::BindGameTimeManager()
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.UnbindGameTimeManager
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, NetServer)
 
 void UBPC_ScriptTimer_C::UnbindGameTimeManager()
 {
@@ -106,7 +107,7 @@ void UBPC_ScriptTimer_C::UnbindGameTimeManager()
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.OnUpdateNextDay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, NetServer)
 
 void UBPC_ScriptTimer_C::OnUpdateNextDay()
 {
@@ -123,7 +124,7 @@ void UBPC_ScriptTimer_C::OnUpdateNextDay()
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.OnUpdateGameTime
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          UpdateTime                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -135,6 +136,7 @@ void UBPC_ScriptTimer_C::OnUpdateGameTime(float UpdateTime)
 	params.UpdateTime = UpdateTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,7 +145,7 @@ void UBPC_ScriptTimer_C::OnUpdateGameTime(float UpdateTime)
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.StopTimer
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            GlobalFlagIndex                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -155,6 +157,7 @@ void UBPC_ScriptTimer_C::StopTimer(int GlobalFlagIndex)
 	params.GlobalFlagIndex = GlobalFlagIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -163,7 +166,7 @@ void UBPC_ScriptTimer_C::StopTimer(int GlobalFlagIndex)
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.StartTimer
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            GlobalFlagIndex                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -183,7 +186,7 @@ void UBPC_ScriptTimer_C::StartTimer(int GlobalFlagIndex)
 
 
 // Function BPC_ScriptTimer.BPC_ScriptTimer_C.ExecuteUbergraph_BPC_ScriptTimer
-// (HasDefaults)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

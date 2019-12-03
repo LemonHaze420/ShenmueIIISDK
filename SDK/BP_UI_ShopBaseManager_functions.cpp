@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetRotateIconVisiblity
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void ABP_UI_ShopBaseManager_C::SetRotateIconVisiblity(bool Visible, bool* dummy)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetRStickIconPos
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, MulticastDelegate, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_UI_ShopBaseManager_C::SetRStickIconPos()
 {
@@ -55,17 +55,18 @@ void ABP_UI_ShopBaseManager_C::SetRStickIconPos()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsVisibleRStickCenterPos
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsCenter                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopBaseManager_C::IsVisibleRStickCenterPos(bool* IsCenter)
+void ABP_UI_ShopBaseManager_C::STATIC_IsVisibleRStickCenterPos(bool* IsCenter)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsVisibleRStickCenterPos");
 
 	ABP_UI_ShopBaseManager_C_IsVisibleRStickCenterPos_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +78,7 @@ void ABP_UI_ShopBaseManager_C::IsVisibleRStickCenterPos(bool* IsCenter)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsVisibleRStickOnlyViewMode
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -88,6 +89,7 @@ bool ABP_UI_ShopBaseManager_C::IsVisibleRStickOnlyViewMode()
 	ABP_UI_ShopBaseManager_C_IsVisibleRStickOnlyViewMode_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,7 +100,7 @@ bool ABP_UI_ShopBaseManager_C::IsVisibleRStickOnlyViewMode()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetViewModeSkip
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           SkipFlag                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,6 +112,7 @@ void ABP_UI_ShopBaseManager_C::SetViewModeSkip(bool SkipFlag)
 	params.SkipFlag = SkipFlag;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +121,7 @@ void ABP_UI_ShopBaseManager_C::SetViewModeSkip(bool SkipFlag)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Get NowCategory
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // ES3ItemDataGroup               Category                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -129,6 +132,7 @@ void ABP_UI_ShopBaseManager_C::Get_NowCategory(ES3ItemDataGroup* Category)
 	ABP_UI_ShopBaseManager_C_Get_NowCategory_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -140,17 +144,18 @@ void ABP_UI_ShopBaseManager_C::Get_NowCategory(ES3ItemDataGroup* Category)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsPawnShopMagicNumber
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_UI_ShopBaseManager_C::IsPawnShopMagicNumber()
+bool ABP_UI_ShopBaseManager_C::STATIC_IsPawnShopMagicNumber()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.IsPawnShopMagicNumber");
 
 	ABP_UI_ShopBaseManager_C_IsPawnShopMagicNumber_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,11 +166,11 @@ bool ABP_UI_ShopBaseManager_C::IsPawnShopMagicNumber()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SelectItemCount
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Static, Protected, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopBaseManager_C::SelectItemCount(int* Count)
+void ABP_UI_ShopBaseManager_C::STATIC_SelectItemCount(int* Count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SelectItemCount");
 
@@ -183,15 +188,16 @@ void ABP_UI_ShopBaseManager_C::SelectItemCount(int* Count)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetSkillWindow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_ShopBaseManager_C::SetSkillWindow()
+void ABP_UI_ShopBaseManager_C::STATIC_SetSkillWindow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetSkillWindow");
 
 	ABP_UI_ShopBaseManager_C_SetSkillWindow_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,17 +206,18 @@ void ABP_UI_ShopBaseManager_C::SetSkillWindow()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ItemValidCheck
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsValid                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopBaseManager_C::ItemValidCheck(bool* IsValid)
+void ABP_UI_ShopBaseManager_C::STATIC_ItemValidCheck(bool* IsValid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ItemValidCheck");
 
 	ABP_UI_ShopBaseManager_C_ItemValidCheck_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -222,7 +229,7 @@ void ABP_UI_ShopBaseManager_C::ItemValidCheck(bool* IsValid)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Calc_BuyPrice
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, NetMulticast, Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Price                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -238,6 +245,7 @@ void ABP_UI_ShopBaseManager_C::Calc_BuyPrice(int ItemId, int Price, int* MarginP
 	params.Price = Price;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,12 +259,12 @@ void ABP_UI_ShopBaseManager_C::Calc_BuyPrice(int ItemId, int Price, int* MarginP
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Check_ItemDescription_Ruby
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Ruby                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopBaseManager_C::Check_ItemDescription_Ruby(int ItemId, bool* Ruby)
+void ABP_UI_ShopBaseManager_C::STATIC_Check_ItemDescription_Ruby(int ItemId, bool* Ruby)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Check_ItemDescription_Ruby");
 
@@ -264,6 +272,7 @@ void ABP_UI_ShopBaseManager_C::Check_ItemDescription_Ruby(int ItemId, bool* Ruby
 	params.ItemId = ItemId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -275,7 +284,7 @@ void ABP_UI_ShopBaseManager_C::Check_ItemDescription_Ruby(int ItemId, bool* Ruby
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.GetUITextData
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 OutString                      (Parm, OutParm, ZeroConstructor)
@@ -299,11 +308,11 @@ void ABP_UI_ShopBaseManager_C::GetUITextData(const struct FName& Label, struct F
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Check_CrueDragOnly
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_UI_ShopBaseManager_C::Check_CrueDragOnly()
+bool ABP_UI_ShopBaseManager_C::STATIC_Check_CrueDragOnly()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.Check_CrueDragOnly");
 
@@ -320,7 +329,7 @@ bool ABP_UI_ShopBaseManager_C::Check_CrueDragOnly()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckComplete
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            FocusItemNo                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsComplete                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -333,6 +342,7 @@ void ABP_UI_ShopBaseManager_C::CheckComplete(int FocusItemNo, bool* IsComplete)
 	params.FocusItemNo = FocusItemNo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -344,15 +354,16 @@ void ABP_UI_ShopBaseManager_C::CheckComplete(int FocusItemNo, bool* IsComplete)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetExchange_CheckPayIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_UI_ShopBaseManager_C::SetExchange_CheckPayIcon()
+void ABP_UI_ShopBaseManager_C::STATIC_SetExchange_CheckPayIcon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetExchange_CheckPayIcon");
 
 	ABP_UI_ShopBaseManager_C_SetExchange_CheckPayIcon_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -361,7 +372,7 @@ void ABP_UI_ShopBaseManager_C::SetExchange_CheckPayIcon()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetShopName
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ShopID                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -381,11 +392,11 @@ void ABP_UI_ShopBaseManager_C::SetShopName(int ShopID)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckSubEvent
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, Public, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<int>                    BuyItemList                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_UI_ShopBaseManager_C::CheckSubEvent(TArray<int>* BuyItemList)
+void ABP_UI_ShopBaseManager_C::STATIC_CheckSubEvent(TArray<int>* BuyItemList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckSubEvent");
 
@@ -403,15 +414,16 @@ void ABP_UI_ShopBaseManager_C::CheckSubEvent(TArray<int>* BuyItemList)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.BeforDestroy
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_ShopBaseManager_C::BeforDestroy()
+void ABP_UI_ShopBaseManager_C::STATIC_BeforDestroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.BeforDestroy");
 
 	ABP_UI_ShopBaseManager_C_BeforDestroy_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -420,15 +432,16 @@ void ABP_UI_ShopBaseManager_C::BeforDestroy()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.PushAddSubButtonAfter
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_ShopBaseManager_C::PushAddSubButtonAfter()
+void ABP_UI_ShopBaseManager_C::STATIC_PushAddSubButtonAfter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.PushAddSubButtonAfter");
 
 	ABP_UI_ShopBaseManager_C_PushAddSubButtonAfter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -437,9 +450,9 @@ void ABP_UI_ShopBaseManager_C::PushAddSubButtonAfter()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SubSetItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_ShopBaseManager_C::SubSetItem()
+void ABP_UI_ShopBaseManager_C::STATIC_SubSetItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SubSetItem");
 
@@ -454,9 +467,9 @@ void ABP_UI_ShopBaseManager_C::SubSetItem()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.AddSetItem
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Public, Delegate)
 
-void ABP_UI_ShopBaseManager_C::AddSetItem()
+void ABP_UI_ShopBaseManager_C::STATIC_AddSetItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.AddSetItem");
 
@@ -471,7 +484,7 @@ void ABP_UI_ShopBaseManager_C::AddSetItem()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ChangePage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -483,6 +496,7 @@ void ABP_UI_ShopBaseManager_C::ChangePage(int Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -491,7 +505,7 @@ void ABP_UI_ShopBaseManager_C::ChangePage(int Value)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InitPageIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
 
 void ABP_UI_ShopBaseManager_C::InitPageIcon()
 {
@@ -508,7 +522,7 @@ void ABP_UI_ShopBaseManager_C::InitPageIcon()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.MoveCategoryFocusAfter
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_ShopBaseManager_C::MoveCategoryFocusAfter()
 {
@@ -525,7 +539,7 @@ void ABP_UI_ShopBaseManager_C::MoveCategoryFocusAfter()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.GetCategory
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // ES3ItemDataGroup               Category                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -536,6 +550,7 @@ void ABP_UI_ShopBaseManager_C::GetCategory(ES3ItemDataGroup* Category)
 	ABP_UI_ShopBaseManager_C_GetCategory_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -547,9 +562,9 @@ void ABP_UI_ShopBaseManager_C::GetCategory(ES3ItemDataGroup* Category)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InitItemListWindow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_ShopBaseManager_C::InitItemListWindow()
+void ABP_UI_ShopBaseManager_C::STATIC_InitItemListWindow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InitItemListWindow");
 
@@ -564,7 +579,7 @@ void ABP_UI_ShopBaseManager_C::InitItemListWindow()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.MoveCategoryFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -576,6 +591,7 @@ void ABP_UI_ShopBaseManager_C::MoveCategoryFocus(int Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -584,11 +600,11 @@ void ABP_UI_ShopBaseManager_C::MoveCategoryFocus(int Value)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetCategory
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UDataTable*              DataTable                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopBaseManager_C::SetCategory(class UDataTable* DataTable)
+void ABP_UI_ShopBaseManager_C::STATIC_SetCategory(class UDataTable* DataTable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.SetCategory");
 
@@ -604,7 +620,7 @@ void ABP_UI_ShopBaseManager_C::SetCategory(class UDataTable* DataTable)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.UpdateItemIDList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_UI_ShopBaseManager_C::UpdateItemIDList()
 {
@@ -621,11 +637,11 @@ void ABP_UI_ShopBaseManager_C::UpdateItemIDList()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.VisibleButton_CheckDialog
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible_CheckDialog            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopBaseManager_C::VisibleButton_CheckDialog(bool Visible_CheckDialog)
+void ABP_UI_ShopBaseManager_C::STATIC_VisibleButton_CheckDialog(bool Visible_CheckDialog)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.VisibleButton_CheckDialog");
 
@@ -641,7 +657,7 @@ void ABP_UI_ShopBaseManager_C::VisibleButton_CheckDialog(bool Visible_CheckDialo
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckVisibleAddButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_ShopBaseManager_C::CheckVisibleAddButton()
 {
@@ -658,15 +674,16 @@ void ABP_UI_ShopBaseManager_C::CheckVisibleAddButton()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckVisibleSubButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Static, Public, NetServer)
 
-void ABP_UI_ShopBaseManager_C::CheckVisibleSubButton()
+void ABP_UI_ShopBaseManager_C::STATIC_CheckVisibleSubButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckVisibleSubButton");
 
 	ABP_UI_ShopBaseManager_C_CheckVisibleSubButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -675,7 +692,7 @@ void ABP_UI_ShopBaseManager_C::CheckVisibleSubButton()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.GetDescription
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   Description                    (Parm, OutParm)
 
@@ -697,9 +714,9 @@ void ABP_UI_ShopBaseManager_C::GetDescription(struct FText* Description)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckFocusItemNo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_UI_ShopBaseManager_C::CheckFocusItemNo()
+void ABP_UI_ShopBaseManager_C::STATIC_CheckFocusItemNo()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.CheckFocusItemNo");
 
@@ -714,9 +731,9 @@ void ABP_UI_ShopBaseManager_C::CheckFocusItemNo()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_UI_ShopBaseManager_C::UserConstructionScript()
+void ABP_UI_ShopBaseManager_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.UserConstructionScript");
 
@@ -731,7 +748,7 @@ void ABP_UI_ShopBaseManager_C::UserConstructionScript()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_ResetCamera_K2Node_InputActionEvent_18
-// (BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -751,7 +768,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_ResetCamera_K2Node_InputActionEvent_18(
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_17
-// (BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -771,7 +788,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEve
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_16
-// (BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -791,7 +808,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEve
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_15
-// (BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -811,7 +828,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEven
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_14
-// (BlueprintEvent)
+// (NetReliable, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -831,7 +848,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEven
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_13
-// (BlueprintEvent)
+// (Net, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -851,7 +868,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (Net, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -871,7 +888,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -891,7 +908,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEven
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_10
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -903,6 +920,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -911,7 +929,7 @@ void ABP_UI_ShopBaseManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEven
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.PushCheckDialog
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_UI_Button>      PushButton                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -923,6 +941,7 @@ void ABP_UI_ShopBaseManager_C::PushCheckDialog(TEnumAsByte<EN_UI_Button> PushBut
 	params.PushButton = PushButton;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -931,7 +950,7 @@ void ABP_UI_ShopBaseManager_C::PushCheckDialog(TEnumAsByte<EN_UI_Button> PushBut
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.FinishPriceAnim
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_ShopBaseManager_C::FinishPriceAnim()
 {
@@ -948,7 +967,7 @@ void ABP_UI_ShopBaseManager_C::FinishPriceAnim()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Public, Protected, NetServer)
 
 void ABP_UI_ShopBaseManager_C::ReceiveBeginPlay()
 {
@@ -957,6 +976,7 @@ void ABP_UI_ShopBaseManager_C::ReceiveBeginPlay()
 	ABP_UI_ShopBaseManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -965,7 +985,7 @@ void ABP_UI_ShopBaseManager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.PushButton
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_UI_Button>      newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -985,7 +1005,7 @@ void ABP_UI_ShopBaseManager_C::PushButton(TEnumAsByte<EN_UI_Button> newParam)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1005,7 +1025,7 @@ void ABP_UI_ShopBaseManager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.OpenYesNoDialog
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_ShopBaseManager_C::OpenYesNoDialog()
 {
@@ -1022,7 +1042,7 @@ void ABP_UI_ShopBaseManager_C::OpenYesNoDialog()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_4
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1042,7 +1062,7 @@ void ABP_UI_ShopBaseManager_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAx
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpAxisEvt_MG_RightStickVertical_K2Node_InputAxisEvent_7
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1062,7 +1082,7 @@ void ABP_UI_ShopBaseManager_C::InpAxisEvt_MG_RightStickVertical_K2Node_InputAxis
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_33
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1082,7 +1102,7 @@ void ABP_UI_ShopBaseManager_C::InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisE
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_9
-// (BlueprintEvent)
+// (Exec, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1102,7 +1122,7 @@ void ABP_UI_ShopBaseManager_C::InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxi
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1122,7 +1142,7 @@ void ABP_UI_ShopBaseManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.PushL2R2_ViewMode
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1142,7 +1162,7 @@ void ABP_UI_ShopBaseManager_C::PushL2R2_ViewMode(float InputPin)
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.UpDownReset
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_UI_ShopBaseManager_C::UpDownReset()
 {
@@ -1159,7 +1179,7 @@ void ABP_UI_ShopBaseManager_C::UpDownReset()
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1179,7 +1199,7 @@ void ABP_UI_ShopBaseManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPla
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ExecuteUbergraph_BP_UI_ShopBaseManager
-// (HasDefaults)
+// (MulticastDelegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1199,11 +1219,11 @@ void ABP_UI_ShopBaseManager_C::ExecuteUbergraph_BP_UI_ShopBaseManager(int EntryP
 
 
 // Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ED_Switch_DoBuy__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           DoBuy                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_ShopBaseManager_C::ED_Switch_DoBuy__DelegateSignature(bool DoBuy)
+void ABP_UI_ShopBaseManager_C::STATIC_ED_Switch_DoBuy__DelegateSignature(bool DoBuy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_ShopBaseManager.BP_UI_ShopBaseManager_C.ED_Switch_DoBuy__DelegateSignature");
 

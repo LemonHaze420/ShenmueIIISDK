@@ -39,16 +39,16 @@ public:
 	}
 
 
-	void isTimerOverStop(bool* Stop);
-	void StepRangeSet(int StepMin, int StepMax);
-	void CheckStepOver(bool* StepOver);
+	void STATIC_isTimerOverStop(bool* Stop);
+	void STATIC_StepRangeSet(int StepMin, int StepMax);
+	void STATIC_CheckStepOver(bool* StepOver);
 	void CheckGameTimerange(float Min, float Max, bool* TimeInRange);
-	void InitSet(float LmitTime);
+	void STATIC_InitSet(float LmitTime);
 	void UserConstructionScript();
-	void TickChangeCheckKill();
-	void RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter);
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_Hakkason_TimeOverControl(int EntryPoint);
+	void STATIC_TickChangeCheckKill();
+	void STATIC_RenewalActorCount(TEnumAsByte<EN_MainFlowActorID> ActorId, unsigned char RenewalCounter);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_Hakkason_TimeOverControl(int EntryPoint);
 };
 
 

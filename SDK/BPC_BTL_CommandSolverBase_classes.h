@@ -18,7 +18,7 @@ class UBPC_BTL_CommandSolverBase_C : public UBTL_CommandSolver
 {
 public:
 	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0110(0x0008) (Transient, DuplicateTransient)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0118(0x0008) MISSED OFFSET
+	class UBTL_CommandLibrary_C*                       CommandLibrary;                                           // 0x0118(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +26,15 @@ public:
 		return ptr;
 	}
 
+
+	bool STATIC_FindCurrentComboInputs(const struct FName& AttackID, TArray<struct FName>* Inputs, EBTL_HoldInputType* HoldInput);
+	void Init();
+	void STATIC_FindAttackInputsIncludingCombo(const struct FName& Attack, TArray<struct FName>* InputEvents, bool* Found);
+	void FindAttackCommand(const struct FName& Attack, TArray<TEnumAsByte<EBattleAttackInput>>* OutCommand, bool* bFound);
+	void STATIC_FindAttackInputs(const struct FName& Attack, TArray<struct FName>* InputEvents, bool* Found);
+	void FindSpecialAttackByItemName(const struct FName& SkillName, struct FName* Attack, bool* bFound);
+	void STATIC_ReceiveBeginPlay();
+	void ExecuteUbergraph_BPC_BTL_CommandSolverBase(int EntryPoint);
 };
 
 

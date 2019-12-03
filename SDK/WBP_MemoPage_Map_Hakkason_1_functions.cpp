@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.SetNewPosition
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UTextBlock*              Text                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector2D               NewPosition                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UWBP_MemoPage_Map_Hakkason_0_C::SetNewPosition(class UTextBlock* Text, const struct FVector2D& NewPosition)
+void UWBP_MemoPage_Map_Hakkason_0_C::STATIC_SetNewPosition(class UTextBlock* Text, const struct FVector2D& NewPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.SetNewPosition");
 
@@ -28,6 +28,7 @@ void UWBP_MemoPage_Map_Hakkason_0_C::SetNewPosition(class UTextBlock* Text, cons
 	params.NewPosition = NewPosition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void UWBP_MemoPage_Map_Hakkason_0_C::SetNewPosition(class UTextBlock* Text, cons
 
 
 // Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, NetServer, HasDefaults, NetClient, BlueprintPure)
 
-void UWBP_MemoPage_Map_Hakkason_0_C::Construct()
+void UWBP_MemoPage_Map_Hakkason_0_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.Construct");
 
 	UWBP_MemoPage_Map_Hakkason_0_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +55,7 @@ void UWBP_MemoPage_Map_Hakkason_0_C::Construct()
 
 
 // Function WBP_MemoPage_Map_Hakkason_1.WBP_MemoPage_Map_Hakkason_0_C.ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_1
-// (HasDefaults)
+// (NetReliable, Exec, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

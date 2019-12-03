@@ -28,7 +28,7 @@ public:
 
 
 	void Construct();
-	void ExecuteUbergraph_WBP_Fishing_QTE_Dir(int EntryPoint);
+	void STATIC_ExecuteUbergraph_WBP_Fishing_QTE_Dir(int EntryPoint);
 };
 
 

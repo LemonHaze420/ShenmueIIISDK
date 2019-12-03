@@ -32,7 +32,7 @@ public:
 	}
 
 
-	bool GetShowSimon();
+	bool STATIC_GetShowSimon();
 };
 
 

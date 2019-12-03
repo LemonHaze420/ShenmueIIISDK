@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void SetEventIconDisp(const struct FString& EventName, bool Invalid);
-	void UserConstructionScript();
-	void CatchEventSign__DelegateSignature(const struct FString& EventName);
+	void STATIC_SetEventIconDisp(const struct FString& EventName, bool Invalid);
+	void STATIC_UserConstructionScript();
+	void STATIC_CatchEventSign__DelegateSignature(const struct FString& EventName);
 };
 
 

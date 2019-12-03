@@ -40,13 +40,13 @@ public:
 	}
 
 
-	void ResetRotation();
-	void SetLocation(const struct FVector& NewLocation);
+	void STATIC_ResetRotation();
+	void STATIC_SetLocation(const struct FVector& NewLocation);
 	void SetItemData(class UStaticMesh* NewMesh, const struct FRotator& Rotation);
 	void UserConstructionScript();
-	void OnLoaded_218B594649E9FBD554432E8844E18A3C(class UObject* Loaded);
+	void STATIC_OnLoaded_218B594649E9FBD554432E8844E18A3C(class UObject* Loaded);
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_UI_ViewItem(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_UI_ViewItem(int EntryPoint);
 	void ED_FinishMeshLoad__DelegateSignature();
 };
 

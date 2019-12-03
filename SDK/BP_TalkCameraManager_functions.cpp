@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.PrepareCommonSelectionData
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_TalkCameraManager_C::PrepareCommonSelectionData()
 {
@@ -23,6 +23,7 @@ void ABP_TalkCameraManager_C::PrepareCommonSelectionData()
 	ABP_TalkCameraManager_C_PrepareCommonSelectionData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,9 +32,9 @@ void ABP_TalkCameraManager_C::PrepareCommonSelectionData()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ExecuteCharacterAvoidance
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_TalkCameraManager_C::ExecuteCharacterAvoidance()
+void ABP_TalkCameraManager_C::STATIC_ExecuteCharacterAvoidance()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.ExecuteCharacterAvoidance");
 
@@ -48,7 +49,7 @@ void ABP_TalkCameraManager_C::ExecuteCharacterAvoidance()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.AdjustImaginaryLineCameraPositionFromSpace
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, Public, Private, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  InTalkedActor                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  InPlayer                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -62,6 +63,7 @@ void ABP_TalkCameraManager_C::AdjustImaginaryLineCameraPositionFromSpace(class A
 	params.InPlayer = InPlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,12 +72,12 @@ void ABP_TalkCameraManager_C::AdjustImaginaryLineCameraPositionFromSpace(class A
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetNonCharaCameraTargetSkeletalMesh
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, NetResponse, Static, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  InActor                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMeshComponent*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class USkeletalMeshComponent* ABP_TalkCameraManager_C::GetNonCharaCameraTargetSkeletalMesh(class AActor* InActor)
+class USkeletalMeshComponent* ABP_TalkCameraManager_C::STATIC_GetNonCharaCameraTargetSkeletalMesh(class AActor* InActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetNonCharaCameraTargetSkeletalMesh");
 
@@ -93,7 +95,7 @@ class USkeletalMeshComponent* ABP_TalkCameraManager_C::GetNonCharaCameraTargetSk
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CalcAndSetAvailableCameraForShowItem
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UPrimitiveComponent*     ListeningSkeletalMesh          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -108,7 +110,7 @@ class USkeletalMeshComponent* ABP_TalkCameraManager_C::GetNonCharaCameraTargetSk
 // bool                           isAcEvent                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::CalcAndSetAvailableCameraForShowItem(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_CalcAndSetAvailableCameraForShowItem(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.CalcAndSetAvailableCameraForShowItem");
 
@@ -138,15 +140,16 @@ void ABP_TalkCameraManager_C::CalcAndSetAvailableCameraForShowItem(class UPrimit
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ResolveTalkTransitionError
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_TalkCameraManager_C::ResolveTalkTransitionError()
+void ABP_TalkCameraManager_C::STATIC_ResolveTalkTransitionError()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.ResolveTalkTransitionError");
 
 	ABP_TalkCameraManager_C_ResolveTalkTransitionError_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -155,7 +158,7 @@ void ABP_TalkCameraManager_C::ResolveTalkTransitionError()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckFilter
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, Const)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FST_TalkCameraPairOrSingleFilter Param                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
@@ -166,13 +169,14 @@ void ABP_TalkCameraManager_C::ResolveTalkTransitionError()
 // struct FST_TalkCameraKindFilter Param6                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::CheckFilter(int* mask, struct FST_TalkCameraPairOrSingleFilter* Param, struct FST_TalkCameraShoulderFilter* Param2, struct FST_TalkCameraAngleFilter* Param3, struct FST_TalkCameraDistanceFilter* Param4, struct FST_TalkCameraLookTargetFilter* Param5, struct FST_TalkCameraKindFilter* Param6, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_CheckFilter(int* mask, struct FST_TalkCameraPairOrSingleFilter* Param, struct FST_TalkCameraShoulderFilter* Param2, struct FST_TalkCameraAngleFilter* Param3, struct FST_TalkCameraDistanceFilter* Param4, struct FST_TalkCameraLookTargetFilter* Param5, struct FST_TalkCameraKindFilter* Param6, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckFilter");
 
 	ABP_TalkCameraManager_C_CheckFilter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -198,7 +202,7 @@ void ABP_TalkCameraManager_C::CheckFilter(int* mask, struct FST_TalkCameraPairOr
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckCameraKind
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_TalkCameraKindFilter Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -224,7 +228,7 @@ void ABP_TalkCameraManager_C::CheckCameraKind(int mask, const struct FST_TalkCam
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckLookAtSocket
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_TalkCameraLookTargetFilter Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -250,7 +254,7 @@ void ABP_TalkCameraManager_C::CheckLookAtSocket(int mask, const struct FST_TalkC
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckDistance
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_TalkCameraDistanceFilter Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -276,13 +280,13 @@ void ABP_TalkCameraManager_C::CheckDistance(int mask, const struct FST_TalkCamer
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckAngle
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_TalkCameraAngleFilter Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::CheckAngle(int mask, const struct FST_TalkCameraAngleFilter& Param, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_CheckAngle(int mask, const struct FST_TalkCameraAngleFilter& Param, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckAngle");
 
@@ -302,7 +306,7 @@ void ABP_TalkCameraManager_C::CheckAngle(int mask, const struct FST_TalkCameraAn
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckShoulderOrNot
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_TalkCameraShoulderFilter Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -317,6 +321,7 @@ void ABP_TalkCameraManager_C::CheckShoulderOrNot(int mask, const struct FST_Talk
 	params.Param = Param;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -328,13 +333,13 @@ void ABP_TalkCameraManager_C::CheckShoulderOrNot(int mask, const struct FST_Talk
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckPairOrSingle
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, Const)
 // Parameters:
 // int                            mask                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FST_TalkCameraPairOrSingleFilter Param                          (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::CheckPairOrSingle(int mask, const struct FST_TalkCameraPairOrSingleFilter& Param, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_CheckPairOrSingle(int mask, const struct FST_TalkCameraPairOrSingleFilter& Param, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.CheckPairOrSingle");
 
@@ -343,6 +348,7 @@ void ABP_TalkCameraManager_C::CheckPairOrSingle(int mask, const struct FST_TalkC
 	params.Param = Param;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +360,7 @@ void ABP_TalkCameraManager_C::CheckPairOrSingle(int mask, const struct FST_TalkC
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetFilteredCamera
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FST_TalkCameraPairOrSingleFilter PairOrSingle                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FST_TalkCameraShoulderFilter ShoulderCut                    (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -364,7 +370,7 @@ void ABP_TalkCameraManager_C::CheckPairOrSingle(int mask, const struct FST_TalkC
 // struct FST_TalkCameraKindFilter CameraKind                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // TArray<struct FST_AutoCameraAnalizedInfo> Cameras                        (Parm, OutParm, ZeroConstructor)
 
-void ABP_TalkCameraManager_C::GetFilteredCamera(const struct FST_TalkCameraPairOrSingleFilter& PairOrSingle, const struct FST_TalkCameraShoulderFilter& ShoulderCut, const struct FST_TalkCameraAngleFilter& Angle, const struct FST_TalkCameraDistanceFilter& Distance, const struct FST_TalkCameraLookTargetFilter& LookTarget, const struct FST_TalkCameraKindFilter& CameraKind, TArray<struct FST_AutoCameraAnalizedInfo>* Cameras)
+void ABP_TalkCameraManager_C::STATIC_GetFilteredCamera(const struct FST_TalkCameraPairOrSingleFilter& PairOrSingle, const struct FST_TalkCameraShoulderFilter& ShoulderCut, const struct FST_TalkCameraAngleFilter& Angle, const struct FST_TalkCameraDistanceFilter& Distance, const struct FST_TalkCameraLookTargetFilter& LookTarget, const struct FST_TalkCameraKindFilter& CameraKind, TArray<struct FST_AutoCameraAnalizedInfo>* Cameras)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetFilteredCamera");
 
@@ -377,6 +383,7 @@ void ABP_TalkCameraManager_C::GetFilteredCamera(const struct FST_TalkCameraPairO
 	params.CameraKind = CameraKind;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,13 +395,13 @@ void ABP_TalkCameraManager_C::GetFilteredCamera(const struct FST_TalkCameraPairO
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.AutoCameraCutChageInit
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Talked                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::AutoCameraCutChageInit(class AActor* Player, class AActor* Talked, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_AutoCameraCutChageInit(class AActor* Player, class AActor* Talked, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.AutoCameraCutChageInit");
 
@@ -414,15 +421,16 @@ void ABP_TalkCameraManager_C::AutoCameraCutChageInit(class AActor* Player, class
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.DestroyPrevCamera
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void ABP_TalkCameraManager_C::DestroyPrevCamera()
+void ABP_TalkCameraManager_C::STATIC_DestroyPrevCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.DestroyPrevCamera");
 
 	ABP_TalkCameraManager_C_DestroyPrevCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -431,7 +439,7 @@ void ABP_TalkCameraManager_C::DestroyPrevCamera()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.IsOrderSpecificCamera
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -453,7 +461,7 @@ void ABP_TalkCameraManager_C::IsOrderSpecificCamera(bool* Result)
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CanChangeCut
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetMulticast, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -464,6 +472,7 @@ void ABP_TalkCameraManager_C::CanChangeCut(bool* Result)
 	ABP_TalkCameraManager_C_CanChangeCut_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -475,12 +484,12 @@ void ABP_TalkCameraManager_C::CanChangeCut(bool* Result)
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetRandomAvailableCamera
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate)
 // Parameters:
 // TArray<class UClass*>          AvailableCameras               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UClass*                  Camera                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::GetRandomAvailableCamera(TArray<class UClass*>* AvailableCameras, class UClass** Camera)
+void ABP_TalkCameraManager_C::STATIC_GetRandomAvailableCamera(TArray<class UClass*>* AvailableCameras, class UClass** Camera)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetRandomAvailableCamera");
 
@@ -500,7 +509,7 @@ void ABP_TalkCameraManager_C::GetRandomAvailableCamera(TArray<class UClass*>* Av
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.DestroyDummyMeshComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // TArray<class AActor*>          Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -511,6 +520,7 @@ void ABP_TalkCameraManager_C::DestroyDummyMeshComponent(TArray<class AActor*>* A
 	ABP_TalkCameraManager_C_DestroyDummyMeshComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -522,7 +532,7 @@ void ABP_TalkCameraManager_C::DestroyDummyMeshComponent(TArray<class AActor*>* A
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.TryCreateDummyMesh
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  TargetActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  LookAtActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -550,17 +560,18 @@ void ABP_TalkCameraManager_C::TryCreateDummyMesh(class AActor* TargetActor, clas
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.Init
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 LockTargetCharacterId          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_TalkCameraManager_C::Init(struct FString* LockTargetCharacterId)
+void ABP_TalkCameraManager_C::STATIC_Init(struct FString* LockTargetCharacterId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.Init");
 
 	ABP_TalkCameraManager_C_Init_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -572,11 +583,11 @@ void ABP_TalkCameraManager_C::Init(struct FString* LockTargetCharacterId)
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.SpawnLookAtCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class UClass*                  LookAtCameraClass              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::SpawnLookAtCamera(class UClass* LookAtCameraClass)
+void ABP_TalkCameraManager_C::STATIC_SpawnLookAtCamera(class UClass* LookAtCameraClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.SpawnLookAtCamera");
 
@@ -584,6 +595,7 @@ void ABP_TalkCameraManager_C::SpawnLookAtCamera(class UClass* LookAtCameraClass)
 	params.LookAtCameraClass = LookAtCameraClass;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -592,7 +604,7 @@ void ABP_TalkCameraManager_C::SpawnLookAtCamera(class UClass* LookAtCameraClass)
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetOtherActorFromTargets
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          Array                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class AActor*                  InActor                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -619,13 +631,13 @@ void ABP_TalkCameraManager_C::GetOtherActorFromTargets(class AActor* InActor, TA
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetCameraGroupFromName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Static, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 CameraGroup                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TArray<class UClass*>          GroupCameras                   (Parm, OutParm, ZeroConstructor)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::GetCameraGroupFromName(const struct FString& CameraGroup, TArray<class UClass*>* GroupCameras, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_GetCameraGroupFromName(const struct FString& CameraGroup, TArray<class UClass*>* GroupCameras, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetCameraGroupFromName");
 
@@ -633,6 +645,7 @@ void ABP_TalkCameraManager_C::GetCameraGroupFromName(const struct FString& Camer
 	params.CameraGroup = CameraGroup;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -646,12 +659,12 @@ void ABP_TalkCameraManager_C::GetCameraGroupFromName(const struct FString& Camer
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetCameraClassFromName
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 CameraName                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UClass*                  cameraClass                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::GetCameraClassFromName(const struct FString& CameraName, class UClass** cameraClass)
+void ABP_TalkCameraManager_C::STATIC_GetCameraClassFromName(const struct FString& CameraName, class UClass** cameraClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetCameraClassFromName");
 
@@ -659,6 +672,7 @@ void ABP_TalkCameraManager_C::GetCameraClassFromName(const struct FString& Camer
 	params.CameraName = CameraName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -670,7 +684,7 @@ void ABP_TalkCameraManager_C::GetCameraClassFromName(const struct FString& Camer
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetSpeakingCharacterName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EM_Charactor>      CharacterType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   Name                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -683,6 +697,7 @@ void ABP_TalkCameraManager_C::GetSpeakingCharacterName(TEnumAsByte<EM_Charactor>
 	params.CharacterType = CharacterType;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -694,7 +709,7 @@ void ABP_TalkCameraManager_C::GetSpeakingCharacterName(TEnumAsByte<EM_Charactor>
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.GetAvailableCameraNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<class UClass*>          Cameras                        (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            DivNum                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -719,6 +734,7 @@ void ABP_TalkCameraManager_C::GetAvailableCameraNum(int DivNum, class USkeletalM
 	params.isDebugDraw = isDebugDraw;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -734,12 +750,12 @@ void ABP_TalkCameraManager_C::GetAvailableCameraNum(int DivNum, class USkeletalM
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CalcCameraPositionFromImaginaryLine
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  NPC                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::CalcCameraPositionFromImaginaryLine(class AActor* NPC, class AActor* Player)
+void ABP_TalkCameraManager_C::STATIC_CalcCameraPositionFromImaginaryLine(class AActor* NPC, class AActor* Player)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.CalcCameraPositionFromImaginaryLine");
 
@@ -756,14 +772,14 @@ void ABP_TalkCameraManager_C::CalcCameraPositionFromImaginaryLine(class AActor* 
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.TryGetDifferentCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class UClass*>          List                           (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UClass*                  PrevCamera                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Camera                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::TryGetDifferentCamera(class UClass* PrevCamera, TArray<class UClass*>* List, class UClass** Camera, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_TryGetDifferentCamera(class UClass* PrevCamera, TArray<class UClass*>* List, class UClass** Camera, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.TryGetDifferentCamera");
 
@@ -771,6 +787,7 @@ void ABP_TalkCameraManager_C::TryGetDifferentCamera(class UClass* PrevCamera, TA
 	params.PrevCamera = PrevCamera;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -786,7 +803,7 @@ void ABP_TalkCameraManager_C::TryGetDifferentCamera(class UClass* PrevCamera, TA
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.CalcAndSetAvailableCamera
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     SpeakingSkeletalMesh           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UPrimitiveComponent*     ListeningSkeletalMesh          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -801,7 +818,7 @@ void ABP_TalkCameraManager_C::TryGetDifferentCamera(class UClass* PrevCamera, TA
 // bool                           isAcEvent                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::CalcAndSetAvailableCamera(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result)
+void ABP_TalkCameraManager_C::STATIC_CalcAndSetAvailableCamera(class UPrimitiveComponent* SpeakingSkeletalMesh, class UPrimitiveComponent* ListeningSkeletalMesh, TEnumAsByte<EM_LeftOrRight> CameraPosition, int DivNum, float Radius, bool isDrawDebug, EAutoCameraType AutoCameraType, bool CheckTwoSide, bool _printCollisionMessage, bool isAcEvent, TArray<TEnumAsByte<EObjectTypeQuery>>* CheckHitObjectTypes, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.CalcAndSetAvailableCamera");
 
@@ -831,7 +848,7 @@ void ABP_TalkCameraManager_C::CalcAndSetAvailableCamera(class UPrimitiveComponen
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.SetNextCameraFromRandom
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCameraManager_C::SetNextCameraFromRandom()
 {
@@ -840,6 +857,7 @@ void ABP_TalkCameraManager_C::SetNextCameraFromRandom()
 	ABP_TalkCameraManager_C_SetNextCameraFromRandom_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -848,7 +866,7 @@ void ABP_TalkCameraManager_C::SetNextCameraFromRandom()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.SpawnDefalutTalkCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UClass*                  cameraClass                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -868,9 +886,9 @@ void ABP_TalkCameraManager_C::SpawnDefalutTalkCamera(class UClass* cameraClass)
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.SetCameraPositionFromImaginaryLine
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_TalkCameraManager_C::SetCameraPositionFromImaginaryLine()
+void ABP_TalkCameraManager_C::STATIC_SetCameraPositionFromImaginaryLine()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.SetCameraPositionFromImaginaryLine");
 
@@ -885,7 +903,7 @@ void ABP_TalkCameraManager_C::SetCameraPositionFromImaginaryLine()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_TalkCameraManager_C::UserConstructionScript()
 {
@@ -894,6 +912,7 @@ void ABP_TalkCameraManager_C::UserConstructionScript()
 	ABP_TalkCameraManager_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -902,7 +921,7 @@ void ABP_TalkCameraManager_C::UserConstructionScript()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ChangeTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<class AActor*>          NewTarget                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          lerpTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -916,6 +935,7 @@ void ABP_TalkCameraManager_C::ChangeTarget(TArray<class AActor*> NewTarget, floa
 	params.lerpTime = lerpTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -924,7 +944,7 @@ void ABP_TalkCameraManager_C::ChangeTarget(TArray<class AActor*> NewTarget, floa
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ChangeToLookAtCamera
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  MotionActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -948,11 +968,11 @@ void ABP_TalkCameraManager_C::ChangeToLookAtCamera(class AActor* Player, class A
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::ReceiveTick(float DeltaSeconds)
+void ABP_TalkCameraManager_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.ReceiveTick");
 
@@ -968,7 +988,7 @@ void ABP_TalkCameraManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ChangeCameraByAutoCameraDirector
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class AActor*                  Player                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  TalkedActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -982,6 +1002,7 @@ void ABP_TalkCameraManager_C::ChangeCameraByAutoCameraDirector(class AActor* Pla
 	params.TalkedActor = TalkedActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -990,11 +1011,11 @@ void ABP_TalkCameraManager_C::ChangeCameraByAutoCameraDirector(class AActor* Pla
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_TalkCameraManager_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.ReceiveEndPlay");
 
@@ -1010,7 +1031,7 @@ void ABP_TalkCameraManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ChangeToStartShowItemCamera
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCameraManager_C::ChangeToStartShowItemCamera()
 {
@@ -1019,6 +1040,7 @@ void ABP_TalkCameraManager_C::ChangeToStartShowItemCamera()
 	ABP_TalkCameraManager_C_ChangeToStartShowItemCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1027,7 +1049,7 @@ void ABP_TalkCameraManager_C::ChangeToStartShowItemCamera()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ChangeToShowItemZoomCamera
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCameraManager_C::ChangeToShowItemZoomCamera()
 {
@@ -1036,6 +1058,7 @@ void ABP_TalkCameraManager_C::ChangeToShowItemZoomCamera()
 	ABP_TalkCameraManager_C_ChangeToShowItemZoomCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1044,7 +1067,7 @@ void ABP_TalkCameraManager_C::ChangeToShowItemZoomCamera()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ChangeCamera
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FString                 LookTargetCharacterID          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // EAutoCameraType                AutoCameraType                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1054,7 +1077,7 @@ void ABP_TalkCameraManager_C::ChangeToShowItemZoomCamera()
 // class AActor*                  PlayerActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  TalkedActor                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::ChangeCamera(const struct FString& LookTargetCharacterID, EAutoCameraType AutoCameraType, bool isSameTarget, const struct FString& UseCameraName, const struct FString& UseCameraGroup, class AActor* PlayerActor, class AActor* TalkedActor)
+void ABP_TalkCameraManager_C::STATIC_ChangeCamera(const struct FString& LookTargetCharacterID, EAutoCameraType AutoCameraType, bool isSameTarget, const struct FString& UseCameraName, const struct FString& UseCameraGroup, class AActor* PlayerActor, class AActor* TalkedActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.ChangeCamera");
 
@@ -1068,6 +1091,7 @@ void ABP_TalkCameraManager_C::ChangeCamera(const struct FString& LookTargetChara
 	params.TalkedActor = TalkedActor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1076,7 +1100,7 @@ void ABP_TalkCameraManager_C::ChangeCamera(const struct FString& LookTargetChara
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.SpawnNextCamera
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_TalkCameraManager_C::SpawnNextCamera()
 {
@@ -1085,6 +1109,7 @@ void ABP_TalkCameraManager_C::SpawnNextCamera()
 	ABP_TalkCameraManager_C_SpawnNextCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1093,11 +1118,11 @@ void ABP_TalkCameraManager_C::SpawnNextCamera()
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.ExecuteUbergraph_BP_TalkCameraManager
-// (HasDefaults)
+// (Net, NetReliable, Exec, Event, Static, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TalkCameraManager_C::ExecuteUbergraph_BP_TalkCameraManager(int EntryPoint)
+void ABP_TalkCameraManager_C::STATIC_ExecuteUbergraph_BP_TalkCameraManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkCameraManager.BP_TalkCameraManager_C.ExecuteUbergraph_BP_TalkCameraManager");
 
@@ -1113,7 +1138,7 @@ void ABP_TalkCameraManager_C::ExecuteUbergraph_BP_TalkCameraManager(int EntryPoi
 
 
 // Function BP_TalkCameraManager.BP_TalkCameraManager_C.OnSelectedAutoCamera__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_TalkCameraManager_C::OnSelectedAutoCamera__DelegateSignature()
 {

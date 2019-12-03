@@ -37,27 +37,6 @@ enum class EVirtualKeyboardType : uint8_t
 };
 
 
-// Enum UMG.EDynamicBoxType
-enum class EDynamicBoxType : uint8_t
-{
-	EDynamicBoxType__Horizontal    = 0,
-	EDynamicBoxType__Vertical      = 1,
-	EDynamicBoxType__Wrap          = 2,
-	EDynamicBoxType__Overlay       = 3,
-	EDynamicBoxType__EDynamicBoxType_MAX = 4
-};
-
-
-// Enum UMG.EUMGSequencePlayMode
-enum class EUMGSequencePlayMode : uint8_t
-{
-	EUMGSequencePlayMode__Forward  = 0,
-	EUMGSequencePlayMode__Reverse  = 1,
-	EUMGSequencePlayMode__PingPong = 2,
-	EUMGSequencePlayMode__EUMGSequencePlayMode_MAX = 3
-};
-
-
 // Enum UMG.EDragPivot
 enum class EDragPivot : uint8_t
 {
@@ -75,42 +54,22 @@ enum class EDragPivot : uint8_t
 };
 
 
-// Enum UMG.EWidgetDesignFlags
-enum class EWidgetDesignFlags : uint8_t
+// Enum UMG.ESlateSizeRule
+enum class ESlateSizeRule : uint8_t
 {
-	EWidgetDesignFlags__None       = 0,
-	EWidgetDesignFlags__Designing  = 1,
-	EWidgetDesignFlags__ShowOutline = 2,
-	EWidgetDesignFlags__ExecutePreConstruct = 3,
-	EWidgetDesignFlags__EWidgetDesignFlags_MAX = 4
+	ESlateSizeRule__Automatic      = 0,
+	ESlateSizeRule__Fill           = 1,
+	ESlateSizeRule__ESlateSizeRule_MAX = 2
 };
 
 
-// Enum UMG.EBindingKind
-enum class EBindingKind : uint8_t
+// Enum UMG.EUMGSequencePlayMode
+enum class EUMGSequencePlayMode : uint8_t
 {
-	EBindingKind__Function         = 0,
-	EBindingKind__Property         = 1,
-	EBindingKind__EBindingKind_MAX = 2
-};
-
-
-// Enum UMG.EWidgetGeometryMode
-enum class EWidgetGeometryMode : uint8_t
-{
-	EWidgetGeometryMode__Plane     = 0,
-	EWidgetGeometryMode__Cylinder  = 1,
-	EWidgetGeometryMode__EWidgetGeometryMode_MAX = 2
-};
-
-
-// Enum UMG.EWidgetBlendMode
-enum class EWidgetBlendMode : uint8_t
-{
-	EWidgetBlendMode__Opaque       = 0,
-	EWidgetBlendMode__Masked       = 1,
-	EWidgetBlendMode__Transparent  = 2,
-	EWidgetBlendMode__EWidgetBlendMode_MAX = 3
+	EUMGSequencePlayMode__Forward  = 0,
+	EUMGSequencePlayMode__Reverse  = 1,
+	EUMGSequencePlayMode__PingPong = 2,
+	EUMGSequencePlayMode__EUMGSequencePlayMode_MAX = 3
 };
 
 
@@ -123,12 +82,51 @@ enum class EWidgetTickFrequency : uint8_t
 };
 
 
-// Enum UMG.ESlateSizeRule
-enum class ESlateSizeRule : uint8_t
+// Enum UMG.EBindingKind
+enum class EBindingKind : uint8_t
 {
-	ESlateSizeRule__Automatic      = 0,
-	ESlateSizeRule__Fill           = 1,
-	ESlateSizeRule__ESlateSizeRule_MAX = 2
+	EBindingKind__Function         = 0,
+	EBindingKind__Property         = 1,
+	EBindingKind__EBindingKind_MAX = 2
+};
+
+
+// Enum UMG.EDynamicBoxType
+enum class EDynamicBoxType : uint8_t
+{
+	EDynamicBoxType__Horizontal    = 0,
+	EDynamicBoxType__Vertical      = 1,
+	EDynamicBoxType__Wrap          = 2,
+	EDynamicBoxType__Overlay       = 3,
+	EDynamicBoxType__EDynamicBoxType_MAX = 4
+};
+
+
+// Enum UMG.EWidgetGeometryMode
+enum class EWidgetGeometryMode : uint8_t
+{
+	EWidgetGeometryMode__Plane     = 0,
+	EWidgetGeometryMode__Cylinder  = 1,
+	EWidgetGeometryMode__EWidgetGeometryMode_MAX = 2
+};
+
+
+// Enum UMG.EWidgetTimingPolicy
+enum class EWidgetTimingPolicy : uint8_t
+{
+	EWidgetTimingPolicy__RealTime  = 0,
+	EWidgetTimingPolicy__GameTime  = 1,
+	EWidgetTimingPolicy__EWidgetTimingPolicy_MAX = 2
+};
+
+
+// Enum UMG.EWidgetBlendMode
+enum class EWidgetBlendMode : uint8_t
+{
+	EWidgetBlendMode__Opaque       = 0,
+	EWidgetBlendMode__Masked       = 1,
+	EWidgetBlendMode__Transparent  = 2,
+	EWidgetBlendMode__EWidgetBlendMode_MAX = 3
 };
 
 
@@ -152,12 +150,14 @@ enum class EWidgetSpace : uint8_t
 };
 
 
-// Enum UMG.EWidgetTimingPolicy
-enum class EWidgetTimingPolicy : uint8_t
+// Enum UMG.EWidgetDesignFlags
+enum class EWidgetDesignFlags : uint8_t
 {
-	EWidgetTimingPolicy__RealTime  = 0,
-	EWidgetTimingPolicy__GameTime  = 1,
-	EWidgetTimingPolicy__EWidgetTimingPolicy_MAX = 2
+	EWidgetDesignFlags__None       = 0,
+	EWidgetDesignFlags__Designing  = 1,
+	EWidgetDesignFlags__ShowOutline = 2,
+	EWidgetDesignFlags__ExecutePreConstruct = 3,
+	EWidgetDesignFlags__EWidgetDesignFlags_MAX = 4
 };
 
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ int ABP_TuriguRentalManager_C::GetPriority()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -46,6 +46,7 @@ TArray<struct FS3DetectActionParam> ABP_TuriguRentalManager_C::GetDetectAction()
 	ABP_TuriguRentalManager_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +57,7 @@ TArray<struct FS3DetectActionParam> ABP_TuriguRentalManager_C::GetDetectAction()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.IsHaveVipCard
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, NetMulticast, Public, Private, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           IsHaveVipCard                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -78,15 +79,16 @@ void ABP_TuriguRentalManager_C::IsHaveVipCard(bool* IsHaveVipCard)
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.CheckPayButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, HasDefaults, NetClient, Const)
 
-void ABP_TuriguRentalManager_C::CheckPayButton()
+void ABP_TuriguRentalManager_C::STATIC_CheckPayButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.CheckPayButton");
 
 	ABP_TuriguRentalManager_C_CheckPayButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,15 +97,16 @@ void ABP_TuriguRentalManager_C::CheckPayButton()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.EndFlow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 
-void ABP_TuriguRentalManager_C::EndFlow()
+void ABP_TuriguRentalManager_C::STATIC_EndFlow()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.EndFlow");
 
 	ABP_TuriguRentalManager_C_EndFlow_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,9 +115,9 @@ void ABP_TuriguRentalManager_C::EndFlow()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.UpdNowSelSet
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, Const)
 
-void ABP_TuriguRentalManager_C::UpdNowSelSet()
+void ABP_TuriguRentalManager_C::STATIC_UpdNowSelSet()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.UpdNowSelSet");
 
@@ -129,11 +132,11 @@ void ABP_TuriguRentalManager_C::UpdNowSelSet()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.PlaySE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_ShopSE_List>    SE                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TuriguRentalManager_C::PlaySE(TEnumAsByte<EN_ShopSE_List> SE)
+void ABP_TuriguRentalManager_C::STATIC_PlaySE(TEnumAsByte<EN_ShopSE_List> SE)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.PlaySE");
 
@@ -141,6 +144,7 @@ void ABP_TuriguRentalManager_C::PlaySE(TEnumAsByte<EN_ShopSE_List> SE)
 	params.SE = SE;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,7 +153,7 @@ void ABP_TuriguRentalManager_C::PlaySE(TEnumAsByte<EN_ShopSE_List> SE)
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.GetItemID
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            item_no                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FText                   ret                            (Parm, OutParm)
@@ -173,7 +177,7 @@ void ABP_TuriguRentalManager_C::GetItemID(int item_no, struct FText* ret)
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_TuriguRentalManager_C::UserConstructionScript()
 {
@@ -190,7 +194,7 @@ void ABP_TuriguRentalManager_C::UserConstructionScript()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.InpActEvt_SearchBottomButton_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -210,7 +214,7 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchBottomButton_K2Node_InputActionE
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -230,7 +234,7 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEve
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_10
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -250,7 +254,7 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEv
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.InpActEvt_SearchTopButton_K2Node_InputActionEvent_9
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -270,7 +274,7 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchTopButton_K2Node_InputActionEven
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -282,6 +286,7 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,7 +295,7 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (NetReliable, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -302,6 +307,7 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEve
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -310,9 +316,9 @@ void ABP_TuriguRentalManager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEve
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_TuriguRentalManager_C::ReceiveBeginPlay()
+void ABP_TuriguRentalManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.ReceiveBeginPlay");
 
@@ -327,7 +333,7 @@ void ABP_TuriguRentalManager_C::ReceiveBeginPlay()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -339,6 +345,7 @@ void ABP_TuriguRentalManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -347,7 +354,7 @@ void ABP_TuriguRentalManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -359,6 +366,7 @@ void ABP_TuriguRentalManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -367,7 +375,7 @@ void ABP_TuriguRentalManager_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPl
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -379,6 +387,7 @@ void ABP_TuriguRentalManager_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -387,11 +396,11 @@ void ABP_TuriguRentalManager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.ExecuteUbergraph_BP_TuriguRentalManager
-// (HasDefaults)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Public, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TuriguRentalManager_C::ExecuteUbergraph_BP_TuriguRentalManager(int EntryPoint)
+void ABP_TuriguRentalManager_C::STATIC_ExecuteUbergraph_BP_TuriguRentalManager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.ExecuteUbergraph_BP_TuriguRentalManager");
 
@@ -407,9 +416,9 @@ void ABP_TuriguRentalManager_C::ExecuteUbergraph_BP_TuriguRentalManager(int Entr
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.onNoBuyEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_TuriguRentalManager_C::onNoBuyEnd__DelegateSignature()
+void ABP_TuriguRentalManager_C::STATIC_onNoBuyEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.onNoBuyEnd__DelegateSignature");
 
@@ -424,9 +433,9 @@ void ABP_TuriguRentalManager_C::onNoBuyEnd__DelegateSignature()
 
 
 // Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.onBuyEnd__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_TuriguRentalManager_C::onBuyEnd__DelegateSignature()
+void ABP_TuriguRentalManager_C::STATIC_onBuyEnd__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TuriguRentalManager.BP_TuriguRentalManager_C.onBuyEnd__DelegateSignature");
 

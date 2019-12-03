@@ -40,20 +40,20 @@ public:
 
 
 	void IsInitializeVariables(bool* bSuccess);
-	void AllStopAnimation();
-	void UpdateArmRotation(const struct FRotator& Add);
+	void STATIC_AllStopAnimation();
+	void STATIC_UpdateArmRotation(const struct FRotator& Add);
 	void IsAligned(bool* bAligned);
 	void PlayTakeOutAnimation();
 	void StopTakeOutAnimation();
 	void PlayThrowAnimation();
-	void StopThrowAnimation();
-	void PlayThrowEndAnimation();
-	void StopThrowEndAnimation();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_StopThrowAnimation();
+	void STATIC_PlayThrowEndAnimation();
+	void STATIC_StopThrowEndAnimation();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void InitializeVariables();
-	void ResetVariables();
+	void STATIC_ResetVariables();
 	void ExecuteUbergraph_BPC_MiniGameThrowArmAnimation(int EntryPoint);
-	void OnFinishedTakeOutDispatcher__DelegateSignature();
+	void STATIC_OnFinishedTakeOutDispatcher__DelegateSignature();
 };
 
 

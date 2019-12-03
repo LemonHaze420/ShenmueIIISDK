@@ -32,12 +32,12 @@ public:
 	}
 
 
-	void SetDateTime(const struct FDateTime& DateTime);
+	void STATIC_SetDateTime(const struct FDateTime& DateTime);
 	void SetOptionText(const struct FString& Text);
 	void SetStep(int Step);
-	void Construct();
-	void BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void ExecuteUbergraph_BP_S3SaveLoadTestButton(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_BndEvt__Button_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BP_S3SaveLoadTestButton(int EntryPoint);
 	void OnClicked__DelegateSignature();
 };
 

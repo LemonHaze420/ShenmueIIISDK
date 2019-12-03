@@ -38,16 +38,16 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
 	void DayTimeEventDispatcher_Event_1(ES3DayTimeEvent EventType);
-	void LightSourceChange(float Intensity, int MatID, class UMaterialInstanceDynamic* DMI, bool On);
+	void STATIC_LightSourceChange(float Intensity, int MatID, class UMaterialInstanceDynamic* DMI, bool On);
 	void CustomEvent_1(int EventIndex);
-	void OnSetLightEnable(bool bNewLightEnable);
-	void OnSetLightCastShadow(bool bNewLightCastShadow);
-	void ReceiveTick(float DeltaSeconds);
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_StaticMeshWithLights(int EntryPoint);
+	void STATIC_OnSetLightEnable(bool bNewLightEnable);
+	void STATIC_OnSetLightCastShadow(bool bNewLightCastShadow);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ExecuteUbergraph_BP_StaticMeshWithLights(int EntryPoint);
 };
 
 

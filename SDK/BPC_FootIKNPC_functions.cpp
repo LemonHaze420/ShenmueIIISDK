@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.GetSinkingDistance
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          SinkingDistance                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_FootIKNPC_C::GetSinkingDistance(float* SinkingDistance)
+void UBPC_FootIKNPC_C::STATIC_GetSinkingDistance(float* SinkingDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.GetSinkingDistance");
 
@@ -36,7 +36,7 @@ void UBPC_FootIKNPC_C::GetSinkingDistance(float* SinkingDistance)
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.InterpSinkingDistance
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          SinkingDistance                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -60,12 +60,12 @@ void UBPC_FootIKNPC_C::InterpSinkingDistance(float Target, float* SinkingDistanc
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.UpdateRightFootRotaion
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           HitLeft                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Normal                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void UBPC_FootIKNPC_C::UpdateRightFootRotaion(bool HitLeft, const struct FVector& Normal)
+void UBPC_FootIKNPC_C::STATIC_UpdateRightFootRotaion(bool HitLeft, const struct FVector& Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.UpdateRightFootRotaion");
 
@@ -82,7 +82,7 @@ void UBPC_FootIKNPC_C::UpdateRightFootRotaion(bool HitLeft, const struct FVector
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.UpdateLeftFootRotaion
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           HitLeft                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Normal                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -104,14 +104,14 @@ void UBPC_FootIKNPC_C::UpdateLeftFootRotaion(bool HitLeft, const struct FVector&
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.GetFootRotaion
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          LeftFootRotaionX               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          LeftFootRotaionY               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          RightFootRotaionX              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          RightFootRotaionY              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_FootIKNPC_C::GetFootRotaion(float* LeftFootRotaionX, float* LeftFootRotaionY, float* RightFootRotaionX, float* RightFootRotaionY)
+void UBPC_FootIKNPC_C::STATIC_GetFootRotaion(float* LeftFootRotaionX, float* LeftFootRotaionY, float* RightFootRotaionX, float* RightFootRotaionY)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.GetFootRotaion");
 
@@ -135,7 +135,7 @@ void UBPC_FootIKNPC_C::GetFootRotaion(float* LeftFootRotaionX, float* LeftFootRo
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.TryGetSinkingDistance
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FName                   FootSocketName                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartLocationZ                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -154,6 +154,7 @@ void UBPC_FootIKNPC_C::TryGetSinkingDistance(const struct FName& FootSocketName,
 	params.EndLocationZ = EndLocationZ;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,7 +170,7 @@ void UBPC_FootIKNPC_C::TryGetSinkingDistance(const struct FName& FootSocketName,
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.TraceFromLocation
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FVector                 StartLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 EndLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -201,7 +202,7 @@ void UBPC_FootIKNPC_C::TraceFromLocation(const struct FVector& StartLocation, co
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.TryGetFootSinkingOffset
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          LocationX                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          LocationY                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -210,7 +211,7 @@ void UBPC_FootIKNPC_C::TraceFromLocation(const struct FVector& StartLocation, co
 // bool                           bHit                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          SinkingOffsetZ                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_FootIKNPC_C::TryGetFootSinkingOffset(float LocationX, float LocationY, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingOffsetZ)
+void UBPC_FootIKNPC_C::STATIC_TryGetFootSinkingOffset(float LocationX, float LocationY, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingOffsetZ)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.TryGetFootSinkingOffset");
 
@@ -221,6 +222,7 @@ void UBPC_FootIKNPC_C::TryGetFootSinkingOffset(float LocationX, float LocationY,
 	params.EndLocationZ = EndLocationZ;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,7 +236,7 @@ void UBPC_FootIKNPC_C::TryGetFootSinkingOffset(float LocationX, float LocationY,
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.UpdateMeshLocalOffsetZ
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bHitFootLeft                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           bHitFootRight                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -246,6 +248,7 @@ void UBPC_FootIKNPC_C::UpdateMeshLocalOffsetZ(bool* bHitFootLeft, bool* bHitFoot
 	UBPC_FootIKNPC_C_UpdateMeshLocalOffsetZ_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -259,7 +262,7 @@ void UBPC_FootIKNPC_C::UpdateMeshLocalOffsetZ(bool* bHitFootLeft, bool* bHitFoot
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.UpdateFootIKOffset
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bHitFootLeft                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bHitFootRight                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -281,7 +284,7 @@ void UBPC_FootIKNPC_C::UpdateFootIKOffset(bool bHitFootLeft, bool bHitFootRight)
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.GetFootOffset
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Event, NetMulticast, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          LeftFootOffsetZ                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          RightFootOffsetZ               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -306,15 +309,16 @@ void UBPC_FootIKNPC_C::GetFootOffset(float* LeftFootOffsetZ, float* RightFootOff
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBPC_FootIKNPC_C::Update()
+void UBPC_FootIKNPC_C::STATIC_Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.Update");
 
 	UBPC_FootIKNPC_C_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -323,9 +327,9 @@ void UBPC_FootIKNPC_C::Update()
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBPC_FootIKNPC_C::ReceiveBeginPlay()
+void UBPC_FootIKNPC_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.ReceiveBeginPlay");
 
@@ -340,11 +344,11 @@ void UBPC_FootIKNPC_C::ReceiveBeginPlay()
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.ExecuteUbergraph_BPC_FootIKNPC
-// (HasDefaults)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_FootIKNPC_C::ExecuteUbergraph_BPC_FootIKNPC(int EntryPoint)
+void UBPC_FootIKNPC_C::STATIC_ExecuteUbergraph_BPC_FootIKNPC(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.ExecuteUbergraph_BPC_FootIKNPC");
 
@@ -360,11 +364,11 @@ void UBPC_FootIKNPC_C::ExecuteUbergraph_BPC_FootIKNPC(int EntryPoint)
 
 
 // Function BPC_FootIKNPC.BPC_FootIKNPC_C.OnFootIanding__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          SinkingDistance_Z              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_FootIKNPC_C::OnFootIanding__DelegateSignature(float SinkingDistance_Z)
+void UBPC_FootIKNPC_C::STATIC_OnFootIanding__DelegateSignature(float SinkingDistance_Z)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_FootIKNPC.BPC_FootIKNPC_C.OnFootIanding__DelegateSignature");
 
@@ -372,6 +376,7 @@ void UBPC_FootIKNPC_C::OnFootIanding__DelegateSignature(float SinkingDistance_Z)
 	params.SinkingDistance_Z = SinkingDistance_Z;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

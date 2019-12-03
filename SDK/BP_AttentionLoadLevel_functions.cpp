@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.CheckDirection
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 HitLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,12 +38,12 @@ void ABP_AttentionLoadLevel_C::CheckDirection(const struct FVector& HitLocation,
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.GetNearAttentionPos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // struct FVector                 AttentionPos                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 NearPos                        (Parm, OutParm, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::GetNearAttentionPos(const struct FVector& AttentionPos, struct FVector* NearPos)
+void ABP_AttentionLoadLevel_C::STATIC_GetNearAttentionPos(const struct FVector& AttentionPos, struct FVector* NearPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.GetNearAttentionPos");
 
@@ -62,11 +62,11 @@ void ABP_AttentionLoadLevel_C::GetNearAttentionPos(const struct FVector& Attenti
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.SetEnabledControl
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::SetEnabledControl(bool Enabled)
+void ABP_AttentionLoadLevel_C::STATIC_SetEnabledControl(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.SetEnabledControl");
 
@@ -82,9 +82,9 @@ void ABP_AttentionLoadLevel_C::SetEnabledControl(bool Enabled)
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_AttentionLoadLevel_C::UserConstructionScript()
+void ABP_AttentionLoadLevel_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.UserConstructionScript");
 
@@ -99,9 +99,9 @@ void ABP_AttentionLoadLevel_C::UserConstructionScript()
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnFinishedStartFadeOut
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_AttentionLoadLevel_C::OnFinishedStartFadeOut()
+void ABP_AttentionLoadLevel_C::STATIC_OnFinishedStartFadeOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnFinishedStartFadeOut");
 
@@ -116,11 +116,11 @@ void ABP_AttentionLoadLevel_C::OnFinishedStartFadeOut()
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnFinishedLoadLevel
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::OnFinishedLoadLevel(const struct FName& ID)
+void ABP_AttentionLoadLevel_C::STATIC_OnFinishedLoadLevel(const struct FName& ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnFinishedLoadLevel");
 
@@ -128,6 +128,7 @@ void ABP_AttentionLoadLevel_C::OnFinishedLoadLevel(const struct FName& ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,11 +137,11 @@ void ABP_AttentionLoadLevel_C::OnFinishedLoadLevel(const struct FName& ID)
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnStartAttention
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FVector                 AttentionPos                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::OnStartAttention(const struct FVector& AttentionPos)
+void ABP_AttentionLoadLevel_C::STATIC_OnStartAttention(const struct FVector& AttentionPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnStartAttention");
 
@@ -148,6 +149,7 @@ void ABP_AttentionLoadLevel_C::OnStartAttention(const struct FVector& AttentionP
 	params.AttentionPos = AttentionPos;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -156,11 +158,11 @@ void ABP_AttentionLoadLevel_C::OnStartAttention(const struct FVector& AttentionP
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnFinishedLevelUnloadEndGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::OnFinishedLevelUnloadEndGame(const struct FName& ID)
+void ABP_AttentionLoadLevel_C::STATIC_OnFinishedLevelUnloadEndGame(const struct FName& ID)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnFinishedLevelUnloadEndGame");
 
@@ -168,6 +170,7 @@ void ABP_AttentionLoadLevel_C::OnFinishedLevelUnloadEndGame(const struct FName& 
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,15 +179,16 @@ void ABP_AttentionLoadLevel_C::OnFinishedLevelUnloadEndGame(const struct FName& 
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnEndAttention
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_AttentionLoadLevel_C::OnEndAttention()
+void ABP_AttentionLoadLevel_C::STATIC_OnEndAttention()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnEndAttention");
 
 	ABP_AttentionLoadLevel_C_OnEndAttention_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,11 +197,11 @@ void ABP_AttentionLoadLevel_C::OnEndAttention()
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.SetDummyActorVisible
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::SetDummyActorVisible(bool Condition)
+void ABP_AttentionLoadLevel_C::STATIC_SetDummyActorVisible(bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.SetDummyActorVisible");
 
@@ -205,6 +209,7 @@ void ABP_AttentionLoadLevel_C::SetDummyActorVisible(bool Condition)
 	params.Condition = Condition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -213,15 +218,16 @@ void ABP_AttentionLoadLevel_C::SetDummyActorVisible(bool Condition)
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnExitAttention
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_AttentionLoadLevel_C::OnExitAttention()
+void ABP_AttentionLoadLevel_C::STATIC_OnExitAttention()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.OnExitAttention");
 
 	ABP_AttentionLoadLevel_C_OnExitAttention_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -230,11 +236,11 @@ void ABP_AttentionLoadLevel_C::OnExitAttention()
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.ForceStartAttention
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FVector                 AttentionPos                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::ForceStartAttention(const struct FVector& AttentionPos)
+void ABP_AttentionLoadLevel_C::STATIC_ForceStartAttention(const struct FVector& AttentionPos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.ForceStartAttention");
 
@@ -242,6 +248,7 @@ void ABP_AttentionLoadLevel_C::ForceStartAttention(const struct FVector& Attenti
 	params.AttentionPos = AttentionPos;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,11 +257,11 @@ void ABP_AttentionLoadLevel_C::ForceStartAttention(const struct FVector& Attenti
 
 
 // Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.ExecuteUbergraph_BP_AttentionLoadLevel
-// (HasDefaults)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, NetServer)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AttentionLoadLevel_C::ExecuteUbergraph_BP_AttentionLoadLevel(int EntryPoint)
+void ABP_AttentionLoadLevel_C::STATIC_ExecuteUbergraph_BP_AttentionLoadLevel(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AttentionLoadLevel.BP_AttentionLoadLevel_C.ExecuteUbergraph_BP_AttentionLoadLevel");
 

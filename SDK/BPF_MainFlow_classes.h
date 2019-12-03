@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3MainFlowManager(class UObject* __WorldContext, class ABP_MainFlowManager_C** MainFlowManager);
+	void getS3MainFlowManager(class UObject* __WorldContext, class ABP_MainFlowManager_C** MainFlowManager);
 };
 
 

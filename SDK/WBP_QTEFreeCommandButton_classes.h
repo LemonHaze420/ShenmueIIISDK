@@ -34,7 +34,7 @@ public:
 	void PlayBlink();
 	void SetButtonImage(class UTexture2D* Image);
 	void PlayInput();
-	void Reset();
+	void STATIC_Reset();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void ExecuteUbergraph_WBP_QTEFreeCommandButton(int EntryPoint);
 };

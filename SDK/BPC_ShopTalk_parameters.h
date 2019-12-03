@@ -21,8 +21,8 @@ struct UBPC_ShopTalk_C_GetStartTalkActionType_Params
 	struct FS3DetectActionParam                        Params;                                                   // (Parm, OutParm)
 };
 
-// Function BPC_ShopTalk.BPC_ShopTalk_C.getActionType
-struct UBPC_ShopTalk_C_getActionType_Params
+// Function BPC_ShopTalk.BPC_ShopTalk_C.GetActionType
+struct UBPC_ShopTalk_C_GetActionType_Params
 {
 	bool                                               Sight;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	TArray<struct FS3DetectActionParam>                Params;                                                   // (Parm, OutParm, ZeroConstructor)

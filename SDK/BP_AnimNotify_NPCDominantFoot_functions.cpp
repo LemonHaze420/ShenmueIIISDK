@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimNotify_NPCDominantFoot.BP_AnimNotify_NPCDominantFoot_C.GetNotifyName
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UBP_AnimNotify_NPCDominantFoot_C::GetNotifyName()
+struct FString UBP_AnimNotify_NPCDominantFoot_C::STATIC_GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimNotify_NPCDominantFoot.BP_AnimNotify_NPCDominantFoot_C.GetNotifyName");
 
@@ -35,7 +35,7 @@ struct FString UBP_AnimNotify_NPCDominantFoot_C::GetNotifyName()
 
 
 // Function BP_AnimNotify_NPCDominantFoot.BP_AnimNotify_NPCDominantFoot_C.Received_Notify
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, Event, NetResponse, NetMulticast, Public, Private, NetServer, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

@@ -19,6 +19,13 @@ struct FLiveLinkClearSubject
 	struct FName                                       SubjectName;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct LiveLinkMessageBusFramework.LiveLinkHeartbeatMessage
+// 0x0001
+struct FLiveLinkHeartbeatMessage
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct LiveLinkMessageBusFramework.LiveLinkConnectMessage
 // 0x0001
 struct FLiveLinkConnectMessage
@@ -59,13 +66,6 @@ struct FLiveLinkSubjectDataMessage
 {
 	struct FLiveLinkRefSkeleton                        RefSkeleton;                                              // 0x0000(0x0020)
 	struct FName                                       SubjectName;                                              // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct LiveLinkMessageBusFramework.LiveLinkHeartbeatMessage
-// 0x0001
-struct FLiveLinkHeartbeatMessage
-{
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 }

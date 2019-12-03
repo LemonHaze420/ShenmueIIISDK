@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameText.BPC_MiniGameText_C.GetMiniGameText
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<E_MiniGameText>    Enum                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 OutString                      (Parm, OutParm, ZeroConstructor)
@@ -27,6 +27,7 @@ void UBPC_MiniGameText_C::GetMiniGameText(TEnumAsByte<E_MiniGameText> Enum, stru
 	params.Enum = Enum;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

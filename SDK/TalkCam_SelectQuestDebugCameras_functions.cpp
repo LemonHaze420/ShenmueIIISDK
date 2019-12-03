@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TalkCam_SelectQuestDebugCameras.TalkCam_SelectQuestDebugCameras_C.ReceiveTickAI
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -38,11 +38,11 @@ void UTalkCam_SelectQuestDebugCameras_C::ReceiveTickAI(class AAIController* Owne
 
 
 // Function TalkCam_SelectQuestDebugCameras.TalkCam_SelectQuestDebugCameras_C.ExecuteUbergraph_TalkCam_SelectQuestDebugCameras
-// (HasDefaults)
+// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UTalkCam_SelectQuestDebugCameras_C::ExecuteUbergraph_TalkCam_SelectQuestDebugCameras(int EntryPoint)
+void UTalkCam_SelectQuestDebugCameras_C::STATIC_ExecuteUbergraph_TalkCam_SelectQuestDebugCameras(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TalkCam_SelectQuestDebugCameras.TalkCam_SelectQuestDebugCameras_C.ExecuteUbergraph_TalkCam_SelectQuestDebugCameras");
 

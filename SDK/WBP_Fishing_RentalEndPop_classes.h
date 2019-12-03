@@ -36,8 +36,8 @@ public:
 
 
 	void SetText(const struct FString& Str);
-	void Construct();
-	void OnAnimFinished();
+	void STATIC_Construct();
+	void STATIC_OnAnimFinished();
 	void ExecuteUbergraph_WBP_Fishing_RentalEndPop(int EntryPoint);
 };
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.IsTurning
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bTurning                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,11 +36,11 @@ void UABP_MiniGame_Keiho_C::IsTurning(bool* bTurning)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.IsCounterClock
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UABP_MiniGame_Keiho_C::IsCounterClock()
+bool UABP_MiniGame_Keiho_C::STATIC_IsCounterClock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.IsCounterClock");
 
@@ -57,11 +57,11 @@ bool UABP_MiniGame_Keiho_C::IsCounterClock()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.IsClockWise
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UABP_MiniGame_Keiho_C::IsClockWise()
+bool UABP_MiniGame_Keiho_C::STATIC_IsClockWise()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.IsClockWise");
 
@@ -78,11 +78,11 @@ bool UABP_MiniGame_Keiho_C::IsClockWise()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.SetResetAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bResetAnim                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_Keiho_C::SetResetAnim(bool bResetAnim)
+void UABP_MiniGame_Keiho_C::STATIC_SetResetAnim(bool bResetAnim)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.SetResetAnim");
 
@@ -98,11 +98,11 @@ void UABP_MiniGame_Keiho_C::SetResetAnim(bool bResetAnim)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.SetTurn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, Public, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bClockWiseWalk                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_Keiho_C::SetTurn(bool bClockWiseWalk)
+void UABP_MiniGame_Keiho_C::STATIC_SetTurn(bool bClockWiseWalk)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.SetTurn");
 
@@ -118,7 +118,7 @@ void UABP_MiniGame_Keiho_C::SetTurn(bool bClockWiseWalk)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.GetWalkOffsetRate
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -140,7 +140,7 @@ void UABP_MiniGame_Keiho_C::GetWalkOffsetRate(float* Rate)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.SetWalkRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          WalkRate                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -160,7 +160,7 @@ void UABP_MiniGame_Keiho_C::SetWalkRate(float WalkRate)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.SetFailed
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsFailed                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -180,11 +180,11 @@ void UABP_MiniGame_Keiho_C::SetFailed(bool IsFailed)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.UpdateWalk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          WalkRate                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_Keiho_C::UpdateWalk(float WalkRate)
+void UABP_MiniGame_Keiho_C::STATIC_UpdateWalk(float WalkRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.UpdateWalk");
 
@@ -200,7 +200,7 @@ void UABP_MiniGame_Keiho_C::UpdateWalk(float WalkRate)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.UnBindDispacher
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::UnBindDispacher()
 {
@@ -217,7 +217,7 @@ void UABP_MiniGame_Keiho_C::UnBindDispacher()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_5DD33975461884065AAEEEBEFE8BCF3C
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_5DD33975461884065AAEEEBEFE8BCF3C()
 {
@@ -234,7 +234,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_A7BA5F0345FC6A6A4847DF9E965B2986
-// (BlueprintEvent)
+// (Net, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_A7BA5F0345FC6A6A4847DF9E965B2986()
 {
@@ -243,6 +243,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 	UABP_MiniGame_Keiho_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_A7BA5F0345FC6A6A4847DF9E965B2986_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,7 +252,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_250155304228EE743413178CB3EBA14B
-// (BlueprintEvent)
+// (Net, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_250155304228EE743413178CB3EBA14B()
 {
@@ -260,6 +261,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 	UABP_MiniGame_Keiho_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_250155304228EE743413178CB3EBA14B_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,7 +270,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_6C2FEF504C2F47FB8BA462A0AEA6834E
-// (BlueprintEvent)
+// (Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_6C2FEF504C2F47FB8BA462A0AEA6834E()
 {
@@ -277,6 +279,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 	UABP_MiniGame_Keiho_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_6C2FEF504C2F47FB8BA462A0AEA6834E_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,7 +288,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_C82D658A44D9F4818D0DA0B4D75AD3D2
-// (BlueprintEvent)
+// (Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_C82D658A44D9F4818D0DA0B4D75AD3D2()
 {
@@ -294,6 +297,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 	UABP_MiniGame_Keiho_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_C82D658A44D9F4818D0DA0B4D75AD3D2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -302,11 +306,11 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_MiniGame_Keiho_C::BlueprintUpdateAnimation(float DeltaTimeX)
+void UABP_MiniGame_Keiho_C::STATIC_BlueprintUpdateAnimation(float DeltaTimeX)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.BlueprintUpdateAnimation");
 
@@ -322,7 +326,7 @@ void UABP_MiniGame_Keiho_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_MG_Keiho_LeftFoot
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFoot()
 {
@@ -331,6 +335,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFoot()
 	UABP_MiniGame_Keiho_C_AnimNotify_MG_Keiho_LeftFoot_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -339,7 +344,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFoot()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_MG_Keiho_RightFoot
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFoot()
 {
@@ -348,6 +353,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFoot()
 	UABP_MiniGame_Keiho_C_AnimNotify_MG_Keiho_RightFoot_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -356,7 +362,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFoot()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_7B8DA4A84FF4C3556D26419D09F3E377
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_7B8DA4A84FF4C3556D26419D09F3E377()
 {
@@ -365,6 +371,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 	UABP_MiniGame_Keiho_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_7B8DA4A84FF4C3556D26419D09F3E377_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -373,7 +380,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_TransStartWalkFromFailed1
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_TransStartWalkFromFailed1()
 {
@@ -382,6 +389,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransStartWalkFromFailed1()
 	UABP_MiniGame_Keiho_C_AnimNotify_TransStartWalkFromFailed1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -390,7 +398,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransStartWalkFromFailed1()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_TransEndWalkFromFailed1
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_TransEndWalkFromFailed1()
 {
@@ -399,6 +407,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransEndWalkFromFailed1()
 	UABP_MiniGame_Keiho_C_AnimNotify_TransEndWalkFromFailed1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -407,7 +416,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransEndWalkFromFailed1()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_1E519ABA4F1A0133D31411BFF2EF1D81
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_1E519ABA4F1A0133D31411BFF2EF1D81()
 {
@@ -416,6 +425,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 	UABP_MiniGame_Keiho_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_1E519ABA4F1A0133D31411BFF2EF1D81_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -424,7 +434,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_MG_Keiho_LeftFootStart
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFootStart()
 {
@@ -433,6 +443,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFootStart()
 	UABP_MiniGame_Keiho_C_AnimNotify_MG_Keiho_LeftFootStart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -441,7 +452,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFootStart()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_MG_Keiho_RightFootStart
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFootStart()
 {
@@ -450,6 +461,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFootStart()
 	UABP_MiniGame_Keiho_C_AnimNotify_MG_Keiho_RightFootStart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -458,7 +470,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFootStart()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_MG_Keiho_LeftFootInput
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFootInput()
 {
@@ -467,6 +479,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFootInput()
 	UABP_MiniGame_Keiho_C_AnimNotify_MG_Keiho_LeftFootInput_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -475,7 +488,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_LeftFootInput()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_MG_Keiho_RightFootInput
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFootInput()
 {
@@ -484,6 +497,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFootInput()
 	UABP_MiniGame_Keiho_C_AnimNotify_MG_Keiho_RightFootInput_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -492,7 +506,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_MG_Keiho_RightFootInput()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_B75768E040DDF530660724A1E3981977
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_B75768E040DDF530660724A1E3981977()
 {
@@ -501,6 +515,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 	UABP_MiniGame_Keiho_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Keiho_AnimGraphNode_TransitionResult_B75768E040DDF530660724A1E3981977_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -509,7 +524,7 @@ void UABP_MiniGame_Keiho_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Mini
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_TransitionEndToTurnClockWise
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToTurnClockWise()
 {
@@ -518,6 +533,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToTurnClockWise()
 	UABP_MiniGame_Keiho_C_AnimNotify_TransitionEndToTurnClockWise_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -526,7 +542,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToTurnClockWise()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_TransitionEndToTurnCounter
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToTurnCounter()
 {
@@ -535,6 +551,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToTurnCounter()
 	UABP_MiniGame_Keiho_C_AnimNotify_TransitionEndToTurnCounter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -543,7 +560,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToTurnCounter()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_TransitionStartToStart
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_TransitionStartToStart()
 {
@@ -552,6 +569,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionStartToStart()
 	UABP_MiniGame_Keiho_C_AnimNotify_TransitionStartToStart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -560,7 +578,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionStartToStart()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::BlueprintInitializeAnimation()
 {
@@ -569,6 +587,7 @@ void UABP_MiniGame_Keiho_C::BlueprintInitializeAnimation()
 	UABP_MiniGame_Keiho_C_BlueprintInitializeAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -577,7 +596,7 @@ void UABP_MiniGame_Keiho_C::BlueprintInitializeAnimation()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_GroundingFootL
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_GroundingFootL()
 {
@@ -586,6 +605,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_GroundingFootL()
 	UABP_MiniGame_Keiho_C_AnimNotify_GroundingFootL_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -594,7 +614,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_GroundingFootL()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_GroundingFootR
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_GroundingFootR()
 {
@@ -603,6 +623,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_GroundingFootR()
 	UABP_MiniGame_Keiho_C_AnimNotify_GroundingFootR_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -611,7 +632,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_GroundingFootR()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_TransitionEndToClockWise
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToClockWise()
 {
@@ -620,6 +641,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToClockWise()
 	UABP_MiniGame_Keiho_C_AnimNotify_TransitionEndToClockWise_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -628,7 +650,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToClockWise()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.AnimNotify_TransitionEndToCounterClock
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToCounterClock()
 {
@@ -637,6 +659,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToCounterClock()
 	UABP_MiniGame_Keiho_C_AnimNotify_TransitionEndToCounterClock_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -645,7 +668,7 @@ void UABP_MiniGame_Keiho_C::AnimNotify_TransitionEndToCounterClock()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.ExecuteUbergraph_ABP_MiniGame_Keiho
-// ()
+// (Exec, MulticastDelegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -665,9 +688,9 @@ void UABP_MiniGame_Keiho_C::ExecuteUbergraph_ABP_MiniGame_Keiho(int EntryPoint)
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EventRyoUpdateFade__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UABP_MiniGame_Keiho_C::EventRyoUpdateFade__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_EventRyoUpdateFade__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EventRyoUpdateFade__DelegateSignature");
 
@@ -682,9 +705,9 @@ void UABP_MiniGame_Keiho_C::EventRyoUpdateFade__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EventFootPrintR__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UABP_MiniGame_Keiho_C::EventFootPrintR__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_EventFootPrintR__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EventFootPrintR__DelegateSignature");
 
@@ -699,9 +722,9 @@ void UABP_MiniGame_Keiho_C::EventFootPrintR__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EventFootPrintL__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UABP_MiniGame_Keiho_C::EventFootPrintL__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_EventFootPrintL__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.EventFootPrintL__DelegateSignature");
 
@@ -716,9 +739,9 @@ void UABP_MiniGame_Keiho_C::EventFootPrintL__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.LeftFootInputStartDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UABP_MiniGame_Keiho_C::LeftFootInputStartDispacher__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_LeftFootInputStartDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.LeftFootInputStartDispacher__DelegateSignature");
 
@@ -733,9 +756,9 @@ void UABP_MiniGame_Keiho_C::LeftFootInputStartDispacher__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.RightFootInputStartDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UABP_MiniGame_Keiho_C::RightFootInputStartDispacher__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_RightFootInputStartDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.RightFootInputStartDispacher__DelegateSignature");
 
@@ -750,9 +773,9 @@ void UABP_MiniGame_Keiho_C::RightFootInputStartDispacher__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.LeftFootStartDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UABP_MiniGame_Keiho_C::LeftFootStartDispacher__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_LeftFootStartDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.LeftFootStartDispacher__DelegateSignature");
 
@@ -767,15 +790,16 @@ void UABP_MiniGame_Keiho_C::LeftFootStartDispacher__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.RightFootStartDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UABP_MiniGame_Keiho_C::RightFootStartDispacher__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_RightFootStartDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.RightFootStartDispacher__DelegateSignature");
 
 	UABP_MiniGame_Keiho_C_RightFootStartDispacher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -784,15 +808,16 @@ void UABP_MiniGame_Keiho_C::RightFootStartDispacher__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.FailedEndDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, Private, Delegate, HasDefaults, NetClient, Const)
 
-void UABP_MiniGame_Keiho_C::FailedEndDispacher__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_FailedEndDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.FailedEndDispacher__DelegateSignature");
 
 	UABP_MiniGame_Keiho_C_FailedEndDispacher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -801,9 +826,9 @@ void UABP_MiniGame_Keiho_C::FailedEndDispacher__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.LeftFootLandedDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_Keiho_C::LeftFootLandedDispacher__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_LeftFootLandedDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.LeftFootLandedDispacher__DelegateSignature");
 
@@ -818,9 +843,9 @@ void UABP_MiniGame_Keiho_C::LeftFootLandedDispacher__DelegateSignature()
 
 
 // Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.RightFootLandedDipatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UABP_MiniGame_Keiho_C::RightFootLandedDipatcher__DelegateSignature()
+void UABP_MiniGame_Keiho_C::STATIC_RightFootLandedDipatcher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_MiniGame_Keiho.ABP_MiniGame_Keiho_C.RightFootLandedDipatcher__DelegateSignature");
 

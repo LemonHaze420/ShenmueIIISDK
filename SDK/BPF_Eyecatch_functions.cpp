@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Eyecatch.BPF_Eyecatch_C.getS3EyecatchManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Public, Protected, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_eyecatch_C*          BP_eyecatch                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Eyecatch_C::STATIC_getS3EyecatchManager(class UObject* __WorldContext, class ABP_eyecatch_C** BP_eyecatch)
+void UBPF_Eyecatch_C::getS3EyecatchManager(class UObject* __WorldContext, class ABP_eyecatch_C** BP_eyecatch)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Eyecatch.BPF_Eyecatch_C.getS3EyecatchManager");
 
@@ -27,6 +27,7 @@ void UBPF_Eyecatch_C::STATIC_getS3EyecatchManager(class UObject* __WorldContext,
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

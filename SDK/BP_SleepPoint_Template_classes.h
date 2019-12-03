@@ -25,7 +25,7 @@ public:
 	TArray<struct FText>                               selectTexts;                                              // 0x0350(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	TArray<bool>                                       itemEnables;                                              // 0x0360(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	class ABP_S3actionSelect_C*                        Selector;                                                 // 0x0370(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
-	bool                                               isActionButtonExec;                                       // 0x0378(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsActionButtonExec;                                       // 0x0378(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ButtonHide;                                               // 0x0379(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x037A(0x0002) MISSED OFFSET
 	float                                              DetectAreaRadius;                                         // 0x037C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -56,32 +56,32 @@ public:
 	}
 
 
-	int GetPriority();
-	TArray<struct FS3DetectActionParam> GetDetectAction();
+	int STATIC_GetPriority();
+	TArray<struct FS3DetectActionParam> STATIC_GetDetectAction();
 	void CheckRay(bool* Enable);
 	void ChangeSelectText();
 	void LavelIDtoText(const struct FName& LavelID, struct FText* GetText);
-	void CheckBeginTriggerIn(bool* BeginIn);
+	void STATIC_CheckBeginTriggerIn(bool* BeginIn);
 	void ChangeBSEnable(bool BsEnable);
 	void CheckItemValid(bool* Valid);
 	void BSAction(class UActorComponent* Component);
-	void SetItemEnable();
+	void STATIC_SetItemEnable();
 	void RegisterDetect(class UActorComponent* Component, bool Register);
-	void UserConstructionScript();
-	void Catch_OnSelect(int Index);
-	void Select_Cancel(bool IsDeny);
+	void STATIC_UserConstructionScript();
+	void STATIC_Catch_OnSelect(int Index);
+	void STATIC_Select_Cancel(bool IsDeny);
 	void SaveLoadWidgetFinish();
 	void OpenSyetemMenuSelect();
 	void ReceiveTick(float DeltaSeconds);
-	void DecideDetectAction(ES3ActionIconType Type);
+	void STATIC_DecideDetectAction(ES3ActionIconType Type);
 	void BeginBsIn();
 	void BndEvt__DetectArea_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
+	void STATIC_BndEvt__DetectArea_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 	void CancelBsIn();
 	void ReceiveBeginPlay();
 	void CheckLoadEnd();
 	void CheckFadein();
-	void ExecuteUbergraph_BP_SleepPoint_Template(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_SleepPoint_Template(int EntryPoint);
 	void ED_DoSleep__DelegateSignature();
 };
 

@@ -45,19 +45,19 @@ public:
 	void UpdateTime(float TickDeltaSeconds, float* CurrentDeltaSeconds);
 	void SetUseRealTime(bool UseRealTime);
 	void ClearResult();
-	void InputFunction(const struct FKey& InKey);
+	void STATIC_InputFunction(const struct FKey& InKey);
 	void InputEndFunction();
 	void InputStartFunction(const struct FName& SuccessAction);
 	void EndFunction();
-	void Prepare();
+	void STATIC_Prepare();
 	void GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
 	void PlaySE();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_QTEComponent(int EntryPoint);
-	void ButtonDown__DelegateSignature(bool Succeed);
-	void End__DelegateSignature();
-	void Success__DelegateSignature();
+	void STATIC_ButtonDown__DelegateSignature(bool Succeed);
+	void STATIC_End__DelegateSignature();
+	void STATIC_Success__DelegateSignature();
 };
 
 

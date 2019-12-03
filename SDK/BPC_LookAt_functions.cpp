@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_LookAt.BPC_LookAt_C.GetRandomAnimEyesTarget
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Target                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_LookAt_C::GetRandomAnimEyesTarget(float* Target)
+void UBPC_LookAt_C::STATIC_GetRandomAnimEyesTarget(float* Target)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.GetRandomAnimEyesTarget");
 
 	UBPC_LookAt_C_GetRandomAnimEyesTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,9 +37,9 @@ void UBPC_LookAt_C::GetRandomAnimEyesTarget(float* Target)
 
 
 // Function BPC_LookAt.BPC_LookAt_C.UpdateAnimEyeRotation
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPC_LookAt_C::UpdateAnimEyeRotation()
+void UBPC_LookAt_C::STATIC_UpdateAnimEyeRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.UpdateAnimEyeRotation");
 
@@ -53,11 +54,11 @@ void UBPC_LookAt_C::UpdateAnimEyeRotation()
 
 
 // Function BPC_LookAt.BPC_LookAt_C.IsDebugLog
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetResponse, Static, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBPC_LookAt_C::IsDebugLog()
+bool UBPC_LookAt_C::STATIC_IsDebugLog()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.IsDebugLog");
 
@@ -74,7 +75,7 @@ bool UBPC_LookAt_C::IsDebugLog()
 
 
 // Function BPC_LookAt.BPC_LookAt_C.IsWasRecentlyRenderedOwner
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -95,17 +96,18 @@ bool UBPC_LookAt_C::IsWasRecentlyRenderedOwner()
 
 
 // Function BPC_LookAt.BPC_LookAt_C.IsProcessingLookAt
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, NetResponse, Static, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsProcessing                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_LookAt_C::IsProcessingLookAt(bool* IsProcessing)
+void UBPC_LookAt_C::STATIC_IsProcessingLookAt(bool* IsProcessing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.IsProcessingLookAt");
 
 	UBPC_LookAt_C_IsProcessingLookAt_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,12 +119,12 @@ void UBPC_LookAt_C::IsProcessingLookAt(bool* IsProcessing)
 
 
 // Function BPC_LookAt.BPC_LookAt_C.GetLookAtEyesLocation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // struct FVector                 R                              (Parm, OutParm, IsPlainOldData)
 // struct FVector                 L                              (Parm, OutParm, IsPlainOldData)
 
-void UBPC_LookAt_C::GetLookAtEyesLocation(struct FVector* R, struct FVector* L)
+void UBPC_LookAt_C::STATIC_GetLookAtEyesLocation(struct FVector* R, struct FVector* L)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.GetLookAtEyesLocation");
 
@@ -142,7 +144,7 @@ void UBPC_LookAt_C::GetLookAtEyesLocation(struct FVector* R, struct FVector* L)
 
 
 // Function BPC_LookAt.BPC_LookAt_C.GetTargetLocation
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 TargetLocation                 (Parm, OutParm, IsPlainOldData)
@@ -167,7 +169,7 @@ void UBPC_LookAt_C::GetTargetLocation(bool* bSuccess, struct FVector* TargetLoca
 
 
 // Function BPC_LookAt.BPC_LookAt_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPC_LookAt_C::Update()
 {
@@ -184,11 +186,11 @@ void UBPC_LookAt_C::Update()
 
 
 // Function BPC_LookAt.BPC_LookAt_C.GetTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  TargetActor                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_LookAt_C::GetTarget(class AActor** TargetActor)
+void UBPC_LookAt_C::STATIC_GetTarget(class AActor** TargetActor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.GetTarget");
 
@@ -206,7 +208,7 @@ void UBPC_LookAt_C::GetTarget(class AActor** TargetActor)
 
 
 // Function BPC_LookAt.BPC_LookAt_C.SetTarget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -218,6 +220,7 @@ void UBPC_LookAt_C::SetTarget(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,9 +229,9 @@ void UBPC_LookAt_C::SetTarget(class AActor* Actor)
 
 
 // Function BPC_LookAt.BPC_LookAt_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBPC_LookAt_C::ReceiveBeginPlay()
+void UBPC_LookAt_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.ReceiveBeginPlay");
 
@@ -243,9 +246,9 @@ void UBPC_LookAt_C::ReceiveBeginPlay()
 
 
 // Function BPC_LookAt.BPC_LookAt_C.Init
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBPC_LookAt_C::Init()
+void UBPC_LookAt_C::STATIC_Init()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_LookAt.BPC_LookAt_C.Init");
 
@@ -260,7 +263,7 @@ void UBPC_LookAt_C::Init()
 
 
 // Function BPC_LookAt.BPC_LookAt_C.ExecuteUbergraph_BPC_LookAt
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, NetResponse, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

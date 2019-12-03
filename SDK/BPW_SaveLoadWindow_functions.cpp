@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.GetAreaId
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class US3SaveGame*             SaveGame                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 AreaId                         (Parm, OutParm, ZeroConstructor)
 
-void UBPW_SaveLoadWindow_C::GetAreaId(class US3SaveGame* SaveGame, struct FString* AreaId)
+void UBPW_SaveLoadWindow_C::STATIC_GetAreaId(class US3SaveGame* SaveGame, struct FString* AreaId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.GetAreaId");
 
@@ -38,7 +38,7 @@ void UBPW_SaveLoadWindow_C::GetAreaId(class US3SaveGame* SaveGame, struct FStrin
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.LoadAllData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintCallable)
 
 void UBPW_SaveLoadWindow_C::LoadAllData()
 {
@@ -47,6 +47,7 @@ void UBPW_SaveLoadWindow_C::LoadAllData()
 	UBPW_SaveLoadWindow_C_LoadAllData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ void UBPW_SaveLoadWindow_C::LoadAllData()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.OverrideData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Private, NetServer, HasOutParms, HasDefaults, DLLImport)
 
 void UBPW_SaveLoadWindow_C::OverrideData()
 {
@@ -72,7 +73,7 @@ void UBPW_SaveLoadWindow_C::OverrideData()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Get New Date Time
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FDateTime               New_Date_Time                  (Parm, OutParm)
@@ -84,6 +85,7 @@ void UBPW_SaveLoadWindow_C::Get_New_Date_Time(int* Index, struct FDateTime* New_
 	UBPW_SaveLoadWindow_C_Get_New_Date_Time_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -97,7 +99,7 @@ void UBPW_SaveLoadWindow_C::Get_New_Date_Time(int* Index, struct FDateTime* New_
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Select
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Delegate, HasDefaults, NetClient, BlueprintPure)
 
 void UBPW_SaveLoadWindow_C::Select()
 {
@@ -106,6 +108,7 @@ void UBPW_SaveLoadWindow_C::Select()
 	UBPW_SaveLoadWindow_C_Select_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,11 +117,11 @@ void UBPW_SaveLoadWindow_C::Select()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Scroll
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // float                          Scroll                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::Scroll(float Scroll)
+void UBPW_SaveLoadWindow_C::STATIC_Scroll(float Scroll)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Scroll");
 
@@ -134,9 +137,9 @@ void UBPW_SaveLoadWindow_C::Scroll(float Scroll)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Finish
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintPure)
 
-void UBPW_SaveLoadWindow_C::Finish()
+void UBPW_SaveLoadWindow_C::STATIC_Finish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Finish");
 
@@ -151,7 +154,7 @@ void UBPW_SaveLoadWindow_C::Finish()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Decide
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Public, Protected, HasDefaults, BlueprintEvent)
 
 void UBPW_SaveLoadWindow_C::Decide()
 {
@@ -168,11 +171,11 @@ void UBPW_SaveLoadWindow_C::Decide()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.PushCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FKey                    B                              (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_SaveLoadWindow_C::PushCursor(const struct FKey& B)
+void UBPW_SaveLoadWindow_C::STATIC_PushCursor(const struct FKey& B)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.PushCursor");
 
@@ -188,7 +191,7 @@ void UBPW_SaveLoadWindow_C::PushCursor(const struct FKey& B)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.FocusData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Delegate, HasDefaults, NetClient, BlueprintPure)
 
 void UBPW_SaveLoadWindow_C::FocusData()
 {
@@ -197,6 +200,7 @@ void UBPW_SaveLoadWindow_C::FocusData()
 	UBPW_SaveLoadWindow_C_FocusData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,9 +209,9 @@ void UBPW_SaveLoadWindow_C::FocusData()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.MakeDataWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void UBPW_SaveLoadWindow_C::MakeDataWidget()
+void UBPW_SaveLoadWindow_C::STATIC_MakeDataWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.MakeDataWidget");
 
@@ -222,12 +226,12 @@ void UBPW_SaveLoadWindow_C::MakeDataWidget()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.AddLoadData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Success                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3SaveGame*             Data                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::AddLoadData(bool Success, class US3SaveGame* Data)
+void UBPW_SaveLoadWindow_C::STATIC_AddLoadData(bool Success, class US3SaveGame* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.AddLoadData");
 
@@ -244,13 +248,13 @@ void UBPW_SaveLoadWindow_C::AddLoadData(bool Success, class US3SaveGame* Data)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.OnPreviewKeyDown
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UBPW_SaveLoadWindow_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UBPW_SaveLoadWindow_C::STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.OnPreviewKeyDown");
 
@@ -259,6 +263,7 @@ struct FEventReply UBPW_SaveLoadWindow_C::OnPreviewKeyDown(const struct FGeometr
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -269,15 +274,16 @@ struct FEventReply UBPW_SaveLoadWindow_C::OnPreviewKeyDown(const struct FGeometr
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.DownPush
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void UBPW_SaveLoadWindow_C::DownPush()
+void UBPW_SaveLoadWindow_C::STATIC_DownPush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.DownPush");
 
 	UBPW_SaveLoadWindow_C_DownPush_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -286,15 +292,16 @@ void UBPW_SaveLoadWindow_C::DownPush()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.UpPush
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void UBPW_SaveLoadWindow_C::UpPush()
+void UBPW_SaveLoadWindow_C::STATIC_UpPush()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.UpPush");
 
 	UBPW_SaveLoadWindow_C_UpPush_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -303,15 +310,16 @@ void UBPW_SaveLoadWindow_C::UpPush()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.RightButton
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void UBPW_SaveLoadWindow_C::RightButton()
+void UBPW_SaveLoadWindow_C::STATIC_RightButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.RightButton");
 
 	UBPW_SaveLoadWindow_C_RightButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,9 +328,9 @@ void UBPW_SaveLoadWindow_C::RightButton()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.DownButton
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void UBPW_SaveLoadWindow_C::DownButton()
+void UBPW_SaveLoadWindow_C::STATIC_DownButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.DownButton");
 
@@ -337,9 +345,9 @@ void UBPW_SaveLoadWindow_C::DownButton()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.ScrollDealy
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void UBPW_SaveLoadWindow_C::ScrollDealy()
+void UBPW_SaveLoadWindow_C::STATIC_ScrollDealy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.ScrollDealy");
 
@@ -354,9 +362,9 @@ void UBPW_SaveLoadWindow_C::ScrollDealy()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void UBPW_SaveLoadWindow_C::Construct()
+void UBPW_SaveLoadWindow_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Construct");
 
@@ -371,11 +379,11 @@ void UBPW_SaveLoadWindow_C::Construct()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.WheleMouse
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::WheleMouse(float Value)
+void UBPW_SaveLoadWindow_C::STATIC_WheleMouse(float Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.WheleMouse");
 
@@ -383,6 +391,7 @@ void UBPW_SaveLoadWindow_C::WheleMouse(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -391,12 +400,12 @@ void UBPW_SaveLoadWindow_C::WheleMouse(float Value)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, Static, MulticastDelegate, Private, Protected, NetServer, BlueprintCallable)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_SaveLoadWindow_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.Tick");
 
@@ -405,6 +414,7 @@ void UBPW_SaveLoadWindow_C::Tick(const struct FGeometry& MyGeometry, float InDel
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -413,11 +423,11 @@ void UBPW_SaveLoadWindow_C::Tick(const struct FGeometry& MyGeometry, float InDel
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.CloseDialog
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::CloseDialog(class AActor* Actor)
+void UBPW_SaveLoadWindow_C::STATIC_CloseDialog(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.CloseDialog");
 
@@ -425,6 +435,7 @@ void UBPW_SaveLoadWindow_C::CloseDialog(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -433,11 +444,11 @@ void UBPW_SaveLoadWindow_C::CloseDialog(class AActor* Actor)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.SelectSaveLoad
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::SelectSaveLoad(class AActor* Actor)
+void UBPW_SaveLoadWindow_C::STATIC_SelectSaveLoad(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.SelectSaveLoad");
 
@@ -445,6 +456,7 @@ void UBPW_SaveLoadWindow_C::SelectSaveLoad(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -453,11 +465,11 @@ void UBPW_SaveLoadWindow_C::SelectSaveLoad(class AActor* Actor)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.CancelSaveLoad
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::CancelSaveLoad(class AActor* Actor)
+void UBPW_SaveLoadWindow_C::STATIC_CancelSaveLoad(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.CancelSaveLoad");
 
@@ -465,6 +477,7 @@ void UBPW_SaveLoadWindow_C::CancelSaveLoad(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -473,11 +486,11 @@ void UBPW_SaveLoadWindow_C::CancelSaveLoad(class AActor* Actor)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.FinishSave
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::FinishSave(class AActor* Actor)
+void UBPW_SaveLoadWindow_C::STATIC_FinishSave(class AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.FinishSave");
 
@@ -485,6 +498,7 @@ void UBPW_SaveLoadWindow_C::FinishSave(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -493,11 +507,11 @@ void UBPW_SaveLoadWindow_C::FinishSave(class AActor* Actor)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.ExecuteUbergraph_BPW_SaveLoadWindow
-// (HasDefaults)
+// (Static, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadWindow_C::ExecuteUbergraph_BPW_SaveLoadWindow(int EntryPoint)
+void UBPW_SaveLoadWindow_C::STATIC_ExecuteUbergraph_BPW_SaveLoadWindow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.ExecuteUbergraph_BPW_SaveLoadWindow");
 
@@ -513,7 +527,7 @@ void UBPW_SaveLoadWindow_C::ExecuteUbergraph_BPW_SaveLoadWindow(int EntryPoint)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.ED_Finish__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 
 void UBPW_SaveLoadWindow_C::ED_Finish__DelegateSignature()
 {
@@ -522,6 +536,7 @@ void UBPW_SaveLoadWindow_C::ED_Finish__DelegateSignature()
 	UBPW_SaveLoadWindow_C_ED_Finish__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -530,7 +545,7 @@ void UBPW_SaveLoadWindow_C::ED_Finish__DelegateSignature()
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.ED_SelectMouse__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -542,6 +557,7 @@ void UBPW_SaveLoadWindow_C::ED_SelectMouse__DelegateSignature(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -550,7 +566,7 @@ void UBPW_SaveLoadWindow_C::ED_SelectMouse__DelegateSignature(int Index)
 
 
 // Function BPW_SaveLoadWindow.BPW_SaveLoadWindow_C.ED_ForcusMous__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -562,6 +578,7 @@ void UBPW_SaveLoadWindow_C::ED_ForcusMous__DelegateSignature(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

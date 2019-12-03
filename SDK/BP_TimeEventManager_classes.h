@@ -32,9 +32,9 @@ public:
 
 
 	void IsTimeHasComeFlag(bool* flag);
-	void MiniGameTimeInit();
-	void MiniGameTimeCalcFlagOn(float TimeMax);
-	void MiniGameTimeCalc();
+	void STATIC_MiniGameTimeInit();
+	void STATIC_MiniGameTimeCalcFlagOn(float TimeMax);
+	void STATIC_MiniGameTimeCalc();
 	void UserConstructionScript();
 };
 

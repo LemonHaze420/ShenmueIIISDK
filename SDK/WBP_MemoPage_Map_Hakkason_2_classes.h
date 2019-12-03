@@ -32,8 +32,8 @@ public:
 	}
 
 
-	void Construct();
-	void ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_2(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_WBP_MemoPage_Map_Hakkason_2(int EntryPoint);
 };
 
 

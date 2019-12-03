@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.PlayAnimation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, Delegate, DLLImport, NetValidate)
 // Parameters:
 // struct FName                   AnimationName                  (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UABP_AttachmentFishingPole_C::PlayAnimation(struct FName* AnimationName)
+void UABP_AttachmentFishingPole_C::STATIC_PlayAnimation(struct FName* AnimationName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.PlayAnimation");
 
 	UABP_AttachmentFishingPole_C_PlayAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void UABP_AttachmentFishingPole_C::PlayAnimation(struct FName* AnimationName)
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_BF0FB2974B37D4E89DE380B602C22602
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_BF0FB2974B37D4E89DE380B602C22602()
+void UABP_AttachmentFishingPole_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_BF0FB2974B37D4E89DE380B602C22602()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_BF0FB2974B37D4E89DE380B602C22602");
 
 	UABP_AttachmentFishingPole_C_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_BF0FB2974B37D4E89DE380B602C22602_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,9 +55,9 @@ void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_7BF8DB6F47F63D53BBC469A74C907226
-// (BlueprintEvent)
+// (Net, Exec, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_7BF8DB6F47F63D53BBC469A74C907226()
+void UABP_AttachmentFishingPole_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_7BF8DB6F47F63D53BBC469A74C907226()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_7BF8DB6F47F63D53BBC469A74C907226");
 
@@ -70,9 +72,9 @@ void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_9EE3B18E4A4D6BA7C2E1C185D547E121
-// (BlueprintEvent)
+// (Exec, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_9EE3B18E4A4D6BA7C2E1C185D547E121()
+void UABP_AttachmentFishingPole_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_9EE3B18E4A4D6BA7C2E1C185D547E121()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_9EE3B18E4A4D6BA7C2E1C185D547E121");
 
@@ -87,9 +89,9 @@ void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_83B6ECAD43EB1EA0E2CF509525893A7A
-// (BlueprintEvent)
+// (Exec, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_83B6ECAD43EB1EA0E2CF509525893A7A()
+void UABP_AttachmentFishingPole_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_83B6ECAD43EB1EA0E2CF509525893A7A()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_83B6ECAD43EB1EA0E2CF509525893A7A");
 
@@ -104,9 +106,9 @@ void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_C6A816BB4D74E758734856A3183E07BD
-// (BlueprintEvent)
+// (Net, Exec, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_C6A816BB4D74E758734856A3183E07BD()
+void UABP_AttachmentFishingPole_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_C6A816BB4D74E758734856A3183E07BD()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_C6A816BB4D74E758734856A3183E07BD");
 
@@ -121,15 +123,16 @@ void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.AnimNotify_IdleToBendPageEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_AttachmentFishingPole_C::AnimNotify_IdleToBendPageEnd()
+void UABP_AttachmentFishingPole_C::STATIC_AnimNotify_IdleToBendPageEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.AnimNotify_IdleToBendPageEnd");
 
 	UABP_AttachmentFishingPole_C_AnimNotify_IdleToBendPageEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,11 +141,11 @@ void UABP_AttachmentFishingPole_C::AnimNotify_IdleToBendPageEnd()
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.RequestAnimationName
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Public, Delegate, HasOutParms, NetClient, NetValidate)
 // Parameters:
 // struct FName                   AnimationName                  (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UABP_AttachmentFishingPole_C::RequestAnimationName(const struct FName& AnimationName)
+void UABP_AttachmentFishingPole_C::STATIC_RequestAnimationName(const struct FName& AnimationName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.RequestAnimationName");
 
@@ -150,6 +153,7 @@ void UABP_AttachmentFishingPole_C::RequestAnimationName(const struct FName& Anim
 	params.AnimationName = AnimationName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,9 +162,9 @@ void UABP_AttachmentFishingPole_C::RequestAnimationName(const struct FName& Anim
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_68385A154BC4ED72BDEDCFB4A7F29FCC
-// (BlueprintEvent)
+// (NetRequest, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_68385A154BC4ED72BDEDCFB4A7F29FCC()
+void UABP_AttachmentFishingPole_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_68385A154BC4ED72BDEDCFB4A7F29FCC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AttachmentFishingPole_AnimGraphNode_TransitionResult_68385A154BC4ED72BDEDCFB4A7F29FCC");
 
@@ -175,7 +179,7 @@ void UABP_AttachmentFishingPole_C::EvaluateGraphExposedInputs_ExecuteUbergraph_A
 
 
 // Function ABP_AttachmentFishingPole.ABP_AttachmentFishingPole_C.ExecuteUbergraph_ABP_AttachmentFishingPole
-// ()
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

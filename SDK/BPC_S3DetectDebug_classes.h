@@ -31,8 +31,8 @@ public:
 
 
 	void PrintLog();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BPC_S3DetectDebug(int EntryPoint);
 };
 

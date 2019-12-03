@@ -58,21 +58,6 @@ public:
 };
 
 
-// Class Shenmue3.AcEndTask
-// 0x0000 (0x0060 - 0x0060)
-class UAcEndTask : public UTalkEventTaskBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.AcEndTask");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.AcTask
 // 0x0000 (0x0060 - 0x0060)
 class UAcTask : public UTalkEventTaskBase
@@ -82,23 +67,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.AcTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.BattleResultTask
-// 0x0008 (0x0068 - 0x0060)
-class UBattleResultTask : public UTalkEventTaskBase
-{
-public:
-	int                                                Result;                                                   // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.BattleResultTask");
 		return ptr;
 	}
 
@@ -198,37 +166,15 @@ public:
 };
 
 
-// Class Shenmue3.TalkTask
-// 0x0048 (0x00A8 - 0x0060)
-class UTalkTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     TalkCharacterId;                                          // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	struct FString                                     LockTargetCharacterId;                                    // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	struct FString                                     EmoteType;                                                // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	bool                                               bCameraChangeFlag;                                        // 0x0090(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bNoVoiceFlag;                                             // 0x0091(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0092(0x0006) MISSED OFFSET
-	struct FString                                     MessageLabel;                                             // 0x0098(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.TalkTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.ByeTask
-// 0x0000 (0x00A8 - 0x00A8)
-class UByeTask : public UTalkTask
+// Class Shenmue3.AcEndTask
+// 0x0000 (0x0060 - 0x0060)
+class UAcEndTask : public UTalkEventTaskBase
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.ByeTask");
+		static auto ptr = UObject::FindClass("Class Shenmue3.AcEndTask");
 		return ptr;
 	}
 
@@ -250,22 +196,6 @@ public:
 
 
 	struct FString GetScriptName();
-};
-
-
-// Class Shenmue3.CameraActorTask
-// 0x0010 (0x0070 - 0x0060)
-class UCameraActorTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     TargetCharacterID;                                        // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.CameraActorTask");
-		return ptr;
-	}
-
 };
 
 
@@ -303,6 +233,59 @@ public:
 };
 
 
+// Class Shenmue3.CameraActorTask
+// 0x0010 (0x0070 - 0x0060)
+class UCameraActorTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     TargetCharacterID;                                        // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.CameraActorTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.TalkTask
+// 0x0048 (0x00A8 - 0x0060)
+class UTalkTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     TalkCharacterId;                                          // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	struct FString                                     LockTargetCharacterId;                                    // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	struct FString                                     EmoteType;                                                // 0x0080(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	bool                                               bCameraChangeFlag;                                        // 0x0090(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	bool                                               bNoVoiceFlag;                                             // 0x0091(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0092(0x0006) MISSED OFFSET
+	struct FString                                     MessageLabel;                                             // 0x0098(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.TalkTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.ByeTask
+// 0x0000 (0x00A8 - 0x00A8)
+class UByeTask : public UTalkTask
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.ByeTask");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.CanMiniGameFlagTask
 // 0x0018 (0x0078 - 0x0060)
 class UCanMiniGameFlagTask : public UTalkEventTaskBase
@@ -315,6 +298,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.CanMiniGameFlagTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.BattleResultTask
+// 0x0008 (0x0068 - 0x0060)
+class UBattleResultTask : public UTalkEventTaskBase
+{
+public:
+	int                                                Result;                                                   // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.BattleResultTask");
 		return ptr;
 	}
 
@@ -476,6 +476,25 @@ public:
 };
 
 
+// Class Shenmue3.EmoteTask
+// 0x0028 (0x0088 - 0x0060)
+class UEmoteTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     CharacterID;                                              // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	struct FString                                     EmoteType;                                                // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	float                                              DelayTime;                                                // 0x0080(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.EmoteTask");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.DojoCaptionTask
 // 0x0010 (0x0070 - 0x0060)
 class UDojoCaptionTask : public UTalkEventTaskBase
@@ -494,19 +513,18 @@ public:
 };
 
 
-// Class Shenmue3.EmoteTask
-// 0x0028 (0x0088 - 0x0060)
-class UEmoteTask : public UTalkEventTaskBase
+// Class Shenmue3.EnterMiniGameTask
+// 0x0010 (0x0070 - 0x0060)
+class UEnterMiniGameTask : public UTalkEventTaskBase
 {
 public:
-	struct FString                                     CharacterID;                                              // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	struct FString                                     EmoteType;                                                // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	float                                              DelayTime;                                                // 0x0080(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	float                                              WaitTime;                                                 // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                WaitFrame;                                                // 0x0064(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.EmoteTask");
+		static auto ptr = UObject::FindClass("Class Shenmue3.EnterMiniGameTask");
 		return ptr;
 	}
 
@@ -532,24 +550,6 @@ public:
 };
 
 
-// Class Shenmue3.EnterMiniGameTask
-// 0x0010 (0x0070 - 0x0060)
-class UEnterMiniGameTask : public UTalkEventTaskBase
-{
-public:
-	float                                              WaitTime;                                                 // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                WaitFrame;                                                // 0x0064(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.EnterMiniGameTask");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.EventMiniGameTask
 // 0x0028 (0x0088 - 0x0060)
 class UEventMiniGameTask : public UTalkEventTaskBase
@@ -568,53 +568,6 @@ public:
 
 	void SetNextLabelIndex(int NextIndex);
 	bool IsSetupLabelIndex(int CheckIndex);
-};
-
-
-// Class Shenmue3.ExpressionFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UExpressionFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.ExpressionFunctionLibrary");
-		return ptr;
-	}
-
-
-	struct FString STATIC_Replace(const struct FString& InStr, int leftInd, int rightInd, int NewNum);
-	bool STATIC_GetExpressionFromOperator(const struct FString& InStr, int operatorInd, int* lNum, int* rNum, int* lInd, int* rInd);
-	bool STATIC_GetExpressionFromComparison(const struct FString& InStr, int operatorInd, TEnumAsByte<EComparisonKind> comparisonKind, int* lNum, int* rNum, int* lInd, int* rInd, struct FString* lStr, struct FString* rStr);
-	bool STATIC_FindSub(const struct FString& InStr, int* findInd);
-	bool STATIC_FindParenBlock(const struct FString& InStr, int* leftInd, int* rightInd, struct FString* retStr);
-	bool STATIC_FindMul(const struct FString& InStr, int* findInd);
-	bool STATIC_FindMod(const struct FString& InStr, int* findInd);
-	int STATIC_FindFirstOperator(const struct FString& InStr, TEnumAsByte<ESearchDir> SearchDir, struct FString* findOperator);
-	bool STATIC_FindDiv(const struct FString& InStr, int* findInd);
-	bool STATIC_FindComparison(const struct FString& InStr, TEnumAsByte<EComparisonKind> comparisonKind, int* findInd);
-	bool STATIC_FindAdd(const struct FString& InStr, int* findInd);
-	struct FString STATIC_EvaluateAllFlags(const struct FString& InStr);
-};
-
-
-// Class Shenmue3.FadeTask
-// 0x0010 (0x0070 - 0x0060)
-class UFadeTask : public UTalkEventTaskBase
-{
-public:
-	int                                                FadeType;                                                 // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              FadeTime;                                                 // 0x0064(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                FadeWaitForProcessing;                                    // 0x0068(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                FadeColorNum;                                             // 0x006C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.FadeTask");
-		return ptr;
-	}
-
 };
 
 
@@ -652,23 +605,22 @@ public:
 };
 
 
-// Class Shenmue3.GachaFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UGachaFunctionLibrary : public UBlueprintFunctionLibrary
+// Class Shenmue3.FadeTask
+// 0x0010 (0x0070 - 0x0060)
+class UFadeTask : public UTalkEventTaskBase
 {
 public:
+	int                                                FadeType;                                                 // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	float                                              FadeTime;                                                 // 0x0064(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                FadeWaitForProcessing;                                    // 0x0068(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                FadeColorNum;                                             // 0x006C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.GachaFunctionLibrary");
+		static auto ptr = UObject::FindClass("Class Shenmue3.FadeTask");
 		return ptr;
 	}
 
-
-	void STATIC_SetGachaDataTable(class UDataTable* GachaItemTable);
-	bool STATIC_PlayGacha(const struct FName& GachaId, struct FS3GachaItem* Out, bool* IsRare);
-	void STATIC_LoadGachaDataTable(const struct FString& GachaItemTableName);
-	bool STATIC_IsLoadGachaDataTable();
 };
 
 
@@ -683,6 +635,41 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.GameTimeTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.GachaFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UGachaFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.GachaFunctionLibrary");
+		return ptr;
+	}
+
+
+	void SetGachaDataTable(class UDataTable* GachaItemTable);
+	bool PlayGacha(const struct FName& GachaId, struct FS3GachaItem* Out, bool* IsRare);
+	void LoadGachaDataTable(const struct FString& GachaItemTableName);
+	bool IsLoadGachaDataTable();
+};
+
+
+// Class Shenmue3.GiftMiniGameTask
+// 0x0000 (0x0060 - 0x0060)
+class UGiftMiniGameTask : public UTalkEventTaskBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.GiftMiniGameTask");
 		return ptr;
 	}
 
@@ -716,24 +703,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.HelloTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.HelpPriorityTask
-// 0x0018 (0x0078 - 0x0060)
-class UHelpPriorityTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     HelpId;                                                   // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	bool                                               bStartFlag;                                               // 0x0070(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.HelpPriorityTask");
 		return ptr;
 	}
 
@@ -797,23 +766,6 @@ public:
 };
 
 
-// Class Shenmue3.Imaginary
-// 0x0020 (0x0080 - 0x0060)
-class UImaginary : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     TargetID;                                                 // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	struct FString                                     ImaginaryCommand;                                         // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.Imaginary");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.InfoTask
 // 0x0018 (0x0078 - 0x0060)
 class UInfoTask : public UTalkEventTaskBase
@@ -832,16 +784,17 @@ public:
 };
 
 
-// Class Shenmue3.InventoryTask
-// 0x0010 (0x0070 - 0x0060)
-class UInventoryTask : public UTalkEventTaskBase
+// Class Shenmue3.Imaginary
+// 0x0020 (0x0080 - 0x0060)
+class UImaginary : public UTalkEventTaskBase
 {
 public:
-	struct FString                                     UseItemSetId;                                             // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	struct FString                                     TargetID;                                                 // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	struct FString                                     ImaginaryCommand;                                         // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.InventoryTask");
+		static auto ptr = UObject::FindClass("Class Shenmue3.Imaginary");
 		return ptr;
 	}
 
@@ -881,18 +834,16 @@ public:
 };
 
 
-// Class Shenmue3.ItemTask
-// 0x0018 (0x0078 - 0x0060)
-class UItemTask : public UTalkEventTaskBase
+// Class Shenmue3.InventoryTask
+// 0x0010 (0x0070 - 0x0060)
+class UInventoryTask : public UTalkEventTaskBase
 {
 public:
-	int                                                FlagNum;                                                  // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-	struct FString                                     Value;                                                    // 0x0068(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	struct FString                                     UseItemSetId;                                             // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.ItemTask");
+		static auto ptr = UObject::FindClass("Class Shenmue3.InventoryTask");
 		return ptr;
 	}
 
@@ -927,6 +878,42 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.KSLabelNoCancelTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.HelpPriorityTask
+// 0x0018 (0x0078 - 0x0060)
+class UHelpPriorityTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     HelpId;                                                   // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	bool                                               bStartFlag;                                               // 0x0070(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.HelpPriorityTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.ItemTask
+// 0x0018 (0x0078 - 0x0060)
+class UItemTask : public UTalkEventTaskBase
+{
+public:
+	int                                                FlagNum;                                                  // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	struct FString                                     Value;                                                    // 0x0068(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.ItemTask");
 		return ptr;
 	}
 
@@ -1090,21 +1077,6 @@ public:
 };
 
 
-// Class Shenmue3.GiftMiniGameTask
-// 0x0000 (0x0060 - 0x0060)
-class UGiftMiniGameTask : public UTalkEventTaskBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.GiftMiniGameTask");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.LookTask
 // 0x0030 (0x0090 - 0x0060)
 class ULookTask : public UTalkEventTaskBase
@@ -1120,23 +1092,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.LookTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.LookSpeedTask
-// 0x0008 (0x0098 - 0x0090)
-class ULookSpeedTask : public ULookTask
-{
-public:
-	float                                              InterpSpeed;                                              // 0x0090(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.LookSpeedTask");
 		return ptr;
 	}
 
@@ -1166,6 +1121,23 @@ public:
 
 
 	void Init();
+};
+
+
+// Class Shenmue3.LookSpeedTask
+// 0x0008 (0x0098 - 0x0090)
+class ULookSpeedTask : public ULookTask
+{
+public:
+	float                                              InterpSpeed;                                              // 0x0090(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.LookSpeedTask");
+		return ptr;
+	}
+
 };
 
 
@@ -1206,52 +1178,31 @@ public:
 };
 
 
-// Class Shenmue3.MG_CC_AnimalDataAsset
-// 0x00A8 (0x00D8 - 0x0030)
-class UMG_CC_AnimalDataAsset : public UDataAsset
-{
-public:
-	struct FMG_CC_AnimalData                           m_AnimalData;                                             // 0x0030(0x00A8) (Edit, BlueprintVisible, BlueprintReadOnly)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.MG_CC_AnimalDataAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.MG_ODDataTable
+// Class Shenmue3.ExpressionFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
-class UMG_ODDataTable : public UBlueprintFunctionLibrary
+class UExpressionFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.MG_ODDataTable");
+		static auto ptr = UObject::FindClass("Class Shenmue3.ExpressionFunctionLibrary");
 		return ptr;
 	}
 
 
-	void STATIC_MG_ODOutputTextFile(const struct FString& Filename, const struct FString& outputFolderName, const struct FString& outStr);
-	bool STATIC_GetODDataTableRowFromName(class UScriptStruct* _struct, class UDataTable* _table, const struct FName& _row_name, int* Value);
-};
-
-
-// Class Shenmue3.MessageWaitTask
-// 0x0000 (0x0060 - 0x0060)
-class UMessageWaitTask : public UTalkEventTaskBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.MessageWaitTask");
-		return ptr;
-	}
-
+	struct FString Replace(const struct FString& InStr, int leftInd, int rightInd, int NewNum);
+	bool GetExpressionFromOperator(const struct FString& InStr, int operatorInd, int* lNum, int* rNum, int* lInd, int* rInd);
+	bool GetExpressionFromComparison(const struct FString& InStr, int operatorInd, TEnumAsByte<EComparisonKind> comparisonKind, int* lNum, int* rNum, int* lInd, int* rInd, struct FString* lStr, struct FString* rStr);
+	bool FindSub(const struct FString& InStr, int* findInd);
+	bool FindParenBlock(const struct FString& InStr, int* leftInd, int* rightInd, struct FString* retStr);
+	bool FindMul(const struct FString& InStr, int* findInd);
+	bool FindMod(const struct FString& InStr, int* findInd);
+	int FindFirstOperator(const struct FString& InStr, TEnumAsByte<ESearchDir> SearchDir, struct FString* findOperator);
+	bool FindDiv(const struct FString& InStr, int* findInd);
+	bool FindComparison(const struct FString& InStr, TEnumAsByte<EComparisonKind> comparisonKind, int* findInd);
+	bool FindAdd(const struct FString& InStr, int* findInd);
+	struct FString EvaluateAllFlags(const struct FString& InStr);
 };
 
 
@@ -1273,6 +1224,27 @@ public:
 };
 
 
+// Class Shenmue3.MG_WMData
+// 0x0010 (0x0040 - 0x0030)
+class UMG_WMData : public UDataAsset
+{
+public:
+	TArray<struct FMG_WMRoundDataStruct>               m_RoundDataList;                                          // 0x0030(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.MG_WMData");
+		return ptr;
+	}
+
+
+	bool IsEnableMole(int RoundNum, float CurrentTime, int AppearCount, struct FMG_WMDataStruct* ReturnData);
+	int GetToatalRoundNum();
+	float GetRoundMaxTime(int RoundNum);
+	int GetMoleNum(int RoundNum);
+};
+
+
 // Class Shenmue3.MGForkliftRCFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UMGForkliftRCFunctionLibrary : public UBlueprintFunctionLibrary
@@ -1286,31 +1258,8 @@ public:
 	}
 
 
-	void STATIC_SetVehicleWheelOffset(class UWheeledVehicleMovementComponent* wheel_vehicle_movement_component, TArray<struct FVector> Offset, int Size);
-	struct FMGForkliftRCCowTableRowBase STATIC_GetRowByNameCowDataTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-};
-
-
-// Class Shenmue3.MotionTask
-// 0x0058 (0x00B8 - 0x0060)
-class UMotionTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     CharacterID;                                              // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0070(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MotionTask.MontagePath
-	struct FString                                     SectionName;                                              // 0x0098(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	bool                                               bUseBlend;                                                // 0x00A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x00A9(0x0003) MISSED OFFSET
-	float                                              BlendTime;                                                // 0x00AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              DelayTime;                                                // 0x00B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x00B4(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.MotionTask");
-		return ptr;
-	}
-
+	void SetVehicleWheelOffset(class UWheeledVehicleMovementComponent* wheel_vehicle_movement_component, TArray<struct FVector> Offset, int Size);
+	struct FMGForkliftRCCowTableRowBase GetRowByNameCowDataTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
 };
 
 
@@ -1355,6 +1304,29 @@ public:
 };
 
 
+// Class Shenmue3.MotionTask
+// 0x0058 (0x00B8 - 0x0060)
+class UMotionTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     CharacterID;                                              // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0070(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.MotionTask.MontagePath
+	struct FString                                     SectionName;                                              // 0x0098(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	bool                                               bUseBlend;                                                // 0x00A8(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00A9(0x0003) MISSED OFFSET
+	float                                              BlendTime;                                                // 0x00AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	float                                              DelayTime;                                                // 0x00B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x00B4(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.MotionTask");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.OpenLevelTask
 // 0x0008 (0x0068 - 0x0060)
 class UOpenLevelTask : public UTalkEventTaskBase
@@ -1387,43 +1359,39 @@ public:
 };
 
 
-// Class Shenmue3.MG_WMData
-// 0x0010 (0x0040 - 0x0030)
-class UMG_WMData : public UDataAsset
+// Class Shenmue3.PauseScheduleTask
+// 0x0010 (0x0070 - 0x0060)
+class UPauseScheduleTask : public UTalkEventTaskBase
 {
 public:
-	TArray<struct FMG_WMRoundDataStruct>               m_RoundDataList;                                          // 0x0030(0x0010) (Edit, ZeroConstructor)
+	struct FName                                       CharacterID;                                              // 0x0060(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	bool                                               bPause;                                                   // 0x0068(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.MG_WMData");
+		static auto ptr = UObject::FindClass("Class Shenmue3.PauseScheduleTask");
 		return ptr;
 	}
 
-
-	bool IsEnableMole(int RoundNum, float CurrentTime, int AppearCount, struct FMG_WMDataStruct* ReturnData);
-	int GetToatalRoundNum();
-	float GetRoundMaxTime(int RoundNum);
-	int GetMoleNum(int RoundNum);
 };
 
 
-// Class Shenmue3.PlayBgmTask
-// 0x0038 (0x0098 - 0x0060)
-class UPlayBgmTask : public UTalkEventTaskBase
+// Class Shenmue3.MG_ODDataTable
+// 0x0000 (0x0028 - 0x0028)
+class UMG_ODDataTable : public UBlueprintFunctionLibrary
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0060(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.PlayBgmTask.BGM_path
-	struct FName                                       BGM_ID;                                                   // 0x0088(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bRestartBgm;                                              // 0x0090(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.PlayBgmTask");
+		static auto ptr = UObject::FindClass("Class Shenmue3.MG_ODDataTable");
 		return ptr;
 	}
 
+
+	void MG_ODOutputTextFile(const struct FString& Filename, const struct FString& outputFolderName, const struct FString& outStr);
+	bool GetODDataTableRowFromName(class UScriptStruct* _struct, class UDataTable* _table, const struct FName& _row_name, int* Value);
 };
 
 
@@ -1437,24 +1405,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.PlayCutsceneTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.PauseScheduleTask
-// 0x0010 (0x0070 - 0x0060)
-class UPauseScheduleTask : public UTalkEventTaskBase
-{
-public:
-	struct FName                                       CharacterID;                                              // 0x0060(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               bPause;                                                   // 0x0068(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.PauseScheduleTask");
 		return ptr;
 	}
 
@@ -1529,6 +1479,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.ReactionTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.RemoteEventTask
+// 0x0010 (0x0070 - 0x0060)
+class URemoteEventTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     EventName;                                                // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.RemoteEventTask");
 		return ptr;
 	}
 
@@ -1614,22 +1580,6 @@ public:
 };
 
 
-// Class Shenmue3.RemoteEventTask
-// 0x0010 (0x0070 - 0x0060)
-class URemoteEventTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     EventName;                                                // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.RemoteEventTask");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3_BRallyAwardSystem
 // 0x0028 (0x0118 - 0x00F0)
 class US3_BRallyAwardSystem : public UActorComponent
@@ -1656,34 +1606,6 @@ public:
 	TArray<struct FName> GetAnnouncements();
 	TArray<struct FS3BRallyAwardAnnouncement> GetAnnouncementQueue();
 	void ClearAnnouncement();
-};
-
-
-// Class Shenmue3.S3_ExclamationComponent
-// 0x00A8 (0x0198 - 0x00F0)
-class US3_ExclamationComponent : public UActorComponent
-{
-public:
-	struct FString                                     CharacterID;                                              // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FString                                     Category;                                                 // 0x0100(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FString>                             CueTypes;                                                 // 0x0110(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	bool                                               bInitializeOnPlay;                                        // 0x0120(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
-	TMap<struct FString, struct FS3_ExclamationCueList> CueListMap;                                               // 0x0128(0x0050) (ZeroConstructor)
-	class USoundAtomCueSheet*                          CueSheet;                                                 // 0x0178(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class USoundAtomCue*>                       AllCues;                                                  // 0x0180(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0190(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3_ExclamationComponent");
-		return ptr;
-	}
-
-
-	class USoundAtomCue* SearchSpecificCue(const struct FString& CueName);
-	void ListCuesByType(const struct FString& Type, TArray<class USoundAtomCue*>* Cues);
-	void InitializeCueSheet();
 };
 
 
@@ -2016,6 +1938,34 @@ public:
 };
 
 
+// Class Shenmue3.S3_ExclamationComponent
+// 0x00A8 (0x0198 - 0x00F0)
+class US3_ExclamationComponent : public UActorComponent
+{
+public:
+	struct FString                                     CharacterID;                                              // 0x00F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FString                                     Category;                                                 // 0x0100(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FString>                             CueTypes;                                                 // 0x0110(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	bool                                               bInitializeOnPlay;                                        // 0x0120(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0121(0x0007) MISSED OFFSET
+	TMap<struct FString, struct FS3_ExclamationCueList> CueListMap;                                               // 0x0128(0x0050) (ZeroConstructor)
+	class USoundAtomCueSheet*                          CueSheet;                                                 // 0x0178(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class USoundAtomCue*>                       AllCues;                                                  // 0x0180(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0190(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3_ExclamationComponent");
+		return ptr;
+	}
+
+
+	class USoundAtomCue* SearchSpecificCue(const struct FString& CueName);
+	void ListCuesByType(const struct FString& Type, TArray<class USoundAtomCue*>* Cues);
+	void InitializeCueSheet();
+};
+
+
 // Class Shenmue3.S3PlayerControllerBase
 // 0x0010 (0x0688 - 0x0678)
 class AS3PlayerControllerBase : public APlayerController
@@ -2092,22 +2042,62 @@ public:
 	}
 
 
-	struct FVector STATIC_ProjectionXY(const struct FVector& InVec, bool InNormalize);
+	struct FVector ProjectionXY(const struct FVector& InVec, bool InNormalize);
 	bool PC_GetIsInFirstPersonMode();
 	struct FVector PC_GetInteractionVector();
-	bool STATIC_IsOwnedByPlayer(class UObject* WorldContextObject, class UActorComponent* InComponent);
+	bool IsOwnedByPlayer(class UObject* WorldContextObject, class UActorComponent* InComponent);
 	bool IsDisablePadControl();
-	struct FVector STATIC_GetOffsetVectorZ(const struct FVector& InVec, float InOffsetZ);
-	struct FVector STATIC_GetOffsetVectorY(const struct FVector& InVec, float InOffsetY);
-	struct FVector STATIC_GetOffsetVectorX(const struct FVector& InVec, float InOffsetX);
-	int STATIC_GetHighestFloatIndex(TArray<float> InFloatArray);
-	class UActorComponent* STATIC_GetHavingTagChildComponent(class USceneComponent* InSceneComponent, const struct FName& InTag, bool InAllChildren);
-	float STATIC_GetFloatSign(float InValue);
+	struct FVector GetOffsetVectorZ(const struct FVector& InVec, float InOffsetZ);
+	struct FVector GetOffsetVectorY(const struct FVector& InVec, float InOffsetY);
+	struct FVector GetOffsetVectorX(const struct FVector& InVec, float InOffsetX);
+	int GetHighestFloatIndex(TArray<float> InFloatArray);
+	class UActorComponent* GetHavingTagChildComponent(class USceneComponent* InSceneComponent, const struct FName& InTag, bool InAllChildren);
+	float GetFloatSign(float InValue);
 	void EnablePadControl(class AActor* Executor);
 	void DisablePadControl(class AActor* Executor);
-	struct FVector STATIC_CalcNormal(const struct FVector& InVec, bool InProjectionXZ);
-	struct FVector STATIC_CalcDirection(const struct FVector& InSrc, const struct FVector& InDst, bool InProjectionXY);
-	float STATIC_CalcAngleDegXY(const struct FVector& InSrcDir, const struct FVector& InDstDir);
+	struct FVector CalcNormal(const struct FVector& InVec, bool InProjectionXZ);
+	struct FVector CalcDirection(const struct FVector& InSrc, const struct FVector& InDst, bool InProjectionXY);
+	float CalcAngleDegXY(const struct FVector& InSrcDir, const struct FVector& InDstDir);
+};
+
+
+// Class Shenmue3.S3AIController
+// 0x0000 (0x0438 - 0x0438)
+class AS3AIController : public AAIController
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AIController");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3AnalyzeFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3AnalyzeFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AnalyzeFunctionLibrary");
+		return ptr;
+	}
+
+
+	bool TryGetSocketLocation(class USceneComponent* Component, const struct FName& Socket, struct FVector* Location);
+	bool IsPlayerPawn(class AActor* OtherActor);
+	bool IsPlayerCollision(class UActorComponent* Component);
+	bool IsOverlappingPlayer(class UPrimitiveComponent* Trigger, class UCapsuleComponent** PlayerCapsule);
+	bool IsOverlappingAdventurePlayer(class UPrimitiveComponent* Trigger, class UCapsuleComponent** PlayerCapsule);
+	bool IsAdventurePlayerCollision(class UActorComponent* Component);
+	bool IsAdventurePlayer(class AActor* OtherActor);
+	bool GetS3CharacterFromCollision(class UActorComponent* Component, class AS3Character** Character);
+	struct FVector EstimateGroundLocation(class ACharacter* Pawn, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, const struct FVector& Location, float MaxAbove, float MaxBelow, float Radius);
 };
 
 
@@ -2128,31 +2118,6 @@ public:
 };
 
 
-// Class Shenmue3.S3AnalyzeFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3AnalyzeFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AnalyzeFunctionLibrary");
-		return ptr;
-	}
-
-
-	bool STATIC_TryGetSocketLocation(class USceneComponent* Component, const struct FName& Socket, struct FVector* Location);
-	bool STATIC_IsPlayerPawn(class AActor* OtherActor);
-	bool STATIC_IsPlayerCollision(class UActorComponent* Component);
-	bool STATIC_IsOverlappingPlayer(class UPrimitiveComponent* Trigger, class UCapsuleComponent** PlayerCapsule);
-	bool STATIC_IsOverlappingAdventurePlayer(class UPrimitiveComponent* Trigger, class UCapsuleComponent** PlayerCapsule);
-	bool STATIC_IsAdventurePlayerCollision(class UActorComponent* Component);
-	bool STATIC_IsAdventurePlayer(class AActor* OtherActor);
-	bool STATIC_GetS3CharacterFromCollision(class UActorComponent* Component, class AS3Character** Character);
-	struct FVector STATIC_EstimateGroundLocation(class ACharacter* Pawn, TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes, const struct FVector& Location, float MaxAbove, float MaxBelow, float Radius);
-};
-
-
 // Class Shenmue3.S3AngleFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class US3AngleFunctionLibrary : public UBlueprintFunctionLibrary
@@ -2166,17 +2131,17 @@ public:
 	}
 
 
-	float STATIC_MapToCircularRange(float Time, float RangeA, float RangeB, float OutRangeA, float OutRangeB);
-	struct FS3AngleRange STATIC_MakeAngleRangeFromLimits(float LHS, float RHS);
-	bool STATIC_IsWithinCircularRange(float Time, float RangeMin, float RangeMax);
-	float STATIC_GetNormalizedOutsideRange(const struct FS3AngleRange& Range, float Angle);
-	float STATIC_GetCycleDifferenceInDirection(float Prev, float Next, bool Forward);
-	float STATIC_GetCycleDifferenceAbs(float A, float B);
-	float STATIC_GetCloserCyclePosition(float CloseTo, float A, float B);
-	float STATIC_GetAngleOutsideRange(const struct FS3AngleRange& Range, float Angle);
-	struct FS3AngleRange STATIC_ExpandAngleRange(const struct FS3AngleRange& Range, float IncludeAngle);
-	float STATIC_ClampAngleToRange(const struct FS3AngleRange& Range, float Angle);
-	bool STATIC_AngleRangeContains(const struct FS3AngleRange& Range, float Angle);
+	float MapToCircularRange(float Time, float RangeA, float RangeB, float OutRangeA, float OutRangeB);
+	struct FS3AngleRange MakeAngleRangeFromLimits(float LHS, float RHS);
+	bool IsWithinCircularRange(float Time, float RangeMin, float RangeMax);
+	float GetNormalizedOutsideRange(const struct FS3AngleRange& Range, float Angle);
+	float GetCycleDifferenceInDirection(float Prev, float Next, bool Forward);
+	float GetCycleDifferenceAbs(float A, float B);
+	float GetCloserCyclePosition(float CloseTo, float A, float B);
+	float GetAngleOutsideRange(const struct FS3AngleRange& Range, float Angle);
+	struct FS3AngleRange ExpandAngleRange(const struct FS3AngleRange& Range, float IncludeAngle);
+	float ClampAngleToRange(const struct FS3AngleRange& Range, float Angle);
+	bool AngleRangeContains(const struct FS3AngleRange& Range, float Angle);
 };
 
 
@@ -2340,15 +2305,15 @@ public:
 };
 
 
-// Class Shenmue3.S3AnimalSkeletalMeshActor
-// 0x0000 (0x03B0 - 0x03B0)
-class AS3AnimalSkeletalMeshActor : public ASkeletalMeshActor
+// Class Shenmue3.MessageWaitTask
+// 0x0000 (0x0060 - 0x0060)
+class UMessageWaitTask : public UTalkEventTaskBase
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AnimalSkeletalMeshActor");
+		static auto ptr = UObject::FindClass("Class Shenmue3.MessageWaitTask");
 		return ptr;
 	}
 
@@ -2368,7 +2333,7 @@ public:
 	}
 
 
-	class US3FaceAnimDataAsset* STATIC_LoadFaceAnimation(const struct FName& CharaTag, class USkeletalMeshComponent* SkeletalMeshComp);
+	class US3FaceAnimDataAsset* LoadFaceAnimation(const struct FName& CharaTag, class USkeletalMeshComponent* SkeletalMeshComp);
 };
 
 
@@ -2411,21 +2376,6 @@ public:
 };
 
 
-// Class Shenmue3.S3AIController
-// 0x0000 (0x0438 - 0x0438)
-class AS3AIController : public AAIController
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AIController");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3AnimNotify_BlockStateChange
 // 0x0000 (0x0030 - 0x0030)
 class US3AnimNotify_BlockStateChange : public UAnimNotifyState
@@ -2458,22 +2408,20 @@ public:
 };
 
 
-// Class Shenmue3.S3AreaFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3AreaFunctionLibrary : public UBlueprintFunctionLibrary
+// Class Shenmue3.S3AppointSystemManager
+// 0x0010 (0x0338 - 0x0328)
+class AS3AppointSystemManager : public AActor
 {
 public:
+	int                                                ChangeStep;                                               // 0x0328(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     JumpPoint;                                                // 0x032C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AreaFunctionLibrary");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AppointSystemManager");
 		return ptr;
 	}
 
-
-	bool STATIC_IsInValidStreamingArea(class AActor* Actor);
-	ES3Where STATIC_GetLevelEnum(const struct FString& LevelName, bool Detail);
-	ES3Where STATIC_GetCurrentLevelEnum(class UObject* WorldContextObject, bool Detail);
 };
 
 
@@ -2499,30 +2447,22 @@ public:
 };
 
 
-// Class Shenmue3.S3AreaLightManagerComponent
-// 0x00E8 (0x01D8 - 0x00F0)
-class US3AreaLightManagerComponent : public UActorComponent
+// Class Shenmue3.S3AreaFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3AreaFunctionLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	class AS3AreaManager*                              AreaManager;                                              // 0x00F0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class AS3SpotLight*>                        SpotLightList;                                            // 0x00F8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class AS3PointLight*>                       PointLightList;                                           // 0x0108(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class AS3DirectionalLight*>                 DirectionalLightList;                                     // 0x0118(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, struct FAreaSpotLightList>    SpotLightAreaMap;                                         // 0x0128(0x0050) (ZeroConstructor)
-	TMap<struct FString, struct FAreaPointLightList>   PointLightAreaMap;                                        // 0x0178(0x0050) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x01C8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AreaLightManagerComponent");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AreaFunctionLibrary");
 		return ptr;
 	}
 
 
-	void GetCertainRangeSpotLightList(const struct FVector& WorldLocation, float SphereRadius, TArray<class AS3SpotLight*>* OutSpotLightList);
-	void GetCertainRangePointLightList(const struct FVector& WorldLocation, float SphereRadius, TArray<class AS3PointLight*>* OutPointLightList);
-	void GetAreaSpotLightList(const struct FVector& WorldLocation, TArray<class AS3SpotLight*>* OutSpotLightList);
-	void GetAreaPointLightList(const struct FVector& WorldLocation, TArray<class AS3PointLight*>* OutPointLightList);
+	bool IsInValidStreamingArea(class AActor* Actor);
+	ES3Where GetLevelEnum(const struct FString& LevelName, bool Detail);
+	ES3Where GetCurrentLevelEnum(class UObject* WorldContextObject, bool Detail);
 };
 
 
@@ -2562,6 +2502,33 @@ public:
 };
 
 
+// Class Shenmue3.S3AreaLightManagerComponent
+// 0x00E8 (0x01D8 - 0x00F0)
+class US3AreaLightManagerComponent : public UActorComponent
+{
+public:
+	class AS3AreaManager*                              AreaManager;                                              // 0x00F0(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class AS3SpotLight*>                        SpotLightList;                                            // 0x00F8(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class AS3PointLight*>                       PointLightList;                                           // 0x0108(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class AS3DirectionalLight*>                 DirectionalLightList;                                     // 0x0118(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, struct FAreaSpotLightList>    SpotLightAreaMap;                                         // 0x0128(0x0050) (ZeroConstructor)
+	TMap<struct FString, struct FAreaPointLightList>   PointLightAreaMap;                                        // 0x0178(0x0050) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x01C8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AreaLightManagerComponent");
+		return ptr;
+	}
+
+
+	void GetCertainRangeSpotLightList(const struct FVector& WorldLocation, float SphereRadius, TArray<class AS3SpotLight*>* OutSpotLightList);
+	void GetCertainRangePointLightList(const struct FVector& WorldLocation, float SphereRadius, TArray<class AS3PointLight*>* OutPointLightList);
+	void GetAreaSpotLightList(const struct FVector& WorldLocation, TArray<class AS3SpotLight*>* OutSpotLightList);
+	void GetAreaPointLightList(const struct FVector& WorldLocation, TArray<class AS3PointLight*>* OutPointLightList);
+};
+
+
 // Class Shenmue3.S3AreaVolume
 // 0x0038 (0x0398 - 0x0360)
 class AS3AreaVolume : public AVolume
@@ -2583,6 +2550,24 @@ public:
 
 
 	void RegisterManager();
+};
+
+
+// Class Shenmue3.S3AssetCullDistanceVolume
+// 0x0020 (0x0398 - 0x0378)
+class AS3AssetCullDistanceVolume : public ACullDistanceVolume
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0378(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AssetCullDistanceVolume");
+		return ptr;
+	}
+
+
+	void OnGraphicPresetChanged();
 };
 
 
@@ -2611,24 +2596,6 @@ public:
 	void SetPendingChunkId(ES3AssetChunkId ChunkId);
 	bool IsChunkInstalled(ES3AssetChunkId ChunkId);
 	ES3AssetChunkId GetChunkIdFromLocation(ES3Where LocationId);
-};
-
-
-// Class Shenmue3.S3AssetCullDistanceVolume
-// 0x0020 (0x0398 - 0x0378)
-class AS3AssetCullDistanceVolume : public ACullDistanceVolume
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0378(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AssetCullDistanceVolume");
-		return ptr;
-	}
-
-
-	void OnGraphicPresetChanged();
 };
 
 
@@ -2688,21 +2655,6 @@ public:
 };
 
 
-// Class Shenmue3.S3AttentionController
-// 0x0000 (0x0328 - 0x0328)
-class AS3AttentionController : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AttentionController");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3AttentionManager
 // 0x0010 (0x0338 - 0x0328)
 class AS3AttentionManager : public AActor
@@ -2713,23 +2665,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3AttentionManager");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3AppointSystemManager
-// 0x0010 (0x0338 - 0x0328)
-class AS3AppointSystemManager : public AActor
-{
-public:
-	int                                                ChangeStep;                                               // 0x0328(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     JumpPoint;                                                // 0x032C(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3AppointSystemManager");
 		return ptr;
 	}
 
@@ -2753,25 +2688,22 @@ public:
 };
 
 
-// Class Shenmue3.S3BattleRallyManager
-// 0x0018 (0x0340 - 0x0328)
-class AS3BattleRallyManager : public AActor
+// Class Shenmue3.PlayBgmTask
+// 0x0038 (0x0098 - 0x0060)
+class UPlayBgmTask : public UTalkEventTaskBase
 {
 public:
-	bool                                               bActivate;                                                // 0x0328(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0329(0x0007) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnRewardResultComplete;                                   // 0x0330(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0060(0x0028) UNKNOWN PROPERTY: SoftObjectProperty Shenmue3.PlayBgmTask.BGM_path
+	struct FName                                       BGM_ID;                                                   // 0x0088(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	bool                                               bRestartBgm;                                              // 0x0090(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BattleRallyManager");
+		static auto ptr = UObject::FindClass("Class Shenmue3.PlayBgmTask");
 		return ptr;
 	}
 
-
-	void ShowRewardResult();
-	void ClearInventoryItems();
-	bool CheckRewardAnnouncement();
 };
 
 
@@ -2879,6 +2811,26 @@ public:
 };
 
 
+// Class Shenmue3.S3BellTowerGimmick
+// 0x0010 (0x0338 - 0x0328)
+class AS3BellTowerGimmick : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
+	bool                                               bSwitchClothRyo;                                          // 0x0330(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BellTowerGimmick");
+		return ptr;
+	}
+
+
+	struct FName GetClothCharaName();
+};
+
+
 // Class Shenmue3.S3BgmArea
 // 0x0028 (0x0350 - 0x0328)
 class AS3BgmArea : public AActor
@@ -2905,31 +2857,40 @@ public:
 };
 
 
-// Class Shenmue3.S3BgmManager
-// 0x0008 (0x0330 - 0x0328)
-class AS3BgmManager : public AS3SequencerBgmManager
+// Class Shenmue3.S3AttentionController
+// 0x0000 (0x0328 - 0x0328)
+class AS3AttentionController : public AActor
 {
 public:
-	bool                                               bDisableFadePause;                                        // 0x0328(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0329(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BgmManager");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AttentionController");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3BattleRallyManager
+// 0x0018 (0x0340 - 0x0328)
+class AS3BattleRallyManager : public AActor
+{
+public:
+	bool                                               bActivate;                                                // 0x0328(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0329(0x0007) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnRewardResultComplete;                                   // 0x0330(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BattleRallyManager");
 		return ptr;
 	}
 
 
-	bool Stop(const struct FName& ID);
-	void SetTalkVolume(bool bReset);
-	void SetDisableFadePause(bool bDisable);
-	void Restart();
-	void PlayFromPlayer(class AS3BgmPlayer* BgmPlayer, float StartTime);
-	class AS3BgmPlayer* PlayFromCue(class UObject* Cue, const struct FName& ID, EBgmPriority Priority, bool AutoDestroy, float StartTime);
-	void Pause();
-	void OnEndTouchArea(class AS3BgmArea* AreaActor);
-	void OnBeginTouchArea(class AS3BgmArea* AreaActor);
-	void OnAreaBgmChanged(class AS3BgmArea* area);
+	void ShowRewardResult();
+	void ClearInventoryItems();
+	bool CheckRewardAnnouncement();
 };
 
 
@@ -2953,21 +2914,6 @@ public:
 };
 
 
-// Class Shenmue3.S3BgmSourceComponent
-// 0x0000 (0x00F0 - 0x00F0)
-class US3BgmSourceComponent : public UActorComponent
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BgmSourceComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3BlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class US3BlueprintFunctionLibrary : public UBlueprintFunctionLibrary
@@ -2981,132 +2927,112 @@ public:
 	}
 
 
-	void STATIC_ZSortArr_text(TArray<struct FText> arg, bool dsc, bool opt, TArray<struct FText>* resAr, TArray<int>* resId);
-	void STATIC_ZSortArr_string(TArray<struct FString> arg, bool dsc, bool opt, TArray<struct FString>* resAr, TArray<int>* resId);
-	void STATIC_ZSortArr_object(TArray<class UObject*> arg, bool dsc, TArray<class UObject*>* resAr, TArray<int>* resId);
-	void STATIC_ZSortArr_name(TArray<struct FName> arg, bool dsc, TArray<struct FName>* resAr, TArray<int>* resId);
-	void STATIC_ZSortArr_locate(TArray<struct FVector> arg, const struct FVector& Loc, bool dsc, TArray<struct FVector>* resAr, TArray<int>* resId, TArray<float>* resDs);
-	void STATIC_ZSortArr_int(TArray<int> arg, bool dsc, TArray<int>* resAr, TArray<int>* resId);
-	void STATIC_ZSortArr_float(TArray<float> arg, bool dsc, TArray<float>* resAr, TArray<int>* resId);
-	void STATIC_ZSortArr_actorLocate(TArray<class AActor*> arg, class AActor* Loc, bool dsc, TArray<class AActor*>* resAr, TArray<int>* resId, TArray<float>* resDs);
-	void STATIC_ZArrayFindMaxValue_int(TArray<int> arr, int* Index);
-	bool STATIC_UpdateTextureStreamingStatus(class UPrimitiveComponent* Component);
-	void STATIC_UpdateTextureStreaming();
-	void STATIC_UpdateCaptureSceneDeferred(class USceneCaptureComponent2D* Component);
-	bool STATIC_TryReimport(class UObject* Obj, bool bNotification);
-	bool STATIC_TestComponentOverlapComponent(class UPrimitiveComponent* PrimitiveA, class UPrimitiveComponent* PrimitiveB);
-	bool STATIC_StreamOutTextureData(int RequiredMemorySize);
-	float STATIC_SplineConvertInputKeyToDistance(class USplineComponent* spline, float InputKey);
-	void STATIC_SetTextureForceResidentFlag(class USkeletalMeshComponent* Component, bool bForceMiplevelsToBeResident);
-	void STATIC_SetStaticMeshMaterial(class UObject* WorldContextObject, class UStaticMesh* Mesh, class UMaterialInterface* Material, int MaterialIndex);
-	bool STATIC_SetSequenceToMontage(class UAnimMontage* AnimMontage, class UAnimSequenceBase* AnimSequence, const struct FName& Section, const struct FName& SlotName, float Time);
-	struct FPostProcessSettings STATIC_SetPostProcessShadowsGamma(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
-	struct FPostProcessSettings STATIC_SetPostProcessShadowsGain(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
-	struct FPostProcessSettings STATIC_SetPostProcessShadowsContrast(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
-	struct FPostProcessSettings STATIC_SetPostProcessGlobalSaturation(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
-	struct FPostProcessSettings STATIC_SetPostProcessGlobalGamma(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
-	struct FPostProcessSettings STATIC_SetPostProcessGlobalGain(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
-	struct FPostProcessSettings STATIC_SetPostProcessGlobalContrast(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
-	void STATIC_SetMobility(class UPrimitiveComponent* Component, int NewMobility);
-	void STATIC_SetIntParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, int NewValue, bool* bHasParameter);
-	bool STATIC_SetInputPriority(class AActor* Actor, int NewPriority);
-	void STATIC_SetForceMipStreaming(class UPrimitiveComponent* Component, bool bNewStreaming);
-	void STATIC_SetFloatParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, float NewValue, bool* bHasParameter);
-	void STATIC_SetDisableWorldRendering(class UObject* WorldContextObject, bool bDisabled);
-	void STATIC_SetDisableClothSimulation(class USkeletalMeshComponent* Mesh, bool bDisableClothSimulation);
-	void STATIC_SetDisableAnsel(class UObject* WorldContextObject, bool bDisabled);
-	void STATIC_SetDecalFadeScreenSize(class UDecalComponent* DecalComponent, float NewFadeScreenSize);
-	void STATIC_SetCanEverAffectNavigation(class UActorComponent* Component, bool bRelevant);
-	void STATIC_SetByteParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, unsigned char NewValue, bool* bHasParameter);
-	void STATIC_SetBoolParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool bNewValue, bool* bHasParameter);
-	bool STATIC_SaveStringToFile(const struct FString& SaveText, const struct FString& Filename);
-	void STATIC_RunShaderTest(class UObject* WorldContextObject, class UTextureRenderTarget2D* RenderTarget, class UTexture* InputTexture, int HalfWidth, float Sigma, float Radius);
-	void STATIC_ResetMatineeTimeDilation(class UObject* WorldContextObject);
-	void STATIC_RenderMaterialTile(class UObject* WorldContext, class UMaterialInterface* InMaterial, class UTextureRenderTarget2D* InRenderTarget, bool bFrontView);
-	void STATIC_PrintS3Warning(const struct FString& inString, bool bPrintToScreen, bool bPrintToLog, const struct FLinearColor& TextColor);
-	void STATIC_PrintS3Error(const struct FString& inString, bool bPrintToScreen, bool bPrintToLog, const struct FLinearColor& TextColor);
-	void STATIC_PlaySound(class UObject* WorldContextObject, class USoundAtomCue* Sound);
-	void STATIC_MakeInputActionKeyMapping(const struct FName& ActionName, const struct FKey& Key, bool bShift, bool bCtrl, bool bAlt, bool bCmd, struct FInputActionKeyMapping* Action);
-	void STATIC_MakeAssetId(class UObject* Asset);
-	void STATIC_MakeAssetClassId(class UClass* AssetClass);
-	void STATIC_LoadObject(class UObject* Target, class UClass* ObjectClass, const struct FString& Path, class UObject** OutObject);
-	class UObject* STATIC_LoadAssetSync();
-	class UClass* STATIC_LoadAssetClassSync();
-	bool STATIC_IsStreamingLevelAlwaysLoaded(class UObject* WorldContextObject, const struct FName& LevelName);
-	bool STATIC_IsInUseByLevel(class UObject* Object);
-	bool STATIC_IsInRangeTimeEvent(ES3DayTimeEvent CheckTime, ES3DayTimeEvent StartTime, ES3DayTimeEvent EndTime);
-	bool STATIC_IsInRangeTime(float CheckTime, float StartTime, float EndTime);
-	bool STATIC_IsCurrentAnimState(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
-	void STATIC_GetWalkCycleInfo(float StartMarkerA, float StartMarkerB, float Time, bool* OutPreviousMarkerIsA, float* OutTimeSincePreviousMarker, float* OutTimeToNextMarker);
-	float STATIC_GetVolumeMultiplier(class UAtomComponent* Component);
-	float STATIC_GetTimeForEvent(class UTimelineComponent* Timeline, const struct FScriptDelegate& Event);
-	void STATIC_GetStreamingVolumesForStreamingLevel(class UObject* WorldContextObject, const struct FName& LevelName, TArray<class ALevelStreamingVolume*>* StreamingVolumes);
-	void STATIC_GetStaticSwitchParameterValue(class UObject* WorldContextObject, class UMaterialInterface* Material, const struct FName& ParameterName, bool* bExist, bool* bValue);
-	class UAnimSequenceBase* STATIC_GetSequenceFromMontage(class UAnimMontage* AnimMontage, const struct FName& Section, const struct FName& SlotName, float Time, float* TimeInAnimation);
-	void STATIC_GetResourceSizeDetail(class UObject* Object, int* DedicatedSystemMemoryBytes, int* SharedSystemMemoryBytes, int* DedicatedVideoMemoryBytes, int* SharedVideoMemoryBytes, int* UnknownMemoryBytes);
-	int STATIC_GetResourceSize(class UObject* Object);
-	struct FString STATIC_GetProjectVersion();
-	class UObject* STATIC_GetPlaceLevel(class AActor* Actor);
-	float STATIC_GetMontageWeight(class UAnimInstance* AnimInstance, class UAnimMontage* Montage);
-	void STATIC_GetMontageSectionRange(class UAnimMontage* Montage, const struct FName& Section, float* StartSectionPosition, float* EndSectionPosition);
-	void STATIC_GetMontageAnimMetaData(class UAnimMontage* Montage, TArray<class UAnimMetaData*> OutAnimMetaData);
-	void STATIC_GetLevelSequenceSubtitleLabels(class ULevelSequence* InLevelSequence, const struct FName& EventName, const struct FName& CharacterName, TArray<struct FName>* OutLabels);
-	bool STATIC_GetItemNamesFromEnum(const struct FString& EnumName, TArray<struct FText>* EnumItems);
-	int STATIC_GetIntParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
-	void STATIC_GetIntParameterMinMaxFromClass(class UClass* WatchedObjectClass, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, int* Min, bool* bHasMax, int* Max);
-	void STATIC_GetIntParameterMinMax(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, int* Min, bool* bHasMax, int* Max);
-	int STATIC_GetInputPriority(class AActor* Actor);
-	float STATIC_GetFloatParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
-	void STATIC_GetFloatParameterMinMaxFromClass(class UClass* WatchedObjectClass, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, float* Min, bool* bHasMax, float* Max);
-	void STATIC_GetFloatParameterMinMax(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, float* Min, bool* bHasMax, float* Max);
-	float STATIC_getDistance(const struct FVector& v1, const struct FVector& v2, bool sw);
-	struct FString STATIC_GetCopyrightNotice();
-	unsigned char STATIC_GetByteParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
-	bool STATIC_GetBoolParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
-	bool STATIC_GetBoneTransformFromSequence(class USkeletalMeshComponent* SkelMesh, class UAnimSequenceBase* AnimSequence, const struct FName& BoneName, float Time, TEnumAsByte<ERelativeTransformSpace> Space, bool bExtractRootMotion, struct FTransform* OutTransform);
-	bool STATIC_GetBoneTransformFromMontage(class USkeletalMeshComponent* SkelMesh, class UAnimMontage* AnimMontage, const struct FName& Section, const struct FName& SlotName, const struct FName& BoneName, float Time, TEnumAsByte<ERelativeTransformSpace> Space, struct FTransform* OutTransform);
-	struct FRotator STATIC_GetBoneRotation(class USkeletalMeshComponent* Mesh, const struct FName& BoneName, TEnumAsByte<EBoneSpaces> Space);
-	struct FVector STATIC_GetBoneLocation(class USkeletalMeshComponent* Mesh, const struct FName& BoneName, TEnumAsByte<EBoneSpaces> Space);
-	void STATIC_GetAttachedActorsOfClass(class AActor* AttachParent, class UClass* ActorClass, TArray<class AActor*>* OutActors);
-	class AActor* STATIC_GetAttachedActorOfClass(class AActor* AttachParent, class UClass* ActorClass);
-	struct FVector STATIC_GetAssetUserDataCharaScale(class USkeletalMesh* Mesh);
-	float STATIC_GetAnimTimeFraction(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
-	float STATIC_GetAnimTime(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
-	float STATIC_GetAnimLength(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
-	void STATIC_GetAllActorsByLevelName(class UObject* WorldContextObject, const struct FName& PackageName, class UClass* ActorClass, TArray<class AActor*>* OutActors);
-	void STATIC_GetActorsOfClassFromArray(TArray<class AActor*> InActors, class UClass* ActorClass, TArray<class AActor*>* OutActors);
-	class AActor* STATIC_GetActorOfClassFromArray(TArray<class AActor*> InActors, class UClass* ActorClass);
-	void STATIC_ForceUpdateSkylightComponents(class UObject* WorldContext);
-	void STATIC_ForceUpdateOverlaps(class USceneComponent* Component);
-	void STATIC_ForceUpdateAnimDynamics(class USkeletalMeshComponent* Mesh, bool bReset, int LoopCount, float LoopDeltaTime);
-	void STATIC_ForceUpdateAnimation(class USkeletalMeshComponent* Mesh, float DeltaTime);
-	bool STATIC_FilterAnalogInputEvent(const struct FAnalogInputEvent& Input, const struct FKey& Filter, float* Value);
-	struct FTransform STATIC_ExtractSequenceRootMotionFromTrackRange(class UAnimSequence* Sequence, float StartTrackPosition, float EndTrackPosition);
-	struct FTransform STATIC_ExtractMontageRootMotionFromTrackRange(class UAnimMontage* Montage, float StartTrackPosition, float EndTrackPosition);
-	void STATIC_DrawBoxNonAsset(const struct FVector2D& Position, const struct FVector2D& Size, const struct FSlateBrush& Brush, const struct FLinearColor& Tint, struct FPaintContext* Context);
-	bool STATIC_DisableStaticSwitchOverride(class UObject* WorldContextObject, class UMaterialInstance* Material, const struct FName& ParameterName);
-	struct FTransform STATIC_CalculateSequenceRootMotionAlignment(class UAnimSequence* Sequence, const struct FTransform& AlignmentTransform, float AlignmentAnimTime, const struct FTransform& RelativeTransform, float CurrentAnimTime, float RootMotionScale);
-	struct FTransform STATIC_CalculateMontageRootMotionAlignment(class UAnimMontage* Montage, const struct FTransform& AlignmentTransform, float AlignmentAnimTime, const struct FTransform& RelativeTransform, float CurrentAnimTime, float RootMotionScale);
-};
-
-
-// Class Shenmue3.S3BellTowerGimmick
-// 0x0010 (0x0338 - 0x0328)
-class AS3BellTowerGimmick : public AActor
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0328(0x0008) MISSED OFFSET
-	bool                                               bSwitchClothRyo;                                          // 0x0330(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BellTowerGimmick");
-		return ptr;
-	}
-
-
-	struct FName GetClothCharaName();
+	void ZSortArr_text(TArray<struct FText> arg, bool dsc, bool opt, TArray<struct FText>* resAr, TArray<int>* resId);
+	void ZSortArr_string(TArray<struct FString> arg, bool dsc, bool opt, TArray<struct FString>* resAr, TArray<int>* resId);
+	void ZSortArr_object(TArray<class UObject*> arg, bool dsc, TArray<class UObject*>* resAr, TArray<int>* resId);
+	void ZSortArr_name(TArray<struct FName> arg, bool dsc, TArray<struct FName>* resAr, TArray<int>* resId);
+	void ZSortArr_locate(TArray<struct FVector> arg, const struct FVector& Loc, bool dsc, TArray<struct FVector>* resAr, TArray<int>* resId, TArray<float>* resDs);
+	void ZSortArr_int(TArray<int> arg, bool dsc, TArray<int>* resAr, TArray<int>* resId);
+	void ZSortArr_float(TArray<float> arg, bool dsc, TArray<float>* resAr, TArray<int>* resId);
+	void ZSortArr_actorLocate(TArray<class AActor*> arg, class AActor* Loc, bool dsc, TArray<class AActor*>* resAr, TArray<int>* resId, TArray<float>* resDs);
+	void ZArrayFindMaxValue_int(TArray<int> arr, int* Index);
+	bool UpdateTextureStreamingStatus(class UPrimitiveComponent* Component);
+	void UpdateTextureStreaming();
+	void UpdateCaptureSceneDeferred(class USceneCaptureComponent2D* Component);
+	bool TryReimport(class UObject* Obj, bool bNotification);
+	bool TestComponentOverlapComponent(class UPrimitiveComponent* PrimitiveA, class UPrimitiveComponent* PrimitiveB);
+	bool StreamOutTextureData(int RequiredMemorySize);
+	float SplineConvertInputKeyToDistance(class USplineComponent* spline, float InputKey);
+	void SetTextureForceResidentFlag(class USkeletalMeshComponent* Component, bool bForceMiplevelsToBeResident);
+	void SetStaticMeshMaterial(class UObject* WorldContextObject, class UStaticMesh* Mesh, class UMaterialInterface* Material, int MaterialIndex);
+	bool SetSequenceToMontage(class UAnimMontage* AnimMontage, class UAnimSequenceBase* AnimSequence, const struct FName& Section, const struct FName& SlotName, float Time);
+	struct FPostProcessSettings SetPostProcessShadowsGamma(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
+	struct FPostProcessSettings SetPostProcessShadowsGain(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
+	struct FPostProcessSettings SetPostProcessShadowsContrast(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
+	struct FPostProcessSettings SetPostProcessGlobalSaturation(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
+	struct FPostProcessSettings SetPostProcessGlobalGamma(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
+	struct FPostProcessSettings SetPostProcessGlobalGain(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
+	struct FPostProcessSettings SetPostProcessGlobalContrast(const struct FPostProcessSettings& Settings, const struct FVector4& Value);
+	void SetMobility(class UPrimitiveComponent* Component, int NewMobility);
+	void SetIntParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, int NewValue, bool* bHasParameter);
+	bool SetInputPriority(class AActor* Actor, int NewPriority);
+	void SetForceMipStreaming(class UPrimitiveComponent* Component, bool bNewStreaming);
+	void SetFloatParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, float NewValue, bool* bHasParameter);
+	void SetDisableWorldRendering(class UObject* WorldContextObject, bool bDisabled);
+	void SetDisableClothSimulation(class USkeletalMeshComponent* Mesh, bool bDisableClothSimulation);
+	void SetDisableAnsel(class UObject* WorldContextObject, bool bDisabled);
+	void SetDecalFadeScreenSize(class UDecalComponent* DecalComponent, float NewFadeScreenSize);
+	void SetCanEverAffectNavigation(class UActorComponent* Component, bool bRelevant);
+	void SetByteParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, unsigned char NewValue, bool* bHasParameter);
+	void SetBoolParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool bNewValue, bool* bHasParameter);
+	bool SaveStringToFile(const struct FString& SaveText, const struct FString& Filename);
+	void RunShaderTest(class UObject* WorldContextObject, class UTextureRenderTarget2D* RenderTarget, class UTexture* InputTexture, int HalfWidth, float Sigma, float Radius);
+	void ResetMatineeTimeDilation(class UObject* WorldContextObject);
+	void RenderMaterialTile(class UObject* WorldContext, class UMaterialInterface* InMaterial, class UTextureRenderTarget2D* InRenderTarget, bool bFrontView);
+	void PrintS3Warning(const struct FString& inString, bool bPrintToScreen, bool bPrintToLog, const struct FLinearColor& TextColor);
+	void PrintS3Error(const struct FString& inString, bool bPrintToScreen, bool bPrintToLog, const struct FLinearColor& TextColor);
+	void PlaySound(class UObject* WorldContextObject, class USoundAtomCue* Sound);
+	void MakeInputActionKeyMapping(const struct FName& ActionName, const struct FKey& Key, bool bShift, bool bCtrl, bool bAlt, bool bCmd, struct FInputActionKeyMapping* Action);
+	void MakeAssetId(class UObject* Asset);
+	void MakeAssetClassId(class UClass* AssetClass);
+	void LoadObject(class UObject* Target, class UClass* ObjectClass, const struct FString& Path, class UObject** OutObject);
+	class UObject* LoadAssetSync();
+	class UClass* LoadAssetClassSync();
+	bool IsStreamingLevelAlwaysLoaded(class UObject* WorldContextObject, const struct FName& LevelName);
+	bool IsInUseByLevel(class UObject* Object);
+	bool IsInRangeTimeEvent(ES3DayTimeEvent CheckTime, ES3DayTimeEvent StartTime, ES3DayTimeEvent EndTime);
+	bool IsInRangeTime(float CheckTime, float StartTime, float EndTime);
+	bool IsCurrentAnimState(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
+	void GetWalkCycleInfo(float StartMarkerA, float StartMarkerB, float Time, bool* OutPreviousMarkerIsA, float* OutTimeSincePreviousMarker, float* OutTimeToNextMarker);
+	float GetVolumeMultiplier(class UAtomComponent* Component);
+	float GetTimeForEvent(class UTimelineComponent* Timeline, const struct FScriptDelegate& Event);
+	void GetStreamingVolumesForStreamingLevel(class UObject* WorldContextObject, const struct FName& LevelName, TArray<class ALevelStreamingVolume*>* StreamingVolumes);
+	void GetStaticSwitchParameterValue(class UObject* WorldContextObject, class UMaterialInterface* Material, const struct FName& ParameterName, bool* bExist, bool* bValue);
+	class UAnimSequenceBase* GetSequenceFromMontage(class UAnimMontage* AnimMontage, const struct FName& Section, const struct FName& SlotName, float Time, float* TimeInAnimation);
+	void GetResourceSizeDetail(class UObject* Object, int* DedicatedSystemMemoryBytes, int* SharedSystemMemoryBytes, int* DedicatedVideoMemoryBytes, int* SharedVideoMemoryBytes, int* UnknownMemoryBytes);
+	int GetResourceSize(class UObject* Object);
+	struct FString GetProjectVersion();
+	class UObject* GetPlaceLevel(class AActor* Actor);
+	float GetMontageWeight(class UAnimInstance* AnimInstance, class UAnimMontage* Montage);
+	void GetMontageSectionRange(class UAnimMontage* Montage, const struct FName& Section, float* StartSectionPosition, float* EndSectionPosition);
+	void GetMontageAnimMetaData(class UAnimMontage* Montage, TArray<class UAnimMetaData*> OutAnimMetaData);
+	void GetLevelSequenceSubtitleLabels(class ULevelSequence* InLevelSequence, const struct FName& EventName, const struct FName& CharacterName, TArray<struct FName>* OutLabels);
+	bool GetItemNamesFromEnum(const struct FString& EnumName, TArray<struct FText>* EnumItems);
+	int GetIntParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
+	void GetIntParameterMinMaxFromClass(class UClass* WatchedObjectClass, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, int* Min, bool* bHasMax, int* Max);
+	void GetIntParameterMinMax(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, int* Min, bool* bHasMax, int* Max);
+	int GetInputPriority(class AActor* Actor);
+	float GetFloatParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
+	void GetFloatParameterMinMaxFromClass(class UClass* WatchedObjectClass, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, float* Min, bool* bHasMax, float* Max);
+	void GetFloatParameterMinMax(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter, bool* bHasMin, float* Min, bool* bHasMax, float* Max);
+	float getDistance(const struct FVector& v1, const struct FVector& v2, bool sw);
+	struct FString GetCopyrightNotice();
+	unsigned char GetByteParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
+	bool GetBoolParameterValue(class UObject* WatchedObject, const struct FName& PropertyName, bool* bHasParameter);
+	bool GetBoneTransformFromSequence(class USkeletalMeshComponent* SkelMesh, class UAnimSequenceBase* AnimSequence, const struct FName& BoneName, float Time, TEnumAsByte<ERelativeTransformSpace> Space, bool bExtractRootMotion, struct FTransform* OutTransform);
+	bool GetBoneTransformFromMontage(class USkeletalMeshComponent* SkelMesh, class UAnimMontage* AnimMontage, const struct FName& Section, const struct FName& SlotName, const struct FName& BoneName, float Time, TEnumAsByte<ERelativeTransformSpace> Space, struct FTransform* OutTransform);
+	struct FRotator GetBoneRotation(class USkeletalMeshComponent* Mesh, const struct FName& BoneName, TEnumAsByte<EBoneSpaces> Space);
+	struct FVector GetBoneLocation(class USkeletalMeshComponent* Mesh, const struct FName& BoneName, TEnumAsByte<EBoneSpaces> Space);
+	void GetAttachedActorsOfClass(class AActor* AttachParent, class UClass* ActorClass, TArray<class AActor*>* OutActors);
+	class AActor* GetAttachedActorOfClass(class AActor* AttachParent, class UClass* ActorClass);
+	struct FVector GetAssetUserDataCharaScale(class USkeletalMesh* Mesh);
+	float GetAnimTimeFraction(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
+	float GetAnimTime(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
+	float GetAnimLength(class UAnimInstance* AnimInstance, const struct FName& MachineName, const struct FName& StateName);
+	void GetAllActorsByLevelName(class UObject* WorldContextObject, const struct FName& PackageName, class UClass* ActorClass, TArray<class AActor*>* OutActors);
+	void GetActorsOfClassFromArray(TArray<class AActor*> InActors, class UClass* ActorClass, TArray<class AActor*>* OutActors);
+	class AActor* GetActorOfClassFromArray(TArray<class AActor*> InActors, class UClass* ActorClass);
+	void ForceUpdateSkylightComponents(class UObject* WorldContext);
+	void ForceUpdateOverlaps(class USceneComponent* Component);
+	void ForceUpdateAnimDynamics(class USkeletalMeshComponent* Mesh, bool bReset, int LoopCount, float LoopDeltaTime);
+	void ForceUpdateAnimation(class USkeletalMeshComponent* Mesh, float DeltaTime);
+	bool FilterAnalogInputEvent(const struct FAnalogInputEvent& Input, const struct FKey& Filter, float* Value);
+	struct FTransform ExtractSequenceRootMotionFromTrackRange(class UAnimSequence* Sequence, float StartTrackPosition, float EndTrackPosition);
+	struct FTransform ExtractMontageRootMotionFromTrackRange(class UAnimMontage* Montage, float StartTrackPosition, float EndTrackPosition);
+	void DrawBoxNonAsset(const struct FVector2D& Position, const struct FVector2D& Size, const struct FSlateBrush& Brush, const struct FLinearColor& Tint, struct FPaintContext* Context);
+	bool DisableStaticSwitchOverride(class UObject* WorldContextObject, class UMaterialInstance* Material, const struct FName& ParameterName);
+	struct FTransform CalculateSequenceRootMotionAlignment(class UAnimSequence* Sequence, const struct FTransform& AlignmentTransform, float AlignmentAnimTime, const struct FTransform& RelativeTransform, float CurrentAnimTime, float RootMotionScale);
+	struct FTransform CalculateMontageRootMotionAlignment(class UAnimMontage* Montage, const struct FTransform& AlignmentTransform, float AlignmentAnimTime, const struct FTransform& RelativeTransform, float CurrentAnimTime, float RootMotionScale);
 };
 
 
@@ -3235,6 +3161,49 @@ public:
 };
 
 
+// Class Shenmue3.S3BgmSourceComponent
+// 0x0000 (0x00F0 - 0x00F0)
+class US3BgmSourceComponent : public UActorComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BgmSourceComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3BgmManager
+// 0x0008 (0x0330 - 0x0328)
+class AS3BgmManager : public AS3SequencerBgmManager
+{
+public:
+	bool                                               bDisableFadePause;                                        // 0x0328(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0329(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BgmManager");
+		return ptr;
+	}
+
+
+	bool Stop(const struct FName& ID);
+	void SetTalkVolume(bool bReset);
+	void SetDisableFadePause(bool bDisable);
+	void Restart();
+	void PlayFromPlayer(class AS3BgmPlayer* BgmPlayer, float StartTime);
+	class AS3BgmPlayer* PlayFromCue(class UObject* Cue, const struct FName& ID, EBgmPriority Priority, bool AutoDestroy, float StartTime);
+	void Pause();
+	void OnEndTouchArea(class AS3BgmArea* AreaActor);
+	void OnBeginTouchArea(class AS3BgmArea* AreaActor);
+	void OnAreaBgmChanged(class AS3BgmArea* area);
+};
+
+
 // Class Shenmue3.S3BootGameMode
 // 0x0020 (0x0740 - 0x0720)
 class AS3BootGameMode : public AS3GameMode
@@ -3254,43 +3223,6 @@ public:
 
 	void ShowDialog(TArray<struct FName> Labels, unsigned char Type);
 	void LoginPlatform();
-};
-
-
-// Class Shenmue3.S3BRallyCourseCSPlayer
-// 0x0010 (0x0338 - 0x0328)
-class AS3BRallyCourseCSPlayer : public AActor
-{
-public:
-	TArray<TEnumAsByte<EObjectTypeQuery>>              CharTraceObjectTypes;                                     // 0x0328(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BRallyCourseCSPlayer");
-		return ptr;
-	}
-
-
-	bool TryPlaceCSAlongSpline(class ACharacter* Pawn, class USplineComponent* spline, const struct FBTL_BRallyCourseCutsceneData& CutsceneData, TEnumAsByte<ETraceTypeQuery> TraceChannel, struct FVector* OutLocation, struct FRotator* OutRotator);
-	struct FVector EstimateGroundLocation(class ACharacter* ContextPawn, const struct FVector& StartLocation);
-};
-
-
-// Class Shenmue3.S3BRallyTrophyData
-// 0x0010 (0x0040 - 0x0030)
-class US3BRallyTrophyData : public UDataAsset
-{
-public:
-	TArray<struct FS3BRallyTrophyUnlockData>           TrophyUnlockDatas;                                        // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BRallyTrophyData");
-		return ptr;
-	}
-
-
-	void TryUnlockAchievements(class US3AchievementManager* AchievementManager, class UObject* NewlyUnlocked, TArray<class UObject*> AllUnlocked);
 };
 
 
@@ -3334,22 +3266,40 @@ public:
 };
 
 
-// Class Shenmue3.S3TalkDataListBase
-// 0x0028 (0x0050 - 0x0028)
-class US3TalkDataListBase : public UObject
+// Class Shenmue3.S3BRallyCourseCSPlayer
+// 0x0010 (0x0338 - 0x0328)
+class AS3BRallyCourseCSPlayer : public AActor
 {
 public:
-	TArray<struct FTalkData>                           TalkDataList;                                             // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FSetEnableScheduleData>              SetEnableScheduleData;                                    // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	bool                                               Enable;                                                   // 0x0048(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+	TArray<TEnumAsByte<EObjectTypeQuery>>              CharTraceObjectTypes;                                     // 0x0328(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkDataListBase");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BRallyCourseCSPlayer");
 		return ptr;
 	}
 
+
+	bool TryPlaceCSAlongSpline(class ACharacter* Pawn, class USplineComponent* spline, const struct FBTL_BRallyCourseCutsceneData& CutsceneData, TEnumAsByte<ETraceTypeQuery> TraceChannel, struct FVector* OutLocation, struct FRotator* OutRotator);
+	struct FVector EstimateGroundLocation(class ACharacter* ContextPawn, const struct FVector& StartLocation);
+};
+
+
+// Class Shenmue3.S3BRallyTrophyData
+// 0x0010 (0x0040 - 0x0030)
+class US3BRallyTrophyData : public UDataAsset
+{
+public:
+	TArray<struct FS3BRallyTrophyUnlockData>           TrophyUnlockDatas;                                        // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BRallyTrophyData");
+		return ptr;
+	}
+
+
+	void TryUnlockAchievements(class US3AchievementManager* AchievementManager, class UObject* NewlyUnlocked, TArray<class UObject*> AllUnlocked);
 };
 
 
@@ -3380,6 +3330,25 @@ public:
 };
 
 
+// Class Shenmue3.S3TalkDataListBase
+// 0x0028 (0x0050 - 0x0028)
+class US3TalkDataListBase : public UObject
+{
+public:
+	TArray<struct FTalkData>                           TalkDataList;                                             // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FSetEnableScheduleData>              SetEnableScheduleData;                                    // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	bool                                               Enable;                                                   // 0x0048(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkDataListBase");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3BSDataList
 // 0x0028 (0x0078 - 0x0050)
 class US3BSDataList : public US3TalkDataListBase
@@ -3399,22 +3368,15 @@ public:
 };
 
 
-// Class Shenmue3.S3BuildInfoConfig
-// 0x0058 (0x0080 - 0x0028)
-class US3BuildInfoConfig : public UObject
+// Class Shenmue3.S3BuoyancyComponent
+// 0x0000 (0x0240 - 0x0240)
+class US3BuoyancyComponent : public USceneComponent
 {
 public:
-	struct FString                                     Platform;                                                 // 0x0028(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
-	struct FString                                     Configuration;                                            // 0x0038(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
-	struct FString                                     BuildType;                                                // 0x0048(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
-	struct FString                                     BuildDate;                                                // 0x0058(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
-	struct FString                                     Region;                                                   // 0x0068(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
-	int                                                BuildNumber;                                              // 0x0078(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
-	int                                                Changelist;                                               // 0x007C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BuildInfoConfig");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BuoyancyComponent");
 		return ptr;
 	}
 
@@ -3441,21 +3403,6 @@ public:
 };
 
 
-// Class Shenmue3.S3BuoyancyComponent
-// 0x0000 (0x0240 - 0x0240)
-class US3BuoyancyComponent : public USceneComponent
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3BuoyancyComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3Button
 // 0x0000 (0x0420 - 0x0420)
 class US3Button : public UButton
@@ -3470,6 +3417,21 @@ public:
 
 
 	void ForceClickAction();
+};
+
+
+// Class Shenmue3.S3CharaAssetUserDataBase
+// 0x0000 (0x0028 - 0x0028)
+class US3CharaAssetUserDataBase : public UAssetUserData
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaAssetUserDataBase");
+		return ptr;
+	}
+
 };
 
 
@@ -3494,15 +3456,30 @@ public:
 };
 
 
-// Class Shenmue3.S3CharaAssetUserDataBase
-// 0x0000 (0x0028 - 0x0028)
-class US3CharaAssetUserDataBase : public UAssetUserData
+// Class Shenmue3.S3AnimalSkeletalMeshActor
+// 0x0000 (0x03B0 - 0x03B0)
+class AS3AnimalSkeletalMeshActor : public ASkeletalMeshActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaAssetUserDataBase");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3AnimalSkeletalMeshActor");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3CharacterMovementComponent
+// 0x0000 (0x0770 - 0x0770)
+class US3CharacterMovementComponent : public UCharacterMovementComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharacterMovementComponent");
 		return ptr;
 	}
 
@@ -3525,36 +3502,19 @@ public:
 };
 
 
-// Class Shenmue3.S3CharacterMovementComponent
-// 0x0000 (0x0770 - 0x0770)
-class US3CharacterMovementComponent : public UCharacterMovementComponent
+// Class Shenmue3.MG_CC_AnimalDataAsset
+// 0x00A8 (0x00D8 - 0x0030)
+class UMG_CC_AnimalDataAsset : public UDataAsset
 {
 public:
+	struct FMG_CC_AnimalData                           m_AnimalData;                                             // 0x0030(0x00A8) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharacterMovementComponent");
+		static auto ptr = UObject::FindClass("Class Shenmue3.MG_CC_AnimalDataAsset");
 		return ptr;
 	}
 
-};
-
-
-// Class Shenmue3.S3CharacterPawn
-// 0x0010 (0x0770 - 0x0760)
-class AS3CharacterPawn : public ABTL_Character
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0760(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharacterPawn");
-		return ptr;
-	}
-
-
-	struct FName GetClothCharaName();
 };
 
 
@@ -3647,20 +3607,101 @@ public:
 };
 
 
-// Class Shenmue3.CharacterSensorInput
-// 0x0008 (0x0038 - 0x0030)
-class UCharacterSensorInput : public UCharacterSensorBase
+// Class Shenmue3.CharacterSensorGround
+// 0x0098 (0x00C8 - 0x0030)
+class UCharacterSensorGround : public UCharacterSensorBase
 {
 public:
-	int                                                m_nInputActionFlags;                                      // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              REGARD_LANDING_HEIGHT;                                    // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FHitResult                                  m_DetectedGround;                                         // 0x0038(0x0088) (Edit, IsPlainOldData)
+	float                                              m_fGroundHeight;                                          // 0x00C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               m_bDetectLanding;                                         // 0x00C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00C5(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.CharacterSensorInput");
+		static auto ptr = UObject::FindClass("Class Shenmue3.CharacterSensorGround");
 		return ptr;
 	}
 
+};
+
+
+// Class Shenmue3.S3CharacterPawn
+// 0x0010 (0x0770 - 0x0760)
+class AS3CharacterPawn : public ABTL_Character
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0760(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharacterPawn");
+		return ptr;
+	}
+
+
+	struct FName GetClothCharaName();
+};
+
+
+// Class Shenmue3.S3CharaLightCameraCutDataAsset
+// 0x0050 (0x0080 - 0x0030)
+class US3CharaLightCameraCutDataAsset : public UDataAsset
+{
+public:
+	TMap<struct FName, struct FS3CharaLightCameraCut>  CharaLightCameraCutList;                                  // 0x0030(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightCameraCutDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3CharaLightingActor
+// 0x00B8 (0x03E0 - 0x0328)
+class AS3CharaLightingActor : public AActor
+{
+public:
+	class AS3CharaLightingManager*                     CharaLightingManager;                                     // 0x0328(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               bUseLighting;                                             // 0x0330(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	ES3CharaLightingMode                               Mode;                                                     // 0x0331(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0332(0x0006) MISSED OFFSET
+	class US3CharaSpotLightComponent*                  KeyLightComponent;                                        // 0x0338(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class US3CharaSpotLightComponent*                  FillLightComponent;                                       // 0x0340(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class US3CharaSpotLightComponent*                  BackLightComponent;                                       // 0x0348(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AActor*                                      TargetActor;                                              // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      TargetSceneComponentClass;                                // 0x0358(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       TargetActorSocketName;                                    // 0x0360(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DirectTargetComponent;                                    // 0x0368(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               bKeepUpdatingTargetLocation;                              // 0x0370(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0371(0x0003) MISSED OFFSET
+	float                                              EnableCastShadowsDistance;                                // 0x0374(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0378(0x0008) MISSED OFFSET
+	struct FTransform                                  CacheTargetWorldTransform;                                // 0x0380(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x30];                                      // 0x03B0(0x0030) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightingActor");
+		return ptr;
+	}
+
+
+	void UpdateLightingParamater(const struct FS3CharaLightingContainer& Container);
+	void UpdateCastShadows(const struct FVector& CameraLocation);
+	void SetupLighting();
+	void SetLightVisibility(bool bVisibility);
+	void ResetCacheTargetLocationFlag();
+	void OverrideCacheTargetLocation(const struct FTransform& WorldTransform, const struct FVector& ForwardVector, const struct FVector& UpVector, const struct FVector& RightVector);
+	class USceneComponent* GetTargetSceneComponent();
+	bool GetTargetActorSocketTransform(struct FTransform* OutTransform);
+	class AS3CharaLightingManager* GetCharaLightingManager();
+	void DrawLightingDebugLine();
 };
 
 
@@ -3681,16 +3722,30 @@ public:
 };
 
 
-// Class Shenmue3.S3CharaLightCameraCutDataAsset
-// 0x0050 (0x0080 - 0x0030)
-class US3CharaLightCameraCutDataAsset : public UDataAsset
+// Class Shenmue3.S3CharaLightingSequencerActor
+// 0x0000 (0x03E0 - 0x03E0)
+class AS3CharaLightingSequencerActor : public AS3CharaLightingActor
 {
 public:
-	TMap<struct FName, struct FS3CharaLightCameraCut>  CharaLightCameraCutList;                                  // 0x0030(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightCameraCutDataAsset");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightingSequencerActor");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3CharaLightingSeqTrack
+// 0x0000 (0x03E0 - 0x03E0)
+class AS3CharaLightingSeqTrack : public AS3CharaLightingSequencerActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightingSeqTrack");
 		return ptr;
 	}
 
@@ -3749,98 +3804,25 @@ public:
 	void SetCurrentLightingColorCurve(struct FS3CharaLightingCurveColorParamater* CurveColorParamater);
 	void ResetLightsInBuilding();
 	void RequestManualUpdateTargetCharaLight(const struct FName& TargetTagCharaName, const struct FName& LightParamaterTableName, ES3CharaLightRequestType RequestType);
-	bool STATIC_IsEnabledAllCharaLighting();
+	bool IsEnabledAllCharaLighting();
 	bool IsConditionsCheck(class AActor* Actor, class US3TagCharaComponent* TagCharaComponent, struct FS3CharaLightingContainer* Container);
 	void InvertLightingDirection(bool bCameraRightDirection, struct FS3CharaLightingContainer* InContainer);
 	class USkeletalMeshComponent* GetTalkTargetActorMesh(class AActor* Actor);
 	void GetLightsInBuildingInfo(class AActor* TargetBuilding, struct FS3CharaLightsInBuildingInfo* OutInfo);
 	void GetLightParamAfterApplyingLocationAndRotation(const struct FS3CharaLightingParamater& Param, const struct FTransform& WorldTrans, const struct FVector& Forward, const struct FVector& Up, const struct FVector& Right, struct FVector* OutWorldLocation, struct FRotator* OutWorldRotation);
 	void GetLightingColorParameter(struct FS3CharaLightingCurveColorParamater* Paramater);
-	struct FName STATIC_GetEditorPreviewTagName();
+	struct FName GetEditorPreviewTagName();
 	struct FString GetEditorCurrentLevelName();
 	bool GetCharaLightingContainerByLightGroupId(const struct FName& LightGroupId, TArray<struct FS3CharaLightingContainer>* OutContainers);
 	bool GetCameraLocationAndRotation(struct FVector* OutWorldLocation, struct FRotator* OutWorldRotation);
 	void GetAllEditorActorsOfClass(class UClass* ActorClass, TArray<class AActor*>* OutActors);
 	struct FS3CharaLightingContainer Evaluation(class AActor* TargetLightupActor, const struct FName& LightGroupId);
-	void STATIC_EnabledAllCharaLighting();
+	void EnabledAllCharaLighting();
 	void Editor_UpdateAllCutsceneLightingActors(class ACameraActor* Camera, class UObject* LevelSequence);
 	void Editor_ResetVariable();
-	void STATIC_DisabledAllCharaLighting();
+	void DisabledAllCharaLighting();
 	void ClearRequestManualCharaLight(bool bAllReset);
 	void AddLightsInBuilding(class AActor* TargetBuilding, class AS3PointLight* Point, class AS3SpotLight* Spot);
-};
-
-
-// Class Shenmue3.S3CharaLightingActor
-// 0x00B8 (0x03E0 - 0x0328)
-class AS3CharaLightingActor : public AActor
-{
-public:
-	class AS3CharaLightingManager*                     CharaLightingManager;                                     // 0x0328(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               bUseLighting;                                             // 0x0330(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	ES3CharaLightingMode                               Mode;                                                     // 0x0331(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0332(0x0006) MISSED OFFSET
-	class US3CharaSpotLightComponent*                  KeyLightComponent;                                        // 0x0338(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class US3CharaSpotLightComponent*                  FillLightComponent;                                       // 0x0340(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class US3CharaSpotLightComponent*                  BackLightComponent;                                       // 0x0348(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      TargetActor;                                              // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      TargetSceneComponentClass;                                // 0x0358(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       TargetActorSocketName;                                    // 0x0360(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DirectTargetComponent;                                    // 0x0368(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	bool                                               bKeepUpdatingTargetLocation;                              // 0x0370(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0371(0x0003) MISSED OFFSET
-	float                                              EnableCastShadowsDistance;                                // 0x0374(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x8];                                       // 0x0378(0x0008) MISSED OFFSET
-	struct FTransform                                  CacheTargetWorldTransform;                                // 0x0380(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x03B0(0x0030) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightingActor");
-		return ptr;
-	}
-
-
-	void UpdateLightingParamater(const struct FS3CharaLightingContainer& Container);
-	void UpdateCastShadows(const struct FVector& CameraLocation);
-	void SetupLighting();
-	void SetLightVisibility(bool bVisibility);
-	void ResetCacheTargetLocationFlag();
-	void OverrideCacheTargetLocation(const struct FTransform& WorldTransform, const struct FVector& ForwardVector, const struct FVector& UpVector, const struct FVector& RightVector);
-	class USceneComponent* GetTargetSceneComponent();
-	bool GetTargetActorSocketTransform(struct FTransform* OutTransform);
-	class AS3CharaLightingManager* GetCharaLightingManager();
-	void DrawLightingDebugLine();
-};
-
-
-// Class Shenmue3.S3CharaLightingSequencerActor
-// 0x0000 (0x03E0 - 0x03E0)
-class AS3CharaLightingSequencerActor : public AS3CharaLightingActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightingSequencerActor");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3CharaLightingSeqTrack
-// 0x0000 (0x03E0 - 0x03E0)
-class AS3CharaLightingSeqTrack : public AS3CharaLightingSequencerActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaLightingSeqTrack");
-		return ptr;
-	}
-
 };
 
 
@@ -3861,27 +3843,6 @@ public:
 };
 
 
-// Class Shenmue3.CharacterSensorGround
-// 0x0098 (0x00C8 - 0x0030)
-class UCharacterSensorGround : public UCharacterSensorBase
-{
-public:
-	float                                              REGARD_LANDING_HEIGHT;                                    // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FHitResult                                  m_DetectedGround;                                         // 0x0038(0x0088) (Edit, IsPlainOldData)
-	float                                              m_fGroundHeight;                                          // 0x00C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               m_bDetectLanding;                                         // 0x00C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x00C5(0x0003) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.CharacterSensorGround");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3CharaSkeletalAttachAssetUserData
 // 0x0040 (0x0068 - 0x0028)
 class US3CharaSkeletalAttachAssetUserData : public US3CharaAssetUserDataBase
@@ -3892,6 +3853,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaSkeletalAttachAssetUserData");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3CharaSpotLightComponent
+// 0x0030 (0x03E0 - 0x03B0)
+class US3CharaSpotLightComponent : public USpotLightComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x30];                                      // 0x03B0(0x0030) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaSpotLightComponent");
 		return ptr;
 	}
 
@@ -3959,6 +3936,23 @@ public:
 };
 
 
+// Class Shenmue3.CharacterSensorInput
+// 0x0008 (0x0038 - 0x0030)
+class UCharacterSensorInput : public UCharacterSensorBase
+{
+public:
+	int                                                m_nInputActionFlags;                                      // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.CharacterSensorInput");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3Clipper
 // 0x00A0 (0x03C8 - 0x0328)
 class AS3Clipper : public AActor
@@ -4011,39 +4005,6 @@ public:
 };
 
 
-// Class Shenmue3.S3ClipperLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3ClipperLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3ClipperLibrary");
-		return ptr;
-	}
-
-
-	float STATIC_ConvertClipperVolume(int Volume);
-};
-
-
-// Class Shenmue3.S3CharaSpotLightComponent
-// 0x0030 (0x03E0 - 0x03B0)
-class US3CharaSpotLightComponent : public USpotLightComponent
-{
-public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x03B0(0x0030) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CharaSpotLightComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3ClipperMultiSampler
 // 0x0020 (0x0048 - 0x0028)
 class US3ClipperMultiSampler : public UObject
@@ -4083,29 +4044,35 @@ public:
 };
 
 
-// Class Shenmue3.S3ClipperVolumeInterpretor
-// 0x0048 (0x0070 - 0x0028)
-class US3ClipperVolumeInterpretor : public UObject
+// Class Shenmue3.S3ClipperReader
+// 0x0080 (0x00A8 - 0x0028)
+class US3ClipperReader : public UObject
 {
 public:
-	TArray<float>                                      VolumeRateArray;                                          // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	float                                              VolumeBaseRate;                                           // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bUseClamp;                                                // 0x003C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
-	float                                              NoVoiceAdjustValue;                                       // 0x0040(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                MaxVolumeAutomationStep;                                  // 0x0044(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 VolumeAutomationCurve;                                    // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 VolumeAutomationCurve_English;                            // 0x0050(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 VolumeAutomationCurve_Chinese;                            // 0x0058(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UCurveFloat*                                 UseVolumeCurve;                                           // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
+	TMap<struct FString, EMouseShape>                  ShapeConversionMap;                                       // 0x0050(0x0050) (ZeroConstructor, Transient)
+	class US3ClipperVolumeInterpretor*                 VolumeInterpretor;                                        // 0x00A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3ClipperVolumeInterpretor");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3ClipperReader");
 		return ptr;
 	}
 
+
+	void SetVolumeInterpretor(class US3ClipperVolumeInterpretor* InObject);
+	void SetFrameRate(float InFrameRate);
+	void SetData(const struct FString& InData);
+	bool IsTimeInRange(float Time);
+	bool IsFrameInRange(int Frame);
+	class US3ClipperVolumeInterpretor* GetVolumeInterpretor();
+	float GetTime(int Frame);
+	EClipperSourceType GetSourceType();
+	struct FS3ClipperSample GetSample(int Frame);
+	float GetFrameRate();
+	int GetFrameNum();
+	float GetFrameAsFloat(float Time);
+	int GetFrame(float Time);
 };
 
 
@@ -4144,35 +4111,29 @@ public:
 };
 
 
-// Class Shenmue3.S3ClipperReader
-// 0x0080 (0x00A8 - 0x0028)
-class US3ClipperReader : public UObject
+// Class Shenmue3.S3ClipperVolumeInterpretor
+// 0x0048 (0x0070 - 0x0028)
+class US3ClipperVolumeInterpretor : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0028(0x0028) MISSED OFFSET
-	TMap<struct FString, EMouseShape>                  ShapeConversionMap;                                       // 0x0050(0x0050) (ZeroConstructor, Transient)
-	class US3ClipperVolumeInterpretor*                 VolumeInterpretor;                                        // 0x00A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<float>                                      VolumeRateArray;                                          // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	float                                              VolumeBaseRate;                                           // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bUseClamp;                                                // 0x003C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
+	float                                              NoVoiceAdjustValue;                                       // 0x0040(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                MaxVolumeAutomationStep;                                  // 0x0044(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 VolumeAutomationCurve;                                    // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 VolumeAutomationCurve_English;                            // 0x0050(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 VolumeAutomationCurve_Chinese;                            // 0x0058(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UCurveFloat*                                 UseVolumeCurve;                                           // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3ClipperReader");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3ClipperVolumeInterpretor");
 		return ptr;
 	}
 
-
-	void SetVolumeInterpretor(class US3ClipperVolumeInterpretor* InObject);
-	void SetFrameRate(float InFrameRate);
-	void SetData(const struct FString& InData);
-	bool IsTimeInRange(float Time);
-	bool IsFrameInRange(int Frame);
-	class US3ClipperVolumeInterpretor* GetVolumeInterpretor();
-	float GetTime(int Frame);
-	EClipperSourceType GetSourceType();
-	struct FS3ClipperSample GetSample(int Frame);
-	float GetFrameRate();
-	int GetFrameNum();
-	float GetFrameAsFloat(float Time);
-	int GetFrame(float Time);
 };
 
 
@@ -4275,23 +4236,6 @@ public:
 };
 
 
-// Class Shenmue3.S3CutsceneLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3CutsceneLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CutsceneLibrary");
-		return ptr;
-	}
-
-
-	class AS3CutscenePlayer* STATIC_FindCutscenePlayer(class UObject* WorldContextObject, const struct FName& CutsceneId);
-};
-
-
 // Class Shenmue3.S3CutsceneLevelData
 // 0x0018 (0x0040 - 0x0028)
 class US3CutsceneLevelData : public UObject
@@ -4306,6 +4250,39 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Shenmue3.S3CutsceneLevelDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class US3CutsceneLevelDataAsset : public UObject
+{
+public:
+	TArray<class US3CutsceneLevelData*>                LevelDataList;                                            // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CutsceneLevelDataAsset");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3CutsceneLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3CutsceneLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CutsceneLibrary");
+		return ptr;
+	}
+
+
+	class AS3CutscenePlayer* FindCutscenePlayer(class UObject* WorldContextObject, const struct FName& CutsceneId);
 };
 
 
@@ -4337,6 +4314,29 @@ public:
 
 	void StartCutscene();
 	void EndCutscene();
+};
+
+
+// Class Shenmue3.S3CutsceneSkeletalMeshActor
+// 0x0020 (0x03D0 - 0x03B0)
+class AS3CutsceneSkeletalMeshActor : public ASkeletalMeshActor
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x03B0(0x0010) MISSED OFFSET
+	struct FName                                       CharaName;                                                // 0x03C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class US3FaceAnimDataAsset*                        FaceAnimDataAsset;                                        // 0x03C8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3CutsceneSkeletalMeshActor");
+		return ptr;
+	}
+
+
+	void SetupMesh();
+	struct FName GetTagCharaName();
+	struct FName GetConvertedCharaName();
+	struct FName GetClothCharaName();
 };
 
 
@@ -4528,20 +4528,25 @@ public:
 };
 
 
-// Class Shenmue3.S3DebugMenu
-// 0x0000 (0x0208 - 0x0208)
-class US3DebugMenu : public UUserWidget
+// Class Shenmue3.S3BuildInfoConfig
+// 0x0058 (0x0080 - 0x0028)
+class US3BuildInfoConfig : public UObject
 {
 public:
+	struct FString                                     Platform;                                                 // 0x0028(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
+	struct FString                                     Configuration;                                            // 0x0038(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
+	struct FString                                     BuildType;                                                // 0x0048(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
+	struct FString                                     BuildDate;                                                // 0x0058(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
+	struct FString                                     Region;                                                   // 0x0068(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config)
+	int                                                BuildNumber;                                              // 0x0078(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
+	int                                                Changelist;                                               // 0x007C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3DebugMenu");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3BuildInfoConfig");
 		return ptr;
 	}
 
-
-	void CloseDebugMenu();
 };
 
 
@@ -4584,6 +4589,83 @@ public:
 	void GetLevelAndProgress(int* Level, float* NextLevelProgress);
 	int GetLevel();
 	void Configure(int InInputCountPerLevel, int InStartLevel, int InEarnableLevels);
+};
+
+
+// Class Shenmue3.S3DebugMenu
+// 0x0000 (0x0208 - 0x0208)
+class US3DebugMenu : public UUserWidget
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3DebugMenu");
+		return ptr;
+	}
+
+
+	void CloseDebugMenu();
+};
+
+
+// Class Shenmue3.S3DetectActionInterface
+// 0x0000 (0x0028 - 0x0028)
+class US3DetectActionInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3DetectActionInterface");
+		return ptr;
+	}
+
+
+	int GetPriority();
+	TArray<struct FS3DetectActionParam> GetDetectAction();
+	void DecideDetectAction(ES3ActionIconType Type);
+};
+
+
+// Class Shenmue3.S3DevelopBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3DevelopBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3DevelopBlueprintFunctionLibrary");
+		return ptr;
+	}
+
+
+	bool TeleportToNPC(class UObject* WorldContextObject, const struct FName& NPCName);
+	void SetVirtualPlatform(ES3Platform Platform);
+	void SetPostProcessAnimBlueprint(class USkeletalMesh* Mesh, class UClass* AnimBlueprint);
+	void SetPhysicsAsset(class USkeletalMesh* Mesh, class UPhysicsAsset* NewPhysicsAsset);
+	void MarkPackageDirty(class UObject* Object);
+	bool IsWeGame(class UObject* WorldContextObject);
+	bool IsVirtualPS4();
+	bool IsVirtualPlatformOverriden();
+	bool IsTestBuild();
+	bool IsSimulateInEditor();
+	bool IsShippingBuild();
+	bool IsPS4();
+	bool IsPlayInEditor();
+	bool IsMouseSupported();
+	bool IsEditor();
+	bool IsDLCProjectVersion();
+	bool IsDebugMouseSupported();
+	bool IsDebugBuild();
+	bool IsAlpha2();
+	bool IsAlpha1();
+	TArray<class ULevelStreaming*> GetWorldStreamingLevels(class UObject* WorldContextObject);
+	ES3Platform GetVirtualPlatformEnum();
+	ES3Platform GetPlatformEnum();
+	struct FString GetOnlineServiceName(class UObject* WorldContextObject);
+	void DisableVirtualPlatformOverride();
 };
 
 
@@ -4633,89 +4715,6 @@ public:
 	void ForbidActionSensor(class AActor* Executor);
 	int FindStackIndex(const struct FS3DetectActionParam& InParam);
 	bool CanStartBS(class AS3Character* Character);
-};
-
-
-// Class Shenmue3.S3DetectActionInterface
-// 0x0000 (0x0028 - 0x0028)
-class US3DetectActionInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3DetectActionInterface");
-		return ptr;
-	}
-
-
-	int GetPriority();
-	TArray<struct FS3DetectActionParam> GetDetectAction();
-	void DecideDetectAction(ES3ActionIconType Type);
-};
-
-
-// Class Shenmue3.S3CutsceneSkeletalMeshActor
-// 0x0020 (0x03D0 - 0x03B0)
-class AS3CutsceneSkeletalMeshActor : public ASkeletalMeshActor
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x03B0(0x0010) MISSED OFFSET
-	struct FName                                       CharaName;                                                // 0x03C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class US3FaceAnimDataAsset*                        FaceAnimDataAsset;                                        // 0x03C8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CutsceneSkeletalMeshActor");
-		return ptr;
-	}
-
-
-	void SetupMesh();
-	struct FName GetTagCharaName();
-	struct FName GetConvertedCharaName();
-	struct FName GetClothCharaName();
-};
-
-
-// Class Shenmue3.S3DevelopBlueprintFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3DevelopBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3DevelopBlueprintFunctionLibrary");
-		return ptr;
-	}
-
-
-	bool STATIC_TeleportToNPC(class UObject* WorldContextObject, const struct FName& NPCName);
-	void STATIC_SetVirtualPlatform(ES3Platform Platform);
-	void STATIC_SetPostProcessAnimBlueprint(class USkeletalMesh* Mesh, class UClass* AnimBlueprint);
-	void STATIC_SetPhysicsAsset(class USkeletalMesh* Mesh, class UPhysicsAsset* NewPhysicsAsset);
-	void STATIC_MarkPackageDirty(class UObject* Object);
-	bool STATIC_IsWeGame(class UObject* WorldContextObject);
-	bool STATIC_IsVirtualPS4();
-	bool STATIC_IsVirtualPlatformOverriden();
-	bool STATIC_IsTestBuild();
-	bool STATIC_IsSimulateInEditor();
-	bool STATIC_IsShippingBuild();
-	bool STATIC_IsPS4();
-	bool STATIC_IsPlayInEditor();
-	bool STATIC_IsMouseSupported();
-	bool STATIC_IsEditor();
-	bool STATIC_IsDLCProjectVersion();
-	bool STATIC_IsDebugMouseSupported();
-	bool STATIC_IsDebugBuild();
-	bool STATIC_IsAlpha2();
-	bool STATIC_IsAlpha1();
-	TArray<class ULevelStreaming*> STATIC_GetWorldStreamingLevels(class UObject* WorldContextObject);
-	ES3Platform STATIC_GetVirtualPlatformEnum();
-	ES3Platform STATIC_GetPlatformEnum();
-	struct FString STATIC_GetOnlineServiceName(class UObject* WorldContextObject);
-	void STATIC_DisableVirtualPlatformOverride();
 };
 
 
@@ -4806,23 +4805,8 @@ public:
 	}
 
 
-	class US3DoorDataBase* STATIC_GetDoorData2(class US3DoorData* DoorData, int Step, int Time);
-	class US3DoorDataBase* STATIC_GetDoorData(int Step, int Time, const struct FString& RootAssetPath, struct FString* State, struct FName* NPCName, struct FString* Path, struct FString* compulsionPath);
-};
-
-
-// Class Shenmue3.S3DoorManager
-// 0x0000 (0x0328 - 0x0328)
-class AS3DoorManager : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3DoorManager");
-		return ptr;
-	}
-
+	class US3DoorDataBase* GetDoorData2(class US3DoorData* DoorData, int Step, int Time);
+	class US3DoorDataBase* GetDoorData(int Step, int Time, const struct FString& RootAssetPath, struct FString* State, struct FName* NPCName, struct FString* Path, struct FString* compulsionPath);
 };
 
 
@@ -4846,18 +4830,32 @@ public:
 };
 
 
-// Class Shenmue3.S3DirectionalLight
-// 0x0010 (0x0348 - 0x0338)
-class AS3DirectionalLight : public ADirectionalLight
+// Class Shenmue3.S3DoorManager
+// 0x0000 (0x0328 - 0x0328)
+class AS3DoorManager : public AActor
 {
 public:
-	bool                                               bRegister;                                                // 0x0338(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0339(0x0007) MISSED OFFSET
-	struct FTimerHandle                                RegisterHandle;                                           // 0x0340(0x0008) (Transient)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3DirectionalLight");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3DoorManager");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3DownloadableContent
+// 0x0020 (0x0050 - 0x0030)
+class US3DownloadableContent : public UPrimaryDataAsset
+{
+public:
+	TArray<int>                                        EventFlags;                                               // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0040(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3DownloadableContent.Maps
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3DownloadableContent");
 		return ptr;
 	}
 
@@ -4889,17 +4887,33 @@ public:
 };
 
 
-// Class Shenmue3.S3DownloadableContent
-// 0x0020 (0x0050 - 0x0030)
-class US3DownloadableContent : public UPrimaryDataAsset
+// Class Shenmue3.S3DirectionalLight
+// 0x0010 (0x0348 - 0x0338)
+class AS3DirectionalLight : public ADirectionalLight
 {
 public:
-	TArray<int>                                        EventFlags;                                               // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0040(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3DownloadableContent.Maps
+	bool                                               bRegister;                                                // 0x0338(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0339(0x0007) MISSED OFFSET
+	struct FTimerHandle                                RegisterHandle;                                           // 0x0340(0x0008) (Transient)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3DownloadableContent");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3DirectionalLight");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3DPICustomScalingRule
+// 0x0000 (0x0028 - 0x0028)
+class US3DPICustomScalingRule : public UDPICustomScalingRule
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3DPICustomScalingRule");
 		return ptr;
 	}
 
@@ -4923,21 +4937,6 @@ public:
 };
 
 
-// Class Shenmue3.S3DPICustomScalingRule
-// 0x0000 (0x0028 - 0x0028)
-class US3DPICustomScalingRule : public UDPICustomScalingRule
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3DPICustomScalingRule");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3EnergyManager
 // 0x0000 (0x0328 - 0x0328)
 class AS3EnergyManager : public AActor
@@ -4953,6 +4952,25 @@ public:
 
 	bool IsLowEnergy();
 	void DrainRunEnergy();
+};
+
+
+// Class Shenmue3.S3EndCreditsDataAsset
+// 0x00A8 (0x00D8 - 0x0030)
+class US3EndCreditsDataAsset : public UDataAsset
+{
+public:
+	float                                              ScrollSpeed;                                              // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DefautSpace;                                              // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TMap<struct FName, class UTexture*>                TextureMap;                                               // 0x0038(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	TMap<struct FString, class UObject*>               BgmMap;                                                   // 0x0088(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3EndCreditsDataAsset");
+		return ptr;
+	}
+
 };
 
 
@@ -4997,50 +5015,25 @@ public:
 };
 
 
-// Class Shenmue3.S3EndCreditsDataAsset
-// 0x00A8 (0x00D8 - 0x0030)
-class US3EndCreditsDataAsset : public UDataAsset
+// Class Shenmue3.S3EyecatchWidget
+// 0x0008 (0x0228 - 0x0220)
+class US3EyecatchWidget : public US3UserWidget
 {
 public:
-	float                                              ScrollSpeed;                                              // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DefautSpace;                                              // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TMap<struct FName, class UTexture*>                TextureMap;                                               // 0x0038(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
-	TMap<struct FString, class UObject*>               BgmMap;                                                   // 0x0088(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	bool                                               bIsVisible;                                               // 0x0220(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0221(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3EndCreditsDataAsset");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3EyecatchWidget");
 		return ptr;
 	}
 
-};
 
-
-// Class Shenmue3.S3FaceAnimDataAsset
-// 0x0120 (0x0150 - 0x0030)
-class US3FaceAnimDataAsset : public UDataAsset
-{
-public:
-	class UAnimSequence*                               NeutralFaceAnim;                                          // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                EyelidMontage;                                            // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bOverlapEyeCloseBlendMaxMap;                              // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	TMap<ECharacterEmotion, float>                     EyeCloseBlendMaxMap;                                      // 0x0048(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	TMap<ECharacterEmotion, float>                     EmotionVaryAdjustMap;                                     // 0x0098(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	float                                              ClipperVolumeScale;                                       // 0x00E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FS3CharacterLookAtWholeBodyParamater        LookAtParamater;                                          // 0x00EC(0x0030) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
-	class UAnimMontage*                                NeutralFaceMontage;                                       // 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimMontage*                                IdleFaceMontage;                                          // 0x0128(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UAnimMontage*>                        EmotionMontages;                                          // 0x0130(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class UAnimMontage*>                        ClipperMontages;                                          // 0x0140(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3FaceAnimDataAsset");
-		return ptr;
-	}
-
+	void ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade);
+	void ShowEyecatchText2(const struct FText& MainTitle1, const struct FText& SubTitle1, const struct FText& MainTitle2, const struct FText& SubTitle2, bool bUseFade);
+	void ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade);
+	void HideEyecatch(bool bUseFade);
 };
 
 
@@ -5181,6 +5174,34 @@ public:
 };
 
 
+// Class Shenmue3.S3FaceAnimDataAsset
+// 0x0120 (0x0150 - 0x0030)
+class US3FaceAnimDataAsset : public UDataAsset
+{
+public:
+	class UAnimSequence*                               NeutralFaceAnim;                                          // 0x0030(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                EyelidMontage;                                            // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bOverlapEyeCloseBlendMaxMap;                              // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+	TMap<ECharacterEmotion, float>                     EyeCloseBlendMaxMap;                                      // 0x0048(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	TMap<ECharacterEmotion, float>                     EmotionVaryAdjustMap;                                     // 0x0098(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	float                                              ClipperVolumeScale;                                       // 0x00E8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FS3CharacterLookAtWholeBodyParamater        LookAtParamater;                                          // 0x00EC(0x0030) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x011C(0x0004) MISSED OFFSET
+	class UAnimMontage*                                NeutralFaceMontage;                                       // 0x0120(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimMontage*                                IdleFaceMontage;                                          // 0x0128(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UAnimMontage*>                        EmotionMontages;                                          // 0x0130(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class UAnimMontage*>                        ClipperMontages;                                          // 0x0140(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3FaceAnimDataAsset");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3FaceAnimMetaData
 // 0x0008 (0x0030 - 0x0028)
 class US3FaceAnimMetaData : public UAnimMetaData
@@ -5195,32 +5216,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Shenmue3.S3FaceLegacyAnimInstance
-// 0x0020 (0x0770 - 0x0750)
-class US3FaceLegacyAnimInstance : public US3FaceAnimInstance
-{
-public:
-	float                                              RateA;                                                    // 0x0750(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RateI;                                                    // 0x0754(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RateU;                                                    // 0x0758(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RateE;                                                    // 0x075C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RateO;                                                    // 0x0760(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RateMax;                                                  // 0x0764(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RateMaxInter;                                             // 0x0768(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x076C(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3FaceLegacyAnimInstance");
-		return ptr;
-	}
-
-
-	void UpdateClipperFlag();
-	float GetClipperRate(bool bConditionOpenFlag, float Rate, float DeltaTimeX);
 };
 
 
@@ -5251,22 +5246,93 @@ public:
 };
 
 
-// Class Shenmue3.S3FadeMaterialDataAsset
-// 0x0020 (0x0050 - 0x0030)
-class US3FadeMaterialDataAsset : public UDataAsset
+// Class Shenmue3.S3ClipperLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3ClipperLibrary : public UBlueprintFunctionLibrary
 {
 public:
-	TArray<struct FName>                               StaticSwitchParameters;                                   // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FS3FadeMaterialSwapData>             MaterialData;                                             // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3FadeMaterialDataAsset");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3ClipperLibrary");
 		return ptr;
 	}
 
 
-	class UMaterialInstanceDynamic* MakeFadeMaterial(class UObject* WorldContextObject, class UMaterialInterface* Source);
+	float ConvertClipperVolume(int Volume);
+};
+
+
+// Class Shenmue3.S3FaceLegacyAnimInstance
+// 0x0020 (0x0770 - 0x0750)
+class US3FaceLegacyAnimInstance : public US3FaceAnimInstance
+{
+public:
+	float                                              RateA;                                                    // 0x0750(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RateI;                                                    // 0x0754(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RateU;                                                    // 0x0758(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RateE;                                                    // 0x075C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RateO;                                                    // 0x0760(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RateMax;                                                  // 0x0764(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RateMaxInter;                                             // 0x0768(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x076C(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3FaceLegacyAnimInstance");
+		return ptr;
+	}
+
+
+	void UpdateClipperFlag();
+	float GetClipperRate(bool bConditionOpenFlag, float Rate, float DeltaTimeX);
+};
+
+
+// Class Shenmue3.S3FrameworkLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3FrameworkLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3FrameworkLibrary");
+		return ptr;
+	}
+
+
+	class US3TextDataManagerBase* GetS3TextDataManagerNative(class UObject* WorldContextObject);
+	class US3TalkScriptManager* GetS3TalkScriptManagerNative(class UObject* WorldContextObject);
+	class AS3TalkEventManagerBase* GetS3TalkEventManagerNative(class UObject* WorldContextObject);
+	class AS3SoundManager* GetS3SoundManagerNative(class UObject* WorldContextObject);
+	class AS3SkyManager* GetS3SkyManagerNative(class UObject* WorldContextObject);
+	class US3SaveLoadManager* GetS3SaveLoadManagerNative(class UObject* WorldContextObject);
+	class AS3RewardManager* GetS3RewardManagerNative(class UObject* WorldContextObject);
+	class AS3NPCLeadManager* GetS3NPCLeadManagerNative(class UObject* WorldContextObject);
+	class AS3MiniGameManager* GetS3MiniGameManagerNative(class UObject* WorldContextObject);
+	class US3LiveStreamingManager* GetS3LiveStreamingManagerNative(class UObject* WorldContextObject);
+	class US3InputDeviceManager* GetS3InputDeviceManagerNative(class UObject* WorldContextObject);
+	class AS3HUD* GetS3HUDNative(class UObject* WorldContextObject);
+	class AS3HintTalkManager* GetS3HintTalkManagerNative(class UObject* WorldContextObject);
+	class AS3GimmickManager* GetS3GimmickManagerNative(class UObject* WorldContextObject);
+	class AS3GameTimeManager* GetS3GameTimeManagerNative(class UObject* WorldContextObject);
+	class AS3GameMode* GetS3GameModeNative(class UObject* WorldContextObject);
+	class US3GameInstance* GetS3GameInstanceNative(class UObject* WorldContextObject);
+	class US3DownloadableContentManager* GetS3DownloadableContentManagerNative(class UObject* WorldContextObject);
+	class AS3DetectAction* GetS3DetectActionNative(class UObject* WorldContextObject);
+	class US3DebugMenu* GetS3DebugMenuNative(class UObject* WorldContextObject);
+	class AS3CutsceneManager* GetS3CutsceneManagerNative(class UObject* WorldContextObject);
+	class AS3ClothManager* GetS3ClothManagerNative(class UObject* WorldContextObject);
+	class AS3Clipper* GetS3ClipperManagerNative(class UObject* WorldContextObject);
+	class US3CheatManager* GetS3CheatManagerNative(class UObject* WorldContextObject);
+	class AS3CharaLightingManager* GetS3CharaLightingManagerNative(class UObject* WorldContextObject);
+	class AS3BgmManager* GetS3BgmManagerNative(class UObject* WorldContextObject);
+	class ABTL_BattleSpawner* GetS3BattleSpawnerNative(class UObject* WorldContextObject);
+	class US3AssetChunkManager* GetS3AssetChunkManagerNative(class UObject* WorldContextObject);
+	class AS3AreaManager* GetS3AreaManagerNative(class UObject* WorldContextObject);
+	class AS3AdventurePlayerController* GetS3AdventurePlayerControllerNative(class UObject* WorldContextObject);
+	class US3AchievementManager* GetS3AchievementManagerNative(class UObject* WorldContextObject);
 };
 
 
@@ -5288,50 +5354,22 @@ public:
 };
 
 
-// Class Shenmue3.S3FrameworkLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3FrameworkLibrary : public UBlueprintFunctionLibrary
+// Class Shenmue3.S3FadeMaterialDataAsset
+// 0x0020 (0x0050 - 0x0030)
+class US3FadeMaterialDataAsset : public UDataAsset
 {
 public:
+	TArray<struct FName>                               StaticSwitchParameters;                                   // 0x0030(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FS3FadeMaterialSwapData>             MaterialData;                                             // 0x0040(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3FrameworkLibrary");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3FadeMaterialDataAsset");
 		return ptr;
 	}
 
 
-	class US3TextDataManagerBase* STATIC_GetS3TextDataManagerNative(class UObject* WorldContextObject);
-	class US3TalkScriptManager* STATIC_GetS3TalkScriptManagerNative(class UObject* WorldContextObject);
-	class AS3TalkEventManagerBase* STATIC_GetS3TalkEventManagerNative(class UObject* WorldContextObject);
-	class AS3SoundManager* STATIC_GetS3SoundManagerNative(class UObject* WorldContextObject);
-	class AS3SkyManager* STATIC_GetS3SkyManagerNative(class UObject* WorldContextObject);
-	class US3SaveLoadManager* STATIC_GetS3SaveLoadManagerNative(class UObject* WorldContextObject);
-	class AS3RewardManager* STATIC_GetS3RewardManagerNative(class UObject* WorldContextObject);
-	class AS3NPCLeadManager* STATIC_GetS3NPCLeadManagerNative(class UObject* WorldContextObject);
-	class AS3MiniGameManager* STATIC_GetS3MiniGameManagerNative(class UObject* WorldContextObject);
-	class US3LiveStreamingManager* STATIC_GetS3LiveStreamingManagerNative(class UObject* WorldContextObject);
-	class US3InputDeviceManager* STATIC_GetS3InputDeviceManagerNative(class UObject* WorldContextObject);
-	class AS3HUD* STATIC_GetS3HUDNative(class UObject* WorldContextObject);
-	class AS3HintTalkManager* STATIC_GetS3HintTalkManagerNative(class UObject* WorldContextObject);
-	class AS3GimmickManager* STATIC_GetS3GimmickManagerNative(class UObject* WorldContextObject);
-	class AS3GameTimeManager* STATIC_GetS3GameTimeManagerNative(class UObject* WorldContextObject);
-	class AS3GameMode* STATIC_GetS3GameModeNative(class UObject* WorldContextObject);
-	class US3GameInstance* STATIC_GetS3GameInstanceNative(class UObject* WorldContextObject);
-	class US3DownloadableContentManager* STATIC_GetS3DownloadableContentManagerNative(class UObject* WorldContextObject);
-	class AS3DetectAction* STATIC_GetS3DetectActionNative(class UObject* WorldContextObject);
-	class US3DebugMenu* STATIC_GetS3DebugMenuNative(class UObject* WorldContextObject);
-	class AS3CutsceneManager* STATIC_GetS3CutsceneManagerNative(class UObject* WorldContextObject);
-	class AS3ClothManager* STATIC_GetS3ClothManagerNative(class UObject* WorldContextObject);
-	class AS3Clipper* STATIC_GetS3ClipperManagerNative(class UObject* WorldContextObject);
-	class US3CheatManager* STATIC_GetS3CheatManagerNative(class UObject* WorldContextObject);
-	class AS3CharaLightingManager* STATIC_GetS3CharaLightingManagerNative(class UObject* WorldContextObject);
-	class AS3BgmManager* STATIC_GetS3BgmManagerNative(class UObject* WorldContextObject);
-	class ABTL_BattleSpawner* STATIC_GetS3BattleSpawnerNative(class UObject* WorldContextObject);
-	class US3AssetChunkManager* STATIC_GetS3AssetChunkManagerNative(class UObject* WorldContextObject);
-	class AS3AreaManager* STATIC_GetS3AreaManagerNative(class UObject* WorldContextObject);
-	class AS3AdventurePlayerController* STATIC_GetS3AdventurePlayerControllerNative(class UObject* WorldContextObject);
-	class US3AchievementManager* STATIC_GetS3AchievementManagerNative(class UObject* WorldContextObject);
+	class UMaterialInstanceDynamic* MakeFadeMaterial(class UObject* WorldContextObject, class UMaterialInterface* Source);
 };
 
 
@@ -5362,86 +5400,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Shenmue3.S3GameTimeManager
-// 0x00E0 (0x0408 - 0x0328)
-class AS3GameTimeManager : public AActor
-{
-public:
-	struct FScriptMulticastDelegate                    OnGameTimeEventDay;                                       // 0x0328(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnGameTimeEventShop;                                      // 0x0338(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnGameTimeEventCustom;                                    // 0x0348(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTimeJump;                                               // 0x0358(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnGameDateNextDay;                                        // 0x0368(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnTimelineUpdate;                                         // 0x0378(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class USceneComponent*                             Scene;                                                    // 0x0388(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<struct FS3GameTimeEventList>                TimeEventList;                                            // 0x0390(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class UTimelineComponent*                          tlGametime;                                               // 0x03A0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData)
-	class UCurveFloat*                                 cvGametime;                                               // 0x03A8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
-	struct FS3CustomTimeEventList                      CustomEventList;                                          // 0x03B0(0x0020) (BlueprintVisible, BlueprintReadOnly)
-	struct FDateTime                                   GameDate;                                                 // 0x03D0(0x0008) (BlueprintVisible, BlueprintReadOnly)
-	struct FDateTime                                   StandardGameDate;                                         // 0x03D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
-	float                                              GameTime;                                                 // 0x03E0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              DeltaTimeBias;                                            // 0x03E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	ES3DayTimeEvent                                    GameTimeDay;                                              // 0x03E8(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	ES3ShopTimeEvent                                   GameTimeShop;                                             // 0x03E9(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x03EA(0x0002) MISSED OFFSET
-	int                                                GameTimeCustom;                                           // 0x03EC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bForceChangeTime;                                         // 0x03F0(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bInitialized;                                             // 0x03F1(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x03F2(0x0002) MISSED OFFSET
-	float                                              ForceStopTime;                                            // 0x03F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class AActor*>                              StopActors;                                               // 0x03F8(0x0010) (ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3GameTimeManager");
-		return ptr;
-	}
-
-
-	void UpdateTlGametime();
-	void UpdateNextDay();
-	void UpdateCurrentGameTimeShop();
-	void UpdateCurrentGameTimeDay();
-	void UpdateCurrentGameTimeCustom(float OldGameTime);
-	void StopGameTime(class AActor* Executor);
-	void StartGameTime(class AActor* Executor);
-	void SetGameTime(float NewGameTime, bool bUpdateNextDay);
-	void SetGameDateTime(const struct FDateTime& NewDate);
-	void SetDeltaTimeBias(float InDeltaTimeBias);
-	void ReleaseForceStopTime();
-	void registCustomTimeEvent(float Time, int* registIndex);
-	bool IsStopGameTime();
-	bool InitDataTime();
-	struct FDateTime GetGameDateTime();
-	float GetEventTimeShop(ES3ShopTimeEvent InEventType);
-	float GetEventTimeDay(ES3DayTimeEvent InEventType);
-	void DetectTimeEventPositon(int cateId, float Time, int* Index);
-	void DetectCustomEventPositon(float NewTime, float OldTime, TArray<int>* Indexes);
-	void AppendGameTime(float DeltaGameTime, bool bUpdateNextDay);
-};
-
-
-// Class Shenmue3.S3GameViewportClient
-// 0x0008 (0x02F0 - 0x02E8)
-class US3GameViewportClient : public UGameViewportClient
-{
-public:
-	unsigned char                                      UnknownData00[0x1];                                       // 0x02E8(0x0001) MISSED OFFSET
-	bool                                               bEnableCreateWidget;                                      // 0x02E9(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x02EA(0x0006) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3GameViewportClient");
-		return ptr;
-	}
-
-
-	void ShowTitleSafeAreaMinimum();
 };
 
 
@@ -5482,37 +5440,40 @@ public:
 };
 
 
-// Class Shenmue3.S3EyecatchWidget
-// 0x0008 (0x0228 - 0x0220)
-class US3EyecatchWidget : public US3UserWidget
+// Class Shenmue3.S3GameViewportClient
+// 0x0008 (0x02F0 - 0x02E8)
+class US3GameViewportClient : public UGameViewportClient
 {
 public:
-	bool                                               bIsVisible;                                               // 0x0220(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0221(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x1];                                       // 0x02E8(0x0001) MISSED OFFSET
+	bool                                               bEnableCreateWidget;                                      // 0x02E9(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x02EA(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3EyecatchWidget");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3GameViewportClient");
 		return ptr;
 	}
 
 
-	void ShowEyecatchTexture(class UTexture* LogoImage, bool bUseFade);
-	void ShowEyecatchText2(const struct FText& MainTitle1, const struct FText& SubTitle1, const struct FText& MainTitle2, const struct FText& SubTitle2, bool bUseFade);
-	void ShowEyecatch(const struct FText& MainTitle, const struct FText& Subtitle, bool bUseFade);
-	void HideEyecatch(bool bUseFade);
+	void ShowTitleSafeAreaMinimum();
 };
 
 
-// Class Shenmue3.S3GimmickLightDrawComponent
-// 0x0000 (0x00F0 - 0x00F0)
-class US3GimmickLightDrawComponent : public UActorComponent
+// Class Shenmue3.S3GimmickEmitter
+// 0x0010 (0x0388 - 0x0378)
+class AS3GimmickEmitter : public AEmitter
 {
 public:
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0378(0x0004) MISSED OFFSET
+	bool                                               bDisableActive;                                           // 0x037C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x037D(0x0003) MISSED OFFSET
+	float                                              OverrideDrawDistance;                                     // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0384(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3GimmickLightDrawComponent");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3GimmickEmitter");
 		return ptr;
 	}
 
@@ -5543,6 +5504,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3GimmickLightTarget");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3GimmickLightDrawComponent
+// 0x0000 (0x00F0 - 0x00F0)
+class US3GimmickLightDrawComponent : public UActorComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3GimmickLightDrawComponent");
 		return ptr;
 	}
 
@@ -5629,36 +5605,19 @@ public:
 };
 
 
-// Class Shenmue3.S3CutsceneLevelDataAsset
-// 0x0010 (0x0038 - 0x0028)
-class US3CutsceneLevelDataAsset : public UObject
+// Class Shenmue3.S3GimmickStepTrigger
+// 0x0038 (0x0368 - 0x0330)
+class AS3GimmickStepTrigger : public ATriggerBox
 {
 public:
-	TArray<class US3CutsceneLevelData*>                LevelDataList;                                            // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<class UObject*>                             PreloadAssets;                                            // 0x0330(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0340(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3GimmickStepTrigger.PreloadSoftAssets
+	struct FName                                       TextDataLabel;                                            // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FS3Player180ReturnRandomTextData>    TextData;                                                 // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3CutsceneLevelDataAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3GimmickEmitter
-// 0x0010 (0x0388 - 0x0378)
-class AS3GimmickEmitter : public AEmitter
-{
-public:
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0378(0x0004) MISSED OFFSET
-	bool                                               bDisableActive;                                           // 0x037C(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x037D(0x0003) MISSED OFFSET
-	float                                              OverrideDrawDistance;                                     // 0x0380(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0384(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3GimmickEmitter");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3GimmickStepTrigger");
 		return ptr;
 	}
 
@@ -5699,25 +5658,6 @@ public:
 };
 
 
-// Class Shenmue3.S3GimmickStepTrigger
-// 0x0038 (0x0368 - 0x0330)
-class AS3GimmickStepTrigger : public ATriggerBox
-{
-public:
-	TArray<class UObject*>                             PreloadAssets;                                            // 0x0330(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0340(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3GimmickStepTrigger.PreloadSoftAssets
-	struct FName                                       TextDataLabel;                                            // 0x0350(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FS3Player180ReturnRandomTextData>    TextData;                                                 // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3GimmickStepTrigger");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3HakkachanAwardFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class US3HakkachanAwardFunctionLibrary : public UBlueprintFunctionLibrary
@@ -5731,24 +5671,9 @@ public:
 	}
 
 
-	void STATIC_UnlockHakkachanCountAwards(class US3_BRallyAwardSystem* AwardSystem, class UDataTable* DataTable, int Count);
-	void STATIC_PreviewHakkachanCountAwardsV2(class UDataTable* DataTable, int Owned, int Max, TArray<struct FS3HakkachanAwardPreviewData>* OutAwards);
-	int STATIC_FindHakkachanCountForAward(class UDataTable* DataTable, const struct FName& Award, int MaxHave);
-};
-
-
-// Class Shenmue3.S3HelpManager
-// 0x0000 (0x0328 - 0x0328)
-class AS3HelpManager : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3HelpManager");
-		return ptr;
-	}
-
+	void UnlockHakkachanCountAwards(class US3_BRallyAwardSystem* AwardSystem, class UDataTable* DataTable, int Count);
+	void PreviewHakkachanCountAwardsV2(class UDataTable* DataTable, int Owned, int Max, TArray<struct FS3HakkachanAwardPreviewData>* OutAwards);
+	int FindHakkachanCountForAward(class UDataTable* DataTable, const struct FName& Award, int MaxHave);
 };
 
 
@@ -5773,6 +5698,36 @@ public:
 };
 
 
+// Class Shenmue3.S3HelpManager
+// 0x0000 (0x0328 - 0x0328)
+class AS3HelpManager : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3HelpManager");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3HierarchicalLODSetup
+// 0x0000 (0x0060 - 0x0060)
+class US3HierarchicalLODSetup : public UHierarchicalLODSetup
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3HierarchicalLODSetup");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3HintTalkManager
 // 0x0058 (0x0380 - 0x0328)
 class AS3HintTalkManager : public AActor
@@ -5792,6 +5747,31 @@ public:
 	bool GetHintTalkData(const struct FName& NPC_ID, struct FST_S3HintTalkData* Data);
 	struct FString CreateKey(EHintTarget HintTalkKind, bool IsAnswer, TEnumAsByte<ES3CharacterGender> Gender, int Age);
 	int AgeToIndex(int Age);
+};
+
+
+// Class Shenmue3.S3GraphicSettingsManager
+// 0x0010 (0x0038 - 0x0028)
+class US3GraphicSettingsManager : public UObject
+{
+public:
+	int                                                MaxLoadedNPC;                                             // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxShowNPC;                                               // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxCastShadowLights;                                      // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
+	ES3GraphicPreset                                   GraphicPreset;                                            // 0x0034(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3GraphicSettingsManager");
+		return ptr;
+	}
+
+
+	void Init();
+	int GetMaxShowNPC();
+	int GetMaxLoadedNPC();
+	int GetMaxCastShadowLights();
 };
 
 
@@ -5935,6 +5915,42 @@ public:
 };
 
 
+// Class Shenmue3.S3ItemFunctionLibrary
+// 0x0068 (0x0090 - 0x0028)
+class US3ItemFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+	class UDataTable*                                  ItemDataTable;                                            // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UDataTable*                                  ItemLocalizeTextDataTable;                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0038(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3ItemFunctionLibrary");
+		return ptr;
+	}
+
+
+	bool ShouldShowListItemDetails(int InId, ES3ItemListMenuType MenuType, class UObject* WorldContextObject);
+	bool IsItemListAdd(ES3ItemListMenuType MenuType, ES3ItemDataGroup Group, ES3ItemDataRarity Rarity);
+	TArray<struct FName> GetItemTableRowNamesByGroup(ES3ItemDataGroup Group, class UObject* WorldContextObject);
+	TArray<struct FName> GetItemTableRowNames(class UObject* WorldContextObject);
+	struct FString GetItemTableName(const struct FName& Label, class UObject* WorldContextObject);
+	void GetItemTableMeshReference(const struct FName& Label, class UObject* WorldContextObject);
+	class UStaticMesh* GetItemTableMesh(const struct FName& Label, class UObject* WorldContextObject);
+	int GetItemTableLength(class UObject* WorldContextObject);
+	struct FString GetItemTableDescription(const struct FName& Label, class UObject* WorldContextObject);
+	bool GetItemTableDataNoText(const struct FName& Label, class UObject* WorldContextObject, struct FS3ItemDataTable* OutItemData);
+	bool GetItemTableDataFromNumber(int ID, class UObject* WorldContextObject, struct FS3ItemDataTable* OutItemData);
+	bool GetItemTableData(const struct FName& Label, class UObject* WorldContextObject, struct FS3ItemDataTable* OutItemData);
+	int GetItemIndex(const struct FString& ID, bool bStrict);
+	class UDataTable* GetItemDataTable(class UObject* WorldContextObject);
+	struct FName FormatItemId(const struct FString& InId);
+	void EnableItemCacheData(class UObject* WorldContextObject);
+	void DisableItemCacheData(class UObject* WorldContextObject);
+};
+
+
 // Class Shenmue3.S3InteractionComponent
 // 0x0150 (0x06E0 - 0x0590)
 class US3InteractionComponent : public UCapsuleComponent
@@ -5979,76 +5995,15 @@ public:
 };
 
 
-// Class Shenmue3.S3ItemFunctionLibrary
-// 0x0068 (0x0090 - 0x0028)
-class US3ItemFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-	class UDataTable*                                  ItemDataTable;                                            // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UDataTable*                                  ItemLocalizeTextDataTable;                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0038(0x0058) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3ItemFunctionLibrary");
-		return ptr;
-	}
-
-
-	bool STATIC_ShouldShowListItemDetails(int InId, ES3ItemListMenuType MenuType, class UObject* WorldContextObject);
-	bool STATIC_IsItemListAdd(ES3ItemListMenuType MenuType, ES3ItemDataGroup Group, ES3ItemDataRarity Rarity);
-	TArray<struct FName> STATIC_GetItemTableRowNamesByGroup(ES3ItemDataGroup Group, class UObject* WorldContextObject);
-	TArray<struct FName> STATIC_GetItemTableRowNames(class UObject* WorldContextObject);
-	struct FString STATIC_GetItemTableName(const struct FName& Label, class UObject* WorldContextObject);
-	void STATIC_GetItemTableMeshReference(const struct FName& Label, class UObject* WorldContextObject);
-	class UStaticMesh* STATIC_GetItemTableMesh(const struct FName& Label, class UObject* WorldContextObject);
-	int STATIC_GetItemTableLength(class UObject* WorldContextObject);
-	struct FString STATIC_GetItemTableDescription(const struct FName& Label, class UObject* WorldContextObject);
-	bool STATIC_GetItemTableDataNoText(const struct FName& Label, class UObject* WorldContextObject, struct FS3ItemDataTable* OutItemData);
-	bool STATIC_GetItemTableDataFromNumber(int ID, class UObject* WorldContextObject, struct FS3ItemDataTable* OutItemData);
-	bool STATIC_GetItemTableData(const struct FName& Label, class UObject* WorldContextObject, struct FS3ItemDataTable* OutItemData);
-	int STATIC_GetItemIndex(const struct FString& ID, bool bStrict);
-	class UDataTable* STATIC_GetItemDataTable(class UObject* WorldContextObject);
-	struct FName STATIC_FormatItemId(const struct FString& InId);
-	void STATIC_EnableItemCacheData(class UObject* WorldContextObject);
-	void STATIC_DisableItemCacheData(class UObject* WorldContextObject);
-};
-
-
-// Class Shenmue3.S3GraphicSettingsManager
-// 0x0010 (0x0038 - 0x0028)
-class US3GraphicSettingsManager : public UObject
-{
-public:
-	int                                                MaxLoadedNPC;                                             // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                MaxShowNPC;                                               // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                MaxCastShadowLights;                                      // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
-	ES3GraphicPreset                                   GraphicPreset;                                            // 0x0034(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0035(0x0003) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3GraphicSettingsManager");
-		return ptr;
-	}
-
-
-	void Init();
-	int GetMaxShowNPC();
-	int GetMaxLoadedNPC();
-	int GetMaxCastShadowLights();
-};
-
-
-// Class Shenmue3.S3HierarchicalLODSetup
-// 0x0000 (0x0060 - 0x0060)
-class US3HierarchicalLODSetup : public UHierarchicalLODSetup
+// Class Shenmue3.S3ItemListViewerManager
+// 0x0000 (0x0328 - 0x0328)
+class AS3ItemListViewerManager : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3HierarchicalLODSetup");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3ItemListViewerManager");
 		return ptr;
 	}
 
@@ -6073,21 +6028,6 @@ public:
 	int GetItemLength();
 	bool GetItemFlag(const struct FString& ID);
 	bool GetItemCheckFlag(int Index);
-};
-
-
-// Class Shenmue3.S3ItemListViewerManager
-// 0x0000 (0x0328 - 0x0328)
-class AS3ItemListViewerManager : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3ItemListViewerManager");
-		return ptr;
-	}
-
 };
 
 
@@ -6141,6 +6081,155 @@ public:
 };
 
 
+// Class Shenmue3.S3KartPawnBase
+// 0x0008 (0x0390 - 0x0388)
+class AS3KartPawnBase : public APawn
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0388(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3KartPawnBase");
+		return ptr;
+	}
+
+
+	struct FName GetClothCharaName();
+};
+
+
+// Class Shenmue3.S3GameTimeManager
+// 0x00E0 (0x0408 - 0x0328)
+class AS3GameTimeManager : public AActor
+{
+public:
+	struct FScriptMulticastDelegate                    OnGameTimeEventDay;                                       // 0x0328(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnGameTimeEventShop;                                      // 0x0338(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnGameTimeEventCustom;                                    // 0x0348(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnTimeJump;                                               // 0x0358(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnGameDateNextDay;                                        // 0x0368(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnTimelineUpdate;                                         // 0x0378(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class USceneComponent*                             Scene;                                                    // 0x0388(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FS3GameTimeEventList>                TimeEventList;                                            // 0x0390(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class UTimelineComponent*                          tlGametime;                                               // 0x03A0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData)
+	class UCurveFloat*                                 cvGametime;                                               // 0x03A8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DuplicateTransient, IsPlainOldData)
+	struct FS3CustomTimeEventList                      CustomEventList;                                          // 0x03B0(0x0020) (BlueprintVisible, BlueprintReadOnly)
+	struct FDateTime                                   GameDate;                                                 // 0x03D0(0x0008) (BlueprintVisible, BlueprintReadOnly)
+	struct FDateTime                                   StandardGameDate;                                         // 0x03D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
+	float                                              GameTime;                                                 // 0x03E0(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              DeltaTimeBias;                                            // 0x03E4(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	ES3DayTimeEvent                                    GameTimeDay;                                              // 0x03E8(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	ES3ShopTimeEvent                                   GameTimeShop;                                             // 0x03E9(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x03EA(0x0002) MISSED OFFSET
+	int                                                GameTimeCustom;                                           // 0x03EC(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bForceChangeTime;                                         // 0x03F0(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bInitialized;                                             // 0x03F1(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x03F2(0x0002) MISSED OFFSET
+	float                                              ForceStopTime;                                            // 0x03F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class AActor*>                              StopActors;                                               // 0x03F8(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3GameTimeManager");
+		return ptr;
+	}
+
+
+	void UpdateTlGametime();
+	void UpdateNextDay();
+	void UpdateCurrentGameTimeShop();
+	void UpdateCurrentGameTimeDay();
+	void UpdateCurrentGameTimeCustom(float OldGameTime);
+	void StopGameTime(class AActor* Executor);
+	void StartGameTime(class AActor* Executor);
+	void SetGameTime(float NewGameTime, bool bUpdateNextDay);
+	void SetGameDateTime(const struct FDateTime& NewDate);
+	void SetDeltaTimeBias(float InDeltaTimeBias);
+	void ReleaseForceStopTime();
+	void registCustomTimeEvent(float Time, int* registIndex);
+	bool IsStopGameTime();
+	bool InitDataTime();
+	struct FDateTime GetGameDateTime();
+	float GetEventTimeShop(ES3ShopTimeEvent InEventType);
+	float GetEventTimeDay(ES3DayTimeEvent InEventType);
+	void DetectTimeEventPositon(int cateId, float Time, int* Index);
+	void DetectCustomEventPositon(float NewTime, float OldTime, TArray<int>* Indexes);
+	void AppendGameTime(float DeltaGameTime, bool bUpdateNextDay);
+};
+
+
+// Class Shenmue3.S3KeyConfigFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3KeyConfigFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3KeyConfigFunctionLibrary");
+		return ptr;
+	}
+
+
+	TArray<struct FInputActionKeyMapping> RemoveActionMapping(const struct FName& ActionName, const struct FKey& Key, class UPlayerInput* PlayerInput);
+	bool IsKeyGamepadInput(const struct FKey& Key);
+	ES3InputDeviceModel GetUIInputDevice(class UObject* WorldContext);
+	TArray<struct FInputActionKeyMapping> AddActionMapping(const struct FName& ActionName, const struct FKey& Key, class UPlayerInput* PlayerInput);
+};
+
+
+// Class Shenmue3.S3KismetPlayerLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3KismetPlayerLibrary : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3KismetPlayerLibrary");
+		return ptr;
+	}
+
+
+	struct FVector GetAxisZ();
+	struct FVector GetAxisY();
+	struct FVector GetAxisX();
+};
+
+
+// Class Shenmue3.S3KismetMathLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3KismetMathLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3KismetMathLibrary");
+		return ptr;
+	}
+
+
+	float Vector2DLengthSquared(const struct FVector& v1, const struct FVector& v2);
+	bool S3SegmentIntersection2D(const struct FVector& SegmentStartA, const struct FVector& SegmentEndA, const struct FVector& SegmentStartB, const struct FVector& SegmentEndB, struct FVector* OutIntersectionPoint);
+	struct FVector RotateVectorXY(const struct FVector& Center, const struct FVector& pos, float RotDeg);
+	float NormalizeAngle(float RotDeg);
+	float LerpAngleSigned(float A, float B, float AlphaWithSign);
+	float LerpAngle(float A, float B, float Alpha);
+	float InverseLerpLegacy(float A, float B, float Value);
+	float InterpolateAngleConstantSigned(float Source, float Target, float DirectionSignedDegrees);
+	float InterpolateAngleConstantNear(float Source, float Target, float Delta);
+	struct FVector GetTriangleNormal(const struct FVector& V0, const struct FVector& v1, const struct FVector& v2);
+	struct FBox GetSplineAreaAtPointVector3D(TArray<struct FVector> PointVector, const struct FVector& Offset);
+	float DifferenceAngle(float RotDeg1, float RotDeg2);
+	float ConvertAngleToSignDegrees(float AngleDegrees, float Sign);
+	float AngleVector2DSignedDegrees(const struct FVector& Target, const struct FVector& Source);
+	float AngleDifferenceSignedDegrees(float Target, float Source);
+	struct FRotator Add_RotatorRotator(const struct FRotator& A, const struct FRotator& B);
+};
+
+
 // Class Shenmue3.S3JointAnimInstance
 // 0x0030 (0x0390 - 0x0360)
 class US3JointAnimInstance : public UAnimInstance
@@ -6166,57 +6255,6 @@ public:
 };
 
 
-// Class Shenmue3.S3KismetMathLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3KismetMathLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3KismetMathLibrary");
-		return ptr;
-	}
-
-
-	float STATIC_Vector2DLengthSquared(const struct FVector& v1, const struct FVector& v2);
-	bool STATIC_S3SegmentIntersection2D(const struct FVector& SegmentStartA, const struct FVector& SegmentEndA, const struct FVector& SegmentStartB, const struct FVector& SegmentEndB, struct FVector* OutIntersectionPoint);
-	struct FVector STATIC_RotateVectorXY(const struct FVector& Center, const struct FVector& pos, float RotDeg);
-	float STATIC_NormalizeAngle(float RotDeg);
-	float STATIC_LerpAngleSigned(float A, float B, float AlphaWithSign);
-	float STATIC_LerpAngle(float A, float B, float Alpha);
-	float STATIC_InverseLerpLegacy(float A, float B, float Value);
-	float STATIC_InterpolateAngleConstantSigned(float Source, float Target, float DirectionSignedDegrees);
-	float STATIC_InterpolateAngleConstantNear(float Source, float Target, float Delta);
-	struct FVector STATIC_GetTriangleNormal(const struct FVector& V0, const struct FVector& v1, const struct FVector& v2);
-	struct FBox STATIC_GetSplineAreaAtPointVector3D(TArray<struct FVector> PointVector, const struct FVector& Offset);
-	float STATIC_DifferenceAngle(float RotDeg1, float RotDeg2);
-	float STATIC_ConvertAngleToSignDegrees(float AngleDegrees, float Sign);
-	float STATIC_AngleVector2DSignedDegrees(const struct FVector& Target, const struct FVector& Source);
-	float STATIC_AngleDifferenceSignedDegrees(float Target, float Source);
-	struct FRotator STATIC_Add_RotatorRotator(const struct FRotator& A, const struct FRotator& B);
-};
-
-
-// Class Shenmue3.S3KismetPlayerLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3KismetPlayerLibrary : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3KismetPlayerLibrary");
-		return ptr;
-	}
-
-
-	struct FVector GetAxisZ();
-	struct FVector GetAxisY();
-	struct FVector GetAxisX();
-};
-
-
 // Class Shenmue3.S3LevelDataAsset
 // 0x0038 (0x0068 - 0x0030)
 class US3LevelDataAsset : public UDataAsset
@@ -6231,21 +6269,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3LevelDataAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3LevelScriptActor
-// 0x0000 (0x0330 - 0x0330)
-class AS3LevelScriptActor : public ALevelScriptActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3LevelScriptActor");
 		return ptr;
 	}
 
@@ -6293,41 +6316,18 @@ public:
 };
 
 
-// Class Shenmue3.S3KartPawnBase
-// 0x0008 (0x0390 - 0x0388)
-class AS3KartPawnBase : public APawn
-{
-public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0388(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3KartPawnBase");
-		return ptr;
-	}
-
-
-	struct FName GetClothCharaName();
-};
-
-
-// Class Shenmue3.S3KeyConfigFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3KeyConfigFunctionLibrary : public UBlueprintFunctionLibrary
+// Class Shenmue3.S3LevelScriptActor
+// 0x0000 (0x0330 - 0x0330)
+class AS3LevelScriptActor : public ALevelScriptActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3KeyConfigFunctionLibrary");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3LevelScriptActor");
 		return ptr;
 	}
 
-
-	TArray<struct FInputActionKeyMapping> STATIC_RemoveActionMapping(const struct FName& ActionName, const struct FKey& Key, class UPlayerInput* PlayerInput);
-	bool STATIC_IsKeyGamepadInput(const struct FKey& Key);
-	ES3InputDeviceModel STATIC_GetUIInputDevice(class UObject* WorldContext);
-	TArray<struct FInputActionKeyMapping> STATIC_AddActionMapping(const struct FName& ActionName, const struct FKey& Key, class UPlayerInput* PlayerInput);
 };
 
 
@@ -6477,6 +6477,44 @@ public:
 };
 
 
+// Class Shenmue3.S3LoadingProgressImage
+// 0x0018 (0x01F0 - 0x01D8)
+class US3LoadingProgressImage : public UImage
+{
+public:
+	float                                              LoadingPercentage;                                        // 0x01D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x01DC(0x0004) MISSED OFFSET
+	struct FScriptDelegate                             LoadingPercentageDelegate;                                // 0x01E0(0x0014) (ZeroConstructor, InstancedReference)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3LoadingProgressImage");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3MemopadPageWidget
+// 0x0008 (0x0210 - 0x0208)
+class US3MemopadPageWidget : public UUserWidget
+{
+public:
+	class UCanvasPanel*                                PhotoCanvasPanel;                                         // 0x0208(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3MemopadPageWidget");
+		return ptr;
+	}
+
+
+	void SetSlotHiddenFlag(int Index, bool flag);
+	void SetSlotContent(int Index, class US3MemopadTextWidget* Widget);
+	class UCanvasPanelSlot* AddPhoto(class UTexture2D* Texture, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize);
+};
+
+
 // Class Shenmue3.S3MemoFlagManager
 // 0x00A0 (0x00C8 - 0x0028)
 class US3MemoFlagManager : public UObject
@@ -6519,36 +6557,15 @@ public:
 };
 
 
-// Class Shenmue3.S3MemopadPageWidget
-// 0x0008 (0x0210 - 0x0208)
-class US3MemopadPageWidget : public UUserWidget
+// Class Shenmue3.S3MemopadTextWidget
+// 0x0000 (0x0208 - 0x0208)
+class US3MemopadTextWidget : public UUserWidget
 {
 public:
-	class UCanvasPanel*                                PhotoCanvasPanel;                                         // 0x0208(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3MemopadPageWidget");
-		return ptr;
-	}
-
-
-	void SetSlotHiddenFlag(int Index, bool flag);
-	void SetSlotContent(int Index, class US3MemopadTextWidget* Widget);
-	class UCanvasPanelSlot* AddPhoto(class UTexture2D* Texture, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize);
-};
-
-
-// Class Shenmue3.S3MemoTextureData
-// 0x0010 (0x0038 - 0x0028)
-class US3MemoTextureData : public UObject
-{
-public:
-	TArray<class US3MemoTextureDataBase*>              MemoTextureDataList;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3MemoTextureData");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3MemopadTextWidget");
 		return ptr;
 	}
 
@@ -6569,6 +6586,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3MemoTextureDataBase");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3MemoTextureData
+// 0x0010 (0x0038 - 0x0028)
+class US3MemoTextureData : public UObject
+{
+public:
+	TArray<class US3MemoTextureDataBase*>              MemoTextureDataList;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3MemoTextureData");
 		return ptr;
 	}
 
@@ -6653,24 +6686,6 @@ public:
 };
 
 
-// Class Shenmue3.S3MiniGameCharacter
-// 0x0010 (0x0750 - 0x0740)
-class AS3MiniGameCharacter : public ACharacter
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0740(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3MiniGameCharacter");
-		return ptr;
-	}
-
-
-	struct FName GetClothCharaName();
-};
-
-
 // Class Shenmue3.S3MiniGameDataList
 // 0x0018 (0x0068 - 0x0050)
 class US3MiniGameDataList : public US3TalkDataListBase
@@ -6689,61 +6704,21 @@ public:
 };
 
 
-// Class Shenmue3.S3MiniGameFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3MiniGameFunctionLibrary : public UBlueprintFunctionLibrary
+// Class Shenmue3.S3MiniGameCharacter
+// 0x0010 (0x0750 - 0x0740)
+class AS3MiniGameCharacter : public ACharacter
 {
 public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0740(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3MiniGameFunctionLibrary");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3MiniGameCharacter");
 		return ptr;
 	}
 
 
-	void STATIC_RemoveDelayFromWidget(class UUserWidget* pUserWidget);
-	void STATIC_RemoveDelayFromComponent(class USceneComponent* Component);
-	void STATIC_RemoveDelayFromActor(class AActor* Actor);
-	void STATIC_OutputPunchResult(Enum_QTETitlePlayList PlaylistItem, TArray<Enum_QTETitlePlayList> InPlayList, TArray<struct FQTECommandCheckStruct> InCommandStructArray, TArray<Enum_QTETitlePlayList>* OutPlaylist, TArray<struct FQTECommandCheckStruct>* OutCommandStructArray, bool* bNeedPlaySequencer, bool* bHitSuccessfully);
-	void STATIC_OutputCSVData(const struct FString& Filename, const struct FString& outputFolderName, const struct FString& outStr);
-	struct FQTETitleCommandTableRowBase STATIC_GetRowByNameQTECommandsTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-	struct FODGiftDataTableRowBase STATIC_GetRowByNameODGiftTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-	void STATIC_GetRowByNameMiniGameNPCLinkData(class UDataTable* DataTable, const struct FGameplayTag& NPC, bool* bOutResult, struct FS3MiniGameNPCLinkData* OutData);
-	struct FCupMagicDataTableRowBase STATIC_GetRowByNameCMDataTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-	struct FAnimalRaceSpeedTableRowBase STATIC_GetRowByNameAnimalRaceSpeedTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
-	float STATIC_GetRandomValueInRange(float Min, float Max);
-	int STATIC_GetRandomIntValueInRange(int Min, int Max);
-	struct FName STATIC_GetLastScoreKey(class AS3MiniGameBase* MiniGame);
-	struct FName STATIC_GetHighScoreKey(class AS3MiniGameBase* MiniGame);
-	int STATIC_CalculateTotalScore(int HitScore, int Combo, int ComboScore, int ComboMaxScore);
-};
-
-
-// Class Shenmue3.S3MiniGameManager
-// 0x00B8 (0x03E0 - 0x0328)
-class AS3MiniGameManager : public AActor
-{
-public:
-	TMap<struct FName, class AS3MiniGameBase*>         CachedMiniGameActors;                                     // 0x0328(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<class AS3MiniGameBase*>                     DelayedInitializeActors;                                  // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	ES3Where                                           AreaId;                                                   // 0x0388(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0389(0x0007) MISSED OFFSET
-	TMap<ES3Where, class UDataTable*>                  NPCLinkTable;                                             // 0x0390(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3MiniGameManager");
-		return ptr;
-	}
-
-
-	void UpdateMiniGameWinRate();
-	void RemoveMiniGameActor(class AS3MiniGameBase* Actor);
-	void RemoveDelayedInitializeActor(class AS3MiniGameBase* Actor);
-	class AS3MiniGameBase* GetMiniGameActorByTagCharaName(const struct FName& TagCharaName);
-	void GetCharacterLinkMiniGames(class AActor* TargetActor, TArray<class AActor*>* MiniGameActors);
-	void AddMiniGameActor(class AS3MiniGameBase* Actor);
+	struct FName GetClothCharaName();
 };
 
 
@@ -6785,28 +6760,6 @@ public:
 };
 
 
-// Class Shenmue3.S3MovementModeRequestHandler
-// 0x0028 (0x0118 - 0x00F0)
-class US3MovementModeRequestHandler : public UActorComponent
-{
-public:
-	class UCharacterMovementComponent*                 MovementComponent;                                        // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	TArray<class UObject*>                             FlyingRequesters;                                         // 0x00F8(0x0010) (ZeroConstructor, Transient)
-	TArray<class UObject*>                             NoneRequesters;                                           // 0x0108(0x0010) (ZeroConstructor, Transient)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3MovementModeRequestHandler");
-		return ptr;
-	}
-
-
-	void UnrequestMovementMode(class UObject* Requester);
-	void RequestMovementMode(class UObject* Requester, TEnumAsByte<EMovementMode> Mode);
-	void CheckInvalidUProperties();
-};
-
-
 // Class Shenmue3.S3MiniGameScoreChildActorComponent
 // 0x0000 (0x0270 - 0x0270)
 class US3MiniGameScoreChildActorComponent : public UChildActorComponent
@@ -6819,6 +6772,37 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Shenmue3.S3MiniGameFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3MiniGameFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3MiniGameFunctionLibrary");
+		return ptr;
+	}
+
+
+	void RemoveDelayFromWidget(class UUserWidget* pUserWidget);
+	void RemoveDelayFromComponent(class USceneComponent* Component);
+	void RemoveDelayFromActor(class AActor* Actor);
+	void OutputPunchResult(Enum_QTETitlePlayList PlaylistItem, TArray<Enum_QTETitlePlayList> InPlayList, TArray<struct FQTECommandCheckStruct> InCommandStructArray, TArray<Enum_QTETitlePlayList>* OutPlaylist, TArray<struct FQTECommandCheckStruct>* OutCommandStructArray, bool* bNeedPlaySequencer, bool* bHitSuccessfully);
+	void OutputCSVData(const struct FString& Filename, const struct FString& outputFolderName, const struct FString& outStr);
+	struct FQTETitleCommandTableRowBase GetRowByNameQTECommandsTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
+	struct FODGiftDataTableRowBase GetRowByNameODGiftTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
+	void GetRowByNameMiniGameNPCLinkData(class UDataTable* DataTable, const struct FGameplayTag& NPC, bool* bOutResult, struct FS3MiniGameNPCLinkData* OutData);
+	struct FCupMagicDataTableRowBase GetRowByNameCMDataTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
+	struct FAnimalRaceSpeedTableRowBase GetRowByNameAnimalRaceSpeedTable(class UDataTable* DataTable, const struct FName& pName, bool* Result);
+	float GetRandomValueInRange(float Min, float Max);
+	int GetRandomIntValueInRange(int Min, int Max);
+	struct FName GetLastScoreKey(class AS3MiniGameBase* MiniGame);
+	struct FName GetHighScoreKey(class AS3MiniGameBase* MiniGame);
+	int CalculateTotalScore(int HitScore, int Combo, int ComboScore, int ComboMaxScore);
 };
 
 
@@ -6846,18 +6830,25 @@ public:
 };
 
 
-// Class Shenmue3.S3NavArea_Interact
-// 0x0000 (0x0048 - 0x0048)
-class US3NavArea_Interact : public UNavArea
+// Class Shenmue3.S3MovementModeRequestHandler
+// 0x0028 (0x0118 - 0x00F0)
+class US3MovementModeRequestHandler : public UActorComponent
 {
 public:
+	class UCharacterMovementComponent*                 MovementComponent;                                        // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	TArray<class UObject*>                             FlyingRequesters;                                         // 0x00F8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UObject*>                             NoneRequesters;                                           // 0x0108(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavArea_Interact");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3MovementModeRequestHandler");
 		return ptr;
 	}
 
+
+	void UnrequestMovementMode(class UObject* Requester);
+	void RequestMovementMode(class UObject* Requester, TEnumAsByte<EMovementMode> Mode);
+	void CheckInvalidUProperties();
 };
 
 
@@ -6876,15 +6867,45 @@ public:
 };
 
 
-// Class Shenmue3.S3MemopadTextWidget
-// 0x0000 (0x0208 - 0x0208)
-class US3MemopadTextWidget : public UUserWidget
+// Class Shenmue3.S3NavArea_Interact
+// 0x0000 (0x0048 - 0x0048)
+class US3NavArea_Interact : public UNavArea
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3MemopadTextWidget");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavArea_Interact");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3NavArea_Path
+// 0x0000 (0x0048 - 0x0048)
+class US3NavArea_Path : public UNavArea
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavArea_Path");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3NavArea_Stairs
+// 0x0000 (0x0048 - 0x0048)
+class US3NavArea_Stairs : public UNavArea
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavArea_Stairs");
 		return ptr;
 	}
 
@@ -6904,39 +6925,9 @@ public:
 	}
 
 
-	bool STATIC_TestPathExists(class UObject* Querier, const struct FVector& StartLocation, const struct FVector& EndLocation, class UClass* FilterClass);
-	class ARecastNavMesh* STATIC_GetRecastNavmesh(class UObject* WorldContextObject);
-	float STATIC_FindDistanceToWall(class UObject* WorldContextObject, const struct FVector& StartLoc, class UClass* FilterClass, class ARecastNavMesh* NavData, float MaxDistance, struct FVector* OutClosestPointOnWall);
-};
-
-
-// Class Shenmue3.S3NavArea_Stairs
-// 0x0000 (0x0048 - 0x0048)
-class US3NavArea_Stairs : public UNavArea
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavArea_Stairs");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3NavArea_Path
-// 0x0000 (0x0048 - 0x0048)
-class US3NavArea_Path : public UNavArea
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavArea_Path");
-		return ptr;
-	}
-
+	bool TestPathExists(class UObject* Querier, const struct FVector& StartLocation, const struct FVector& EndLocation, class UClass* FilterClass);
+	class ARecastNavMesh* GetRecastNavmesh(class UObject* WorldContextObject);
+	float FindDistanceToWall(class UObject* WorldContextObject, const struct FVector& StartLoc, class UClass* FilterClass, class ARecastNavMesh* NavData, float MaxDistance, struct FVector* OutClosestPointOnWall);
 };
 
 
@@ -6971,20 +6962,22 @@ public:
 };
 
 
-// Class Shenmue3.S3NavLinkCustomComponent
-// 0x0000 (0x01C8 - 0x01C8)
-class US3NavLinkCustomComponent : public UNavLinkCustomComponent
+// Class Shenmue3.S3NPCAnimDataAsset
+// 0x0010 (0x0040 - 0x0030)
+class US3NPCAnimDataAsset : public UDataAsset
 {
 public:
+	TArray<struct FS3FaceMontageData>                  FaceMontageData;                                          // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavLinkCustomComponent");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAnimDataAsset");
 		return ptr;
 	}
 
 
-	bool IsNavLinkEnabled();
+	void GetFaceMontagesInstance(class UObject* Outer, const struct FName& Name, struct FS3FaceMontageData* Data);
+	TArray<struct FS3FaceMontageData> GetFaceMontages();
 };
 
 
@@ -7324,22 +7317,30 @@ public:
 };
 
 
-// Class Shenmue3.S3NPCAnimDataAsset
-// 0x0010 (0x0040 - 0x0030)
-class US3NPCAnimDataAsset : public UDataAsset
+// Class Shenmue3.S3MiniGameManager
+// 0x00B8 (0x03E0 - 0x0328)
+class AS3MiniGameManager : public AActor
 {
 public:
-	TArray<struct FS3FaceMontageData>                  FaceMontageData;                                          // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TMap<struct FName, class AS3MiniGameBase*>         CachedMiniGameActors;                                     // 0x0328(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<class AS3MiniGameBase*>                     DelayedInitializeActors;                                  // 0x0378(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	ES3Where                                           AreaId;                                                   // 0x0388(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0389(0x0007) MISSED OFFSET
+	TMap<ES3Where, class UDataTable*>                  NPCLinkTable;                                             // 0x0390(0x0050) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAnimDataAsset");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3MiniGameManager");
 		return ptr;
 	}
 
 
-	void GetFaceMontagesInstance(class UObject* Outer, const struct FName& Name, struct FS3FaceMontageData* Data);
-	TArray<struct FS3FaceMontageData> GetFaceMontages();
+	void UpdateMiniGameWinRate();
+	void RemoveMiniGameActor(class AS3MiniGameBase* Actor);
+	void RemoveDelayedInitializeActor(class AS3MiniGameBase* Actor);
+	class AS3MiniGameBase* GetMiniGameActorByTagCharaName(const struct FName& TagCharaName);
+	void GetCharacterLinkMiniGames(class AActor* TargetActor, TArray<class AActor*>* MiniGameActors);
+	void AddMiniGameActor(class AS3MiniGameBase* Actor);
 };
 
 
@@ -7359,23 +7360,6 @@ public:
 };
 
 
-// Class Shenmue3.S3NPCAnimSelector_List
-// 0x0018 (0x0048 - 0x0030)
-class US3NPCAnimSelector_List : public US3NPCAnimSelector
-{
-public:
-	TArray<class US3NPCAnimSelector*>                  AnimList;                                                 // 0x0030(0x0010) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAnimSelector_List");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3NPCAnimSelector_Random
 // 0x0020 (0x0050 - 0x0030)
 class US3NPCAnimSelector_Random : public US3NPCAnimSelector
@@ -7388,6 +7372,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAnimSelector_Random");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3NPCAnimSelector_List
+// 0x0018 (0x0048 - 0x0030)
+class US3NPCAnimSelector_List : public US3NPCAnimSelector
+{
+public:
+	TArray<class US3NPCAnimSelector*>                  AnimList;                                                 // 0x0030(0x0010) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAnimSelector_List");
 		return ptr;
 	}
 
@@ -7484,40 +7485,6 @@ public:
 };
 
 
-// Class Shenmue3.S3NPCAttachmetAnimInstance
-// 0x0000 (0x03A0 - 0x03A0)
-class US3NPCAttachmetAnimInstance : public US3NPCAttachmentAnimInstance
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAttachmetAnimInstance");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3NPCAnimSelector_Single
-// 0x0018 (0x0048 - 0x0030)
-class US3NPCAnimSelector_Single : public US3NPCAnimSelector
-{
-public:
-	float                                              BlendTime;                                                // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	class UAnimSequence*                               Animation;                                                // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAnimSelector_Single");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.NPCChangeMeshAnimMetaData
 // 0x0008 (0x0030 - 0x0028)
 class UNPCChangeMeshAnimMetaData : public UAnimMetaData
@@ -7553,6 +7520,40 @@ public:
 
 
 	class US3PathFollowingComponent* GetS3PathFollowingComponent();
+};
+
+
+// Class Shenmue3.S3NPCAnimSelector_Single
+// 0x0018 (0x0048 - 0x0030)
+class US3NPCAnimSelector_Single : public US3NPCAnimSelector
+{
+public:
+	float                                              BlendTime;                                                // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	class UAnimSequence*                               Animation;                                                // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAnimSelector_Single");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3NPCAttachmetAnimInstance
+// 0x0000 (0x03A0 - 0x03A0)
+class US3NPCAttachmetAnimInstance : public US3NPCAttachmentAnimInstance
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCAttachmetAnimInstance");
+		return ptr;
+	}
+
 };
 
 
@@ -7630,6 +7631,22 @@ public:
 };
 
 
+// Class Shenmue3.S3NPCHighPriorityShowTrigger
+// 0x0010 (0x0340 - 0x0330)
+class AS3NPCHighPriorityShowTrigger : public ATriggerBox
+{
+public:
+	TArray<struct FNPCHighPriorityShowSetting>         HighPriorityShowSettings;                                 // 0x0330(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCHighPriorityShowTrigger");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3NPCLeadManager
 // 0x0020 (0x0348 - 0x0328)
 class AS3NPCLeadManager : public AActor
@@ -7676,26 +7693,6 @@ public:
 
 	void OnEndOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
 	void OnBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-};
-
-
-// Class Shenmue3.NPCLookAtAnimMetaData
-// 0x0010 (0x0038 - 0x0028)
-class UNPCLookAtAnimMetaData : public UAnimMetaData
-{
-public:
-	EChangeBody                                        eEnableBody;                                              // 0x0028(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
-	float                                              Distance;                                                 // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              Angle;                                                    // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.NPCLookAtAnimMetaData");
-		return ptr;
-	}
-
 };
 
 
@@ -7790,7 +7787,7 @@ public:
 	class US3NPCDefinition* GetNPCDefinitionFromString(const struct FString& NPCID);
 	class US3NPCDefinition* GetNPCDefinitionFromID(const struct FGameplayTag& NPCID);
 	class AS3NPCController* GetNPCControllerFromID(const struct FGameplayTag& NPCID);
-	class AS3NPCManager* STATIC_GetInstance(class UObject* WorldContextObject);
+	class AS3NPCManager* GetInstance(class UObject* WorldContextObject);
 	bool GetCurrentMesh(class US3NPCDefinition* inNPCDef);
 	class AS3Character* GetAnyNPCFadeInProgress();
 	TArray<class AS3Character*> GetAllNPC();
@@ -7805,6 +7802,46 @@ public:
 	void ChangeMesh(const struct FGameplayTag& NPCID, int Index);
 	bool CanSpawnNPC();
 	void BlueprintInitializeNPC(class AS3Character* NewNPC, class AS3NPCController* NewAI, class US3NPCDefinition* NPCDef);
+};
+
+
+// Class Shenmue3.NPCLookAtAnimMetaData
+// 0x0010 (0x0038 - 0x0028)
+class UNPCLookAtAnimMetaData : public UAnimMetaData
+{
+public:
+	EChangeBody                                        eEnableBody;                                              // 0x0028(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0029(0x0003) MISSED OFFSET
+	float                                              Distance;                                                 // 0x002C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Angle;                                                    // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.NPCLookAtAnimMetaData");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.NPCOpenDoorAnimMetaData
+// 0x0018 (0x0040 - 0x0028)
+class UNPCOpenDoorAnimMetaData : public UAnimMetaData
+{
+public:
+	float                                              Distance;                                                 // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
+	class UAnimSequence*                               DoorAnimation;                                            // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bDisableRootMotionScale;                                  // 0x0038(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.NPCOpenDoorAnimMetaData");
+		return ptr;
+	}
+
 };
 
 
@@ -7860,26 +7897,6 @@ public:
 };
 
 
-// Class Shenmue3.NPCOpenDoorAnimMetaData
-// 0x0018 (0x0040 - 0x0028)
-class UNPCOpenDoorAnimMetaData : public UAnimMetaData
-{
-public:
-	float                                              Distance;                                                 // 0x0028(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	class UAnimSequence*                               DoorAnimation;                                            // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bDisableRootMotionScale;                                  // 0x0038(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.NPCOpenDoorAnimMetaData");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3NPCPathFollowingComponent
 // 0x0030 (0x02F8 - 0x02C8)
 class US3NPCPathFollowingComponent : public UPathFollowingComponent
@@ -7921,22 +7938,6 @@ public:
 };
 
 
-// Class Shenmue3.S3NPCHighPriorityShowTrigger
-// 0x0010 (0x0340 - 0x0330)
-class AS3NPCHighPriorityShowTrigger : public ATriggerBox
-{
-public:
-	TArray<struct FNPCHighPriorityShowSetting>         HighPriorityShowSettings;                                 // 0x0330(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCHighPriorityShowTrigger");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3NPCPOIScheduler
 // 0x00B0 (0x03D8 - 0x0328)
 class AS3NPCPOIScheduler : public AActor
@@ -7970,17 +7971,16 @@ public:
 };
 
 
-// Class Shenmue3.NPCPosCorrectionAnimMetaData
-// 0x0008 (0x0030 - 0x0028)
-class UNPCPosCorrectionAnimMetaData : public UAnimMetaData
+// Class Shenmue3.S3_POIPointComponent
+// 0x0040 (0x05C0 - 0x0580)
+class US3_POIPointComponent : public UArrowComponent
 {
 public:
-	ECorrectionType                                    CorrectionType;                                           // 0x0028(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	struct FNPCPOICommand                              Command;                                                  // 0x0580(0x0040) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.NPCPosCorrectionAnimMetaData");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3_POIPointComponent");
 		return ptr;
 	}
 
@@ -7998,22 +7998,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.NPCRootMotionAnimMetaData");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3_POIPointComponent
-// 0x0040 (0x05C0 - 0x0580)
-class US3_POIPointComponent : public UArrowComponent
-{
-public:
-	struct FNPCPOICommand                              Command;                                                  // 0x0580(0x0040) (Edit, BlueprintVisible, BlueprintReadOnly)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3_POIPointComponent");
 		return ptr;
 	}
 
@@ -8184,24 +8168,6 @@ public:
 };
 
 
-// Class Shenmue3.S3LoadingProgressImage
-// 0x0018 (0x01F0 - 0x01D8)
-class US3LoadingProgressImage : public UImage
-{
-public:
-	float                                              LoadingPercentage;                                        // 0x01D8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x01DC(0x0004) MISSED OFFSET
-	struct FScriptDelegate                             LoadingPercentageDelegate;                                // 0x01E0(0x0014) (ZeroConstructor, InstancedReference)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3LoadingProgressImage");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3NPCScheduleTask_Null
 // 0x0000 (0x00D0 - 0x00D0)
 class US3NPCScheduleTask_Null : public US3NPCScheduleTask
@@ -8235,6 +8201,25 @@ public:
 };
 
 
+// Class Shenmue3.S3NPCTalkScriptStreamer
+// 0x0028 (0x0050 - 0x0028)
+class US3NPCTalkScriptStreamer : public UObject
+{
+public:
+	TArray<class AS3Character*>                        NPCs;                                                     // 0x0028(0x0010) (ZeroConstructor, Transient)
+	TArray<class AS3Character*>                        Loaded;                                                   // 0x0038(0x0010) (ZeroConstructor, Transient)
+	float                                              LoadDistance;                                             // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              UnloadDistance;                                           // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCTalkScriptStreamer");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3NPCStreamingComponent
 // 0x01A8 (0x0298 - 0x00F0)
 class US3NPCStreamingComponent : public UActorComponent
@@ -8259,25 +8244,6 @@ public:
 	void OnTriggerDestroyed(class AActor* DestroyedTrigger);
 	void OnNPCDestroyed(class AActor* DestroyedNPC);
 	void ClothesChanged(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
-};
-
-
-// Class Shenmue3.S3NPCTalkScriptStreamer
-// 0x0028 (0x0050 - 0x0028)
-class US3NPCTalkScriptStreamer : public UObject
-{
-public:
-	TArray<class AS3Character*>                        NPCs;                                                     // 0x0028(0x0010) (ZeroConstructor, Transient)
-	TArray<class AS3Character*>                        Loaded;                                                   // 0x0038(0x0010) (ZeroConstructor, Transient)
-	float                                              LoadDistance;                                             // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              UnloadDistance;                                           // 0x004C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NPCTalkScriptStreamer");
-		return ptr;
-	}
-
 };
 
 
@@ -8374,8 +8340,8 @@ public:
 	}
 
 
-	struct FPlayerCameraGetNearRotResult STATIC_GetNearRotCamera(float Rot1, float Rot2, float Speed);
-	struct FPlayerCameraCalcCenterResult STATIC_CalcCameraCenter(const struct FVector& CameraC, const struct FVector& CameraP, float CameraDis, bool Z_AttentionFlag, float Z_AttentionRot, float RotY, float CameraCenter, float RotAdd);
+	struct FPlayerCameraGetNearRotResult GetNearRotCamera(float Rot1, float Rot2, float Speed);
+	struct FPlayerCameraCalcCenterResult CalcCameraCenter(const struct FVector& CameraC, const struct FVector& CameraP, float CameraDis, bool Z_AttentionFlag, float Z_AttentionRot, float RotY, float CameraCenter, float RotAdd);
 };
 
 
@@ -8432,6 +8398,23 @@ public:
 };
 
 
+// Class Shenmue3.S3NavLinkCustomComponent
+// 0x0000 (0x01C8 - 0x01C8)
+class US3NavLinkCustomComponent : public UNavLinkCustomComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NavLinkCustomComponent");
+		return ptr;
+	}
+
+
+	bool IsNavLinkEnabled();
+};
+
+
 // Class Shenmue3.S3PlayerCharacter
 // 0x0000 (0x08E0 - 0x08E0)
 class AS3PlayerCharacter : public AS3Character
@@ -8447,18 +8430,38 @@ public:
 };
 
 
-// Class Shenmue3.S3NullShapeComponent
-// 0x0000 (0x0560 - 0x0560)
-class US3NullShapeComponent : public UPrimitiveComponent
+// Class Shenmue3.S3PlayerExpCollection
+// 0x00D0 (0x00F8 - 0x0028)
+class US3PlayerExpCollection : public UObject
 {
 public:
+	unsigned char                                      UnknownData00[0xD0];                                      // 0x0028(0x00D0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3NullShapeComponent");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3PlayerExpCollection");
 		return ptr;
 	}
 
+
+	void SetAttributePoints(const struct FName& Key, float Value);
+	void SetAttributePointRatio(const struct FName& Key, float Ratio);
+	void SetAttributeLevel(const struct FName& Key, int Level);
+	TArray<struct FName> ListUpValidAttributes();
+	bool IsValidAttribute(const struct FName& Key);
+	float GetMaxAttributePoints();
+	float GetAttributeRatio(const struct FName& Key);
+	float GetAttributePoints(const struct FName& Key);
+	int GetAttributeMinLevel();
+	int GetAttributeMaxLevel();
+	void GetAttributeLevel(const struct FName& Key, int* OutLevel, float* OutNextRatio);
+	void Debug_SetTotalEarnedAttributeLevels(int Levels);
+	int CountAttributeLevels();
+	void ConfigureFixedLevel(int InAttributeLevel);
+	void ConfigureByTotalXp(int InMinAttributeLevel, int InMaxAttributeLevel, float InTotalXpToMax, float InXpDifficultyRamp);
+	void Configure(int InMinAttributeLevel, int InMaxAttributeLevel, float InAttributePointsToLevel);
+	void AddAttributePoints(const struct FName& Key, float Value);
+	void AddAttributePointRatio(const struct FName& Key, float Ratio);
 };
 
 
@@ -8526,38 +8529,23 @@ public:
 };
 
 
-// Class Shenmue3.S3PlayerExpCollection
-// 0x00D0 (0x00F8 - 0x0028)
-class US3PlayerExpCollection : public UObject
+// Class Shenmue3.S3PlayerObstacleSensorComponent
+// 0x0008 (0x00F8 - 0x00F0)
+class US3PlayerObstacleSensorComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xD0];                                      // 0x0028(0x00D0) MISSED OFFSET
+	class AS3Character*                                ContextCharacter;                                         // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3PlayerExpCollection");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3PlayerObstacleSensorComponent");
 		return ptr;
 	}
 
 
-	void SetAttributePoints(const struct FName& Key, float Value);
-	void SetAttributePointRatio(const struct FName& Key, float Ratio);
-	void SetAttributeLevel(const struct FName& Key, int Level);
-	TArray<struct FName> ListUpValidAttributes();
-	bool IsValidAttribute(const struct FName& Key);
-	float GetMaxAttributePoints();
-	float GetAttributeRatio(const struct FName& Key);
-	float GetAttributePoints(const struct FName& Key);
-	int GetAttributeMinLevel();
-	int GetAttributeMaxLevel();
-	void GetAttributeLevel(const struct FName& Key, int* OutLevel, float* OutNextRatio);
-	void Debug_SetTotalEarnedAttributeLevels(int Levels);
-	int CountAttributeLevels();
-	void ConfigureFixedLevel(int InAttributeLevel);
-	void ConfigureByTotalXp(int InMinAttributeLevel, int InMaxAttributeLevel, float InTotalXpToMax, float InXpDifficultyRamp);
-	void Configure(int InMinAttributeLevel, int InMaxAttributeLevel, float InAttributePointsToLevel);
-	void AddAttributePoints(const struct FName& Key, float Value);
-	void AddAttributePointRatio(const struct FName& Key, float Ratio);
+	class AS3Character* CheckForNPCObstacles(TArray<class AS3Character*> Chars, class AS3Character* PreviousChar, const struct FVector& InDirection, float PreviousCharRadiusPad, float ReactDistance, struct FVector* OutDirection, float* OutDistance);
+	void CalculateStopParameters(float WalkCycleTime, float WalkCycleDuration, float WalkCycleSpeed, float WalkStopMarkerA, float WalkStopMarkerB, float StopAnimDistance, float DistanceToStopPoint, float* OutStrideScale, bool* OutQueueStopAnim);
+	float CalculateStopGap(class AS3Character* Char);
 };
 
 
@@ -8591,26 +8579,6 @@ public:
 };
 
 
-// Class Shenmue3.S3PlayerObstacleSensorComponent
-// 0x0008 (0x00F8 - 0x00F0)
-class US3PlayerObstacleSensorComponent : public UActorComponent
-{
-public:
-	class AS3Character*                                ContextCharacter;                                         // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3PlayerObstacleSensorComponent");
-		return ptr;
-	}
-
-
-	class AS3Character* CheckForNPCObstacles(TArray<class AS3Character*> Chars, class AS3Character* PreviousChar, const struct FVector& InDirection, float PreviousCharRadiusPad, float ReactDistance, struct FVector* OutDirection, float* OutDistance);
-	void CalculateStopParameters(float WalkCycleTime, float WalkCycleDuration, float WalkCycleSpeed, float WalkStopMarkerA, float WalkStopMarkerB, float StopAnimDistance, float DistanceToStopPoint, float* OutStrideScale, bool* OutQueueStopAnim);
-	float CalculateStopGap(class AS3Character* Char);
-};
-
-
 // Class Shenmue3.S3PlayerSteeringComponent
 // 0x0020 (0x0110 - 0x00F0)
 class US3PlayerSteeringComponent : public UActorComponent
@@ -8632,6 +8600,25 @@ public:
 	void UpdateTestCache(float DeltaTime);
 	bool SteerTowardsPartnerSpline(const struct FVector& InLocation, float InputYaw, float InputMagnitude, float* OutputYaw, float* OutputMagnitude);
 	bool CheckTalkToNPCWithCache(class US3TalkComponentBase* NPCTalkComponent);
+};
+
+
+// Class Shenmue3.S3PointLight
+// 0x0018 (0x0358 - 0x0340)
+class AS3PointLight : public APointLight
+{
+public:
+	bool                                               bRegister;                                                // 0x0340(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0341(0x0007) MISSED OFFSET
+	class US3LightTypeComponent*                       LightTypeComponent;                                       // 0x0348(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FTimerHandle                                RegisterHandle;                                           // 0x0350(0x0008) (Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3PointLight");
+		return ptr;
+	}
+
 };
 
 
@@ -8760,19 +8747,16 @@ public:
 };
 
 
-// Class Shenmue3.S3PointLight
-// 0x0018 (0x0358 - 0x0340)
-class AS3PointLight : public APointLight
+// Class Shenmue3.S3ProxyMovementComponent
+// 0x0008 (0x0190 - 0x0188)
+class US3ProxyMovementComponent : public UPawnMovementComponent
 {
 public:
-	bool                                               bRegister;                                                // 0x0340(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0341(0x0007) MISSED OFFSET
-	class US3LightTypeComponent*                       LightTypeComponent;                                       // 0x0348(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FTimerHandle                                RegisterHandle;                                           // 0x0350(0x0008) (Transient)
+	class UPawnMovementComponent*                      TargetComponent;                                          // 0x0188(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3PointLight");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3ProxyMovementComponent");
 		return ptr;
 	}
 
@@ -8815,6 +8799,23 @@ public:
 };
 
 
+// Class Shenmue3.S3RainNavData
+// 0x0008 (0x0598 - 0x0590)
+class AS3RainNavData : public ARecastNavMesh
+{
+public:
+	bool                                               bCanRebuild;                                              // 0x0590(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0591(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3RainNavData");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3ReactionComponent
 // 0x0060 (0x05F0 - 0x0590)
 class US3ReactionComponent : public USphereComponent
@@ -8854,23 +8855,6 @@ public:
 };
 
 
-// Class Shenmue3.S3RainNavData
-// 0x0008 (0x0598 - 0x0590)
-class AS3RainNavData : public ARecastNavMesh
-{
-public:
-	bool                                               bCanRebuild;                                              // 0x0590(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0591(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3RainNavData");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3RewardManager
 // 0x0000 (0x0328 - 0x0328)
 class AS3RewardManager : public AActor
@@ -8880,22 +8864,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3RewardManager");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3ProxyMovementComponent
-// 0x0008 (0x0190 - 0x0188)
-class US3ProxyMovementComponent : public UPawnMovementComponent
-{
-public:
-	class UPawnMovementComponent*                      TargetComponent;                                          // 0x0188(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3ProxyMovementComponent");
 		return ptr;
 	}
 
@@ -8957,6 +8925,81 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Shenmue3.S3SaveGame
+// 0x07B0 (0x07F0 - 0x0040)
+class US3SaveGame : public US3SaveGameBase
+{
+public:
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0040(0x0050) UNKNOWN PROPERTY: SetProperty Shenmue3.S3SaveGame.PreloadAssets
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0090(0x0050) UNKNOWN PROPERTY: SetProperty Shenmue3.S3SaveGame.PreloadClasses
+	TArray<unsigned char>                              RetrySaveData;                                            // 0x00E0(0x0010) (ZeroConstructor)
+	struct FString                                     SaveName;                                                 // 0x00F0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FDateTime                                   GameDate;                                                 // 0x0100(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
+	float                                              GameTime;                                                 // 0x0108(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               bClearStory;                                              // 0x010C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	EWeatherType                                       Weather;                                                  // 0x010D(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	ES3Where                                           LocationId;                                               // 0x010E(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x1];                                       // 0x010F(0x0001) MISSED OFFSET
+	struct FString                                     AreaId;                                                   // 0x0110(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int                                                EventStep;                                                // 0x0120(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0124(0x0004) MISSED OFFSET
+	TArray<int>                                        SubFlags;                                                 // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FName, struct FString>                 MainFlowWorkMap;                                          // 0x0138(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FName, struct FDateTime>               ACPlayDateTimeMap;                                        // 0x0188(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData04[0x8];                                       // 0x01D8(0x0008) MISSED OFFSET
+	struct FTransform                                  PlayerTransform;                                          // 0x01E0(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	struct FRotator                                    CameraRot;                                                // 0x0210(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x021C(0x0004) MISSED OFFSET
+	TArray<bool>                                       MemoFlags;                                                // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<bool>                                       MemoAlreadys;                                             // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<int>                                        MemoDataIdentifer;                                        // 0x0240(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int                                                MemoLatestIndex;                                          // 0x0250(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                MemoMotivationIndex;                                      // 0x0254(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<int>                                        MemoMotivationIndexs;                                     // 0x0258(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<bool>                                       MemoMapMasks;                                             // 0x0268(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<int>                                        UnleadMemoIds;                                            // 0x0278(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<bool>                                       TabFlagUnread;                                            // 0x0288(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<int>                                        MemoSubEventOrder;                                        // 0x0298(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	int                                                Money;                                                    // 0x02A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                BetMoney;                                                 // 0x02AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                RedemptionPoint;                                          // 0x02B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x4];                                       // 0x02B4(0x0004) MISSED OFFSET
+	TArray<int>                                        ItemFlags;                                                // 0x02B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<bool>                                       ItemCheckFlags;                                           // 0x02C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FName, unsigned char>                  AcquisitionMap;                                           // 0x02D8(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FName, unsigned char>                  AchievementAcquisitionMap;                                // 0x0328(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FDateTime                                   SaveDataTime;                                             // 0x0378(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
+	TArray<struct FName>                               ReadHelpIds;                                              // 0x0380(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FS3BattleStatsSaveData                      BattleStats;                                              // 0x0390(0x00C0) (Edit, BlueprintVisible, BlueprintReadOnly)
+	TMap<ES3AchievementCountType, int>                 AchievementCountMap;                                      // 0x0450(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<EClothPartsType, struct FName>                RyoClothParts;                                            // 0x04A0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<EClothPartsType, struct FName>                SheClothParts;                                            // 0x04F0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FName>                               UnlockRyoClothParts;                                      // 0x0540(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FName>                               UnlockSheClothParts;                                      // 0x0550(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FTalkScriptData>                     TalkProgressData;                                         // 0x0560(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, struct FNPCTalkData>          NPCTalkData;                                              // 0x0570(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, struct FTalkScheduleData>     PcTalkData;                                               // 0x05C0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, struct FTalkScheduleData>     BsTalkData;                                               // 0x0610(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, struct FTalkScheduleData>     MiniGameTalkData;                                         // 0x0660(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, struct FTalkScheduleData>     ShopTalkData;                                             // 0x06B0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<struct FString, int>                          ACTalkData;                                               // 0x0700(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TMap<int, struct FDateTime>                        ScriptStartTimer;                                         // 0x0750(0x0050) (Edit, BlueprintVisible, ZeroConstructor, EditConst)
+	TArray<struct FName>                               PlayedCutsceneIds;                                        // 0x07A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FS3MiniGameProgressSaveData>         MiniGameProgress;                                         // 0x07B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	struct FS3FishingInfo                              FishingInfo;                                              // 0x07C0(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData07[0x8];                                       // 0x07E8(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3SaveGame");
+		return ptr;
+	}
+
+
+	int GetEventFlag(int Index);
 };
 
 
@@ -9068,78 +9111,19 @@ public:
 };
 
 
-// Class Shenmue3.S3SaveGame
-// 0x07B0 (0x07F0 - 0x0040)
-class US3SaveGame : public US3SaveGameBase
+// Class Shenmue3.S3SceneCaptureComponent2D
+// 0x0010 (0x08A0 - 0x0890)
+class US3SceneCaptureComponent2D : public USceneCaptureComponent2D
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0040(0x0050) UNKNOWN PROPERTY: SetProperty Shenmue3.S3SaveGame.PreloadAssets
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0090(0x0050) UNKNOWN PROPERTY: SetProperty Shenmue3.S3SaveGame.PreloadClasses
-	TArray<unsigned char>                              RetrySaveData;                                            // 0x00E0(0x0010) (ZeroConstructor)
-	struct FString                                     SaveName;                                                 // 0x00F0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FDateTime                                   GameDate;                                                 // 0x0100(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
-	float                                              GameTime;                                                 // 0x0108(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               bClearStory;                                              // 0x010C(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	EWeatherType                                       Weather;                                                  // 0x010D(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	ES3Where                                           LocationId;                                               // 0x010E(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x010F(0x0001) MISSED OFFSET
-	struct FString                                     AreaId;                                                   // 0x0110(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	int                                                EventStep;                                                // 0x0120(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x0124(0x0004) MISSED OFFSET
-	TArray<int>                                        SubFlags;                                                 // 0x0128(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FName, struct FString>                 MainFlowWorkMap;                                          // 0x0138(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FName, struct FDateTime>               ACPlayDateTimeMap;                                        // 0x0188(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData04[0x8];                                       // 0x01D8(0x0008) MISSED OFFSET
-	struct FTransform                                  PlayerTransform;                                          // 0x01E0(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	struct FRotator                                    CameraRot;                                                // 0x0210(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x021C(0x0004) MISSED OFFSET
-	TArray<bool>                                       MemoFlags;                                                // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<bool>                                       MemoAlreadys;                                             // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<int>                                        MemoDataIdentifer;                                        // 0x0240(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	int                                                MemoLatestIndex;                                          // 0x0250(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                MemoMotivationIndex;                                      // 0x0254(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<int>                                        MemoMotivationIndexs;                                     // 0x0258(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<bool>                                       MemoMapMasks;                                             // 0x0268(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<int>                                        UnleadMemoIds;                                            // 0x0278(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<bool>                                       TabFlagUnread;                                            // 0x0288(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<int>                                        MemoSubEventOrder;                                        // 0x0298(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	int                                                Money;                                                    // 0x02A8(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                BetMoney;                                                 // 0x02AC(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                RedemptionPoint;                                          // 0x02B0(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x4];                                       // 0x02B4(0x0004) MISSED OFFSET
-	TArray<int>                                        ItemFlags;                                                // 0x02B8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<bool>                                       ItemCheckFlags;                                           // 0x02C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FName, unsigned char>                  AcquisitionMap;                                           // 0x02D8(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FName, unsigned char>                  AchievementAcquisitionMap;                                // 0x0328(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FDateTime                                   SaveDataTime;                                             // 0x0378(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly)
-	TArray<struct FName>                               ReadHelpIds;                                              // 0x0380(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FS3BattleStatsSaveData                      BattleStats;                                              // 0x0390(0x00C0) (Edit, BlueprintVisible, BlueprintReadOnly)
-	TMap<ES3AchievementCountType, int>                 AchievementCountMap;                                      // 0x0450(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<EClothPartsType, struct FName>                RyoClothParts;                                            // 0x04A0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<EClothPartsType, struct FName>                SheClothParts;                                            // 0x04F0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FName>                               UnlockRyoClothParts;                                      // 0x0540(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FName>                               UnlockSheClothParts;                                      // 0x0550(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FTalkScriptData>                     TalkProgressData;                                         // 0x0560(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, struct FNPCTalkData>          NPCTalkData;                                              // 0x0570(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, struct FTalkScheduleData>     PcTalkData;                                               // 0x05C0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, struct FTalkScheduleData>     BsTalkData;                                               // 0x0610(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, struct FTalkScheduleData>     MiniGameTalkData;                                         // 0x0660(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, struct FTalkScheduleData>     ShopTalkData;                                             // 0x06B0(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<struct FString, int>                          ACTalkData;                                               // 0x0700(0x0050) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TMap<int, struct FDateTime>                        ScriptStartTimer;                                         // 0x0750(0x0050) (Edit, BlueprintVisible, ZeroConstructor, EditConst)
-	TArray<struct FName>                               PlayedCutsceneIds;                                        // 0x07A0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FS3MiniGameProgressSaveData>         MiniGameProgress;                                         // 0x07B0(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	struct FS3FishingInfo                              FishingInfo;                                              // 0x07C0(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData07[0x8];                                       // 0x07E8(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0890(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3SaveGame");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3SceneCaptureComponent2D");
 		return ptr;
 	}
 
-
-	int GetEventFlag(int Index);
 };
 
 
@@ -9438,22 +9422,6 @@ public:
 };
 
 
-// Class Shenmue3.S3SceneCaptureComponent2D
-// 0x0010 (0x08A0 - 0x0890)
-class US3SceneCaptureComponent2D : public USceneCaptureComponent2D
-{
-public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0890(0x0010) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3SceneCaptureComponent2D");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3SearchMoveComponent
 // 0x0050 (0x08E0 - 0x0890)
 class US3SearchMoveComponent : public US3SearchComponent
@@ -9541,6 +9509,21 @@ public:
 };
 
 
+// Class Shenmue3.S3ShopDataList
+// 0x0000 (0x0050 - 0x0050)
+class US3ShopDataList : public US3TalkDataListBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3ShopDataList");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3ShopDataManagerBase
 // 0x0000 (0x0328 - 0x0328)
 class AS3ShopDataManagerBase : public AActor
@@ -9579,17 +9562,17 @@ public:
 };
 
 
-// Class Shenmue3.S3SkillDisplaySceneActor
-// 0x0018 (0x0340 - 0x0328)
-class AS3SkillDisplaySceneActor : public AActor
+// Class Shenmue3.NPCPosCorrectionAnimMetaData
+// 0x0008 (0x0030 - 0x0028)
+class UNPCPosCorrectionAnimMetaData : public UAnimMetaData
 {
 public:
-	struct FScriptMulticastDelegate                    OnSceneCapture;                                           // 0x0328(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class US3SceneCaptureComponent2D*                  SceneCaptureComponent2D;                                  // 0x0338(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	ECorrectionType                                    CorrectionType;                                           // 0x0028(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3SkillDisplaySceneActor");
+		static auto ptr = UObject::FindClass("Class Shenmue3.NPCPosCorrectionAnimMetaData");
 		return ptr;
 	}
 
@@ -9730,6 +9713,56 @@ public:
 };
 
 
+// Class Shenmue3.S3NullShapeComponent
+// 0x0000 (0x0560 - 0x0560)
+class US3NullShapeComponent : public UPrimitiveComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3NullShapeComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3SplineNavModifierComponent
+// 0x0010 (0x0158 - 0x0148)
+class US3SplineNavModifierComponent : public UNavModifierComponent
+{
+public:
+	TArray<struct FTransform>                          SplinePoints;                                             // 0x0148(0x0010) (BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3SplineNavModifierComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3SpotLight
+// 0x0018 (0x0358 - 0x0340)
+class AS3SpotLight : public ASpotLight
+{
+public:
+	bool                                               bRegister;                                                // 0x0340(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0341(0x0007) MISSED OFFSET
+	class US3LightTypeComponent*                       LightTypeComponent;                                       // 0x0348(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FTimerHandle                                RegisterHandle;                                           // 0x0350(0x0008) (Transient)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3SpotLight");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3SplineMoveActor
 // 0x0060 (0x0388 - 0x0328)
 class AS3SplineMoveActor : public AActor
@@ -9771,25 +9804,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3SplineNavArea");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3SpotLight
-// 0x0018 (0x0358 - 0x0340)
-class AS3SpotLight : public ASpotLight
-{
-public:
-	bool                                               bRegister;                                                // 0x0340(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0341(0x0007) MISSED OFFSET
-	class US3LightTypeComponent*                       LightTypeComponent;                                       // 0x0348(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FTimerHandle                                RegisterHandle;                                           // 0x0350(0x0008) (Transient)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3SpotLight");
 		return ptr;
 	}
 
@@ -9855,21 +9869,6 @@ public:
 };
 
 
-// Class Shenmue3.S3ShopDataList
-// 0x0000 (0x0050 - 0x0050)
-class US3ShopDataList : public US3TalkDataListBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3ShopDataList");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.S3StatusManager
 // 0x00F0 (0x0118 - 0x0028)
 class US3StatusManager : public UObject
@@ -9904,32 +9903,6 @@ public:
 };
 
 
-// Class Shenmue3.S3StopAnimMetaData
-// 0x0050 (0x0078 - 0x0028)
-class US3StopAnimMetaData : public UAnimMetaData
-{
-public:
-	struct FInterpCurveFloat                           StopDriverCurve;                                          // 0x0028(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FInterpCurveFloat                           StopSpeedCurve;                                           // 0x0040(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FInterpCurveFloat                           YawCurve;                                                 // 0x0058(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
-	struct FVector2D                                   YawMinMax;                                                // 0x0070(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3StopAnimMetaData");
-		return ptr;
-	}
-
-
-	void SetYawMinMax(float Min, float Max);
-	void MassageCurves();
-	float GetYawAtDistance(float Distance);
-	void AddYawDataPoint(float Distance, float Yaw);
-	void AddSpeedDataPoint(float Distance, float Speed);
-	void AddDataPoint(float Time, float Distance);
-};
-
-
 // Class Shenmue3.S3StreetFightDataAsset
 // 0x0058 (0x0088 - 0x0030)
 class US3StreetFightDataAsset : public UDataAsset
@@ -9949,56 +9922,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.S3StreetFightDataAsset");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3StreetFightManager
-// 0x0000 (0x0328 - 0x0328)
-class AS3StreetFightManager : public AActor
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3StreetFightManager");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3StreetFightTrigger
-// 0x0008 (0x0338 - 0x0330)
-class AS3StreetFightTrigger : public ATriggerBox
-{
-public:
-	bool                                               bActivate;                                                // 0x0330(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3StreetFightTrigger");
-		return ptr;
-	}
-
-
-	struct FString GetNextFighter();
-};
-
-
-// Class Shenmue3.S3SplineNavModifierComponent
-// 0x0010 (0x0158 - 0x0148)
-class US3SplineNavModifierComponent : public UNavModifierComponent
-{
-public:
-	TArray<struct FTransform>                          SplinePoints;                                             // 0x0148(0x0010) (BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3SplineNavModifierComponent");
 		return ptr;
 	}
 
@@ -10036,6 +9959,51 @@ public:
 };
 
 
+// Class Shenmue3.S3StopAnimMetaData
+// 0x0050 (0x0078 - 0x0028)
+class US3StopAnimMetaData : public UAnimMetaData
+{
+public:
+	struct FInterpCurveFloat                           StopDriverCurve;                                          // 0x0028(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FInterpCurveFloat                           StopSpeedCurve;                                           // 0x0040(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FInterpCurveFloat                           YawCurve;                                                 // 0x0058(0x0018) (Edit, BlueprintVisible, BlueprintReadOnly)
+	struct FVector2D                                   YawMinMax;                                                // 0x0070(0x0008) (BlueprintVisible, BlueprintReadOnly, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3StopAnimMetaData");
+		return ptr;
+	}
+
+
+	void SetYawMinMax(float Min, float Max);
+	void MassageCurves();
+	float GetYawAtDistance(float Distance);
+	void AddYawDataPoint(float Distance, float Yaw);
+	void AddSpeedDataPoint(float Distance, float Speed);
+	void AddDataPoint(float Time, float Distance);
+};
+
+
+// Class Shenmue3.S3StreetFightTrigger
+// 0x0008 (0x0338 - 0x0330)
+class AS3StreetFightTrigger : public ATriggerBox
+{
+public:
+	bool                                               bActivate;                                                // 0x0330(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0331(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3StreetFightTrigger");
+		return ptr;
+	}
+
+
+	struct FString GetNextFighter();
+};
+
+
 // Class Shenmue3.S3SubtitleWidget
 // 0x0048 (0x0250 - 0x0208)
 class US3SubtitleWidget : public UUserWidget
@@ -10056,6 +10024,45 @@ public:
 		return ptr;
 	}
 
+};
+
+
+// Class Shenmue3.S3TagCharaComponent
+// 0x00E0 (0x01D0 - 0x00F0)
+class US3TagCharaComponent : public UActorComponent
+{
+public:
+	struct FName                                       Name;                                                     // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FString                                     Description;                                              // 0x00F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FS3CharacterProfile                         Profile;                                                  // 0x0108(0x00C8) (Edit, BlueprintVisible)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TagCharaComponent");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3TalkAvoidanceComponent
+// 0x0008 (0x00F8 - 0x00F0)
+class US3TalkAvoidanceComponent : public UActorComponent
+{
+public:
+	float                                              OwnerCapsuleRadius;                                       // 0x00F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkAvoidanceComponent");
+		return ptr;
+	}
+
+
+	void MakeRadialLocations(float BaseDistance, int DistanceDiv, float MaxAngle, int AngleDiv, TArray<struct FVector>* OutLocations);
+	void MakeCircularSurroundLocations(class ACharacter* SurroundChar, TArray<struct FVector>* OutLocations);
+	bool IsDebugDrawingEnabled();
 };
 
 
@@ -10104,53 +10111,18 @@ public:
 };
 
 
-// Class Shenmue3.S3TagCharaComponent
-// 0x00E0 (0x01D0 - 0x00F0)
-class US3TagCharaComponent : public UActorComponent
-{
-public:
-	struct FName                                       Name;                                                     // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FString                                     Description;                                              // 0x00F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FS3CharacterProfile                         Profile;                                                  // 0x0108(0x00C8) (Edit, BlueprintVisible)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TagCharaComponent");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3TagCharaInterface
-// 0x0000 (0x0028 - 0x0028)
-class US3TagCharaInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TagCharaInterface");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3TalkCameraManagerBase
+// Class Shenmue3.S3StreetFightManager
 // 0x0000 (0x0328 - 0x0328)
-class AS3TalkCameraManagerBase : public AActor
+class AS3StreetFightManager : public AActor
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkCameraManagerBase");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3StreetFightManager");
 		return ptr;
 	}
 
-
-	void SetGameCameraCutThisFrame(bool newParam);
 };
 
 
@@ -10265,6 +10237,38 @@ public:
 };
 
 
+// Class Shenmue3.S3TalkCameraManagerBase
+// 0x0000 (0x0328 - 0x0328)
+class AS3TalkCameraManagerBase : public AActor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkCameraManagerBase");
+		return ptr;
+	}
+
+
+	void SetGameCameraCutThisFrame(bool newParam);
+};
+
+
+// Class Shenmue3.S3TagCharaInterface
+// 0x0000 (0x0028 - 0x0028)
+class US3TagCharaInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TagCharaInterface");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3TalkEventManagerFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class US3TalkEventManagerFunctionLibrary : public UBlueprintFunctionLibrary
@@ -10278,33 +10282,12 @@ public:
 	}
 
 
-	bool STATIC_TalkEvent_IsJoinTalk(class AActor* Actor);
-	bool STATIC_IsSight(class UWorld* World, class ACharacter* FromChara, class ACharacter* ToChara);
-	bool STATIC_IsRunningSubQuest(class UObject* WorldContextObject, int SubQuestGlobalFlagIndex);
-	void STATIC_GetS3CharacterAll(class UObject* WorldContextObject, TArray<class AS3Character*>* Characters);
-	ENPCTalkState STATIC_GetNPCTalkState(class UObject* WorldContextObject, class AS3Character* Character);
-	void STATIC_BreakInt32Range(const struct FInt32Range& Range, TEnumAsByte<ERangeBoundTypes>* LowerType, int* LowerValue, TEnumAsByte<ERangeBoundTypes>* UpperType, int* UpperValue);
-};
-
-
-// Class Shenmue3.S3TalkInterface
-// 0x0000 (0x0028 - 0x0028)
-class US3TalkInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkInterface");
-		return ptr;
-	}
-
-
-	void Screen_Player();
-	void Screen_NPC();
-	void OnTalkStart(class US3TalkComponent* TalkComponent);
-	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
-	bool IsTalking();
+	bool TalkEvent_IsJoinTalk(class AActor* Actor);
+	bool IsSight(class UWorld* World, class ACharacter* FromChara, class ACharacter* ToChara);
+	bool IsRunningSubQuest(class UObject* WorldContextObject, int SubQuestGlobalFlagIndex);
+	void GetS3CharacterAll(class UObject* WorldContextObject, TArray<class AS3Character*>* Characters);
+	ENPCTalkState GetNPCTalkState(class UObject* WorldContextObject, class AS3Character* Character);
+	void BreakInt32Range(const struct FInt32Range& Range, TEnumAsByte<ERangeBoundTypes>* LowerType, int* LowerValue, TEnumAsByte<ERangeBoundTypes>* UpperType, int* UpperValue);
 };
 
 
@@ -10344,9 +10327,30 @@ public:
 	bool GetIsFirstContactState(const struct FString& NPCID);
 	class US3GameInstance* GetGameInstance();
 	int GetACPlayCount(const struct FString& Key);
-	struct FString STATIC_CreateKeyFromNpcIdAndScrinptName(const struct FString& NPCID, const struct FString& ScriptName);
+	struct FString CreateKeyFromNpcIdAndScrinptName(const struct FString& NPCID, const struct FString& ScriptName);
 	void AddCutsceneId(const struct FName& ID);
 	void AddACPlayCount(const struct FString& Key);
+};
+
+
+// Class Shenmue3.S3TalkInterface
+// 0x0000 (0x0028 - 0x0028)
+class US3TalkInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkInterface");
+		return ptr;
+	}
+
+
+	void Screen_Player();
+	void Screen_NPC();
+	void OnTalkStart(class US3TalkComponent* TalkComponent);
+	void OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted);
+	bool IsTalking();
 };
 
 
@@ -10363,27 +10367,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Shenmue3.S3TalkAvoidanceComponent
-// 0x0008 (0x00F8 - 0x00F0)
-class US3TalkAvoidanceComponent : public UActorComponent
-{
-public:
-	float                                              OwnerCapsuleRadius;                                       // 0x00F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TalkAvoidanceComponent");
-		return ptr;
-	}
-
-
-	void MakeRadialLocations(float BaseDistance, int DistanceDiv, float MaxAngle, int AngleDiv, TArray<struct FVector>* OutLocations);
-	void MakeCircularSurroundLocations(class ACharacter* SurroundChar, TArray<struct FVector>* OutLocations);
-	bool IsDebugDrawingEnabled();
 };
 
 
@@ -10425,50 +10408,22 @@ public:
 };
 
 
-// Class Shenmue3.S3TextDataLibrary
-// 0x0000 (0x0028 - 0x0028)
-class US3TextDataLibrary : public UBlueprintFunctionLibrary
+// Class Shenmue3.S3TextDataTalk
+// 0x0020 (0x0050 - 0x0030)
+class US3TextDataTalk : public US3TextDataBase
 {
 public:
+	struct FString                                     Text;                                                     // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<struct FString>                             Clipper;                                                  // 0x0040(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TextDataLibrary");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TextDataTalk");
 		return ptr;
 	}
 
 
-	float STATIC_StringLengthConvertTime(const struct FString& S);
-	bool STATIC_ShouldSplitTextData(const struct FString& Path);
-	struct FString STATIC_RemoveRuby(const struct FString& CheckString);
-	struct FString STATIC_GetVoiceLanguageCueSheetPostfix(ES3VoiceLanguage VoiceLanguage);
-	struct FString STATIC_GetVoiceLanguageAbbreviation(ES3VoiceLanguage VoiceLanguage);
-	struct FString STATIC_GetVoiceAssetPath(ES3TextPathType Type);
-	void STATIC_GetTextDataAssets(ES3TextPathType PathType, ES3Locale Locale, const struct FString& LabelKeyword, TArray<class US3TextDataAsset*>* OutAssets);
-	struct FString STATIC_GetTextDataAssetPath(ES3TextPathType Type);
-	struct FString STATIC_GetSplitAssetName(const struct FString& Label);
-	struct FString STATIC_GetLocaleAbbreviation(ES3Locale Locale);
-	struct FString STATIC_ConvertFullWidthCharacter(const struct FString& ConvertString, ES3Locale Locale);
-	struct FString STATIC_AddSimpleLineBreak(const struct FString& SourceString, int MinLengthToBreak, float MinRatio);
-};
-
-
-// Class Shenmue3.S3TextDataPreloadActor
-// 0x0040 (0x0368 - 0x0328)
-class AS3TextDataPreloadActor : public AActor
-{
-public:
-	TArray<class UObject*>                             PreloadAssets;                                            // 0x0328(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0338(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3TextDataPreloadActor.PreloadSoftAssets
-	TArray<struct FS3TextDataPreloadAssetInfo>         PreloadTexts;                                             // 0x0348(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	TArray<struct FS3TextDataPreloadAssetInfo>         PreloadVoices;                                            // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TextDataPreloadActor");
-		return ptr;
-	}
-
+	struct FString GetClipperString(ES3VoiceLanguage VoiceLanguage);
 };
 
 
@@ -10505,11 +10460,58 @@ public:
 	bool GetItemNameAndDescription(const struct FName& Label, struct FString* OutName, struct FString* OutDescription);
 	struct FString GetItemName(const struct FName& Label);
 	struct FString GetItemDescription(const struct FName& Label);
-	bool STATIC_GetFolderName(const struct FString& Label, struct FString* Out);
+	bool GetFolderName(const struct FString& Label, struct FString* Out);
 	struct FString GetCueSheetAssetPath(const struct FString& BaseSheetName, ES3TextPathType Type);
-	ES3TextPathType STATIC_FixupTextPathType(ES3TextPathType Type, const struct FName& Label);
+	ES3TextPathType FixupTextPathType(ES3TextPathType Type, const struct FName& Label);
 	void EnableCacheData();
 	void DisableCacheData();
+};
+
+
+// Class Shenmue3.S3TextDataPreloadActor
+// 0x0040 (0x0368 - 0x0328)
+class AS3TextDataPreloadActor : public AActor
+{
+public:
+	TArray<class UObject*>                             PreloadAssets;                                            // 0x0328(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0338(0x0010) UNKNOWN PROPERTY: ArrayProperty Shenmue3.S3TextDataPreloadActor.PreloadSoftAssets
+	TArray<struct FS3TextDataPreloadAssetInfo>         PreloadTexts;                                             // 0x0348(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<struct FS3TextDataPreloadAssetInfo>         PreloadVoices;                                            // 0x0358(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TextDataPreloadActor");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.S3TextDataLibrary
+// 0x0000 (0x0028 - 0x0028)
+class US3TextDataLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TextDataLibrary");
+		return ptr;
+	}
+
+
+	float StringLengthConvertTime(const struct FString& S);
+	bool ShouldSplitTextData(const struct FString& Path);
+	struct FString RemoveRuby(const struct FString& CheckString);
+	struct FString GetVoiceLanguageCueSheetPostfix(ES3VoiceLanguage VoiceLanguage);
+	struct FString GetVoiceLanguageAbbreviation(ES3VoiceLanguage VoiceLanguage);
+	struct FString GetVoiceAssetPath(ES3TextPathType Type);
+	void GetTextDataAssets(ES3TextPathType PathType, ES3Locale Locale, const struct FString& LabelKeyword, TArray<class US3TextDataAsset*>* OutAssets);
+	struct FString GetTextDataAssetPath(ES3TextPathType Type);
+	struct FString GetSplitAssetName(const struct FString& Label);
+	struct FString GetLocaleAbbreviation(ES3Locale Locale);
+	struct FString ConvertFullWidthCharacter(const struct FString& ConvertString, ES3Locale Locale);
+	struct FString AddSimpleLineBreak(const struct FString& SourceString, int MinLengthToBreak, float MinRatio);
 };
 
 
@@ -10549,44 +10551,6 @@ public:
 	void SetLimitLightArea(bool bNewLimitLightArea);
 	void OnSetLightEnable(bool bNewLightEnable);
 	void OnSetLightCastShadow(bool bNewLightCastShadow);
-};
-
-
-// Class Shenmue3.S3TriggerableStaticMeshActor
-// 0x0018 (0x0350 - 0x0338)
-class AS3TriggerableStaticMeshActor : public AStaticMeshActor
-{
-public:
-	ETriggerPosition                                   TriggerPosition;                                          // 0x0338(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	ETriggerAction                                     TriggerAction;                                            // 0x0339(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x033A(0x0006) MISSED OFFSET
-	struct FString                                     ActionId;                                                 // 0x0340(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TriggerableStaticMeshActor");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.S3TurnAroundComponent
-// 0x0008 (0x00F8 - 0x00F0)
-class US3TurnAroundComponent : public UActorComponent
-{
-public:
-	float                                              TurnAroundAngle;                                          // 0x00F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bProcessingTurnAround;                                    // 0x00F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bTurnAroundIsWithin;                                      // 0x00F5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x00F6(0x0002) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TurnAroundComponent");
-		return ptr;
-	}
-
 };
 
 
@@ -10630,6 +10594,25 @@ public:
 };
 
 
+// Class Shenmue3.S3TurnAroundComponent
+// 0x0008 (0x00F8 - 0x00F0)
+class US3TurnAroundComponent : public UActorComponent
+{
+public:
+	float                                              TurnAroundAngle;                                          // 0x00F0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bProcessingTurnAround;                                    // 0x00F4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bTurnAroundIsWithin;                                      // 0x00F5(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x00F6(0x0002) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TurnAroundComponent");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.S3UISettings
 // 0x0050 (0x0078 - 0x0028)
 class US3UISettings : public UObject
@@ -10667,6 +10650,35 @@ public:
 
 	void SetEnable(bool bInEnable);
 	bool GetEnable();
+};
+
+
+// Class Shenmue3.S3WaveActor
+// 0x0040 (0x0368 - 0x0328)
+class AS3WaveActor : public AActor
+{
+public:
+	TArray<struct FS3WaveElement>                      WaveElements;                                             // 0x0328(0x0010) (Edit, ZeroConstructor)
+	float                                              NormalizedMaxAmplitude;                                   // 0x0338(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bUseArea;                                                 // 0x033C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               bDrawDebug;                                               // 0x033D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x033E(0x0002) MISSED OFFSET
+	TArray<struct FS3BuoyantActor>                     Buoys;                                                    // 0x0340(0x0010) (ZeroConstructor, Transient)
+	class USceneComponent*                             SceneComponent;                                           // 0x0350(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            ProcessArea;                                              // 0x0358(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0360(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3WaveActor");
+		return ptr;
+	}
+
+
+	void SnapAttachedActorsToWave();
+	struct FVector ProjectPointToWave(const struct FVector& Location, bool bZOnly);
+	void ExitArea(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void EnterArea(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
 };
 
 
@@ -10711,8 +10723,8 @@ public:
 	}
 
 
-	bool STATIC_TestInRainShelter(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent);
-	class AS3RainNavData* STATIC_GetRainNavData(class UObject* WorldContextObject);
+	bool TestInRainShelter(class UObject* WorldContextObject, const struct FVector& Location, const struct FVector& Extent);
+	class AS3RainNavData* GetRainNavData(class UObject* WorldContextObject);
 };
 
 
@@ -10753,35 +10765,6 @@ public:
 };
 
 
-// Class Shenmue3.S3WaveActor
-// 0x0040 (0x0368 - 0x0328)
-class AS3WaveActor : public AActor
-{
-public:
-	TArray<struct FS3WaveElement>                      WaveElements;                                             // 0x0328(0x0010) (Edit, ZeroConstructor)
-	float                                              NormalizedMaxAmplitude;                                   // 0x0338(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bUseArea;                                                 // 0x033C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               bDrawDebug;                                               // 0x033D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x033E(0x0002) MISSED OFFSET
-	TArray<struct FS3BuoyantActor>                     Buoys;                                                    // 0x0340(0x0010) (ZeroConstructor, Transient)
-	class USceneComponent*                             SceneComponent;                                           // 0x0350(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            ProcessArea;                                              // 0x0358(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0360(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3WaveActor");
-		return ptr;
-	}
-
-
-	void SnapAttachedActorsToWave();
-	struct FVector ProjectPointToWave(const struct FVector& Location, bool bZOnly);
-	void ExitArea(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void EnterArea(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-};
-
-
 // Class Shenmue3.S3WheeledVehicle
 // 0x0000 (0x0398 - 0x0398)
 class AS3WheeledVehicle : public AWheeledVehicle
@@ -10799,6 +10782,30 @@ public:
 	bool SetLinearDrivePosition(const struct FName& BoneName, const struct FVector& Position);
 	bool GetLinearDriveVelocity(const struct FName& BoneName, struct FVector* Velocity);
 	bool GetLinearDrivePosition(const struct FName& BoneName, struct FVector* Position);
+};
+
+
+// Class Shenmue3.S3WidgetToRenderTargetComponent
+// 0x0080 (0x02C0 - 0x0240)
+class US3WidgetToRenderTargetComponent : public USceneComponent
+{
+public:
+	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0240(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      WidgetClass;                                              // 0x0248(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUserWidget*                                 Widget;                                                   // 0x0250(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData)
+	struct FIntPoint                                   DrawSize;                                                 // 0x0258(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
+	TArray<struct FParentMaterial>                     ParentMaterials;                                          // 0x0260(0x0010) (Edit, ZeroConstructor)
+	struct FLinearColor                                BackgroundColor;                                          // 0x0270(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0280(0x0040) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3WidgetToRenderTargetComponent");
+		return ptr;
+	}
+
+
+	bool DrawWidgetToRenderTarget(float DeltaTime);
 };
 
 
@@ -10866,8 +10873,8 @@ public:
 	}
 
 
-	class US3NPCDefinition* STATIC_GetNPCDefinition(class UObject* WorldContextObject, const struct FString& NPCID);
-	bool STATIC_CreateTaskWithClass(class UObject* Outer, class UClass* ObjectClass, class UObject** TaskClass);
+	class US3NPCDefinition* GetNPCDefinition(class UObject* WorldContextObject, const struct FString& NPCID);
+	bool CreateTaskWithClass(class UObject* Outer, class UClass* ObjectClass, class UObject** TaskClass);
 };
 
 
@@ -10941,27 +10948,20 @@ public:
 };
 
 
-// Class Shenmue3.S3WidgetToRenderTargetComponent
-// 0x0080 (0x02C0 - 0x0240)
-class US3WidgetToRenderTargetComponent : public USceneComponent
+// Class Shenmue3.SetNoVoiceTimeTask
+// 0x0008 (0x0068 - 0x0060)
+class USetNoVoiceTimeTask : public UTalkEventTaskBase
 {
 public:
-	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0240(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      WidgetClass;                                              // 0x0248(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UUserWidget*                                 Widget;                                                   // 0x0250(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, DuplicateTransient, IsPlainOldData)
-	struct FIntPoint                                   DrawSize;                                                 // 0x0258(0x0008) (Edit, BlueprintVisible, IsPlainOldData)
-	TArray<struct FParentMaterial>                     ParentMaterials;                                          // 0x0260(0x0010) (Edit, ZeroConstructor)
-	struct FLinearColor                                BackgroundColor;                                          // 0x0270(0x0010) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0280(0x0040) MISSED OFFSET
+	float                                              NoVoiceTime;                                              // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                NoVoiceFrame;                                             // 0x0064(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3WidgetToRenderTargetComponent");
+		static auto ptr = UObject::FindClass("Class Shenmue3.SetNoVoiceTimeTask");
 		return ptr;
 	}
 
-
-	bool DrawWidgetToRenderTarget(float DeltaTime);
 };
 
 
@@ -10995,41 +10995,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.SetPositionTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.SetRotationTask
-// 0x0018 (0x0078 - 0x0060)
-class USetRotationTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     TargetActorID;                                            // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	float                                              Yaw;                                                      // 0x0070(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.SetRotationTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.SetNoVoiceTimeTask
-// 0x0008 (0x0068 - 0x0060)
-class USetNoVoiceTimeTask : public UTalkEventTaskBase
-{
-public:
-	float                                              NoVoiceTime;                                              // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                NoVoiceFrame;                                             // 0x0064(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.SetNoVoiceTimeTask");
 		return ptr;
 	}
 
@@ -11107,6 +11072,23 @@ public:
 };
 
 
+// Class Shenmue3.SetWeatherTask
+// 0x0008 (0x0068 - 0x0060)
+class USetWeatherTask : public UTalkEventTaskBase
+{
+public:
+	int                                                WeatherValue;                                             // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.SetWeatherTask");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.ShopTask
 // 0x0040 (0x00A0 - 0x0060)
 class UShopTask : public UTalkEventTaskBase
@@ -11135,6 +11117,26 @@ public:
 };
 
 
+// Class Shenmue3.ShowItemTask
+// 0x0020 (0x0080 - 0x0060)
+class UShowItemTask : public UTalkEventTaskBase
+{
+public:
+	int                                                motionType;                                               // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	struct FString                                     ItemId;                                                   // 0x0068(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	int                                                rotate;                                                   // 0x0078(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                showType;                                                 // 0x007C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.ShowItemTask");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.ShowHPTask
 // 0x0008 (0x0068 - 0x0060)
 class UShowHPTask : public UTalkEventTaskBase
@@ -11147,23 +11149,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.ShowHPTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.SetWeatherTask
-// 0x0008 (0x0068 - 0x0060)
-class USetWeatherTask : public UTalkEventTaskBase
-{
-public:
-	int                                                WeatherValue;                                             // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.SetWeatherTask");
 		return ptr;
 	}
 
@@ -11209,35 +11194,37 @@ public:
 };
 
 
-// Class Shenmue3.SoundNodeVehicleEngine
-// 0x0018 (0x0050 - 0x0038)
-class USoundNodeVehicleEngine : public USoundNode
+// Class Shenmue3.S3TriggerableStaticMeshActor
+// 0x0018 (0x0350 - 0x0338)
+class AS3TriggerableStaticMeshActor : public AStaticMeshActor
 {
 public:
-	TArray<struct FVehicleEngineDatum>                 EngineSamples;                                            // 0x0038(0x0010) (Edit, ExportObject, EditFixedSize, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0048(0x0004) MISSED OFFSET
-	float                                              CurrentRPM;                                               // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
+	ETriggerPosition                                   TriggerPosition;                                          // 0x0338(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	ETriggerAction                                     TriggerAction;                                            // 0x0339(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x033A(0x0006) MISSED OFFSET
+	struct FString                                     ActionId;                                                 // 0x0340(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.SoundNodeVehicleEngine");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3TriggerableStaticMeshActor");
 		return ptr;
 	}
 
 };
 
 
-// Class Shenmue3.StartedMiniGameTask
-// 0x0008 (0x0068 - 0x0060)
-class UStartedMiniGameTask : public UTalkEventTaskBase
+// Class Shenmue3.SetRotationTask
+// 0x0018 (0x0078 - 0x0060)
+class USetRotationTask : public UTalkEventTaskBase
 {
 public:
-	int                                                RuleIndex;                                                // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+	struct FString                                     TargetActorID;                                            // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	float                                              Yaw;                                                      // 0x0070(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.StartedMiniGameTask");
+		static auto ptr = UObject::FindClass("Class Shenmue3.SetRotationTask");
 		return ptr;
 	}
 
@@ -11255,6 +11242,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.StepTrigger");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.SoundNodeVehicleEngine
+// 0x0018 (0x0050 - 0x0038)
+class USoundNodeVehicleEngine : public USoundNode
+{
+public:
+	TArray<struct FVehicleEngineDatum>                 EngineSamples;                                            // 0x0038(0x0010) (Edit, ExportObject, EditFixedSize, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0048(0x0004) MISSED OFFSET
+	float                                              CurrentRPM;                                               // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.SoundNodeVehicleEngine");
 		return ptr;
 	}
 
@@ -11316,6 +11321,25 @@ public:
 };
 
 
+// Class Shenmue3.TalkCameraFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UTalkCameraFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.TalkCameraFunctionLibrary");
+		return ptr;
+	}
+
+
+	void TakeScreenShotWithCompression(const struct FString& fineName, TEnumAsByte<EImageFormatType> inFormat, bool bInsertTimeStampToFileName, bool bInShowUI, bool bAddFilenameSuffix, int Quality);
+	void TakeScreenShot(const struct FString& fineName, TEnumAsByte<EImageFormatType> Format, bool bInsertTimeStampToFileName, bool bInShowUI, bool bAddFilenameSuffix);
+	void PrintTalkCameraLog(const struct FString& inString, bool bPrintToScreen, bool bPrintToLog, const struct FLinearColor& TextColor, float Duration);
+};
+
+
 // Class Shenmue3.SubQuestTask
 // 0x0008 (0x0068 - 0x0060)
 class USubQuestTask : public UTalkEventTaskBase
@@ -11330,25 +11354,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class Shenmue3.TalkCameraFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class UTalkCameraFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.TalkCameraFunctionLibrary");
-		return ptr;
-	}
-
-
-	void STATIC_TakeScreenShotWithCompression(const struct FString& fineName, TEnumAsByte<EImageFormatType> inFormat, bool bInsertTimeStampToFileName, bool bInShowUI, bool bAddFilenameSuffix, int Quality);
-	void STATIC_TakeScreenShot(const struct FString& fineName, TEnumAsByte<EImageFormatType> Format, bool bInsertTimeStampToFileName, bool bInShowUI, bool bAddFilenameSuffix);
-	void STATIC_PrintTalkCameraLog(const struct FString& inString, bool bPrintToScreen, bool bPrintToLog, const struct FLinearColor& TextColor, float Duration);
 };
 
 
@@ -11374,23 +11379,6 @@ public:
 };
 
 
-// Class Shenmue3.TimerStartTask
-// 0x0008 (0x0068 - 0x0060)
-class UTimerStartTask : public UTalkEventTaskBase
-{
-public:
-	int                                                GlobalFlagIndex;                                          // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.TimerStartTask");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.TimerStopTask
 // 0x0008 (0x0068 - 0x0060)
 class UTimerStopTask : public UTalkEventTaskBase
@@ -11402,22 +11390,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.TimerStopTask");
-		return ptr;
-	}
-
-};
-
-
-// Class Shenmue3.UnloadLevelTask
-// 0x0010 (0x0070 - 0x0060)
-class UUnloadLevelTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     UnloadLevelName;                                          // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.UnloadLevelTask");
 		return ptr;
 	}
 
@@ -11443,6 +11415,56 @@ public:
 };
 
 
+// Class Shenmue3.StartedMiniGameTask
+// 0x0008 (0x0068 - 0x0060)
+class UStartedMiniGameTask : public UTalkEventTaskBase
+{
+public:
+	int                                                RuleIndex;                                                // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.StartedMiniGameTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.UnloadLevelTask
+// 0x0010 (0x0070 - 0x0060)
+class UUnloadLevelTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     UnloadLevelName;                                          // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.UnloadLevelTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.TimerStartTask
+// 0x0008 (0x0068 - 0x0060)
+class UTimerStartTask : public UTalkEventTaskBase
+{
+public:
+	int                                                GlobalFlagIndex;                                          // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.TimerStartTask");
+		return ptr;
+	}
+
+};
+
+
 // Class Shenmue3.UpdateCameraTask
 // 0x0020 (0x0080 - 0x0060)
 class UUpdateCameraTask : public UTalkEventTaskBase
@@ -11454,6 +11476,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class Shenmue3.UpdateCameraTask");
+		return ptr;
+	}
+
+};
+
+
+// Class Shenmue3.UpdateCameraGroupTask
+// 0x0020 (0x0080 - 0x0060)
+class UUpdateCameraGroupTask : public UTalkEventTaskBase
+{
+public:
+	struct FString                                     Group;                                                    // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+	TArray<struct FString>                             TargetCharacterIDs;                                       // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class Shenmue3.UpdateCameraGroupTask");
 		return ptr;
 	}
 
@@ -11495,23 +11534,6 @@ public:
 };
 
 
-// Class Shenmue3.UpdateCameraGroupTask
-// 0x0020 (0x0080 - 0x0060)
-class UUpdateCameraGroupTask : public UTalkEventTaskBase
-{
-public:
-	struct FString                                     Group;                                                    // 0x0060(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	TArray<struct FString>                             TargetCharacterIDs;                                       // 0x0070(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.UpdateCameraGroupTask");
-		return ptr;
-	}
-
-};
-
-
 // Class Shenmue3.UseIKTask
 // 0x0010 (0x0070 - 0x0060)
 class UUseIKTask : public UTalkEventTaskBase
@@ -11546,42 +11568,20 @@ public:
 };
 
 
-// Class Shenmue3.ShowItemTask
-// 0x0020 (0x0080 - 0x0060)
-class UShowItemTask : public UTalkEventTaskBase
+// Class Shenmue3.S3SkillDisplaySceneActor
+// 0x0018 (0x0340 - 0x0328)
+class AS3SkillDisplaySceneActor : public AActor
 {
 public:
-	int                                                motionType;                                               // 0x0060(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
-	struct FString                                     ItemId;                                                   // 0x0068(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
-	int                                                rotate;                                                   // 0x0078(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
-	int                                                showType;                                                 // 0x007C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	struct FScriptMulticastDelegate                    OnSceneCapture;                                           // 0x0328(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class US3SceneCaptureComponent2D*                  SceneCaptureComponent2D;                                  // 0x0338(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.ShowItemTask");
+		static auto ptr = UObject::FindClass("Class Shenmue3.S3SkillDisplaySceneActor");
 		return ptr;
 	}
 
-};
-
-
-// Class Shenmue3.S3TextDataTalk
-// 0x0020 (0x0050 - 0x0030)
-class US3TextDataTalk : public US3TextDataBase
-{
-public:
-	struct FString                                     Text;                                                     // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FString>                             Clipper;                                                  // 0x0040(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class Shenmue3.S3TextDataTalk");
-		return ptr;
-	}
-
-
-	struct FString GetClipperString(ES3VoiceLanguage VoiceLanguage);
 };
 
 

@@ -86,32 +86,32 @@ public:
 
 
 	struct FText GetText_4();
-	struct FText GetText_3();
+	struct FText STATIC_GetText_3();
 	struct FText GetText_2();
-	struct FText GetText_1();
-	struct FText BetMoneyNum();
-	struct FText HaveMoneyNum();
-	void Set_Item_Data(class UBW_IntegerProperty_C* BW_Integer_Property, int Index, class UEditableTextBox* Text_Box);
-	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Change_Page();
-	void BndEvt__Button_214_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_215_K2Node_ComponentBoundEvent_124_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_216_K2Node_ComponentBoundEvent_154_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_0_kifudaadd_K2Node_ComponentBoundEvent_58_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Money2_K2Node_ComponentBoundEvent_206_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Kifuda2_K2Node_ComponentBoundEvent_223_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Item3_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Item4_K2Node_ComponentBoundEvent_222_OnButtonClickedEvent__DelegateSignature();
-	void OnQuantityChanged(int Value, class UBW_IntegerProperty_C* Context);
+	struct FText STATIC_GetText_1();
+	struct FText STATIC_BetMoneyNum();
+	struct FText STATIC_HaveMoneyNum();
+	void STATIC_Set_Item_Data(class UBW_IntegerProperty_C* BW_Integer_Property, int Index, class UEditableTextBox* Text_Box);
+	void STATIC_Construct();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Change_Page();
+	void STATIC_BndEvt__Button_214_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Button_215_K2Node_ComponentBoundEvent_124_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Button_216_K2Node_ComponentBoundEvent_154_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Button_0_kifudaadd_K2Node_ComponentBoundEvent_58_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Money2_K2Node_ComponentBoundEvent_206_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Kifuda2_K2Node_ComponentBoundEvent_223_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Item3_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Item4_K2Node_ComponentBoundEvent_222_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_OnQuantityChanged(int Value, class UBW_IntegerProperty_C* Context);
 	void ChangeParam_075(int Value, class UBW_IntegerProperty_C* Context);
-	void ChangeParam_137(int Value, class UBW_IntegerProperty_C* Context);
-	void ChangeParam_SellMargification();
-	void BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_AllItemsMap_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__MoneyMax_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
-	void ChangeItemBuy(int Value, class UBW_IntegerProperty_C* Context);
-	void ExecuteUbergraph_BW_ItemFlag(int EntryPoint);
+	void STATIC_ChangeParam_137(int Value, class UBW_IntegerProperty_C* Context);
+	void STATIC_ChangeParam_SellMargification();
+	void STATIC_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Button_AllItemsMap_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__MoneyMax_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_ChangeItemBuy(int Value, class UBW_IntegerProperty_C* Context);
+	void STATIC_ExecuteUbergraph_BW_ItemFlag(int EntryPoint);
 };
 
 

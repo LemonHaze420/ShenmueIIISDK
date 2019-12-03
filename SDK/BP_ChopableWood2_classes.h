@@ -32,13 +32,13 @@ public:
 	}
 
 
-	void ChopActionFromRot(const struct FRotator& Rot);
+	void STATIC_ChopActionFromRot(const struct FRotator& Rot);
 	void MakeRandomVector(float x_max, float x_min, float y_max, float y_min, float Z_Max, float Z_min, struct FVector* RandomtVector);
-	void UserConstructionScript();
-	void ChopAction();
-	void ReceiveBeginPlay();
+	void STATIC_UserConstructionScript();
+	void STATIC_ChopAction();
+	void STATIC_ReceiveBeginPlay();
 	void DelayDestroy(float DelayTime);
-	void ExecuteUbergraph_BP_ChopableWood2(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_ChopableWood2(int EntryPoint);
 };
 
 

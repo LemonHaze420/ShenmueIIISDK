@@ -29,8 +29,8 @@ public:
 
 	void GetSelectedDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType, class APlayerMotionDatabase_C** Database);
 	void GetDatabase(class APlayerMotionDatabase_C** Datagbase);
-	void Initialize();
-	void SwitchDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType);
+	void STATIC_Initialize();
+	void STATIC_SwitchDatabase(TEnumAsByte<EPC_EN_PlayerMotionDatabase> DatabaseType);
 };
 
 

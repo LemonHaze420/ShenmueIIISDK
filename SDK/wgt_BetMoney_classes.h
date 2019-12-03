@@ -72,13 +72,13 @@ public:
 	}
 
 
-	void GetFadeAnimations(TArray<class UWidgetAnimation*>* Array);
+	void STATIC_GetFadeAnimations(TArray<class UWidgetAnimation*>* Array);
 	struct FText FormatMoneyText(int Value);
 	int GetActualBetMin();
 	int GetActualBetMax();
-	void SetMoney(int Value);
+	void STATIC_SetMoney(int Value);
 	int GetActualFluctuation();
-	void UpdateBetMoneyText();
+	void STATIC_UpdateBetMoneyText();
 	bool CanAdjustBet();
 	void GetBetMoney(int* BetMoney);
 	void DecideCancel();
@@ -88,7 +88,7 @@ public:
 	void SelectMaxBet();
 	void SelectCancel();
 	void DecideBet();
-	void ExecuteUbergraph_wgt_BetMoney(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_BetMoney(int EntryPoint);
 };
 
 

@@ -312,6 +312,15 @@ struct US3KismetNPCLibrary_ActorGetDistance_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
+// Function S3NPC.S3NPCPOIListBase.GetPOIListbyTags
+struct AS3NPCPOIListBase_GetPOIListbyTags_Params
+{
+	struct FGameplayTagQuery                           InputTagQuery;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
+	TArray<class AS3NPCPOIBase*>                       POIs;                                                     // (Parm, OutParm, ZeroConstructor)
+	float                                              GameTime;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
 // Function S3NPC.S3NPCPOITargetListManagerBase.PickUpTargetListByTime
 struct AS3NPCPOITargetListManagerBase_PickUpTargetListByTime_Params
 {
@@ -383,15 +392,6 @@ struct AS3NPCSpawnerBase_AddGroupTags_Params
 {
 	class ACharacter*                                  NPCToSet;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
 	int                                                NPCIndex;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-};
-
-// Function S3NPC.S3NPCPOIListBase.GetPOIListbyTags
-struct AS3NPCPOIListBase_GetPOIListbyTags_Params
-{
-	struct FGameplayTagQuery                           InputTagQuery;                                            // (ConstParm, Parm, OutParm, ReferenceParm)
-	TArray<class AS3NPCPOIBase*>                       POIs;                                                     // (Parm, OutParm, ZeroConstructor)
-	float                                              GameTime;                                                 // (Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
 }

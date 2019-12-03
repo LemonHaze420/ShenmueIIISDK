@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSetName
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPW_UI_BaseWindow_C::ResetSetName()
+void UBPW_UI_BaseWindow_C::STATIC_ResetSetName()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSetName");
 
@@ -31,9 +31,9 @@ void UBPW_UI_BaseWindow_C::ResetSetName()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ClearSelectSellItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UBPW_UI_BaseWindow_C::ClearSelectSellItem()
+void UBPW_UI_BaseWindow_C::STATIC_ClearSelectSellItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ClearSelectSellItem");
 
@@ -48,7 +48,7 @@ void UBPW_UI_BaseWindow_C::ClearSelectSellItem()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSellItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_BaseWindow_C::ResetSellItem()
 {
@@ -65,9 +65,9 @@ void UBPW_UI_BaseWindow_C::ResetSellItem()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSellItemIDList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPW_UI_BaseWindow_C::ResetSellItemIDList()
+void UBPW_UI_BaseWindow_C::STATIC_ResetSellItemIDList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSellItemIDList");
 
@@ -82,17 +82,18 @@ void UBPW_UI_BaseWindow_C::ResetSellItemIDList()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetSellItemIDList
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<int>                    SellItemIDList                 (Parm, OutParm, ZeroConstructor)
 
-void UBPW_UI_BaseWindow_C::GetSellItemIDList(TArray<int>* SellItemIDList)
+void UBPW_UI_BaseWindow_C::STATIC_GetSellItemIDList(TArray<int>* SellItemIDList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetSellItemIDList");
 
 	UBPW_UI_BaseWindow_C_GetSellItemIDList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,7 +105,7 @@ void UBPW_UI_BaseWindow_C::GetSellItemIDList(TArray<int>* SellItemIDList)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.UpdateHaveItemNum
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void UBPW_UI_BaseWindow_C::UpdateHaveItemNum()
 {
@@ -113,6 +114,7 @@ void UBPW_UI_BaseWindow_C::UpdateHaveItemNum()
 	UBPW_UI_BaseWindow_C_UpdateHaveItemNum_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -121,9 +123,9 @@ void UBPW_UI_BaseWindow_C::UpdateHaveItemNum()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetSellItemIDList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UBPW_UI_BaseWindow_C::SetSellItemIDList()
+void UBPW_UI_BaseWindow_C::STATIC_SetSellItemIDList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetSellItemIDList");
 
@@ -138,11 +140,11 @@ void UBPW_UI_BaseWindow_C::SetSellItemIDList()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.IsSellItem
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsSellItem                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::IsSellItem(bool* IsSellItem)
+void UBPW_UI_BaseWindow_C::STATIC_IsSellItem(bool* IsSellItem)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.IsSellItem");
 
@@ -160,7 +162,7 @@ void UBPW_UI_BaseWindow_C::IsSellItem(bool* IsSellItem)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetTotalSellPrice
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            TotalPrice                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -182,13 +184,13 @@ void UBPW_UI_BaseWindow_C::GetTotalSellPrice(int* TotalPrice)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetSelectSellItemuNum
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemNum                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::GetSelectSellItemuNum(int PageIndex, int ItemId, int* ItemNum)
+void UBPW_UI_BaseWindow_C::STATIC_GetSelectSellItemuNum(int PageIndex, int ItemId, int* ItemNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetSelectSellItemuNum");
 
@@ -197,6 +199,7 @@ void UBPW_UI_BaseWindow_C::GetSelectSellItemuNum(int PageIndex, int ItemId, int*
 	params.ItemId = ItemId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,15 +211,16 @@ void UBPW_UI_BaseWindow_C::GetSelectSellItemuNum(int PageIndex, int ItemId, int*
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSelectSellItemNum
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, NetMulticast, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_UI_BaseWindow_C::ResetSelectSellItemNum()
+void UBPW_UI_BaseWindow_C::STATIC_ResetSelectSellItemNum()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ResetSelectSellItemNum");
 
 	UBPW_UI_BaseWindow_C_ResetSelectSellItemNum_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,7 +229,7 @@ void UBPW_UI_BaseWindow_C::ResetSelectSellItemNum()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetSelectSellItemListSize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            MaxPage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -237,6 +241,7 @@ void UBPW_UI_BaseWindow_C::SetSelectSellItemListSize(int MaxPage)
 	params.MaxPage = MaxPage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -245,12 +250,12 @@ void UBPW_UI_BaseWindow_C::SetSelectSellItemListSize(int MaxPage)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetFocusItemGroup
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Static, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            FocusItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3ItemDataGroup               ItemNum                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::GetFocusItemGroup(int FocusItem, ES3ItemDataGroup* ItemNum)
+void UBPW_UI_BaseWindow_C::STATIC_GetFocusItemGroup(int FocusItem, ES3ItemDataGroup* ItemNum)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetFocusItemGroup");
 
@@ -269,11 +274,11 @@ void UBPW_UI_BaseWindow_C::GetFocusItemGroup(int FocusItem, ES3ItemDataGroup* It
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetExchangeTitle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_UI_BaseWindow_C::SetExchangeTitle(const struct FText& InText)
+void UBPW_UI_BaseWindow_C::STATIC_SetExchangeTitle(const struct FText& InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetExchangeTitle");
 
@@ -289,7 +294,7 @@ void UBPW_UI_BaseWindow_C::SetExchangeTitle(const struct FText& InText)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetCursorVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           SelectCategory                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -309,15 +314,16 @@ void UBPW_UI_BaseWindow_C::SetCursorVisibility(bool SelectCategory)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.EndViewMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, Delegate, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_UI_BaseWindow_C::EndViewMode()
+void UBPW_UI_BaseWindow_C::STATIC_EndViewMode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.EndViewMode");
 
 	UBPW_UI_BaseWindow_C_EndViewMode_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -326,7 +332,7 @@ void UBPW_UI_BaseWindow_C::EndViewMode()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.StartViewMode
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent)
 
 void UBPW_UI_BaseWindow_C::StartViewMode()
 {
@@ -343,7 +349,7 @@ void UBPW_UI_BaseWindow_C::StartViewMode()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetShopName_Localize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FString                 ShopName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -363,11 +369,11 @@ void UBPW_UI_BaseWindow_C::SetShopName_Localize(const struct FString& ShopName)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetShopName_Kanji
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ShopName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBPW_UI_BaseWindow_C::SetShopName_Kanji(const struct FString& ShopName)
+void UBPW_UI_BaseWindow_C::STATIC_SetShopName_Kanji(const struct FString& ShopName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetShopName_Kanji");
 
@@ -375,6 +381,7 @@ void UBPW_UI_BaseWindow_C::SetShopName_Kanji(const struct FString& ShopName)
 	params.ShopName = ShopName;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -383,17 +390,18 @@ void UBPW_UI_BaseWindow_C::SetShopName_Kanji(const struct FString& ShopName)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetSelectItemIDList
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, DLLImport, Const)
 // Parameters:
 // TArray<int>                    SelectIDList                   (Parm, OutParm, ZeroConstructor)
 
-void UBPW_UI_BaseWindow_C::GetSelectItemIDList(TArray<int>* SelectIDList)
+void UBPW_UI_BaseWindow_C::STATIC_GetSelectItemIDList(TArray<int>* SelectIDList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetSelectItemIDList");
 
 	UBPW_UI_BaseWindow_C_GetSelectItemIDList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -405,7 +413,7 @@ void UBPW_UI_BaseWindow_C::GetSelectItemIDList(TArray<int>* SelectIDList)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.IsSelectNow
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, MulticastDelegate, Private, Protected, DLLImport, Const)
 // Parameters:
 // bool                           SelectNow                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            SelectNum                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -417,6 +425,7 @@ void UBPW_UI_BaseWindow_C::IsSelectNow(bool* SelectNow, int* SelectNum)
 	UBPW_UI_BaseWindow_C_IsSelectNow_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -430,11 +439,11 @@ void UBPW_UI_BaseWindow_C::IsSelectNow(bool* SelectNow, int* SelectNum)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.CheckCanUseItem
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Private, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<int>                    CanUseItemIDList               (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBPW_UI_BaseWindow_C::CheckCanUseItem(TArray<int>* CanUseItemIDList)
+void UBPW_UI_BaseWindow_C::STATIC_CheckCanUseItem(TArray<int>* CanUseItemIDList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.CheckCanUseItem");
 
@@ -452,11 +461,11 @@ void UBPW_UI_BaseWindow_C::CheckCanUseItem(TArray<int>* CanUseItemIDList)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetPriceCheckCanvasVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::SetPriceCheckCanvasVisibility(ESlateVisibility InVisibility)
+void UBPW_UI_BaseWindow_C::STATIC_SetPriceCheckCanvasVisibility(ESlateVisibility InVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetPriceCheckCanvasVisibility");
 
@@ -464,6 +473,7 @@ void UBPW_UI_BaseWindow_C::SetPriceCheckCanvasVisibility(ESlateVisibility InVisi
 	params.InVisibility = InVisibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -472,15 +482,16 @@ void UBPW_UI_BaseWindow_C::SetPriceCheckCanvasVisibility(ESlateVisibility InVisi
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.CalcTotalSetPrice
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, Public, Private, HasDefaults, BlueprintEvent)
 
-void UBPW_UI_BaseWindow_C::CalcTotalSetPrice()
+void UBPW_UI_BaseWindow_C::STATIC_CalcTotalSetPrice()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.CalcTotalSetPrice");
 
 	UBPW_UI_BaseWindow_C_CalcTotalSetPrice_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -489,11 +500,11 @@ void UBPW_UI_BaseWindow_C::CalcTotalSetPrice()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetPageIconColor
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::SetPageIconColor(int page)
+void UBPW_UI_BaseWindow_C::STATIC_SetPageIconColor(int page)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetPageIconColor");
 
@@ -501,6 +512,7 @@ void UBPW_UI_BaseWindow_C::SetPageIconColor(int page)
 	params.page = page;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -509,11 +521,11 @@ void UBPW_UI_BaseWindow_C::SetPageIconColor(int page)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.InitPageIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            MaxPage                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::InitPageIcon(int MaxPage)
+void UBPW_UI_BaseWindow_C::STATIC_InitPageIcon(int MaxPage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.InitPageIcon");
 
@@ -529,11 +541,11 @@ void UBPW_UI_BaseWindow_C::InitPageIcon(int MaxPage)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetVisibilityPageCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ESlateVisibility               InVisibility                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::SetVisibilityPageCursor(ESlateVisibility InVisibility)
+void UBPW_UI_BaseWindow_C::STATIC_SetVisibilityPageCursor(ESlateVisibility InVisibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetVisibilityPageCursor");
 
@@ -541,6 +553,7 @@ void UBPW_UI_BaseWindow_C::SetVisibilityPageCursor(ESlateVisibility InVisibility
 	params.InVisibility = InVisibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -549,11 +562,11 @@ void UBPW_UI_BaseWindow_C::SetVisibilityPageCursor(ESlateVisibility InVisibility
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.FocusCategory
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            FocusNo                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::FocusCategory(int FocusNo)
+void UBPW_UI_BaseWindow_C::STATIC_FocusCategory(int FocusNo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.FocusCategory");
 
@@ -561,6 +574,7 @@ void UBPW_UI_BaseWindow_C::FocusCategory(int FocusNo)
 	params.FocusNo = FocusNo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -569,7 +583,7 @@ void UBPW_UI_BaseWindow_C::FocusCategory(int FocusNo)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.AddCategory
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 name_jp                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 name_eng                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -585,6 +599,7 @@ void UBPW_UI_BaseWindow_C::AddCategory(const struct FString& name_jp, const stru
 	params.str_col = str_col;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -593,11 +608,11 @@ void UBPW_UI_BaseWindow_C::AddCategory(const struct FString& name_jp, const stru
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetVisibility_PayIcon
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, MulticastDelegate, Protected, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           CanPay                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::SetVisibility_PayIcon(bool CanPay)
+void UBPW_UI_BaseWindow_C::STATIC_SetVisibility_PayIcon(bool CanPay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetVisibility_PayIcon");
 
@@ -605,6 +620,7 @@ void UBPW_UI_BaseWindow_C::SetVisibility_PayIcon(bool CanPay)
 	params.CanPay = CanPay;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -613,11 +629,11 @@ void UBPW_UI_BaseWindow_C::SetVisibility_PayIcon(bool CanPay)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetItemNum
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            ListItemNo                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::SetItemNum(int ListItemNo)
+void UBPW_UI_BaseWindow_C::STATIC_SetItemNum(int ListItemNo)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetItemNum");
 
@@ -625,6 +641,7 @@ void UBPW_UI_BaseWindow_C::SetItemNum(int ListItemNo)
 	params.ListItemNo = ListItemNo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -633,15 +650,16 @@ void UBPW_UI_BaseWindow_C::SetItemNum(int ListItemNo)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.DestroyWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UBPW_UI_BaseWindow_C::DestroyWidget()
+void UBPW_UI_BaseWindow_C::STATIC_DestroyWidget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.DestroyWidget");
 
 	UBPW_UI_BaseWindow_C_DestroyWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -650,7 +668,7 @@ void UBPW_UI_BaseWindow_C::DestroyWidget()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.PriceAnim
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, MulticastDelegate, Protected, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPW_UI_BaseWindow_C::PriceAnim()
 {
@@ -667,7 +685,7 @@ void UBPW_UI_BaseWindow_C::PriceAnim()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetPriceAnimeData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_BaseWindow_C::SetPriceAnimeData()
 {
@@ -676,6 +694,7 @@ void UBPW_UI_BaseWindow_C::SetPriceAnimeData()
 	UBPW_UI_BaseWindow_C_SetPriceAnimeData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -684,11 +703,11 @@ void UBPW_UI_BaseWindow_C::SetPriceAnimeData()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetUITitle
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   InText                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void UBPW_UI_BaseWindow_C::SetUITitle(const struct FText& InText)
+void UBPW_UI_BaseWindow_C::STATIC_SetUITitle(const struct FText& InText)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetUITitle");
 
@@ -704,12 +723,12 @@ void UBPW_UI_BaseWindow_C::SetUITitle(const struct FText& InText)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.AddHaveItem
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<int>                    BuyItemList                    (Parm, OutParm, ZeroConstructor)
 // int                            TotalItems                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::AddHaveItem(TArray<int>* BuyItemList, int* TotalItems)
+void UBPW_UI_BaseWindow_C::STATIC_AddHaveItem(TArray<int>* BuyItemList, int* TotalItems)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.AddHaveItem");
 
@@ -729,12 +748,12 @@ void UBPW_UI_BaseWindow_C::AddHaveItem(TArray<int>* BuyItemList, int* TotalItems
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetFocusItemPrice
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            FocusItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemPrice                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::GetFocusItemPrice(int FocusItem, int* ItemPrice)
+void UBPW_UI_BaseWindow_C::STATIC_GetFocusItemPrice(int FocusItem, int* ItemPrice)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetFocusItemPrice");
 
@@ -753,17 +772,18 @@ void UBPW_UI_BaseWindow_C::GetFocusItemPrice(int FocusItem, int* ItemPrice)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetTotalPrice
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Static, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::GetTotalPrice(int* Price)
+void UBPW_UI_BaseWindow_C::STATIC_GetTotalPrice(int* Price)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetTotalPrice");
 
 	UBPW_UI_BaseWindow_C_GetTotalPrice_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -775,12 +795,12 @@ void UBPW_UI_BaseWindow_C::GetTotalPrice(int* Price)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.CalcTotalPrice
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSubtraction                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::CalcTotalPrice(int PageIndex, bool IsSubtraction)
+void UBPW_UI_BaseWindow_C::STATIC_CalcTotalPrice(int PageIndex, bool IsSubtraction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.CalcTotalPrice");
 
@@ -797,7 +817,7 @@ void UBPW_UI_BaseWindow_C::CalcTotalPrice(int PageIndex, bool IsSubtraction)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetPriceIconPostion
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent)
 
 void UBPW_UI_BaseWindow_C::SetPriceIconPostion()
 {
@@ -806,6 +826,7 @@ void UBPW_UI_BaseWindow_C::SetPriceIconPostion()
 	UBPW_UI_BaseWindow_C_SetPriceIconPostion_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -814,7 +835,7 @@ void UBPW_UI_BaseWindow_C::SetPriceIconPostion()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetPriceText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Money                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -834,7 +855,7 @@ void UBPW_UI_BaseWindow_C::SetPriceText(int Money)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetFocusItemNum
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, NetResponse, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            FocusItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemNum                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -858,7 +879,7 @@ void UBPW_UI_BaseWindow_C::GetFocusItemNum(int FocusItem, int* ItemNum)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SubSelectItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, MulticastDelegate, Protected, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            FocusItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SubCount                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -879,18 +900,18 @@ void UBPW_UI_BaseWindow_C::SubSelectItem(int FocusItem, int SubCount)
 }
 
 
-// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.AddSelectItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.addSelectItem
+// (Net, NetResponse, Static, MulticastDelegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            FocusItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AddCount                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ItemListPage                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::AddSelectItem(int FocusItem, int AddCount, int ItemListPage)
+void UBPW_UI_BaseWindow_C::STATIC_addSelectItem(int FocusItem, int AddCount, int ItemListPage)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.AddSelectItem");
+	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.addSelectItem");
 
-	UBPW_UI_BaseWindow_C_AddSelectItem_Params params;
+	UBPW_UI_BaseWindow_C_addSelectItem_Params params;
 	params.FocusItem = FocusItem;
 	params.AddCount = AddCount;
 	params.ItemListPage = ItemListPage;
@@ -904,7 +925,7 @@ void UBPW_UI_BaseWindow_C::AddSelectItem(int FocusItem, int AddCount, int ItemLi
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetDescription
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   Description                    (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -916,6 +937,7 @@ void UBPW_UI_BaseWindow_C::SetDescription(const struct FText& Description)
 	params.Description = Description;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -924,7 +946,7 @@ void UBPW_UI_BaseWindow_C::SetDescription(const struct FText& Description)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetItemMesh
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, NetResponse, Public, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ItemId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -936,6 +958,7 @@ void UBPW_UI_BaseWindow_C::GetItemMesh(int ItemId)
 	params.ItemId = ItemId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -944,9 +967,9 @@ void UBPW_UI_BaseWindow_C::GetItemMesh(int ItemId)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.RotateViewItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_UI_BaseWindow_C::RotateViewItem()
+void UBPW_UI_BaseWindow_C::STATIC_RotateViewItem()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.RotateViewItem");
 
@@ -961,7 +984,7 @@ void UBPW_UI_BaseWindow_C::RotateViewItem()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SpawnViewItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Private, Protected, DLLImport, Const)
 
 void UBPW_UI_BaseWindow_C::SpawnViewItem()
 {
@@ -978,12 +1001,12 @@ void UBPW_UI_BaseWindow_C::SpawnViewItem()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetRowCol
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Static, NetMulticast, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            ItemListRow                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            ItemListCol                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::GetRowCol(int* ItemListRow, int* ItemListCol)
+void UBPW_UI_BaseWindow_C::STATIC_GetRowCol(int* ItemListRow, int* ItemListCol)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.GetRowCol");
 
@@ -1003,7 +1026,7 @@ void UBPW_UI_BaseWindow_C::GetRowCol(int* ItemListRow, int* ItemListCol)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.FocusItem
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            FocusItem                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1023,12 +1046,12 @@ void UBPW_UI_BaseWindow_C::FocusItem(int FocusItem)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetItemList
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// TArray<struct FST_ItemList>    ItemList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FST_ItemList>    itemList                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::SetItemList(int page, TArray<struct FST_ItemList>* ItemList)
+void UBPW_UI_BaseWindow_C::STATIC_SetItemList(int page, TArray<struct FST_ItemList>* itemList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.SetItemList");
 
@@ -1041,13 +1064,13 @@ void UBPW_UI_BaseWindow_C::SetItemList(int page, TArray<struct FST_ItemList>* It
 
 	fn->FunctionFlags = flags;
 
-	if (ItemList != nullptr)
-		*ItemList = params.ItemList;
+	if (itemList != nullptr)
+		*itemList = params.itemList;
 }
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.InitItemList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Private, Protected, DLLImport, Const)
 
 void UBPW_UI_BaseWindow_C::InitItemList()
 {
@@ -1064,11 +1087,11 @@ void UBPW_UI_BaseWindow_C::InitItemList()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Static, NetMulticast, Public, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDesignTime                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::PreConstruct(bool IsDesignTime)
+void UBPW_UI_BaseWindow_C::STATIC_PreConstruct(bool IsDesignTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.PreConstruct");
 
@@ -1084,15 +1107,16 @@ void UBPW_UI_BaseWindow_C::PreConstruct(bool IsDesignTime)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_UI_BaseWindow_C::Construct()
+void UBPW_UI_BaseWindow_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.Construct");
 
 	UBPW_UI_BaseWindow_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1101,12 +1125,12 @@ void UBPW_UI_BaseWindow_C::Construct()
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_BaseWindow_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_UI_BaseWindow_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.Tick");
 
@@ -1115,6 +1139,7 @@ void UBPW_UI_BaseWindow_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1123,7 +1148,7 @@ void UBPW_UI_BaseWindow_C::Tick(const struct FGeometry& MyGeometry, float InDelt
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ExecuteUbergraph_BPW_UI_BaseWindow
-// (HasDefaults)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1143,7 +1168,7 @@ void UBPW_UI_BaseWindow_C::ExecuteUbergraph_BPW_UI_BaseWindow(int EntryPoint)
 
 
 // Function BPW_UI_BaseWindow.BPW_UI_BaseWindow_C.ED_PriceAnimFinish__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPW_UI_BaseWindow_C::ED_PriceAnimFinish__DelegateSignature()
 {
@@ -1152,6 +1177,7 @@ void UBPW_UI_BaseWindow_C::ED_PriceAnimFinish__DelegateSignature()
 	UBPW_UI_BaseWindow_C_ED_PriceAnimFinish__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

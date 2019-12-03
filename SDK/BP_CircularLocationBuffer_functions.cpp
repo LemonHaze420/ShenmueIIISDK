@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.GetMaxDeviationDistSqr
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ float UBP_CircularLocationBuffer_C::GetMaxDeviationDistSqr()
 	UBP_CircularLocationBuffer_C_GetMaxDeviationDistSqr_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +36,11 @@ float UBP_CircularLocationBuffer_C::GetMaxDeviationDistSqr()
 
 
 // Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Protected, HasOutParms, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_CircularLocationBuffer_C::Update(float DeltaSeconds)
+void UBP_CircularLocationBuffer_C::STATIC_Update(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.Update");
 
@@ -55,7 +56,7 @@ void UBP_CircularLocationBuffer_C::Update(float DeltaSeconds)
 
 
 // Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.Initialize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // class USceneComponent*         PositionSource                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Samples                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -71,6 +72,7 @@ void UBP_CircularLocationBuffer_C::Initialize(class USceneComponent* PositionSou
 	params.WindowTime = WindowTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,7 +81,7 @@ void UBP_CircularLocationBuffer_C::Initialize(class USceneComponent* PositionSou
 
 
 // Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.CompletedWindow
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetServer, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -100,15 +102,16 @@ bool UBP_CircularLocationBuffer_C::CompletedWindow()
 
 
 // Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.Reset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBP_CircularLocationBuffer_C::Reset()
+void UBP_CircularLocationBuffer_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.Reset");
 
 	UBP_CircularLocationBuffer_C_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,17 +120,18 @@ void UBP_CircularLocationBuffer_C::Reset()
 
 
 // Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.GetAverageLocation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector UBP_CircularLocationBuffer_C::GetAverageLocation()
+struct FVector UBP_CircularLocationBuffer_C::STATIC_GetAverageLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.GetAverageLocation");
 
 	UBP_CircularLocationBuffer_C_GetAverageLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +142,7 @@ struct FVector UBP_CircularLocationBuffer_C::GetAverageLocation()
 
 
 // Function BP_CircularLocationBuffer.BP_CircularLocationBuffer_C.OnWindowCompleted__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void UBP_CircularLocationBuffer_C::OnWindowCompleted__DelegateSignature()
 {

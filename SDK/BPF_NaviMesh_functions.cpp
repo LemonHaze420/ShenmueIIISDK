@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_NaviMesh.BPF_NaviMesh_C.GetNavModifierVolumes
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, Native, MulticastDelegate, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class ANavModifierVolume*> Volumes                        (Parm, OutParm, ZeroConstructor)
 
-void UBPF_NaviMesh_C::STATIC_GetNavModifierVolumes(class UObject* __WorldContext, TArray<class ANavModifierVolume*>* Volumes)
+void UBPF_NaviMesh_C::GetNavModifierVolumes(class UObject* __WorldContext, TArray<class ANavModifierVolume*>* Volumes)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_NaviMesh.BPF_NaviMesh_C.GetNavModifierVolumes");
 
@@ -27,6 +27,7 @@ void UBPF_NaviMesh_C::STATIC_GetNavModifierVolumes(class UObject* __WorldContext
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

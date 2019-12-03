@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3GamemodeBase(class UObject* __WorldContext, class ABP_S3GamemodeBase_C** BP_S3GamemodeBase);
+	void getS3GamemodeBase(class UObject* __WorldContext, class ABP_S3GamemodeBase_C** BP_S3GamemodeBase);
 };
 
 

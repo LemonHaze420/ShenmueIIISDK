@@ -42,9 +42,9 @@ public:
 	void CullActors(class UbpS3CameraComp_C* Camera, TArray<class AActor*>* ActorList, TArray<class AActor*>* CulledActors);
 	void GetNearestAndFarthestActor(class UbpS3CameraComp_C* Camera, TArray<class AActor*>* ActorList, class AActor** NearestActor, class AActor** FarthestActor);
 	void ReceiveBeginPlay();
-	void ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
-	void Update();
-	void ExecuteUbergraph_BPC_AutoFocusing(int EntryPoint);
+	void STATIC_ChangeTarget(TArray<class AActor*> NewTarget, float lerpTime);
+	void STATIC_Update();
+	void STATIC_ExecuteUbergraph_BPC_AutoFocusing(int EntryPoint);
 };
 
 

@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.CalcCenter
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_BTL_Audience_C::CalcCenter()
+struct FVector ABP_BTL_Audience_C::STATIC_CalcCenter()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.CalcCenter");
 
 	ABP_BTL_Audience_C_CalcCenter_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,17 +36,18 @@ struct FVector ABP_BTL_Audience_C::CalcCenter()
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.PlayRandomCenterReaction
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // TArray<class USoundAtomCue*>   Sounds                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_BTL_Audience_C::PlayRandomCenterReaction(TArray<class USoundAtomCue*>* Sounds)
+void ABP_BTL_Audience_C::STATIC_PlayRandomCenterReaction(TArray<class USoundAtomCue*>* Sounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.PlayRandomCenterReaction");
 
 	ABP_BTL_Audience_C_PlayRandomCenterReaction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,11 +59,11 @@ void ABP_BTL_Audience_C::PlayRandomCenterReaction(TArray<class USoundAtomCue*>* 
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.PlayReaction
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // TArray<class USoundAtomCue*>   Sounds                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_BTL_Audience_C::PlayReaction(TArray<class USoundAtomCue*>* Sounds)
+void ABP_BTL_Audience_C::STATIC_PlayReaction(TArray<class USoundAtomCue*>* Sounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.PlayReaction");
 
@@ -79,11 +81,11 @@ void ABP_BTL_Audience_C::PlayReaction(TArray<class USoundAtomCue*>* Sounds)
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.IsActive
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, Static, Public, Delegate)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_BTL_Audience_C::IsActive()
+bool ABP_BTL_Audience_C::STATIC_IsActive()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.IsActive");
 
@@ -100,11 +102,11 @@ bool ABP_BTL_Audience_C::IsActive()
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.PlaySurroundSoundReactions
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // TArray<class USoundAtomCue*>   Sounds                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_BTL_Audience_C::PlaySurroundSoundReactions(TArray<class USoundAtomCue*>* Sounds)
+void ABP_BTL_Audience_C::STATIC_PlaySurroundSoundReactions(TArray<class USoundAtomCue*>* Sounds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.PlaySurroundSoundReactions");
 
@@ -122,7 +124,7 @@ void ABP_BTL_Audience_C::PlaySurroundSoundReactions(TArray<class USoundAtomCue*>
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.SetActive
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Active                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -134,6 +136,7 @@ void ABP_BTL_Audience_C::SetActive(bool Active)
 	params.Active = Active;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,9 +145,9 @@ void ABP_BTL_Audience_C::SetActive(bool Active)
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.ReactToHit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, Public, NetServer)
 
-void ABP_BTL_Audience_C::ReactToHit()
+void ABP_BTL_Audience_C::STATIC_ReactToHit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.ReactToHit");
 
@@ -159,9 +162,9 @@ void ABP_BTL_Audience_C::ReactToHit()
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.ReactToKO
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Static, Public, NetServer)
 
-void ABP_BTL_Audience_C::ReactToKO()
+void ABP_BTL_Audience_C::STATIC_ReactToKO()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.ReactToKO");
 
@@ -176,7 +179,7 @@ void ABP_BTL_Audience_C::ReactToKO()
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_BTL_Audience_C::UserConstructionScript()
 {
@@ -185,6 +188,7 @@ void ABP_BTL_Audience_C::UserConstructionScript()
 	ABP_BTL_Audience_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,9 +197,9 @@ void ABP_BTL_Audience_C::UserConstructionScript()
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.StartCooldownHit
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, Public, Delegate)
 
-void ABP_BTL_Audience_C::StartCooldownHit()
+void ABP_BTL_Audience_C::STATIC_StartCooldownHit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.StartCooldownHit");
 
@@ -210,9 +214,9 @@ void ABP_BTL_Audience_C::StartCooldownHit()
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.StartCooldownKO
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, Public, Delegate)
 
-void ABP_BTL_Audience_C::StartCooldownKO()
+void ABP_BTL_Audience_C::STATIC_StartCooldownKO()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_BTL_Audience.BP_BTL_Audience_C.StartCooldownKO");
 
@@ -227,7 +231,7 @@ void ABP_BTL_Audience_C::StartCooldownKO()
 
 
 // Function BP_BTL_Audience.BP_BTL_Audience_C.ExecuteUbergraph_BP_BTL_Audience
-// ()
+// (NetReliable, NetRequest, Exec, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

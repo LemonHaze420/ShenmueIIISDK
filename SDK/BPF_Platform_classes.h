@@ -25,7 +25,7 @@ public:
 	}
 
 
-	ES3Platform STATIC_GetVirtualUIPlatform(class UObject* __WorldContext);
+	ES3Platform GetVirtualUIPlatform(class UObject* __WorldContext);
 };
 
 

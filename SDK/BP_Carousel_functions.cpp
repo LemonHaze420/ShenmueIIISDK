@@ -13,18 +13,19 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Carousel.BP_Carousel_C.isBusy
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Function BP_Carousel.BP_Carousel_C.IsBusy
+// (Net, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Carousel_C::isBusy(bool* Result)
+void UBP_Carousel_C::STATIC_IsBusy(bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_Carousel.BP_Carousel_C.isBusy");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_Carousel.BP_Carousel_C.IsBusy");
 
-	UBP_Carousel_C_isBusy_Params params;
+	UBP_Carousel_C_IsBusy_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,13 +37,13 @@ void UBP_Carousel_C::isBusy(bool* Result)
 
 
 // Function BP_Carousel.BP_Carousel_C.GetDirectionFromString
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   Text                           (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           Reverse                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ECarouselRotate>   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<ECarouselRotate> UBP_Carousel_C::GetDirectionFromString(const struct FText& Text, bool Reverse)
+TEnumAsByte<ECarouselRotate> UBP_Carousel_C::STATIC_GetDirectionFromString(const struct FText& Text, bool Reverse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Carousel.BP_Carousel_C.GetDirectionFromString");
 
@@ -51,6 +52,7 @@ TEnumAsByte<ECarouselRotate> UBP_Carousel_C::GetDirectionFromString(const struct
 	params.Reverse = Reverse;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +63,7 @@ TEnumAsByte<ECarouselRotate> UBP_Carousel_C::GetDirectionFromString(const struct
 
 
 // Function BP_Carousel.BP_Carousel_C.RotateExec
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBP_Carousel_C::RotateExec()
 {
@@ -70,6 +72,7 @@ void UBP_Carousel_C::RotateExec()
 	UBP_Carousel_C_RotateExec_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +81,7 @@ void UBP_Carousel_C::RotateExec()
 
 
 // Function BP_Carousel.BP_Carousel_C.RequestRotate
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<ECarouselRotate>   Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -90,6 +93,7 @@ void UBP_Carousel_C::RequestRotate(TEnumAsByte<ECarouselRotate> Direction)
 	params.Direction = Direction;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,9 +102,9 @@ void UBP_Carousel_C::RequestRotate(TEnumAsByte<ECarouselRotate> Direction)
 
 
 // Function BP_Carousel.BP_Carousel_C.CreateActorList
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBP_Carousel_C::CreateActorList()
+void UBP_Carousel_C::STATIC_CreateActorList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Carousel.BP_Carousel_C.CreateActorList");
 
@@ -115,15 +119,16 @@ void UBP_Carousel_C::CreateActorList()
 
 
 // Function BP_Carousel.BP_Carousel_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBP_Carousel_C::ReceiveBeginPlay()
+void UBP_Carousel_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Carousel.BP_Carousel_C.ReceiveBeginPlay");
 
 	UBP_Carousel_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -132,7 +137,7 @@ void UBP_Carousel_C::ReceiveBeginPlay()
 
 
 // Function BP_Carousel.BP_Carousel_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -144,6 +149,7 @@ void UBP_Carousel_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -152,11 +158,11 @@ void UBP_Carousel_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Carousel.BP_Carousel_C.ExecuteUbergraph_BP_Carousel
-// ()
+// (NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Carousel_C::ExecuteUbergraph_BP_Carousel(int EntryPoint)
+void UBP_Carousel_C::STATIC_ExecuteUbergraph_BP_Carousel(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Carousel.BP_Carousel_C.ExecuteUbergraph_BP_Carousel");
 

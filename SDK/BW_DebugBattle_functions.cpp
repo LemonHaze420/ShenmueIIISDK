@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugBattle.BW_DebugBattle_C.BuildMenu
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBW_DebugBattle_C::BuildMenu()
 {
@@ -31,7 +31,7 @@ void UBW_DebugBattle_C::BuildMenu()
 
 
 // Function BW_DebugBattle.BW_DebugBattle_C.SetInitialFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBW_DebugBattle_C::SetInitialFocus()
 {
@@ -40,6 +40,7 @@ void UBW_DebugBattle_C::SetInitialFocus()
 	UBW_DebugBattle_C_SetInitialFocus_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,7 +49,7 @@ void UBW_DebugBattle_C::SetInitialFocus()
 
 
 // Function BW_DebugBattle.BW_DebugBattle_C.ExecuteUbergraph_BW_DebugBattle
-// ()
+// (Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -60,6 +61,7 @@ void UBW_DebugBattle_C::ExecuteUbergraph_BW_DebugBattle(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -51,32 +51,32 @@ public:
 
 	void StopTimeCountSE();
 	void PlayTimeCountSE();
-	float GetMaxOutAnimationLength();
+	float STATIC_GetMaxOutAnimationLength();
 	float GetInAnimationLength();
 	void InputEndSuccess();
 	void SetInputInterval(float Interval);
 	void PlayOutOk();
-	void GetActionNameFromKey(const struct FKey& InKey, struct FName* ActionName);
-	void UpdateInputTimer(float DeltaSeconds);
+	void STATIC_GetActionNameFromKey(const struct FKey& InKey, struct FName* ActionName);
+	void STATIC_UpdateInputTimer(float DeltaSeconds);
 	void SetUseRealTime(bool UseRealTime);
-	void CheckCommandSucceable(const struct FST_old_BattleQTEExperimentFreeCommand& FreeCommand, bool* Successable);
+	void STATIC_CheckCommandSucceable(const struct FST_old_BattleQTEExperimentFreeCommand& FreeCommand, bool* Successable);
 	void CheckCurrentInput(bool* Success);
 	struct FST_old_BattleQTEExperimentFreeCommand GetResultCommand();
 	bool IsInQTE();
 	void GetInputSuccessKey(const struct FName& Action, TArray<struct FKey>* SuccessKey);
 	void ClearResult();
-	void InputFunction(const struct FKey& InKey);
-	void InputEndFunction();
-	void InputStartFunction(float InInputLimitTime, TArray<struct FST_old_BattleQTEExperimentFreeCommand>* CommandList);
+	void STATIC_InputFunction(const struct FKey& InKey);
+	void STATIC_InputEndFunction();
+	void STATIC_InputStartFunction(float InInputLimitTime, TArray<struct FST_old_BattleQTEExperimentFreeCommand>* CommandList);
 	void EndFunction();
-	void Prepare();
-	void GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
+	void STATIC_Prepare();
+	void STATIC_GetButtonImage(const struct FName& InputName, class UTexture2D** Texture2D);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BPC_old_QTEFreeCommandComponent(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_old_QTEFreeCommandComponent(int EntryPoint);
 	void ButtonDown__DelegateSignature(bool Succeed);
 	void End__DelegateSignature();
-	void Success__DelegateSignature();
+	void STATIC_Success__DelegateSignature();
 };
 
 

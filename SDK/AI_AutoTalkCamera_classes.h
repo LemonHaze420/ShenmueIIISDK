@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_AI_AutoTalkCamera(int EntryPoint);
+	void STATIC_ExecuteUbergraph_AI_AutoTalkCamera(int EntryPoint);
 };
 
 

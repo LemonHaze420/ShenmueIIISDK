@@ -39,17 +39,17 @@ public:
 	}
 
 
-	void AddTicketItem();
+	void STATIC_AddTicketItem();
 	void GetTicketItemID(TEnumAsByte<E_MiniGameBigWheelType> Type, struct FName* Name);
-	void GetMaterial(TEnumAsByte<E_MiniGameBigWheelType> Type, class UMaterial** Value);
+	void STATIC_GetMaterial(TEnumAsByte<E_MiniGameBigWheelType> Type, class UMaterial** Value);
 	void UpdateTicketFlag();
 	void SpawnSecuencePlayer(class ULevelSequence* InSequence, class AActor* AttachActor, class ABP_SpawnableSequenceActor_C** SpawnObj);
 	void UserConstructionScript();
 	void StartGetKihudaFlow(const struct FTransform& OffsetRelativeTrans);
-	void OnFinishedGetKihuda(class ULevelSequencePlayer* LevelSequencePlayer);
+	void STATIC_OnFinishedGetKihuda(class ULevelSequencePlayer* LevelSequencePlayer);
 	void OnStoppedPlayer();
-	void ExecuteUbergraph_BP_MiniGameGetKihudaFlow(int EntryPoint);
-	void OnEndActorFlow__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BP_MiniGameGetKihudaFlow(int EntryPoint);
+	void STATIC_OnEndActorFlow__DelegateSignature();
 };
 
 

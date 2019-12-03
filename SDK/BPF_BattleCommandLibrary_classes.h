@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_ChangeBattleCommandLibrary(class UClass* Class, class UObject* __WorldContext);
+	void ChangeBattleCommandLibrary(class UClass* Class, class UObject* __WorldContext);
 	class UBTL_CommandLibrary_C* STATIC_GetS3BattleCommandLibrary(class UObject* __WorldContext);
 };
 

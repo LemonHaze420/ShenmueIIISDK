@@ -29,7 +29,7 @@ public:
 	}
 
 
-	void Construct();
+	void STATIC_Construct();
 	void ExecuteUbergraph_WBP_MemoPage_Map_Chobu_2(int EntryPoint);
 };
 

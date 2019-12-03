@@ -14,6 +14,41 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
+// Function MobilePatchingUtils.MobilePatchingLibrary.RequestContent
+struct UMobilePatchingLibrary_RequestContent_Params
+{
+	struct FString                                     RemoteManifestURL;                                        // (Parm, ZeroConstructor)
+	struct FString                                     CloudURL;                                                 // (Parm, ZeroConstructor)
+	struct FString                                     InstallDirectory;                                         // (Parm, ZeroConstructor)
+	struct FScriptDelegate                             OnSucceeded;                                              // (Parm, ZeroConstructor)
+	struct FScriptDelegate                             OnFailed;                                                 // (Parm, ZeroConstructor)
+};
+
+// Function MobilePatchingUtils.MobilePatchingLibrary.HasActiveWiFiConnection
+struct UMobilePatchingLibrary_HasActiveWiFiConnection_Params
+{
+	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MobilePatchingUtils.MobilePatchingLibrary.GetSupportedPlatformNames
+struct UMobilePatchingLibrary_GetSupportedPlatformNames_Params
+{
+	TArray<struct FString>                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
+// Function MobilePatchingUtils.MobilePatchingLibrary.GetInstalledContent
+struct UMobilePatchingLibrary_GetInstalledContent_Params
+{
+	struct FString                                     InstallDirectory;                                         // (Parm, ZeroConstructor)
+	class UMobileInstalledContent*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+};
+
+// Function MobilePatchingUtils.MobilePatchingLibrary.GetActiveDeviceProfileName
+struct UMobilePatchingLibrary_GetActiveDeviceProfileName_Params
+{
+	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
+};
+
 // Function MobilePatchingUtils.MobileInstalledContent.Mount
 struct UMobileInstalledContent_Mount_Params
 {
@@ -75,41 +110,6 @@ struct UMobilePendingContent_GetDownloadSpeed_Params
 struct UMobilePendingContent_GetDownloadSize_Params
 {
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MobilePatchingUtils.MobilePatchingLibrary.RequestContent
-struct UMobilePatchingLibrary_RequestContent_Params
-{
-	struct FString                                     RemoteManifestURL;                                        // (Parm, ZeroConstructor)
-	struct FString                                     CloudURL;                                                 // (Parm, ZeroConstructor)
-	struct FString                                     InstallDirectory;                                         // (Parm, ZeroConstructor)
-	struct FScriptDelegate                             OnSucceeded;                                              // (Parm, ZeroConstructor)
-	struct FScriptDelegate                             OnFailed;                                                 // (Parm, ZeroConstructor)
-};
-
-// Function MobilePatchingUtils.MobilePatchingLibrary.HasActiveWiFiConnection
-struct UMobilePatchingLibrary_HasActiveWiFiConnection_Params
-{
-	bool                                               ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MobilePatchingUtils.MobilePatchingLibrary.GetSupportedPlatformNames
-struct UMobilePatchingLibrary_GetSupportedPlatformNames_Params
-{
-	TArray<struct FString>                             ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
-};
-
-// Function MobilePatchingUtils.MobilePatchingLibrary.GetInstalledContent
-struct UMobilePatchingLibrary_GetInstalledContent_Params
-{
-	struct FString                                     InstallDirectory;                                         // (Parm, ZeroConstructor)
-	class UMobileInstalledContent*                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-};
-
-// Function MobilePatchingUtils.MobilePatchingLibrary.GetActiveDeviceProfileName
-struct UMobilePatchingLibrary_GetActiveDeviceProfileName_Params
-{
-	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
 }

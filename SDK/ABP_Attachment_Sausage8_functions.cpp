@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_Attachment_Sausage8.ABP_Attachment_Sausage8_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Attachment_Sausage8_AnimGraphNode_SequencePlayer_0DBFD8644696856D2FD246B8AA2661CC
-// (BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, NetValidate)
 
-void UABP_Attachment_Sausage8_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Attachment_Sausage8_AnimGraphNode_SequencePlayer_0DBFD8644696856D2FD246B8AA2661CC()
+void UABP_Attachment_Sausage8_C::STATIC_EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Attachment_Sausage8_AnimGraphNode_SequencePlayer_0DBFD8644696856D2FD246B8AA2661CC()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function ABP_Attachment_Sausage8.ABP_Attachment_Sausage8_C.EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Attachment_Sausage8_AnimGraphNode_SequencePlayer_0DBFD8644696856D2FD246B8AA2661CC");
 
@@ -31,7 +31,7 @@ void UABP_Attachment_Sausage8_C::EvaluateGraphExposedInputs_ExecuteUbergraph_ABP
 
 
 // Function ABP_Attachment_Sausage8.ABP_Attachment_Sausage8_C.ExecuteUbergraph_ABP_Attachment_Sausage8
-// ()
+// (NetReliable, Exec, Native, NetMulticast, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -43,6 +43,7 @@ void UABP_Attachment_Sausage8_C::ExecuteUbergraph_ABP_Attachment_Sausage8(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

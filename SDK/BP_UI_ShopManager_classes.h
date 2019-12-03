@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_UI_ShopManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_UI_ShopManager(int EntryPoint);
 };
 
 

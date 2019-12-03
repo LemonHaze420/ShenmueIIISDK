@@ -26,8 +26,8 @@ public:
 
 
 	void STATIC_BPF_UpdateMemopadShoulderUIGlow2(class UMaterialInstanceDynamic* Material, float Alpha, bool bInteractable, class UObject* __WorldContext);
-	void STATIC_BPF_UpdateMemopadShoulderUIGlow(class UMaterialInstanceDynamic* Material, class UImage* AlphaSource, bool bInteractable, class UObject* __WorldContext);
-	void STATIC_BPF_InitMemopadShoulderUI(class UImage* Right, class UImage* Left, class UObject* __WorldContext, class UMaterialInstanceDynamic** RightMaterial, class UMaterialInstanceDynamic** LeftMaterial);
+	void BPF_UpdateMemopadShoulderUIGlow(class UMaterialInstanceDynamic* Material, class UImage* AlphaSource, bool bInteractable, class UObject* __WorldContext);
+	void BPF_InitMemopadShoulderUI(class UImage* Right, class UImage* Left, class UObject* __WorldContext, class UMaterialInstanceDynamic** RightMaterial, class UMaterialInstanceDynamic** LeftMaterial);
 };
 
 

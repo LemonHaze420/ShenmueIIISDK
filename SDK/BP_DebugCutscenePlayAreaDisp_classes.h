@@ -33,12 +33,12 @@ public:
 	}
 
 
-	void UpdateWidgetText(class UWidgetComponent* InWidget);
+	void STATIC_UpdateWidgetText(class UWidgetComponent* InWidget);
 	void UpdateAllWidgetText();
 	void UpdateSphereScale();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_DebugCutscenePlayAreaDisp(int EntryPoint);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_DebugCutscenePlayAreaDisp(int EntryPoint);
 };
 
 

@@ -32,14 +32,14 @@ public:
 	}
 
 
-	void ChangeHide_Owner(bool Hide);
+	void STATIC_ChangeHide_Owner(bool Hide);
 	void CheckStep_MinMax(int MinStep, int MaxStep, bool* Result);
 	void LocalEvt_ChangeStep(int SetSteps);
 	void ReceiveTick(float DeltaSeconds);
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void StartIn();
-	void ExecuteUbergraph_BP_HideInStep_Template(int EntryPoint);
+	void STATIC_StartIn();
+	void STATIC_ExecuteUbergraph_BP_HideInStep_Template(int EntryPoint);
 };
 
 

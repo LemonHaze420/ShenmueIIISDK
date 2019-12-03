@@ -34,9 +34,9 @@ public:
 
 
 	void GetSubAnimCharacterBase(class USubABP_CharacterBase_C** AsSub_ABP_Character_Base);
-	void OwnerStopAnimation();
-	void OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class UObject* Loaded);
-	void ReceiveBeginPlay();
+	void STATIC_OwnerStopAnimation();
+	void STATIC_OnLoaded_D61EDC7B437B6BD78FA87FAB93DFA5D1(class UObject* Loaded);
+	void STATIC_ReceiveBeginPlay();
 	void PlayReactionAnimation(int ReactionId, float PlayRate, float BlendWeights, int ReturnFlag);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BPC_TalkReaction(int EntryPoint);

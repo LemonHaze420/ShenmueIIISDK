@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_BattleCommandLibrary.BPF_BattleCommandLibrary_C.ChangeBattleCommandLibrary
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, Private, Delegate, HasOutParms, BlueprintEvent)
 // Parameters:
 // class UClass*                  Class                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_BattleCommandLibrary_C::STATIC_ChangeBattleCommandLibrary(class UClass* Class, class UObject* __WorldContext)
+void UBPF_BattleCommandLibrary_C::ChangeBattleCommandLibrary(class UClass* Class, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_BattleCommandLibrary.BPF_BattleCommandLibrary_C.ChangeBattleCommandLibrary");
 
@@ -28,6 +28,7 @@ void UBPF_BattleCommandLibrary_C::STATIC_ChangeBattleCommandLibrary(class UClass
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void UBPF_BattleCommandLibrary_C::STATIC_ChangeBattleCommandLibrary(class UClass
 
 
 // Function BPF_BattleCommandLibrary.BPF_BattleCommandLibrary_C.GetS3BattleCommandLibrary
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, NetResponse, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBTL_CommandLibrary_C*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

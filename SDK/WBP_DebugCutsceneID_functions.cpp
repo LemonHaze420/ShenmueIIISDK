@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugCutsceneID.WBP_DebugCutsceneID_C.Update
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, NetServer, NetClient, Const)
 
 void UWBP_DebugCutsceneID_C::Update()
 {
@@ -31,15 +31,16 @@ void UWBP_DebugCutsceneID_C::Update()
 
 
 // Function WBP_DebugCutsceneID.WBP_DebugCutsceneID_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Native, NetResponse, Static, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugCutsceneID_C::Construct()
+void UWBP_DebugCutsceneID_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugCutsceneID.WBP_DebugCutsceneID_C.Construct");
 
 	UWBP_DebugCutsceneID_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,12 +49,12 @@ void UWBP_DebugCutsceneID_C::Construct()
 
 
 // Function WBP_DebugCutsceneID.WBP_DebugCutsceneID_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_DebugCutsceneID_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_DebugCutsceneID_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugCutsceneID.WBP_DebugCutsceneID_C.Tick");
 
@@ -62,6 +63,7 @@ void UWBP_DebugCutsceneID_C::Tick(const struct FGeometry& MyGeometry, float InDe
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,7 +72,7 @@ void UWBP_DebugCutsceneID_C::Tick(const struct FGeometry& MyGeometry, float InDe
 
 
 // Function WBP_DebugCutsceneID.WBP_DebugCutsceneID_C.ExecuteUbergraph_WBP_DebugCutsceneID
-// (HasDefaults)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -82,6 +84,7 @@ void UWBP_DebugCutsceneID_C::ExecuteUbergraph_WBP_DebugCutsceneID(int EntryPoint
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

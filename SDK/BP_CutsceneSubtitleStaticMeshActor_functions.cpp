@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_CutsceneSubtitleStaticMeshActor.BP_CutsceneSubtitleStaticMeshActor_C.GetSubtitleCharaName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, Exec, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // struct FName                   newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,7 +36,7 @@ void ABP_CutsceneSubtitleStaticMeshActor_C::GetSubtitleCharaName(struct FName* n
 
 
 // Function BP_CutsceneSubtitleStaticMeshActor.BP_CutsceneSubtitleStaticMeshActor_C.UpdateSubtitleWidget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FName>           Labels                         (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -47,6 +47,7 @@ void ABP_CutsceneSubtitleStaticMeshActor_C::UpdateSubtitleWidget(TArray<struct F
 	ABP_CutsceneSubtitleStaticMeshActor_C_UpdateSubtitleWidget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +59,7 @@ void ABP_CutsceneSubtitleStaticMeshActor_C::UpdateSubtitleWidget(TArray<struct F
 
 
 // Function BP_CutsceneSubtitleStaticMeshActor.BP_CutsceneSubtitleStaticMeshActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_CutsceneSubtitleStaticMeshActor_C::UserConstructionScript()
 {

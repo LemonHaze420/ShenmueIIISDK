@@ -41,21 +41,21 @@ public:
 
 
 	void CheckResult(TEnumAsByte<EN_UseItemResult>* Result, bool* ConsumeFlag);
-	void GiftChangePage(int Value);
-	void MakeCanUseItemIDList();
-	void InitItemDataLength();
-	void MakeItemIDList();
-	void UserConstructionScript();
+	void STATIC_GiftChangePage(int Value);
+	void STATIC_MakeCanUseItemIDList();
+	void STATIC_InitItemDataLength();
+	void STATIC_MakeItemIdList();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void CheckVisibleAddButton();
 	void CheckVisibleSubButton();
 	void PushAddSubButtonAfter();
-	void PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton);
+	void STATIC_PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton);
 	void BeforDestroy();
 	void SetShopName(int ShopID);
-	void ExecuteUbergraph_BP_UI_GiftManager(int EntryPoint);
-	void INFO_SuccessItem__DelegateSignature(int ItemList);
-	void ED_UseItem__DelegateSignature(TEnumAsByte<EN_UseItemResult> Result);
+	void STATIC_ExecuteUbergraph_BP_UI_GiftManager(int EntryPoint);
+	void STATIC_INFO_SuccessItem__DelegateSignature(int itemList);
+	void STATIC_ED_UseItem__DelegateSignature(TEnumAsByte<EN_UseItemResult> Result);
 };
 
 

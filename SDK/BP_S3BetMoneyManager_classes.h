@@ -55,12 +55,12 @@ public:
 	int GetPriority();
 	TArray<struct FS3DetectActionParam> GetDetectAction();
 	void CalcPrice(int Price);
-	void PressButton();
+	void STATIC_PressButton();
 	void UpdCurrentNum();
-	void AllDestroy();
-	void ReturnStatus();
+	void STATIC_AllDestroy();
+	void STATIC_ReturnStatus();
 	void ChangeStatus();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key);
 	void InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key);
 	void InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14(const struct FKey& Key);

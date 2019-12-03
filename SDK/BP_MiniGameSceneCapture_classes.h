@@ -32,8 +32,8 @@ public:
 	void GetMaterial(class UMaterialInstanceDynamic** UseMaterial);
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_MiniGameSceneCapture(int EntryPoint);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ExecuteUbergraph_BP_MiniGameSceneCapture(int EntryPoint);
 };
 
 

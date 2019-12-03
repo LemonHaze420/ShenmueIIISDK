@@ -30,8 +30,8 @@ public:
 	}
 
 
-	TArray<class UTexture2D*> GetArray();
-	void GetImageByPadIndex(ES3PadButtonIndex Index, class UTexture2D** Texture);
+	TArray<class UTexture2D*> STATIC_GetArray();
+	void STATIC_GetImageByPadIndex(ES3PadButtonIndex Index, class UTexture2D** Texture);
 };
 
 

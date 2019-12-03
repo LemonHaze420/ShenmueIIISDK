@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPI_MiniGame.BPI_MiniGame_C.GetMiniGameValueType
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_ValueType>      Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_MiniGame_C::GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type)
+void UBPI_MiniGame_C::STATIC_GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.GetMiniGameValueType");
 
 	UBPI_MiniGame_C_GetMiniGameValueType_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void UBPI_MiniGame_C::GetMiniGameValueType(TEnumAsByte<EN_ValueType>* Type)
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.FinalizeTalk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPI_MiniGame_C::FinalizeTalk()
+void UBPI_MiniGame_C::STATIC_FinalizeTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.FinalizeTalk");
 
 	UBPI_MiniGame_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,9 +55,9 @@ void UBPI_MiniGame_C::FinalizeTalk()
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.RestartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPI_MiniGame_C::RestartMiniGame()
+void UBPI_MiniGame_C::STATIC_RestartMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.RestartMiniGame");
 
@@ -70,11 +72,11 @@ void UBPI_MiniGame_C::RestartMiniGame()
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.EnterMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          EnterTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPI_MiniGame_C::EnterMiniGame(float EnterTime)
+void UBPI_MiniGame_C::STATIC_EnterMiniGame(float EnterTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.EnterMiniGame");
 
@@ -90,9 +92,9 @@ void UBPI_MiniGame_C::EnterMiniGame(float EnterTime)
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.DrawMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPI_MiniGame_C::DrawMiniGame()
+void UBPI_MiniGame_C::STATIC_DrawMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.DrawMiniGame");
 
@@ -107,9 +109,9 @@ void UBPI_MiniGame_C::DrawMiniGame()
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.LoseMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPI_MiniGame_C::LoseMiniGame()
+void UBPI_MiniGame_C::STATIC_LoseMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.LoseMiniGame");
 
@@ -124,9 +126,9 @@ void UBPI_MiniGame_C::LoseMiniGame()
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.WinMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPI_MiniGame_C::WinMiniGame()
+void UBPI_MiniGame_C::STATIC_WinMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.WinMiniGame");
 
@@ -141,9 +143,9 @@ void UBPI_MiniGame_C::WinMiniGame()
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPI_MiniGame_C::EndMiniGame()
+void UBPI_MiniGame_C::STATIC_EndMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.EndMiniGame");
 
@@ -158,9 +160,9 @@ void UBPI_MiniGame_C::EndMiniGame()
 
 
 // Function BPI_MiniGame.BPI_MiniGame_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UBPI_MiniGame_C::StartMiniGame()
+void UBPI_MiniGame_C::STATIC_StartMiniGame()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPI_MiniGame.BPI_MiniGame_C.StartMiniGame");
 

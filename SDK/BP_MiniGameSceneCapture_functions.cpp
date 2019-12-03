@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.GetMaterial
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, NetServer)
 // Parameters:
 // class UMaterialInstanceDynamic* UseMaterial                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_MiniGameSceneCapture_C::GetMaterial(class UMaterialInstanceDynamic** Us
 	ABP_MiniGameSceneCapture_C_GetMaterial_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_MiniGameSceneCapture_C::GetMaterial(class UMaterialInstanceDynamic** Us
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_MiniGameSceneCapture_C::UserConstructionScript()
 {
@@ -45,6 +46,7 @@ void ABP_MiniGameSceneCapture_C::UserConstructionScript()
 	ABP_MiniGameSceneCapture_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +55,7 @@ void ABP_MiniGameSceneCapture_C::UserConstructionScript()
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetServer)
 
 void ABP_MiniGameSceneCapture_C::ReceiveBeginPlay()
 {
@@ -62,6 +64,7 @@ void ABP_MiniGameSceneCapture_C::ReceiveBeginPlay()
 	ABP_MiniGameSceneCapture_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,11 +73,11 @@ void ABP_MiniGameSceneCapture_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameSceneCapture_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGameSceneCapture_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ReceiveEndPlay");
 
@@ -82,6 +85,7 @@ void ABP_MiniGameSceneCapture_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndP
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,11 +94,11 @@ void ABP_MiniGameSceneCapture_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndP
 
 
 // Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ExecuteUbergraph_BP_MiniGameSceneCapture
-// ()
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Public, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGameSceneCapture_C::ExecuteUbergraph_BP_MiniGameSceneCapture(int EntryPoint)
+void ABP_MiniGameSceneCapture_C::STATIC_ExecuteUbergraph_BP_MiniGameSceneCapture(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGameSceneCapture.BP_MiniGameSceneCapture_C.ExecuteUbergraph_BP_MiniGameSceneCapture");
 
@@ -102,6 +106,7 @@ void ABP_MiniGameSceneCapture_C::ExecuteUbergraph_BP_MiniGameSceneCapture(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

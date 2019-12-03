@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.JudgeBgm
-struct ABP_S3BgmArea_dayTime_C_JudgeBgm_Params
+// Function BP_S3BgmArea_dayTime.BP_S3BgmArea_dayTime_C.JudgeBGM
+struct ABP_S3BgmArea_dayTime_C_JudgeBGM_Params
 {
 	ES3DayTimeEvent                                    NewEvent;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

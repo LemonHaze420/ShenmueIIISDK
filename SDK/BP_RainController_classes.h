@@ -32,16 +32,16 @@ public:
 	}
 
 
-	void ToggleDebugDisplay();
+	void STATIC_ToggleDebugDisplay();
 	void GetMaterialParams(struct FS3RainParam* RainParam);
-	void ResetMaterialParams();
-	void SetMaterialParams(float Strength1, float Strength2, float Strength3, float Speed, float OpacityMultiplier);
-	void UserConstructionScript();
-	void InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2(const struct FKey& Key);
+	void STATIC_ResetMaterialParams();
+	void STATIC_SetMaterialParams(float Strength1, float Strength2, float Strength3, float Speed, float OpacityMultiplier);
+	void STATIC_UserConstructionScript();
+	void STATIC_InpActEvt_Ctrl_R_K2Node_InputKeyEvent_2(const struct FKey& Key);
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ToggleDisplay();
-	void ExecuteUbergraph_BP_RainController(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_RainController(int EntryPoint);
 };
 
 

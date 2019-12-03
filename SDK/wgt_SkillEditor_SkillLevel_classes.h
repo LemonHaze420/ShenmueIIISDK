@@ -42,13 +42,13 @@ public:
 
 
 	void SetLevelData(int Level, float Progress, int MaxLevel, bool* LevelChanged, bool* ProgressChanged);
-	void RefreshLevel();
+	void STATIC_RefreshLevel();
 	void SetMasterLevel(int Value);
 	bool IsMasterLevel(int A);
 	void PlayLevelUpAnimation();
-	void SetLevel(int Level, bool* LevelChanged);
+	void STATIC_SetLevel(int Level, bool* LevelChanged);
 	void SetFillRatio(float FillRatio, bool* Changed);
-	void Construct();
+	void STATIC_Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_SkillEditor_SkillLevel(int EntryPoint);

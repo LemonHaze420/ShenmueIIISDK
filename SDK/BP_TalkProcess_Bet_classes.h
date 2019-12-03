@@ -35,7 +35,7 @@ public:
 	void CreateBetUI(int bet, int maxbet, int FluctuationValue, TEnumAsByte<EN_ValueType> Type);
 	void Finalize();
 	void Activate();
-	void ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_TalkProcess_Bet(int EntryPoint);
 };
 
 

@@ -29,7 +29,7 @@ public:
 	void STATIC_BPF_InitializeTrainingLevelUpData(class UObject* __WorldContext, struct FST_SparringResultLevelUpData* Player, struct FST_SparringResultLevelUpData* ATK, struct FST_SparringResultLevelUpData* VIT);
 	bool STATIC_BPF_ShouldShowExpHintPostTraining(class UObject* __WorldContext);
 	void STATIC_BPF_CalcPlayerExpModifer_Energy_Lerp(float Min, float Max, class UObject* __WorldContext, float* Multiplier);
-	void STATIC_BPF_DebugLogPlayerExpModifier(class UObject* __WorldContext);
+	void BPF_DebugLogPlayerExpModifier(class UObject* __WorldContext);
 	void STATIC_BPF_CalcPlayerExpModifier_Energy(class UObject* __WorldContext, float* Multiplier);
 	float STATIC_BPF_CalcPlayerExpModifier_Difficulty(class UObject* __WorldContext);
 	float STATIC_BPF_CalcPlayerExpModifier(class UObject* __WorldContext);

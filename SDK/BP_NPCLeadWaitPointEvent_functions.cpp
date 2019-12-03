@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.IsStillValidToWait
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Exec, NetResponse, Static, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_NPCLeadWaitPointEvent_C::IsStillValidToWait()
+bool ABP_NPCLeadWaitPointEvent_C::STATIC_IsStillValidToWait()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.IsStillValidToWait");
 
@@ -35,11 +35,11 @@ bool ABP_NPCLeadWaitPointEvent_C::IsStillValidToWait()
 
 
 // Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.StartEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_NPCLeadWaitPointEvent_C::StartEvent(bool* Success)
+void ABP_NPCLeadWaitPointEvent_C::STATIC_StartEvent(bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.StartEvent");
 
@@ -57,9 +57,9 @@ void ABP_NPCLeadWaitPointEvent_C::StartEvent(bool* Success)
 
 
 // Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ABP_NPCLeadWaitPointEvent_C::UserConstructionScript()
+void ABP_NPCLeadWaitPointEvent_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_NPCLeadWaitPointEvent.BP_NPCLeadWaitPointEvent_C.UserConstructionScript");
 

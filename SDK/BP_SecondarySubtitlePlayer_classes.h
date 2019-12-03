@@ -30,14 +30,14 @@ public:
 
 	TArray<struct FString> ConvertDisplayTextArray(const struct FName& CharaName, TArray<struct FString>* BaseTextArray);
 	struct FString GetSubtitleCharaNameString(const struct FName& InCharaName);
-	void Stop();
-	void Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName);
+	void STATIC_Stop();
+	void STATIC_Play(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName);
 	void SetSubtitlesWidgetVisible(bool IsVisible);
 	void FinalizeSubtitlesWidget();
-	void CreateSubtitlesWidget();
+	void STATIC_CreateSubtitlesWidget();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_SecondarySubtitlePlayer(int EntryPoint);
 };
 

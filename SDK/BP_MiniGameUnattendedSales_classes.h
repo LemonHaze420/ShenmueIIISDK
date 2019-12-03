@@ -33,10 +33,10 @@ public:
 
 
 	struct FName GetHelpName();
-	struct FVector GetSightCheckLocation();
-	void UserConstructionScript();
+	struct FVector STATIC_GetSightCheckLocation();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_MiniGameUnattendedSales(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGameUnattendedSales(int EntryPoint);
 };
 
 

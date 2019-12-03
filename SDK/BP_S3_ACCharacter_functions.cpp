@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.LoadSkeletalMesh
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USkeletalMesh*           Mesh                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -36,14 +36,14 @@ void ABP_S3_ACCharacter_C::LoadSkeletalMesh(class USkeletalMesh** Mesh)
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.GetNPCMesh
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FName                   CharacterName                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3NPCDefinition*        Definition                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class USkeletalMesh*           Mesh                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_ACCharacter_C::GetNPCMesh(const struct FName& CharacterName, class US3NPCDefinition* Definition, bool* Success, class USkeletalMesh** Mesh)
+void ABP_S3_ACCharacter_C::STATIC_GetNPCMesh(const struct FName& CharacterName, class US3NPCDefinition* Definition, bool* Success, class USkeletalMesh** Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.GetNPCMesh");
 
@@ -52,6 +52,7 @@ void ABP_S3_ACCharacter_C::GetNPCMesh(const struct FName& CharacterName, class U
 	params.Definition = Definition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,7 +66,7 @@ void ABP_S3_ACCharacter_C::GetNPCMesh(const struct FName& CharacterName, class U
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.Detach
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3_ACCharacter_C::Detach()
 {
@@ -82,17 +83,18 @@ void ABP_S3_ACCharacter_C::Detach()
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.AttachSetting
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // class US3NPCDefinition*        Definition                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void ABP_S3_ACCharacter_C::AttachSetting(class US3NPCDefinition** Definition)
+void ABP_S3_ACCharacter_C::STATIC_AttachSetting(class US3NPCDefinition** Definition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.AttachSetting");
 
 	ABP_S3_ACCharacter_C_AttachSetting_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,11 +106,11 @@ void ABP_S3_ACCharacter_C::AttachSetting(class US3NPCDefinition** Definition)
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.IsTalking
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3_ACCharacter_C::IsTalking()
+bool ABP_S3_ACCharacter_C::STATIC_IsTalking()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.IsTalking");
 
@@ -125,7 +127,7 @@ bool ABP_S3_ACCharacter_C::IsTalking()
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.InitCharacter
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -149,7 +151,7 @@ void ABP_S3_ACCharacter_C::InitCharacter(const struct FName& CharaName, bool* Su
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3_ACCharacter_C::UserConstructionScript()
 {
@@ -158,6 +160,7 @@ void ABP_S3_ACCharacter_C::UserConstructionScript()
 	ABP_S3_ACCharacter_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +169,7 @@ void ABP_S3_ACCharacter_C::UserConstructionScript()
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.Init
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FName                   Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,6 +181,7 @@ void ABP_S3_ACCharacter_C::Init(const struct FName& Name)
 	params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -186,7 +190,7 @@ void ABP_S3_ACCharacter_C::Init(const struct FName& Name)
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.Finalize
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_ACCharacter_C::Finalize()
 {
@@ -195,6 +199,7 @@ void ABP_S3_ACCharacter_C::Finalize()
 	ABP_S3_ACCharacter_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,7 +208,7 @@ void ABP_S3_ACCharacter_C::Finalize()
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_ACCharacter_C::ReceiveBeginPlay()
 {
@@ -212,6 +217,7 @@ void ABP_S3_ACCharacter_C::ReceiveBeginPlay()
 	ABP_S3_ACCharacter_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -220,7 +226,7 @@ void ABP_S3_ACCharacter_C::ReceiveBeginPlay()
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -232,6 +238,7 @@ void ABP_S3_ACCharacter_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -240,7 +247,7 @@ void ABP_S3_ACCharacter_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.OnTalkStart
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -252,6 +259,7 @@ void ABP_S3_ACCharacter_C::OnTalkStart(class US3TalkComponent* TalkComponent)
 	params.TalkComponent = TalkComponent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -260,12 +268,12 @@ void ABP_S3_ACCharacter_C::OnTalkStart(class US3TalkComponent* TalkComponent)
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.OnTalkFinished
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_ACCharacter_C::OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted)
+void ABP_S3_ACCharacter_C::STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.OnTalkFinished");
 
@@ -282,7 +290,7 @@ void ABP_S3_ACCharacter_C::OnTalkFinished(class US3TalkComponent* TalkComponent,
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.Screen_Player
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_ACCharacter_C::Screen_Player()
 {
@@ -291,6 +299,7 @@ void ABP_S3_ACCharacter_C::Screen_Player()
 	ABP_S3_ACCharacter_C_Screen_Player_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -299,7 +308,7 @@ void ABP_S3_ACCharacter_C::Screen_Player()
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.Screen_NPC
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3_ACCharacter_C::Screen_NPC()
 {
@@ -308,6 +317,7 @@ void ABP_S3_ACCharacter_C::Screen_NPC()
 	ABP_S3_ACCharacter_C_Screen_NPC_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -316,11 +326,11 @@ void ABP_S3_ACCharacter_C::Screen_NPC()
 
 
 // Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.ExecuteUbergraph_BP_S3_ACCharacter
-// (HasDefaults)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3_ACCharacter_C::ExecuteUbergraph_BP_S3_ACCharacter(int EntryPoint)
+void ABP_S3_ACCharacter_C::STATIC_ExecuteUbergraph_BP_S3_ACCharacter(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3_ACCharacter.BP_S3_ACCharacter_C.ExecuteUbergraph_BP_S3_ACCharacter");
 
@@ -328,6 +338,7 @@ void ABP_S3_ACCharacter_C::ExecuteUbergraph_BP_S3_ACCharacter(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

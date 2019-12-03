@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PC_OnGroundFootRight.PC_OnGroundFootRight_C.Received_NotifyTick
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FrameDeltaTime                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPC_OnGroundFootRight_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
+bool UPC_OnGroundFootRight_C::STATIC_Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_OnGroundFootRight.PC_OnGroundFootRight_C.Received_NotifyTick");
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_DressMode_Form.BPW_UI_DressMode_Form_C.ScrollSetting
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,6 +26,7 @@ void UBPW_UI_DressMode_Form_C::ScrollSetting(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,13 +35,13 @@ void UBPW_UI_DressMode_Form_C::ScrollSetting(int Index)
 
 
 // Function BPW_UI_DressMode_Form.BPW_UI_DressMode_Form_C.SetButtonFocusAndSelect
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsFocus                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSelect                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_Form_C::SetButtonFocusAndSelect(int Index, bool IsFocus, bool IsSelect)
+void UBPW_UI_DressMode_Form_C::STATIC_SetButtonFocusAndSelect(int Index, bool IsFocus, bool IsSelect)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Form.BPW_UI_DressMode_Form_C.SetButtonFocusAndSelect");
 
@@ -58,7 +59,7 @@ void UBPW_UI_DressMode_Form_C::SetButtonFocusAndSelect(int Index, bool IsFocus, 
 
 
 // Function BPW_UI_DressMode_Form.BPW_UI_DressMode_Form_C.InitButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UTexture2D*              Texture                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -78,7 +79,7 @@ void UBPW_UI_DressMode_Form_C::InitButton(class UTexture2D* Texture)
 
 
 // Function BPW_UI_DressMode_Form.BPW_UI_DressMode_Form_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
 void UBPW_UI_DressMode_Form_C::Construct()
 {
@@ -95,7 +96,7 @@ void UBPW_UI_DressMode_Form_C::Construct()
 
 
 // Function BPW_UI_DressMode_Form.BPW_UI_DressMode_Form_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -117,7 +118,7 @@ void UBPW_UI_DressMode_Form_C::Tick(const struct FGeometry& MyGeometry, float In
 
 
 // Function BPW_UI_DressMode_Form.BPW_UI_DressMode_Form_C.ExecuteUbergraph_BPW_UI_DressMode_Form
-// (HasDefaults)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

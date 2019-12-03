@@ -27,12 +27,12 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_MG_Top_K2Node_InputActionEvent_7(const struct FKey& Key);
 	void InpActEvt_MG_Bottom_K2Node_InputActionEvent_6(const struct FKey& Key);
 	void InpActEvt_MG_ButtonBottom_K2Node_InputActionEvent_5(const struct FKey& Key);
-	void ExecuteUbergraph_BP_MiniGame_KungFuBase_Input(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGame_KungFuBase_Input(int EntryPoint);
 };
 
 

@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HW_Input.BP_HW_Input_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_HW_Input_C::UserConstructionScript()
+void ABP_HW_Input_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Input.BP_HW_Input_C.UserConstructionScript");
 
 	ABP_HW_Input_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void ABP_HW_Input_C::UserConstructionScript()
 
 
 // Function BP_HW_Input.BP_HW_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_4
-// (BlueprintEvent)
+// (NetReliable, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_HW_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key)
+void ABP_HW_Input_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Input.BP_HW_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_4");
 
@@ -51,11 +52,11 @@ void ABP_HW_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_4(const struct FKe
 
 
 // Function BP_HW_Input.BP_HW_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_3
-// (BlueprintEvent)
+// (Net, Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_HW_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key)
+void ABP_HW_Input_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Input.BP_HW_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_3");
 
@@ -71,11 +72,11 @@ void ABP_HW_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_3(const struct 
 
 
 // Function BP_HW_Input.BP_HW_Input_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HW_Input_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_HW_Input_C::STATIC_InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Input.BP_HW_Input_C.InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1");
 
@@ -83,6 +84,7 @@ void ABP_HW_Input_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,7 +93,7 @@ void ABP_HW_Input_C::InpAxisEvt_MG_RightStickHorizontal_K2Node_InputAxisEvent_1(
 
 
 // Function BP_HW_Input.BP_HW_Input_C.ExecuteUbergraph_BP_HW_Input
-// (HasDefaults)
+// (Net, NetReliable, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

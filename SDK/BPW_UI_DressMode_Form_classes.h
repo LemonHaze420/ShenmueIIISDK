@@ -34,7 +34,7 @@ public:
 
 
 	void ScrollSetting(int Index);
-	void SetButtonFocusAndSelect(int Index, bool IsFocus, bool IsSelect);
+	void STATIC_SetButtonFocusAndSelect(int Index, bool IsFocus, bool IsSelect);
 	void InitButton(class UTexture2D* Texture);
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);

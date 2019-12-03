@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.RoundInAbsolute
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               Point                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FGeometry               Geometry                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -42,7 +42,7 @@ void UBPF_MiniMapMath_C::STATIC_RoundInAbsolute(const struct FVector2D& Point, c
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.IsPointInCircle
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetResponse, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // struct FVector2D               Point                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               CircleCenter                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -50,7 +50,7 @@ void UBPF_MiniMapMath_C::STATIC_RoundInAbsolute(const struct FVector2D& Point, c
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           _                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_IsPointInCircle(const struct FVector2D& Point, const struct FVector2D& CircleCenter, float CircleRadius, class UObject* __WorldContext, bool* _)
+void UBPF_MiniMapMath_C::IsPointInCircle(const struct FVector2D& Point, const struct FVector2D& CircleCenter, float CircleRadius, class UObject* __WorldContext, bool* _)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.IsPointInCircle");
 
@@ -72,7 +72,7 @@ void UBPF_MiniMapMath_C::STATIC_IsPointInCircle(const struct FVector2D& Point, c
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetPointOnCircle
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector2D               Circle_Position                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Circle_Radius                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -80,7 +80,7 @@ void UBPF_MiniMapMath_C::STATIC_IsPointInCircle(const struct FVector2D& Point, c
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Point                          (Parm, OutParm, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_GetPointOnCircle(const struct FVector2D& Circle_Position, float Circle_Radius, float Angle, class UObject* __WorldContext, struct FVector2D* Point)
+void UBPF_MiniMapMath_C::GetPointOnCircle(const struct FVector2D& Circle_Position, float Circle_Radius, float Angle, class UObject* __WorldContext, struct FVector2D* Point)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetPointOnCircle");
 
@@ -102,7 +102,7 @@ void UBPF_MiniMapMath_C::STATIC_GetPointOnCircle(const struct FVector2D& Circle_
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Math_CircleLineIntersection
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Protected, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector2D               Line_Start                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               Line_End                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -112,7 +112,7 @@ void UBPF_MiniMapMath_C::STATIC_GetPointOnCircle(const struct FVector2D& Circle_
 // bool                           IsIntersecting                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               IntersectionPoint              (Parm, OutParm, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Math_CircleLineIntersection(const struct FVector2D& Line_Start, const struct FVector2D& Line_End, const struct FVector2D& Circle_Position, float Circle_Radius, class UObject* __WorldContext, bool* IsIntersecting, struct FVector2D* IntersectionPoint)
+void UBPF_MiniMapMath_C::Math_CircleLineIntersection(const struct FVector2D& Line_Start, const struct FVector2D& Line_End, const struct FVector2D& Circle_Position, float Circle_Radius, class UObject* __WorldContext, bool* IsIntersecting, struct FVector2D* IntersectionPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Math_CircleLineIntersection");
 
@@ -137,7 +137,7 @@ void UBPF_MiniMapMath_C::STATIC_Math_CircleLineIntersection(const struct FVector
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Math_LineLineIntersection
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Protected, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector2D               Line_1_Start                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               Line_1_End                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -148,7 +148,7 @@ void UBPF_MiniMapMath_C::STATIC_Math_CircleLineIntersection(const struct FVector
 // bool                           DoLinesIntersect               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           DoSegmentsIntersect            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Math_LineLineIntersection(const struct FVector2D& Line_1_Start, const struct FVector2D& Line_1_End, const struct FVector2D& Line_2_Start, const struct FVector2D& Line_2_End, class UObject* __WorldContext, struct FVector2D* IntersectionPoint, bool* DoLinesIntersect, bool* DoSegmentsIntersect)
+void UBPF_MiniMapMath_C::Math_LineLineIntersection(const struct FVector2D& Line_1_Start, const struct FVector2D& Line_1_End, const struct FVector2D& Line_2_Start, const struct FVector2D& Line_2_End, class UObject* __WorldContext, struct FVector2D* IntersectionPoint, bool* DoLinesIntersect, bool* DoSegmentsIntersect)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Math_LineLineIntersection");
 
@@ -175,14 +175,14 @@ void UBPF_MiniMapMath_C::STATIC_Math_LineLineIntersection(const struct FVector2D
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (AND)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // struct FVector2D               In_1                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               In_2                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           _                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_LessThan(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
+void UBPF_MiniMapMath_C::Vector2D___Vector2D__AND_(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (AND)");
 
@@ -192,6 +192,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_LessThan(const struct F
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -203,7 +204,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_LessThan(const struct F
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.IsPointInRectangle
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // struct FVector2D               Rect_Top_Left                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               RectBottomRight                (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -233,14 +234,14 @@ void UBPF_MiniMapMath_C::STATIC_IsPointInRectangle(const struct FVector2D& Rect_
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D > Vector2D (AND)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector2D               In_1                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               In_2                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           _                              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_GreaterThan(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
+void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_(const struct FVector2D& In_1, const struct FVector2D& In_2, class UObject* __WorldContext, bool* _)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D > Vector2D (AND)");
 
@@ -250,6 +251,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_GreaterThan(const struc
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -261,7 +263,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__AND_GreaterThan(const struc
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetLandscapeEdges
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ALandscape*              LandscapeInput                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -278,6 +280,7 @@ void UBPF_MiniMapMath_C::STATIC_GetLandscapeEdges(class ALandscape* LandscapeInp
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -293,13 +296,13 @@ void UBPF_MiniMapMath_C::STATIC_GetLandscapeEdges(class ALandscape* LandscapeInp
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D Abs
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, Event, NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               In                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Out                            (Parm, OutParm, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_Vector2D_Abs(const struct FVector2D& In, class UObject* __WorldContext, struct FVector2D* Out)
+void UBPF_MiniMapMath_C::Vector2D_Abs(const struct FVector2D& In, class UObject* __WorldContext, struct FVector2D* Out)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D Abs");
 
@@ -308,6 +311,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D_Abs(const struct FVector2D& In, class U
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -319,7 +323,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D_Abs(const struct FVector2D& In, class U
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.MapRange Vector2D
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Event, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // float                          In                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Size_1                         (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -327,7 +331,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D_Abs(const struct FVector2D& In, class U
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Out                            (Parm, OutParm, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_MapRange_Vector2D(float In, const struct FVector2D& Size_1, const struct FVector2D& Size2, class UObject* __WorldContext, struct FVector2D* Out)
+void UBPF_MiniMapMath_C::MapRange_Vector2D(float In, const struct FVector2D& Size_1, const struct FVector2D& Size2, class UObject* __WorldContext, struct FVector2D* Out)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.MapRange Vector2D");
 
@@ -349,7 +353,7 @@ void UBPF_MiniMapMath_C::STATIC_MapRange_Vector2D(float In, const struct FVector
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D < Vector2D (OR)
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector2D               In_1                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               In_2                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -377,7 +381,7 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D___Vector2D__OR_(const struct FVector2D&
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.Vector2D * Vector2D
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // struct FVector2D               In_1                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector2D               In_2                           (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -405,13 +409,13 @@ void UBPF_MiniMapMath_C::STATIC_Vector2D_Mult_Vector2D(const struct FVector2D& I
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.RoundVector2D
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Event, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector2D               In                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Out                            (Parm, OutParm, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_RoundVector2D(const struct FVector2D& In, class UObject* __WorldContext, struct FVector2D* Out)
+void UBPF_MiniMapMath_C::RoundVector2D(const struct FVector2D& In, class UObject* __WorldContext, struct FVector2D* Out)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.RoundVector2D");
 
@@ -431,13 +435,13 @@ void UBPF_MiniMapMath_C::STATIC_RoundVector2D(const struct FVector2D& In, class 
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.SwapVector2D
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, MulticastDelegate, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector2D               In                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Out                            (Parm, OutParm, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_SwapVector2D(const struct FVector2D& In, class UObject* __WorldContext, struct FVector2D* Out)
+void UBPF_MiniMapMath_C::SwapVector2D(const struct FVector2D& In, class UObject* __WorldContext, struct FVector2D* Out)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.SwapVector2D");
 
@@ -446,6 +450,7 @@ void UBPF_MiniMapMath_C::STATIC_SwapVector2D(const struct FVector2D& In, class U
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -457,10 +462,10 @@ void UBPF_MiniMapMath_C::STATIC_SwapVector2D(const struct FVector2D& In, class U
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C. Vector 2D
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
-// struct FVector2D               _1                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// struct FVector2D               _2                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FVector2D               1                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FVector2D               2                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Vector                         (Parm, OutParm, IsPlainOldData)
 
@@ -485,7 +490,7 @@ void UBPF_MiniMapMath_C::STATIC__Vector_2D(const struct FVector2D& _1, const str
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetWorldSize
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetMulticast, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ALandscape*              Landscape                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -495,7 +500,7 @@ void UBPF_MiniMapMath_C::STATIC__Vector_2D(const struct FVector2D& _1, const str
 // struct FVector2D               HalfSize                       (Parm, OutParm, IsPlainOldData)
 // float                          GroundHeight                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_GetWorldSize(class ALandscape* Landscape, class UObject* __WorldContext, struct FVector2D* BottomLeft, struct FVector2D* TopRight, struct FVector2D* Center, struct FVector2D* HalfSize, float* GroundHeight)
+void UBPF_MiniMapMath_C::GetWorldSize(class ALandscape* Landscape, class UObject* __WorldContext, struct FVector2D* BottomLeft, struct FVector2D* TopRight, struct FVector2D* Center, struct FVector2D* HalfSize, float* GroundHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetWorldSize");
 
@@ -504,6 +509,7 @@ void UBPF_MiniMapMath_C::STATIC_GetWorldSize(class ALandscape* Landscape, class 
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -523,10 +529,10 @@ void UBPF_MiniMapMath_C::STATIC_GetWorldSize(class ALandscape* Landscape, class 
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetMiddleVector
-// (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
-// struct FVector2D               _1                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
-// struct FVector2D               _2                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FVector2D               1                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
+// struct FVector2D               2                              (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector2D               Mid                            (Parm, OutParm, IsPlainOldData)
 
@@ -540,6 +546,7 @@ void UBPF_MiniMapMath_C::STATIC_GetMiddleVector(const struct FVector2D& _1, cons
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -551,14 +558,14 @@ void UBPF_MiniMapMath_C::STATIC_GetMiddleVector(const struct FVector2D& _1, cons
 
 
 // Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetMiddleFloat
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, NetServer, NetClient, Const)
 // Parameters:
-// float                          _1                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-// float                          _2                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          1                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          2                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Mid                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_MiniMapMath_C::STATIC_GetMiddleFloat(float _1, float _2, class UObject* __WorldContext, float* Mid)
+void UBPF_MiniMapMath_C::GetMiddleFloat(float _1, float _2, class UObject* __WorldContext, float* Mid)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_MiniMapMath.BPF_MiniMapMath_C.GetMiddleFloat");
 
@@ -568,6 +575,7 @@ void UBPF_MiniMapMath_C::STATIC_GetMiddleFloat(float _1, float _2, class UObject
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

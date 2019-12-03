@@ -26,9 +26,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_S3PuddleActor(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_S3PuddleActor(int EntryPoint);
 };
 
 

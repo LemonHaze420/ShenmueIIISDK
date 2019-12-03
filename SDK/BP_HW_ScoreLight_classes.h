@@ -75,16 +75,16 @@ public:
 	}
 
 
-	void SetEmissivePower(class UPrimitiveComponent* Target, float Value);
-	void DispScoreLight(bool Disp, int TargetNum, TArray<class UStaticMeshComponent*> TargetArray, float EmissivePowerOnTrace, bool* bChange, class UStaticMeshComponent** ChangeTarget);
+	void STATIC_SetEmissivePower(class UPrimitiveComponent* Target, float Value);
+	void STATIC_DispScoreLight(bool Disp, int TargetNum, TArray<class UStaticMeshComponent*> TargetArray, float EmissivePowerOnTrace, bool* bChange, class UStaticMeshComponent** ChangeTarget);
 	void DispEnemyScoreLight(bool ArgDisp, int ArgBlinkIndex);
 	void RegisterScoreLightArray();
-	void DispMyScoreLight(bool ArgDisp, int ArgBlinkIndex);
-	void ScoreLightAllOff();
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_HW_ScoreLight(int EntryPoint);
-	void OnChangeLightDispacher__DelegateSignature();
+	void STATIC_DispMyScoreLight(bool ArgDisp, int ArgBlinkIndex);
+	void STATIC_ScoreLightAllOff();
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_HW_ScoreLight(int EntryPoint);
+	void STATIC_OnChangeLightDispacher__DelegateSignature();
 };
 
 

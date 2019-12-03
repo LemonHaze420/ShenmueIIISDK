@@ -31,11 +31,11 @@ public:
 	}
 
 
-	void GetSequence(class ABP_MiniGameBase_C* MiniGame, class ULevelSequence** GetSequence, class ULevelSequence** LookSequence);
+	void STATIC_GetSequence(class ABP_MiniGameBase_C* MiniGame, class ULevelSequence** GetSequence, class ULevelSequence** LookSequence);
 	void StartGetKihudaFlow(const struct FTransform& OffsetRelativeTrans, bool IsGetMoreTicket);
-	void OnFinishedActorFlow();
+	void STATIC_OnFinishedActorFlow();
 	void ExecuteUbergraph_BPC_MiniGameGetKihudaFlow(int EntryPoint);
-	void OnEndComponentFlow__DelegateSignature();
+	void STATIC_OnEndComponentFlow__DelegateSignature();
 };
 
 

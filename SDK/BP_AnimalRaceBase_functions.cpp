@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GetAnimalCameraPos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            IndexNum                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -27,6 +27,7 @@ struct FVector ABP_AnimalRaceBase_C::GetAnimalCameraPos(int IndexNum)
 	params.IndexNum = IndexNum;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,12 +38,12 @@ struct FVector ABP_AnimalRaceBase_C::GetAnimalCameraPos(int IndexNum)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GetAnimalDelayTime
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetResponse, Static, Public, Delegate, NetServer, HasDefaults, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::GetAnimalDelayTime(int Index, float* Value)
+void ABP_AnimalRaceBase_C::STATIC_GetAnimalDelayTime(int Index, float* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GetAnimalDelayTime");
 
@@ -50,6 +51,7 @@ void ABP_AnimalRaceBase_C::GetAnimalDelayTime(int Index, float* Value)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,7 +63,7 @@ void ABP_AnimalRaceBase_C::GetAnimalDelayTime(int Index, float* Value)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GetFortuneGrade
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, Public, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            GradeNum                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -83,7 +85,7 @@ void ABP_AnimalRaceBase_C::GetFortuneGrade(int* GradeNum)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.CheckAnimalWallCollision
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AActor*                  CheckActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UActorComponent*         CheckComponent                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -111,13 +113,13 @@ void ABP_AnimalRaceBase_C::CheckAnimalWallCollision(class AActor* CheckActor, cl
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdatePlayCount
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsToad                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bForceUseHighTable             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Count                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::UpdatePlayCount(bool IsToad, bool* bForceUseHighTable, int* Count)
+void ABP_AnimalRaceBase_C::STATIC_UpdatePlayCount(bool IsToad, bool* bForceUseHighTable, int* Count)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdatePlayCount");
 
@@ -138,11 +140,11 @@ void ABP_AnimalRaceBase_C::UpdatePlayCount(bool IsToad, bool* bForceUseHighTable
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetCollisionEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::SetCollisionEnabled(bool Enabled)
+void ABP_AnimalRaceBase_C::STATIC_SetCollisionEnabled(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetCollisionEnabled");
 
@@ -150,6 +152,7 @@ void ABP_AnimalRaceBase_C::SetCollisionEnabled(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -158,7 +161,7 @@ void ABP_AnimalRaceBase_C::SetCollisionEnabled(bool Enabled)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.InitializeOnBeginPlay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_AnimalRaceBase_C::InitializeOnBeginPlay()
 {
@@ -167,6 +170,7 @@ void ABP_AnimalRaceBase_C::InitializeOnBeginPlay()
 	ABP_AnimalRaceBase_C_InitializeOnBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,15 +179,16 @@ void ABP_AnimalRaceBase_C::InitializeOnBeginPlay()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.InitializeAnimalData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_AnimalRaceBase_C::InitializeAnimalData()
+void ABP_AnimalRaceBase_C::STATIC_InitializeAnimalData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.InitializeAnimalData");
 
 	ABP_AnimalRaceBase_C_InitializeAnimalData_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -192,7 +197,7 @@ void ABP_AnimalRaceBase_C::InitializeAnimalData()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GetMiniGameBGMID
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FName                   ID                             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -203,6 +208,7 @@ void ABP_AnimalRaceBase_C::GetMiniGameBGMID(struct FName* ID)
 	ABP_AnimalRaceBase_C_GetMiniGameBGMID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -214,9 +220,9 @@ void ABP_AnimalRaceBase_C::GetMiniGameBGMID(struct FName* ID)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.TestFunc
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, BlueprintEvent)
 
-void ABP_AnimalRaceBase_C::TestFunc()
+void ABP_AnimalRaceBase_C::STATIC_TestFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.TestFunc");
 
@@ -231,15 +237,16 @@ void ABP_AnimalRaceBase_C::TestFunc()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetAnimalCondition
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintPure)
 
-void ABP_AnimalRaceBase_C::SetAnimalCondition()
+void ABP_AnimalRaceBase_C::STATIC_SetAnimalCondition()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetAnimalCondition");
 
 	ABP_AnimalRaceBase_C_SetAnimalCondition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -248,7 +255,7 @@ void ABP_AnimalRaceBase_C::SetAnimalCondition()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ChangeSpeedFromCache
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::ChangeSpeedFromCache()
 {
@@ -265,7 +272,7 @@ void ABP_AnimalRaceBase_C::ChangeSpeedFromCache()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateResultCache
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ResultSuccess                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -277,6 +284,7 @@ void ABP_AnimalRaceBase_C::UpdateResultCache(bool ResultSuccess)
 	params.ResultSuccess = ResultSuccess;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -285,7 +293,7 @@ void ABP_AnimalRaceBase_C::UpdateResultCache(bool ResultSuccess)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ResetQTEInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::ResetQTEInfo()
 {
@@ -302,9 +310,9 @@ void ABP_AnimalRaceBase_C::ResetQTEInfo()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateQte
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_AnimalRaceBase_C::UpdateQte()
+void ABP_AnimalRaceBase_C::STATIC_UpdateQte()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateQte");
 
@@ -319,17 +327,18 @@ void ABP_AnimalRaceBase_C::UpdateQte()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.IsToadRace
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bToad                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::IsToadRace(bool* bToad)
+void ABP_AnimalRaceBase_C::STATIC_IsToadRace(bool* bToad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.IsToadRace");
 
 	ABP_AnimalRaceBase_C_IsToadRace_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -341,9 +350,9 @@ void ABP_AnimalRaceBase_C::IsToadRace(bool* bToad)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetFortuneResult
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, Public, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_AnimalRaceBase_C::SetFortuneResult()
+void ABP_AnimalRaceBase_C::STATIC_SetFortuneResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetFortuneResult");
 
@@ -358,7 +367,7 @@ void ABP_AnimalRaceBase_C::SetFortuneResult()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetBoardInfo
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::SetBoardInfo()
 {
@@ -367,6 +376,7 @@ void ABP_AnimalRaceBase_C::SetBoardInfo()
 	ABP_AnimalRaceBase_C_SetBoardInfo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -375,7 +385,7 @@ void ABP_AnimalRaceBase_C::SetBoardInfo()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GetMiniGameHelpName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
 
@@ -397,11 +407,11 @@ void ABP_AnimalRaceBase_C::GetMiniGameHelpName(struct FString* String)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetAnimalCrySEVolume
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          CrySEVolume                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::SetAnimalCrySEVolume(float CrySEVolume)
+void ABP_AnimalRaceBase_C::STATIC_SetAnimalCrySEVolume(float CrySEVolume)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetAnimalCrySEVolume");
 
@@ -417,7 +427,7 @@ void ABP_AnimalRaceBase_C::SetAnimalCrySEVolume(float CrySEVolume)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SetAnimalSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // class ABP_AR_Animal_Base_C*    Animal                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -431,6 +441,7 @@ void ABP_AnimalRaceBase_C::SetAnimalSE(class ABP_AR_Animal_Base_C* Animal, int I
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -439,11 +450,11 @@ void ABP_AnimalRaceBase_C::SetAnimalSE(class ABP_AR_Animal_Base_C* Animal, int I
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateOpeningCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, Private, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::UpdateOpeningCamera(float DeltaSeconds)
+void ABP_AnimalRaceBase_C::STATIC_UpdateOpeningCamera(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateOpeningCamera");
 
@@ -459,7 +470,7 @@ void ABP_AnimalRaceBase_C::UpdateOpeningCamera(float DeltaSeconds)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateBetAnimalUI
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Public, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::UpdateBetAnimalUI()
 {
@@ -476,9 +487,9 @@ void ABP_AnimalRaceBase_C::UpdateBetAnimalUI()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateCamera
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_AnimalRaceBase_C::UpdateCamera()
+void ABP_AnimalRaceBase_C::STATIC_UpdateCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UpdateCamera");
 
@@ -493,7 +504,7 @@ void ABP_AnimalRaceBase_C::UpdateCamera()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GetRewardMoney
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // int                            Money                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -504,6 +515,7 @@ void ABP_AnimalRaceBase_C::GetRewardMoney(int* Money)
 	ABP_AnimalRaceBase_C_GetRewardMoney_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -515,11 +527,11 @@ void ABP_AnimalRaceBase_C::GetRewardMoney(int* Money)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.set Select Point Location
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::set_Select_Point_Location(int Index)
+void ABP_AnimalRaceBase_C::STATIC_set_Select_Point_Location(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.set Select Point Location");
 
@@ -527,6 +539,7 @@ void ABP_AnimalRaceBase_C::set_Select_Point_Location(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -535,7 +548,7 @@ void ABP_AnimalRaceBase_C::set_Select_Point_Location(int Index)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.SpawnInputControlActor
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, Private, Delegate, NetServer)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -546,6 +559,7 @@ class ABP_MiniGameInputBase_C* ABP_AnimalRaceBase_C::SpawnInputControlActor()
 	ABP_AnimalRaceBase_C_SpawnInputControlActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -556,7 +570,7 @@ class ABP_MiniGameInputBase_C* ABP_AnimalRaceBase_C::SpawnInputControlActor()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::UserConstructionScript()
 {
@@ -573,7 +587,7 @@ void ABP_AnimalRaceBase_C::UserConstructionScript()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.CountDown__FinishedFunc
-// (BlueprintEvent)
+// (NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::CountDown__FinishedFunc()
 {
@@ -590,7 +604,7 @@ void ABP_AnimalRaceBase_C::CountDown__FinishedFunc()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.CountDown__UpdateFunc
-// (BlueprintEvent)
+// (NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::CountDown__UpdateFunc()
 {
@@ -607,7 +621,7 @@ void ABP_AnimalRaceBase_C::CountDown__UpdateFunc()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ResultCheck
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::ResultCheck()
 {
@@ -624,7 +638,7 @@ void ABP_AnimalRaceBase_C::ResultCheck()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.RaceTick
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::RaceTick()
 {
@@ -641,11 +655,11 @@ void ABP_AnimalRaceBase_C::RaceTick()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GameStartFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ULevelSequencePlayer*    LevelSequencePlayer            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::GameStartFinished(class ULevelSequencePlayer* LevelSequencePlayer)
+void ABP_AnimalRaceBase_C::STATIC_GameStartFinished(class ULevelSequencePlayer* LevelSequencePlayer)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.GameStartFinished");
 
@@ -661,7 +675,7 @@ void ABP_AnimalRaceBase_C::GameStartFinished(class ULevelSequencePlayer* LevelSe
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Bet Tick
-// (BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Bet_Tick()
 {
@@ -678,7 +692,7 @@ void ABP_AnimalRaceBase_C::Bet_Tick()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Result Tick
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Result_Tick()
 {
@@ -687,6 +701,7 @@ void ABP_AnimalRaceBase_C::Result_Tick()
 	ABP_AnimalRaceBase_C_Result_Tick_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -695,7 +710,7 @@ void ABP_AnimalRaceBase_C::Result_Tick()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature()
 {
@@ -704,6 +719,7 @@ void ABP_AnimalRaceBase_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentB
 	ABP_AnimalRaceBase_C_BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_0_OnGameContinueDispatcher__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -712,7 +728,7 @@ void ABP_AnimalRaceBase_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentB
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature
-// (BlueprintEvent)
+// (Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentBoundEvent_1_OnGameFinishedDispatcher__DelegateSignature()
 {
@@ -729,11 +745,11 @@ void ABP_AnimalRaceBase_C::BndEvt__BPC_MiniGameContinueConfirm_K2Node_ComponentB
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ResumeMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ResumeKeyword                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_AnimalRaceBase_C::ResumeMiniGame(const struct FString& ResumeKeyword)
+void ABP_AnimalRaceBase_C::STATIC_ResumeMiniGame(const struct FString& ResumeKeyword)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ResumeMiniGame");
 
@@ -749,11 +765,11 @@ void ABP_AnimalRaceBase_C::ResumeMiniGame(const struct FString& ResumeKeyword)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.OnTalkScriptEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EventNumber                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::OnTalkScriptEvent(int EventNumber)
+void ABP_AnimalRaceBase_C::STATIC_OnTalkScriptEvent(int EventNumber)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.OnTalkScriptEvent");
 
@@ -769,7 +785,7 @@ void ABP_AnimalRaceBase_C::OnTalkScriptEvent(int EventNumber)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::StartMiniGame()
 {
@@ -786,7 +802,7 @@ void ABP_AnimalRaceBase_C::StartMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::EndMiniGame()
 {
@@ -803,7 +819,7 @@ void ABP_AnimalRaceBase_C::EndMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.RestartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::RestartMiniGame()
 {
@@ -820,7 +836,7 @@ void ABP_AnimalRaceBase_C::RestartMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.WinMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::WinMiniGame()
 {
@@ -837,7 +853,7 @@ void ABP_AnimalRaceBase_C::WinMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.LoseMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::LoseMiniGame()
 {
@@ -854,7 +870,7 @@ void ABP_AnimalRaceBase_C::LoseMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.DrawMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::DrawMiniGame()
 {
@@ -871,11 +887,11 @@ void ABP_AnimalRaceBase_C::DrawMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.AnimalRace End
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           is_success                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::AnimalRace_End(bool is_success)
+void ABP_AnimalRaceBase_C::STATIC_AnimalRace_End(bool is_success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.AnimalRace End");
 
@@ -891,7 +907,7 @@ void ABP_AnimalRaceBase_C::AnimalRace_End(bool is_success)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.CancelMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::CancelMiniGame()
 {
@@ -908,7 +924,7 @@ void ABP_AnimalRaceBase_C::CancelMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.StartGameFadeOutFinish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::StartGameFadeOutFinish()
 {
@@ -925,7 +941,7 @@ void ABP_AnimalRaceBase_C::StartGameFadeOutFinish()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.WinGameFadeOutFinish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::WinGameFadeOutFinish()
 {
@@ -942,7 +958,7 @@ void ABP_AnimalRaceBase_C::WinGameFadeOutFinish()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.LoseGameFadeOutFinish
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::LoseGameFadeOutFinish()
 {
@@ -959,7 +975,7 @@ void ABP_AnimalRaceBase_C::LoseGameFadeOutFinish()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.CancelFadeEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::CancelFadeEnd()
 {
@@ -976,7 +992,7 @@ void ABP_AnimalRaceBase_C::CancelFadeEnd()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Back Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Back_Pushed()
 {
@@ -993,7 +1009,7 @@ void ABP_AnimalRaceBase_C::Back_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Action Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Action_Pushed()
 {
@@ -1010,7 +1026,7 @@ void ABP_AnimalRaceBase_C::Action_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Up Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Up_Pushed()
 {
@@ -1027,7 +1043,7 @@ void ABP_AnimalRaceBase_C::Up_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Down Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Down_Pushed()
 {
@@ -1044,7 +1060,7 @@ void ABP_AnimalRaceBase_C::Down_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Bet Left Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Bet_Left_Pushed()
 {
@@ -1061,7 +1077,7 @@ void ABP_AnimalRaceBase_C::Bet_Left_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Bet Right Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Bet_Right_Pushed()
 {
@@ -1078,7 +1094,7 @@ void ABP_AnimalRaceBase_C::Bet_Right_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Race Up Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Race_Up_Pushed()
 {
@@ -1095,7 +1111,7 @@ void ABP_AnimalRaceBase_C::Race_Up_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Race Down Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Race_Down_Pushed()
 {
@@ -1112,7 +1128,7 @@ void ABP_AnimalRaceBase_C::Race_Down_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Race Right Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Race_Right_Pushed()
 {
@@ -1129,7 +1145,7 @@ void ABP_AnimalRaceBase_C::Race_Right_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Race Left Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Race_Left_Pushed()
 {
@@ -1146,7 +1162,7 @@ void ABP_AnimalRaceBase_C::Race_Left_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Right Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Right_Pushed()
 {
@@ -1163,7 +1179,7 @@ void ABP_AnimalRaceBase_C::Right_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Left Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Left_Pushed()
 {
@@ -1180,7 +1196,7 @@ void ABP_AnimalRaceBase_C::Left_Pushed()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.CountDownFinished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::CountDownFinished()
 {
@@ -1197,11 +1213,11 @@ void ABP_AnimalRaceBase_C::CountDownFinished()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Add Push Count
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_padSwitch>      ButtonType                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::Add_Push_Count(TEnumAsByte<EN_padSwitch> ButtonType)
+void ABP_AnimalRaceBase_C::STATIC_Add_Push_Count(TEnumAsByte<EN_padSwitch> ButtonType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Add Push Count");
 
@@ -1217,7 +1233,7 @@ void ABP_AnimalRaceBase_C::Add_Push_Count(TEnumAsByte<EN_padSwitch> ButtonType)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.count max
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::count_max()
 {
@@ -1234,7 +1250,7 @@ void ABP_AnimalRaceBase_C::count_max()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Input Update
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Input_Update()
 {
@@ -1251,7 +1267,7 @@ void ABP_AnimalRaceBase_C::Input_Update()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Event_StopCountDown
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Event_StopCountDown()
 {
@@ -1268,7 +1284,7 @@ void ABP_AnimalRaceBase_C::Event_StopCountDown()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::ReceiveBeginPlay()
 {
@@ -1285,11 +1301,11 @@ void ABP_AnimalRaceBase_C::ReceiveBeginPlay()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::ReceiveTick(float DeltaSeconds)
+void ABP_AnimalRaceBase_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ReceiveTick");
 
@@ -1305,7 +1321,7 @@ void ABP_AnimalRaceBase_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1314,7 +1330,7 @@ void ABP_AnimalRaceBase_C::ReceiveTick(float DeltaSeconds)
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1327,6 +1343,7 @@ void ABP_AnimalRaceBase_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeg
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1335,7 +1352,7 @@ void ABP_AnimalRaceBase_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeg
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__camera_move_collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1344,7 +1361,7 @@ void ABP_AnimalRaceBase_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeg
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__camera_move_collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__camera_move_collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__camera_move_collision_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1365,7 +1382,7 @@ void ABP_AnimalRaceBase_C::BndEvt__camera_move_collision_K2Node_ComponentBoundEv
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall01_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1374,7 +1391,7 @@ void ABP_AnimalRaceBase_C::BndEvt__camera_move_collision_K2Node_ComponentBoundEv
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall01_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall01_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall01_K2Node_ComponentBoundEvent_4_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1387,6 +1404,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall01_K2Node_ComponentBoundEvent_4_Component
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1395,7 +1413,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall01_K2Node_ComponentBoundEvent_4_Component
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall02_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1404,7 +1422,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall01_K2Node_ComponentBoundEvent_4_Component
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall02_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall02_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall02_K2Node_ComponentBoundEvent_6_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1425,7 +1443,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall02_K2Node_ComponentBoundEvent_6_Component
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall03_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1434,7 +1452,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall02_K2Node_ComponentBoundEvent_6_Component
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall03_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall03_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall03_K2Node_ComponentBoundEvent_7_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1455,7 +1473,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall03_K2Node_ComponentBoundEvent_7_Component
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall04_K2Node_ComponentBoundEvent_8_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1464,7 +1482,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall03_K2Node_ComponentBoundEvent_7_Component
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall04_K2Node_ComponentBoundEvent_8_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall04_K2Node_ComponentBoundEvent_8_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall04_K2Node_ComponentBoundEvent_8_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1485,7 +1503,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall04_K2Node_ComponentBoundEvent_8_Component
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall05_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1494,7 +1512,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall04_K2Node_ComponentBoundEvent_8_Component
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall05_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall05_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall05_K2Node_ComponentBoundEvent_9_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1507,6 +1525,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall05_K2Node_ComponentBoundEvent_9_Component
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1515,14 +1534,14 @@ void ABP_AnimalRaceBase_C::BndEvt__wall05_K2Node_ComponentBoundEvent_9_Component
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall01_K2Node_ComponentBoundEvent_11_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall01_K2Node_ComponentBoundEvent_11_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall01_K2Node_ComponentBoundEvent_11_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall01_K2Node_ComponentBoundEvent_11_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1541,14 +1560,14 @@ void ABP_AnimalRaceBase_C::BndEvt__wall01_K2Node_ComponentBoundEvent_11_Componen
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall02_K2Node_ComponentBoundEvent_12_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall02_K2Node_ComponentBoundEvent_12_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall02_K2Node_ComponentBoundEvent_12_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall02_K2Node_ComponentBoundEvent_12_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1567,14 +1586,14 @@ void ABP_AnimalRaceBase_C::BndEvt__wall02_K2Node_ComponentBoundEvent_12_Componen
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall03_K2Node_ComponentBoundEvent_13_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall03_K2Node_ComponentBoundEvent_13_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall03_K2Node_ComponentBoundEvent_13_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall03_K2Node_ComponentBoundEvent_13_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1593,14 +1612,14 @@ void ABP_AnimalRaceBase_C::BndEvt__wall03_K2Node_ComponentBoundEvent_13_Componen
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall04_K2Node_ComponentBoundEvent_15_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall04_K2Node_ComponentBoundEvent_15_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall04_K2Node_ComponentBoundEvent_15_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall04_K2Node_ComponentBoundEvent_15_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1619,14 +1638,14 @@ void ABP_AnimalRaceBase_C::BndEvt__wall04_K2Node_ComponentBoundEvent_15_Componen
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall05_K2Node_ComponentBoundEvent_16_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Static, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__wall05_K2Node_ComponentBoundEvent_16_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__wall05_K2Node_ComponentBoundEvent_16_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__wall05_K2Node_ComponentBoundEvent_16_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1645,7 +1664,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall05_K2Node_ComponentBoundEvent_16_Componen
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__support1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1654,7 +1673,7 @@ void ABP_AnimalRaceBase_C::BndEvt__wall05_K2Node_ComponentBoundEvent_16_Componen
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::BndEvt__support1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_AnimalRaceBase_C::STATIC_BndEvt__support1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__support1_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1667,6 +1686,7 @@ void ABP_AnimalRaceBase_C::BndEvt__support1_K2Node_ComponentBoundEvent_0_Compone
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1675,7 +1695,7 @@ void ABP_AnimalRaceBase_C::BndEvt__support1_K2Node_ComponentBoundEvent_0_Compone
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__support2_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Exec, Event, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1705,7 +1725,7 @@ void ABP_AnimalRaceBase_C::BndEvt__support2_K2Node_ComponentBoundEvent_1_Compone
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ResetSupport1
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::ResetSupport1()
 {
@@ -1714,6 +1734,7 @@ void ABP_AnimalRaceBase_C::ResetSupport1()
 	ABP_AnimalRaceBase_C_ResetSupport1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1722,7 +1743,7 @@ void ABP_AnimalRaceBase_C::ResetSupport1()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ResetSupport2
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::ResetSupport2()
 {
@@ -1739,7 +1760,7 @@ void ABP_AnimalRaceBase_C::ResetSupport2()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Game Start
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Game_Start()
 {
@@ -1748,6 +1769,7 @@ void ABP_AnimalRaceBase_C::Game_Start()
 	ABP_AnimalRaceBase_C_Game_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1756,7 +1778,7 @@ void ABP_AnimalRaceBase_C::Game_Start()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Game End
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Game_End()
 {
@@ -1765,6 +1787,7 @@ void ABP_AnimalRaceBase_C::Game_End()
 	ABP_AnimalRaceBase_C_Game_End_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1773,7 +1796,7 @@ void ABP_AnimalRaceBase_C::Game_End()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.BndEvt__camera_move_collision_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, DLLImport, Const)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1793,6 +1816,7 @@ void ABP_AnimalRaceBase_C::BndEvt__camera_move_collision_K2Node_ComponentBoundEv
 	params.Hit = Hit;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1801,7 +1825,7 @@ void ABP_AnimalRaceBase_C::BndEvt__camera_move_collision_K2Node_ComponentBoundEv
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Pre Game End
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Pre_Game_End()
 {
@@ -1810,6 +1834,7 @@ void ABP_AnimalRaceBase_C::Pre_Game_End()
 	ABP_AnimalRaceBase_C_Pre_Game_End_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1818,11 +1843,11 @@ void ABP_AnimalRaceBase_C::Pre_Game_End()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Set Animal Tick Enable
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           bEnabled                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_AnimalRaceBase_C::Set_Animal_Tick_Enable(bool bEnabled)
+void ABP_AnimalRaceBase_C::STATIC_Set_Animal_Tick_Enable(bool bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Set Animal Tick Enable");
 
@@ -1838,7 +1863,7 @@ void ABP_AnimalRaceBase_C::Set_Animal_Tick_Enable(bool bEnabled)
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Event_EndMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::Event_EndMiniGame()
 {
@@ -1855,7 +1880,7 @@ void ABP_AnimalRaceBase_C::Event_EndMiniGame()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Event_ChearAnimal
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Event_ChearAnimal()
 {
@@ -1864,6 +1889,7 @@ void ABP_AnimalRaceBase_C::Event_ChearAnimal()
 	ABP_AnimalRaceBase_C_Event_ChearAnimal_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1872,7 +1898,7 @@ void ABP_AnimalRaceBase_C::Event_ChearAnimal()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.Event_EndCheer
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AnimalRaceBase_C::Event_EndCheer()
 {
@@ -1881,6 +1907,7 @@ void ABP_AnimalRaceBase_C::Event_EndCheer()
 	ABP_AnimalRaceBase_C_Event_EndCheer_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1889,7 +1916,7 @@ void ABP_AnimalRaceBase_C::Event_EndCheer()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ConsumeGamblePrice
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_AnimalRaceBase_C::ConsumeGamblePrice()
 {
@@ -1906,7 +1933,7 @@ void ABP_AnimalRaceBase_C::ConsumeGamblePrice()
 
 
 // Function BP_AnimalRaceBase.BP_AnimalRaceBase_C.ExecuteUbergraph_BP_AnimalRaceBase
-// (HasDefaults)
+// (Public, Private, Protected, Delegate, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Cloth.BPF_Cloth_C.LoadHandMesh
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 CharaCode                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 HandShape                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -22,7 +22,7 @@ namespace SDK
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UStaticMesh*             Mesh                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Cloth_C::STATIC_LoadHandMesh(const struct FString& CharaCode, const struct FString& HandShape, bool Right, class UObject* __WorldContext, class UStaticMesh** Mesh)
+void UBPF_Cloth_C::LoadHandMesh(const struct FString& CharaCode, const struct FString& HandShape, bool Right, class UObject* __WorldContext, class UStaticMesh** Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Cloth.BPF_Cloth_C.LoadHandMesh");
 
@@ -44,7 +44,7 @@ void UBPF_Cloth_C::STATIC_LoadHandMesh(const struct FString& CharaCode, const st
 
 
 // Function BPF_Cloth.BPF_Cloth_C.LoadBodyMesh
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Native, Event, Static, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 CharaCode                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 ClothId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
@@ -67,6 +67,7 @@ void UBPF_Cloth_C::STATIC_LoadBodyMesh(const struct FString& CharaCode, const st
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +79,7 @@ void UBPF_Cloth_C::STATIC_LoadBodyMesh(const struct FString& CharaCode, const st
 
 
 // Function BPF_Cloth.BPF_Cloth_C.getS3ClothManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_ClothManager_C*      BP_ClothManager                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -91,6 +92,7 @@ void UBPF_Cloth_C::STATIC_getS3ClothManager(class UObject* __WorldContext, class
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

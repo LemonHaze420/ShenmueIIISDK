@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function TimeManagement.TimeManagementBlueprintLibrary.Multiply_SecondsFrameRate
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // float                          TimeInSeconds                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FFrameRate              FrameRate                      (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FFrameTime              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FFrameTime UTimeManagementBlueprintLibrary::STATIC_Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate)
+struct FFrameTime UTimeManagementBlueprintLibrary::Multiply_SecondsFrameRate(float TimeInSeconds, const struct FFrameRate& FrameRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Multiply_SecondsFrameRate");
 
@@ -29,7 +29,6 @@ struct FFrameTime UTimeManagementBlueprintLibrary::STATIC_Multiply_SecondsFrameR
 	params.FrameRate = FrameRate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,18 +39,17 @@ struct FFrameTime UTimeManagementBlueprintLibrary::STATIC_Multiply_SecondsFrameR
 
 
 // Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecode
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FTimecode               ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FTimecode UTimeManagementBlueprintLibrary::STATIC_GetTimecode()
+struct FTimecode UTimeManagementBlueprintLibrary::GetTimecode()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.GetTimecode");
 
 	UTimeManagementBlueprintLibrary_GetTimecode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,13 +60,13 @@ struct FTimecode UTimeManagementBlueprintLibrary::STATIC_GetTimecode()
 
 
 // Function TimeManagement.TimeManagementBlueprintLibrary.Conv_TimecodeToString
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FTimecode               InTimecode                     (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           bForceSignDisplay              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FString                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-struct FString UTimeManagementBlueprintLibrary::STATIC_Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay)
+struct FString UTimeManagementBlueprintLibrary::Conv_TimecodeToString(const struct FTimecode& InTimecode, bool bForceSignDisplay)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_TimecodeToString");
 
@@ -77,7 +75,6 @@ struct FString UTimeManagementBlueprintLibrary::STATIC_Conv_TimecodeToString(con
 	params.bForceSignDisplay = bForceSignDisplay;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,12 +85,12 @@ struct FString UTimeManagementBlueprintLibrary::STATIC_Conv_TimecodeToString(con
 
 
 // Function TimeManagement.TimeManagementBlueprintLibrary.Conv_QualifiedFrameTimeToSeconds
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FQualifiedFrameTime     InFrameTime                    (ConstParm, Parm, OutParm, ReferenceParm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UTimeManagementBlueprintLibrary::STATIC_Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime)
+float UTimeManagementBlueprintLibrary::Conv_QualifiedFrameTimeToSeconds(const struct FQualifiedFrameTime& InFrameTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_QualifiedFrameTimeToSeconds");
 
@@ -101,7 +98,6 @@ float UTimeManagementBlueprintLibrary::STATIC_Conv_QualifiedFrameTimeToSeconds(c
 	params.InFrameTime = InFrameTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,12 +108,12 @@ float UTimeManagementBlueprintLibrary::STATIC_Conv_QualifiedFrameTimeToSeconds(c
 
 
 // Function TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameRateToSeconds
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FFrameRate              InFrameRate                    (ConstParm, Parm, OutParm, ReferenceParm)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UTimeManagementBlueprintLibrary::STATIC_Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate)
+float UTimeManagementBlueprintLibrary::Conv_FrameRateToSeconds(const struct FFrameRate& InFrameRate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function TimeManagement.TimeManagementBlueprintLibrary.Conv_FrameRateToSeconds");
 
@@ -125,7 +121,6 @@ float UTimeManagementBlueprintLibrary::STATIC_Conv_FrameRateToSeconds(const stru
 	params.InFrameRate = InFrameRate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

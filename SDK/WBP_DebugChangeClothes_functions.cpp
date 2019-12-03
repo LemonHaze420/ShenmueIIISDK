@@ -14,13 +14,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.CreateFittingInfo
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Static, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_ClothesFittingInfo  OverrideInfo                   (BlueprintVisible, BlueprintReadOnly, Parm)
 // bool                           RYO                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FST_ClothesFittingInfo> Array                          (Parm, OutParm, ZeroConstructor)
 
-void UWBP_DebugChangeClothes_C::CreateFittingInfo(const struct FST_ClothesFittingInfo& OverrideInfo, bool RYO, TArray<struct FST_ClothesFittingInfo>* Array)
+void UWBP_DebugChangeClothes_C::STATIC_CreateFittingInfo(const struct FST_ClothesFittingInfo& OverrideInfo, bool RYO, TArray<struct FST_ClothesFittingInfo>* Array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.CreateFittingInfo");
 
@@ -40,9 +40,9 @@ void UWBP_DebugChangeClothes_C::CreateFittingInfo(const struct FST_ClothesFittin
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.SetFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UWBP_DebugChangeClothes_C::SetFocus()
+void UWBP_DebugChangeClothes_C::STATIC_SetFocus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.SetFocus");
 
@@ -57,7 +57,7 @@ void UWBP_DebugChangeClothes_C::SetFocus()
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.GetCurrentStatus
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, NetResponse, Private, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -78,7 +78,7 @@ struct FText UWBP_DebugChangeClothes_C::GetCurrentStatus()
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.IncrementLoop
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // int                            Max                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -105,7 +105,7 @@ void UWBP_DebugChangeClothes_C::IncrementLoop(int Max, int* Index, int* Value)
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.ChangePlayerModel
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UWBP_DebugChangeClothes_C::ChangePlayerModel()
 {
@@ -122,7 +122,7 @@ void UWBP_DebugChangeClothes_C::ChangePlayerModel()
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.ChangeCloth
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 InTarget                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -134,6 +134,7 @@ void UWBP_DebugChangeClothes_C::ChangeCloth(const struct FString& InTarget)
 	params.InTarget = InTarget;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -142,9 +143,9 @@ void UWBP_DebugChangeClothes_C::ChangeCloth(const struct FString& InTarget)
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.ChangeTarget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, NetMulticast, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void UWBP_DebugChangeClothes_C::ChangeTarget()
+void UWBP_DebugChangeClothes_C::STATIC_ChangeTarget()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.ChangeTarget");
 
@@ -159,13 +160,13 @@ void UWBP_DebugChangeClothes_C::ChangeTarget()
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.OnKeyDown
-// (BlueprintCosmetic, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UWBP_DebugChangeClothes_C::OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UWBP_DebugChangeClothes_C::STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.OnKeyDown");
 
@@ -184,13 +185,13 @@ struct FEventReply UWBP_DebugChangeClothes_C::OnKeyDown(const struct FGeometry& 
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.OnPreviewKeyDown
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FKeyEvent               InKeyEvent                     (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FEventReply             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FEventReply UWBP_DebugChangeClothes_C::OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
+struct FEventReply UWBP_DebugChangeClothes_C::STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.OnPreviewKeyDown");
 
@@ -199,6 +200,7 @@ struct FEventReply UWBP_DebugChangeClothes_C::OnPreviewKeyDown(const struct FGeo
 	params.InKeyEvent = InKeyEvent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -209,9 +211,9 @@ struct FEventReply UWBP_DebugChangeClothes_C::OnPreviewKeyDown(const struct FGeo
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugChangeClothes_C::Construct()
+void UWBP_DebugChangeClothes_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.Construct");
 
@@ -226,9 +228,9 @@ void UWBP_DebugChangeClothes_C::Construct()
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
-void UWBP_DebugChangeClothes_C::Destruct()
+void UWBP_DebugChangeClothes_C::STATIC_Destruct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.Destruct");
 
@@ -243,7 +245,7 @@ void UWBP_DebugChangeClothes_C::Destruct()
 
 
 // Function WBP_DebugChangeClothes.WBP_DebugChangeClothes_C.ExecuteUbergraph_WBP_DebugChangeClothes
-// ()
+// (NetReliable, Exec, Native, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -255,6 +257,7 @@ void UWBP_DebugChangeClothes_C::ExecuteUbergraph_WBP_DebugChangeClothes(int Entr
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

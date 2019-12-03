@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.ZeroedOutInput
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,15 +35,16 @@ bool UBPC_S3PlayerSteering_C::ZeroedOutInput()
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.Clear
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetClient, Const)
 
-void UBPC_S3PlayerSteering_C::Clear()
+void UBPC_S3PlayerSteering_C::STATIC_Clear()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.Clear");
 
 	UBPC_S3PlayerSteering_C_Clear_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,7 +53,7 @@ void UBPC_S3PlayerSteering_C::Clear()
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.CalcNPCSteer
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Public, Protected, NetClient, Const)
 // Parameters:
 // class AS3Character*            NPC                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 PlayerLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -86,13 +87,13 @@ void UBPC_S3PlayerSteering_C::CalcNPCSteer(class AS3Character* NPC, const struct
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.SampleFloatCurveWithLinearDefault
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UCurveFloat*             Curve                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          InputValue                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          OutputValue                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3PlayerSteering_C::SampleFloatCurveWithLinearDefault(class UCurveFloat* Curve, float InputValue, float* OutputValue)
+void UBPC_S3PlayerSteering_C::STATIC_SampleFloatCurveWithLinearDefault(class UCurveFloat* Curve, float InputValue, float* OutputValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.SampleFloatCurveWithLinearDefault");
 
@@ -101,6 +102,7 @@ void UBPC_S3PlayerSteering_C::SampleFloatCurveWithLinearDefault(class UCurveFloa
 	params.InputValue = InputValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -112,7 +114,7 @@ void UBPC_S3PlayerSteering_C::SampleFloatCurveWithLinearDefault(class UCurveFloa
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.GetNPCAngleN
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Private, Delegate, NetClient, Const)
 // Parameters:
 // struct FVector                 NPCLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 PlayerLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -121,7 +123,7 @@ void UBPC_S3PlayerSteering_C::SampleFloatCurveWithLinearDefault(class UCurveFloa
 // float                          InputAngleWS                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3PlayerSteering_C::GetNPCAngleN(const struct FVector& NPCLocation, const struct FVector& PlayerLocation, float PlayerNPCDistance, float NPCRadius, float InputAngleWS, float* Angle)
+void UBPC_S3PlayerSteering_C::STATIC_GetNPCAngleN(const struct FVector& NPCLocation, const struct FVector& PlayerLocation, float PlayerNPCDistance, float NPCRadius, float InputAngleWS, float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.GetNPCAngleN");
 
@@ -144,7 +146,7 @@ void UBPC_S3PlayerSteering_C::GetNPCAngleN(const struct FVector& NPCLocation, co
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.ClearHints
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetClient, Const)
 
 void UBPC_S3PlayerSteering_C::ClearHints()
 {
@@ -153,6 +155,7 @@ void UBPC_S3PlayerSteering_C::ClearHints()
 	UBPC_S3PlayerSteering_C_ClearHints_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,7 +164,7 @@ void UBPC_S3PlayerSteering_C::ClearHints()
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.Update
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 InputDirWS                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           ActiveInput                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -170,7 +173,7 @@ void UBPC_S3PlayerSteering_C::ClearHints()
 // struct FVector                 OutDirection                   (Parm, OutParm, IsPlainOldData)
 // float                          OutMagnitude                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3PlayerSteering_C::Update(const struct FVector& InputDirWS, bool ActiveInput, float InputMagnitude, float* OutStrength, struct FVector* OutDirection, float* OutMagnitude)
+void UBPC_S3PlayerSteering_C::STATIC_Update(const struct FVector& InputDirWS, bool ActiveInput, float InputMagnitude, float* OutStrength, struct FVector* OutDirection, float* OutMagnitude)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.Update");
 
@@ -195,9 +198,9 @@ void UBPC_S3PlayerSteering_C::Update(const struct FVector& InputDirWS, bool Acti
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void UBPC_S3PlayerSteering_C::ReceiveBeginPlay()
+void UBPC_S3PlayerSteering_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.ReceiveBeginPlay");
 
@@ -212,11 +215,11 @@ void UBPC_S3PlayerSteering_C::ReceiveBeginPlay()
 
 
 // Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.ExecuteUbergraph_BPC_S3PlayerSteering
-// ()
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_S3PlayerSteering_C::ExecuteUbergraph_BPC_S3PlayerSteering(int EntryPoint)
+void UBPC_S3PlayerSteering_C::STATIC_ExecuteUbergraph_BPC_S3PlayerSteering(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_S3PlayerSteering.BPC_S3PlayerSteering_C.ExecuteUbergraph_BPC_S3PlayerSteering");
 

@@ -13,19 +13,20 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.ShowHP
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.SHOWHP
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_LoadingHintWindowBase_C::ShowHP(int Type)
+void ABP_UI_LoadingHintWindowBase_C::SHOWHP(int Type)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.ShowHP");
+	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.SHOWHP");
 
-	ABP_UI_LoadingHintWindowBase_C_ShowHP_Params params;
+	ABP_UI_LoadingHintWindowBase_C_SHOWHP_Params params;
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void ABP_UI_LoadingHintWindowBase_C::ShowHP(int Type)
 
 
 // Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.ShowHint
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FST_LoadingHintWindowParam Params                         (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -46,6 +47,7 @@ void ABP_UI_LoadingHintWindowBase_C::ShowHint(const struct FST_LoadingHintWindow
 	params.Params = Params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -54,7 +56,7 @@ void ABP_UI_LoadingHintWindowBase_C::ShowHint(const struct FST_LoadingHintWindow
 
 
 // Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.NotifyLoadingDone
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_LoadingHintWindowBase_C::NotifyLoadingDone()
 {
@@ -63,6 +65,7 @@ void ABP_UI_LoadingHintWindowBase_C::NotifyLoadingDone()
 	ABP_UI_LoadingHintWindowBase_C_NotifyLoadingDone_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,7 +74,7 @@ void ABP_UI_LoadingHintWindowBase_C::NotifyLoadingDone()
 
 
 // Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_LoadingHintWindowBase_C::UserConstructionScript()
 {
@@ -80,6 +83,7 @@ void ABP_UI_LoadingHintWindowBase_C::UserConstructionScript()
 	ABP_UI_LoadingHintWindowBase_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -88,7 +92,7 @@ void ABP_UI_LoadingHintWindowBase_C::UserConstructionScript()
 
 
 // Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.OnWindowClose__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_LoadingHintWindowBase_C::OnWindowClose__DelegateSignature()
 {
@@ -97,6 +101,7 @@ void ABP_UI_LoadingHintWindowBase_C::OnWindowClose__DelegateSignature()
 	ABP_UI_LoadingHintWindowBase_C_OnWindowClose__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

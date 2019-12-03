@@ -60,19 +60,19 @@ public:
 	}
 
 
-	void StopRollingSE();
-	void InitializeSE();
-	void IsPerfectStop(bool* Stop);
+	void STATIC_StopRollingSE();
+	void STATIC_InitializeSE();
+	void STATIC_IsPerfectStop(bool* Stop);
 	void UpdateRollingSE();
-	bool IsHitSEPlaying();
-	void IsStopped(bool* bStop);
-	void UserConstructionScript();
+	bool STATIC_IsHitSEPlaying();
+	void STATIC_IsStopped(bool* bStop);
+	void STATIC_UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
-	void BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void ReceiveBeginPlay();
+	void STATIC_BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void PlayHitSE();
-	void ExecuteUbergraph_BP_MiniGame_UDYDice(int EntryPoint);
+	void STATIC_PlayHitSE();
+	void STATIC_ExecuteUbergraph_BP_MiniGame_UDYDice(int EntryPoint);
 };
 
 

@@ -14,10 +14,11 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
-struct AGeometryCacheActor_GetGeometryCacheComponent_Params
+// Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
+struct UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params
 {
-	class UGeometryCacheComponent*                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+	struct FGeometryCacheMeshData                      MeshData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
+	float                                              SampleTime;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function GeometryCache.GeometryCacheComponent.TickAtThisTime
@@ -138,11 +139,10 @@ struct UGeometryCacheComponent_GetAnimationTime_Params
 	float                                              ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 };
 
-// Function GeometryCache.GeometryCacheTrack_FlipbookAnimation.AddMeshSample
-struct UGeometryCacheTrack_FlipbookAnimation_AddMeshSample_Params
+// Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
+struct UGeometryCacheTrack_TransformAnimation_SetMesh_Params
 {
-	struct FGeometryCacheMeshData                      MeshData;                                                 // (ConstParm, Parm, OutParm, ReferenceParm)
-	float                                              SampleTime;                                               // (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+	struct FGeometryCacheMeshData                      NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
 // Function GeometryCache.GeometryCacheTrack_TransformGroupAnimation.SetMesh
@@ -151,10 +151,10 @@ struct UGeometryCacheTrack_TransformGroupAnimation_SetMesh_Params
 	struct FGeometryCacheMeshData                      NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
 };
 
-// Function GeometryCache.GeometryCacheTrack_TransformAnimation.SetMesh
-struct UGeometryCacheTrack_TransformAnimation_SetMesh_Params
+// Function GeometryCache.GeometryCacheActor.GetGeometryCacheComponent
+struct AGeometryCacheActor_GetGeometryCacheComponent_Params
 {
-	struct FGeometryCacheMeshData                      NewMeshData;                                              // (ConstParm, Parm, OutParm, ReferenceParm)
+	class UGeometryCacheComponent*                     ReturnValue;                                              // (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 };
 
 }

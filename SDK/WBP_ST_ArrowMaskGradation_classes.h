@@ -28,10 +28,10 @@ public:
 	}
 
 
-	void SetMainImageSize(const struct FVector2D& InSize);
-	void AddMainImagePos(const struct FVector2D& Add);
+	void STATIC_SetMainImageSize(const struct FVector2D& InSize);
+	void STATIC_AddMainImagePos(const struct FVector2D& Add);
 	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_WBP_ST_ArrowMaskGradation(int EntryPoint);
+	void STATIC_ExecuteUbergraph_WBP_ST_ArrowMaskGradation(int EntryPoint);
 };
 
 

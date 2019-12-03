@@ -178,32 +178,32 @@ public:
 
 
 	void SetSunAndMoonMovement(bool Enable);
-	void GetCurrentUDMMat(class UMaterialInstanceDynamic** newParam);
+	void STATIC_GetCurrentUDMMat(class UMaterialInstanceDynamic** newParam);
 	void ForceMoonPosition(float Yaw);
-	void ForceUpdateSkylight();
+	void STATIC_ForceUpdateSkylight();
 	void IsCloudy(bool* Cloudy);
-	void ResetCloudSimulateTime();
+	void STATIC_ResetCloudSimulateTime();
 	void SetWindSpeed(float Speed);
 	void UpdateFogDensity(float DeltaSeconds);
-	void AnmateCloudDensity();
+	void STATIC_AnmateCloudDensity();
 	void UpdateWind(struct FVector* WindVector);
-	void SetGameTime(float InGameTime, bool bJump);
+	void STATIC_SetGameTime(float InGameTime, bool bJump);
 	void GetCloudRatio(float* Ratio);
-	void GetSunLocation(struct FVector* Location);
-	void SetFogDensity(float Value, bool Force);
-	void CanRain(bool* Rain);
+	void STATIC_GetSunLocation(struct FVector* Location);
+	void STATIC_SetFogDensity(float Value, bool Force);
+	void STATIC_CanRain(bool* Rain);
 	void UpdateCloudDensity(float NewDencity, bool Force);
 	void SetCloudChangeSpeed(bool Quick, bool TransitionTest);
-	void GetSkyParamater(struct FRotator* Direction, float* Intensity, struct FLinearColor* LightColor);
-	void Update_Skylight(bool bAutoTimeOfDay);
+	void STATIC_GetSkyParamater(struct FRotator* Direction, float* Intensity, struct FLinearColor* LightColor);
+	void STATIC_Update_Skylight(bool bAutoTimeOfDay);
 	void Set_Material_Variables();
 	void Set_Solar_Angle();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoint);
+	void STATIC_ExecuteUbergraph_Ultra_Dynamic_Sky_BP(int EntryPoint);
 	void OnUpdateWind__DelegateSignature(const struct FVector& WindDirection);
-	void OnReadyCloud__DelegateSignature();
+	void STATIC_OnReadyCloud__DelegateSignature();
 };
 
 

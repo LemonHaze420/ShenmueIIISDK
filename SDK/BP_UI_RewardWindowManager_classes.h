@@ -30,12 +30,12 @@ public:
 	}
 
 
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void FinsihRewardWindow();
 	void AddNotice(ES3RewardCategory Category);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_UI_RewardWindowManager(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_UI_RewardWindowManager(int EntryPoint);
 };
 
 

@@ -49,18 +49,18 @@ public:
 	}
 
 
-	void DebugPrintMobility();
-	void EnsureMeshActor(bool IsStep, class AActor** Parent);
+	void STATIC_DebugPrintMobility();
+	void STATIC_EnsureMeshActor(bool IsStep, class AActor** Parent);
 	void GetGimmickInitInfo(struct FTransform* ActorTransform, struct FTransform* RelativeTransform, struct FVector* StepDimensions, int* StepCount);
-	class UInstancedStaticMeshComponent* EnsureStaticMeshComponent(class UStaticMesh* Mesh, class UMaterialInterface* Material, bool IsFloor);
+	class UInstancedStaticMeshComponent* STATIC_EnsureStaticMeshComponent(class UStaticMesh* Mesh, class UMaterialInterface* Material, bool IsFloor);
 	void SpawnMesh(class UStaticMesh* NewMesh, class UMaterialInterface* Material, bool bIsStep, const struct FTransform& RelativeTransform, class UInstancedStaticMeshComponent** Component, int* Index);
-	void CalcChildScaleFix(bool* bNeedFix, struct FVector* FixScale);
+	void STATIC_CalcChildScaleFix(bool* bNeedFix, struct FVector* FixScale);
 	void PostConstruction();
 	void CreateGimmick();
-	void SetModifierBox();
-	void CreateLink(struct FST_StairsNavLink* StairsNavLink, bool* Result);
-	void InitializeFromLegacyChild(float StepDepth, float StepWidth, float StepHeight, int NumSteps__1_, int NumbWidths__1_);
-	void CalculateBaseRelativeTransform(struct FTransform* OutTransform);
+	void STATIC_SetModifierBox();
+	void STATIC_CreateLink(struct FST_StairsNavLink* StairsNavLink, bool* Result);
+	void STATIC_InitializeFromLegacyChild(float StepDepth, float StepWidth, float StepHeight, int NumSteps__1_, int NumbWidths__1_);
+	void STATIC_CalculateBaseRelativeTransform(struct FTransform* OutTransform);
 	void UserConstructionScript();
 	void ExecuteUbergraph_BP_BG_ProceduralStairs_Base(int EntryPoint);
 };

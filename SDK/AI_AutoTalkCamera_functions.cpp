@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function AI_AutoTalkCamera.AI_AutoTalkCamera_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void AAI_AutoTalkCamera_C::UserConstructionScript()
+void AAI_AutoTalkCamera_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AI_AutoTalkCamera.AI_AutoTalkCamera_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void AAI_AutoTalkCamera_C::UserConstructionScript()
 
 
 // Function AI_AutoTalkCamera.AI_AutoTalkCamera_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void AAI_AutoTalkCamera_C::ReceiveBeginPlay()
 {
@@ -40,6 +40,7 @@ void AAI_AutoTalkCamera_C::ReceiveBeginPlay()
 	AAI_AutoTalkCamera_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -48,11 +49,11 @@ void AAI_AutoTalkCamera_C::ReceiveBeginPlay()
 
 
 // Function AI_AutoTalkCamera.AI_AutoTalkCamera_C.ExecuteUbergraph_AI_AutoTalkCamera
-// ()
+// (NetRequest, NetResponse, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void AAI_AutoTalkCamera_C::ExecuteUbergraph_AI_AutoTalkCamera(int EntryPoint)
+void AAI_AutoTalkCamera_C::STATIC_ExecuteUbergraph_AI_AutoTalkCamera(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function AI_AutoTalkCamera.AI_AutoTalkCamera_C.ExecuteUbergraph_AI_AutoTalkCamera");
 

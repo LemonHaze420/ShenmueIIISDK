@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3Character.BP_S3Character_C.AddTurnAroundComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UBPC_TurnAround_C*       Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_S3Character_C::AddTurnAroundComponent(class UBPC_TurnAround_C** Component)
+void ABP_S3Character_C::STATIC_AddTurnAroundComponent(class UBPC_TurnAround_C** Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.AddTurnAroundComponent");
 
@@ -36,7 +36,7 @@ void ABP_S3Character_C::AddTurnAroundComponent(class UBPC_TurnAround_C** Compone
 
 
 // Function BP_S3Character.BP_S3Character_C.RemoveTurnAroundComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // bool                           bSuccess                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -58,17 +58,18 @@ void ABP_S3Character_C::RemoveTurnAroundComponent(bool* bSuccess)
 
 
 // Function BP_S3Character.BP_S3Character_C.GetTurnAroundComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UBPC_TurnAround_C*       Component                      (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_S3Character_C::GetTurnAroundComponent(class UBPC_TurnAround_C** Component)
+void ABP_S3Character_C::STATIC_GetTurnAroundComponent(class UBPC_TurnAround_C** Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.GetTurnAroundComponent");
 
 	ABP_S3Character_C_GetTurnAroundComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +81,7 @@ void ABP_S3Character_C::GetTurnAroundComponent(class UBPC_TurnAround_C** Compone
 
 
 // Function BP_S3Character.BP_S3Character_C.IsInShelter
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Sheltered                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -102,7 +103,7 @@ void ABP_S3Character_C::IsInShelter(bool* Sheltered)
 
 
 // Function BP_S3Character.BP_S3Character_C.IsTalking
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -123,7 +124,7 @@ bool ABP_S3Character_C::IsTalking()
 
 
 // Function BP_S3Character.BP_S3Character_C.GetDoorActor
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3GimmickOpenDoor*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -144,7 +145,7 @@ class AS3GimmickOpenDoor* ABP_S3Character_C::GetDoorActor()
 
 
 // Function BP_S3Character.BP_S3Character_C.GetNearSideTargetTransform
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ValidDoor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              TargetTransform                (Parm, OutParm, IsPlainOldData)
@@ -169,7 +170,7 @@ void ABP_S3Character_C::GetNearSideTargetTransform(bool* ValidDoor, struct FTran
 
 
 // Function BP_S3Character.BP_S3Character_C.GetNearSideTargetPos
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           ValidDoor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 pos                            (Parm, OutParm, IsPlainOldData)
@@ -181,6 +182,7 @@ void ABP_S3Character_C::GetNearSideTargetPos(bool* ValidDoor, struct FVector* po
 	ABP_S3Character_C_GetNearSideTargetPos_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,18 +196,19 @@ void ABP_S3Character_C::GetNearSideTargetPos(bool* ValidDoor, struct FVector* po
 
 
 // Function BP_S3Character.BP_S3Character_C.GetCharaToDoorPointDiff
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, Static, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FVector                 pos                            (Parm, OutParm, IsPlainOldData)
 // float                          AngleDeg                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Character_C::GetCharaToDoorPointDiff(struct FVector* pos, float* AngleDeg)
+void ABP_S3Character_C::STATIC_GetCharaToDoorPointDiff(struct FVector* pos, float* AngleDeg)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.GetCharaToDoorPointDiff");
 
 	ABP_S3Character_C_GetCharaToDoorPointDiff_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -219,7 +222,7 @@ void ABP_S3Character_C::GetCharaToDoorPointDiff(struct FVector* pos, float* Angl
 
 
 // Function BP_S3Character.BP_S3Character_C.ChangePosition
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, HasOutParms, HasDefaults, DLLImport)
 
 void ABP_S3Character_C::ChangePosition()
 {
@@ -228,6 +231,7 @@ void ABP_S3Character_C::ChangePosition()
 	ABP_S3Character_C_ChangePosition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -236,11 +240,11 @@ void ABP_S3Character_C::ChangePosition()
 
 
 // Function BP_S3Character.BP_S3Character_C.MoveDoorPoint
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Character_C::MoveDoorPoint(float DeltaSeconds)
+void ABP_S3Character_C::STATIC_MoveDoorPoint(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.MoveDoorPoint");
 
@@ -248,6 +252,7 @@ void ABP_S3Character_C::MoveDoorPoint(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,15 +261,16 @@ void ABP_S3Character_C::MoveDoorPoint(float DeltaSeconds)
 
 
 // Function BP_S3Character.BP_S3Character_C.NotifyFinishNock
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Character_C::NotifyFinishNock()
+void ABP_S3Character_C::STATIC_NotifyFinishNock()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.NotifyFinishNock");
 
 	ABP_S3Character_C_NotifyFinishNock_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -273,15 +279,16 @@ void ABP_S3Character_C::NotifyFinishNock()
 
 
 // Function BP_S3Character.BP_S3Character_C.NotifyFinishMove
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Character_C::NotifyFinishMove()
+void ABP_S3Character_C::STATIC_NotifyFinishMove()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.NotifyFinishMove");
 
 	ABP_S3Character_C_NotifyFinishMove_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,15 +297,16 @@ void ABP_S3Character_C::NotifyFinishMove()
 
 
 // Function BP_S3Character.BP_S3Character_C.OpenDoor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Character_C::OpenDoor()
+void ABP_S3Character_C::STATIC_OpenDoor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.OpenDoor");
 
 	ABP_S3Character_C_OpenDoor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -307,17 +315,18 @@ void ABP_S3Character_C::OpenDoor()
 
 
 // Function BP_S3Character.BP_S3Character_C.CheckCanUseDoor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           IsUseDoor                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Character_C::CheckCanUseDoor(bool* IsUseDoor)
+void ABP_S3Character_C::STATIC_CheckCanUseDoor(bool* IsUseDoor)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.CheckCanUseDoor");
 
 	ABP_S3Character_C_CheckCanUseDoor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -329,9 +338,9 @@ void ABP_S3Character_C::CheckCanUseDoor(bool* IsUseDoor)
 
 
 // Function BP_S3Character.BP_S3Character_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3Character_C::UserConstructionScript()
+void ABP_S3Character_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.UserConstructionScript");
 
@@ -346,7 +355,7 @@ void ABP_S3Character_C::UserConstructionScript()
 
 
 // Function BP_S3Character.BP_S3Character_C.OnTalkStart
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -366,12 +375,12 @@ void ABP_S3Character_C::OnTalkStart(class US3TalkComponent* TalkComponent)
 
 
 // Function BP_S3Character.BP_S3Character_C.OnTalkFinished
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class US3TalkComponent*        TalkComponent                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           interrupted                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Character_C::OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted)
+void ABP_S3Character_C::STATIC_OnTalkFinished(class US3TalkComponent* TalkComponent, bool interrupted)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.OnTalkFinished");
 
@@ -388,7 +397,7 @@ void ABP_S3Character_C::OnTalkFinished(class US3TalkComponent* TalkComponent, bo
 
 
 // Function BP_S3Character.BP_S3Character_C.Screen_Player
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Character_C::Screen_Player()
 {
@@ -397,6 +406,7 @@ void ABP_S3Character_C::Screen_Player()
 	ABP_S3Character_C_Screen_Player_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -405,7 +415,7 @@ void ABP_S3Character_C::Screen_Player()
 
 
 // Function BP_S3Character.BP_S3Character_C.Screen_NPC
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Character_C::Screen_NPC()
 {
@@ -414,6 +424,7 @@ void ABP_S3Character_C::Screen_NPC()
 	ABP_S3Character_C_Screen_NPC_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -422,7 +433,7 @@ void ABP_S3Character_C::Screen_NPC()
 
 
 // Function BP_S3Character.BP_S3Character_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Character_C::ReceiveBeginPlay()
 {
@@ -431,6 +442,7 @@ void ABP_S3Character_C::ReceiveBeginPlay()
 	ABP_S3Character_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -439,7 +451,7 @@ void ABP_S3Character_C::ReceiveBeginPlay()
 
 
 // Function BP_S3Character.BP_S3Character_C.StartNock
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Character_C::StartNock()
 {
@@ -448,6 +460,7 @@ void ABP_S3Character_C::StartNock()
 	ABP_S3Character_C_StartNock_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -456,7 +469,7 @@ void ABP_S3Character_C::StartNock()
 
 
 // Function BP_S3Character.BP_S3Character_C.OnDoorAreaBeginOverlap
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -476,7 +489,7 @@ void ABP_S3Character_C::OnDoorAreaBeginOverlap(class AS3GimmickOpenDoor* Door)
 
 
 // Function BP_S3Character.BP_S3Character_C.OnDoorAreaEndOverlap
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -496,7 +509,7 @@ void ABP_S3Character_C::OnDoorAreaEndOverlap(class AS3GimmickOpenDoor* Door)
 
 
 // Function BP_S3Character.BP_S3Character_C.OnDoorAreaOutsideBeginOverlap
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -516,11 +529,11 @@ void ABP_S3Character_C::OnDoorAreaOutsideBeginOverlap(class AS3GimmickOpenDoor* 
 
 
 // Function BP_S3Character.BP_S3Character_C.OnDoorAreaOutsideEndOverlap
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class AS3GimmickOpenDoor*      Door                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Character_C::OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door)
+void ABP_S3Character_C::STATIC_OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Door)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Character.BP_S3Character_C.OnDoorAreaOutsideEndOverlap");
 
@@ -528,6 +541,7 @@ void ABP_S3Character_C::OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Do
 	params.Door = Door;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -536,7 +550,7 @@ void ABP_S3Character_C::OnDoorAreaOutsideEndOverlap(class AS3GimmickOpenDoor* Do
 
 
 // Function BP_S3Character.BP_S3Character_C.ExecuteUbergraph_BP_S3Character
-// (HasDefaults)
+// (Exec, Native, NetResponse, NetMulticast, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -548,6 +562,7 @@ void ABP_S3Character_C::ExecuteUbergraph_BP_S3Character(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -556,7 +571,7 @@ void ABP_S3Character_C::ExecuteUbergraph_BP_S3Character(int EntryPoint)
 
 
 // Function BP_S3Character.BP_S3Character_C.StartNockDoor__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3Character_C::StartNockDoor__DelegateSignature()
 {
@@ -565,6 +580,7 @@ void ABP_S3Character_C::StartNockDoor__DelegateSignature()
 	ABP_S3Character_C_StartNockDoor__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -249,21 +249,6 @@ public:
 };
 
 
-// Class NavigationSystem.AbstractNavData
-// 0x0000 (0x04E8 - 0x04E8)
-class AAbstractNavData : public ANavigationData
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.AbstractNavData");
-		return ptr;
-	}
-
-};
-
-
 // Class NavigationSystem.NavArea_Default
 // 0x0000 (0x0048 - 0x0048)
 class UNavArea_Default : public UNavArea
@@ -273,6 +258,36 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class NavigationSystem.NavArea_Default");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.CrowdManagerBase
+// 0x0000 (0x0028 - 0x0028)
+class UCrowdManagerBase : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.CrowdManagerBase");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavAreaMeta
+// 0x0000 (0x0048 - 0x0048)
+class UNavAreaMeta : public UNavArea
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavAreaMeta");
 		return ptr;
 	}
 
@@ -294,30 +309,15 @@ public:
 };
 
 
-// Class NavigationSystem.NavArea_Null
-// 0x0000 (0x0048 - 0x0048)
-class UNavArea_Null : public UNavArea
+// Class NavigationSystem.AbstractNavData
+// 0x0000 (0x04E8 - 0x04E8)
+class AAbstractNavData : public ANavigationData
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavArea_Null");
-		return ptr;
-	}
-
-};
-
-
-// Class NavigationSystem.NavAreaMeta
-// 0x0000 (0x0048 - 0x0048)
-class UNavAreaMeta : public UNavArea
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavAreaMeta");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.AbstractNavData");
 		return ptr;
 	}
 
@@ -349,6 +349,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class NavigationSystem.NavAreaMeta_SwitchByAgent");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavArea_Null
+// 0x0000 (0x0048 - 0x0048)
+class UNavArea_Null : public UNavArea
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavArea_Null");
 		return ptr;
 	}
 
@@ -424,23 +439,6 @@ public:
 };
 
 
-// Class NavigationSystem.NavigationInvokerComponent
-// 0x0008 (0x00F8 - 0x00F0)
-class UNavigationInvokerComponent : public UActorComponent
-{
-public:
-	float                                              TileGenerationRadius;                                     // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              TileRemovalRadius;                                        // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationInvokerComponent");
-		return ptr;
-	}
-
-};
-
-
 // Class NavigationSystem.NavigationPath
 // 0x0060 (0x0088 - 0x0028)
 class UNavigationPath : public UObject
@@ -469,34 +467,17 @@ public:
 };
 
 
-// Class NavigationSystem.NavigationPathGenerator
-// 0x0000 (0x0028 - 0x0028)
-class UNavigationPathGenerator : public UInterface
+// Class NavigationSystem.NavigationInvokerComponent
+// 0x0008 (0x00F8 - 0x00F0)
+class UNavigationInvokerComponent : public UActorComponent
 {
 public:
+	float                                              TileGenerationRadius;                                     // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TileRemovalRadius;                                        // 0x00F4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationPathGenerator");
-		return ptr;
-	}
-
-};
-
-
-// Class NavigationSystem.NavigationQueryFilter
-// 0x0020 (0x0048 - 0x0028)
-class UNavigationQueryFilter : public UObject
-{
-public:
-	TArray<struct FNavigationFilterArea>               Areas;                                                    // 0x0028(0x0010) (Edit, ZeroConstructor)
-	struct FNavigationFilterFlags                      IncludeFlags;                                             // 0x0038(0x0004) (Edit, IsPlainOldData)
-	struct FNavigationFilterFlags                      ExcludeFlags;                                             // 0x003C(0x0004) (Edit, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationQueryFilter");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationInvokerComponent");
 		return ptr;
 	}
 
@@ -546,44 +527,58 @@ public:
 
 
 	void UnregisterNavigationInvoker(class AActor* Invoker);
-	void STATIC_SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal);
-	void STATIC_SimpleMoveToActor(class AController* Controller, class AActor* Goal);
+	void SimpleMoveToLocation(class AController* Controller, const struct FVector& Goal);
+	void SimpleMoveToActor(class AController* Controller, class AActor* Goal);
 	void SetMaxSimultaneousTileGenerationJobsCount(int MaxNumberOfJobs);
 	void SetGeometryGatheringMode(ENavDataGatheringModeConfig NewMode);
 	void ResetMaxSimultaneousTileGenerationJobsCount();
 	void RegisterNavigationInvoker(class AActor* Invoker, float TileGenerationRadius, float TileRemovalRadius);
-	struct FVector STATIC_ProjectPointToNavigation(class UObject* WorldContextObject, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent);
+	struct FVector ProjectPointToNavigation(class UObject* WorldContextObject, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent);
 	void OnNavigationBoundsUpdated(class ANavMeshBoundsVolume* NavVolume);
-	bool STATIC_NavigationRaycast(class UObject* WorldContextObject, const struct FVector& RayStart, const struct FVector& RayEnd, class UClass* FilterClass, class AController* Querier, struct FVector* HitLocation);
-	bool STATIC_K2_ProjectPointToNavigation(class UObject* WorldContextObject, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent, struct FVector* ProjectedLocation);
-	bool STATIC_K2_GetRandomReachablePointInRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass, struct FVector* RandomLocation);
-	bool STATIC_K2_GetRandomPointInNavigableRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass, struct FVector* RandomLocation);
-	bool STATIC_IsNavigationBeingBuiltOrLocked(class UObject* WorldContextObject);
-	bool STATIC_IsNavigationBeingBuilt(class UObject* WorldContextObject);
-	struct FVector STATIC_GetRandomReachablePointInRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass);
-	struct FVector STATIC_GetRandomPointInNavigableRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass);
-	TEnumAsByte<ENavigationQueryResult> STATIC_GetPathLength(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathLength);
-	TEnumAsByte<ENavigationQueryResult> STATIC_GetPathCost(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathCost);
-	class UNavigationSystemV1* STATIC_GetNavigationSystem(class UObject* WorldContextObject);
-	class UNavigationPath* STATIC_FindPathToLocationSynchronously(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, class AActor* PathfindingContext, class UClass* FilterClass);
-	class UNavigationPath* STATIC_FindPathToActorSynchronously(class UObject* WorldContextObject, const struct FVector& PathStart, class AActor* GoalActor, float TetherDistance, class AActor* PathfindingContext, class UClass* FilterClass);
+	bool NavigationRaycast(class UObject* WorldContextObject, const struct FVector& RayStart, const struct FVector& RayEnd, class UClass* FilterClass, class AController* Querier, struct FVector* HitLocation);
+	bool K2_ProjectPointToNavigation(class UObject* WorldContextObject, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent, struct FVector* ProjectedLocation);
+	bool K2_GetRandomReachablePointInRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass, struct FVector* RandomLocation);
+	bool K2_GetRandomPointInNavigableRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass, struct FVector* RandomLocation);
+	bool IsNavigationBeingBuiltOrLocked(class UObject* WorldContextObject);
+	bool IsNavigationBeingBuilt(class UObject* WorldContextObject);
+	struct FVector GetRandomReachablePointInRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass);
+	struct FVector GetRandomPointInNavigableRadius(class UObject* WorldContextObject, const struct FVector& Origin, float Radius, class ANavigationData* NavData, class UClass* FilterClass);
+	TEnumAsByte<ENavigationQueryResult> GetPathLength(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathLength);
+	TEnumAsByte<ENavigationQueryResult> GetPathCost(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, class ANavigationData* NavData, class UClass* FilterClass, float* PathCost);
+	class UNavigationSystemV1* GetNavigationSystem(class UObject* WorldContextObject);
+	class UNavigationPath* FindPathToLocationSynchronously(class UObject* WorldContextObject, const struct FVector& PathStart, const struct FVector& PathEnd, class AActor* PathfindingContext, class UClass* FilterClass);
+	class UNavigationPath* FindPathToActorSynchronously(class UObject* WorldContextObject, const struct FVector& PathStart, class AActor* GoalActor, float TetherDistance, class AActor* PathfindingContext, class UClass* FilterClass);
 };
 
 
-// Class NavigationSystem.NavigationSystemModuleConfig
-// 0x0008 (0x0048 - 0x0040)
-class UNavigationSystemModuleConfig : public UNavigationSystemConfig
+// Class NavigationSystem.NavigationPathGenerator
+// 0x0000 (0x0028 - 0x0028)
+class UNavigationPathGenerator : public UInterface
 {
 public:
-	unsigned char                                      bStrictlyStatic : 1;                                      // 0x0040(0x0001) (Edit)
-	unsigned char                                      bCreateOnClient : 1;                                      // 0x0040(0x0001) (Edit)
-	unsigned char                                      bAutoSpawnMissingNavData : 1;                             // 0x0040(0x0001) (Edit)
-	unsigned char                                      bSpawnNavDataInNavBoundsLevel : 1;                        // 0x0040(0x0001) (Edit)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationSystemModuleConfig");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationPathGenerator");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavigationQueryFilter
+// 0x0020 (0x0048 - 0x0028)
+class UNavigationQueryFilter : public UObject
+{
+public:
+	TArray<struct FNavigationFilterArea>               Areas;                                                    // 0x0028(0x0010) (Edit, ZeroConstructor)
+	struct FNavigationFilterFlags                      IncludeFlags;                                             // 0x0038(0x0004) (Edit, IsPlainOldData)
+	struct FNavigationFilterFlags                      ExcludeFlags;                                             // 0x003C(0x0004) (Edit, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationQueryFilter");
 		return ptr;
 	}
 
@@ -641,48 +636,20 @@ public:
 };
 
 
-// Class NavigationSystem.NavLinkComponent
-// 0x0020 (0x0580 - 0x0560)
-class UNavLinkComponent : public UPrimitiveComponent
+// Class NavigationSystem.NavigationSystemModuleConfig
+// 0x0008 (0x0048 - 0x0040)
+class UNavigationSystemModuleConfig : public UNavigationSystemConfig
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0560(0x0008) MISSED OFFSET
-	TArray<struct FNavigationLink>                     Links;                                                    // 0x0568(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0578(0x0008) MISSED OFFSET
+	unsigned char                                      bStrictlyStatic : 1;                                      // 0x0040(0x0001) (Edit)
+	unsigned char                                      bCreateOnClient : 1;                                      // 0x0040(0x0001) (Edit)
+	unsigned char                                      bAutoSpawnMissingNavData : 1;                             // 0x0040(0x0001) (Edit)
+	unsigned char                                      bSpawnNavDataInNavBoundsLevel : 1;                        // 0x0040(0x0001) (Edit)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkComponent");
-		return ptr;
-	}
-
-};
-
-
-// Class NavigationSystem.NavLinkCustomInterface
-// 0x0000 (0x0028 - 0x0028)
-class UNavLinkCustomInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkCustomInterface");
-		return ptr;
-	}
-
-};
-
-
-// Class NavigationSystem.NavLinkHostInterface
-// 0x0000 (0x0028 - 0x0028)
-class UNavLinkHostInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkHostInterface");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavigationSystemModuleConfig");
 		return ptr;
 	}
 
@@ -704,15 +671,30 @@ public:
 };
 
 
-// Class NavigationSystem.NavLinkTrivial
-// 0x0000 (0x0050 - 0x0050)
-class UNavLinkTrivial : public UNavLinkDefinition
+// Class NavigationSystem.NavLinkHostInterface
+// 0x0000 (0x0028 - 0x0028)
+class UNavLinkHostInterface : public UInterface
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkTrivial");
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkHostInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavLinkCustomInterface
+// 0x0000 (0x0028 - 0x0028)
+class UNavLinkCustomInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkCustomInterface");
 		return ptr;
 	}
 
@@ -771,21 +753,6 @@ public:
 };
 
 
-// Class NavigationSystem.CrowdManagerBase
-// 0x0000 (0x0028 - 0x0028)
-class UCrowdManagerBase : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class NavigationSystem.CrowdManagerBase");
-		return ptr;
-	}
-
-};
-
-
 // Class NavigationSystem.NavNodeInterface
 // 0x0000 (0x0028 - 0x0028)
 class UNavNodeInterface : public UInterface
@@ -795,6 +762,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class NavigationSystem.NavNodeInterface");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavLinkComponent
+// 0x0020 (0x0580 - 0x0560)
+class UNavLinkComponent : public UPrimitiveComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0560(0x0008) MISSED OFFSET
+	TArray<struct FNavigationLink>                     Links;                                                    // 0x0568(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0578(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkComponent");
 		return ptr;
 	}
 
@@ -841,6 +826,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class NavigationSystem.RecastNavMeshDataChunk");
+		return ptr;
+	}
+
+};
+
+
+// Class NavigationSystem.NavLinkTrivial
+// 0x0000 (0x0050 - 0x0050)
+class UNavLinkTrivial : public UNavLinkDefinition
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class NavigationSystem.NavLinkTrivial");
 		return ptr;
 	}
 

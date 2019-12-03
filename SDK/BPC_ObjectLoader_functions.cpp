@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.AssetLoadObject
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FST_ObjectLoadInfo      LoadInfo                       (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -36,7 +36,7 @@ void UBPC_ObjectLoader_C::AssetLoadObject(struct FST_ObjectLoadInfo* LoadInfo)
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.RemoveLoadingList
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 LoadId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -56,11 +56,11 @@ void UBPC_ObjectLoader_C::RemoveLoadingList(const struct FString& LoadId)
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.AddLoadingList
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Static, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FString                 LoadId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBPC_ObjectLoader_C::AddLoadingList(const struct FString& LoadId)
+void UBPC_ObjectLoader_C::STATIC_AddLoadingList(const struct FString& LoadId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ObjectLoader.BPC_ObjectLoader_C.AddLoadingList");
 
@@ -76,7 +76,7 @@ void UBPC_ObjectLoader_C::AddLoadingList(const struct FString& LoadId)
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.OnLoaded_066D0130431550B75D2FBDB198B97FBC
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -88,6 +88,7 @@ void UBPC_ObjectLoader_C::OnLoaded_066D0130431550B75D2FBDB198B97FBC(class UObjec
 	params.Loaded = Loaded;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,7 +97,7 @@ void UBPC_ObjectLoader_C::OnLoaded_066D0130431550B75D2FBDB198B97FBC(class UObjec
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.RequestLoadObject
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, DLLImport)
 // Parameters:
 // struct FString                 LoadId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -108,6 +109,7 @@ void UBPC_ObjectLoader_C::RequestLoadObject(const struct FString& LoadId)
 	params.LoadId = LoadId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +118,7 @@ void UBPC_ObjectLoader_C::RequestLoadObject(const struct FString& LoadId)
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.StartLoadObject
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FST_ObjectLoadInfo      LoadObjInfo                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 
@@ -128,6 +130,7 @@ void UBPC_ObjectLoader_C::StartLoadObject(const struct FST_ObjectLoadInfo& LoadO
 	params.LoadObjInfo = LoadObjInfo;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -136,7 +139,7 @@ void UBPC_ObjectLoader_C::StartLoadObject(const struct FST_ObjectLoadInfo& LoadO
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -156,11 +159,11 @@ void UBPC_ObjectLoader_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.ExecuteUbergraph_BPC_ObjectLoader
-// (HasDefaults)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_ObjectLoader_C::ExecuteUbergraph_BPC_ObjectLoader(int EntryPoint)
+void UBPC_ObjectLoader_C::STATIC_ExecuteUbergraph_BPC_ObjectLoader(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_ObjectLoader.BPC_ObjectLoader_C.ExecuteUbergraph_BPC_ObjectLoader");
 
@@ -168,6 +171,7 @@ void UBPC_ObjectLoader_C::ExecuteUbergraph_BPC_ObjectLoader(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -176,7 +180,7 @@ void UBPC_ObjectLoader_C::ExecuteUbergraph_BPC_ObjectLoader(int EntryPoint)
 
 
 // Function BPC_ObjectLoader.BPC_ObjectLoader_C.OnLoadedObjectDispatcher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FString                 LoadId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 LoadedObject                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

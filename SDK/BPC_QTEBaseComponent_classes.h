@@ -42,26 +42,26 @@ public:
 
 
 	void UpdateAnimationState();
-	void DebugQTEForceSetResultSuccess();
+	void STATIC_DebugQTEForceSetResultSuccess();
 	void PlayStartForceFeedback();
-	struct FName GetQTEForceFeedbackTag();
+	struct FName STATIC_GetQTEForceFeedbackTag();
 	void SetQTEForceFeedbackTag(const struct FName& InTag);
 	void PlayInputFailedForceFeedback();
 	void PlayInputSuccessForceFeedback();
-	float GetCurrentInputTime();
+	float STATIC_GetCurrentInputTime();
 	void DebugQTEForceSuccessUpdateInternal();
-	void DebugQTEForceSuccessUpdate();
+	void STATIC_DebugQTEForceSuccessUpdate();
 	void StartCountInputLimitTime();
 	bool CanStartCountInputLimitTime();
-	float GetLengthBeforeCountInputLimitTime();
+	float STATIC_GetLengthBeforeCountInputLimitTime();
 	bool IsPlayingInAnimation();
 	void PlayTimeUpFailedAnimation();
 	void PlayInAnimation();
-	void StopTimeCountSE();
-	void PlayTimeCountSE();
-	void PlayInputFailedSE();
-	void PlayInputSuccessSE();
-	void PlayStartSE();
+	void STATIC_StopTimeCountSE();
+	void STATIC_PlayTimeCountSE();
+	void STATIC_PlayInputFailedSE();
+	void STATIC_PlayInputSuccessSE();
+	void STATIC_PlayStartSE();
 	void SetTimeGaugeRate(float InGaugeRate);
 	float GetCurrentInputTimeRate();
 	void SetInputLimitTime(float InLimitTime);
@@ -73,13 +73,13 @@ public:
 	bool IsInQTE();
 	bool IsQTEStarted();
 	void Update();
-	void Reset();
-	void FinishQTE();
+	void STATIC_Reset();
+	void STATIC_FinishQTE();
 	void StartQTE();
 	void Finalize();
 	void Initialize();
-	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BPC_QTEBaseComponent(int EntryPoint);
+	void STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
+	void STATIC_ExecuteUbergraph_BPC_QTEBaseComponent(int EntryPoint);
 };
 
 

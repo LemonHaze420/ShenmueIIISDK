@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_QteTriangleLowerRight.BP_MiniGame_QteTriangleLowerRight_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_MiniGame_QteTriangleLowerRight_C::UserConstructionScript()
 {
@@ -31,9 +31,9 @@ void ABP_MiniGame_QteTriangleLowerRight_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_QteTriangleLowerRight.BP_MiniGame_QteTriangleLowerRight_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_QteTriangleLowerRight_C::ReceiveBeginPlay()
+void ABP_MiniGame_QteTriangleLowerRight_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_QteTriangleLowerRight.BP_MiniGame_QteTriangleLowerRight_C.ReceiveBeginPlay");
 
@@ -48,7 +48,7 @@ void ABP_MiniGame_QteTriangleLowerRight_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_QteTriangleLowerRight.BP_MiniGame_QteTriangleLowerRight_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,11 +68,11 @@ void ABP_MiniGame_QteTriangleLowerRight_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_QteTriangleLowerRight.BP_MiniGame_QteTriangleLowerRight_C.ExecuteUbergraph_BP_MiniGame_QteTriangleLowerRight
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Private, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_QteTriangleLowerRight_C::ExecuteUbergraph_BP_MiniGame_QteTriangleLowerRight(int EntryPoint)
+void ABP_MiniGame_QteTriangleLowerRight_C::STATIC_ExecuteUbergraph_BP_MiniGame_QteTriangleLowerRight(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_QteTriangleLowerRight.BP_MiniGame_QteTriangleLowerRight_C.ExecuteUbergraph_BP_MiniGame_QteTriangleLowerRight");
 
@@ -80,6 +80,7 @@ void ABP_MiniGame_QteTriangleLowerRight_C::ExecuteUbergraph_BP_MiniGame_QteTrian
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

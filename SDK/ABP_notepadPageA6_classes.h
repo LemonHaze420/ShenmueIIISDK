@@ -80,7 +80,7 @@ public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_notepadPageA6_AnimGraphNode_TransitionResult_AD144246495070F91258BF8BE3295D83();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_notepadPageA6_AnimGraphNode_TransitionResult_742994B24989F680D98E1882E916EBAA();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_notepadPageA6_AnimGraphNode_TransitionResult_F52407D6490CD0A6BF5C9A835C7777CE();
-	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
 	void BlueprintInitializeAnimation();
 	void AnimNotify_notepad();
 	void ExecuteUbergraph_ABP_notepadPageA6(int EntryPoint);

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_HW_Car_Base.BP_HW_Car_Base_C.SetCollisionEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,9 +34,9 @@ void ABP_HW_Car_Base_C::SetCollisionEnabled(bool Enabled)
 
 
 // Function BP_HW_Car_Base.BP_HW_Car_Base_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_HW_Car_Base_C::UserConstructionScript()
+void ABP_HW_Car_Base_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Car_Base.BP_HW_Car_Base_C.UserConstructionScript");
 
@@ -51,9 +51,9 @@ void ABP_HW_Car_Base_C::UserConstructionScript()
 
 
 // Function BP_HW_Car_Base.BP_HW_Car_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_HW_Car_Base_C::ReceiveBeginPlay()
+void ABP_HW_Car_Base_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Car_Base.BP_HW_Car_Base_C.ReceiveBeginPlay");
 
@@ -68,7 +68,7 @@ void ABP_HW_Car_Base_C::ReceiveBeginPlay()
 
 
 // Function BP_HW_Car_Base.BP_HW_Car_Base_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -77,7 +77,7 @@ void ABP_HW_Car_Base_C::ReceiveBeginPlay()
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_HW_Car_Base_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_HW_Car_Base_C::STATIC_BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Car_Base.BP_HW_Car_Base_C.BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -98,11 +98,11 @@ void ABP_HW_Car_Base_C::BndEvt__Box_K2Node_ComponentBoundEvent_0_ComponentBeginO
 
 
 // Function BP_HW_Car_Base.BP_HW_Car_Base_C.ExecuteUbergraph_BP_HW_Car_Base
-// (HasDefaults)
+// (Net, NetRequest, Exec, Event, Static, NetMulticast, Public, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_HW_Car_Base_C::ExecuteUbergraph_BP_HW_Car_Base(int EntryPoint)
+void ABP_HW_Car_Base_C::STATIC_ExecuteUbergraph_BP_HW_Car_Base(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_HW_Car_Base.BP_HW_Car_Base_C.ExecuteUbergraph_BP_HW_Car_Base");
 

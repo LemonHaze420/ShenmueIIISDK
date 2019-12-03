@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ImagePlate.ImagePlateComponent.SetImagePlate
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FImagePlateParameters   Plate                          (Parm)
 
@@ -26,7 +26,6 @@ void UImagePlateComponent::SetImagePlate(const struct FImagePlateParameters& Pla
 	params.Plate = Plate;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UImagePlateComponent::SetImagePlate(const struct FImagePlateParameters& Pla
 
 
 // Function ImagePlate.ImagePlateComponent.OnRenderTextureChanged
-// (Final, Native, Public)
+// ()
 
 void UImagePlateComponent::OnRenderTextureChanged()
 {
@@ -44,7 +43,6 @@ void UImagePlateComponent::OnRenderTextureChanged()
 	UImagePlateComponent_OnRenderTextureChanged_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +51,7 @@ void UImagePlateComponent::OnRenderTextureChanged()
 
 
 // Function ImagePlate.ImagePlateComponent.GetPlate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FImagePlateParameters   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -64,7 +62,6 @@ struct FImagePlateParameters UImagePlateComponent::GetPlate()
 	UImagePlateComponent_GetPlate_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

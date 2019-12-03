@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.SetRequestOwner
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPC_EventLevelStreaming_C::SetRequestOwner(class AActor* Actor)
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.GetRequestOwner
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -45,6 +45,7 @@ class AActor* UBPC_EventLevelStreaming_C::GetRequestOwner()
 	UBPC_EventLevelStreaming_C_GetRequestOwner_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -55,7 +56,7 @@ class AActor* UBPC_EventLevelStreaming_C::GetRequestOwner()
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.IsDataLevelSet
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -76,11 +77,11 @@ bool UBPC_EventLevelStreaming_C::IsDataLevelSet()
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.StartListLevelLoad
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // TArray<struct FName>           NeedLevels                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBPC_EventLevelStreaming_C::StartListLevelLoad(TArray<struct FName>* NeedLevels)
+void UBPC_EventLevelStreaming_C::STATIC_StartListLevelLoad(TArray<struct FName>* NeedLevels)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.StartListLevelLoad");
 
@@ -98,7 +99,7 @@ void UBPC_EventLevelStreaming_C::StartListLevelLoad(TArray<struct FName>* NeedLe
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.FinishLevelStreaming
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   ID                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -110,6 +111,7 @@ void UBPC_EventLevelStreaming_C::FinishLevelStreaming(const struct FName& ID)
 	params.ID = ID;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,7 +120,7 @@ void UBPC_EventLevelStreaming_C::FinishLevelStreaming(const struct FName& ID)
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.StreamDataLevel
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetResponse, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Level                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -130,6 +132,7 @@ void UBPC_EventLevelStreaming_C::StreamDataLevel(const struct FName& Level)
 	params.Level = Level;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -138,7 +141,7 @@ void UBPC_EventLevelStreaming_C::StreamDataLevel(const struct FName& Level)
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.UnloadLevels
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBPC_EventLevelStreaming_C::UnloadLevels()
 {
@@ -155,7 +158,7 @@ void UBPC_EventLevelStreaming_C::UnloadLevels()
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.FinishedUnloadLevel
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBPC_EventLevelStreaming_C::FinishedUnloadLevel()
 {
@@ -172,7 +175,7 @@ void UBPC_EventLevelStreaming_C::FinishedUnloadLevel()
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.UnloadDataLevelOnly
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBPC_EventLevelStreaming_C::UnloadDataLevelOnly()
 {
@@ -189,7 +192,7 @@ void UBPC_EventLevelStreaming_C::UnloadDataLevelOnly()
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.StartStreaming
-// (HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FName>           NeedLevels                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -200,6 +203,7 @@ void UBPC_EventLevelStreaming_C::StartStreaming(TArray<struct FName>* NeedLevels
 	UBPC_EventLevelStreaming_C_StartStreaming_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -211,11 +215,11 @@ void UBPC_EventLevelStreaming_C::StartStreaming(TArray<struct FName>* NeedLevels
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.ExecuteUbergraph_BPC_EventLevelStreaming
-// ()
+// (Exec, Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_EventLevelStreaming_C::ExecuteUbergraph_BPC_EventLevelStreaming(int EntryPoint)
+void UBPC_EventLevelStreaming_C::STATIC_ExecuteUbergraph_BPC_EventLevelStreaming(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.ExecuteUbergraph_BPC_EventLevelStreaming");
 
@@ -223,6 +227,7 @@ void UBPC_EventLevelStreaming_C::ExecuteUbergraph_BPC_EventLevelStreaming(int En
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -231,7 +236,7 @@ void UBPC_EventLevelStreaming_C::ExecuteUbergraph_BPC_EventLevelStreaming(int En
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.OnFinishListLoad__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_EventLevelStreaming_C::OnFinishListLoad__DelegateSignature()
 {
@@ -240,6 +245,7 @@ void UBPC_EventLevelStreaming_C::OnFinishListLoad__DelegateSignature()
 	UBPC_EventLevelStreaming_C_OnFinishListLoad__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -248,7 +254,7 @@ void UBPC_EventLevelStreaming_C::OnFinishListLoad__DelegateSignature()
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.OnFinishUnload__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_EventLevelStreaming_C::OnFinishUnload__DelegateSignature()
 {
@@ -265,7 +271,7 @@ void UBPC_EventLevelStreaming_C::OnFinishUnload__DelegateSignature()
 
 
 // Function BPC_EventLevelStreaming.BPC_EventLevelStreaming_C.OnFinishDataLoad__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void UBPC_EventLevelStreaming_C::OnFinishDataLoad__DelegateSignature()
 {
@@ -274,6 +280,7 @@ void UBPC_EventLevelStreaming_C::OnFinishDataLoad__DelegateSignature()
 	UBPC_EventLevelStreaming_C_OnFinishDataLoad__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.EnabledBall
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_OD_ball_Test_C::EnabledBall()
 {
@@ -23,6 +23,7 @@ void ABP_OD_ball_Test_C::EnabledBall()
 	ABP_OD_ball_Test_C_EnabledBall_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void ABP_OD_ball_Test_C::EnabledBall()
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.IsErrorStopping
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsStopping                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -42,6 +43,7 @@ void ABP_OD_ball_Test_C::IsErrorStopping(bool* IsStopping)
 	ABP_OD_ball_Test_C_IsErrorStopping_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,7 +55,7 @@ void ABP_OD_ball_Test_C::IsErrorStopping(bool* IsStopping)
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.PlayHitFallSE
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_ball_Test_C::PlayHitFallSE()
 {
@@ -70,7 +72,7 @@ void ABP_OD_ball_Test_C::PlayHitFallSE()
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.PlayHitWallSE
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_OD_ball_Test_C::PlayHitWallSE()
 {
@@ -87,11 +89,11 @@ void ABP_OD_ball_Test_C::PlayHitWallSE()
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.CheckAllVelocity
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           result1                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_ball_Test_C::CheckAllVelocity(bool* result1)
+void ABP_OD_ball_Test_C::STATIC_CheckAllVelocity(bool* result1)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_ball_Test.BP_OD_ball_Test_C.CheckAllVelocity");
 
@@ -109,15 +111,16 @@ void ABP_OD_ball_Test_C::CheckAllVelocity(bool* result1)
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.SaveVelocity
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure)
 
-void ABP_OD_ball_Test_C::SaveVelocity()
+void ABP_OD_ball_Test_C::STATIC_SaveVelocity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_ball_Test.BP_OD_ball_Test_C.SaveVelocity");
 
 	ABP_OD_ball_Test_C_SaveVelocity_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,11 +129,11 @@ void ABP_OD_ball_Test_C::SaveVelocity()
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.SetFallArea
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bInFallArea                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_ball_Test_C::SetFallArea(bool bInFallArea)
+void ABP_OD_ball_Test_C::STATIC_SetFallArea(bool bInFallArea)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_ball_Test.BP_OD_ball_Test_C.SetFallArea");
 
@@ -146,7 +149,7 @@ void ABP_OD_ball_Test_C::SetFallArea(bool bInFallArea)
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.IsFinished
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bStop                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -157,6 +160,7 @@ void ABP_OD_ball_Test_C::IsFinished(bool* bStop)
 	ABP_OD_ball_Test_C_IsFinished_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -168,7 +172,7 @@ void ABP_OD_ball_Test_C::IsFinished(bool* bStop)
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_OD_ball_Test_C::UserConstructionScript()
 {
@@ -185,7 +189,7 @@ void ABP_OD_ball_Test_C::UserConstructionScript()
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -205,7 +209,7 @@ void ABP_OD_ball_Test_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -233,15 +237,16 @@ void ABP_OD_ball_Test_C::BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_Componen
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.DelayedStopCheckLocation
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_OD_ball_Test_C::DelayedStopCheckLocation()
+void ABP_OD_ball_Test_C::STATIC_DelayedStopCheckLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_ball_Test.BP_OD_ball_Test_C.DelayedStopCheckLocation");
 
 	ABP_OD_ball_Test_C_DelayedStopCheckLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,11 +255,11 @@ void ABP_OD_ball_Test_C::DelayedStopCheckLocation()
 
 
 // Function BP_OD_ball_Test.BP_OD_ball_Test_C.ExecuteUbergraph_BP_OD_ball_Test
-// (HasDefaults)
+// (Static, NetMulticast, Public, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_OD_ball_Test_C::ExecuteUbergraph_BP_OD_ball_Test(int EntryPoint)
+void ABP_OD_ball_Test_C::STATIC_ExecuteUbergraph_BP_OD_ball_Test(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_OD_ball_Test.BP_OD_ball_Test_C.ExecuteUbergraph_BP_OD_ball_Test");
 

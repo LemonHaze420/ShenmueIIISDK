@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ABP_FishingBacker.ABP_FishingBacker_C.BlueprintUpdateAnimation
-// (Event, Public, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaTimeX                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UABP_FishingBacker_C::BlueprintUpdateAnimation(float DeltaTimeX)
 
 
 // Function ABP_FishingBacker.ABP_FishingBacker_C.ExecuteUbergraph_ABP_FishingBacker
-// ()
+// (NetReliable, NetRequest, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

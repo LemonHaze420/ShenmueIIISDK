@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Public, Private, Protected, NetClient, Const)
 
 void ABP_DressMode_CaptureChara_C::UserConstructionScript()
 {
@@ -31,11 +31,11 @@ void ABP_DressMode_CaptureChara_C::UserConstructionScript()
 
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DressMode_CaptureChara_C::ReceiveTick(float DeltaSeconds)
+void ABP_DressMode_CaptureChara_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveTick");
 
@@ -43,6 +43,7 @@ void ABP_DressMode_CaptureChara_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,15 +52,16 @@ void ABP_DressMode_CaptureChara_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_DressMode_CaptureChara_C::ReceiveBeginPlay()
+void ABP_DressMode_CaptureChara_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ReceiveBeginPlay");
 
 	ABP_DressMode_CaptureChara_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +70,7 @@ void ABP_DressMode_CaptureChara_C::ReceiveBeginPlay()
 
 
 // Function BP_DressMode_CaptureChara.BP_DressMode_CaptureChara_C.ExecuteUbergraph_BP_DressMode_CaptureChara
-// ()
+// (NetRequest, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

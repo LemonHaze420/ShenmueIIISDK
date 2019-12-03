@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_SpawnableSequenceActor_C::UserConstructionScript()
 {
@@ -31,11 +31,11 @@ void ABP_SpawnableSequenceActor_C::UserConstructionScript()
 
 
 // Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.PlaySequenece
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           bRestart                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpawnableSequenceActor_C::PlaySequenece(bool bRestart)
+void ABP_SpawnableSequenceActor_C::STATIC_PlaySequenece(bool bRestart)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.PlaySequenece");
 
@@ -43,6 +43,7 @@ void ABP_SpawnableSequenceActor_C::PlaySequenece(bool bRestart)
 	params.bRestart = bRestart;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,7 +52,7 @@ void ABP_SpawnableSequenceActor_C::PlaySequenece(bool bRestart)
 
 
 // Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.PlayLoopingSequenece
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           bRestart                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            NumLoops                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -65,6 +66,7 @@ void ABP_SpawnableSequenceActor_C::PlayLoopingSequenece(bool bRestart, int NumLo
 	params.NumLoops = NumLoops;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,15 +75,16 @@ void ABP_SpawnableSequenceActor_C::PlayLoopingSequenece(bool bRestart, int NumLo
 
 
 // Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.StopSequenece
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
-void ABP_SpawnableSequenceActor_C::StopSequenece()
+void ABP_SpawnableSequenceActor_C::STATIC_StopSequenece()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.StopSequenece");
 
 	ABP_SpawnableSequenceActor_C_StopSequenece_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +93,7 @@ void ABP_SpawnableSequenceActor_C::StopSequenece()
 
 
 // Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.PauseSequence
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 
 void ABP_SpawnableSequenceActor_C::PauseSequence()
 {
@@ -99,6 +102,7 @@ void ABP_SpawnableSequenceActor_C::PauseSequence()
 	ABP_SpawnableSequenceActor_C_PauseSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -107,11 +111,11 @@ void ABP_SpawnableSequenceActor_C::PauseSequence()
 
 
 // Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.ExecuteUbergraph_BP_SpawnableSequenceActor
-// ()
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SpawnableSequenceActor_C::ExecuteUbergraph_BP_SpawnableSequenceActor(int EntryPoint)
+void ABP_SpawnableSequenceActor_C::STATIC_ExecuteUbergraph_BP_SpawnableSequenceActor(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_SpawnableSequenceActor.BP_SpawnableSequenceActor_C.ExecuteUbergraph_BP_SpawnableSequenceActor");
 
@@ -119,6 +123,7 @@ void ABP_SpawnableSequenceActor_C::ExecuteUbergraph_BP_SpawnableSequenceActor(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

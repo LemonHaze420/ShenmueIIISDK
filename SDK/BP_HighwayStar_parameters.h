@@ -160,7 +160,7 @@ struct ABP_HighwayStar_C_UserConstructionScript_Params
 };
 
 // Function BP_HighwayStar.BP_HighwayStar_C.򠪦􆖐񍳔_
-struct ABP_HighwayStar_C_UnknownFunc01__Params
+struct ABP_HighwayStar_C__UnknownFunc01__Params
 {
 };
 

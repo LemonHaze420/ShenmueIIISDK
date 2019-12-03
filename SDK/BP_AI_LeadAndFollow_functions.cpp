@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_AI_LeadAndFollow.BP_AI_LeadAndFollow_C.GetS3PathFollowingComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, NetMulticast, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class US3PathFollowingComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -35,7 +35,7 @@ class US3PathFollowingComponent* ABP_AI_LeadAndFollow_C::GetS3PathFollowingCompo
 
 
 // Function BP_AI_LeadAndFollow.BP_AI_LeadAndFollow_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AI_LeadAndFollow_C::UserConstructionScript()
 {
@@ -52,15 +52,16 @@ void ABP_AI_LeadAndFollow_C::UserConstructionScript()
 
 
 // Function BP_AI_LeadAndFollow.BP_AI_LeadAndFollow_C.StartLead
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_AI_LeadAndFollow_C::StartLead()
+void ABP_AI_LeadAndFollow_C::STATIC_StartLead()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_AI_LeadAndFollow.BP_AI_LeadAndFollow_C.StartLead");
 
 	ABP_AI_LeadAndFollow_C_StartLead_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -69,7 +70,7 @@ void ABP_AI_LeadAndFollow_C::StartLead()
 
 
 // Function BP_AI_LeadAndFollow.BP_AI_LeadAndFollow_C.StartFollow
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_AI_LeadAndFollow_C::StartFollow()
 {
@@ -78,6 +79,7 @@ void ABP_AI_LeadAndFollow_C::StartFollow()
 	ABP_AI_LeadAndFollow_C_StartFollow_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -86,7 +88,7 @@ void ABP_AI_LeadAndFollow_C::StartFollow()
 
 
 // Function BP_AI_LeadAndFollow.BP_AI_LeadAndFollow_C.ExecuteUbergraph_BP_AI_LeadAndFollow
-// ()
+// (NetResponse, MulticastDelegate, Public, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

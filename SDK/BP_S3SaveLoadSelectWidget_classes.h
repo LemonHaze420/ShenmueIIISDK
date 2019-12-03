@@ -41,18 +41,18 @@ public:
 	}
 
 
-	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void Construct();
-	void BndEvt__Save_K2Node_ComponentBoundEvent_886_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Load_K2Node_ComponentBoundEvent_907_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__Button_2_K2Node_ComponentBoundEvent_138_OnButtonClickedEvent__DelegateSignature();
-	void Destruct();
-	void Finish();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_BP_S3SaveLoadSelectWidget(int EntryPoint);
+	struct FEventReply STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void STATIC_Construct();
+	void STATIC_BndEvt__Save_K2Node_ComponentBoundEvent_886_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Load_K2Node_ComponentBoundEvent_907_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__Button_2_K2Node_ComponentBoundEvent_138_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_Destruct();
+	void STATIC_Finish();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_ExecuteUbergraph_BP_S3SaveLoadSelectWidget(int EntryPoint);
 	void ED_Load__DelegateSignature();
-	void ED_Save__DelegateSignature();
-	void ED_Cancel__DelegateSignature();
+	void STATIC_ED_Save__DelegateSignature();
+	void STATIC_ED_Cancel__DelegateSignature();
 };
 
 

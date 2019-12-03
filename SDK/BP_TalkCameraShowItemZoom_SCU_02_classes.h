@@ -27,9 +27,9 @@ public:
 
 
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_TalkCameraShowItemZoom_SCU_02(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_TalkCameraShowItemZoom_SCU_02(int EntryPoint);
 };
 
 

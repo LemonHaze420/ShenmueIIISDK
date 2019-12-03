@@ -35,28 +35,28 @@ public:
 	}
 
 
-	void UpdateAnimationState();
-	void FinishQTE();
+	void STATIC_UpdateAnimationState();
+	void STATIC_FinishQTE();
 	void AdjustActionAnimationTime();
 	void PlayActionAnimation();
 	void StartCountInputLimitTime();
-	void Update();
+	void STATIC_Update();
 	float GetActionAnimationLength();
-	void SetSuccessInputLimitTimeLength(float InLength);
-	void DebugQTEForceSuccessUpdateInternal();
+	void STATIC_SetSuccessInputLimitTimeLength(float InLength);
+	void STATIC_DebugQTEForceSuccessUpdateInternal();
 	float GetLengthBeforeCountInputLimitTime();
 	bool IsEarlyFailed();
-	void SetupQTE(const struct FName& InSuccessAction, float InJustTimingStartRate, float InJustTimingEndRate);
-	void PlayInputFailedAnimation();
+	void STATIC_SetupQTE(const struct FName& InSuccessAction, float InJustTimingStartRate, float InJustTimingEndRate);
+	void STATIC_PlayInputFailedAnimation();
 	void PlayInputSuccessAnimation();
 	bool IsPlayingInAnimation();
 	void PlayTimeUpFailedAnimation();
-	void PlayInAnimation();
-	void SetTimeGaugeRate(float InGaugeRate);
+	void STATIC_PlayInAnimation();
+	void STATIC_SetTimeGaugeRate(float InGaugeRate);
 	void ExecuteInputAction(const struct FName& InInputAction);
-	void Reset();
-	void Finalize();
-	void Initialize();
+	void STATIC_Reset();
+	void STATIC_Finalize();
+	void STATIC_Initialize();
 };
 
 

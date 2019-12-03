@@ -31,14 +31,14 @@ public:
 	}
 
 
-	void SetFocusToTypeSelector();
-	void UpdateFocus();
-	void SetFocusToItem(int Index);
+	void STATIC_SetFocusToTypeSelector();
+	void STATIC_UpdateFocus();
+	void STATIC_SetFocusToItem(int Index);
 	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
 	void BuildAchievementList();
-	void Construct();
-	void PropertyChanged();
-	void ExecuteUbergraph_WBP_DebugAchievement(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_PropertyChanged();
+	void STATIC_ExecuteUbergraph_WBP_DebugAchievement(int EntryPoint);
 };
 
 

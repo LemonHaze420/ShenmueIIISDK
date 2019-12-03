@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_Gacha_Input_C::UserConstructionScript()
+void ABP_Gacha_Input_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gacha_Input.BP_Gacha_Input_C.UserConstructionScript");
 
@@ -31,7 +31,7 @@ void ABP_Gacha_Input_C::UserConstructionScript()
 
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_Gacha_Input_C::StartMiniGame()
 {
@@ -48,7 +48,7 @@ void ABP_Gacha_Input_C::StartMiniGame()
 
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_Gacha_Input_C::EndMiniGame()
 {
@@ -65,11 +65,11 @@ void ABP_Gacha_Input_C::EndMiniGame()
 
 
 // Function BP_Gacha_Input.BP_Gacha_Input_C.ExecuteUbergraph_BP_Gacha_Input
-// ()
+// (Net, NetReliable, NetRequest, Event, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Gacha_Input_C::ExecuteUbergraph_BP_Gacha_Input(int EntryPoint)
+void ABP_Gacha_Input_C::STATIC_ExecuteUbergraph_BP_Gacha_Input(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Gacha_Input.BP_Gacha_Input_C.ExecuteUbergraph_BP_Gacha_Input");
 

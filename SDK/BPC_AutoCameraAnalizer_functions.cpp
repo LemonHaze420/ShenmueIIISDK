@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_AutoCameraAnalizer.BPC_AutoCameraAnalizer_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Private, BlueprintEvent, BlueprintPure)
 
 void UBPC_AutoCameraAnalizer_C::ReceiveBeginPlay()
 {
@@ -23,6 +23,7 @@ void UBPC_AutoCameraAnalizer_C::ReceiveBeginPlay()
 	UBPC_AutoCameraAnalizer_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,7 +32,7 @@ void UBPC_AutoCameraAnalizer_C::ReceiveBeginPlay()
 
 
 // Function BPC_AutoCameraAnalizer.BPC_AutoCameraAnalizer_C.ExecuteUbergraph_BPC_AutoCameraAnalizer
-// (HasDefaults)
+// (MulticastDelegate, Private, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

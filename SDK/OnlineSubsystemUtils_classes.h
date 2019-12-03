@@ -65,8 +65,8 @@ public:
 	}
 
 
-	void STATIC_GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementID, bool* bFoundID, float* Progress);
-	void STATIC_GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementID, bool* bFoundID, struct FText* Title, struct FText* LockedDescription, struct FText* UnlockedDescription, bool* bHidden);
+	void GetCachedAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementID, bool* bFoundID, float* Progress);
+	void GetCachedAchievementDescription(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementID, bool* bFoundID, struct FText* Title, struct FText* LockedDescription, struct FText* UnlockedDescription, bool* bHidden);
 };
 
 
@@ -86,8 +86,8 @@ public:
 	}
 
 
-	class UAchievementQueryCallbackProxy* STATIC_CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController);
-	class UAchievementQueryCallbackProxy* STATIC_CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController);
+	class UAchievementQueryCallbackProxy* CacheAchievements(class UObject* WorldContextObject, class APlayerController* PlayerController);
+	class UAchievementQueryCallbackProxy* CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController);
 };
 
 
@@ -107,7 +107,7 @@ public:
 	}
 
 
-	class UAchievementWriteCallbackProxy* STATIC_WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementName, float Progress, int UserTag);
+	class UAchievementWriteCallbackProxy* WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FName& AchievementName, float Progress, int UserTag);
 };
 
 
@@ -127,47 +127,7 @@ public:
 	}
 
 
-	class UConnectionCallbackProxy* STATIC_ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController);
-};
-
-
-// Class OnlineSubsystemUtils.CreateSessionCallbackProxy
-// 0x0068 (0x0090 - 0x0028)
-class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.CreateSessionCallbackProxy");
-		return ptr;
-	}
-
-
-	class UCreateSessionCallbackProxy* STATIC_CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int PublicConnections, bool bUseLAN);
-};
-
-
-// Class OnlineSubsystemUtils.DestroySessionCallbackProxy
-// 0x0048 (0x0070 - 0x0028)
-class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.DestroySessionCallbackProxy");
-		return ptr;
-	}
-
-
-	class UDestroySessionCallbackProxy* STATIC_DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController);
+	class UConnectionCallbackProxy* ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController);
 };
 
 
@@ -187,7 +147,7 @@ public:
 	}
 
 
-	class UEndMatchCallbackProxy* STATIC_EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, const struct FString& MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome);
+	class UEndMatchCallbackProxy* EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, const struct FString& MatchID, TEnumAsByte<EMPMatchOutcome> LocalPlayerOutcome, TEnumAsByte<EMPMatchOutcome> OtherPlayersOutcome);
 };
 
 
@@ -207,31 +167,27 @@ public:
 	}
 
 
-	class UEndTurnCallbackProxy* STATIC_EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, const TScriptInterface<class UTurnBasedMatchInterface>& TurnBasedMatchInterface);
+	class UEndTurnCallbackProxy* EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, const TScriptInterface<class UTurnBasedMatchInterface>& TurnBasedMatchInterface);
 };
 
 
-// Class OnlineSubsystemUtils.FindSessionsCallbackProxy
-// 0x0060 (0x0088 - 0x0028)
-class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
+// Class OnlineSubsystemUtils.CreateSessionCallbackProxy
+// 0x0068 (0x0090 - 0x0028)
+class UCreateSessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindSessionsCallbackProxy");
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.CreateSessionCallbackProxy");
 		return ptr;
 	}
 
 
-	struct FString STATIC_GetServerName(const struct FBlueprintSessionResult& Result);
-	int STATIC_GetPingInMs(const struct FBlueprintSessionResult& Result);
-	int STATIC_GetMaxPlayers(const struct FBlueprintSessionResult& Result);
-	int STATIC_GetCurrentPlayers(const struct FBlueprintSessionResult& Result);
-	class UFindSessionsCallbackProxy* STATIC_FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int MaxResults, bool bUseLAN);
+	class UCreateSessionCallbackProxy* CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int PublicConnections, bool bUseLAN);
 };
 
 
@@ -251,7 +207,7 @@ public:
 	}
 
 
-	class UFindTurnBasedMatchCallbackProxy* STATIC_FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, int MinPlayers, int MaxPlayers, int PlayerGroup, bool ShowExistingMatches);
+	class UFindTurnBasedMatchCallbackProxy* FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const TScriptInterface<class UTurnBasedMatchInterface>& MatchActor, int MinPlayers, int MaxPlayers, int PlayerGroup, bool ShowExistingMatches);
 };
 
 
@@ -271,7 +227,31 @@ public:
 	}
 
 
-	class UInAppPurchaseCallbackProxy* STATIC_CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest& ProductRequest);
+	class UInAppPurchaseCallbackProxy* CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, const struct FInAppPurchaseProductRequest& ProductRequest);
+};
+
+
+// Class OnlineSubsystemUtils.FindSessionsCallbackProxy
+// 0x0060 (0x0088 - 0x0028)
+class UFindSessionsCallbackProxy : public UOnlineBlueprintCallProxyBase
+{
+public:
+	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0048(0x0040) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.FindSessionsCallbackProxy");
+		return ptr;
+	}
+
+
+	struct FString GetServerName(const struct FBlueprintSessionResult& Result);
+	int GetPingInMs(const struct FBlueprintSessionResult& Result);
+	int GetMaxPlayers(const struct FBlueprintSessionResult& Result);
+	int GetCurrentPlayers(const struct FBlueprintSessionResult& Result);
+	class UFindSessionsCallbackProxy* FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int MaxResults, bool bUseLAN);
 };
 
 
@@ -291,27 +271,7 @@ public:
 	}
 
 
-	class UInAppPurchaseQueryCallbackProxy* STATIC_CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<struct FString> ProductIdentifiers);
-};
-
-
-// Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy
-// 0x0068 (0x0090 - 0x0028)
-class UInAppPurchaseRestoreCallbackProxy : public UObject
-{
-public:
-	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy");
-		return ptr;
-	}
-
-
-	class UInAppPurchaseRestoreCallbackProxy* STATIC_CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags, class APlayerController* PlayerController);
+	class UInAppPurchaseQueryCallbackProxy* CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<struct FString> ProductIdentifiers);
 };
 
 
@@ -331,7 +291,27 @@ public:
 	}
 
 
-	class UJoinSessionCallbackProxy* STATIC_JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult);
+	class UJoinSessionCallbackProxy* JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FBlueprintSessionResult& SearchResult);
+};
+
+
+// Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy
+// 0x0068 (0x0090 - 0x0028)
+class UInAppPurchaseRestoreCallbackProxy : public UObject
+{
+public:
+	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0048(0x0048) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy");
+		return ptr;
+	}
+
+
+	class UInAppPurchaseRestoreCallbackProxy* CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest> ConsumableProductFlags, class APlayerController* PlayerController);
 };
 
 
@@ -348,7 +328,7 @@ public:
 	}
 
 
-	bool STATIC_WriteLeaderboardInteger(class APlayerController* PlayerController, const struct FName& StatName, int StatValue);
+	bool WriteLeaderboardInteger(class APlayerController* PlayerController, const struct FName& StatName, int StatValue);
 };
 
 
@@ -368,7 +348,7 @@ public:
 	}
 
 
-	class ULeaderboardFlushCallbackProxy* STATIC_CreateProxyObjectForFlush(class APlayerController* PlayerController, const struct FName& SessionName);
+	class ULeaderboardFlushCallbackProxy* CreateProxyObjectForFlush(class APlayerController* PlayerController, const struct FName& SessionName);
 };
 
 
@@ -388,7 +368,7 @@ public:
 	}
 
 
-	class ULeaderboardQueryCallbackProxy* STATIC_CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const struct FName& StatName);
+	class ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(class APlayerController* PlayerController, const struct FName& StatName);
 };
 
 
@@ -408,7 +388,7 @@ public:
 	}
 
 
-	class ULogoutCallbackProxy* STATIC_Logout(class UObject* WorldContextObject, class APlayerController* PlayerController);
+	class ULogoutCallbackProxy* Logout(class UObject* WorldContextObject, class APlayerController* PlayerController);
 };
 
 
@@ -426,6 +406,25 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeacon");
+		return ptr;
+	}
+
+};
+
+
+// Class OnlineSubsystemUtils.OnlineBeaconHost
+// 0x00B8 (0x0408 - 0x0350)
+class AOnlineBeaconHost : public AOnlineBeacon
+{
+public:
+	int                                                ListenPort;                                               // 0x0350(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0354(0x0004) MISSED OFFSET
+	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0358(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0368(0x00A0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHost");
 		return ptr;
 	}
 
@@ -450,43 +449,6 @@ public:
 
 
 	void ClientOnConnected();
-};
-
-
-// Class OnlineSubsystemUtils.OnlineBeaconHost
-// 0x00B8 (0x0408 - 0x0350)
-class AOnlineBeaconHost : public AOnlineBeacon
-{
-public:
-	int                                                ListenPort;                                               // 0x0350(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0354(0x0004) MISSED OFFSET
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0358(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0368(0x00A0) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHost");
-		return ptr;
-	}
-
-};
-
-
-// Class OnlineSubsystemUtils.OnlineBeaconHostObject
-// 0x0028 (0x0350 - 0x0328)
-class AOnlineBeaconHostObject : public AActor
-{
-public:
-	struct FString                                     BeaconTypeName;                                           // 0x0328(0x0010) (ZeroConstructor, Transient)
-	class UClass*                                      ClientBeaconActorClass;                                   // 0x0338(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0340(0x0010) (ZeroConstructor)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHostObject");
-		return ptr;
-	}
-
 };
 
 
@@ -519,6 +481,24 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlinePIESettings");
+		return ptr;
+	}
+
+};
+
+
+// Class OnlineSubsystemUtils.OnlineBeaconHostObject
+// 0x0028 (0x0350 - 0x0328)
+class AOnlineBeaconHostObject : public AActor
+{
+public:
+	struct FString                                     BeaconTypeName;                                           // 0x0328(0x0010) (ZeroConstructor, Transient)
+	class UClass*                                      ClientBeaconActorClass;                                   // 0x0338(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class AOnlineBeaconClient*>                 ClientActors;                                             // 0x0340(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.OnlineBeaconHostObject");
 		return ptr;
 	}
 
@@ -574,28 +554,6 @@ public:
 };
 
 
-// Class OnlineSubsystemUtils.PartyBeaconHost
-// 0x0068 (0x03B8 - 0x0350)
-class APartyBeaconHost : public AOnlineBeaconHostObject
-{
-public:
-	class UPartyBeaconState*                           State;                                                    // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0358(0x0050) MISSED OFFSET
-	bool                                               bLogoutOnSessionTimeout;                                  // 0x03A8(0x0001) (ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x03A9(0x0003) MISSED OFFSET
-	float                                              SessionTimeoutSecs;                                       // 0x03AC(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
-	float                                              TravelSessionTimeoutSecs;                                 // 0x03B0(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x03B4(0x0004) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconHost");
-		return ptr;
-	}
-
-};
-
-
 // Class OnlineSubsystemUtils.PartyBeaconState
 // 0x0050 (0x0078 - 0x0028)
 class UPartyBeaconState : public UObject
@@ -623,9 +581,31 @@ public:
 };
 
 
-// Class OnlineSubsystemUtils.QuitMatchCallbackProxy
+// Class OnlineSubsystemUtils.PartyBeaconHost
+// 0x0068 (0x03B8 - 0x0350)
+class APartyBeaconHost : public AOnlineBeaconHostObject
+{
+public:
+	class UPartyBeaconState*                           State;                                                    // 0x0350(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0358(0x0050) MISSED OFFSET
+	bool                                               bLogoutOnSessionTimeout;                                  // 0x03A8(0x0001) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x03A9(0x0003) MISSED OFFSET
+	float                                              SessionTimeoutSecs;                                       // 0x03AC(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
+	float                                              TravelSessionTimeoutSecs;                                 // 0x03B0(0x0004) (ZeroConstructor, Transient, Config, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x03B4(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.PartyBeaconHost");
+		return ptr;
+	}
+
+};
+
+
+// Class OnlineSubsystemUtils.DestroySessionCallbackProxy
 // 0x0048 (0x0070 - 0x0028)
-class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
+class UDestroySessionCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
 	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
@@ -634,12 +614,12 @@ public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.QuitMatchCallbackProxy");
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.DestroySessionCallbackProxy");
 		return ptr;
 	}
 
 
-	class UQuitMatchCallbackProxy* STATIC_QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int TurnTimeoutInSeconds);
+	class UDestroySessionCallbackProxy* DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController);
 };
 
 
@@ -659,7 +639,7 @@ public:
 	}
 
 
-	class UShowLoginUICallbackProxy* STATIC_ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController);
+	class UShowLoginUICallbackProxy* ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController);
 };
 
 
@@ -709,10 +689,10 @@ public:
 	}
 
 
-	void STATIC_RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object);
-	void STATIC_GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int PlayerIndex, struct FString* PlayerDisplayName);
-	void STATIC_GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int* PlayerIndex);
-	void STATIC_GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, bool* bIsMyTurn);
+	void RegisterTurnBasedMatchInterfaceObject(class UObject* WorldContextObject, class APlayerController* PlayerController, class UObject* Object);
+	void GetPlayerDisplayName(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int PlayerIndex, struct FString* PlayerDisplayName);
+	void GetMyPlayerIndex(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, int* PlayerIndex);
+	void GetIsMyTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, bool* bIsMyTurn);
 };
 
 
@@ -731,6 +711,26 @@ public:
 
 
 	bool IsIdling();
+};
+
+
+// Class OnlineSubsystemUtils.QuitMatchCallbackProxy
+// 0x0048 (0x0070 - 0x0028)
+class UQuitMatchCallbackProxy : public UOnlineBlueprintCallProxyBase
+{
+public:
+	struct FScriptMulticastDelegate                    OnSuccess;                                                // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnFailure;                                                // 0x0038(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0048(0x0028) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class OnlineSubsystemUtils.QuitMatchCallbackProxy");
+		return ptr;
+	}
+
+
+	class UQuitMatchCallbackProxy* QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const struct FString& MatchID, TEnumAsByte<EMPMatchOutcome> Outcome, int TurnTimeoutInSeconds);
 };
 
 

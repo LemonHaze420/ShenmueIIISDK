@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_WeatherData.BPF_WeatherData_C.GetRainNavData
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AS3RainNavData*          NavData                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_WeatherData_C::STATIC_GetRainNavData(class UObject* __WorldContext, class AS3RainNavData** NavData)
+void UBPF_WeatherData_C::GetRainNavData(class UObject* __WorldContext, class AS3RainNavData** NavData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_WeatherData.BPF_WeatherData_C.GetRainNavData");
 
@@ -38,12 +38,12 @@ void UBPF_WeatherData_C::STATIC_GetRainNavData(class UObject* __WorldContext, cl
 
 
 // Function BPF_WeatherData.BPF_WeatherData_C.GetWeatherData
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, Private, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3WeatherDataAsset*     WeatherData                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_WeatherData_C::STATIC_GetWeatherData(class UObject* __WorldContext, class US3WeatherDataAsset** WeatherData)
+void UBPF_WeatherData_C::GetWeatherData(class UObject* __WorldContext, class US3WeatherDataAsset** WeatherData)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_WeatherData.BPF_WeatherData_C.GetWeatherData");
 

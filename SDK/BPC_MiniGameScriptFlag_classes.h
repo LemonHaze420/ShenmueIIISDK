@@ -29,7 +29,7 @@ public:
 
 	void GetGlobalFlagMiniGameResultNum(int* Result);
 	void SetGlobalFlagMiniGameResultNum(int Result);
-	void GetGlobalFlagMiniGameScore(int* Score);
+	void STATIC_GetGlobalFlagMiniGameScore(int* Score);
 	void SetGlobalFlagMiniGameScore(int Score);
 };
 

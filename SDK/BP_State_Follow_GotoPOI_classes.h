@@ -29,15 +29,15 @@ public:
 	}
 
 
-	void StateExit(float Delta, bool* bProcessing);
-	void MoveStateEnter(bool* bDummy);
+	void STATIC_StateExit(float Delta, bool* bProcessing);
+	void STATIC_MoveStateEnter(bool* bDummy);
 	void GetPathfindTarget(struct FVector* OutLocation, class AActor** OutActor);
-	void StateEnter(float Delta, bool* bProcessing);
-	void StateUpdate(float Delta, bool* bDummy);
-	void CancelPath();
+	void STATIC_StateEnter(float Delta, bool* bProcessing);
+	void STATIC_StateUpdate(float Delta, bool* bDummy);
+	void STATIC_CancelPath();
 	void UpdateTransitions(float DeltaSeconds);
-	void FinishPath();
-	void ExecuteUbergraph_BP_State_Follow_GotoPOI(int EntryPoint);
+	void STATIC_FinishPath();
+	void STATIC_ExecuteUbergraph_BP_State_Follow_GotoPOI(int EntryPoint);
 };
 
 

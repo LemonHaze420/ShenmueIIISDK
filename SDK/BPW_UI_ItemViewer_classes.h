@@ -39,7 +39,7 @@ public:
 	void PlayStartEndAnim(bool Start, bool Itemset);
 	void BndEvt__Viewer_StartAnim_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void BndEvt__Viewer_EndAnim_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void Construct();
 	void BndEvt__Viewer_StartAnim_Itemset_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
 	void BndEvt__Viewer_EndAnim_Itemset_K2Node_ComponentBoundEvent_1_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetScore
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            HighScoreValue                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            LastScoreValue                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -28,6 +28,7 @@ void UBPW_ExciteQTE2_C::SetScore(int HighScoreValue, int LastScoreValue)
 	params.LastScoreValue = LastScoreValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,11 +37,11 @@ void UBPW_ExciteQTE2_C::SetScore(int HighScoreValue, int LastScoreValue)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetSuccessPointPos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Percent                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::SetSuccessPointPos(float Percent)
+void UBPW_ExciteQTE2_C::STATIC_SetSuccessPointPos(float Percent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetSuccessPointPos");
 
@@ -48,6 +49,7 @@ void UBPW_ExciteQTE2_C::SetSuccessPointPos(float Percent)
 	params.Percent = Percent;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +58,7 @@ void UBPW_ExciteQTE2_C::SetSuccessPointPos(float Percent)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetDifficultyText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Difficulty                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,6 +70,7 @@ void UBPW_ExciteQTE2_C::SetDifficultyText(int Difficulty)
 	params.Difficulty = Difficulty;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,11 +79,11 @@ void UBPW_ExciteQTE2_C::SetDifficultyText(int Difficulty)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetSwitcher
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::SetSwitcher(int Index)
+void UBPW_ExciteQTE2_C::STATIC_SetSwitcher(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetSwitcher");
 
@@ -88,6 +91,7 @@ void UBPW_ExciteQTE2_C::SetSwitcher(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -96,11 +100,11 @@ void UBPW_ExciteQTE2_C::SetSwitcher(int Index)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetHighScoreVisible
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::SetHighScoreVisible(ESlateVisibility Visible)
+void UBPW_ExciteQTE2_C::STATIC_SetHighScoreVisible(ESlateVisibility Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetHighScoreVisible");
 
@@ -108,6 +112,7 @@ void UBPW_ExciteQTE2_C::SetHighScoreVisible(ESlateVisibility Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -116,7 +121,7 @@ void UBPW_ExciteQTE2_C::SetHighScoreVisible(ESlateVisibility Visible)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.SetLiversIcon
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::SetLiversIcon()
 {
@@ -133,7 +138,7 @@ void UBPW_ExciteQTE2_C::SetLiversIcon()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.RestartMusic
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::RestartMusic()
 {
@@ -150,15 +155,16 @@ void UBPW_ExciteQTE2_C::RestartMusic()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.PlayGameOver
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_ExciteQTE2_C::PlayGameOver()
+void UBPW_ExciteQTE2_C::STATIC_PlayGameOver()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.PlayGameOver");
 
 	UBPW_ExciteQTE2_C_PlayGameOver_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -167,15 +173,16 @@ void UBPW_ExciteQTE2_C::PlayGameOver()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.OneUp
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBPW_ExciteQTE2_C::OneUp()
+void UBPW_ExciteQTE2_C::STATIC_OneUp()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.OneUp");
 
 	UBPW_ExciteQTE2_C_OneUp_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -184,12 +191,12 @@ void UBPW_ExciteQTE2_C::OneUp()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.AddToScore
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            CurrentScore                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::AddToScore(int Add, int* CurrentScore)
+void UBPW_ExciteQTE2_C::STATIC_AddToScore(int Add, int* CurrentScore)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.AddToScore");
 
@@ -208,7 +215,7 @@ void UBPW_ExciteQTE2_C::AddToScore(int Add, int* CurrentScore)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetMultiplierText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetMulticast, Private, Protected, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -229,11 +236,11 @@ struct FText UBPW_ExciteQTE2_C::GetMultiplierText()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.UpdateMultiplier
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // float                          Multiplier                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::UpdateMultiplier(float* Multiplier)
+void UBPW_ExciteQTE2_C::STATIC_UpdateMultiplier(float* Multiplier)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.UpdateMultiplier");
 
@@ -251,11 +258,11 @@ void UBPW_ExciteQTE2_C::UpdateMultiplier(float* Multiplier)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetMultiplierVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UBPW_ExciteQTE2_C::GetMultiplierVisibility()
+ESlateVisibility UBPW_ExciteQTE2_C::STATIC_GetMultiplierVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetMultiplierVisibility");
 
@@ -272,11 +279,11 @@ ESlateVisibility UBPW_ExciteQTE2_C::GetMultiplierVisibility()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.CalcScore
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Static, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Score                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::CalcScore(int* Score)
+void UBPW_ExciteQTE2_C::STATIC_CalcScore(int* Score)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.CalcScore");
 
@@ -294,9 +301,9 @@ void UBPW_ExciteQTE2_C::CalcScore(int* Score)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.CheckGameOver
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBPW_ExciteQTE2_C::CheckGameOver()
+void UBPW_ExciteQTE2_C::STATIC_CheckGameOver()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.CheckGameOver");
 
@@ -311,17 +318,18 @@ void UBPW_ExciteQTE2_C::CheckGameOver()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetSuccessPointsColorAndOpacity
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FSlateColor             ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSlateColor UBPW_ExciteQTE2_C::GetSuccessPointsColorAndOpacity()
+struct FSlateColor UBPW_ExciteQTE2_C::STATIC_GetSuccessPointsColorAndOpacity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetSuccessPointsColorAndOpacity");
 
 	UBPW_ExciteQTE2_C_GetSuccessPointsColorAndOpacity_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -332,17 +340,18 @@ struct FSlateColor UBPW_ExciteQTE2_C::GetSuccessPointsColorAndOpacity()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetLastSuccessPoints
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Static, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBPW_ExciteQTE2_C::GetLastSuccessPoints()
+struct FText UBPW_ExciteQTE2_C::STATIC_GetLastSuccessPoints()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetLastSuccessPoints");
 
 	UBPW_ExciteQTE2_C_GetLastSuccessPoints_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -353,7 +362,7 @@ struct FText UBPW_ExciteQTE2_C::GetLastSuccessPoints()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetHighScore
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -364,6 +373,7 @@ struct FText UBPW_ExciteQTE2_C::GetHighScore()
 	UBPW_ExciteQTE2_C_GetHighScore_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -374,7 +384,7 @@ struct FText UBPW_ExciteQTE2_C::GetHighScore()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetLastScore
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Exec, Native, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -385,6 +395,7 @@ struct FText UBPW_ExciteQTE2_C::GetLastScore()
 	UBPW_ExciteQTE2_C_GetLastScore_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -395,7 +406,7 @@ struct FText UBPW_ExciteQTE2_C::GetLastScore()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Beep
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::Beep()
 {
@@ -412,15 +423,16 @@ void UBPW_ExciteQTE2_C::Beep()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.UnPause
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBPW_ExciteQTE2_C::UnPause()
+void UBPW_ExciteQTE2_C::STATIC_UnPause()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.UnPause");
 
 	UBPW_ExciteQTE2_C_UnPause_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -429,11 +441,11 @@ void UBPW_ExciteQTE2_C::UnPause()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetButtonIconColorAndOpacity
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FLinearColor UBPW_ExciteQTE2_C::GetButtonIconColorAndOpacity()
+struct FLinearColor UBPW_ExciteQTE2_C::STATIC_GetButtonIconColorAndOpacity()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetButtonIconColorAndOpacity");
 
@@ -450,7 +462,7 @@ struct FLinearColor UBPW_ExciteQTE2_C::GetButtonIconColorAndOpacity()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetCurrentScore
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -461,6 +473,7 @@ struct FText UBPW_ExciteQTE2_C::GetCurrentScore()
 	UBPW_ExciteQTE2_C_GetCurrentScore_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -471,11 +484,11 @@ struct FText UBPW_ExciteQTE2_C::GetCurrentScore()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Input_test
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TEnumAsByte<EN_padSwitch>      Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::Input_test(TEnumAsByte<EN_padSwitch> Input)
+void UBPW_ExciteQTE2_C::STATIC_Input_test(TEnumAsByte<EN_padSwitch> Input)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Input_test");
 
@@ -491,11 +504,11 @@ void UBPW_ExciteQTE2_C::Input_test(TEnumAsByte<EN_padSwitch> Input)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetFailureText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Event, Static, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBPW_ExciteQTE2_C::GetFailureText()
+struct FText UBPW_ExciteQTE2_C::STATIC_GetFailureText()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetFailureText");
 
@@ -512,7 +525,7 @@ struct FText UBPW_ExciteQTE2_C::GetFailureText()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetFailureVisibility
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -523,6 +536,7 @@ ESlateVisibility UBPW_ExciteQTE2_C::GetFailureVisibility()
 	UBPW_ExciteQTE2_C_GetFailureVisibility_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -533,7 +547,7 @@ ESlateVisibility UBPW_ExciteQTE2_C::GetFailureVisibility()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetProgressBarColor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, Event, MulticastDelegate, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FLinearColor            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -544,6 +558,7 @@ struct FLinearColor UBPW_ExciteQTE2_C::GetProgressBarColor()
 	UBPW_ExciteQTE2_C_GetProgressBarColor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -554,7 +569,7 @@ struct FLinearColor UBPW_ExciteQTE2_C::GetProgressBarColor()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Fail
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void UBPW_ExciteQTE2_C::Fail()
 {
@@ -563,6 +578,7 @@ void UBPW_ExciteQTE2_C::Fail()
 	UBPW_ExciteQTE2_C_Fail_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -571,17 +587,18 @@ void UBPW_ExciteQTE2_C::Fail()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.ElapsedBar
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBPW_ExciteQTE2_C::ElapsedBar()
+float UBPW_ExciteQTE2_C::STATIC_ElapsedBar()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.ElapsedBar");
 
 	UBPW_ExciteQTE2_C_ElapsedBar_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -592,7 +609,7 @@ float UBPW_ExciteQTE2_C::ElapsedBar()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetVisibilityIsGameInProgress
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -603,6 +620,7 @@ ESlateVisibility UBPW_ExciteQTE2_C::GetVisibilityIsGameInProgress()
 	UBPW_ExciteQTE2_C_GetVisibilityIsGameInProgress_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -613,7 +631,7 @@ ESlateVisibility UBPW_ExciteQTE2_C::GetVisibilityIsGameInProgress()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.GetButtonIcon
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetResponse, Private, Protected, HasOutParms, NetClient, BlueprintPure)
 // Parameters:
 // struct FSlateBrush             ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -634,7 +652,7 @@ struct FSlateBrush UBPW_ExciteQTE2_C::GetButtonIcon()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Play QTE Beep
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::Play_QTE_Beep()
 {
@@ -651,7 +669,7 @@ void UBPW_ExciteQTE2_C::Play_QTE_Beep()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Play QTE Success
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::Play_QTE_Success()
 {
@@ -668,7 +686,7 @@ void UBPW_ExciteQTE2_C::Play_QTE_Success()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Play QTE Failure
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::Play_QTE_Failure()
 {
@@ -685,7 +703,7 @@ void UBPW_ExciteQTE2_C::Play_QTE_Failure()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Exec, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::Construct()
 {
@@ -702,12 +720,12 @@ void UBPW_ExciteQTE2_C::Construct()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, MulticastDelegate, Private, Protected, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBPW_ExciteQTE2_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Tick");
 
@@ -716,6 +734,7 @@ void UBPW_ExciteQTE2_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTi
 	params.InDeltaTime = InDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -724,7 +743,7 @@ void UBPW_ExciteQTE2_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTi
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.StartGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::StartGame()
 {
@@ -741,7 +760,7 @@ void UBPW_ExciteQTE2_C::StartGame()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Next Button
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::Next_Button()
 {
@@ -758,7 +777,7 @@ void UBPW_ExciteQTE2_C::Next_Button()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.TimeOutFailEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::TimeOutFailEnd()
 {
@@ -775,11 +794,11 @@ void UBPW_ExciteQTE2_C::TimeOutFailEnd()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Input
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_padSwitch>      Input                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_ExciteQTE2_C::Input(TEnumAsByte<EN_padSwitch> Input)
+void UBPW_ExciteQTE2_C::STATIC_Input(TEnumAsByte<EN_padSwitch> Input)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Input");
 
@@ -787,6 +806,7 @@ void UBPW_ExciteQTE2_C::Input(TEnumAsByte<EN_padSwitch> Input)
 	params.Input = Input;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -795,7 +815,7 @@ void UBPW_ExciteQTE2_C::Input(TEnumAsByte<EN_padSwitch> Input)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.Input Fail Finished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::Input_Fail_Finished()
 {
@@ -812,7 +832,7 @@ void UBPW_ExciteQTE2_C::Input_Fail_Finished()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.CancelGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBPW_ExciteQTE2_C::CancelGame()
 {
@@ -829,7 +849,7 @@ void UBPW_ExciteQTE2_C::CancelGame()
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.ExecuteUbergraph_BPW_ExciteQTE2
-// (HasDefaults)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -841,6 +861,7 @@ void UBPW_ExciteQTE2_C::ExecuteUbergraph_BPW_ExciteQTE2(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -849,9 +870,9 @@ void UBPW_ExciteQTE2_C::ExecuteUbergraph_BPW_ExciteQTE2(int EntryPoint)
 
 
 // Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.BeginGame__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UBPW_ExciteQTE2_C::BeginGame__DelegateSignature()
+void UBPW_ExciteQTE2_C::STATIC_BeginGame__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_ExciteQTE2.BPW_ExciteQTE2_C.BeginGame__DelegateSignature");
 

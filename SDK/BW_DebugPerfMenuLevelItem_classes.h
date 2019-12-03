@@ -31,13 +31,13 @@ public:
 	}
 
 
-	void SetFocusToButton();
-	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
-	void Construct();
-	void BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature();
-	void ExecuteUbergraph_BW_DebugPerfMenuLevelItem(int EntryPoint);
-	void OnFocused__DelegateSignature(class US3Button* Button);
-	void OnLevelClicked__DelegateSignature(class ULevelStreaming* Level);
+	void STATIC_SetFocusToButton();
+	void STATIC_OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
+	void STATIC_Construct();
+	void STATIC_BndEvt__ItemButton_K2Node_ComponentBoundEvent_40_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BW_DebugPerfMenuLevelItem(int EntryPoint);
+	void STATIC_OnFocused__DelegateSignature(class US3Button* Button);
+	void STATIC_OnLevelClicked__DelegateSignature(class ULevelStreaming* Level);
 };
 
 

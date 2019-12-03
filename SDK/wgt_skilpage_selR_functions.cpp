@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_skilpage_selR.wgt_skilpage_selR_C.SetCursol
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skilpage_selR_C::SetCursol(bool Visible)
+void Uwgt_skilpage_selR_C::STATIC_SetCursol(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skilpage_selR.wgt_skilpage_selR_C.SetCursol");
 
@@ -26,6 +26,7 @@ void Uwgt_skilpage_selR_C::SetCursol(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -34,7 +35,7 @@ void Uwgt_skilpage_selR_C::SetCursol(bool Visible)
 
 
 // Function wgt_skilpage_selR.wgt_skilpage_selR_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void Uwgt_skilpage_selR_C::Construct()
 {
@@ -51,11 +52,11 @@ void Uwgt_skilpage_selR_C::Construct()
 
 
 // Function wgt_skilpage_selR.wgt_skilpage_selR_C.ExecuteUbergraph_wgt_skilpage_selR
-// (HasDefaults)
+// (NetRequest, Native, Event, Static, Public, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_skilpage_selR_C::ExecuteUbergraph_wgt_skilpage_selR(int EntryPoint)
+void Uwgt_skilpage_selR_C::STATIC_ExecuteUbergraph_wgt_skilpage_selR(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_skilpage_selR.wgt_skilpage_selR_C.ExecuteUbergraph_wgt_skilpage_selR");
 
@@ -63,6 +64,7 @@ void Uwgt_skilpage_selR_C::ExecuteUbergraph_wgt_skilpage_selR(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

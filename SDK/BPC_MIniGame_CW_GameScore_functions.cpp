@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MIniGame_CW_GameScore.BPC_MIniGame_CW_GameScore_C.GetRewardPrice
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            WoodNumber                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Price                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,11 +38,11 @@ void UBPC_MIniGame_CW_GameScore_C::GetRewardPrice(int WoodNumber, int* Price)
 
 
 // Function BPC_MIniGame_CW_GameScore.BPC_MIniGame_CW_GameScore_C.ExecuteUbergraph_BPC_MIniGame_CW_GameScore
-// ()
+// (Net, NetReliable, NetRequest, Native, Event, Static, MulticastDelegate, Public, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_MIniGame_CW_GameScore_C::ExecuteUbergraph_BPC_MIniGame_CW_GameScore(int EntryPoint)
+void UBPC_MIniGame_CW_GameScore_C::STATIC_ExecuteUbergraph_BPC_MIniGame_CW_GameScore(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MIniGame_CW_GameScore.BPC_MIniGame_CW_GameScore_C.ExecuteUbergraph_BPC_MIniGame_CW_GameScore");
 
@@ -50,6 +50,7 @@ void UBPC_MIniGame_CW_GameScore_C::ExecuteUbergraph_BPC_MIniGame_CW_GameScore(in
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -30,7 +30,7 @@ public:
 
 	void SetCircleRate(float GaugeRate);
 	void Construct();
-	void ExecuteUbergraph_WBP_QTETimeGauge(int EntryPoint);
+	void STATIC_ExecuteUbergraph_WBP_QTETimeGauge(int EntryPoint);
 };
 
 

@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Skip.BPF_Skip_C.GetS3SkipController
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_SkipController_C*    AsBP_Skip_Controller           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Skip_C::STATIC_GetS3SkipController(class UObject* __WorldContext, class ABP_SkipController_C** AsBP_Skip_Controller)
+void UBPF_Skip_C::GetS3SkipController(class UObject* __WorldContext, class ABP_SkipController_C** AsBP_Skip_Controller)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Skip.BPF_Skip_C.GetS3SkipController");
 
@@ -27,6 +27,7 @@ void UBPF_Skip_C::STATIC_GetS3SkipController(class UObject* __WorldContext, clas
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

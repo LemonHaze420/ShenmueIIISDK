@@ -41,17 +41,17 @@ public:
 	}
 
 
-	void CreateFittingInfo(const struct FST_ClothesFittingInfo& OverrideInfo, bool RYO, TArray<struct FST_ClothesFittingInfo>* Array);
-	void SetFocus();
+	void STATIC_CreateFittingInfo(const struct FST_ClothesFittingInfo& OverrideInfo, bool RYO, TArray<struct FST_ClothesFittingInfo>* Array);
+	void STATIC_SetFocus();
 	struct FText GetCurrentStatus();
 	void IncrementLoop(int Max, int* Index, int* Value);
 	void ChangePlayerModel();
 	void ChangeCloth(const struct FString& InTarget);
-	void ChangeTarget();
-	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void Construct();
-	void Destruct();
+	void STATIC_ChangeTarget();
+	struct FEventReply STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	struct FEventReply STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void STATIC_Construct();
+	void STATIC_Destruct();
 	void ExecuteUbergraph_WBP_DebugChangeClothes(int EntryPoint);
 };
 

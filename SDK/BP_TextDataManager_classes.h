@@ -28,12 +28,12 @@ public:
 
 	void FindClipperOnlyData(const struct FName& Label, struct FString* Clipper);
 	void GetTalkTextData(const struct FName& Label, ES3TextPathType FirstType, ES3TextDataType* TextType, struct FS3TextData* TextData);
-	void GetTextDataStringAbridged_(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString);
-	void GetItemDataString(const struct FName& Label, struct FString* Name, struct FString* Description);
-	void CreateRubyInfo(const struct FString& Text, struct FST_RubyInfo* OutInfo);
-	void GetVoiceData(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, class UObject** Voice);
+	void STATIC_GetTextDataStringAbridged_(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString);
+	void STATIC_GetItemDataString(const struct FName& Label, struct FString* Name, struct FString* Description);
+	void STATIC_CreateRubyInfo(const struct FString& Text, struct FST_RubyInfo* OutInfo);
+	void STATIC_GetVoiceData(const struct FName& Label, ES3TextPathType Type, const struct FName& CharaName, class UObject** Voice);
 	void GetTextDataString(const struct FName& Label, ES3TextPathType Type, struct FString* OutString, struct FString* ClipperString, TArray<struct FString>* TextArray, int* LinefeedCount, TArray<struct FST_RubyInfo>* RubyInfoArray);
-	bool Reimport(const struct FName& Label, const struct FString& RootAssetPath);
+	bool STATIC_Reimport(const struct FName& Label, const struct FString& RootAssetPath);
 	void UserConstructionScript();
 };
 

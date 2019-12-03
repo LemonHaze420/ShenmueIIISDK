@@ -57,20 +57,20 @@ public:
 	}
 
 
-	void InterpSinkingDistance(float Target, float* SinkingDistance);
+	void STATIC_InterpSinkingDistance(float Target, float* SinkingDistance);
 	void UpdateRightFootRotaion(bool HitLeft, const struct FVector& Normal);
 	void UpdateLeftFootRotaion(bool HitLeft, const struct FVector& Normal);
 	void GetFootRotaion(float* LeftFootRotaionX, float* LeftFootRotaionY, float* RightFootRotaionX, float* RightFootRotaionY);
-	void TryGetSinkingDistance(const struct FName& FootSocketName, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingDistance, struct FVector* HitNormal);
+	void STATIC_TryGetSinkingDistance(const struct FName& FootSocketName, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingDistance, struct FVector* HitNormal);
 	void TraceFromLocation(const struct FVector& StartLocation, const struct FVector& EndLocation, bool* bHit, struct FVector* Location, struct FVector* Normal);
 	void TryGetFootSinkingOffset(float LocationX, float LocationY, float StartLocationZ, float EndLocationZ, bool* bHit, float* SinkingOffsetZ);
 	void UpdateActorLocalOffsetZ(bool* bHitFootLeft, bool* bHitFootRight);
-	void UpdateFootIKOffset(bool bHitFootLeft, bool bHitFootRight);
-	void GetFootOffset(float* LeftFootOffsetZ, float* RightFootOffsetZ);
-	void Update();
+	void STATIC_UpdateFootIKOffset(bool bHitFootLeft, bool bHitFootRight);
+	void STATIC_GetFootOffset(float* LeftFootOffsetZ, float* RightFootOffsetZ);
+	void STATIC_Update();
 	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BPC_FootIK(int EntryPoint);
-	void OnFootIanding__DelegateSignature(float SinkingDistance_Z);
+	void STATIC_ExecuteUbergraph_BPC_FootIK(int EntryPoint);
+	void STATIC_OnFootIanding__DelegateSignature(float SinkingDistance_Z);
 };
 
 

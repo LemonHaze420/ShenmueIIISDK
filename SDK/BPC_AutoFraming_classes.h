@@ -40,12 +40,12 @@ public:
 	}
 
 
-	void SetLookRotation(const struct FRotator& StartRotation);
+	void STATIC_SetLookRotation(const struct FRotator& StartRotation);
 	void SetTargetSocket(const struct FName& Socket, float PanSpeed);
-	void SetTargetActor(class AActor* Actor, float PanTime);
-	void ReceiveBeginPlay();
-	void Update();
-	void ExecuteUbergraph_BPC_AutoFraming(int EntryPoint);
+	void STATIC_SetTargetActor(class AActor* Actor, float PanTime);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_Update();
+	void STATIC_ExecuteUbergraph_BPC_AutoFraming(int EntryPoint);
 };
 
 

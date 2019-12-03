@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugTextData.BW_DebugTextData_C.IsUseStepFilterPath
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBW_DebugTextData_C::IsUseStepFilterPath()
+bool UBW_DebugTextData_C::STATIC_IsUseStepFilterPath()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.IsUseStepFilterPath");
 
 	UBW_DebugTextData_C_IsUseStepFilterPath_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,11 +36,11 @@ bool UBW_DebugTextData_C::IsUseStepFilterPath()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Get_DataListComboBox_bIsEnabled_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBW_DebugTextData_C::Get_DataListComboBox_bIsEnabled_1()
+bool UBW_DebugTextData_C::STATIC_Get_DataListComboBox_bIsEnabled_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.Get_DataListComboBox_bIsEnabled_1");
 
@@ -56,17 +57,18 @@ bool UBW_DebugTextData_C::Get_DataListComboBox_bIsEnabled_1()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.GetEventStepToString
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Static, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 Result                         (Parm, OutParm, ZeroConstructor)
 
-void UBW_DebugTextData_C::GetEventStepToString(struct FString* Result)
+void UBW_DebugTextData_C::STATIC_GetEventStepToString(struct FString* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.GetEventStepToString");
 
 	UBW_DebugTextData_C_GetEventStepToString_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +80,7 @@ void UBW_DebugTextData_C::GetEventStepToString(struct FString* Result)
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.IncrementTextDataIndex
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::IncrementTextDataIndex()
 {
@@ -87,6 +89,7 @@ void UBW_DebugTextData_C::IncrementTextDataIndex()
 	UBW_DebugTextData_C_IncrementTextDataIndex_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -95,7 +98,7 @@ void UBW_DebugTextData_C::IncrementTextDataIndex()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.IsUseEventStepFilter
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, MulticastDelegate, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bUseFilter                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -117,7 +120,7 @@ void UBW_DebugTextData_C::IsUseEventStepFilter(bool* bUseFilter)
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Value Committed
-// (Private, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USpinBox*                InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          NewValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -141,7 +144,7 @@ void UBW_DebugTextData_C::Value_Committed(class USpinBox* InputPin, float NewVal
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Get_EventStepGroup_bIsEnabled_1
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -152,6 +155,7 @@ bool UBW_DebugTextData_C::Get_EventStepGroup_bIsEnabled_1()
 	UBW_DebugTextData_C_Get_EventStepGroup_bIsEnabled_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -162,7 +166,7 @@ bool UBW_DebugTextData_C::Get_EventStepGroup_bIsEnabled_1()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Get_TextBlock_4_Text_1
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, NetResponse, Public, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -173,6 +177,7 @@ struct FText UBW_DebugTextData_C::Get_TextBlock_4_Text_1()
 	UBW_DebugTextData_C_Get_TextBlock_4_Text_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,7 +188,7 @@ struct FText UBW_DebugTextData_C::Get_TextBlock_4_Text_1()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Get_CurrentTextdataIndex_Text_1
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, Public, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -204,7 +209,7 @@ struct FText UBW_DebugTextData_C::Get_CurrentTextdataIndex_Text_1()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::Construct()
 {
@@ -221,12 +226,12 @@ void UBW_DebugTextData_C::Construct()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTextData_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBW_DebugTextData_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.Tick");
 
@@ -243,7 +248,7 @@ void UBW_DebugTextData_C::Tick(const struct FGeometry& MyGeometry, float InDelta
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::Destruct()
 {
@@ -252,6 +257,7 @@ void UBW_DebugTextData_C::Destruct()
 	UBW_DebugTextData_C_Destruct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -260,7 +266,7 @@ void UBW_DebugTextData_C::Destruct()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__PathTypeProperty_K2Node_ComponentBoundEvent_175_EnumPropertyChanged__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::BndEvt__PathTypeProperty_K2Node_ComponentBoundEvent_175_EnumPropertyChanged__DelegateSignature()
 {
@@ -269,6 +275,7 @@ void UBW_DebugTextData_C::BndEvt__PathTypeProperty_K2Node_ComponentBoundEvent_17
 	UBW_DebugTextData_C_BndEvt__PathTypeProperty_K2Node_ComponentBoundEvent_175_EnumPropertyChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -277,7 +284,7 @@ void UBW_DebugTextData_C::BndEvt__PathTypeProperty_K2Node_ComponentBoundEvent_17
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__LocaleProperty_K2Node_ComponentBoundEvent_184_EnumPropertyChanged__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::BndEvt__LocaleProperty_K2Node_ComponentBoundEvent_184_EnumPropertyChanged__DelegateSignature()
 {
@@ -286,6 +293,7 @@ void UBW_DebugTextData_C::BndEvt__LocaleProperty_K2Node_ComponentBoundEvent_184_
 	UBW_DebugTextData_C_BndEvt__LocaleProperty_K2Node_ComponentBoundEvent_184_EnumPropertyChanged__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -294,7 +302,7 @@ void UBW_DebugTextData_C::BndEvt__LocaleProperty_K2Node_ComponentBoundEvent_184_
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.UpdateTextDataAssets
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::UpdateTextDataAssets()
 {
@@ -303,6 +311,7 @@ void UBW_DebugTextData_C::UpdateTextDataAssets()
 	UBW_DebugTextData_C_UpdateTextDataAssets_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -311,12 +320,12 @@ void UBW_DebugTextData_C::UpdateTextDataAssets()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTextData_C::BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+void UBW_DebugTextData_C::STATIC_BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_205_OnSelectionChangedEvent__DelegateSignature");
 
@@ -333,7 +342,7 @@ void UBW_DebugTextData_C::BndEvt__ComboBoxString_0_K2Node_ComponentBoundEvent_20
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_43_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_43_OnButtonPressedEvent__DelegateSignature()
 {
@@ -342,6 +351,7 @@ void UBW_DebugTextData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_43_OnButto
 	UBW_DebugTextData_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_43_OnButtonPressedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -350,7 +360,7 @@ void UBW_DebugTextData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_43_OnButto
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__Button_1_K2Node_ComponentBoundEvent_261_OnButtonPressedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_261_OnButtonPressedEvent__DelegateSignature()
 {
@@ -359,6 +369,7 @@ void UBW_DebugTextData_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_261_OnButt
 	UBW_DebugTextData_C_BndEvt__Button_1_K2Node_ComponentBoundEvent_261_OnButtonPressedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -367,7 +378,7 @@ void UBW_DebugTextData_C::BndEvt__Button_1_K2Node_ComponentBoundEvent_261_OnButt
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.Finalize
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::Finalize()
 {
@@ -376,6 +387,7 @@ void UBW_DebugTextData_C::Finalize()
 	UBW_DebugTextData_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -384,7 +396,7 @@ void UBW_DebugTextData_C::Finalize()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.PlaySubtitlePlayer
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::PlaySubtitlePlayer()
 {
@@ -401,7 +413,7 @@ void UBW_DebugTextData_C::PlaySubtitlePlayer()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.OnChangeStep
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::OnChangeStep()
 {
@@ -418,12 +430,12 @@ void UBW_DebugTextData_C::OnChangeStep()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTextData_C::BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
+void UBW_DebugTextData_C::STATIC_BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSpinBoxValueCommittedEvent__DelegateSignature");
 
@@ -432,6 +444,7 @@ void UBW_DebugTextData_C::BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSp
 	params.CommitMethod = CommitMethod;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -440,12 +453,12 @@ void UBW_DebugTextData_C::BndEvt__SpinBox_145_K2Node_ComponentBoundEvent_67_OnSp
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          InValue                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<ETextCommit>       CommitMethod                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTextData_C::BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
+void UBW_DebugTextData_C::STATIC_BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature(float InValue, TEnumAsByte<ETextCommit> CommitMethod)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpinBoxValueCommittedEvent__DelegateSignature");
 
@@ -462,12 +475,12 @@ void UBW_DebugTextData_C::BndEvt__SpinBox_83_K2Node_ComponentBoundEvent_82_OnSpi
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 SelectedItem                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // TEnumAsByte<ESelectInfo>       SelectionType                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTextData_C::BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
+void UBW_DebugTextData_C::STATIC_BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_1010_OnSelectionChangedEvent__DelegateSignature");
 
@@ -484,7 +497,7 @@ void UBW_DebugTextData_C::BndEvt__DataListComboBox_K2Node_ComponentBoundEvent_10
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.UpdatePullDownTextDataList
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DebugTextData_C::UpdatePullDownTextDataList()
 {
@@ -501,11 +514,11 @@ void UBW_DebugTextData_C::UpdatePullDownTextDataList()
 
 
 // Function BW_DebugTextData.BW_DebugTextData_C.ExecuteUbergraph_BW_DebugTextData
-// (HasDefaults)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugTextData_C::ExecuteUbergraph_BW_DebugTextData(int EntryPoint)
+void UBW_DebugTextData_C::STATIC_ExecuteUbergraph_BW_DebugTextData(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugTextData.BW_DebugTextData_C.ExecuteUbergraph_BW_DebugTextData");
 

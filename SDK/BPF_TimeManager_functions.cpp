@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_TimeManager.BPF_TimeManager_C.getS3GameTimeManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, NetMulticast, Private, Protected, Delegate, NetServer, HasOutParms, NetClient)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3WorldTimekeeper_C* BP_S3World_Timekeeper          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_TimeManager_C::STATIC_getS3GameTimeManager(class UObject* __WorldContext, class ABP_S3WorldTimekeeper_C** BP_S3World_Timekeeper)
+void UBPF_TimeManager_C::getS3GameTimeManager(class UObject* __WorldContext, class ABP_S3WorldTimekeeper_C** BP_S3World_Timekeeper)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_TimeManager.BPF_TimeManager_C.getS3GameTimeManager");
 

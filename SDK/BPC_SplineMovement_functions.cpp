@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.UpdateSpline
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Delta                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bArrived                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,7 +38,7 @@ void UBPC_SplineMovement_C::UpdateSpline(float Delta, bool* bArrived)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.GetSplineCurrentLocationAndRotation
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetResponse, MulticastDelegate, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Length                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Loop                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -70,9 +70,9 @@ void UBPC_SplineMovement_C::GetSplineCurrentLocationAndRotation(float Length, bo
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.ForceMoveSpline
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
-void UBPC_SplineMovement_C::ForceMoveSpline()
+void UBPC_SplineMovement_C::STATIC_ForceMoveSpline()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SplineMovement.BPC_SplineMovement_C.ForceMoveSpline");
 
@@ -87,7 +87,7 @@ void UBPC_SplineMovement_C::ForceMoveSpline()
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.SetSpline
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport)
 // Parameters:
 // class USplineComponent*        RefSpline                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          Speed                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -111,7 +111,7 @@ void UBPC_SplineMovement_C::SetSpline(class USplineComponent* RefSpline, float S
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.PauseSpline
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           IsPause                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -123,6 +123,7 @@ void UBPC_SplineMovement_C::PauseSpline(bool IsPause)
 	params.IsPause = IsPause;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,7 +132,7 @@ void UBPC_SplineMovement_C::PauseSpline(bool IsPause)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.SplineMovingProcess
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Public, Private, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -142,6 +143,7 @@ void UBPC_SplineMovement_C::SplineMovingProcess(bool* Result)
 	UBPC_SplineMovement_C_SplineMovingProcess_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -153,7 +155,7 @@ void UBPC_SplineMovement_C::SplineMovingProcess(bool* Result)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.AddSplineMoveDistance
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          AddDistance                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -165,6 +167,7 @@ void UBPC_SplineMovement_C::AddSplineMoveDistance(float AddDistance)
 	params.AddDistance = AddDistance;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -173,11 +176,11 @@ void UBPC_SplineMovement_C::AddSplineMoveDistance(float AddDistance)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.SetSplineMoveDistance
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          NewDistance                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_SplineMovement_C::SetSplineMoveDistance(float NewDistance)
+void UBPC_SplineMovement_C::STATIC_SetSplineMoveDistance(float NewDistance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SplineMovement.BPC_SplineMovement_C.SetSplineMoveDistance");
 
@@ -185,6 +188,7 @@ void UBPC_SplineMovement_C::SetSplineMoveDistance(float NewDistance)
 	params.NewDistance = NewDistance;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -193,7 +197,7 @@ void UBPC_SplineMovement_C::SetSplineMoveDistance(float NewDistance)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.GetSplineLength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Event, NetResponse, NetMulticast, Public, Protected, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Length                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -215,11 +219,11 @@ void UBPC_SplineMovement_C::GetSplineLength(float* Length)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.IsArrivedSpline
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           IsArrived                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_SplineMovement_C::IsArrivedSpline(bool* IsArrived)
+void UBPC_SplineMovement_C::STATIC_IsArrivedSpline(bool* IsArrived)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SplineMovement.BPC_SplineMovement_C.IsArrivedSpline");
 
@@ -237,7 +241,7 @@ void UBPC_SplineMovement_C::IsArrivedSpline(bool* IsArrived)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Event, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -257,7 +261,7 @@ void UBPC_SplineMovement_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.ExecuteUbergraph_BPC_SplineMovement
-// ()
+// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -269,6 +273,7 @@ void UBPC_SplineMovement_C::ExecuteUbergraph_BPC_SplineMovement(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -277,9 +282,9 @@ void UBPC_SplineMovement_C::ExecuteUbergraph_BPC_SplineMovement(int EntryPoint)
 
 
 // Function BPC_SplineMovement.BPC_SplineMovement_C.ArrivedEvent__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintCallable)
 
-void UBPC_SplineMovement_C::ArrivedEvent__DelegateSignature()
+void UBPC_SplineMovement_C::STATIC_ArrivedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SplineMovement.BPC_SplineMovement_C.ArrivedEvent__DelegateSignature");
 

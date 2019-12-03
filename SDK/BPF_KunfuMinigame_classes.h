@@ -26,7 +26,7 @@ public:
 
 
 	void STATIC_BPF_GetAllKunFuKeys_Minigame(class UObject* __WorldContext);
-	struct FName STATIC_BPF_GetKunfuKey_Minigame(TEnumAsByte<E_MiniGame_KungFuType> Type, class UObject* __WorldContext);
+	struct FName BPF_GetKunfuKey_Minigame(TEnumAsByte<E_MiniGame_KungFuType> Type, class UObject* __WorldContext);
 };
 
 

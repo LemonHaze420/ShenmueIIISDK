@@ -75,7 +75,7 @@ struct ABP_UI_Manager_C_PushRight_ItemList_Params
 struct ABP_UI_Manager_C_MakeItemList_Params
 {
 	TArray<int>                                        ItemIDList;                                               // (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-	TArray<struct FST_ItemList>                        ItemList;                                                 // (Parm, OutParm, ZeroConstructor)
+	TArray<struct FST_ItemList>                        itemList;                                                 // (Parm, OutParm, ZeroConstructor)
 };
 
 // Function BP_UI_Manager.BP_UI_Manager_C.IsRegistDetectAction

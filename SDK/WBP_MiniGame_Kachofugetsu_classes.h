@@ -43,12 +43,12 @@ public:
 
 	void SetTextures(class UTexture2D* Flower, class UTexture2D* Bird, class UTexture2D* Wind, class UTexture2D* Moon, class UTexture2D* Back);
 	void SetVisibleImage(bool Visible);
-	void SetVisibleViewText(ESlateVisibility InVisibility);
+	void STATIC_SetVisibleViewText(ESlateVisibility InVisibility);
 	void SetViewText(const struct FString& Text);
-	void SetVisibleButton(bool Visible);
-	void Construct();
-	void PlayStartFadeAnim();
-	void PlayEndFadeAnim();
+	void STATIC_SetVisibleButton(bool Visible);
+	void STATIC_Construct();
+	void STATIC_PlayStartFadeAnim();
+	void STATIC_PlayEndFadeAnim();
 	void PlayAppearAnim(float PlayRate, TEnumAsByte<EMiniGameKFTypeEnum> AppearType);
 	void ExecuteUbergraph_WBP_MiniGame_Kachofugetsu(int EntryPoint);
 };

@@ -28,14 +28,14 @@ public:
 	}
 
 
-	void IsNPCLocomotionAnimation(bool* bReturnValue);
-	void IsNPCLocomotionSit(bool* bReturnValue);
+	void STATIC_IsNPCLocomotionAnimation(bool* bReturnValue);
+	void STATIC_IsNPCLocomotionSit(bool* bReturnValue);
 	void IsNPCLocomotionWalk(bool* bReturnValue);
-	void IsNPCLocomotionIdle(bool* bReturnValue);
+	void STATIC_IsNPCLocomotionIdle(bool* bReturnValue);
 	void IsInitializeState(bool* bSuccess);
 	void StateOnInitialize();
-	void Setup();
-	void ExecuteUbergraph_BP_State_LookAtNPC(int EntryPoint);
+	void STATIC_Setup();
+	void STATIC_ExecuteUbergraph_BP_State_LookAtNPC(int EntryPoint);
 };
 
 

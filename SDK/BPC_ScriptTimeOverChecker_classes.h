@@ -37,8 +37,8 @@ public:
 	void StartTimeOverCheck(float GameStopTime);
 	void ReceiveTick(float DeltaSeconds);
 	void OnEndTalk();
-	void ExecuteUbergraph_BPC_ScriptTimeOverChecker(int EntryPoint);
-	void OnGameTimeOverDispatcher__DelegateSignature(float GameStopTime);
+	void STATIC_ExecuteUbergraph_BPC_ScriptTimeOverChecker(int EntryPoint);
+	void STATIC_OnGameTimeOverDispatcher__DelegateSignature(float GameStopTime);
 };
 
 

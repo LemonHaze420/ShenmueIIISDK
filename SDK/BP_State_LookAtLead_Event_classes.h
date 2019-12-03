@@ -35,7 +35,7 @@ public:
 	}
 
 
-	void StateExit(float Delta, bool* bProcessing);
+	void STATIC_StateExit(float Delta, bool* bProcessing);
 	void StateEnter(float Delta, bool* bProcessing);
 };
 

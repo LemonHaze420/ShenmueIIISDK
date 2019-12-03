@@ -40,15 +40,15 @@ public:
 	}
 
 
-	void IsOpen(bool* Open);
-	void Reset();
-	void PushRight();
-	void PushLeft();
-	void Close();
+	void STATIC_IsOpen(bool* Open);
+	void STATIC_Reset();
+	void STATIC_PushRight();
+	void STATIC_PushLeft();
+	void STATIC_Close();
 	void Open();
-	void Construct();
-	void Destruct();
-	void ExecuteUbergraph_wgt_dialog_window_yescancel(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_Destruct();
+	void STATIC_ExecuteUbergraph_wgt_dialog_window_yescancel(int EntryPoint);
 };
 
 

@@ -26,7 +26,7 @@ public:
 	}
 
 
-	class UBTL_CourseDataAsset* FindAwardCourseData(const struct FName& Award, int* Array_Index);
+	class UBTL_CourseDataAsset* STATIC_FindAwardCourseData(const struct FName& Award, int* Array_Index);
 };
 
 

@@ -27,45 +27,6 @@ public:
 };
 
 
-// Class MovieSceneCapture.CompositionGraphCaptureSettings
-// 0x0040 (0x0068 - 0x0028)
-class UCompositionGraphCaptureSettings : public UMovieSceneCaptureProtocolSettings
-{
-public:
-	struct FCompositionGraphCapturePasses              IncludeRenderPasses;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, Config)
-	bool                                               bCaptureFramesInHDR;                                      // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
-	int                                                HDRCompressionQuality;                                    // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	TEnumAsByte<EHDRCaptureGamut>                      CaptureGamut;                                             // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	struct FSoftObjectPath                             PostProcessingMaterial;                                   // 0x0048(0x0018) (Edit, BlueprintVisible, Config)
-	bool                                               bDisableScreenPercentage;                                 // 0x0060(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneCapture.CompositionGraphCaptureSettings");
-		return ptr;
-	}
-
-};
-
-
-// Class MovieSceneCapture.BmpImageCaptureSettings
-// 0x0000 (0x0028 - 0x0028)
-class UBmpImageCaptureSettings : public UMovieSceneCaptureProtocolSettings
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class MovieSceneCapture.BmpImageCaptureSettings");
-		return ptr;
-	}
-
-};
-
-
 // Class MovieSceneCapture.FrameGrabberProtocolSettings
 // 0x0008 (0x0030 - 0x0028)
 class UFrameGrabberProtocolSettings : public UMovieSceneCaptureProtocolSettings
@@ -93,6 +54,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindClass("Class MovieSceneCapture.ImageCaptureSettings");
+		return ptr;
+	}
+
+};
+
+
+// Class MovieSceneCapture.MovieSceneCaptureInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMovieSceneCaptureInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureInterface");
 		return ptr;
 	}
 
@@ -156,8 +132,8 @@ public:
 	}
 
 
-	int STATIC_GetCaptureFrameNumber();
-	float STATIC_GetCaptureElapsedTime();
+	int GetCaptureFrameNumber();
+	float GetCaptureElapsedTime();
 };
 
 
@@ -180,15 +156,39 @@ public:
 };
 
 
-// Class MovieSceneCapture.MovieSceneCaptureInterface
+// Class MovieSceneCapture.CompositionGraphCaptureSettings
+// 0x0040 (0x0068 - 0x0028)
+class UCompositionGraphCaptureSettings : public UMovieSceneCaptureProtocolSettings
+{
+public:
+	struct FCompositionGraphCapturePasses              IncludeRenderPasses;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, Config)
+	bool                                               bCaptureFramesInHDR;                                      // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
+	int                                                HDRCompressionQuality;                                    // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<EHDRCaptureGamut>                      CaptureGamut;                                             // 0x0040(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+	struct FSoftObjectPath                             PostProcessingMaterial;                                   // 0x0048(0x0018) (Edit, BlueprintVisible, Config)
+	bool                                               bDisableScreenPercentage;                                 // 0x0060(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class MovieSceneCapture.CompositionGraphCaptureSettings");
+		return ptr;
+	}
+
+};
+
+
+// Class MovieSceneCapture.BmpImageCaptureSettings
 // 0x0000 (0x0028 - 0x0028)
-class UMovieSceneCaptureInterface : public UInterface
+class UBmpImageCaptureSettings : public UMovieSceneCaptureProtocolSettings
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindClass("Class MovieSceneCapture.MovieSceneCaptureInterface");
+		static auto ptr = UObject::FindClass("Class MovieSceneCapture.BmpImageCaptureSettings");
 		return ptr;
 	}
 

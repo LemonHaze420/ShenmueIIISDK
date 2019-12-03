@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void STATIC_SellMagnification_SkillBook(class UObject* __WorldContext, float* Magnification_Skillbook);
-	void STATIC_SellMagnification(class UObject* __WorldContext, float* SellMagnification);
-	void STATIC_GetS3ShopDataManager(class UObject* __WorldContext, class ABP_ShopDataManager_C** BP_ShopDataManager);
+	void SellMagnification_SkillBook(class UObject* __WorldContext, float* Magnification_Skillbook);
+	void SellMagnification(class UObject* __WorldContext, float* SellMagnification);
+	void GetS3ShopDataManager(class UObject* __WorldContext, class ABP_ShopDataManager_C** BP_ShopDataManager);
 };
 
 

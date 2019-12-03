@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetRewardFeed
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // ES3RewardType                  Type                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_Otoshidama_Base_C::GetRewardFeed(ES3RewardType* Type)
 	ABP_Otoshidama_Base_C_GetRewardFeed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_Otoshidama_Base_C::GetRewardFeed(ES3RewardType* Type)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetZoomTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USceneComponent*         newParam                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -58,7 +59,7 @@ void ABP_Otoshidama_Base_C::GetZoomTarget(class USceneComponent** newParam)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetBetZoomTarget
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USceneComponent*         newParam                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -80,7 +81,7 @@ void ABP_Otoshidama_Base_C::GetBetZoomTarget(class USceneComponent** newParam)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetCamera
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UCameraComponent*        newParam                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -102,7 +103,7 @@ void ABP_Otoshidama_Base_C::GetCamera(class UCameraComponent** newParam)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetCasinoMaterial
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetMulticast, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstance*       Material                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -126,7 +127,7 @@ void ABP_Otoshidama_Base_C::GetCasinoMaterial(int Index, class UMaterialInstance
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.SetUpDummyNailMesh
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::SetUpDummyNailMesh()
 {
@@ -135,6 +136,7 @@ void ABP_Otoshidama_Base_C::SetUpDummyNailMesh()
 	ABP_Otoshidama_Base_C_SetUpDummyNailMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -143,7 +145,7 @@ void ABP_Otoshidama_Base_C::SetUpDummyNailMesh()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.InitializePocket
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::InitializePocket()
 {
@@ -160,7 +162,7 @@ void ABP_Otoshidama_Base_C::InitializePocket()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -171,6 +173,7 @@ TArray<struct FS3DetectActionParam> ABP_Otoshidama_Base_C::GetDetectAction()
 	ABP_Otoshidama_Base_C_GetDetectAction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -181,7 +184,7 @@ TArray<struct FS3DetectActionParam> ABP_Otoshidama_Base_C::GetDetectAction()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.InitAsyncLoad
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, MulticastDelegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -203,7 +206,7 @@ void ABP_Otoshidama_Base_C::InitAsyncLoad(bool* dummy)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetClothMeshComponent
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
@@ -214,6 +217,7 @@ class UMeshComponent* ABP_Otoshidama_Base_C::GetClothMeshComponent()
 	ABP_Otoshidama_Base_C_GetClothMeshComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -224,7 +228,7 @@ class UMeshComponent* ABP_Otoshidama_Base_C::GetClothMeshComponent()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetCameraPosition
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -245,7 +249,7 @@ struct FVector ABP_Otoshidama_Base_C::GetCameraPosition()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.SetBoardMaterial
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::SetBoardMaterial()
 {
@@ -262,17 +266,18 @@ void ABP_Otoshidama_Base_C::SetBoardMaterial()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetMiniGameHelpName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, MulticastDelegate, Private, Delegate, HasDefaults, NetClient)
 // Parameters:
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
 
-void ABP_Otoshidama_Base_C::GetMiniGameHelpName(struct FString* String)
+void ABP_Otoshidama_Base_C::STATIC_GetMiniGameHelpName(struct FString* String)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetMiniGameHelpName");
 
 	ABP_Otoshidama_Base_C_GetMiniGameHelpName_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -284,12 +289,12 @@ void ABP_Otoshidama_Base_C::GetMiniGameHelpName(struct FString* String)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetBottomPocketMaterial
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Event, NetResponse, Static, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstance*       return_value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value)
+void ABP_Otoshidama_Base_C::STATIC_GetBottomPocketMaterial(int Index, class UMaterialInstance** return_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetBottomPocketMaterial");
 
@@ -308,17 +313,18 @@ void ABP_Otoshidama_Base_C::GetBottomPocketMaterial(int Index, class UMaterialIn
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetBottomPocketCount
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::GetBottomPocketCount(int* Output)
+void ABP_Otoshidama_Base_C::STATIC_GetBottomPocketCount(int* Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetBottomPocketCount");
 
 	ABP_Otoshidama_Base_C_GetBottomPocketCount_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -330,12 +336,12 @@ void ABP_Otoshidama_Base_C::GetBottomPocketCount(int* Output)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetBottomPocket
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Dimension_1                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Output                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::GetBottomPocket(int Dimension_1, int* Output)
+void ABP_Otoshidama_Base_C::STATIC_GetBottomPocket(int Dimension_1, int* Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetBottomPocket");
 
@@ -343,6 +349,7 @@ void ABP_Otoshidama_Base_C::GetBottomPocket(int Dimension_1, int* Output)
 	params.Dimension_1 = Dimension_1;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +361,7 @@ void ABP_Otoshidama_Base_C::GetBottomPocket(int Dimension_1, int* Output)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.UpdateHandMotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, NetMulticast, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_Otoshidama_Base_C::UpdateHandMotion()
 {
@@ -371,7 +378,7 @@ void ABP_Otoshidama_Base_C::UpdateHandMotion()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.SetHandMotion
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          hand_rate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -383,6 +390,7 @@ void ABP_Otoshidama_Base_C::SetHandMotion(float hand_rate)
 	params.hand_rate = hand_rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -391,11 +399,11 @@ void ABP_Otoshidama_Base_C::SetHandMotion(float hand_rate)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CenterPocektHit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // int                            hit_result                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::CenterPocektHit(int hit_result)
+void ABP_Otoshidama_Base_C::STATIC_CenterPocektHit(int hit_result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CenterPocektHit");
 
@@ -411,7 +419,7 @@ void ABP_Otoshidama_Base_C::CenterPocektHit(int hit_result)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.HitCheck
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::HitCheck()
 {
@@ -428,7 +436,7 @@ void ABP_Otoshidama_Base_C::HitCheck()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.DestroyNail
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, MulticastDelegate, Public, Private, NetServer, BlueprintCallable)
 
 void ABP_Otoshidama_Base_C::DestroyNail()
 {
@@ -445,9 +453,9 @@ void ABP_Otoshidama_Base_C::DestroyNail()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CreateNail
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Otoshidama_Base_C::CreateNail()
+void ABP_Otoshidama_Base_C::STATIC_CreateNail()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CreateNail");
 
@@ -462,7 +470,7 @@ void ABP_Otoshidama_Base_C::CreateNail()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Finalize_Check
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::Finalize_Check()
 {
@@ -479,7 +487,7 @@ void ABP_Otoshidama_Base_C::Finalize_Check()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BottomPocketHit
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Protected, Delegate, DLLImport, Const)
 // Parameters:
 // int                            hit_index                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -499,13 +507,13 @@ void ABP_Otoshidama_Base_C::BottomPocketHit(int hit_index)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetDataBaseValue
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FName                   row_name                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            Value                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_Otoshidama_Base_C::GetDataBaseValue(const struct FName& row_name, int* Value)
+bool ABP_Otoshidama_Base_C::STATIC_GetDataBaseValue(const struct FName& row_name, int* Value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GetDataBaseValue");
 
@@ -526,7 +534,7 @@ bool ABP_Otoshidama_Base_C::GetDataBaseValue(const struct FName& row_name, int* 
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.SpawnBall
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Public, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_OD_ball_Test_C*      OutputPin                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -548,9 +556,9 @@ void ABP_Otoshidama_Base_C::SpawnBall(class ABP_OD_ball_Test_C** OutputPin)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, NetMulticast, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Otoshidama_Base_C::UserConstructionScript()
+void ABP_Otoshidama_Base_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.UserConstructionScript");
 
@@ -565,7 +573,7 @@ void ABP_Otoshidama_Base_C::UserConstructionScript()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Timeline_StartCamera__FinishedFunc
-// (BlueprintEvent)
+// (NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Timeline_StartCamera__FinishedFunc()
 {
@@ -574,6 +582,7 @@ void ABP_Otoshidama_Base_C::Timeline_StartCamera__FinishedFunc()
 	ABP_Otoshidama_Base_C_Timeline_StartCamera__FinishedFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -582,7 +591,7 @@ void ABP_Otoshidama_Base_C::Timeline_StartCamera__FinishedFunc()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Timeline_StartCamera__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Timeline_StartCamera__UpdateFunc()
 {
@@ -591,6 +600,7 @@ void ABP_Otoshidama_Base_C::Timeline_StartCamera__UpdateFunc()
 	ABP_Otoshidama_Base_C_Timeline_StartCamera__UpdateFunc_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -599,7 +609,7 @@ void ABP_Otoshidama_Base_C::Timeline_StartCamera__UpdateFunc()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Action Button Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Action_Button_Pushed()
 {
@@ -608,6 +618,7 @@ void ABP_Otoshidama_Base_C::Action_Button_Pushed()
 	ABP_Otoshidama_Base_C_Action_Button_Pushed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -616,7 +627,7 @@ void ABP_Otoshidama_Base_C::Action_Button_Pushed()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Right Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Right_Pushed()
 {
@@ -625,6 +636,7 @@ void ABP_Otoshidama_Base_C::D_Right_Pushed()
 	ABP_Otoshidama_Base_C_D_Right_Pushed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -633,7 +645,7 @@ void ABP_Otoshidama_Base_C::D_Right_Pushed()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Left Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Left_Pushed()
 {
@@ -642,6 +654,7 @@ void ABP_Otoshidama_Base_C::D_Left_Pushed()
 	ABP_Otoshidama_Base_C_D_Left_Pushed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -650,7 +663,7 @@ void ABP_Otoshidama_Base_C::D_Left_Pushed()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Back Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Back_Pushed()
 {
@@ -659,6 +672,7 @@ void ABP_Otoshidama_Base_C::Back_Pushed()
 	ABP_Otoshidama_Base_C_Back_Pushed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -667,7 +681,7 @@ void ABP_Otoshidama_Base_C::Back_Pushed()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.X Button Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::X_Button_Pushed()
 {
@@ -676,6 +690,7 @@ void ABP_Otoshidama_Base_C::X_Button_Pushed()
 	ABP_Otoshidama_Base_C_X_Button_Pushed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -684,7 +699,7 @@ void ABP_Otoshidama_Base_C::X_Button_Pushed()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Input Update
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Input_Update()
 {
@@ -693,6 +708,7 @@ void ABP_Otoshidama_Base_C::Input_Update()
 	ABP_Otoshidama_Base_C_Input_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -701,7 +717,7 @@ void ABP_Otoshidama_Base_C::Input_Update()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Right Released
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Right_Released()
 {
@@ -710,6 +726,7 @@ void ABP_Otoshidama_Base_C::D_Right_Released()
 	ABP_Otoshidama_Base_C_D_Right_Released_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -718,7 +735,7 @@ void ABP_Otoshidama_Base_C::D_Right_Released()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Left Released
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Left_Released()
 {
@@ -727,6 +744,7 @@ void ABP_Otoshidama_Base_C::D_Left_Released()
 	ABP_Otoshidama_Base_C_D_Left_Released_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -735,7 +753,7 @@ void ABP_Otoshidama_Base_C::D_Left_Released()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Down Released
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Down_Released()
 {
@@ -744,6 +762,7 @@ void ABP_Otoshidama_Base_C::D_Down_Released()
 	ABP_Otoshidama_Base_C_D_Down_Released_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -752,7 +771,7 @@ void ABP_Otoshidama_Base_C::D_Down_Released()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Down Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Down_Pushed()
 {
@@ -761,6 +780,7 @@ void ABP_Otoshidama_Base_C::D_Down_Pushed()
 	ABP_Otoshidama_Base_C_D_Down_Pushed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -769,7 +789,7 @@ void ABP_Otoshidama_Base_C::D_Down_Pushed()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Up Released
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Up_Released()
 {
@@ -778,6 +798,7 @@ void ABP_Otoshidama_Base_C::D_Up_Released()
 	ABP_Otoshidama_Base_C_D_Up_Released_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -786,7 +807,7 @@ void ABP_Otoshidama_Base_C::D_Up_Released()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.D-Up Pushed
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::D_Up_Pushed()
 {
@@ -795,6 +816,7 @@ void ABP_Otoshidama_Base_C::D_Up_Pushed()
 	ABP_Otoshidama_Base_C_D_Up_Pushed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -803,16 +825,16 @@ void ABP_Otoshidama_Base_C::D_Up_Pushed()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.LeftStick X-Axis
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// float                          Axis_Value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          axis_value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::LeftStick_X_Axis(float Axis_Value)
+void ABP_Otoshidama_Base_C::STATIC_LeftStick_X_Axis(float axis_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.LeftStick X-Axis");
 
 	ABP_Otoshidama_Base_C_LeftStick_X_Axis_Params params;
-	params.Axis_Value = Axis_Value;
+	params.axis_value = axis_value;
 
 	auto flags = fn->FunctionFlags;
 
@@ -823,18 +845,19 @@ void ABP_Otoshidama_Base_C::LeftStick_X_Axis(float Axis_Value)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Left Stick Y-Axis
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
-// float                          Axis_Value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// float                          axis_value                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::Left_Stick_Y_Axis(float Axis_Value)
+void ABP_Otoshidama_Base_C::STATIC_Left_Stick_Y_Axis(float axis_value)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Left Stick Y-Axis");
 
 	ABP_Otoshidama_Base_C_Left_Stick_Y_Axis_Params params;
-	params.Axis_Value = Axis_Value;
+	params.axis_value = axis_value;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -843,7 +866,7 @@ void ABP_Otoshidama_Base_C::Left_Stick_Y_Axis(float Axis_Value)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Initialize
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Initialize()
 {
@@ -852,6 +875,7 @@ void ABP_Otoshidama_Base_C::Initialize()
 	ABP_Otoshidama_Base_C_Initialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -860,7 +884,7 @@ void ABP_Otoshidama_Base_C::Initialize()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Finalize
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Finalize()
 {
@@ -869,6 +893,7 @@ void ABP_Otoshidama_Base_C::Finalize()
 	ABP_Otoshidama_Base_C_Finalize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -877,7 +902,7 @@ void ABP_Otoshidama_Base_C::Finalize()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.FinalizeReset
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::FinalizeReset()
 {
@@ -886,6 +911,7 @@ void ABP_Otoshidama_Base_C::FinalizeReset()
 	ABP_Otoshidama_Base_C_FinalizeReset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -894,7 +920,7 @@ void ABP_Otoshidama_Base_C::FinalizeReset()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::StartMiniGame()
 {
@@ -911,7 +937,7 @@ void ABP_Otoshidama_Base_C::StartMiniGame()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.RestartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::RestartMiniGame()
 {
@@ -928,7 +954,7 @@ void ABP_Otoshidama_Base_C::RestartMiniGame()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::EndMiniGame()
 {
@@ -945,7 +971,7 @@ void ABP_Otoshidama_Base_C::EndMiniGame()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.SetChooseCameraTransform
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::SetChooseCameraTransform()
 {
@@ -954,6 +980,7 @@ void ABP_Otoshidama_Base_C::SetChooseCameraTransform()
 	ABP_Otoshidama_Base_C_SetChooseCameraTransform_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -962,7 +989,7 @@ void ABP_Otoshidama_Base_C::SetChooseCameraTransform()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.OnFinishedFade
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::OnFinishedFade()
 {
@@ -979,7 +1006,7 @@ void ABP_Otoshidama_Base_C::OnFinishedFade()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::ReceiveBeginPlay()
 {
@@ -996,11 +1023,11 @@ void ABP_Otoshidama_Base_C::ReceiveBeginPlay()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::ReceiveTick(float DeltaSeconds)
+void ABP_Otoshidama_Base_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.ReceiveTick");
 
@@ -1016,7 +1043,7 @@ void ABP_Otoshidama_Base_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__fall area_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1038,6 +1065,7 @@ void ABP_Otoshidama_Base_C::BndEvt__fall_area_K2Node_ComponentBoundEvent_0_Compo
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1046,7 +1074,7 @@ void ABP_Otoshidama_Base_C::BndEvt__fall_area_K2Node_ComponentBoundEvent_0_Compo
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GameStart
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::GameStart()
 {
@@ -1063,7 +1091,7 @@ void ABP_Otoshidama_Base_C::GameStart()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.GameEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::GameEnd()
 {
@@ -1080,11 +1108,11 @@ void ABP_Otoshidama_Base_C::GameEnd()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BeginHitEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            hit_index                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::BeginHitEvent(int hit_index)
+void ABP_Otoshidama_Base_C::STATIC_BeginHitEvent(int hit_index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BeginHitEvent");
 
@@ -1100,7 +1128,7 @@ void ABP_Otoshidama_Base_C::BeginHitEvent(int hit_index)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.bAllReset
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::bAllReset()
 {
@@ -1109,6 +1137,7 @@ void ABP_Otoshidama_Base_C::bAllReset()
 	ABP_Otoshidama_Base_C_bAllReset_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1117,7 +1146,7 @@ void ABP_Otoshidama_Base_C::bAllReset()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__right_hit_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1147,7 +1176,7 @@ void ABP_Otoshidama_Base_C::BndEvt__right_hit_K2Node_ComponentBoundEvent_1_Compo
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__right_hit_K2Node_ComponentBoundEvent_2_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1165,6 +1194,7 @@ void ABP_Otoshidama_Base_C::BndEvt__right_hit_K2Node_ComponentBoundEvent_2_Compo
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1173,7 +1203,7 @@ void ABP_Otoshidama_Base_C::BndEvt__right_hit_K2Node_ComponentBoundEvent_2_Compo
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__left_hit_K2Node_ComponentBoundEvent_3_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetRequest, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1203,7 +1233,7 @@ void ABP_Otoshidama_Base_C::BndEvt__left_hit_K2Node_ComponentBoundEvent_3_Compon
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__left_hit_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1221,6 +1251,7 @@ void ABP_Otoshidama_Base_C::BndEvt__left_hit_K2Node_ComponentBoundEvent_4_Compon
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1229,7 +1260,7 @@ void ABP_Otoshidama_Base_C::BndEvt__left_hit_K2Node_ComponentBoundEvent_4_Compon
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WoodSound_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1238,7 +1269,7 @@ void ABP_Otoshidama_Base_C::BndEvt__left_hit_K2Node_ComponentBoundEvent_4_Compon
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::BndEvt__WoodSound_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_Otoshidama_Base_C::STATIC_BndEvt__WoodSound_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WoodSound_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1259,7 +1290,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WoodSound_K2Node_ComponentBoundEvent_1_Compo
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.OnTalkEnd
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::OnTalkEnd()
 {
@@ -1268,6 +1299,7 @@ void ABP_Otoshidama_Base_C::OnTalkEnd()
 	ABP_Otoshidama_Base_C_OnTalkEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1276,11 +1308,11 @@ void ABP_Otoshidama_Base_C::OnTalkEnd()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CenterPocektHitEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            hit_element                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::CenterPocektHitEvent(int hit_element)
+void ABP_Otoshidama_Base_C::STATIC_CenterPocektHitEvent(int hit_element)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CenterPocektHitEvent");
 
@@ -1296,11 +1328,11 @@ void ABP_Otoshidama_Base_C::CenterPocektHitEvent(int hit_element)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.DestroyNailEvent
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_OD_Nail_C*           nail                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::DestroyNailEvent(class ABP_OD_Nail_C* nail)
+void ABP_Otoshidama_Base_C::STATIC_DestroyNailEvent(class ABP_OD_Nail_C* nail)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.DestroyNailEvent");
 
@@ -1316,7 +1348,7 @@ void ABP_Otoshidama_Base_C::DestroyNailEvent(class ABP_OD_Nail_C* nail)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__fall area_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1334,6 +1366,7 @@ void ABP_Otoshidama_Base_C::BndEvt__fall_area_K2Node_ComponentBoundEvent_0_Compo
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1342,7 +1375,7 @@ void ABP_Otoshidama_Base_C::BndEvt__fall_area_K2Node_ComponentBoundEvent_0_Compo
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.WinMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::WinMiniGame()
 {
@@ -1359,7 +1392,7 @@ void ABP_Otoshidama_Base_C::WinMiniGame()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.LoseMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::LoseMiniGame()
 {
@@ -1376,7 +1409,7 @@ void ABP_Otoshidama_Base_C::LoseMiniGame()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.DrawMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::DrawMiniGame()
 {
@@ -1393,7 +1426,7 @@ void ABP_Otoshidama_Base_C::DrawMiniGame()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BindTalkEndEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::BindTalkEndEvent()
 {
@@ -1410,7 +1443,7 @@ void ABP_Otoshidama_Base_C::BindTalkEndEvent()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CreateNailEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::CreateNailEvent()
 {
@@ -1427,11 +1460,11 @@ void ABP_Otoshidama_Base_C::CreateNailEvent()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Otoshidama End
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           is_success                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::Otoshidama_End(bool is_success)
+void ABP_Otoshidama_Base_C::STATIC_Otoshidama_End(bool is_success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Otoshidama End");
 
@@ -1447,11 +1480,11 @@ void ABP_Otoshidama_Base_C::Otoshidama_End(bool is_success)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Set Body Collision Enable
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           is_enable                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::Set_Body_Collision_Enable(bool is_enable)
+void ABP_Otoshidama_Base_C::STATIC_Set_Body_Collision_Enable(bool is_enable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Set Body Collision Enable");
 
@@ -1467,7 +1500,7 @@ void ABP_Otoshidama_Base_C::Set_Body_Collision_Enable(bool is_enable)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WoodSound_K2Node_ComponentBoundEvent_0_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1485,6 +1518,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WoodSound_K2Node_ComponentBoundEvent_0_Compo
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1493,7 +1527,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WoodSound_K2Node_ComponentBoundEvent_0_Compo
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_1_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1523,7 +1557,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_1_C
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, Delegate, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1532,7 +1566,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_1_C
 // bool                           bFromSweep                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FHitResult              SweepResult                    (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_Otoshidama_Base_C::STATIC_BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_ComponentBeginOverlapSignature__DelegateSignature");
 
@@ -1545,6 +1579,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1553,14 +1588,14 @@ void ABP_Otoshidama_Base_C::BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_2_
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     OtherComp                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void ABP_Otoshidama_Base_C::STATIC_BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_3_ComponentEndOverlapSignature__DelegateSignature");
 
@@ -1579,7 +1614,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WallSoundLeft_K2Node_ComponentBoundEvent_3_C
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_4_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1597,6 +1632,7 @@ void ABP_Otoshidama_Base_C::BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_4_
 	params.OtherBodyIndex = OtherBodyIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1605,11 +1641,11 @@ void ABP_Otoshidama_Base_C::BndEvt__WallSoundRight_K2Node_ComponentBoundEvent_4_
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.SetEnabledPlayerEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::SetEnabledPlayerEvent(bool Enabled)
+void ABP_Otoshidama_Base_C::STATIC_SetEnabledPlayerEvent(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.SetEnabledPlayerEvent");
 
@@ -1625,7 +1661,7 @@ void ABP_Otoshidama_Base_C::SetEnabledPlayerEvent(bool Enabled)
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.RestartGamePlay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::RestartGamePlay()
 {
@@ -1642,7 +1678,7 @@ void ABP_Otoshidama_Base_C::RestartGamePlay()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Event_CameraUpdate
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Event_CameraUpdate()
 {
@@ -1659,7 +1695,7 @@ void ABP_Otoshidama_Base_C::Event_CameraUpdate()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Protected, NetServer, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1671,6 +1707,7 @@ void ABP_Otoshidama_Base_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRe
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1679,7 +1716,7 @@ void ABP_Otoshidama_Base_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayRe
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.Event_StopStartCamera
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::Event_StopStartCamera()
 {
@@ -1696,7 +1733,7 @@ void ABP_Otoshidama_Base_C::Event_StopStartCamera()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.CancelMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Otoshidama_Base_C::CancelMiniGame()
 {
@@ -1713,12 +1750,12 @@ void ABP_Otoshidama_Base_C::CancelMiniGame()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.ChangedClothes
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TScriptInterface<class US3ClothInterface> Interface                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   CharaName                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Otoshidama_Base_C::ChangedClothes(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName)
+void ABP_Otoshidama_Base_C::STATIC_ChangedClothes(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.ChangedClothes");
 
@@ -1735,7 +1772,7 @@ void ABP_Otoshidama_Base_C::ChangedClothes(const TScriptInterface<class US3Cloth
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.DelayedGameEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::DelayedGameEnd()
 {
@@ -1752,7 +1789,7 @@ void ABP_Otoshidama_Base_C::DelayedGameEnd()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.DelayedInitialize
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::DelayedInitialize()
 {
@@ -1769,7 +1806,7 @@ void ABP_Otoshidama_Base_C::DelayedInitialize()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.EnabledPlayerOnDecide
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Otoshidama_Base_C::EnabledPlayerOnDecide()
 {
@@ -1786,7 +1823,7 @@ void ABP_Otoshidama_Base_C::EnabledPlayerOnDecide()
 
 
 // Function BP_Otoshidama_Base.BP_Otoshidama_Base_C.ExecuteUbergraph_BP_Otoshidama_Base
-// (HasDefaults)
+// (NetMulticast, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

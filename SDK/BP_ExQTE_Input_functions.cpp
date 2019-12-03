@@ -14,15 +14,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_ExQTE_Input_C::UserConstructionScript()
+void ABP_ExQTE_Input_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.UserConstructionScript");
 
 	ABP_ExQTE_Input_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void ABP_ExQTE_Input_C::UserConstructionScript()
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_16
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Top_K2Node_InputActionEvent_16");
 
@@ -43,6 +44,7 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,11 +53,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Top_K2Node_InputActionEvent_16(const struct
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_15
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_15(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_15(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Bottom_K2Node_InputActionEvent_15");
 
@@ -63,6 +65,7 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_15(const str
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -71,11 +74,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Bottom_K2Node_InputActionEvent_15(const str
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_14
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_14(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_14(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Left_K2Node_InputActionEvent_14");
 
@@ -83,6 +86,7 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_14(const struc
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -91,11 +95,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Left_K2Node_InputActionEvent_14(const struc
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Right_K2Node_InputActionEvent_13
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_13(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_13(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_Right_K2Node_InputActionEvent_13");
 
@@ -103,6 +107,7 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_13(const stru
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -111,11 +116,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_Right_K2Node_InputActionEvent_13(const stru
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12");
 
@@ -123,6 +128,7 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12(const
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -131,11 +137,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonLeft_K2Node_InputActionEvent_12(const
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_11(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_11(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_11");
 
@@ -151,11 +157,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonTop_K2Node_InputActionEvent_11(const 
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_10
-// (BlueprintEvent)
+// (Event, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_10(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_10(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent_10");
 
@@ -171,11 +177,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonRightNoChange_K2Node_InputActionEvent
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, Protected, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9(const struct FKey& Key)
+void ABP_ExQTE_Input_C::STATIC_InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEvent_9");
 
@@ -183,6 +189,7 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEven
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -191,11 +198,11 @@ void ABP_ExQTE_Input_C::InpActEvt_MG_ButtonBottomNoChange_K2Node_InputActionEven
 
 
 // Function BP_ExQTE_Input.BP_ExQTE_Input_C.ExecuteUbergraph_BP_ExQTE_Input
-// (HasDefaults)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_ExQTE_Input_C::ExecuteUbergraph_BP_ExQTE_Input(int EntryPoint)
+void ABP_ExQTE_Input_C::STATIC_ExecuteUbergraph_BP_ExQTE_Input(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_ExQTE_Input.BP_ExQTE_Input_C.ExecuteUbergraph_BP_ExQTE_Input");
 

@@ -49,7 +49,7 @@ public:
 
 	void SetRowTrialSetting(class UBPW_UI_Config_Row_C* Row, TEnumAsByte<EN_ConfigParam> Type);
 	void ChangeLanguage();
-	void SetCanUseLocal(TEnumAsByte<EN_ConfigParam> ConfigParam);
+	void STATIC_SetCanUseLocal(TEnumAsByte<EN_ConfigParam> ConfigParam);
 	void PushRightStick();
 	void LeanRightStick(float AxisValue);
 	void IsSaveLoadWidgetVisible(bool* newParam);
@@ -61,7 +61,7 @@ public:
 	void PushCancelButton();
 	void PushDressDecide();
 	void InputConfigUpDown();
-	void PushDown();
+	void STATIC_PushDown();
 	void PushUp();
 	void PushRight();
 	void PushLeft();
@@ -69,7 +69,7 @@ public:
 	void CreateDressModeWidget();
 	void CreatePasswordWidget();
 	void CancelKeyConfigWidget();
-	void CancelPasswordWidget(bool* Success);
+	void STATIC_CancelPasswordWidget(bool* Success);
 	void CancelDressWidget();
 	void DestroyConfigManager(bool* IsDestroy);
 	void SetConfigName();

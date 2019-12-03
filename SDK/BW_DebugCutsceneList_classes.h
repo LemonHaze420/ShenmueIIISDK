@@ -50,23 +50,23 @@ public:
 
 
 	void OnClickedButtonQTEForceSuccess();
-	void OnCheckStateChangedQTEForceSuccess(bool IsChecked);
+	void STATIC_OnCheckStateChangedQTEForceSuccess(bool IsChecked);
 	void InitializeForQTEForceSuccess();
-	class UBW_DebugCutsceneListItem_C* SearchLastSelectedDebugMenuCutsceneItem();
+	class UBW_DebugCutsceneListItem_C* STATIC_SearchLastSelectedDebugMenuCutsceneItem();
 	void OnClickedButtonSwitchSort();
 	void OnCheckStateChangedSwitchSort(bool IsChecked);
 	void ConvertCutsceneIDForIDSort(const struct FString& InCutsceneID, struct FString* ConvertedCutsceneID);
 	void InitializeForIDSort();
-	bool CheckGotoCategory(int NewIndex);
+	bool STATIC_CheckGotoCategory(int NewIndex);
 	void UpdateFocus();
-	struct FEventReply OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void SetFocusToCategory();
+	struct FEventReply STATIC_OnKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void STATIC_SetFocusToCategory();
 	void SetFocusToItem(int Index);
-	struct FEventReply OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
-	void UpdateCutsceneList();
+	struct FEventReply STATIC_OnPreviewKeyDown(const struct FGeometry& MyGeometry, const struct FKeyEvent& InKeyEvent);
+	void STATIC_UpdateCutsceneList();
 	void BuildCutsceneList();
 	void Construct();
-	void EventOnCategoryChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
+	void STATIC_EventOnCategoryChanged(const struct FString& SelectedItem, TEnumAsByte<ESelectInfo> SelectionType);
 	void OnClickedButtonUseAnother();
 	void OnCheckStateChangedUseAnother(bool bIsChecked);
 	void SetupAnotherSkeletalMesh();

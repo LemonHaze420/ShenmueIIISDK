@@ -34,12 +34,12 @@ public:
 	}
 
 
-	void SetMinimapMode(bool MiniMap);
+	void STATIC_SetMinimapMode(bool Minimap);
 	void SetVisible(bool Visible);
 	void FadeOut();
-	void FadeIn();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_FadeIn();
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_wgt_HUDEnergyStatus(int EntryPoint);
 };
 

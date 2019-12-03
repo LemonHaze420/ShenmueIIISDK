@@ -33,8 +33,8 @@ public:
 
 
 	void ChangeVisible_EffItem(int Index, bool Visible);
-	void Construct();
-	void ExecuteUbergraph_wgt_ExchangeArrow(int EntryPoint);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_wgt_ExchangeArrow(int EntryPoint);
 };
 
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_MiniGameJobResult.BPC_MiniGameJobResult_C.Finalize
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UBPC_MiniGameJobResult_C::Finalize()
 {
@@ -31,7 +31,7 @@ void UBPC_MiniGameJobResult_C::Finalize()
 
 
 // Function BPC_MiniGameJobResult.BPC_MiniGameJobResult_C.StartResult
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport)
 // Parameters:
 // struct FText                   JobTargetOriginalText          (BlueprintVisible, BlueprintReadOnly, Parm)
 // struct FText                   JobTargetLocalizeText          (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -59,6 +59,7 @@ void UBPC_MiniGameJobResult_C::StartResult(const struct FText& JobTargetOriginal
 	params.ResultSE = ResultSE;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -67,7 +68,7 @@ void UBPC_MiniGameJobResult_C::StartResult(const struct FText& JobTargetOriginal
 
 
 // Function BPC_MiniGameJobResult.BPC_MiniGameJobResult_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, MulticastDelegate, Private, Protected, Delegate, NetServer, HasDefaults, NetClient, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -79,6 +80,7 @@ void UBPC_MiniGameJobResult_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -87,7 +89,7 @@ void UBPC_MiniGameJobResult_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BPC_MiniGameJobResult.BPC_MiniGameJobResult_C.ExecuteUbergraph_BPC_MiniGameJobResult
-// ()
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Private, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -107,9 +109,9 @@ void UBPC_MiniGameJobResult_C::ExecuteUbergraph_BPC_MiniGameJobResult(int EntryP
 
 
 // Function BPC_MiniGameJobResult.BPC_MiniGameJobResult_C.OnEndResultDispacher__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Event, Static, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
-void UBPC_MiniGameJobResult_C::OnEndResultDispacher__DelegateSignature()
+void UBPC_MiniGameJobResult_C::STATIC_OnEndResultDispacher__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_MiniGameJobResult.BPC_MiniGameJobResult_C.OnEndResultDispacher__DelegateSignature");
 

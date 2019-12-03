@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_LoadHandMesh(const struct FString& CharaCode, const struct FString& HandShape, bool Right, class UObject* __WorldContext, class UStaticMesh** Mesh);
+	void LoadHandMesh(const struct FString& CharaCode, const struct FString& HandShape, bool Right, class UObject* __WorldContext, class UStaticMesh** Mesh);
 	void STATIC_LoadBodyMesh(const struct FString& CharaCode, const struct FString& ClothId, bool Battle, bool Light, const struct FString& SituationId, class UObject* __WorldContext, class USkeletalMesh** Mesh);
 	void STATIC_getS3ClothManager(class UObject* __WorldContext, class ABP_ClothManager_C** BP_ClothManager);
 };

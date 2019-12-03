@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BTS_SetAdventurePlayerAIControl.BTS_SetAdventurePlayerAIControl_C.ReceiveDeactivationAI
-// (Event, Protected, BlueprintEvent)
+// (Native, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_SetAdventurePlayerAIControl_C::ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTS_SetAdventurePlayerAIControl_C::STATIC_ReceiveDeactivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_SetAdventurePlayerAIControl.BTS_SetAdventurePlayerAIControl_C.ReceiveDeactivationAI");
 
@@ -28,6 +28,7 @@ void UBTS_SetAdventurePlayerAIControl_C::ReceiveDeactivationAI(class AAIControll
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,12 +37,12 @@ void UBTS_SetAdventurePlayerAIControl_C::ReceiveDeactivationAI(class AAIControll
 
 
 // Function BTS_SetAdventurePlayerAIControl.BTS_SetAdventurePlayerAIControl_C.ReceiveActivationAI
-// (Event, Protected, BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AAIController*           OwnerController                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class APawn*                   ControlledPawn                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTS_SetAdventurePlayerAIControl_C::ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
+void UBTS_SetAdventurePlayerAIControl_C::STATIC_ReceiveActivationAI(class AAIController* OwnerController, class APawn* ControlledPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BTS_SetAdventurePlayerAIControl.BTS_SetAdventurePlayerAIControl_C.ReceiveActivationAI");
 
@@ -50,6 +51,7 @@ void UBTS_SetAdventurePlayerAIControl_C::ReceiveActivationAI(class AAIController
 	params.ControlledPawn = ControlledPawn;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +60,7 @@ void UBTS_SetAdventurePlayerAIControl_C::ReceiveActivationAI(class AAIController
 
 
 // Function BTS_SetAdventurePlayerAIControl.BTS_SetAdventurePlayerAIControl_C.ExecuteUbergraph_BTS_SetAdventurePlayerAIControl
-// ()
+// (NetReliable, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,6 +72,7 @@ void UBTS_SetAdventurePlayerAIControl_C::ExecuteUbergraph_BTS_SetAdventurePlayer
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

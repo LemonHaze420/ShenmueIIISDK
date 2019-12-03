@@ -33,13 +33,13 @@ public:
 	}
 
 
-	void AddItem(int ItemId);
+	void STATIC_AddItem(int ItemId);
 	void CheckBattleRallyItem();
 	void CheckDLCDialog();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void CheckFreerun();
-	void DecideDialog(class AActor* Actor);
-	void ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
+	void STATIC_DecideDialog(class AActor* Actor);
+	void STATIC_ChangePlayerBehavior(ES3PlayerBehavior NewId, ES3PlayerBehavior OldId);
 	void ExecCheck();
 	void ShowDLCDialog();
 	void FinishedDLC();

@@ -31,26 +31,26 @@ public:
 	}
 
 
-	void UpdateText();
+	void STATIC_UpdateText();
 	void HideText();
-	void GetGlowTextBorder(class UBorder** GlowTextBorder);
+	void STATIC_GetGlowTextBorder(class UBorder** GlowTextBorder);
 	void ForceAllDisp();
-	void IsAll(bool* IsAll);
-	void SetText(const struct FString& Body, const struct FST_RubyInfo& InRubyInfo, const struct FLinearColor& InSubtitleColor, const struct FLinearColor& InOutlineColor);
-	void GetGlowTextBlock(class US3GlowTextBlock** GlowTextBlock);
-	void GetNowText(class UTextBlock** NowText);
-	void GetAllSizeText(class UTextBlock** AllSize);
+	void STATIC_IsAll(bool* IsAll);
+	void STATIC_SetText(const struct FString& Body, const struct FST_RubyInfo& InRubyInfo, const struct FLinearColor& InSubtitleColor, const struct FLinearColor& InOutlineColor);
+	void STATIC_GetGlowTextBlock(class US3GlowTextBlock** GlowTextBlock);
+	void STATIC_GetNowText(class UTextBlock** NowText);
+	void STATIC_GetAllSizeText(class UTextBlock** AllSize);
 	void TickText(float Delta);
 	void GetRubySize(float* X, float* Y);
-	void CenteringTextAndRuby(class UCanvasPanelSlot* DrawTextPanel, int DisplayTextSize);
+	void STATIC_CenteringTextAndRuby(class UCanvasPanelSlot* DrawTextPanel, int DisplayTextSize);
 	void SetupRubyText(const struct FLinearColor& InShadowColorAndOpacity, TArray<struct FST_RubyPair>* RubyData);
 	void GenerateMissingParts(TArray<struct FST_RubyPair>* TargetArray);
-	void GetDummyTextRubyBody(class UTextBlock** Body);
-	void GetDummyTextBody(class UTextBlock** Body);
-	void GetRubyRootCanvas(class UCanvasPanel** Canvas);
-	void Construct();
+	void STATIC_GetDummyTextRubyBody(class UTextBlock** Body);
+	void STATIC_GetDummyTextBody(class UTextBlock** Body);
+	void STATIC_GetRubyRootCanvas(class UCanvasPanel** Canvas);
+	void STATIC_Construct();
 	void ExecuteUbergraph_UMG_SubTitleTextBase(int EntryPoint);
-	void onPlayTalkSE__DelegateSignature();
+	void STATIC_onPlayTalkSE__DelegateSignature();
 };
 
 

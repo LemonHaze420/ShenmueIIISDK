@@ -31,7 +31,7 @@ public:
 	bool FindFallbackLocation(class ACharacter* Player, struct FVector* Location);
 	struct FRotator MakeRotation(class AS3TalkEventManagerBase* TalkEventManager, const struct FVector& InVec);
 	void CanAvoidance(bool* bCan);
-	void ProcessAvoidable(bool* bProcessed);
+	void STATIC_ProcessAvoidable(bool* bProcessed);
 	void IsAvoiddableDecide(bool* bExecution);
 	void DistanceCheckTargetActors(const struct FVector& TestActorLocation, bool* bSuccess);
 	void DelayResumePhysics();

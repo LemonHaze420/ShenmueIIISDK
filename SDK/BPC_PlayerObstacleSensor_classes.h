@@ -84,11 +84,11 @@ public:
 
 	bool IsValidTalkTargetNPC(class AS3Character* NPC);
 	void GetCurrentFloor(class AActor** HitActor);
-	void UpdateSurroundTraces();
+	void STATIC_UpdateSurroundTraces();
 	bool IsValidObstacle(class AActor* Actor);
-	bool IsNPCObstacle(class UObject* NPC);
-	void ClassifyObstacle(TEnumAsByte<EN_PC_ObstacleType>* ObstacleType);
-	void SenseNPCs();
+	bool STATIC_IsNPCObstacle(class UObject* NPC);
+	void STATIC_ClassifyObstacle(TEnumAsByte<EN_PC_ObstacleType>* ObstacleType);
+	void STATIC_SenseNPCs();
 	void CapsuleTrace(const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, struct FHitResult* Hit, bool* return_value);
 	void UpdateAI(float DeltaSeconds);
 	void UpdatePlayerState(class AS3Character* InCharacter, const struct FVector& InInputDirectionWS);

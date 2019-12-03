@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetAnimOffsetPos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 
 void ABP_Minigame_Fishing_Test_C::SetAnimOffsetPos()
 {
@@ -31,9 +31,9 @@ void ABP_Minigame_Fishing_Test_C::SetAnimOffsetPos()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.AddAdjustPlayCount
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::AddAdjustPlayCount()
+void ABP_Minigame_Fishing_Test_C::STATIC_AddAdjustPlayCount()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.AddAdjustPlayCount");
 
@@ -48,7 +48,7 @@ void ABP_Minigame_Fishing_Test_C::AddAdjustPlayCount()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckIsAdjustPlay
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           IsAdjust                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -70,17 +70,18 @@ void ABP_Minigame_Fishing_Test_C::CheckIsAdjustPlay(bool* IsAdjust)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetRefractionRate
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Event, Static, MulticastDelegate, Private, NetServer, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::GetRefractionRate(float* Rate)
+void ABP_Minigame_Fishing_Test_C::STATIC_GetRefractionRate(float* Rate)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetRefractionRate");
 
 	ABP_Minigame_Fishing_Test_C_GetRefractionRate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -92,7 +93,7 @@ void ABP_Minigame_Fishing_Test_C::GetRefractionRate(float* Rate)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetBuoyPosOnSwing
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::SetBuoyPosOnSwing()
 {
@@ -109,9 +110,9 @@ void ABP_Minigame_Fishing_Test_C::SetBuoyPosOnSwing()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateCableEndPos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, Private, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_Minigame_Fishing_Test_C::UpdateCableEndPos()
+void ABP_Minigame_Fishing_Test_C::STATIC_UpdateCableEndPos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateCableEndPos");
 
@@ -126,7 +127,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateCableEndPos()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateBiteFishTargetLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_Minigame_Fishing_Test_C::UpdateBiteFishTargetLocation()
 {
@@ -143,7 +144,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateBiteFishTargetLocation()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateRyoDirection
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Public, Private, NetServer, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_Fishing_Test_C::UpdateRyoDirection()
 {
@@ -160,7 +161,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateRyoDirection()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateLoadMeshData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, NetClient, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_Fishing_Test_C::UpdateLoadMeshData()
 {
@@ -177,17 +178,18 @@ void ABP_Minigame_Fishing_Test_C::UpdateLoadMeshData()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.InitAsyncLoad
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, HasOutParms, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::InitAsyncLoad(bool* dummy)
+void ABP_Minigame_Fishing_Test_C::STATIC_InitAsyncLoad(bool* dummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.InitAsyncLoad");
 
 	ABP_Minigame_Fishing_Test_C_InitAsyncLoad_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -199,9 +201,9 @@ void ABP_Minigame_Fishing_Test_C::InitAsyncLoad(bool* dummy)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateBuoyLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, Static, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 
-void ABP_Minigame_Fishing_Test_C::UpdateBuoyLocation()
+void ABP_Minigame_Fishing_Test_C::STATIC_UpdateBuoyLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateBuoyLocation");
 
@@ -216,9 +218,9 @@ void ABP_Minigame_Fishing_Test_C::UpdateBuoyLocation()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingFishWeight
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::SettingFishWeight()
+void ABP_Minigame_Fishing_Test_C::STATIC_SettingFishWeight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingFishWeight");
 
@@ -233,17 +235,18 @@ void ABP_Minigame_Fishing_Test_C::SettingFishWeight()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetClothMeshComponent
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UMeshComponent* ABP_Minigame_Fishing_Test_C::GetClothMeshComponent()
+class UMeshComponent* ABP_Minigame_Fishing_Test_C::STATIC_GetClothMeshComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetClothMeshComponent");
 
 	ABP_Minigame_Fishing_Test_C_GetClothMeshComponent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,7 +257,7 @@ class UMeshComponent* ABP_Minigame_Fishing_Test_C::GetClothMeshComponent()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -275,11 +278,11 @@ TArray<struct FS3DetectActionParam> ABP_Minigame_Fishing_Test_C::GetDetectAction
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ClockVisibleChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Static, Public, Private, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::ClockVisibleChange(bool Visible)
+void ABP_Minigame_Fishing_Test_C::STATIC_ClockVisibleChange(bool Visible)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ClockVisibleChange");
 
@@ -295,7 +298,7 @@ void ABP_Minigame_Fishing_Test_C::ClockVisibleChange(bool Visible)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateAroundFish
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_Fishing_Test_C::UpdateAroundFish()
 {
@@ -304,6 +307,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateAroundFish()
 	ABP_Minigame_Fishing_Test_C_UpdateAroundFish_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -312,17 +316,18 @@ void ABP_Minigame_Fishing_Test_C::UpdateAroundFish()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckSubQuestEnabled
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Native, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::CheckSubQuestEnabled(bool* Enabled)
+void ABP_Minigame_Fishing_Test_C::STATIC_CheckSubQuestEnabled(bool* Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckSubQuestEnabled");
 
 	ABP_Minigame_Fishing_Test_C_CheckSubQuestEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -334,11 +339,11 @@ void ABP_Minigame_Fishing_Test_C::CheckSubQuestEnabled(bool* Enabled)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetEnabledFishArea
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::SetEnabledFishArea(bool Enabled)
+void ABP_Minigame_Fishing_Test_C::STATIC_SetEnabledFishArea(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetEnabledFishArea");
 
@@ -346,6 +351,7 @@ void ABP_Minigame_Fishing_Test_C::SetEnabledFishArea(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -354,7 +360,7 @@ void ABP_Minigame_Fishing_Test_C::SetEnabledFishArea(bool Enabled)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CreateSubQuestWidget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, MulticastDelegate, Public, NetServer)
 // Parameters:
 // int                            RyoValue                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -366,6 +372,7 @@ void ABP_Minigame_Fishing_Test_C::CreateSubQuestWidget(int RyoValue)
 	params.RyoValue = RyoValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -374,7 +381,7 @@ void ABP_Minigame_Fishing_Test_C::CreateSubQuestWidget(int RyoValue)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.IsSubQuestCompetition
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, MulticastDelegate, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsCompetition                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            EventFlagValue                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -399,7 +406,7 @@ void ABP_Minigame_Fishing_Test_C::IsSubQuestCompetition(bool* IsCompetition, int
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ResetWaterPlane
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_Fishing_Test_C::ResetWaterPlane()
 {
@@ -408,6 +415,7 @@ void ABP_Minigame_Fishing_Test_C::ResetWaterPlane()
 	ABP_Minigame_Fishing_Test_C_ResetWaterPlane_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -416,7 +424,7 @@ void ABP_Minigame_Fishing_Test_C::ResetWaterPlane()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingWaterPlane
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, MulticastDelegate, Public, NetServer)
 
 void ABP_Minigame_Fishing_Test_C::SettingWaterPlane()
 {
@@ -433,17 +441,18 @@ void ABP_Minigame_Fishing_Test_C::SettingWaterPlane()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetResultRank
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Rank                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::GetResultRank(int* Rank)
+void ABP_Minigame_Fishing_Test_C::STATIC_GetResultRank(int* Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetResultRank");
 
 	ABP_Minigame_Fishing_Test_C_GetResultRank_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -455,7 +464,7 @@ void ABP_Minigame_Fishing_Test_C::GetResultRank(int* Rank)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.IsFailedFishing
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, NetResponse, Public, NetServer)
 // Parameters:
 // bool                           Failed                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -477,7 +486,7 @@ void ABP_Minigame_Fishing_Test_C::IsFailedFishing(bool* Failed)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckTimeup
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Timeup                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -499,7 +508,7 @@ void ABP_Minigame_Fishing_Test_C::CheckTimeup(bool* Timeup)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingTimeup
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::SettingTimeup()
 {
@@ -508,6 +517,7 @@ void ABP_Minigame_Fishing_Test_C::SettingTimeup()
 	ABP_Minigame_Fishing_Test_C_SettingTimeup_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -516,7 +526,7 @@ void ABP_Minigame_Fishing_Test_C::SettingTimeup()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingEscape
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::SettingEscape()
 {
@@ -525,6 +535,7 @@ void ABP_Minigame_Fishing_Test_C::SettingEscape()
 	ABP_Minigame_Fishing_Test_C_SettingEscape_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -533,7 +544,7 @@ void ABP_Minigame_Fishing_Test_C::SettingEscape()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingDetector
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -553,7 +564,7 @@ void ABP_Minigame_Fishing_Test_C::SettingDetector(bool Enable)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.IsEnableFishing
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           Enable                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -575,17 +586,18 @@ void ABP_Minigame_Fishing_Test_C::IsEnableFishing(bool* Enable)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetSellPosition
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                 pos                            (Parm, OutParm, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::GetSellPosition(struct FVector* pos)
+void ABP_Minigame_Fishing_Test_C::STATIC_GetSellPosition(struct FVector* pos)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetSellPosition");
 
 	ABP_Minigame_Fishing_Test_C_GetSellPosition_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -597,7 +609,7 @@ void ABP_Minigame_Fishing_Test_C::GetSellPosition(struct FVector* pos)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.InitializeShopResult
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 
 void ABP_Minigame_Fishing_Test_C::InitializeShopResult()
 {
@@ -606,6 +618,7 @@ void ABP_Minigame_Fishing_Test_C::InitializeShopResult()
 	ABP_Minigame_Fishing_Test_C_InitializeShopResult_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -614,13 +627,13 @@ void ABP_Minigame_Fishing_Test_C::InitializeShopResult()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SpawnSequenceActor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // class ULevelSequence*          InSequence0                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  AttachParentActor0             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_SpawnableSequenceActor_C* SpawnObj                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::SpawnSequenceActor(class ULevelSequence* InSequence0, class AActor* AttachParentActor0, class ABP_SpawnableSequenceActor_C** SpawnObj)
+void ABP_Minigame_Fishing_Test_C::STATIC_SpawnSequenceActor(class ULevelSequence* InSequence0, class AActor* AttachParentActor0, class ABP_SpawnableSequenceActor_C** SpawnObj)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SpawnSequenceActor");
 
@@ -640,11 +653,11 @@ void ABP_Minigame_Fishing_Test_C::SpawnSequenceActor(class ULevelSequence* InSeq
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingSEPlayer
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           IsDestroy                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::SettingSEPlayer(bool IsDestroy)
+void ABP_Minigame_Fishing_Test_C::STATIC_SettingSEPlayer(bool IsDestroy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingSEPlayer");
 
@@ -660,7 +673,7 @@ void ABP_Minigame_Fishing_Test_C::SettingSEPlayer(bool IsDestroy)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.StopFishingBGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Public, NetServer)
 
 void ABP_Minigame_Fishing_Test_C::StopFishingBGM()
 {
@@ -677,7 +690,7 @@ void ABP_Minigame_Fishing_Test_C::StopFishingBGM()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.PlayBGM
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_Minigame_Fishing_Test_C::PlayBGM()
 {
@@ -694,7 +707,7 @@ void ABP_Minigame_Fishing_Test_C::PlayBGM()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.PlayReelSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Public, Private, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::PlayReelSE()
 {
@@ -703,6 +716,7 @@ void ABP_Minigame_Fishing_Test_C::PlayReelSE()
 	ABP_Minigame_Fishing_Test_C_PlayReelSE_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -711,7 +725,7 @@ void ABP_Minigame_Fishing_Test_C::PlayReelSE()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.StopAllSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Public, Protected, Delegate, Const)
 
 void ABP_Minigame_Fishing_Test_C::StopAllSE()
 {
@@ -728,7 +742,7 @@ void ABP_Minigame_Fishing_Test_C::StopAllSE()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.DebugSEPlay
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetMulticast, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_Minigame_Fishing_Test_C::DebugSEPlay()
 {
@@ -745,7 +759,7 @@ void ABP_Minigame_Fishing_Test_C::DebugSEPlay()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.PlayResultSound
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Private, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::PlayResultSound()
 {
@@ -754,6 +768,7 @@ void ABP_Minigame_Fishing_Test_C::PlayResultSound()
 	ABP_Minigame_Fishing_Test_C_PlayResultSound_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -762,7 +777,7 @@ void ABP_Minigame_Fishing_Test_C::PlayResultSound()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetResultFishMesh
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USkeletalMeshComponent*  RetMesh                        (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -784,7 +799,7 @@ void ABP_Minigame_Fishing_Test_C::GetResultFishMesh(class USkeletalMeshComponent
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.FishHit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, Public, NetServer)
 
 void ABP_Minigame_Fishing_Test_C::FishHit()
 {
@@ -801,15 +816,16 @@ void ABP_Minigame_Fishing_Test_C::FishHit()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.HitSetting
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::HitSetting()
+void ABP_Minigame_Fishing_Test_C::STATIC_HitSetting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.HitSetting");
 
 	ABP_Minigame_Fishing_Test_C_HitSetting_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -818,7 +834,7 @@ void ABP_Minigame_Fishing_Test_C::HitSetting()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishingBuoyMesh
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UStaticMeshComponent*    BuoyMesh                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -829,6 +845,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingBuoyMesh(class UStaticMeshComponent*
 	ABP_Minigame_Fishing_Test_C_GetFishingBuoyMesh_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -840,15 +857,16 @@ void ABP_Minigame_Fishing_Test_C::GetFishingBuoyMesh(class UStaticMeshComponent*
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateCapture
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::UpdateCapture()
+void ABP_Minigame_Fishing_Test_C::STATIC_UpdateCapture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateCapture");
 
 	ABP_Minigame_Fishing_Test_C_UpdateCapture_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -857,15 +875,16 @@ void ABP_Minigame_Fishing_Test_C::UpdateCapture()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.RestartSwing
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_Minigame_Fishing_Test_C::RestartSwing()
+void ABP_Minigame_Fishing_Test_C::STATIC_RestartSwing()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.RestartSwing");
 
 	ABP_Minigame_Fishing_Test_C_RestartSwing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -874,9 +893,9 @@ void ABP_Minigame_Fishing_Test_C::RestartSwing()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetQteTriangleRotation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::SetQteTriangleRotation()
+void ABP_Minigame_Fishing_Test_C::STATIC_SetQteTriangleRotation()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetQteTriangleRotation");
 
@@ -891,7 +910,7 @@ void ABP_Minigame_Fishing_Test_C::SetQteTriangleRotation()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateQte
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_Minigame_Fishing_Test_C::UpdateQte()
 {
@@ -908,9 +927,9 @@ void ABP_Minigame_Fishing_Test_C::UpdateQte()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.MakeQteTriangle
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::MakeQteTriangle()
+void ABP_Minigame_Fishing_Test_C::STATIC_MakeQteTriangle()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.MakeQteTriangle");
 
@@ -925,15 +944,16 @@ void ABP_Minigame_Fishing_Test_C::MakeQteTriangle()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.RemoveQte
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_Minigame_Fishing_Test_C::RemoveQte()
+void ABP_Minigame_Fishing_Test_C::STATIC_RemoveQte()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.RemoveQte");
 
 	ABP_Minigame_Fishing_Test_C_RemoveQte_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -942,7 +962,7 @@ void ABP_Minigame_Fishing_Test_C::RemoveQte()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CreateResultWindow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, Public, NetServer)
 
 void ABP_Minigame_Fishing_Test_C::CreateResultWindow()
 {
@@ -959,7 +979,7 @@ void ABP_Minigame_Fishing_Test_C::CreateResultWindow()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingRod
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_Minigame_Fishing_Test_C::SettingRod()
 {
@@ -968,6 +988,7 @@ void ABP_Minigame_Fishing_Test_C::SettingRod()
 	ABP_Minigame_Fishing_Test_C_SettingRod_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -976,15 +997,16 @@ void ABP_Minigame_Fishing_Test_C::SettingRod()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetCableLength
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::SetCableLength()
+void ABP_Minigame_Fishing_Test_C::STATIC_SetCableLength()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetCableLength");
 
 	ABP_Minigame_Fishing_Test_C_SetCableLength_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -993,7 +1015,7 @@ void ABP_Minigame_Fishing_Test_C::SetCableLength()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingWidgetText
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, MulticastDelegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
 void ABP_Minigame_Fishing_Test_C::SettingWidgetText()
 {
@@ -1010,7 +1032,7 @@ void ABP_Minigame_Fishing_Test_C::SettingWidgetText()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishShadow
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_Fishing_FishShadow_C* RetFishShadow                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1032,7 +1054,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishShadow(class ABP_Fishing_FishShadow_C**
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetPullPower
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, NetMulticast, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ArgAxis                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ArgIsX                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1046,6 +1068,7 @@ void ABP_Minigame_Fishing_Test_C::SetPullPower(float ArgAxis, bool ArgIsX)
 	params.ArgIsX = ArgIsX;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1054,17 +1077,18 @@ void ABP_Minigame_Fishing_Test_C::SetPullPower(float ArgAxis, bool ArgIsX)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishGram
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ArgGram                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::GetFishGram(int* ArgGram)
+void ABP_Minigame_Fishing_Test_C::STATIC_GetFishGram(int* ArgGram)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishGram");
 
 	ABP_Minigame_Fishing_Test_C_GetFishGram_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1076,15 +1100,16 @@ void ABP_Minigame_Fishing_Test_C::GetFishGram(int* ArgGram)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.HitTimeRestart
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, Public, Delegate)
 
-void ABP_Minigame_Fishing_Test_C::HitTimeRestart()
+void ABP_Minigame_Fishing_Test_C::STATIC_HitTimeRestart()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.HitTimeRestart");
 
 	ABP_Minigame_Fishing_Test_C_HitTimeRestart_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1093,15 +1118,16 @@ void ABP_Minigame_Fishing_Test_C::HitTimeRestart()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcReelSpeedRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_Minigame_Fishing_Test_C::CalcReelSpeedRate()
+void ABP_Minigame_Fishing_Test_C::STATIC_CalcReelSpeedRate()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcReelSpeedRate");
 
 	ABP_Minigame_Fishing_Test_C_CalcReelSpeedRate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1110,12 +1136,12 @@ void ABP_Minigame_Fishing_Test_C::CalcReelSpeedRate()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcDistance
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          ArgRate                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 RetLocation                    (Parm, OutParm, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::CalcDistance(float ArgRate, struct FVector* RetLocation)
+void ABP_Minigame_Fishing_Test_C::STATIC_CalcDistance(float ArgRate, struct FVector* RetLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcDistance");
 
@@ -1134,9 +1160,9 @@ void ABP_Minigame_Fishing_Test_C::CalcDistance(float ArgRate, struct FVector* Re
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE_Finish
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::QTE_Finish()
+void ABP_Minigame_Fishing_Test_C::STATIC_QTE_Finish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE_Finish");
 
@@ -1151,7 +1177,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Finish()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcArrowPow
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          ArgInputPow                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          RetPow                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1164,6 +1190,7 @@ void ABP_Minigame_Fishing_Test_C::CalcArrowPow(float ArgInputPow, float* RetPow)
 	params.ArgInputPow = ArgInputPow;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1175,7 +1202,7 @@ void ABP_Minigame_Fishing_Test_C::CalcArrowPow(float ArgInputPow, float* RetPow)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcCastingRate
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Native, Public, Private, Protected, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // float                          Rate                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1186,6 +1213,7 @@ void ABP_Minigame_Fishing_Test_C::CalcCastingRate(float* Rate)
 	ABP_Minigame_Fishing_Test_C_CalcCastingRate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1197,15 +1225,16 @@ void ABP_Minigame_Fishing_Test_C::CalcCastingRate(float* Rate)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.StartCast
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::StartCast()
+void ABP_Minigame_Fishing_Test_C::STATIC_StartCast()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.StartCast");
 
 	ABP_Minigame_Fishing_Test_C_StartCast_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1214,7 +1243,7 @@ void ABP_Minigame_Fishing_Test_C::StartCast()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishingBuoyRoot
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UStaticMeshComponent*    BuoyMesh                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -1225,6 +1254,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingBuoyRoot(class UStaticMeshComponent*
 	ABP_Minigame_Fishing_Test_C_GetFishingBuoyRoot_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1236,7 +1266,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingBuoyRoot(class UStaticMeshComponent*
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.DebugDrawRangeLine
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, MulticastDelegate, Private, Delegate, HasDefaults, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          ArgSplitNum                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1256,15 +1286,16 @@ void ABP_Minigame_Fishing_Test_C::DebugDrawRangeLine(float ArgSplitNum)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateDebug
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, NetServer, HasOutParms, NetClient, Const)
 
-void ABP_Minigame_Fishing_Test_C::UpdateDebug()
+void ABP_Minigame_Fishing_Test_C::STATIC_UpdateDebug()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateDebug");
 
 	ABP_Minigame_Fishing_Test_C_UpdateDebug_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1273,9 +1304,9 @@ void ABP_Minigame_Fishing_Test_C::UpdateDebug()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcRodBone
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::CalcRodBone()
+void ABP_Minigame_Fishing_Test_C::STATIC_CalcRodBone()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcRodBone");
 
@@ -1290,7 +1321,7 @@ void ABP_Minigame_Fishing_Test_C::CalcRodBone()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateABPCastingRate
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, MulticastDelegate, Private, Protected, HasOutParms, DLLImport, BlueprintEvent)
 
 void ABP_Minigame_Fishing_Test_C::UpdateABPCastingRate()
 {
@@ -1299,6 +1330,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateABPCastingRate()
 	ABP_Minigame_Fishing_Test_C_UpdateABPCastingRate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1307,17 +1339,18 @@ void ABP_Minigame_Fishing_Test_C::UpdateABPCastingRate()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetCable
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, Public, Delegate)
 // Parameters:
 // class UCableComponent*         RetCable                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::GetCable(class UCableComponent** RetCable)
+void ABP_Minigame_Fishing_Test_C::STATIC_GetCable(class UCableComponent** RetCable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetCable");
 
 	ABP_Minigame_Fishing_Test_C_GetCable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1329,7 +1362,7 @@ void ABP_Minigame_Fishing_Test_C::GetCable(class UCableComponent** RetCable)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetBuoyScene
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class USceneComponent*         newParam                       (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -1340,6 +1373,7 @@ void ABP_Minigame_Fishing_Test_C::GetBuoyScene(class USceneComponent** newParam)
 	ABP_Minigame_Fishing_Test_C_GetBuoyScene_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1351,9 +1385,9 @@ void ABP_Minigame_Fishing_Test_C::GetBuoyScene(class USceneComponent** newParam)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateFishPos
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::UpdateFishPos()
+void ABP_Minigame_Fishing_Test_C::STATIC_UpdateFishPos()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateFishPos");
 
@@ -1368,7 +1402,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateFishPos()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.InputSwingRY
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, NetServer)
 // Parameters:
 // float                          ArgAxis                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1380,6 +1414,7 @@ void ABP_Minigame_Fishing_Test_C::InputSwingRY(float ArgAxis)
 	params.ArgAxis = ArgAxis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1388,15 +1423,16 @@ void ABP_Minigame_Fishing_Test_C::InputSwingRY(float ArgAxis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingResultCamera
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::SettingResultCamera()
+void ABP_Minigame_Fishing_Test_C::STATIC_SettingResultCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingResultCamera");
 
 	ABP_Minigame_Fishing_Test_C_SettingResultCamera_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1405,7 +1441,7 @@ void ABP_Minigame_Fishing_Test_C::SettingResultCamera()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CameraChange
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           ArgUseSceneCamera              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1417,6 +1453,7 @@ void ABP_Minigame_Fishing_Test_C::CameraChange(bool ArgUseSceneCamera)
 	params.ArgUseSceneCamera = ArgUseSceneCamera;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1425,9 +1462,9 @@ void ABP_Minigame_Fishing_Test_C::CameraChange(bool ArgUseSceneCamera)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingFromBuoy
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::SettingFromBuoy()
+void ABP_Minigame_Fishing_Test_C::STATIC_SettingFromBuoy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingFromBuoy");
 
@@ -1442,17 +1479,18 @@ void ABP_Minigame_Fishing_Test_C::SettingFromBuoy()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckFishAreaCollision
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           RetHit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::CheckFishAreaCollision(bool* RetHit)
+void ABP_Minigame_Fishing_Test_C::STATIC_CheckFishAreaCollision(bool* RetHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckFishAreaCollision");
 
 	ABP_Minigame_Fishing_Test_C_CheckFishAreaCollision_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1464,11 +1502,11 @@ void ABP_Minigame_Fishing_Test_C::CheckFishAreaCollision(bool* RetHit)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.MakeLandingFishList
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           RetHit                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::MakeLandingFishList(bool* RetHit)
+void ABP_Minigame_Fishing_Test_C::STATIC_MakeLandingFishList(bool* RetHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.MakeLandingFishList");
 
@@ -1486,15 +1524,16 @@ void ABP_Minigame_Fishing_Test_C::MakeLandingFishList(bool* RetHit)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingHitFish
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, Delegate)
 
-void ABP_Minigame_Fishing_Test_C::SettingHitFish()
+void ABP_Minigame_Fishing_Test_C::STATIC_SettingHitFish()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingHitFish");
 
 	ABP_Minigame_Fishing_Test_C_SettingHitFish_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1503,7 +1542,7 @@ void ABP_Minigame_Fishing_Test_C::SettingHitFish()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateFish
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_Minigame_Fishing_Test_C::UpdateFish()
 {
@@ -1520,15 +1559,16 @@ void ABP_Minigame_Fishing_Test_C::UpdateFish()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingFishScale
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, NetResponse, Static, Public, Private, Protected, NetServer, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_Minigame_Fishing_Test_C::SettingFishScale()
+void ABP_Minigame_Fishing_Test_C::STATIC_SettingFishScale()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SettingFishScale");
 
 	ABP_Minigame_Fishing_Test_C_SettingFishScale_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1537,7 +1577,7 @@ void ABP_Minigame_Fishing_Test_C::SettingFishScale()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateDelayState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, MulticastDelegate, Public, Delegate, NetServer, HasDefaults, NetClient, DLLImport)
 
 void ABP_Minigame_Fishing_Test_C::UpdateDelayState()
 {
@@ -1554,7 +1594,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateDelayState()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateDistance
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Public, Protected, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_Fishing_Test_C::UpdateDistance()
 {
@@ -1571,7 +1611,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateDistance()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetNowDistance
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, MulticastDelegate, Public, NetServer)
 // Parameters:
 // float                          RetDist                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1593,7 +1633,7 @@ void ABP_Minigame_Fishing_Test_C::GetNowDistance(float* RetDist)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SetupResult
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          ArgWait                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1613,11 +1653,11 @@ void ABP_Minigame_Fishing_Test_C::SetupResult(float ArgWait)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcLimitDistPer
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          RetLimitPow                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::CalcLimitDistPer(float* RetLimitPow)
+void ABP_Minigame_Fishing_Test_C::STATIC_CalcLimitDistPer(float* RetLimitPow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CalcLimitDistPer");
 
@@ -1635,7 +1675,7 @@ void ABP_Minigame_Fishing_Test_C::CalcLimitDistPer(float* RetLimitPow)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishingArrow
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetResponse, MulticastDelegate, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class ABP_Fishing_Arrow_C*     AsBP_Fishing_Ryo               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1657,7 +1697,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingArrow(class ABP_Fishing_Arrow_C** As
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetHitFishData
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, MulticastDelegate, Public, Private, Protected, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FST_MG_FishData         newParam                       (Parm, OutParm)
 
@@ -1679,7 +1719,7 @@ void ABP_Minigame_Fishing_Test_C::GetHitFishData(struct FST_MG_FishData* newPara
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishingABP
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UABP_Fishing_re_C*       AsABP_Fishing_Re               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1701,7 +1741,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingABP(class UABP_Fishing_re_C** AsABP_
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishingRyo
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_Fishing_Ryo_C*       AsBP_Fishing_Ryo               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1712,6 +1752,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingRyo(class ABP_Fishing_Ryo_C** AsBP_F
 	ABP_Minigame_Fishing_Test_C_GetFishingRyo_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1723,7 +1764,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingRyo(class ABP_Fishing_Ryo_C** AsBP_F
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.getQTEDirection
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, NetResponse, Public, Private, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            qte_dir                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1734,6 +1775,7 @@ void ABP_Minigame_Fishing_Test_C::getQTEDirection(int* qte_dir)
 	ABP_Minigame_Fishing_Test_C_getQTEDirection_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1745,17 +1787,18 @@ void ABP_Minigame_Fishing_Test_C::getQTEDirection(int* qte_dir)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckLeftStickTurn
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, MulticastDelegate, Private, Protected, NetClient, Const)
 // Parameters:
 // bool                           is_turn                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::CheckLeftStickTurn(bool* is_turn)
+void ABP_Minigame_Fishing_Test_C::STATIC_CheckLeftStickTurn(bool* is_turn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CheckLeftStickTurn");
 
 	ABP_Minigame_Fishing_Test_C_CheckLeftStickTurn_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1767,7 +1810,7 @@ void ABP_Minigame_Fishing_Test_C::CheckLeftStickTurn(bool* is_turn)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishingBuoy
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Event, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_FishingBuoy_test_C*  Buoy                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1778,6 +1821,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingBuoy(class ABP_FishingBuoy_test_C** 
 	ABP_Minigame_Fishing_Test_C_GetFishingBuoy_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1789,7 +1833,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishingBuoy(class ABP_FishingBuoy_test_C** 
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CreateWindow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_Minigame_Fishing_Test_C::CreateWindow()
 {
@@ -1806,17 +1850,18 @@ void ABP_Minigame_Fishing_Test_C::CreateWindow()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SpawnInputControlActor
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Static, Protected, Delegate, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ABP_MiniGameInputBase_C* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ABP_MiniGameInputBase_C* ABP_Minigame_Fishing_Test_C::SpawnInputControlActor()
+class ABP_MiniGameInputBase_C* ABP_Minigame_Fishing_Test_C::STATIC_SpawnInputControlActor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.SpawnInputControlActor");
 
 	ABP_Minigame_Fishing_Test_C_SpawnInputControlActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1827,7 +1872,7 @@ class ABP_MiniGameInputBase_C* ABP_Minigame_Fishing_Test_C::SpawnInputControlAct
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetMulticast, Public, Protected, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::UserConstructionScript()
 {
@@ -1844,7 +1889,7 @@ void ABP_Minigame_Fishing_Test_C::UserConstructionScript()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTEEndTimeline__FinishedFunc
-// (BlueprintEvent)
+// (Net, NetRequest, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTEEndTimeline__FinishedFunc()
 {
@@ -1861,7 +1906,7 @@ void ABP_Minigame_Fishing_Test_C::QTEEndTimeline__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTEEndTimeline__UpdateFunc
-// (BlueprintEvent)
+// (NetRequest, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTEEndTimeline__UpdateFunc()
 {
@@ -1878,7 +1923,7 @@ void ABP_Minigame_Fishing_Test_C::QTEEndTimeline__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type3__FinishedFunc
-// (BlueprintEvent)
+// (NetRequest, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__FinishedFunc()
 {
@@ -1895,7 +1940,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type3__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__UpdateFunc()
 {
@@ -1912,7 +1957,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type3__qte_show__EventFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__qte_show__EventFunc()
 {
@@ -1929,7 +1974,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__qte_show__EventFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type3__qte_wait_start__EventFunc
-// (BlueprintEvent)
+// (NetReliable, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__qte_wait_start__EventFunc()
 {
@@ -1946,7 +1991,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__qte_wait_start__EventFunc(
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type3__qte_start__EventFunc
-// (BlueprintEvent)
+// (NetReliable, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__qte_start__EventFunc()
 {
@@ -1963,7 +2008,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type3__qte_start__EventFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type2__FinishedFunc
-// (BlueprintEvent)
+// (Net, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__FinishedFunc()
 {
@@ -1980,7 +2025,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type2__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__UpdateFunc()
 {
@@ -1997,7 +2042,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type2__qte_show__EventFunc
-// (BlueprintEvent)
+// (NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__qte_show__EventFunc()
 {
@@ -2014,7 +2059,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__qte_show__EventFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type2__qte_wait_start__EventFunc
-// (BlueprintEvent)
+// (NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__qte_wait_start__EventFunc()
 {
@@ -2031,7 +2076,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__qte_wait_start__EventFunc(
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type2__qte_start__EventFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__qte_start__EventFunc()
 {
@@ -2048,13 +2093,13 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type2__qte_start__EventFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.򠪦􆖐񍳔_
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.򠪦􆖐񍳔_");
 
-	ABP_Minigame_Fishing_Test_C_UnknownFunc01__Params params;
+	ABP_Minigame_Fishing_Test_C__UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -2065,7 +2110,7 @@ void ABP_Minigame_Fishing_Test_C::UnknownFunc01()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Particle Start Timeline__FinishedFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Particle_Start_Timeline__FinishedFunc()
 {
@@ -2082,7 +2127,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_Start_Timeline__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Particle Start Timeline__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Particle_Start_Timeline__UpdateFunc()
 {
@@ -2099,7 +2144,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_Start_Timeline__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.P
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::P()
 {
@@ -2116,7 +2161,7 @@ void ABP_Minigame_Fishing_Test_C::P()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type1__FinishedFunc
-// (BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__FinishedFunc()
 {
@@ -2133,7 +2178,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type1__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__UpdateFunc()
 {
@@ -2150,7 +2195,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type1__qte_show__EventFunc
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__qte_show__EventFunc()
 {
@@ -2167,7 +2212,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__qte_show__EventFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type1__qte_wait_start__EventFunc
-// (BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__qte_wait_start__EventFunc()
 {
@@ -2184,7 +2229,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__qte_wait_start__EventFunc(
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_timeline_type1__qte_start__EventFunc
-// (BlueprintEvent)
+// (NetReliable, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__qte_start__EventFunc()
 {
@@ -2201,7 +2246,7 @@ void ABP_Minigame_Fishing_Test_C::qte_timeline_type1__qte_start__EventFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ParticleRipple Start Timeline__FinishedFunc
-// (BlueprintEvent)
+// (Net, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::ParticleRipple_Start_Timeline__FinishedFunc()
 {
@@ -2218,7 +2263,7 @@ void ABP_Minigame_Fishing_Test_C::ParticleRipple_Start_Timeline__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ParticleRipple Start Timeline__UpdateFunc
-// (BlueprintEvent)
+// (Net, Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::ParticleRipple_Start_Timeline__UpdateFunc()
 {
@@ -2235,7 +2280,7 @@ void ABP_Minigame_Fishing_Test_C::ParticleRipple_Start_Timeline__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.BlendRateOnHitTimeline__FinishedFunc
-// (BlueprintEvent)
+// (Exec, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::BlendRateOnHitTimeline__FinishedFunc()
 {
@@ -2252,7 +2297,7 @@ void ABP_Minigame_Fishing_Test_C::BlendRateOnHitTimeline__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.BlendRateOnHitTimeline__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::BlendRateOnHitTimeline__UpdateFunc()
 {
@@ -2269,7 +2314,7 @@ void ABP_Minigame_Fishing_Test_C::BlendRateOnHitTimeline__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTEFailedAnimTimeline__FinishedFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTEFailedAnimTimeline__FinishedFunc()
 {
@@ -2286,7 +2331,7 @@ void ABP_Minigame_Fishing_Test_C::QTEFailedAnimTimeline__FinishedFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTEFailedAnimTimeline__UpdateFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTEFailedAnimTimeline__UpdateFunc()
 {
@@ -2303,7 +2348,7 @@ void ABP_Minigame_Fishing_Test_C::QTEFailedAnimTimeline__UpdateFunc()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Create QTE Widget
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Create_QTE_Widget()
 {
@@ -2320,7 +2365,7 @@ void ABP_Minigame_Fishing_Test_C::Create_QTE_Widget()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing LStickX
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2332,6 +2377,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_LStickX(float Axis)
 	params.Axis = Axis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2340,7 +2386,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_LStickX(float Axis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing RStickY
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2352,6 +2398,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_RStickY(float Axis)
 	params.Axis = Axis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2360,7 +2407,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_RStickY(float Axis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait LStick X
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2372,6 +2419,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_LStick_X(float A)
 	params.A = A;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2380,7 +2428,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_LStick_X(float A)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait RStick X
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2392,6 +2440,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_RStick_X(float Axis)
 	params.Axis = Axis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2400,7 +2449,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_RStick_X(float Axis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait RStick Y
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2412,6 +2461,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_RStick_Y(float Axis)
 	params.Axis = Axis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2420,7 +2470,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_RStick_Y(float Axis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Input Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Input_Update()
 {
@@ -2429,6 +2479,7 @@ void ABP_Minigame_Fishing_Test_C::Input_Update()
 	ABP_Minigame_Fishing_Test_C_Input_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2437,7 +2488,7 @@ void ABP_Minigame_Fishing_Test_C::Input_Update()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait Input Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_Input_Update()
 {
@@ -2446,6 +2497,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_Input_Update()
 	ABP_Minigame_Fishing_Test_C_Wait_Input_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2454,12 +2506,12 @@ void ABP_Minigame_Fishing_Test_C::Wait_Input_Update()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Buoy Attract
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          Rate                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::Buoy_Attract(float Rate, bool Condition)
+void ABP_Minigame_Fishing_Test_C::STATIC_Buoy_Attract(float Rate, bool Condition)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Buoy Attract");
 
@@ -2468,6 +2520,7 @@ void ABP_Minigame_Fishing_Test_C::Buoy_Attract(float Rate, bool Condition)
 	params.Condition = Condition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2476,7 +2529,7 @@ void ABP_Minigame_Fishing_Test_C::Buoy_Attract(float Rate, bool Condition)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Hit RStick X
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2488,6 +2541,7 @@ void ABP_Minigame_Fishing_Test_C::Hit_RStick_X(float Axis)
 	params.Axis = Axis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2496,7 +2550,7 @@ void ABP_Minigame_Fishing_Test_C::Hit_RStick_X(float Axis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Hit RStick Y
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2508,6 +2562,7 @@ void ABP_Minigame_Fishing_Test_C::Hit_RStick_Y(float Axis)
 	params.Axis = Axis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2516,7 +2571,7 @@ void ABP_Minigame_Fishing_Test_C::Hit_RStick_Y(float Axis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Hit InputUpdate
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Hit_InputUpdate()
 {
@@ -2525,6 +2580,7 @@ void ABP_Minigame_Fishing_Test_C::Hit_InputUpdate()
 	ABP_Minigame_Fishing_Test_C_Hit_InputUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2533,7 +2589,7 @@ void ABP_Minigame_Fishing_Test_C::Hit_InputUpdate()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing Input Update
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Swing_Input_Update()
 {
@@ -2542,6 +2598,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Input_Update()
 	ABP_Minigame_Fishing_Test_C_Swing_Input_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2550,7 +2607,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Input_Update()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Push HitCheck R2
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Push_HitCheck_R2()
 {
@@ -2559,6 +2616,7 @@ void ABP_Minigame_Fishing_Test_C::Push_HitCheck_R2()
 	ABP_Minigame_Fishing_Test_C_Push_HitCheck_R2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2567,7 +2625,7 @@ void ABP_Minigame_Fishing_Test_C::Push_HitCheck_R2()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE Start
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTE_Start()
 {
@@ -2576,6 +2634,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Start()
 	ABP_Minigame_Fishing_Test_C_QTE_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2584,7 +2643,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Start()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE Start Type3
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTE_Start_Type3()
 {
@@ -2593,6 +2652,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Start_Type3()
 	ABP_Minigame_Fishing_Test_C_QTE_Start_Type3_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2601,7 +2661,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Start_Type3()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE Start Type2
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTE_Start_Type2()
 {
@@ -2610,6 +2670,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Start_Type2()
 	ABP_Minigame_Fishing_Test_C_QTE_Start_Type2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2618,7 +2679,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Start_Type2()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit PushR
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushR()
 {
@@ -2627,6 +2688,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushR()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_PushR_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2635,7 +2697,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushR()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit PushL
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushL()
 {
@@ -2644,6 +2706,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushL()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_PushL_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2652,7 +2715,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushL()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit PushU
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushU()
 {
@@ -2661,6 +2724,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushU()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_PushU_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2669,7 +2733,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushU()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit PushD
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushD()
 {
@@ -2678,6 +2742,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushD()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_PushD_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2686,7 +2751,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_PushD()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_Update()
 {
@@ -2695,6 +2760,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_Update()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2703,7 +2769,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_Update()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit ReleaseR
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseR()
 {
@@ -2712,6 +2778,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseR()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_ReleaseR_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2720,7 +2787,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseR()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit ReleaseL
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseL()
 {
@@ -2729,6 +2796,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseL()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_ReleaseL_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2737,7 +2805,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseL()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit ReleaseU
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseU()
 {
@@ -2746,6 +2814,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseU()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_ReleaseU_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2754,7 +2823,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseU()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait And Hit ReleaseD
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseD()
 {
@@ -2763,6 +2832,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseD()
 	ABP_Minigame_Fishing_Test_C_Wait_And_Hit_ReleaseD_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2771,7 +2841,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_And_Hit_ReleaseD()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing Move Start
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Swing_Move_Start()
 {
@@ -2780,6 +2850,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Move_Start()
 	ABP_Minigame_Fishing_Test_C_Swing_Move_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2788,7 +2859,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Move_Start()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing Move Stop
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Swing_Move_Stop()
 {
@@ -2797,6 +2868,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Move_Stop()
 	ABP_Minigame_Fishing_Test_C_Swing_Move_Stop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2805,7 +2877,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Move_Stop()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Set Fishing Arrow Visible
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2817,6 +2889,7 @@ void ABP_Minigame_Fishing_Test_C::Set_Fishing_Arrow_Visible(bool Visible)
 	params.Visible = Visible;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2825,7 +2898,7 @@ void ABP_Minigame_Fishing_Test_C::Set_Fishing_Arrow_Visible(bool Visible)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing RStickX
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2837,6 +2910,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_RStickX(float InputPin)
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2845,7 +2919,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_RStickX(float InputPin)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Wait LStick Y
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2857,6 +2931,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_LStick_Y(float Axis)
 	params.Axis = Axis;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2865,7 +2940,7 @@ void ABP_Minigame_Fishing_Test_C::Wait_LStick_Y(float Axis)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE Init
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTE_Init()
 {
@@ -2874,6 +2949,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Init()
 	ABP_Minigame_Fishing_Test_C_QTE_Init_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2882,7 +2958,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Init()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.StartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::StartMiniGame()
 {
@@ -2891,6 +2967,7 @@ void ABP_Minigame_Fishing_Test_C::StartMiniGame()
 	ABP_Minigame_Fishing_Test_C_StartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2899,7 +2976,7 @@ void ABP_Minigame_Fishing_Test_C::StartMiniGame()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.EndMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::EndMiniGame()
 {
@@ -2908,6 +2985,7 @@ void ABP_Minigame_Fishing_Test_C::EndMiniGame()
 	ABP_Minigame_Fishing_Test_C_EndMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2916,7 +2994,7 @@ void ABP_Minigame_Fishing_Test_C::EndMiniGame()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.RestartMiniGame
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::RestartMiniGame()
 {
@@ -2925,6 +3003,7 @@ void ABP_Minigame_Fishing_Test_C::RestartMiniGame()
 	ABP_Minigame_Fishing_Test_C_RestartMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2933,7 +3012,7 @@ void ABP_Minigame_Fishing_Test_C::RestartMiniGame()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Init
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Init()
 {
@@ -2942,6 +3021,7 @@ void ABP_Minigame_Fishing_Test_C::Init()
 	ABP_Minigame_Fishing_Test_C_Init_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2950,7 +3030,7 @@ void ABP_Minigame_Fishing_Test_C::Init()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Fin
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Fin()
 {
@@ -2959,6 +3039,7 @@ void ABP_Minigame_Fishing_Test_C::Fin()
 	ABP_Minigame_Fishing_Test_C_Fin_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2967,7 +3048,7 @@ void ABP_Minigame_Fishing_Test_C::Fin()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_DebugDelayFishHit
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_DebugDelayFishHit()
 {
@@ -2984,7 +3065,7 @@ void ABP_Minigame_Fishing_Test_C::Event_DebugDelayFishHit()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.BindHitEventToBite
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::BindHitEventToBite()
 {
@@ -3001,7 +3082,7 @@ void ABP_Minigame_Fishing_Test_C::BindHitEventToBite()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_BiteFish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_BiteFish()
 {
@@ -3018,7 +3099,7 @@ void ABP_Minigame_Fishing_Test_C::Event_BiteFish()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE End
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTE_End()
 {
@@ -3035,7 +3116,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_End()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_RestartFishing
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_RestartFishing()
 {
@@ -3052,7 +3133,7 @@ void ABP_Minigame_Fishing_Test_C::Event_RestartFishing()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.FinalizeTalk
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::FinalizeTalk()
 {
@@ -3061,6 +3142,7 @@ void ABP_Minigame_Fishing_Test_C::FinalizeTalk()
 	ABP_Minigame_Fishing_Test_C_FinalizeTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3069,7 +3151,7 @@ void ABP_Minigame_Fishing_Test_C::FinalizeTalk()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_StartMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_StartMiniGame()
 {
@@ -3086,7 +3168,7 @@ void ABP_Minigame_Fishing_Test_C::Event_StartMiniGame()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_StartGameAfterFadeOut
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_StartGameAfterFadeOut()
 {
@@ -3103,12 +3185,12 @@ void ABP_Minigame_Fishing_Test_C::Event_StartGameAfterFadeOut()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.OnEndBiteFish
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::OnEndBiteFish(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_Minigame_Fishing_Test_C::STATIC_OnEndBiteFish(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.OnEndBiteFish");
 
@@ -3117,6 +3199,7 @@ void ABP_Minigame_Fishing_Test_C::OnEndBiteFish(class AActor* Actor, TEnumAsByte
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3125,7 +3208,7 @@ void ABP_Minigame_Fishing_Test_C::OnEndBiteFish(class AActor* Actor, TEnumAsByte
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.OnEndFadeOutFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::OnEndFadeOutFinished()
 {
@@ -3142,7 +3225,7 @@ void ABP_Minigame_Fishing_Test_C::OnEndFadeOutFinished()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.OnEndFadeInFinished
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::OnEndFadeInFinished()
 {
@@ -3159,7 +3242,7 @@ void ABP_Minigame_Fishing_Test_C::OnEndFadeInFinished()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::ReceiveBeginPlay()
 {
@@ -3168,6 +3251,7 @@ void ABP_Minigame_Fishing_Test_C::ReceiveBeginPlay()
 	ABP_Minigame_Fishing_Test_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3176,7 +3260,7 @@ void ABP_Minigame_Fishing_Test_C::ReceiveBeginPlay()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3188,6 +3272,7 @@ void ABP_Minigame_Fishing_Test_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3196,7 +3281,7 @@ void ABP_Minigame_Fishing_Test_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing_Finished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Swing_Finished()
 {
@@ -3213,7 +3298,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Finished()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Rod Update
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Rod_Update()
 {
@@ -3230,7 +3315,7 @@ void ABP_Minigame_Fishing_Test_C::Rod_Update()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Hit
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Hit()
 {
@@ -3247,7 +3332,7 @@ void ABP_Minigame_Fishing_Test_C::Hit()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Finish Check
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Finish_Check()
 {
@@ -3264,7 +3349,7 @@ void ABP_Minigame_Fishing_Test_C::Finish_Check()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing_Release
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Swing_Release()
 {
@@ -3281,7 +3366,7 @@ void ABP_Minigame_Fishing_Test_C::Swing_Release()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Swing
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Swing()
 {
@@ -3298,7 +3383,7 @@ void ABP_Minigame_Fishing_Test_C::Swing()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.FeedBack Play
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::FeedBack_Play()
 {
@@ -3315,7 +3400,7 @@ void ABP_Minigame_Fishing_Test_C::FeedBack_Play()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.FeedBackStop
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::FeedBackStop()
 {
@@ -3324,6 +3409,7 @@ void ABP_Minigame_Fishing_Test_C::FeedBackStop()
 	ABP_Minigame_Fishing_Test_C_FeedBackStop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3332,7 +3418,7 @@ void ABP_Minigame_Fishing_Test_C::FeedBackStop()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Update()
 {
@@ -3341,6 +3427,7 @@ void ABP_Minigame_Fishing_Test_C::Update()
 	ABP_Minigame_Fishing_Test_C_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3349,7 +3436,7 @@ void ABP_Minigame_Fishing_Test_C::Update()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Particle Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Particle_Update()
 {
@@ -3358,6 +3445,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_Update()
 	ABP_Minigame_Fishing_Test_C_Particle_Update_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3366,7 +3454,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_Update()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Set Active Object
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // bool                           is_active                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3378,6 +3466,7 @@ void ABP_Minigame_Fishing_Test_C::Set_Active_Object(bool is_active)
 	params.is_active = is_active;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3386,7 +3475,7 @@ void ABP_Minigame_Fishing_Test_C::Set_Active_Object(bool is_active)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Show Result
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Show_Result()
 {
@@ -3395,6 +3484,7 @@ void ABP_Minigame_Fishing_Test_C::Show_Result()
 	ABP_Minigame_Fishing_Test_C_Show_Result_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3403,7 +3493,7 @@ void ABP_Minigame_Fishing_Test_C::Show_Result()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.GetFishFinished
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::GetFishFinished()
 {
@@ -3420,7 +3510,7 @@ void ABP_Minigame_Fishing_Test_C::GetFishFinished()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.S_1
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::S_1()
 {
@@ -3437,7 +3527,7 @@ void ABP_Minigame_Fishing_Test_C::S_1()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Update Arrow
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          Power                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3449,6 +3539,7 @@ void ABP_Minigame_Fishing_Test_C::Update_Arrow(float Power)
 	params.Power = Power;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3457,7 +3548,7 @@ void ABP_Minigame_Fishing_Test_C::Update_Arrow(float Power)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.EventSwingRelease
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::EventSwingRelease()
 {
@@ -3474,7 +3565,7 @@ void ABP_Minigame_Fishing_Test_C::EventSwingRelease()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE Update
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // float                          move_rate                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3486,6 +3577,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Update(float move_rate)
 	params.move_rate = move_rate;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3494,7 +3586,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Update(float move_rate)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.qte_flash_end
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::qte_flash_end()
 {
@@ -3511,7 +3603,7 @@ void ABP_Minigame_Fishing_Test_C::qte_flash_end()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Delete Particle
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Delete_Particle()
 {
@@ -3528,7 +3620,7 @@ void ABP_Minigame_Fishing_Test_C::Delete_Particle()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTE Start Type1
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTE_Start_Type1()
 {
@@ -3545,7 +3637,7 @@ void ABP_Minigame_Fishing_Test_C::QTE_Start_Type1()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ShowCaptureWindow
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::ShowCaptureWindow()
 {
@@ -3562,7 +3654,7 @@ void ABP_Minigame_Fishing_Test_C::ShowCaptureWindow()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.EventABPEventBind
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::EventABPEventBind()
 {
@@ -3579,7 +3671,7 @@ void ABP_Minigame_Fishing_Test_C::EventABPEventBind()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.EventABPEventUnBind
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::EventABPEventUnBind()
 {
@@ -3596,7 +3688,7 @@ void ABP_Minigame_Fishing_Test_C::EventABPEventUnBind()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Particle_StartWaitRipple
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Particle_StartWaitRipple()
 {
@@ -3613,7 +3705,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_StartWaitRipple()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Particle_EndWaitRipple
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Particle_EndWaitRipple()
 {
@@ -3630,7 +3722,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_EndWaitRipple()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Particle_StartHitWater
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Particle_StartHitWater()
 {
@@ -3647,7 +3739,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_StartHitWater()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Particle_EndHitWater
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Particle_EndHitWater()
 {
@@ -3656,6 +3748,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_EndHitWater()
 	ABP_Minigame_Fishing_Test_C_Particle_EndHitWater_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3664,7 +3757,7 @@ void ABP_Minigame_Fishing_Test_C::Particle_EndHitWater()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.CancelMiniGame
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Native, NetResponse, NetMulticast, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_Minigame_Fishing_Test_C::CancelMiniGame()
 {
@@ -3673,6 +3766,7 @@ void ABP_Minigame_Fishing_Test_C::CancelMiniGame()
 	ABP_Minigame_Fishing_Test_C_CancelMiniGame_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3681,7 +3775,7 @@ void ABP_Minigame_Fishing_Test_C::CancelMiniGame()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_AddFreeFish
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_AddFreeFish()
 {
@@ -3690,6 +3784,7 @@ void ABP_Minigame_Fishing_Test_C::Event_AddFreeFish()
 	ABP_Minigame_Fishing_Test_C_Event_AddFreeFish_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3698,12 +3793,12 @@ void ABP_Minigame_Fishing_Test_C::Event_AddFreeFish()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.RemoveFishList
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Minigame_Fishing_Test_C::RemoveFishList(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_Minigame_Fishing_Test_C::STATIC_RemoveFishList(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.RemoveFishList");
 
@@ -3712,6 +3807,7 @@ void ABP_Minigame_Fishing_Test_C::RemoveFishList(class AActor* Actor, TEnumAsByt
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3720,7 +3816,7 @@ void ABP_Minigame_Fishing_Test_C::RemoveFishList(class AActor* Actor, TEnumAsByt
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_OnQuitDecide
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3732,6 +3828,7 @@ void ABP_Minigame_Fishing_Test_C::Event_OnQuitDecide(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3740,7 +3837,7 @@ void ABP_Minigame_Fishing_Test_C::Event_OnQuitDecide(class AActor* Actor)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_OnQuitCancel
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, NetMulticast, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3752,6 +3849,7 @@ void ABP_Minigame_Fishing_Test_C::Event_OnQuitCancel(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3760,7 +3858,7 @@ void ABP_Minigame_Fishing_Test_C::Event_OnQuitCancel(class AActor* Actor)
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_CreateQuitDialog
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_CreateQuitDialog()
 {
@@ -3769,6 +3867,7 @@ void ABP_Minigame_Fishing_Test_C::Event_CreateQuitDialog()
 	ABP_Minigame_Fishing_Test_C_Event_CreateQuitDialog_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3777,7 +3876,7 @@ void ABP_Minigame_Fishing_Test_C::Event_CreateQuitDialog()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.QTEFailedAnim
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::QTEFailedAnim()
 {
@@ -3786,6 +3885,7 @@ void ABP_Minigame_Fishing_Test_C::QTEFailedAnim()
 	ABP_Minigame_Fishing_Test_C_QTEFailedAnim_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3794,7 +3894,7 @@ void ABP_Minigame_Fishing_Test_C::QTEFailedAnim()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.Event_ButtonBottom
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::Event_ButtonBottom()
 {
@@ -3803,6 +3903,7 @@ void ABP_Minigame_Fishing_Test_C::Event_ButtonBottom()
 	ABP_Minigame_Fishing_Test_C_Event_ButtonBottom_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3811,7 +3912,7 @@ void ABP_Minigame_Fishing_Test_C::Event_ButtonBottom()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.UpdateForCable
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Native, Event, NetMulticast, Public, Delegate)
 
 void ABP_Minigame_Fishing_Test_C::UpdateForCable()
 {
@@ -3820,6 +3921,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateForCable()
 	ABP_Minigame_Fishing_Test_C_UpdateForCable_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3828,7 +3930,7 @@ void ABP_Minigame_Fishing_Test_C::UpdateForCable()
 
 
 // Function BP_Minigame_Fishing_Test.BP_Minigame_Fishing_Test_C.ExecuteUbergraph_BP_Minigame_Fishing_Test
-// (HasDefaults)
+// (Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -43,23 +43,23 @@ public:
 
 
 	bool DebugIsEnabledToSkip();
-	void SetQTEInputLimitTime(float limitTime);
-	void IsUseEndFadeIn(bool* IsUseFade);
+	void STATIC_SetQTEInputLimitTime(float limitTime);
+	void STATIC_IsUseEndFadeIn(bool* IsUseFade);
 	bool GetQTEResult();
-	void SetCurrentRestartPoint(class AActor* RestartPoint);
+	void STATIC_SetCurrentRestartPoint(class AActor* RestartPoint);
 	void Restart();
 	void DebugSkipToEnd();
 	void ExitCutscene();
-	void SetupSequence(int QTESequenceIndex);
-	void Retry();
+	void STATIC_SetupSequence(int QTESequenceIndex);
+	void STATIC_Retry();
 	void UpdatePlayingSequenceToRetry();
-	bool IsExistQTEInCurrent();
-	void UpdatePlayingIntervalSequence();
+	bool STATIC_IsExistQTEInCurrent();
+	void STATIC_UpdatePlayingIntervalSequence();
 	bool IsExistNextLevelSequence();
 	void EndIntervalSequence();
-	void InitQTESequence();
+	void STATIC_InitQTESequence();
 	void PlaySequence();
-	void InitCutscene();
+	void STATIC_InitCutscene();
 	void UserConstructionScript();
 	void InpActEvt_QTE_ButtonTop_K2Node_InputActionEvent_16(const struct FKey& Key);
 	void InpActEvt_QTE_ButtonBottom_K2Node_InputActionEvent_15(const struct FKey& Key);
@@ -69,9 +69,9 @@ public:
 	void InpActEvt_QTE_Bottom_K2Node_InputActionEvent_11(const struct FKey& Key);
 	void InpActEvt_QTE_Left_K2Node_InputActionEvent_10(const struct FKey& Key);
 	void InpActEvt_QTE_Right_K2Node_InputActionEvent_9(const struct FKey& Key);
-	void ReceiveTick(float DeltaSeconds);
-	void Event_InputStart();
-	void Event_InputEnd();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_Event_InputStart();
+	void STATIC_Event_InputEnd();
 	void ExecuteUbergraph_BP_old_QTECutscenePlayer(int EntryPoint);
 };
 

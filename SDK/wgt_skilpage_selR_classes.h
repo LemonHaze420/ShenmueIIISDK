@@ -29,9 +29,9 @@ public:
 	}
 
 
-	void SetCursol(bool Visible);
+	void STATIC_SetCursol(bool Visible);
 	void Construct();
-	void ExecuteUbergraph_wgt_skilpage_selR(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_skilpage_selR(int EntryPoint);
 };
 
 

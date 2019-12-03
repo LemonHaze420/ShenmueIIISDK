@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.SetAnimDriveSpringStiffness
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          InStiffness                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void UClothingSimulationInteractorNv::SetAnimDriveSpringStiffness(float InStiffn
 	params.InStiffness = InStiffness;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void UClothingSimulationInteractorNv::SetAnimDriveSpringStiffness(float InStiffn
 
 
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.SetAnimDriveDamperStiffness
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          InStiffness                    (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -47,7 +46,6 @@ void UClothingSimulationInteractorNv::SetAnimDriveDamperStiffness(float InStiffn
 	params.InStiffness = InStiffness;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +54,7 @@ void UClothingSimulationInteractorNv::SetAnimDriveDamperStiffness(float InStiffn
 
 
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.EnableGravityOverride
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector                 InVector                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 
@@ -68,7 +66,6 @@ void UClothingSimulationInteractorNv::EnableGravityOverride(const struct FVector
 	params.InVector = InVector;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,7 +74,7 @@ void UClothingSimulationInteractorNv::EnableGravityOverride(const struct FVector
 
 
 // Function ClothingSystemRuntime.ClothingSimulationInteractorNv.DisableGravityOverride
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UClothingSimulationInteractorNv::DisableGravityOverride()
 {
@@ -86,7 +83,6 @@ void UClothingSimulationInteractorNv::DisableGravityOverride()
 	UClothingSimulationInteractorNv_DisableGravityOverride_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

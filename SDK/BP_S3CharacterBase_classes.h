@@ -32,16 +32,16 @@ public:
 
 	bool IsTalking();
 	void GetEnableIK(bool* bIKEnabled);
-	void SetEnableIK(bool bInIKEnabled, bool* dummy);
-	TEnumAsByte<ES3HandednessType> GetProfileHandedness();
+	void STATIC_SetEnableIK(bool bInIKEnabled, bool* dummy);
+	TEnumAsByte<ES3HandednessType> STATIC_GetProfileHandedness();
 	bool ReturnOutOfWorld();
 	void IsInShelter(bool* Sheltered);
-	struct FString GetProfileCharaName();
+	struct FString STATIC_GetProfileCharaName();
 	void GetProfileDisplayName(struct FString* Display_Name, struct FString* Display_Rubi, struct FString* Display_Name_Alphabet);
-	TEnumAsByte<ES3CharacterGender> GetProfileGender();
-	int GetProfileWeight();
-	float GetProfileHeight();
-	int GetProfileAge();
+	TEnumAsByte<ES3CharacterGender> STATIC_GetProfileGender();
+	int STATIC_GetProfileWeight();
+	float STATIC_GetProfileHeight();
+	int STATIC_GetProfileAge();
 	void GetProfile(struct FS3CharacterProfile* Profile);
 	void DestroyComponentByTag(class UClass* ComponentClass, const struct FName& Tag);
 	void UserConstructionScript();

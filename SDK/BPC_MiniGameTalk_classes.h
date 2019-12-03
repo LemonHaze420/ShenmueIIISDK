@@ -31,10 +31,10 @@ public:
 	}
 
 
-	void GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params);
-	void getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
-	void DecideDetectAction(ES3ActionIconType ActionType);
-	void ParseTalkScriptData(class US3TalkDataListBase* TalkDataList);
+	void STATIC_GetStartTalkActionType(bool bCanTalk, struct FS3DetectActionParam* Params);
+	void STATIC_GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params);
+	void STATIC_DecideDetectAction(ES3ActionIconType ActionType);
+	void STATIC_ParseTalkScriptData(class US3TalkDataListBase* TalkDataList);
 	void FromExternalFunctions_MemoSet();
 	void ExecuteUbergraph_BPC_MiniGameTalk(int EntryPoint);
 };

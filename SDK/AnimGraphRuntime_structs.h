@@ -33,15 +33,6 @@ enum class EAnimPhysLinearConstraintType : uint8_t
 };
 
 
-// Enum AnimGraphRuntime.AnimPhysAngularConstraintType
-enum class EAnimPhysAngularConstraintType : uint8_t
-{
-	AnimPhysAngularConstraintType__Angular = 0,
-	AnimPhysAngularConstraintType__Cone = 1,
-	AnimPhysAngularConstraintType__AnimPhysAngularConstraintType_MAX = 2
-};
-
-
 // Enum AnimGraphRuntime.EDrivenDestinationMode
 enum class EDrivenDestinationMode : uint8_t
 {
@@ -49,24 +40,6 @@ enum class EDrivenDestinationMode : uint8_t
 	EDrivenDestinationMode__MorphTarget = 1,
 	EDrivenDestinationMode__MaterialParameter = 2,
 	EDrivenDestinationMode__EDrivenDestinationMode_MAX = 3
-};
-
-
-// Enum AnimGraphRuntime.ESphericalLimitType
-enum class ESphericalLimitType : uint8_t
-{
-	ESphericalLimitType__Inner     = 0,
-	ESphericalLimitType__Outer     = 1,
-	ESphericalLimitType__ESphericalLimitType_MAX = 2
-};
-
-
-// Enum AnimGraphRuntime.EConstraintOffsetOption
-enum class EConstraintOffsetOption : uint8_t
-{
-	EConstraintOffsetOption__None  = 0,
-	EConstraintOffsetOption__Offset_RefPose = 1,
-	EConstraintOffsetOption__EConstraintOffsetOption_MAX = 2
 };
 
 
@@ -80,22 +53,12 @@ enum class EDrivenBoneModificationMode : uint8_t
 };
 
 
-// Enum AnimGraphRuntime.CopyBoneDeltaMode
-enum class ECopyBoneDeltaMode : uint8_t
+// Enum AnimGraphRuntime.EConstraintOffsetOption
+enum class EConstraintOffsetOption : uint8_t
 {
-	CopyBoneDeltaMode__Accumulate  = 0,
-	CopyBoneDeltaMode__Copy        = 1,
-	CopyBoneDeltaMode__CopyBoneDeltaMode_MAX = 2
-};
-
-
-// Enum AnimGraphRuntime.EBoneModificationMode
-enum class EBoneModificationMode : uint8_t
-{
-	BMM_Ignore                     = 0,
-	BMM_Replace                    = 1,
-	BMM_Additive                   = 2,
-	BMM_MAX                        = 3
+	EConstraintOffsetOption__None  = 0,
+	EConstraintOffsetOption__Offset_RefPose = 1,
+	EConstraintOffsetOption__EConstraintOffsetOption_MAX = 2
 };
 
 
@@ -113,6 +76,61 @@ enum class EInterpolationBlend : uint8_t
 };
 
 
+// Enum AnimGraphRuntime.AnimPhysAngularConstraintType
+enum class EAnimPhysAngularConstraintType : uint8_t
+{
+	AnimPhysAngularConstraintType__Angular = 0,
+	AnimPhysAngularConstraintType__Cone = 1,
+	AnimPhysAngularConstraintType__AnimPhysAngularConstraintType_MAX = 2
+};
+
+
+// Enum AnimGraphRuntime.EBoneModificationMode
+enum class EBoneModificationMode : uint8_t
+{
+	BMM_Ignore                     = 0,
+	BMM_Replace                    = 1,
+	BMM_Additive                   = 2,
+	BMM_MAX                        = 3
+};
+
+
+// Enum AnimGraphRuntime.CopyBoneDeltaMode
+enum class ECopyBoneDeltaMode : uint8_t
+{
+	CopyBoneDeltaMode__Accumulate  = 0,
+	CopyBoneDeltaMode__Copy        = 1,
+	CopyBoneDeltaMode__CopyBoneDeltaMode_MAX = 2
+};
+
+
+// Enum AnimGraphRuntime.ESphericalLimitType
+enum class ESphericalLimitType : uint8_t
+{
+	ESphericalLimitType__Inner     = 0,
+	ESphericalLimitType__Outer     = 1,
+	ESphericalLimitType__ESphericalLimitType_MAX = 2
+};
+
+
+// Enum AnimGraphRuntime.EPoseDriverSource
+enum class EPoseDriverSource : uint8_t
+{
+	EPoseDriverSource__Rotation    = 0,
+	EPoseDriverSource__Translation = 1,
+	EPoseDriverSource__EPoseDriverSource_MAX = 2
+};
+
+
+// Enum AnimGraphRuntime.ERefPoseType
+enum class ERefPoseType : uint8_t
+{
+	EIT_LocalSpace                 = 0,
+	EIT_Additive                   = 1,
+	EIT_MAX                        = 2
+};
+
+
 // Enum AnimGraphRuntime.EModifyCurveApplyMode
 enum class EModifyCurveApplyMode : uint8_t
 {
@@ -125,12 +143,13 @@ enum class EModifyCurveApplyMode : uint8_t
 };
 
 
-// Enum AnimGraphRuntime.EPoseDriverSource
-enum class EPoseDriverSource : uint8_t
+// Enum AnimGraphRuntime.EScaleChainInitialLength
+enum class EScaleChainInitialLength : uint8_t
 {
-	EPoseDriverSource__Rotation    = 0,
-	EPoseDriverSource__Translation = 1,
-	EPoseDriverSource__EPoseDriverSource_MAX = 2
+	EScaleChainInitialLength__FixedDefaultLengthValue = 0,
+	EScaleChainInitialLength__Distance = 1,
+	EScaleChainInitialLength__ChainLength = 2,
+	EScaleChainInitialLength__EScaleChainInitialLength_MAX = 3
 };
 
 
@@ -150,25 +169,6 @@ enum class EPoseDriverOutput : uint8_t
 	EPoseDriverOutput__DrivePoses  = 0,
 	EPoseDriverOutput__DriveCurves = 1,
 	EPoseDriverOutput__EPoseDriverOutput_MAX = 2
-};
-
-
-// Enum AnimGraphRuntime.ERefPoseType
-enum class ERefPoseType : uint8_t
-{
-	EIT_LocalSpace                 = 0,
-	EIT_Additive                   = 1,
-	EIT_MAX                        = 2
-};
-
-
-// Enum AnimGraphRuntime.ESplineBoneAxis
-enum class ESplineBoneAxis : uint8_t
-{
-	ESplineBoneAxis__X             = 0,
-	ESplineBoneAxis__Y             = 1,
-	ESplineBoneAxis__Z             = 2,
-	ESplineBoneAxis__ESplineBoneAxis_MAX = 3
 };
 
 
@@ -194,6 +194,16 @@ enum class ERBFFunctionType : uint8_t
 };
 
 
+// Enum AnimGraphRuntime.ESplineBoneAxis
+enum class ESplineBoneAxis : uint8_t
+{
+	ESplineBoneAxis__X             = 0,
+	ESplineBoneAxis__Y             = 1,
+	ESplineBoneAxis__Z             = 2,
+	ESplineBoneAxis__ESplineBoneAxis_MAX = 3
+};
+
+
 // Enum AnimGraphRuntime.ESequenceEvalReinit
 enum class ESequenceEvalReinit : uint8_t
 {
@@ -210,16 +220,6 @@ enum class ESnapshotSourceMode : uint8_t
 	ESnapshotSourceMode__NamedSnapshot = 0,
 	ESnapshotSourceMode__SnapshotPin = 1,
 	ESnapshotSourceMode__ESnapshotSourceMode_MAX = 2
-};
-
-
-// Enum AnimGraphRuntime.EScaleChainInitialLength
-enum class EScaleChainInitialLength : uint8_t
-{
-	EScaleChainInitialLength__FixedDefaultLengthValue = 0,
-	EScaleChainInitialLength__Distance = 1,
-	EScaleChainInitialLength__ChainLength = 2,
-	EScaleChainInitialLength__EScaleChainInitialLength_MAX = 3
 };
 
 
@@ -378,26 +378,6 @@ struct FAnimNode_AimOffsetLookAt : public FAnimNode_BlendSpacePlayer
 	struct FTransform                                  PivotSocketLocalTransform;                                // 0x01E0(0x0030) (IsPlainOldData)
 };
 
-// ScriptStruct AnimGraphRuntime.AnimPhysSphericalLimit
-// 0x0030
-struct FAnimPhysSphericalLimit
-{
-	struct FBoneReference                              DrivingBone;                                              // 0x0000(0x0018) (Edit)
-	struct FVector                                     SphereLocalOffset;                                        // 0x0018(0x000C) (Edit, IsPlainOldData)
-	float                                              LimitRadius;                                              // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	ESphericalLimitType                                LimitType;                                                // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct AnimGraphRuntime.AnimPhysPlanarLimit
-// 0x0050
-struct FAnimPhysPlanarLimit
-{
-	struct FBoneReference                              DrivingBone;                                              // 0x0000(0x0018) (Edit)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
-	struct FTransform                                  PlaneTransform;                                           // 0x0020(0x0030) (Edit, IsPlainOldData)
-};
-
 // ScriptStruct AnimGraphRuntime.AnimPhysConstraintSetup
 // 0x005C
 struct FAnimPhysConstraintSetup
@@ -422,6 +402,26 @@ struct FAnimPhysConstraintSetup
 	struct FVector                                     AngularTarget;                                            // 0x004C(0x000C) (Edit, IsPlainOldData)
 	bool                                               bLinearFullyLocked;                                       // 0x0058(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x0059(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct AnimGraphRuntime.AnimPhysPlanarLimit
+// 0x0050
+struct FAnimPhysPlanarLimit
+{
+	struct FBoneReference                              DrivingBone;                                              // 0x0000(0x0018) (Edit)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+	struct FTransform                                  PlaneTransform;                                           // 0x0020(0x0030) (Edit, IsPlainOldData)
+};
+
+// ScriptStruct AnimGraphRuntime.AnimPhysSphericalLimit
+// 0x0030
+struct FAnimPhysSphericalLimit
+{
+	struct FBoneReference                              DrivingBone;                                              // 0x0000(0x0018) (Edit)
+	struct FVector                                     SphereLocalOffset;                                        // 0x0018(0x000C) (Edit, IsPlainOldData)
+	float                                              LimitRadius;                                              // 0x0024(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	ESphericalLimitType                                LimitType;                                                // 0x0028(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct AnimGraphRuntime.AnimNode_AnimDynamics

@@ -36,13 +36,13 @@ public:
 	ECheckBoxState GetState();
 	struct FText GetParameterName();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature();
 	void PreConstruct(bool IsDesignTime);
 	void OnAddedToFocusPath(const struct FFocusEvent& InFocusEvent);
 	void BndEvt__BoolValue_K2Node_ComponentBoundEvent_0_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
 	void ExecuteUbergraph_BW_SimpleDebugToggle(int EntryPoint);
-	void OnFocused__DelegateSignature(class UWidget* Widget);
-	void OnChangedByUser__DelegateSignature(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
+	void STATIC_OnFocused__DelegateSignature(class UWidget* Widget);
+	void STATIC_OnChangedByUser__DelegateSignature(class UBW_SimpleDebugToggle_C* Widget, ECheckBoxState NewValue);
 };
 
 

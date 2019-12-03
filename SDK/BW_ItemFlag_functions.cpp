@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_ItemFlag.BW_ItemFlag_C.GetText_4
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetMulticast, Public, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -25,6 +25,7 @@ struct FText UBW_ItemFlag_C::GetText_4()
 	UBW_ItemFlag_C_GetText_4_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,17 +36,18 @@ struct FText UBW_ItemFlag_C::GetText_4()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.GetText_3
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, Static, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_ItemFlag_C::GetText_3()
+struct FText UBW_ItemFlag_C::STATIC_GetText_3()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.GetText_3");
 
 	UBW_ItemFlag_C_GetText_3_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -56,7 +58,7 @@ struct FText UBW_ItemFlag_C::GetText_3()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.GetText_2
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Native, NetMulticast, Public, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -67,6 +69,7 @@ struct FText UBW_ItemFlag_C::GetText_2()
 	UBW_ItemFlag_C_GetText_2_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,11 +80,11 @@ struct FText UBW_ItemFlag_C::GetText_2()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.GetText_1
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, Static, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_ItemFlag_C::GetText_1()
+struct FText UBW_ItemFlag_C::STATIC_GetText_1()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.GetText_1");
 
@@ -98,11 +101,11 @@ struct FText UBW_ItemFlag_C::GetText_1()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BetMoneyNum
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, Static, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_ItemFlag_C::BetMoneyNum()
+struct FText UBW_ItemFlag_C::STATIC_BetMoneyNum()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BetMoneyNum");
 
@@ -119,11 +122,11 @@ struct FText UBW_ItemFlag_C::BetMoneyNum()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.HaveMoneyNum
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Exec, Static, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UBW_ItemFlag_C::HaveMoneyNum()
+struct FText UBW_ItemFlag_C::STATIC_HaveMoneyNum()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.HaveMoneyNum");
 
@@ -140,13 +143,13 @@ struct FText UBW_ItemFlag_C::HaveMoneyNum()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.Set Item Data
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBW_IntegerProperty_C*   BW_Integer_Property            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UEditableTextBox*        Text_Box                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_ItemFlag_C::Set_Item_Data(class UBW_IntegerProperty_C* BW_Integer_Property, int Index, class UEditableTextBox* Text_Box)
+void UBW_ItemFlag_C::STATIC_Set_Item_Data(class UBW_IntegerProperty_C* BW_Integer_Property, int Index, class UEditableTextBox* Text_Box)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.Set Item Data");
 
@@ -164,9 +167,9 @@ void UBW_ItemFlag_C::Set_Item_Data(class UBW_IntegerProperty_C* BW_Integer_Prope
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::Construct()
+void UBW_ItemFlag_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.Construct");
 
@@ -181,12 +184,12 @@ void UBW_ItemFlag_C::Construct()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, Exec, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_ItemFlag_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UBW_ItemFlag_C::STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.Tick");
 
@@ -203,9 +206,9 @@ void UBW_ItemFlag_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.Change Page
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::Change_Page()
+void UBW_ItemFlag_C::STATIC_Change_Page()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.Change Page");
 
@@ -220,9 +223,9 @@ void UBW_ItemFlag_C::Change_Page()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_214_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Button_214_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Button_214_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_214_K2Node_ComponentBoundEvent_107_OnButtonClickedEvent__DelegateSignature");
 
@@ -237,9 +240,9 @@ void UBW_ItemFlag_C::BndEvt__Button_214_K2Node_ComponentBoundEvent_107_OnButtonC
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_215_K2Node_ComponentBoundEvent_124_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Button_215_K2Node_ComponentBoundEvent_124_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Button_215_K2Node_ComponentBoundEvent_124_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_215_K2Node_ComponentBoundEvent_124_OnButtonClickedEvent__DelegateSignature");
 
@@ -254,9 +257,9 @@ void UBW_ItemFlag_C::BndEvt__Button_215_K2Node_ComponentBoundEvent_124_OnButtonC
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_216_K2Node_ComponentBoundEvent_154_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Button_216_K2Node_ComponentBoundEvent_154_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Button_216_K2Node_ComponentBoundEvent_154_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_216_K2Node_ComponentBoundEvent_154_OnButtonClickedEvent__DelegateSignature");
 
@@ -271,9 +274,9 @@ void UBW_ItemFlag_C::BndEvt__Button_216_K2Node_ComponentBoundEvent_154_OnButtonC
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_0_kifudaadd_K2Node_ComponentBoundEvent_58_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Button_0_kifudaadd_K2Node_ComponentBoundEvent_58_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Button_0_kifudaadd_K2Node_ComponentBoundEvent_58_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_0_kifudaadd_K2Node_ComponentBoundEvent_58_OnButtonClickedEvent__DelegateSignature");
 
@@ -288,9 +291,9 @@ void UBW_ItemFlag_C::BndEvt__Button_0_kifudaadd_K2Node_ComponentBoundEvent_58_On
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Money2_K2Node_ComponentBoundEvent_206_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Money2_K2Node_ComponentBoundEvent_206_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Money2_K2Node_ComponentBoundEvent_206_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Money2_K2Node_ComponentBoundEvent_206_OnButtonClickedEvent__DelegateSignature");
 
@@ -305,9 +308,9 @@ void UBW_ItemFlag_C::BndEvt__Money2_K2Node_ComponentBoundEvent_206_OnButtonClick
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Kifuda2_K2Node_ComponentBoundEvent_223_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Kifuda2_K2Node_ComponentBoundEvent_223_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Kifuda2_K2Node_ComponentBoundEvent_223_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Kifuda2_K2Node_ComponentBoundEvent_223_OnButtonClickedEvent__DelegateSignature");
 
@@ -322,9 +325,9 @@ void UBW_ItemFlag_C::BndEvt__Kifuda2_K2Node_ComponentBoundEvent_223_OnButtonClic
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Item3_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Item3_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Item3_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Item3_K2Node_ComponentBoundEvent_137_OnButtonClickedEvent__DelegateSignature");
 
@@ -339,9 +342,9 @@ void UBW_ItemFlag_C::BndEvt__Item3_K2Node_ComponentBoundEvent_137_OnButtonClicke
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Item4_K2Node_ComponentBoundEvent_222_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Item4_K2Node_ComponentBoundEvent_222_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Item4_K2Node_ComponentBoundEvent_222_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Item4_K2Node_ComponentBoundEvent_222_OnButtonClickedEvent__DelegateSignature");
 
@@ -356,12 +359,12 @@ void UBW_ItemFlag_C::BndEvt__Item4_K2Node_ComponentBoundEvent_222_OnButtonClicke
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.OnQuantityChanged
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_IntegerProperty_C*   Context                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_ItemFlag_C::OnQuantityChanged(int Value, class UBW_IntegerProperty_C* Context)
+void UBW_ItemFlag_C::STATIC_OnQuantityChanged(int Value, class UBW_IntegerProperty_C* Context)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.OnQuantityChanged");
 
@@ -378,7 +381,7 @@ void UBW_ItemFlag_C::OnQuantityChanged(int Value, class UBW_IntegerProperty_C* C
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.ChangeParam_075
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_IntegerProperty_C*   Context                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -400,12 +403,12 @@ void UBW_ItemFlag_C::ChangeParam_075(int Value, class UBW_IntegerProperty_C* Con
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.ChangeParam_137
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_IntegerProperty_C*   Context                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_ItemFlag_C::ChangeParam_137(int Value, class UBW_IntegerProperty_C* Context)
+void UBW_ItemFlag_C::STATIC_ChangeParam_137(int Value, class UBW_IntegerProperty_C* Context)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.ChangeParam_137");
 
@@ -422,15 +425,16 @@ void UBW_ItemFlag_C::ChangeParam_137(int Value, class UBW_IntegerProperty_C* Con
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.ChangeParam_SellMargification
-// (BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::ChangeParam_SellMargification()
+void UBW_ItemFlag_C::STATIC_ChangeParam_SellMargification()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.ChangeParam_SellMargification");
 
 	UBW_ItemFlag_C_ChangeParam_SellMargification_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -439,15 +443,16 @@ void UBW_ItemFlag_C::ChangeParam_SellMargification()
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Native, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UBW_ItemFlag_C_BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -456,9 +461,9 @@ void UBW_ItemFlag_C::BndEvt__S3Button_0_K2Node_ComponentBoundEvent_0_OnButtonCli
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_AllItemsMap_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__Button_AllItemsMap_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__Button_AllItemsMap_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__Button_AllItemsMap_K2Node_ComponentBoundEvent_1_OnButtonClickedEvent__DelegateSignature");
 
@@ -473,9 +478,9 @@ void UBW_ItemFlag_C::BndEvt__Button_AllItemsMap_K2Node_ComponentBoundEvent_1_OnB
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__MoneyMax_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, Public, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void UBW_ItemFlag_C::BndEvt__MoneyMax_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
+void UBW_ItemFlag_C::STATIC_BndEvt__MoneyMax_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.BndEvt__MoneyMax_K2Node_ComponentBoundEvent_2_OnButtonClickedEvent__DelegateSignature");
 
@@ -490,12 +495,12 @@ void UBW_ItemFlag_C::BndEvt__MoneyMax_K2Node_ComponentBoundEvent_2_OnButtonClick
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.ChangeItemBuy
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            Value                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBW_IntegerProperty_C*   Context                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UBW_ItemFlag_C::ChangeItemBuy(int Value, class UBW_IntegerProperty_C* Context)
+void UBW_ItemFlag_C::STATIC_ChangeItemBuy(int Value, class UBW_IntegerProperty_C* Context)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.ChangeItemBuy");
 
@@ -512,11 +517,11 @@ void UBW_ItemFlag_C::ChangeItemBuy(int Value, class UBW_IntegerProperty_C* Conte
 
 
 // Function BW_ItemFlag.BW_ItemFlag_C.ExecuteUbergraph_BW_ItemFlag
-// (HasDefaults)
+// (Net, Static, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_ItemFlag_C::ExecuteUbergraph_BW_ItemFlag(int EntryPoint)
+void UBW_ItemFlag_C::STATIC_ExecuteUbergraph_BW_ItemFlag(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_ItemFlag.BW_ItemFlag_C.ExecuteUbergraph_BW_ItemFlag");
 

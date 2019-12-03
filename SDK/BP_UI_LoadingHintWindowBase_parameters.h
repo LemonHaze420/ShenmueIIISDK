@@ -14,8 +14,8 @@ namespace SDK
 // Parameters
 //---------------------------------------------------------------------------
 
-// Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.ShowHP
-struct ABP_UI_LoadingHintWindowBase_C_ShowHP_Params
+// Function BP_UI_LoadingHintWindowBase.BP_UI_LoadingHintWindowBase_C.SHOWHP
+struct ABP_UI_LoadingHintWindowBase_C_SHOWHP_Params
 {
 	int                                                Type;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

@@ -32,10 +32,10 @@ public:
 	void InitFaceMotages(bool* Succsess);
 	void CalcLookAt();
 	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void CalcEmotion();
+	void STATIC_CalcEmotion();
 	void CalcClipper();
 	void CalcEyeBlink();
-	void ExecuteUbergraph_SubABP_CutsceneCharacter(int EntryPoint);
+	void STATIC_ExecuteUbergraph_SubABP_CutsceneCharacter(int EntryPoint);
 };
 
 

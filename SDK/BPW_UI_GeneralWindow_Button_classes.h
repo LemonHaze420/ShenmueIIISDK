@@ -35,16 +35,16 @@ public:
 	}
 
 
-	void Hide();
-	void AnimateIn();
-	void SetButtonIcon(TEnumAsByte<EN_GeneralWindow_Button> Index);
+	void STATIC_Hide();
+	void STATIC_AnimateIn();
+	void STATIC_SetButtonIcon(TEnumAsByte<EN_GeneralWindow_Button> Index);
 	void SetLocalizedText(const struct FName& Label);
-	void SetText(const struct FText& Text);
-	void GetButtonIcon(bool IsDesignTime, TEnumAsByte<EN_GeneralWindow_Button> Type, class UTexture2D** Texture);
+	void STATIC_SetText(const struct FText& Text);
+	void STATIC_GetButtonIcon(bool IsDesignTime, TEnumAsByte<EN_GeneralWindow_Button> Type, class UTexture2D** Texture);
 	void SetData(const struct FST_GeneralWindow_Button& Data);
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void BndEvt__FadeIn_K2Node_ComponentBoundEvent_0_OnWidgetAnimationPlaybackStatusChanged__DelegateSignature();
-	void ExecuteUbergraph_BPW_UI_GeneralWindow_Button(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPW_UI_GeneralWindow_Button(int EntryPoint);
 	void OnFinishFadingIn__DelegateSignature();
 };
 

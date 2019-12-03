@@ -31,7 +31,7 @@ public:
 	}
 
 
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_WBP_MemoMap_Mask(int EntryPoint);
 };
 

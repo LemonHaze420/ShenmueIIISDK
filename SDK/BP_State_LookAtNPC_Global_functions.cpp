@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_LookAtNPC_Global.BP_State_LookAtNPC_Global_C.StateUpdate
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, NetMulticast, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Delta                          (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bDummy                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_LookAtNPC_Global_C::StateUpdate(float Delta, bool* bDummy)
+void UBP_State_LookAtNPC_Global_C::STATIC_StateUpdate(float Delta, bool* bDummy)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Global.BP_State_LookAtNPC_Global_C.StateUpdate");
 
@@ -38,9 +38,9 @@ void UBP_State_LookAtNPC_Global_C::StateUpdate(float Delta, bool* bDummy)
 
 
 // Function BP_State_LookAtNPC_Global.BP_State_LookAtNPC_Global_C.CheckNPCLocomationState
-// (Private, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void UBP_State_LookAtNPC_Global_C::CheckNPCLocomationState()
+void UBP_State_LookAtNPC_Global_C::STATIC_CheckNPCLocomationState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_LookAtNPC_Global.BP_State_LookAtNPC_Global_C.CheckNPCLocomationState");
 

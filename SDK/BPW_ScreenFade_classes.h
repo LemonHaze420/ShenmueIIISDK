@@ -26,8 +26,8 @@ public:
 	}
 
 
-	void GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* ColorAndOpacity);
-	void SetFadeColor(const struct FLinearColor& FadeColor);
+	void STATIC_GetFadeColor(bool bIgnoreOpacity, struct FLinearColor* ColorAndOpacity);
+	void STATIC_SetFadeColor(const struct FLinearColor& FadeColor);
 };
 
 

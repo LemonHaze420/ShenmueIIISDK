@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_MenuTimer.BW_MenuTimer_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void UBW_MenuTimer_C::Construct()
 {
@@ -31,7 +31,7 @@ void UBW_MenuTimer_C::Construct()
 
 
 // Function BW_MenuTimer.BW_MenuTimer_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Private, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -53,7 +53,7 @@ void UBW_MenuTimer_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime
 
 
 // Function BW_MenuTimer.BW_MenuTimer_C.ExecuteUbergraph_BW_MenuTimer
-// (HasDefaults)
+// (NetReliable, Exec, NetResponse, Private, Delegate, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

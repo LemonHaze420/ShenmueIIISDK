@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.Update
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugBattleDifficulty_C::Update()
+void UBW_DebugBattleDifficulty_C::STATIC_Update()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.Update");
 
@@ -31,9 +31,9 @@ void UBW_DebugBattleDifficulty_C::Update()
 
 
 // Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature
-// (BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugBattleDifficulty_C::BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature()
+void UBW_DebugBattleDifficulty_C::STATIC_BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.BndEvt__Difficulty_K2Node_ComponentBoundEvent_1_OnMinus__DelegateSignature");
 
@@ -48,9 +48,9 @@ void UBW_DebugBattleDifficulty_C::BndEvt__Difficulty_K2Node_ComponentBoundEvent_
 
 
 // Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature
-// (BlueprintEvent)
+// (NetRequest, Static, NetMulticast, MulticastDelegate, Public, NetServer, BlueprintEvent, BlueprintPure)
 
-void UBW_DebugBattleDifficulty_C::BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature()
+void UBW_DebugBattleDifficulty_C::STATIC_BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.BndEvt__Difficulty_K2Node_ComponentBoundEvent_0_OnPlus__DelegateSignature");
 
@@ -65,11 +65,11 @@ void UBW_DebugBattleDifficulty_C::BndEvt__Difficulty_K2Node_ComponentBoundEvent_
 
 
 // Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.ExecuteUbergraph_BW_DebugBattleDifficulty
-// (HasDefaults)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DebugBattleDifficulty_C::ExecuteUbergraph_BW_DebugBattleDifficulty(int EntryPoint)
+void UBW_DebugBattleDifficulty_C::STATIC_ExecuteUbergraph_BW_DebugBattleDifficulty(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DebugBattleDifficulty.BW_DebugBattleDifficulty_C.ExecuteUbergraph_BW_DebugBattleDifficulty");
 

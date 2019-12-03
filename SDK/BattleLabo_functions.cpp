@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BattleLabo.BTL_Character.TrySetRadiusSafe
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          TargetRadius                   (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -26,7 +26,6 @@ void ABTL_Character::TrySetRadiusSafe(float TargetRadius)
 	params.TargetRadius = TargetRadius;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +34,7 @@ void ABTL_Character::TrySetRadiusSafe(float TargetRadius)
 
 
 // Function BattleLabo.BTL_Character.SetSkeletalMeshes
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USkeletalMesh*           MainMesh                       (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class USkeletalMesh*>   SubMeshes                      (ConstParm, Parm, ZeroConstructor)
@@ -51,7 +50,6 @@ void ABTL_Character::SetSkeletalMeshes(class USkeletalMesh* MainMesh, TArray<cla
 	params.bReinitPose = bReinitPose;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +58,7 @@ void ABTL_Character::SetSkeletalMeshes(class USkeletalMesh* MainMesh, TArray<cla
 
 
 // Function BattleLabo.BTL_Character.SetAllPhysicsResponseToChannel
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UPrimitiveComponent*     PrimComp                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // TEnumAsByte<ECollisionChannel> Channel                        (Parm, ZeroConstructor, IsPlainOldData)
@@ -76,7 +74,6 @@ void ABTL_Character::SetAllPhysicsResponseToChannel(class UPrimitiveComponent* P
 	params.NewResponse = NewResponse;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -85,7 +82,7 @@ void ABTL_Character::SetAllPhysicsResponseToChannel(class UPrimitiveComponent* P
 
 
 // Function BattleLabo.BTL_Character.IsValidSectionNameFromCurrentMontage
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   InSectionName                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -98,7 +95,6 @@ bool ABTL_Character::IsValidSectionNameFromCurrentMontage(const struct FName& In
 	params.InSectionName = InSectionName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,7 +105,7 @@ bool ABTL_Character::IsValidSectionNameFromCurrentMontage(const struct FName& In
 
 
 // Function BattleLabo.BTL_SequenceActor.SetSequence
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class ULevelSequence*          InSequence                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -121,7 +117,6 @@ void ABTL_SequenceActor::SetSequence(class ULevelSequence* InSequence)
 	params.InSequence = InSequence;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -130,7 +125,7 @@ void ABTL_SequenceActor::SetSequence(class ULevelSequence* InSequence)
 
 
 // Function BattleLabo.BTL_SequenceActor.SetPlaybackSettingsPauseAtEnd
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bInPauseAtEnd                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -142,7 +137,6 @@ void ABTL_SequenceActor::SetPlaybackSettingsPauseAtEnd(bool bInPauseAtEnd)
 	params.bInPauseAtEnd = bInPauseAtEnd;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +145,7 @@ void ABTL_SequenceActor::SetPlaybackSettingsPauseAtEnd(bool bInPauseAtEnd)
 
 
 // Function BattleLabo.BTL_SequenceActor.Play
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void ABTL_SequenceActor::Play()
 {
@@ -160,7 +154,6 @@ void ABTL_SequenceActor::Play()
 	ABTL_SequenceActor_Play_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -169,7 +162,7 @@ void ABTL_SequenceActor::Play()
 
 
 // Function BattleLabo.BTL_SequenceActor.OnUdateCameraCut
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 CameraObject                   (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 UnlockIfCameraObject           (Parm, ZeroConstructor, IsPlainOldData)
@@ -185,7 +178,6 @@ void ABTL_SequenceActor::OnUdateCameraCut(class UObject* CameraObject, class UOb
 	params.bJumpCut = bJumpCut;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,7 +186,7 @@ void ABTL_SequenceActor::OnUdateCameraCut(class UObject* CameraObject, class UOb
 
 
 // Function BattleLabo.BTL_SequenceActor.GetLevelSequence
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // class ULevelSequence*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -205,7 +197,6 @@ class ULevelSequence* ABTL_SequenceActor::GetLevelSequence()
 	ABTL_SequenceActor_GetLevelSequence_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -216,7 +207,7 @@ class ULevelSequence* ABTL_SequenceActor::GetLevelSequence()
 
 
 // Function BattleLabo.ActorManagementComponentBase.Start
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UActorManagementComponentBase::Start()
 {
@@ -225,7 +216,6 @@ void UActorManagementComponentBase::Start()
 	UActorManagementComponentBase_Start_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -234,7 +224,7 @@ void UActorManagementComponentBase::Start()
 
 
 // Function BattleLabo.ActorManagementComponentBase.OnManagedActorUnregistered_ImplementableEvent
-// (Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -254,7 +244,7 @@ void UActorManagementComponentBase::OnManagedActorUnregistered_ImplementableEven
 
 
 // Function BattleLabo.ActorManagementComponentBase.OnManagedActorRegistered_ImplementableEvent
-// (Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -274,7 +264,7 @@ void UActorManagementComponentBase::OnManagedActorRegistered_ImplementableEvent(
 
 
 // Function BattleLabo.ActorManagementComponentBase.CheckManagedActor
-// (Native, Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -287,7 +277,6 @@ bool UActorManagementComponentBase::CheckManagedActor(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -297,22 +286,19 @@ bool UActorManagementComponentBase::CheckManagedActor(class AActor* Actor)
 }
 
 
-// Function BattleLabo.BTL_ActionSolverComponent.TickActionTimers
-// (Final, Native, Protected, BlueprintCallable)
+// Function BattleLabo.BTL_AIController.SetCrowdSlowdownAtGoal
+// ()
 // Parameters:
-// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
-// unsigned char                  CurrentIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_ActionSolverComponent::TickActionTimers(float DeltaTime, unsigned char CurrentIndex)
+void ABTL_AIController::SetCrowdSlowdownAtGoal(bool Enable)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.TickActionTimers");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AIController.SetCrowdSlowdownAtGoal");
 
-	UBTL_ActionSolverComponent_TickActionTimers_Params params;
-	params.DeltaTime = DeltaTime;
-	params.CurrentIndex = CurrentIndex;
+	ABTL_AIController_SetCrowdSlowdownAtGoal_Params params;
+	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,20 +306,19 @@ void UBTL_ActionSolverComponent::TickActionTimers(float DeltaTime, unsigned char
 }
 
 
-// Function BattleLabo.BTL_ActionSolverComponent.ResetCurrentActionTimer
-// (Final, Native, Protected, BlueprintCallable)
+// Function BattleLabo.BTL_AIController.SetCrowdSeparationWeight
+// ()
 // Parameters:
-// unsigned char                  Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Weight                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBTL_ActionSolverComponent::ResetCurrentActionTimer(unsigned char Index)
+void ABTL_AIController::SetCrowdSeparationWeight(float Weight)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.ResetCurrentActionTimer");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AIController.SetCrowdSeparationWeight");
 
-	UBTL_ActionSolverComponent_ResetCurrentActionTimer_Params params;
-	params.Index = Index;
+	ABTL_AIController_SetCrowdSeparationWeight_Params params;
+	params.Weight = Weight;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -341,20 +326,16 @@ void UBTL_ActionSolverComponent::ResetCurrentActionTimer(unsigned char Index)
 }
 
 
-// Function BattleLabo.BTL_ActionSolverComponent.InitializeActionTimers
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+// Function BattleLabo.BTL_AnimNotifyContainer.Reset
+// ()
 
-void UBTL_ActionSolverComponent::InitializeActionTimers(int Count)
+void UBTL_AnimNotifyContainer::Reset()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.InitializeActionTimers");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.Reset");
 
-	UBTL_ActionSolverComponent_InitializeActionTimers_Params params;
-	params.Count = Count;
+	UBTL_AnimNotifyContainer_Reset_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -362,21 +343,57 @@ void UBTL_ActionSolverComponent::InitializeActionTimers(int Count)
 }
 
 
-// Function BattleLabo.BTL_ActionSolverComponent.GetTimePassedSinceAction
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function BattleLabo.BTL_AnimNotifyContainer.RemoveNotifyCount
+// ()
 // Parameters:
-// unsigned char                  Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName                   State                          (Parm, ZeroConstructor, IsPlainOldData)
 
-float UBTL_ActionSolverComponent::GetTimePassedSinceAction(unsigned char Index)
+void UBTL_AnimNotifyContainer::RemoveNotifyCount(const struct FName& State)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.GetTimePassedSinceAction");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.RemoveNotifyCount");
 
-	UBTL_ActionSolverComponent_GetTimePassedSinceAction_Params params;
-	params.Index = Index;
+	UBTL_AnimNotifyContainer_RemoveNotifyCount_Params params;
+	params.State = State;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_AnimNotifyContainer.ClearNotifyCounts
+// ()
+
+void UBTL_AnimNotifyContainer::ClearNotifyCounts()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.ClearNotifyCounts");
+
+	UBTL_AnimNotifyContainer_ClearNotifyCounts_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_AnimNotifyContainer.CheckNotifyExistFast
+// ()
+// Parameters:
+// struct FName                   Key                            (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_AnimNotifyContainer::CheckNotifyExistFast(const struct FName& Key)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.CheckNotifyExistFast");
+
+	UBTL_AnimNotifyContainer_CheckNotifyExistFast_Params params;
+	params.Key = Key;
+
+	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -386,30 +403,90 @@ float UBTL_ActionSolverComponent::GetTimePassedSinceAction(unsigned char Index)
 }
 
 
-// Function BattleLabo.BTL_ActionSolverComponent.GetCurrentActionTimer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Function BattleLabo.BTL_AnimNotifyContainer.AddNotifyCount
+// ()
 // Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// struct FName                   State                          (Parm, ZeroConstructor, IsPlainOldData)
 
-float UBTL_ActionSolverComponent::GetCurrentActionTimer()
+void UBTL_AnimNotifyContainer::AddNotifyCount(const struct FName& State)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.GetCurrentActionTimer");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.AddNotifyCount");
 
-	UBTL_ActionSolverComponent_GetCurrentActionTimer_Params params;
+	UBTL_AnimNotifyContainer_AddNotifyCount_Params params;
+	params.State = State;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_NamedCooldownContainer.SetCooldown
+// ()
+// Parameters:
+// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_NamedCooldownContainer::SetCooldown(const struct FName& Name, float Time)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NamedCooldownContainer.SetCooldown");
+
+	UBTL_NamedCooldownContainer_SetCooldown_Params params;
+	params.Name = Name;
+	params.Time = Time;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_NamedCooldownContainer.IsOnCooldown
+// ()
+// Parameters:
+// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_NamedCooldownContainer::IsOnCooldown(const struct FName& Name)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NamedCooldownContainer.IsOnCooldown");
+
+	UBTL_NamedCooldownContainer_IsOnCooldown_Params params;
+	params.Name = Name;
+
+	auto flags = fn->FunctionFlags;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_NamedCooldownContainer.ClearAllCooldowns
+// ()
+
+void UBTL_NamedCooldownContainer::ClearAllCooldowns()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NamedCooldownContainer.ClearAllCooldowns");
+
+	UBTL_NamedCooldownContainer_ClearAllCooldowns_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
 // Function BattleLabo.BTL_AnimInstance.SetRootTranslationScale
-// (Final, Native, Protected, BlueprintCallable)
+// ()
 // Parameters:
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -421,7 +498,6 @@ void UBTL_AnimInstance::SetRootTranslationScale(float Value)
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -430,7 +506,7 @@ void UBTL_AnimInstance::SetRootTranslationScale(float Value)
 
 
 // Function BattleLabo.BTL_AnimInstance.SearchClosestMontage
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // TArray<class UAnimMontage*>    Candidates                     (Parm, ZeroConstructor)
 // float                          TargetEndYaw                   (Parm, ZeroConstructor, IsPlainOldData)
@@ -445,7 +521,6 @@ class UAnimMontage* UBTL_AnimInstance::SearchClosestMontage(TArray<class UAnimMo
 	params.TargetEndYaw = TargetEndYaw;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -456,7 +531,7 @@ class UAnimMontage* UBTL_AnimInstance::SearchClosestMontage(TArray<class UAnimMo
 
 
 // Function BattleLabo.BTL_AnimInstance.ResetRootTranslationScale
-// (Final, Native, Protected, BlueprintCallable)
+// ()
 
 void UBTL_AnimInstance::ResetRootTranslationScale()
 {
@@ -465,7 +540,6 @@ void UBTL_AnimInstance::ResetRootTranslationScale()
 	UBTL_AnimInstance_ResetRootTranslationScale_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -474,7 +548,7 @@ void UBTL_AnimInstance::ResetRootTranslationScale()
 
 
 // Function BattleLabo.BTL_AnimInstance.GetClosest8DirectionIndex
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          Target                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -487,7 +561,6 @@ int UBTL_AnimInstance::GetClosest8DirectionIndex(float Target)
 	params.Target = Target;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -498,7 +571,7 @@ int UBTL_AnimInstance::GetClosest8DirectionIndex(float Target)
 
 
 // Function BattleLabo.BTL_AnimInstance.GetClosest8DirectionAngle
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          InputAngle                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          FirstCheckAngle                (Parm, ZeroConstructor, IsPlainOldData)
@@ -515,7 +588,6 @@ float UBTL_AnimInstance::GetClosest8DirectionAngle(float InputAngle, float First
 	params.Hysteresis = Hysteresis;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -526,7 +598,7 @@ float UBTL_AnimInstance::GetClosest8DirectionAngle(float InputAngle, float First
 
 
 // Function BattleLabo.BTL_AnimInstance.BiasTargetDirection
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          TargetAngle                    (Parm, ZeroConstructor, IsPlainOldData)
 // float                          PreviousTarget                 (Parm, ZeroConstructor, IsPlainOldData)
@@ -541,517 +613,17 @@ float UBTL_AnimInstance::BiasTargetDirection(float TargetAngle, float PreviousTa
 	params.PreviousTarget = PreviousTarget;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_AnimNotifyContainer.Reset
-// (Native, Event, Protected, BlueprintEvent)
-
-void UBTL_AnimNotifyContainer::Reset()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.Reset");
-
-	UBTL_AnimNotifyContainer_Reset_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AnimNotifyContainer.RemoveNotifyCount
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// struct FName                   State                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBTL_AnimNotifyContainer::RemoveNotifyCount(const struct FName& State)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.RemoveNotifyCount");
-
-	UBTL_AnimNotifyContainer_RemoveNotifyCount_Params params;
-	params.State = State;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AnimNotifyContainer.ClearNotifyCounts
-// (Final, Native, Protected, BlueprintCallable)
-
-void UBTL_AnimNotifyContainer::ClearNotifyCounts()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.ClearNotifyCounts");
-
-	UBTL_AnimNotifyContainer_ClearNotifyCounts_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AnimNotifyContainer.CheckNotifyExistFast
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Key                            (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_AnimNotifyContainer::CheckNotifyExistFast(const struct FName& Key)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.CheckNotifyExistFast");
-
-	UBTL_AnimNotifyContainer_CheckNotifyExistFast_Params params;
-	params.Key = Key;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_AnimNotifyContainer.AddNotifyCount
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// struct FName                   State                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBTL_AnimNotifyContainer::AddNotifyCount(const struct FName& State)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AnimNotifyContainer.AddNotifyCount");
-
-	UBTL_AnimNotifyContainer_AddNotifyCount_Params params;
-	params.State = State;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_NamedCooldownContainer.SetCooldown
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBTL_NamedCooldownContainer::SetCooldown(const struct FName& Name, float Time)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NamedCooldownContainer.SetCooldown");
-
-	UBTL_NamedCooldownContainer_SetCooldown_Params params;
-	params.Name = Name;
-	params.Time = Time;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_NamedCooldownContainer.IsOnCooldown
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_NamedCooldownContainer::IsOnCooldown(const struct FName& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NamedCooldownContainer.IsOnCooldown");
-
-	UBTL_NamedCooldownContainer_IsOnCooldown_Params params;
-	params.Name = Name;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_NamedCooldownContainer.ClearAllCooldowns
-// (Final, Native, Public, BlueprintCallable)
-
-void UBTL_NamedCooldownContainer::ClearAllCooldowns()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NamedCooldownContainer.ClearAllCooldowns");
-
-	UBTL_NamedCooldownContainer_ClearAllCooldowns_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AttackHitSolverComponent.UpdateAttackCollisions
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FName>           Tags                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UBTL_AttackHitSolverComponent::UpdateAttackCollisions(TArray<struct FName> Tags)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AttackHitSolverComponent.UpdateAttackCollisions");
-
-	UBTL_AttackHitSolverComponent_UpdateAttackCollisions_Params params;
-	params.Tags = Tags;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AttackHitSolverComponent.RegisterAttackCollider
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UPrimitiveComponent*     Collider                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// struct FName                   identifer                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBTL_AttackHitSolverComponent::RegisterAttackCollider(class UPrimitiveComponent* Collider, const struct FName& identifer)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AttackHitSolverComponent.RegisterAttackCollider");
-
-	UBTL_AttackHitSolverComponent_RegisterAttackCollider_Params params;
-	params.Collider = Collider;
-	params.identifer = identifer;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AttackHitSolverComponent.CacheColliderTransforms
-// (Final, Native, Public, BlueprintCallable)
-
-void UBTL_AttackHitSolverComponent::CacheColliderTransforms()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AttackHitSolverComponent.CacheColliderTransforms");
-
-	UBTL_AttackHitSolverComponent_CacheColliderTransforms_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AIController.SetCrowdSlowdownAtGoal
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABTL_AIController::SetCrowdSlowdownAtGoal(bool Enable)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AIController.SetCrowdSlowdownAtGoal");
-
-	ABTL_AIController_SetCrowdSlowdownAtGoal_Params params;
-	params.Enable = Enable;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_AIController.SetCrowdSeparationWeight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          Weight                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABTL_AIController::SetCrowdSeparationWeight(float Weight)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AIController.SetCrowdSeparationWeight");
-
-	ABTL_AIController_SetCrowdSeparationWeight_Params params;
-	params.Weight = Weight;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeTimeMSCFromFloat
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                          Seconds                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBTL_TimeMSC            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FBTL_TimeMSC UBTL_BattleRallyFunctionLibrary::STATIC_MakeTimeMSCFromFloat(float Seconds)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeTimeMSCFromFloat");
-
-	UBTL_BattleRallyFunctionLibrary_MakeTimeMSCFromFloat_Params params;
-	params.Seconds = Seconds;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeFloatFromTimeMSC
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FBTL_TimeMSC            Time                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UBTL_BattleRallyFunctionLibrary::STATIC_MakeFloatFromTimeMSC(const struct FBTL_TimeMSC& Time)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeFloatFromTimeMSC");
-
-	UBTL_BattleRallyFunctionLibrary_MakeFloatFromTimeMSC_Params params;
-	params.Time = Time;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.IsTimeMSCZero
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FBTL_TimeMSC            Time                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_BattleRallyFunctionLibrary::STATIC_IsTimeMSCZero(const struct FBTL_TimeMSC& Time)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.IsTimeMSCZero");
-
-	UBTL_BattleRallyFunctionLibrary_IsTimeMSCZero_Params params;
-	params.Time = Time;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateRecordBook
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<class UBTL_CourseDataAsset*> Courses                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UBTL_CourseRecordBook*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UBTL_CourseRecordBook* UBTL_BattleRallyFunctionLibrary::STATIC_CreateRecordBook(TArray<class UBTL_CourseDataAsset*> Courses)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateRecordBook");
-
-	UBTL_BattleRallyFunctionLibrary_CreateRecordBook_Params params;
-	params.Courses = Courses;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateLeaderboard
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   Course                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UDataTable*              DataTable                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UBTL_CourseLeaderboard*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UBTL_CourseLeaderboard* UBTL_BattleRallyFunctionLibrary::STATIC_CreateLeaderboard(const struct FName& Course, class UDataTable* DataTable)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateLeaderboard");
-
-	UBTL_BattleRallyFunctionLibrary_CreateLeaderboard_Params params;
-	params.Course = Course;
-	params.DataTable = DataTable;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateCourseDataAsset
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FDataTableRowHandle> Battles                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UBTL_CourseDataAsset*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UBTL_CourseDataAsset* UBTL_BattleRallyFunctionLibrary::STATIC_CreateCourseDataAsset(TArray<struct FDataTableRowHandle> Battles)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateCourseDataAsset");
-
-	UBTL_BattleRallyFunctionLibrary_CreateCourseDataAsset_Params params;
-	params.Battles = Battles;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BlueprintFunctionLibrary.FindUserClass
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  BaseClass                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UClass* UBTL_BlueprintFunctionLibrary::STATIC_FindUserClass(class UClass* BaseClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BlueprintFunctionLibrary.FindUserClass");
-
-	UBTL_BlueprintFunctionLibrary_FindUserClass_Params params;
-	params.BaseClass = BaseClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BlueprintFunctionLibrary.ClosestPointOnSegment
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FVector                 Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 StartPoint                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 EndPoint                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FVector UBTL_BlueprintFunctionLibrary::STATIC_ClosestPointOnSegment(const struct FVector& Point, const struct FVector& StartPoint, const struct FVector& EndPoint)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BlueprintFunctionLibrary.ClosestPointOnSegment");
-
-	UBTL_BlueprintFunctionLibrary_ClosestPointOnSegment_Params params;
-	params.Point = Point;
-	params.StartPoint = StartPoint;
-	params.EndPoint = EndPoint;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BRallyRacerAnimData.SelectIntroCutscene
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
-// Parameters:
-// int                            PlayNum                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           bAllowB                        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FBTL_BRallyCourseCutsceneData OutData                        (Parm, OutParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_BRallyRacerAnimData::SelectIntroCutscene(int PlayNum, bool bAllowB, struct FBTL_BRallyCourseCutsceneData* OutData)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyRacerAnimData.SelectIntroCutscene");
-
-	UBTL_BRallyRacerAnimData_SelectIntroCutscene_Params params;
-	params.PlayNum = PlayNum;
-	params.bAllowB = bAllowB;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (OutData != nullptr)
-		*OutData = params.OutData;
 
 	return params.ReturnValue;
 }
 
 
 // Function BattleLabo.BTL_BattleSpawner.LaunchDebugBattle
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// ()
 
 void ABTL_BattleSpawner::LaunchDebugBattle()
 {
@@ -1067,8 +639,309 @@ void ABTL_BattleSpawner::LaunchDebugBattle()
 }
 
 
+// Function BattleLabo.BTL_BlueprintFunctionLibrary.FindUserClass
+// ()
+// Parameters:
+// class UClass*                  BaseClass                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UClass* UBTL_BlueprintFunctionLibrary::FindUserClass(class UClass* BaseClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BlueprintFunctionLibrary.FindUserClass");
+
+	UBTL_BlueprintFunctionLibrary_FindUserClass_Params params;
+	params.BaseClass = BaseClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BlueprintFunctionLibrary.ClosestPointOnSegment
+// ()
+// Parameters:
+// struct FVector                 Point                          (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector                 StartPoint                     (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector                 EndPoint                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UBTL_BlueprintFunctionLibrary::ClosestPointOnSegment(const struct FVector& Point, const struct FVector& StartPoint, const struct FVector& EndPoint)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BlueprintFunctionLibrary.ClosestPointOnSegment");
+
+	UBTL_BlueprintFunctionLibrary_ClosestPointOnSegment_Params params;
+	params.Point = Point;
+	params.StartPoint = StartPoint;
+	params.EndPoint = EndPoint;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_AttackHitSolverComponent.UpdateAttackCollisions
+// ()
+// Parameters:
+// TArray<struct FName>           Tags                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBTL_AttackHitSolverComponent::UpdateAttackCollisions(TArray<struct FName> Tags)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AttackHitSolverComponent.UpdateAttackCollisions");
+
+	UBTL_AttackHitSolverComponent_UpdateAttackCollisions_Params params;
+	params.Tags = Tags;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_AttackHitSolverComponent.RegisterAttackCollider
+// ()
+// Parameters:
+// class UPrimitiveComponent*     Collider                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// struct FName                   identifer                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_AttackHitSolverComponent::RegisterAttackCollider(class UPrimitiveComponent* Collider, const struct FName& identifer)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AttackHitSolverComponent.RegisterAttackCollider");
+
+	UBTL_AttackHitSolverComponent_RegisterAttackCollider_Params params;
+	params.Collider = Collider;
+	params.identifer = identifer;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_AttackHitSolverComponent.CacheColliderTransforms
+// ()
+
+void UBTL_AttackHitSolverComponent::CacheColliderTransforms()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_AttackHitSolverComponent.CacheColliderTransforms");
+
+	UBTL_AttackHitSolverComponent_CacheColliderTransforms_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_BRallyRacerAnimData.SelectIntroCutscene
+// ()
+// Parameters:
+// int                            PlayNum                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bAllowB                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBTL_BRallyCourseCutsceneData OutData                        (Parm, OutParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_BRallyRacerAnimData::SelectIntroCutscene(int PlayNum, bool bAllowB, struct FBTL_BRallyCourseCutsceneData* OutData)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyRacerAnimData.SelectIntroCutscene");
+
+	UBTL_BRallyRacerAnimData_SelectIntroCutscene_Params params;
+	params.PlayNum = PlayNum;
+	params.bAllowB = bAllowB;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (OutData != nullptr)
+		*OutData = params.OutData;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.SortResults
+// ()
+// Parameters:
+// class UDataTable*              DataTable                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_BRallyScoreKeeper::SortResults(class UDataTable* DataTable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.SortResults");
+
+	UBTL_BRallyScoreKeeper_SortResults_Params params;
+	params.DataTable = DataTable;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.GetTotalScore
+// ()
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UBTL_BRallyScoreKeeper::GetTotalScore()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.GetTotalScore");
+
+	UBTL_BRallyScoreKeeper_GetTotalScore_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.GetResults
+// ()
+// Parameters:
+// TArray<struct FBTL_ScoreTallyData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FBTL_ScoreTallyData> UBTL_BRallyScoreKeeper::GetResults()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.GetResults");
+
+	UBTL_BRallyScoreKeeper_GetResults_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.Clear
+// ()
+
+void UBTL_BRallyScoreKeeper::Clear()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.Clear");
+
+	UBTL_BRallyScoreKeeper_Clear_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.AddToMaxCounts
+// ()
+// Parameters:
+// TArray<struct FDataTableRowHandle> DataTableRowHandles            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBTL_BRallyScoreKeeper::AddToMaxCounts(TArray<struct FDataTableRowHandle> DataTableRowHandles)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddToMaxCounts");
+
+	UBTL_BRallyScoreKeeper_AddToMaxCounts_Params params;
+	params.DataTableRowHandles = DataTableRowHandles;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRows
+// ()
+// Parameters:
+// TArray<struct FDataTableRowHandle> DataTableRowHandles            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+
+void UBTL_BRallyScoreKeeper::AddPointsFromTableRows(TArray<struct FDataTableRowHandle> DataTableRowHandles)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRows");
+
+	UBTL_BRallyScoreKeeper_AddPointsFromTableRows_Params params;
+	params.DataTableRowHandles = DataTableRowHandles;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRow
+// ()
+// Parameters:
+// struct FDataTableRowHandle     DataTableRowHandle             (ConstParm, Parm, OutParm, ReferenceParm)
+// int                            Times                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_BRallyScoreKeeper::AddPointsFromTableRow(const struct FDataTableRowHandle& DataTableRowHandle, int Times)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRow");
+
+	UBTL_BRallyScoreKeeper_AddPointsFromTableRow_Params params;
+	params.DataTableRowHandle = DataTableRowHandle;
+	params.Times = Times;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsByRatio
+// ()
+// Parameters:
+// struct FDataTableRowHandle     DataTableRowHandle             (ConstParm, Parm, OutParm, ReferenceParm)
+// float                          Ratio                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_BRallyScoreKeeper::AddPointsByRatio(const struct FDataTableRowHandle& DataTableRowHandle, float Ratio)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsByRatio");
+
+	UBTL_BRallyScoreKeeper_AddPointsByRatio_Params params;
+	params.DataTableRowHandle = DataTableRowHandle;
+	params.Ratio = Ratio;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BattleLabo.BTL_CharacterDataAsset.SpawnCharacterWithDefaults
-// (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              SpawnTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -1085,7 +958,6 @@ class ABTL_Character* UBTL_CharacterDataAsset::SpawnCharacterWithDefaults(class 
 	params.Defaults = Defaults;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1096,7 +968,7 @@ class ABTL_Character* UBTL_CharacterDataAsset::SpawnCharacterWithDefaults(class 
 
 
 // Function BattleLabo.BTL_CharacterDataAsset.SpawnCharacter
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              SpawnTransform                 (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -1111,7 +983,6 @@ class ABTL_Character* UBTL_CharacterDataAsset::SpawnCharacter(class UObject* Wor
 	params.SpawnTransform = SpawnTransform;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1122,7 +993,7 @@ class ABTL_Character* UBTL_CharacterDataAsset::SpawnCharacter(class UObject* Wor
 
 
 // Function BattleLabo.BTL_CharacterDataAsset.GetCharacterVoiceName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1133,7 +1004,6 @@ struct FName UBTL_CharacterDataAsset::GetCharacterVoiceName()
 	UBTL_CharacterDataAsset_GetCharacterVoiceName_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1143,179 +1013,29 @@ struct FName UBTL_CharacterDataAsset::GetCharacterVoiceName()
 }
 
 
-// Function BattleLabo.BTL_BRallyScoreKeeper.SortResults
-// (Final, Native, Public, BlueprintCallable)
+// Function BattleLabo.BTL_CharacterEnviromentInterface.GetAreaFlags
+// ()
 // Parameters:
-// class UDataTable*              DataTable                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<bool>                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-void UBTL_BRallyScoreKeeper::SortResults(class UDataTable* DataTable)
+TArray<bool> UBTL_CharacterEnviromentInterface::GetAreaFlags()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.SortResults");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CharacterEnviromentInterface.GetAreaFlags");
 
-	UBTL_BRallyScoreKeeper_SortResults_Params params;
-	params.DataTable = DataTable;
+	UBTL_CharacterEnviromentInterface_GetAreaFlags_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_BRallyScoreKeeper.GetTotalScore
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UBTL_BRallyScoreKeeper::GetTotalScore()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.GetTotalScore");
-
-	UBTL_BRallyScoreKeeper_GetTotalScore_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BRallyScoreKeeper.GetResults
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FBTL_ScoreTallyData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FBTL_ScoreTallyData> UBTL_BRallyScoreKeeper::GetResults()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.GetResults");
-
-	UBTL_BRallyScoreKeeper_GetResults_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_BRallyScoreKeeper.Clear
-// (Final, Native, Public, BlueprintCallable)
-
-void UBTL_BRallyScoreKeeper::Clear()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.Clear");
-
-	UBTL_BRallyScoreKeeper_Clear_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_BRallyScoreKeeper.AddToMaxCounts
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FDataTableRowHandle> DataTableRowHandles            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UBTL_BRallyScoreKeeper::AddToMaxCounts(TArray<struct FDataTableRowHandle> DataTableRowHandles)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddToMaxCounts");
-
-	UBTL_BRallyScoreKeeper_AddToMaxCounts_Params params;
-	params.DataTableRowHandles = DataTableRowHandles;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRows
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FDataTableRowHandle> DataTableRowHandles            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-
-void UBTL_BRallyScoreKeeper::AddPointsFromTableRows(TArray<struct FDataTableRowHandle> DataTableRowHandles)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRows");
-
-	UBTL_BRallyScoreKeeper_AddPointsFromTableRows_Params params;
-	params.DataTableRowHandles = DataTableRowHandles;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRow
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FDataTableRowHandle     DataTableRowHandle             (ConstParm, Parm, OutParm, ReferenceParm)
-// int                            Times                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBTL_BRallyScoreKeeper::AddPointsFromTableRow(const struct FDataTableRowHandle& DataTableRowHandle, int Times)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsFromTableRow");
-
-	UBTL_BRallyScoreKeeper_AddPointsFromTableRow_Params params;
-	params.DataTableRowHandle = DataTableRowHandle;
-	params.Times = Times;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsByRatio
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FDataTableRowHandle     DataTableRowHandle             (ConstParm, Parm, OutParm, ReferenceParm)
-// float                          Ratio                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBTL_BRallyScoreKeeper::AddPointsByRatio(const struct FDataTableRowHandle& DataTableRowHandle, float Ratio)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BRallyScoreKeeper.AddPointsByRatio");
-
-	UBTL_BRallyScoreKeeper_AddPointsByRatio_Params params;
-	params.DataTableRowHandle = DataTableRowHandle;
-	params.Ratio = Ratio;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
 }
 
 
 // Function BattleLabo.BTL_CharacterMovementComponent.TestPath
-// (Final, Native, Public, HasDefaults, BlueprintCallable, Const)
+// ()
 // Parameters:
 // struct FVector                 Destination                    (Parm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1328,7 +1048,6 @@ bool UBTL_CharacterMovementComponent::TestPath(const struct FVector& Destination
 	params.Destination = Destination;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1339,7 +1058,7 @@ bool UBTL_CharacterMovementComponent::TestPath(const struct FVector& Destination
 
 
 // Function BattleLabo.BTL_CharacterMovementComponent.SetEnableStepUp
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1351,7 +1070,6 @@ void UBTL_CharacterMovementComponent::SetEnableStepUp(bool bValue)
 	params.bValue = bValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1360,7 +1078,7 @@ void UBTL_CharacterMovementComponent::SetEnableStepUp(bool bValue)
 
 
 // Function BattleLabo.BTL_CharacterMovementComponent.ConsumePathFollowerMove
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UBTL_CharacterMovementComponent::ConsumePathFollowerMove()
 {
@@ -1369,7 +1087,6 @@ void UBTL_CharacterMovementComponent::ConsumePathFollowerMove()
 	UBTL_CharacterMovementComponent_ConsumePathFollowerMove_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1378,7 +1095,7 @@ void UBTL_CharacterMovementComponent::ConsumePathFollowerMove()
 
 
 // Function BattleLabo.BTL_CharacterMovementComponent.AddWorldOffsetToRootMotion
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector                 DeltaLocation                  (Parm, IsPlainOldData)
 
@@ -1390,7 +1107,6 @@ void UBTL_CharacterMovementComponent::AddWorldOffsetToRootMotion(const struct FV
 	params.DeltaLocation = DeltaLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1399,7 +1115,7 @@ void UBTL_CharacterMovementComponent::AddWorldOffsetToRootMotion(const struct FV
 
 
 // Function BattleLabo.BTL_CharacterMovementComponent.AddLocalOffsetToRootMotion
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector                 DeltaLocation                  (Parm, IsPlainOldData)
 
@@ -1411,7 +1127,6 @@ void UBTL_CharacterMovementComponent::AddLocalOffsetToRootMotion(const struct FV
 	params.DeltaLocation = DeltaLocation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1420,7 +1135,7 @@ void UBTL_CharacterMovementComponent::AddLocalOffsetToRootMotion(const struct FV
 
 
 // Function BattleLabo.BTL_CharacterMovementComponent.AddDeltaYawWithRootMotion
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          DeltaRotation                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1432,38 +1147,15 @@ void UBTL_CharacterMovementComponent::AddDeltaYawWithRootMotion(float DeltaRotat
 	params.DeltaRotation = DeltaRotation;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_CharacterEnviromentInterface.GetAreaFlags
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// TArray<bool>                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<bool> UBTL_CharacterEnviromentInterface::GetAreaFlags()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CharacterEnviromentInterface.GetAreaFlags");
-
-	UBTL_CharacterEnviromentInterface_GetAreaFlags_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
 // Function BattleLabo.BTL_CommandSolver.StartsWith_NameArray
-// (Final, Native, Protected, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // TArray<struct FName>           DoesThis                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FName>           StartWithThis                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1478,7 +1170,6 @@ bool UBTL_CommandSolver::StartsWith_NameArray(TArray<struct FName> DoesThis, TAr
 	params.StartWithThis = StartWithThis;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1489,7 +1180,7 @@ bool UBTL_CommandSolver::StartsWith_NameArray(TArray<struct FName> DoesThis, TAr
 
 
 // Function BattleLabo.BTL_CommandSolver.SearchMostRecentInAttackHistory
-// (Final, Native, Protected, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // TArray<struct FName>           SearchAttacks                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1502,7 +1193,6 @@ struct FName UBTL_CommandSolver::SearchMostRecentInAttackHistory(TArray<struct F
 	params.SearchAttacks = SearchAttacks;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1513,7 +1203,7 @@ struct FName UBTL_CommandSolver::SearchMostRecentInAttackHistory(TArray<struct F
 
 
 // Function BattleLabo.BTL_CommandSolver.RecordAttackToHistory
-// (Final, Native, Protected, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   Attack                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
@@ -1525,7 +1215,6 @@ void UBTL_CommandSolver::RecordAttackToHistory(const struct FName& Attack)
 	params.Attack = Attack;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1534,7 +1223,7 @@ void UBTL_CommandSolver::RecordAttackToHistory(const struct FName& Attack)
 
 
 // Function BattleLabo.BTL_CommandSolver.Equals_NameArray
-// (Final, Native, Protected, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // TArray<struct FName>           ArrayA                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<struct FName>           ArrayB                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
@@ -1549,7 +1238,6 @@ bool UBTL_CommandSolver::Equals_NameArray(TArray<struct FName> ArrayA, TArray<st
 	params.ArrayB = ArrayB;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1560,7 +1248,7 @@ bool UBTL_CommandSolver::Equals_NameArray(TArray<struct FName> ArrayA, TArray<st
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.TrimToNum
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            MaxNum                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1572,7 +1260,6 @@ void UBTL_CourseLeaderboard::TrimToNum(int MaxNum)
 	params.MaxNum = MaxNum;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1581,7 +1268,7 @@ void UBTL_CourseLeaderboard::TrimToNum(int MaxNum)
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.ReadSaveData
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FBTL_CourseSaveData     SaveData                       (ConstParm, Parm, OutParm, ReferenceParm)
 
@@ -1593,7 +1280,6 @@ void UBTL_CourseLeaderboard::ReadSaveData(const struct FBTL_CourseSaveData& Save
 	params.SaveData = SaveData;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1602,7 +1288,7 @@ void UBTL_CourseLeaderboard::ReadSaveData(const struct FBTL_CourseSaveData& Save
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.MakeSaveData
-// (Final, Native, Public, BlueprintCallable, Const)
+// ()
 // Parameters:
 // TArray<struct FName>           PlayerIds                      (ConstParm, Parm, ZeroConstructor)
 // struct FBTL_CourseSaveData     ReturnValue                    (Parm, OutParm, ReturnParm)
@@ -1615,7 +1301,6 @@ struct FBTL_CourseSaveData UBTL_CourseLeaderboard::MakeSaveData(TArray<struct FN
 	params.PlayerIds = PlayerIds;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1626,7 +1311,7 @@ struct FBTL_CourseSaveData UBTL_CourseLeaderboard::MakeSaveData(TArray<struct FN
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetRecords
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // TArray<struct FBTL_LeaderboardRecord> ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm)
 
@@ -1637,7 +1322,6 @@ TArray<struct FBTL_LeaderboardRecord> UBTL_CourseLeaderboard::GetRecords()
 	UBTL_CourseLeaderboard_GetRecords_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1648,7 +1332,7 @@ TArray<struct FBTL_LeaderboardRecord> UBTL_CourseLeaderboard::GetRecords()
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetRecordByIndex
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBTL_LeaderboardRecord  OutRecord                      (Parm, OutParm)
@@ -1662,7 +1346,6 @@ bool UBTL_CourseLeaderboard::GetRecordByIndex(int Index, struct FBTL_Leaderboard
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1676,7 +1359,7 @@ bool UBTL_CourseLeaderboard::GetRecordByIndex(int Index, struct FBTL_Leaderboard
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetRecordByCharacter
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FName                   CharacterID                    (Parm, ZeroConstructor, IsPlainOldData)
 // struct FBTL_LeaderboardRecord  OutRecord                      (Parm, OutParm)
@@ -1690,7 +1373,6 @@ bool UBTL_CourseLeaderboard::GetRecordByCharacter(const struct FName& CharacterI
 	params.CharacterID = CharacterID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1704,7 +1386,7 @@ bool UBTL_CourseLeaderboard::GetRecordByCharacter(const struct FName& CharacterI
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetRankPlaceAtIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1717,7 +1399,6 @@ int UBTL_CourseLeaderboard::GetRankPlaceAtIndex(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1728,7 +1409,7 @@ int UBTL_CourseLeaderboard::GetRankPlaceAtIndex(int Index)
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetRankPlace
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FName                   CharacterID                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1741,7 +1422,6 @@ int UBTL_CourseLeaderboard::GetRankPlace(const struct FName& CharacterID)
 	params.CharacterID = CharacterID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1752,7 +1432,7 @@ int UBTL_CourseLeaderboard::GetRankPlace(const struct FName& CharacterID)
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetRankIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FName                   CharacterID                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1765,7 +1445,6 @@ int UBTL_CourseLeaderboard::GetRankIndex(const struct FName& CharacterID)
 	params.CharacterID = CharacterID;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1776,7 +1455,7 @@ int UBTL_CourseLeaderboard::GetRankIndex(const struct FName& CharacterID)
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetParCharacter
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1787,7 +1466,6 @@ struct FName UBTL_CourseLeaderboard::GetParCharacter()
 	UBTL_CourseLeaderboard_GetParCharacter_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1798,7 +1476,7 @@ struct FName UBTL_CourseLeaderboard::GetParCharacter()
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.GetCourseId
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1809,7 +1487,6 @@ struct FName UBTL_CourseLeaderboard::GetCourseId()
 	UBTL_CourseLeaderboard_GetCourseId_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1820,7 +1497,7 @@ struct FName UBTL_CourseLeaderboard::GetCourseId()
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.EnableDuplicates
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1832,7 +1509,6 @@ void UBTL_CourseLeaderboard::EnableDuplicates(bool bValue)
 	params.bValue = bValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1841,7 +1517,7 @@ void UBTL_CourseLeaderboard::EnableDuplicates(bool bValue)
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.CompareToParRecord
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // struct FBTL_LeaderboardRecord  Record                         (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            Relative                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1855,7 +1531,6 @@ bool UBTL_CourseLeaderboard::CompareToParRecord(const struct FBTL_LeaderboardRec
 	params.Record = Record;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1869,7 +1544,7 @@ bool UBTL_CourseLeaderboard::CompareToParRecord(const struct FBTL_LeaderboardRec
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.CompareRankToPar
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // struct FName                   InCharacter                    (Parm, ZeroConstructor, IsPlainOldData)
 // int                            RanksAbove                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -1883,7 +1558,6 @@ bool UBTL_CourseLeaderboard::CompareRankToPar(const struct FName& InCharacter, i
 	params.InCharacter = InCharacter;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1897,7 +1571,7 @@ bool UBTL_CourseLeaderboard::CompareRankToPar(const struct FName& InCharacter, i
 
 
 // Function BattleLabo.BTL_CourseLeaderboard.AddRecord
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FBTL_LeaderboardRecord  NewEntry                       (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -1910,7 +1584,6 @@ int UBTL_CourseLeaderboard::AddRecord(const struct FBTL_LeaderboardRecord& NewEn
 	params.NewEntry = NewEntry;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1921,7 +1594,7 @@ int UBTL_CourseLeaderboard::AddRecord(const struct FBTL_LeaderboardRecord& NewEn
 
 
 // Function BattleLabo.BTL_CourseMapData.AreLabelLocationsValid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -1932,7 +1605,6 @@ bool UBTL_CourseMapData::AreLabelLocationsValid()
 	UBTL_CourseMapData_AreLabelLocationsValid_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1942,42 +1614,18 @@ bool UBTL_CourseMapData::AreLabelLocationsValid()
 }
 
 
-// Function BattleLabo.BTL_CourseRecordBook.ReadSaveData
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Function BattleLabo.BTL_CommandLibraryBase.MakeDefaultByteToNameMap
+// ()
 // Parameters:
-// TArray<struct FBTL_CourseSaveData> SaveData                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TMap<unsigned char, struct FName> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-void UBTL_CourseRecordBook::ReadSaveData(TArray<struct FBTL_CourseSaveData> SaveData)
+TMap<unsigned char, struct FName> UBTL_CommandLibraryBase::MakeDefaultByteToNameMap()
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CourseRecordBook.ReadSaveData");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.MakeDefaultByteToNameMap");
 
-	UBTL_CourseRecordBook_ReadSaveData_Params params;
-	params.SaveData = SaveData;
+	UBTL_CommandLibraryBase_MakeDefaultByteToNameMap_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_CourseRecordBook.GetLeaderboard
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Course                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UBTL_CourseLeaderboard*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UBTL_CourseLeaderboard* UBTL_CourseRecordBook::GetLeaderboard(const struct FName& Course)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CourseRecordBook.GetLeaderboard");
-
-	UBTL_CourseRecordBook_GetLeaderboard_Params params;
-	params.Course = Course;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1987,32 +1635,257 @@ class UBTL_CourseLeaderboard* UBTL_CourseRecordBook::GetLeaderboard(const struct
 }
 
 
-// Function BattleLabo.BTL_CourseRecordBook.CreatePlayerSaveData
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
+// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquippable
+// ()
 // Parameters:
-// TArray<struct FName>           PlayerCharacters               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FBTL_CourseSaveData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// struct FName                   SkillId                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TArray<struct FBTL_CourseSaveData> UBTL_CourseRecordBook::CreatePlayerSaveData(TArray<struct FName> PlayerCharacters)
+bool UBTL_CommandLibraryBase::IsSkillEquippable(const struct FName& SkillId)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CourseRecordBook.CreatePlayerSaveData");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquippable");
 
-	UBTL_CourseRecordBook_CreatePlayerSaveData_Params params;
-	params.PlayerCharacters = PlayerCharacters;
+	UBTL_CommandLibraryBase_IsSkillEquippable_Params params;
+	params.SkillId = SkillId;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
 
 	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquappable
+// ()
+// Parameters:
+// struct FName                   SkillId                        (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_CommandLibraryBase::IsSkillEquappable(const struct FName& SkillId)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquappable");
+
+	UBTL_CommandLibraryBase_IsSkillEquappable_Params params;
+	params.SkillId = SkillId;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.IsAttackEquippable
+// ()
+// Parameters:
+// struct FName                   AttackID                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_CommandLibraryBase::IsAttackEquippable(const struct FName& AttackID)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.IsAttackEquippable");
+
+	UBTL_CommandLibraryBase_IsAttackEquippable_Params params;
+	params.AttackID = AttackID;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.Initialize
+// ()
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_CommandLibraryBase::Initialize()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.Initialize");
+
+	UBTL_CommandLibraryBase_Initialize_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.FindRequiredItem
+// ()
+// Parameters:
+// struct FName                   Attack                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UBTL_CommandLibraryBase::FindRequiredItem(const struct FName& Attack)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.FindRequiredItem");
+
+	UBTL_CommandLibraryBase_FindRequiredItem_Params params;
+	params.Attack = Attack;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.FindAttackByItem
+// ()
+// Parameters:
+// struct FName                   SkillItem                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UBTL_CommandLibraryBase::FindAttackByItem(const struct FName& SkillItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.FindAttackByItem");
+
+	UBTL_CommandLibraryBase_FindAttackByItem_Params params;
+	params.SkillItem = SkillItem;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandsByteToName
+// ()
+// Parameters:
+// TArray<unsigned char>          Input                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FName> UBTL_CommandLibraryBase::ConvertCommandsByteToName(TArray<unsigned char> Input)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandsByteToName");
+
+	UBTL_CommandLibraryBase_ConvertCommandsByteToName_Params params;
+	params.Input = Input;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandByteToName
+// ()
+// Parameters:
+// unsigned char                  Input                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UBTL_CommandLibraryBase::ConvertCommandByteToName(unsigned char Input)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandByteToName");
+
+	UBTL_CommandLibraryBase_ConvertCommandByteToName_Params params;
+	params.Input = Input;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.CheckPreviousAttacks
+// ()
+// Parameters:
+// TArray<struct FName>           ActualAttacks                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FName>           PatternPrevAttacks             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_CommandLibraryBase::CheckPreviousAttacks(TArray<struct FName> ActualAttacks, TArray<struct FName> PatternPrevAttacks)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.CheckPreviousAttacks");
+
+	UBTL_CommandLibraryBase_CheckPreviousAttacks_Params params;
+	params.ActualAttacks = ActualAttacks;
+	params.PatternPrevAttacks = PatternPrevAttacks;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.CacheComboAttack
+// ()
+// Parameters:
+// struct FName                   Attack                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UBTL_CommandLibraryBase::CacheComboAttack(const struct FName& Attack)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.CacheComboAttack");
+
+	UBTL_CommandLibraryBase_CacheComboAttack_Params params;
+	params.Attack = Attack;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_CommandLibraryBase.CacheAttackLookupData
+// ()
+// Parameters:
+// struct FName                   Attack                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName                   RequiredItem                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UBTL_CommandLibraryBase::CacheAttackLookupData(const struct FName& Attack, const struct FName& RequiredItem)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.CacheAttackLookupData");
+
+	UBTL_CommandLibraryBase_CacheAttackLookupData_Params params;
+	params.Attack = Attack;
+	params.RequiredItem = RequiredItem;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
 }
 
 
 // Function BattleLabo.BTLDataTableFunctionLibrary.GetDataTableRowFromName
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // class UScriptStruct*           Struct                         (Parm, ZeroConstructor, IsPlainOldData)
 // class UDataTable*              Table                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -2020,7 +1893,7 @@ TArray<struct FBTL_CourseSaveData> UBTL_CourseRecordBook::CreatePlayerSaveData(T
 // struct FTableRowBase           OutRow                         (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTLDataTableFunctionLibrary::STATIC_GetDataTableRowFromName(class UScriptStruct* Struct, class UDataTable* Table, const struct FName& RowName, struct FTableRowBase* OutRow)
+bool UBTLDataTableFunctionLibrary::GetDataTableRowFromName(class UScriptStruct* Struct, class UDataTable* Table, const struct FName& RowName, struct FTableRowBase* OutRow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLDataTableFunctionLibrary.GetDataTableRowFromName");
 
@@ -2030,7 +1903,6 @@ bool UBTLDataTableFunctionLibrary::STATIC_GetDataTableRowFromName(class UScriptS
 	params.RowName = RowName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2044,7 +1916,7 @@ bool UBTLDataTableFunctionLibrary::STATIC_GetDataTableRowFromName(class UScriptS
 
 
 // Function BattleLabo.BTL_EnemySearchPath.SetupOrigin
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            GoalIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -2056,7 +1928,6 @@ void UBTL_EnemySearchPath::SetupOrigin(int GoalIndex)
 	params.GoalIndex = GoalIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2065,7 +1936,7 @@ void UBTL_EnemySearchPath::SetupOrigin(int GoalIndex)
 
 
 // Function BattleLabo.BTL_EnemySearchPath.SetupInsert
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            AIndex                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ACost                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -2084,7 +1955,6 @@ int UBTL_EnemySearchPath::SetupInsert(int AIndex, float ACost, int BIndex, float
 	params.BCost = BCost;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2095,7 +1965,7 @@ int UBTL_EnemySearchPath::SetupInsert(int AIndex, float ACost, int BIndex, float
 
 
 // Function BattleLabo.BTL_EnemySearchPath.Insert
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            AIndex                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ACost                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -2114,7 +1984,6 @@ int UBTL_EnemySearchPath::Insert(int AIndex, float ACost, int BIndex, float BCos
 	params.BCost = BCost;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2125,7 +1994,7 @@ int UBTL_EnemySearchPath::Insert(int AIndex, float ACost, int BIndex, float BCos
 
 
 // Function BattleLabo.BTL_EnemySearchPath.FindAndUsePath
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // int                            Start                          (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<int>                    Route                          (Parm, OutParm, ZeroConstructor)
@@ -2138,7 +2007,6 @@ void UBTL_EnemySearchPath::FindAndUsePath(int Start, TArray<int>* Route)
 	params.Start = Start;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2150,7 +2018,7 @@ void UBTL_EnemySearchPath::FindAndUsePath(int Start, TArray<int>* Route)
 
 
 // Function BattleLabo.BTL_EnemySearchPath.AddNode
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -2161,7 +2029,6 @@ int UBTL_EnemySearchPath::AddNode()
 	UBTL_EnemySearchPath_AddNode_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2172,7 +2039,7 @@ int UBTL_EnemySearchPath::AddNode()
 
 
 // Function BattleLabo.BTL_EnemySearchPath.AddEdge
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            NodeIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            EdgeTo                         (Parm, ZeroConstructor, IsPlainOldData)
@@ -2188,7 +2055,6 @@ void UBTL_EnemySearchPath::AddEdge(int NodeIndex, int EdgeTo, float EdgeCost)
 	params.EdgeCost = EdgeCost;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2196,8 +2062,114 @@ void UBTL_EnemySearchPath::AddEdge(int NodeIndex, int EdgeTo, float EdgeCost)
 }
 
 
+// Function BattleLabo.BTL_ActionSolverComponent.TickActionTimers
+// ()
+// Parameters:
+// float                          DeltaTime                      (Parm, ZeroConstructor, IsPlainOldData)
+// unsigned char                  CurrentIndex                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_ActionSolverComponent::TickActionTimers(float DeltaTime, unsigned char CurrentIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.TickActionTimers");
+
+	UBTL_ActionSolverComponent_TickActionTimers_Params params;
+	params.DeltaTime = DeltaTime;
+	params.CurrentIndex = CurrentIndex;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_ActionSolverComponent.ResetCurrentActionTimer
+// ()
+// Parameters:
+// unsigned char                  Index                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_ActionSolverComponent::ResetCurrentActionTimer(unsigned char Index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.ResetCurrentActionTimer");
+
+	UBTL_ActionSolverComponent_ResetCurrentActionTimer_Params params;
+	params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_ActionSolverComponent.InitializeActionTimers
+// ()
+// Parameters:
+// int                            Count                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_ActionSolverComponent::InitializeActionTimers(int Count)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.InitializeActionTimers");
+
+	UBTL_ActionSolverComponent_InitializeActionTimers_Params params;
+	params.Count = Count;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_ActionSolverComponent.GetTimePassedSinceAction
+// ()
+// Parameters:
+// unsigned char                  Index                          (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UBTL_ActionSolverComponent::GetTimePassedSinceAction(unsigned char Index)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.GetTimePassedSinceAction");
+
+	UBTL_ActionSolverComponent_GetTimePassedSinceAction_Params params;
+	params.Index = Index;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_ActionSolverComponent.GetCurrentActionTimer
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UBTL_ActionSolverComponent::GetCurrentActionTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ActionSolverComponent.GetCurrentActionTimer");
+
+	UBTL_ActionSolverComponent_GetCurrentActionTimer_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BattleLabo.BTL_GoalpostBehavior.OnPlayerEntered
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // class ABTL_Character*          Player                         (Parm, ZeroConstructor, IsPlainOldData)
 // class ABTL_BRallyGoalpost*     Goalpost                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -2222,13 +2194,13 @@ bool UBTL_GoalpostBehavior::OnPlayerEntered(class ABTL_Character* Player, class 
 
 
 // Function BattleLabo.BTLKismetLibrary.XorIntegerFlag
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            lflag                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            rflag                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBTLKismetLibrary::STATIC_XorIntegerFlag(int lflag, int rflag)
+int UBTLKismetLibrary::XorIntegerFlag(int lflag, int rflag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.XorIntegerFlag");
 
@@ -2237,7 +2209,6 @@ int UBTLKismetLibrary::STATIC_XorIntegerFlag(int lflag, int rflag)
 	params.rflag = rflag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2248,14 +2219,14 @@ int UBTLKismetLibrary::STATIC_XorIntegerFlag(int lflag, int rflag)
 
 
 // Function BattleLabo.BTLKismetLibrary.SetIntegerFlag
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            flag                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            bitindex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Status                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBTLKismetLibrary::STATIC_SetIntegerFlag(int flag, int bitindex, bool Status)
+int UBTLKismetLibrary::SetIntegerFlag(int flag, int bitindex, bool Status)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.SetIntegerFlag");
 
@@ -2265,7 +2236,6 @@ int UBTLKismetLibrary::STATIC_SetIntegerFlag(int flag, int bitindex, bool Status
 	params.Status = Status;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2276,13 +2246,13 @@ int UBTLKismetLibrary::STATIC_SetIntegerFlag(int flag, int bitindex, bool Status
 
 
 // Function BattleLabo.BTLKismetLibrary.OrIntegerFlag
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            lflag                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            rflag                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBTLKismetLibrary::STATIC_OrIntegerFlag(int lflag, int rflag)
+int UBTLKismetLibrary::OrIntegerFlag(int lflag, int rflag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.OrIntegerFlag");
 
@@ -2291,7 +2261,6 @@ int UBTLKismetLibrary::STATIC_OrIntegerFlag(int lflag, int rflag)
 	params.rflag = rflag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2302,12 +2271,12 @@ int UBTLKismetLibrary::STATIC_OrIntegerFlag(int lflag, int rflag)
 
 
 // Function BattleLabo.BTLKismetLibrary.NotIntegerFlag
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            flag                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBTLKismetLibrary::STATIC_NotIntegerFlag(int flag)
+int UBTLKismetLibrary::NotIntegerFlag(int flag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.NotIntegerFlag");
 
@@ -2315,7 +2284,6 @@ int UBTLKismetLibrary::STATIC_NotIntegerFlag(int flag)
 	params.flag = flag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2326,7 +2294,7 @@ int UBTLKismetLibrary::STATIC_NotIntegerFlag(int flag)
 
 
 // Function BattleLabo.BTLKismetLibrary.IntersectionOfLineAndCircle
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector                 _startPos                      (Parm, IsPlainOldData)
 // struct FVector                 _endPos                        (Parm, IsPlainOldData)
@@ -2334,7 +2302,7 @@ int UBTLKismetLibrary::STATIC_NotIntegerFlag(int flag)
 // float                          _rad                           (Parm, ZeroConstructor, IsPlainOldData)
 // struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FTransform UBTLKismetLibrary::STATIC_IntersectionOfLineAndCircle(const struct FVector& _startPos, const struct FVector& _endPos, const struct FVector& _circleCenterPos, float _rad)
+struct FTransform UBTLKismetLibrary::IntersectionOfLineAndCircle(const struct FVector& _startPos, const struct FVector& _endPos, const struct FVector& _circleCenterPos, float _rad)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.IntersectionOfLineAndCircle");
 
@@ -2345,7 +2313,6 @@ struct FTransform UBTLKismetLibrary::STATIC_IntersectionOfLineAndCircle(const st
 	params._rad = _rad;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2356,14 +2323,14 @@ struct FTransform UBTLKismetLibrary::STATIC_IntersectionOfLineAndCircle(const st
 
 
 // Function BattleLabo.BTLKismetLibrary.GetRowByNameSyncActionInfo
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // class UDataTable*              DataTable                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   pName                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FSyncActionInfoNative   ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FSyncActionInfoNative UBTLKismetLibrary::STATIC_GetRowByNameSyncActionInfo(class UDataTable* DataTable, const struct FName& pName, bool* Result)
+struct FSyncActionInfoNative UBTLKismetLibrary::GetRowByNameSyncActionInfo(class UDataTable* DataTable, const struct FName& pName, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetRowByNameSyncActionInfo");
 
@@ -2372,7 +2339,6 @@ struct FSyncActionInfoNative UBTLKismetLibrary::STATIC_GetRowByNameSyncActionInf
 	params.pName = pName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2386,14 +2352,14 @@ struct FSyncActionInfoNative UBTLKismetLibrary::STATIC_GetRowByNameSyncActionInf
 
 
 // Function BattleLabo.BTLKismetLibrary.GetRowByNameMoveGapCondition
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // class UDataTable*              DataTable                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   pName                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FMoveGapConditionNative ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FMoveGapConditionNative UBTLKismetLibrary::STATIC_GetRowByNameMoveGapCondition(class UDataTable* DataTable, const struct FName& pName, bool* Result)
+struct FMoveGapConditionNative UBTLKismetLibrary::GetRowByNameMoveGapCondition(class UDataTable* DataTable, const struct FName& pName, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetRowByNameMoveGapCondition");
 
@@ -2402,7 +2368,6 @@ struct FMoveGapConditionNative UBTLKismetLibrary::STATIC_GetRowByNameMoveGapCond
 	params.pName = pName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2416,14 +2381,14 @@ struct FMoveGapConditionNative UBTLKismetLibrary::STATIC_GetRowByNameMoveGapCond
 
 
 // Function BattleLabo.BTLKismetLibrary.GetRowByNameMotionDatabaseElement
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // class UDataTable*              DataTable                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   pName                          (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FMotionDatabaseElementNative ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FMotionDatabaseElementNative UBTLKismetLibrary::STATIC_GetRowByNameMotionDatabaseElement(class UDataTable* DataTable, const struct FName& pName, bool* Result)
+struct FMotionDatabaseElementNative UBTLKismetLibrary::GetRowByNameMotionDatabaseElement(class UDataTable* DataTable, const struct FName& pName, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetRowByNameMotionDatabaseElement");
 
@@ -2432,7 +2397,6 @@ struct FMotionDatabaseElementNative UBTLKismetLibrary::STATIC_GetRowByNameMotion
 	params.pName = pName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2446,13 +2410,13 @@ struct FMotionDatabaseElementNative UBTLKismetLibrary::STATIC_GetRowByNameMotion
 
 
 // Function BattleLabo.BTLKismetLibrary.GetNotifyTriggerTime
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify*             Notify                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBTLKismetLibrary::STATIC_GetNotifyTriggerTime(class UAnimMontage* Montage, class UAnimNotify* Notify)
+float UBTLKismetLibrary::GetNotifyTriggerTime(class UAnimMontage* Montage, class UAnimNotify* Notify)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetNotifyTriggerTime");
 
@@ -2461,7 +2425,6 @@ float UBTLKismetLibrary::STATIC_GetNotifyTriggerTime(class UAnimMontage* Montage
 	params.Notify = Notify;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2472,7 +2435,7 @@ float UBTLKismetLibrary::STATIC_GetNotifyTriggerTime(class UAnimMontage* Montage
 
 
 // Function BattleLabo.BTLKismetLibrary.GetNotifyTrigger
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  NotifyClass                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -2481,7 +2444,7 @@ float UBTLKismetLibrary::STATIC_GetNotifyTriggerTime(class UAnimMontage* Montage
 // bool                           Last                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotify*             ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimNotify* UBTLKismetLibrary::STATIC_GetNotifyTrigger(class UAnimMontage* Montage, class UClass* NotifyClass, float StartRange, float EndRange, bool Last)
+class UAnimNotify* UBTLKismetLibrary::GetNotifyTrigger(class UAnimMontage* Montage, class UClass* NotifyClass, float StartRange, float EndRange, bool Last)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetNotifyTrigger");
 
@@ -2493,7 +2456,6 @@ class UAnimNotify* UBTLKismetLibrary::STATIC_GetNotifyTrigger(class UAnimMontage
 	params.Last = Last;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2504,13 +2466,13 @@ class UAnimNotify* UBTLKismetLibrary::STATIC_GetNotifyTrigger(class UAnimMontage
 
 
 // Function BattleLabo.BTLKismetLibrary.GetNotifyStateStartTime
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState*        NotifyState                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBTLKismetLibrary::STATIC_GetNotifyStateStartTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState)
+float UBTLKismetLibrary::GetNotifyStateStartTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetNotifyStateStartTime");
 
@@ -2519,7 +2481,6 @@ float UBTLKismetLibrary::STATIC_GetNotifyStateStartTime(class UAnimMontage* Mont
 	params.NotifyState = NotifyState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2530,13 +2491,13 @@ float UBTLKismetLibrary::STATIC_GetNotifyStateStartTime(class UAnimMontage* Mont
 
 
 // Function BattleLabo.BTLKismetLibrary.GetNotifyStates
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  StateClass                     (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UAnimNotifyState*> States                         (ConstParm, Parm, OutParm, ZeroConstructor)
 
-void UBTLKismetLibrary::STATIC_GetNotifyStates(class UAnimMontage* Montage, class UClass* StateClass, TArray<class UAnimNotifyState*> States)
+void UBTLKismetLibrary::GetNotifyStates(class UAnimMontage* Montage, class UClass* StateClass, TArray<class UAnimNotifyState*> States)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetNotifyStates");
 
@@ -2546,7 +2507,6 @@ void UBTLKismetLibrary::STATIC_GetNotifyStates(class UAnimMontage* Montage, clas
 	params.States = States;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2555,13 +2515,13 @@ void UBTLKismetLibrary::STATIC_GetNotifyStates(class UAnimMontage* Montage, clas
 
 
 // Function BattleLabo.BTLKismetLibrary.GetNotifyStateEndTime
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState*        NotifyState                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBTLKismetLibrary::STATIC_GetNotifyStateEndTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState)
+float UBTLKismetLibrary::GetNotifyStateEndTime(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetNotifyStateEndTime");
 
@@ -2570,7 +2530,6 @@ float UBTLKismetLibrary::STATIC_GetNotifyStateEndTime(class UAnimMontage* Montag
 	params.NotifyState = NotifyState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2581,7 +2540,7 @@ float UBTLKismetLibrary::STATIC_GetNotifyStateEndTime(class UAnimMontage* Montag
 
 
 // Function BattleLabo.BTLKismetLibrary.GetNotifyStateAtTime
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  StateClass                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -2589,7 +2548,7 @@ float UBTLKismetLibrary::STATIC_GetNotifyStateEndTime(class UAnimMontage* Montag
 // bool                           Last                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState*        ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimNotifyState* UBTLKismetLibrary::STATIC_GetNotifyStateAtTime(class UAnimMontage* Montage, class UClass* StateClass, float Time, bool Last)
+class UAnimNotifyState* UBTLKismetLibrary::GetNotifyStateAtTime(class UAnimMontage* Montage, class UClass* StateClass, float Time, bool Last)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetNotifyStateAtTime");
 
@@ -2600,7 +2559,6 @@ class UAnimNotifyState* UBTLKismetLibrary::STATIC_GetNotifyStateAtTime(class UAn
 	params.Last = Last;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2611,7 +2569,7 @@ class UAnimNotifyState* UBTLKismetLibrary::STATIC_GetNotifyStateAtTime(class UAn
 
 
 // Function BattleLabo.BTLKismetLibrary.GetNotifyState
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  StateClass                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -2620,7 +2578,7 @@ class UAnimNotifyState* UBTLKismetLibrary::STATIC_GetNotifyStateAtTime(class UAn
 // bool                           Last                           (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState*        ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UAnimNotifyState* UBTLKismetLibrary::STATIC_GetNotifyState(class UAnimMontage* Montage, class UClass* StateClass, float StartRange, float EndRange, bool Last)
+class UAnimNotifyState* UBTLKismetLibrary::GetNotifyState(class UAnimMontage* Montage, class UClass* StateClass, float StartRange, float EndRange, bool Last)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetNotifyState");
 
@@ -2632,7 +2590,6 @@ class UAnimNotifyState* UBTLKismetLibrary::STATIC_GetNotifyState(class UAnimMont
 	params.Last = Last;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2643,13 +2600,13 @@ class UAnimNotifyState* UBTLKismetLibrary::STATIC_GetNotifyState(class UAnimMont
 
 
 // Function BattleLabo.BTLKismetLibrary.GetIntegerFlag
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            flag                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            bitindex                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTLKismetLibrary::STATIC_GetIntegerFlag(int flag, int bitindex)
+bool UBTLKismetLibrary::GetIntegerFlag(int flag, int bitindex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetIntegerFlag");
 
@@ -2658,7 +2615,6 @@ bool UBTLKismetLibrary::STATIC_GetIntegerFlag(int flag, int bitindex)
 	params.bitindex = bitindex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2669,13 +2625,13 @@ bool UBTLKismetLibrary::STATIC_GetIntegerFlag(int flag, int bitindex)
 
 
 // Function BattleLabo.BTLKismetLibrary.GetCustomNotifyTime
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   NotifyName                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBTLKismetLibrary::STATIC_GetCustomNotifyTime(class UAnimMontage* Montage, const struct FName& NotifyName)
+float UBTLKismetLibrary::GetCustomNotifyTime(class UAnimMontage* Montage, const struct FName& NotifyName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.GetCustomNotifyTime");
 
@@ -2684,7 +2640,6 @@ float UBTLKismetLibrary::STATIC_GetCustomNotifyTime(class UAnimMontage* Montage,
 	params.NotifyName = NotifyName;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2695,13 +2650,13 @@ float UBTLKismetLibrary::STATIC_GetCustomNotifyTime(class UAnimMontage* Montage,
 
 
 // Function BattleLabo.BTLKismetLibrary.EstimateNextNameInSequence
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<struct FName>           Names                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            Confidence                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName UBTLKismetLibrary::STATIC_EstimateNextNameInSequence(TArray<struct FName> Names, int* Confidence)
+struct FName UBTLKismetLibrary::EstimateNextNameInSequence(TArray<struct FName> Names, int* Confidence)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.EstimateNextNameInSequence");
 
@@ -2709,7 +2664,6 @@ struct FName UBTLKismetLibrary::STATIC_EstimateNextNameInSequence(TArray<struct 
 	params.Names = Names;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2723,13 +2677,13 @@ struct FName UBTLKismetLibrary::STATIC_EstimateNextNameInSequence(TArray<struct 
 
 
 // Function BattleLabo.BTLKismetLibrary.EllipseContains
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FVector2D               Point                          (Parm, IsPlainOldData)
 // struct FVector2D               Radii                          (Parm, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTLKismetLibrary::STATIC_EllipseContains(const struct FVector2D& Point, const struct FVector2D& Radii)
+bool UBTLKismetLibrary::EllipseContains(const struct FVector2D& Point, const struct FVector2D& Radii)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.EllipseContains");
 
@@ -2738,7 +2692,6 @@ bool UBTLKismetLibrary::STATIC_EllipseContains(const struct FVector2D& Point, co
 	params.Radii = Radii;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2749,13 +2702,13 @@ bool UBTLKismetLibrary::STATIC_EllipseContains(const struct FVector2D& Point, co
 
 
 // Function BattleLabo.BTLKismetLibrary.EllipseClamp
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector2D               Point                          (Parm, IsPlainOldData)
 // struct FVector2D               Radii                          (Parm, IsPlainOldData)
 // struct FVector2D               ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
-struct FVector2D UBTLKismetLibrary::STATIC_EllipseClamp(const struct FVector2D& Point, const struct FVector2D& Radii)
+struct FVector2D UBTLKismetLibrary::EllipseClamp(const struct FVector2D& Point, const struct FVector2D& Radii)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.EllipseClamp");
 
@@ -2764,7 +2717,6 @@ struct FVector2D UBTLKismetLibrary::STATIC_EllipseClamp(const struct FVector2D& 
 	params.Radii = Radii;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2775,13 +2727,13 @@ struct FVector2D UBTLKismetLibrary::STATIC_EllipseClamp(const struct FVector2D& 
 
 
 // Function BattleLabo.BTLKismetLibrary.ContainsNotifyState
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UAnimNotifyState*        NotifyState                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTLKismetLibrary::STATIC_ContainsNotifyState(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState)
+bool UBTLKismetLibrary::ContainsNotifyState(class UAnimMontage* Montage, class UAnimNotifyState* NotifyState)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.ContainsNotifyState");
 
@@ -2790,7 +2742,6 @@ bool UBTLKismetLibrary::STATIC_ContainsNotifyState(class UAnimMontage* Montage, 
 	params.NotifyState = NotifyState;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2801,13 +2752,13 @@ bool UBTLKismetLibrary::STATIC_ContainsNotifyState(class UAnimMontage* Montage, 
 
 
 // Function BattleLabo.BTLKismetLibrary.CallRemoteLevelEvent
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   EventName                      (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTLKismetLibrary::STATIC_CallRemoteLevelEvent(const struct FName& EventName, class AActor* WorldContextObject)
+bool UBTLKismetLibrary::CallRemoteLevelEvent(const struct FName& EventName, class AActor* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.CallRemoteLevelEvent");
 
@@ -2816,7 +2767,6 @@ bool UBTLKismetLibrary::STATIC_CallRemoteLevelEvent(const struct FName& EventNam
 	params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2827,13 +2777,13 @@ bool UBTLKismetLibrary::STATIC_CallRemoteLevelEvent(const struct FName& EventNam
 
 
 // Function BattleLabo.BTLKismetLibrary.AndIntegerFlag
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // int                            lflag                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            rflag                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UBTLKismetLibrary::STATIC_AndIntegerFlag(int lflag, int rflag)
+int UBTLKismetLibrary::AndIntegerFlag(int lflag, int rflag)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTLKismetLibrary.AndIntegerFlag");
 
@@ -2842,7 +2792,6 @@ int UBTLKismetLibrary::STATIC_AndIntegerFlag(int lflag, int rflag)
 	params.rflag = rflag;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2853,7 +2802,7 @@ int UBTLKismetLibrary::STATIC_AndIntegerFlag(int lflag, int rflag)
 
 
 // Function BattleLabo.BTL_MeshFaderComponent.StartFadeOut
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class AActor*                  Executor                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -2867,7 +2816,6 @@ void UBTL_MeshFaderComponent::StartFadeOut(class AActor* Executor, float FadeTim
 	params.FadeTime = FadeTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2876,7 +2824,7 @@ void UBTL_MeshFaderComponent::StartFadeOut(class AActor* Executor, float FadeTim
 
 
 // Function BattleLabo.BTL_MeshFaderComponent.StartFadeIn
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class AActor*                  Executor                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          FadeTime                       (Parm, ZeroConstructor, IsPlainOldData)
@@ -2890,7 +2838,6 @@ void UBTL_MeshFaderComponent::StartFadeIn(class AActor* Executor, float FadeTime
 	params.FadeTime = FadeTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2899,7 +2846,7 @@ void UBTL_MeshFaderComponent::StartFadeIn(class AActor* Executor, float FadeTime
 
 
 // Function BattleLabo.BTL_MeshFaderComponent.SetMeshComponents
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<class UMeshComponent*>  Components                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -2911,7 +2858,6 @@ void UBTL_MeshFaderComponent::SetMeshComponents(TArray<class UMeshComponent*> Co
 	params.Components = Components;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2920,7 +2866,7 @@ void UBTL_MeshFaderComponent::SetMeshComponents(TArray<class UMeshComponent*> Co
 
 
 // Function BattleLabo.BTL_MeshFaderComponent.CreateFadeMaterial
-// (Native, Event, Protected, BlueprintEvent)
+// ()
 // Parameters:
 // class UMaterialInterface*      SourceMaterial                 (Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInterface*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -2933,7 +2879,6 @@ class UMaterialInterface* UBTL_MeshFaderComponent::CreateFadeMaterial(class UMat
 	params.SourceMaterial = SourceMaterial;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2944,7 +2889,7 @@ class UMaterialInterface* UBTL_MeshFaderComponent::CreateFadeMaterial(class UMat
 
 
 // Function BattleLabo.BTL_MeshFaderComponent.AddMeshComponent
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UMeshComponent*          Component                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -2956,7 +2901,6 @@ void UBTL_MeshFaderComponent::AddMeshComponent(class UMeshComponent* Component)
 	params.Component = Component;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2965,7 +2909,7 @@ void UBTL_MeshFaderComponent::AddMeshComponent(class UMeshComponent* Component)
 
 
 // Function BattleLabo.BTL_NavigationFunctionLibrary.TestPathExists
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 Querier                        (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StartLocation                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -2973,7 +2917,7 @@ void UBTL_MeshFaderComponent::AddMeshComponent(class UMeshComponent* Component)
 // class UClass*                  FilterClass                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UBTL_NavigationFunctionLibrary::STATIC_TestPathExists(class UObject* Querier, const struct FVector& StartLocation, const struct FVector& EndLocation, class UClass* FilterClass)
+bool UBTL_NavigationFunctionLibrary::TestPathExists(class UObject* Querier, const struct FVector& StartLocation, const struct FVector& EndLocation, class UClass* FilterClass)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NavigationFunctionLibrary.TestPathExists");
 
@@ -2984,7 +2928,6 @@ bool UBTL_NavigationFunctionLibrary::STATIC_TestPathExists(class UObject* Querie
 	params.FilterClass = FilterClass;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -2995,12 +2938,12 @@ bool UBTL_NavigationFunctionLibrary::STATIC_TestPathExists(class UObject* Querie
 
 
 // Function BattleLabo.BTL_NavigationFunctionLibrary.GetRecastNavmesh
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // class ARecastNavMesh*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class ARecastNavMesh* UBTL_NavigationFunctionLibrary::STATIC_GetRecastNavmesh(class UObject* WorldContextObject)
+class ARecastNavMesh* UBTL_NavigationFunctionLibrary::GetRecastNavmesh(class UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NavigationFunctionLibrary.GetRecastNavmesh");
 
@@ -3008,7 +2951,6 @@ class ARecastNavMesh* UBTL_NavigationFunctionLibrary::STATIC_GetRecastNavmesh(cl
 	params.WorldContextObject = WorldContextObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3019,7 +2961,7 @@ class ARecastNavMesh* UBTL_NavigationFunctionLibrary::STATIC_GetRecastNavmesh(cl
 
 
 // Function BattleLabo.BTL_NavigationFunctionLibrary.FindDistanceToWall
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 StartLoc                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -3029,7 +2971,7 @@ class ARecastNavMesh* UBTL_NavigationFunctionLibrary::STATIC_GetRecastNavmesh(cl
 // struct FVector                 OutClosestPointOnWall          (Parm, OutParm, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBTL_NavigationFunctionLibrary::STATIC_FindDistanceToWall(class UObject* WorldContextObject, const struct FVector& StartLoc, class UClass* FilterClass, class ARecastNavMesh* NavData, float MaxDistance, struct FVector* OutClosestPointOnWall)
+float UBTL_NavigationFunctionLibrary::FindDistanceToWall(class UObject* WorldContextObject, const struct FVector& StartLoc, class UClass* FilterClass, class ARecastNavMesh* NavData, float MaxDistance, struct FVector* OutClosestPointOnWall)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NavigationFunctionLibrary.FindDistanceToWall");
 
@@ -3041,7 +2983,6 @@ float UBTL_NavigationFunctionLibrary::STATIC_FindDistanceToWall(class UObject* W
 	params.MaxDistance = MaxDistance;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3054,288 +2995,8 @@ float UBTL_NavigationFunctionLibrary::STATIC_FindDistanceToWall(class UObject* W
 }
 
 
-// Function BattleLabo.BTL_CommandLibraryBase.MakeDefaultByteToNameMap
-// (Event, Protected, BlueprintEvent)
-// Parameters:
-// TMap<unsigned char, struct FName> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TMap<unsigned char, struct FName> UBTL_CommandLibraryBase::MakeDefaultByteToNameMap()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.MakeDefaultByteToNameMap");
-
-	UBTL_CommandLibraryBase_MakeDefaultByteToNameMap_Params params;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquippable
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SkillId                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_CommandLibraryBase::IsSkillEquippable(const struct FName& SkillId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquippable");
-
-	UBTL_CommandLibraryBase_IsSkillEquippable_Params params;
-	params.SkillId = SkillId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquappable
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FName                   SkillId                        (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_CommandLibraryBase::IsSkillEquappable(const struct FName& SkillId)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.IsSkillEquappable");
-
-	UBTL_CommandLibraryBase_IsSkillEquappable_Params params;
-	params.SkillId = SkillId;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.IsAttackEquippable
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FName                   AttackID                       (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_CommandLibraryBase::IsAttackEquippable(const struct FName& AttackID)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.IsAttackEquippable");
-
-	UBTL_CommandLibraryBase_IsAttackEquippable_Params params;
-	params.AttackID = AttackID;
-
-	auto flags = fn->FunctionFlags;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.Initialize
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_CommandLibraryBase::Initialize()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.Initialize");
-
-	UBTL_CommandLibraryBase_Initialize_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.FindRequiredItem
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Attack                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UBTL_CommandLibraryBase::FindRequiredItem(const struct FName& Attack)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.FindRequiredItem");
-
-	UBTL_CommandLibraryBase_FindRequiredItem_Params params;
-	params.Attack = Attack;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.FindAttackByItem
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
-// Parameters:
-// struct FName                   SkillItem                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UBTL_CommandLibraryBase::FindAttackByItem(const struct FName& SkillItem)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.FindAttackByItem");
-
-	UBTL_CommandLibraryBase_FindAttackByItem_Params params;
-	params.SkillItem = SkillItem;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandsByteToName
-// (Final, Native, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<unsigned char>          Input                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FName>           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FName> UBTL_CommandLibraryBase::ConvertCommandsByteToName(TArray<unsigned char> Input)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandsByteToName");
-
-	UBTL_CommandLibraryBase_ConvertCommandsByteToName_Params params;
-	params.Input = Input;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandByteToName
-// (Final, Native, Protected, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// unsigned char                  Input                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UBTL_CommandLibraryBase::ConvertCommandByteToName(unsigned char Input)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.ConvertCommandByteToName");
-
-	UBTL_CommandLibraryBase_ConvertCommandByteToName_Params params;
-	params.Input = Input;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.CheckPreviousAttacks
-// (Final, Native, Protected, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FName>           ActualAttacks                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FName>           PatternPrevAttacks             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBTL_CommandLibraryBase::CheckPreviousAttacks(TArray<struct FName> ActualAttacks, TArray<struct FName> PatternPrevAttacks)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.CheckPreviousAttacks");
-
-	UBTL_CommandLibraryBase_CheckPreviousAttacks_Params params;
-	params.ActualAttacks = ActualAttacks;
-	params.PatternPrevAttacks = PatternPrevAttacks;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.CacheComboAttack
-// (Final, Native, Protected, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FName                   Attack                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UBTL_CommandLibraryBase::CacheComboAttack(const struct FName& Attack)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.CacheComboAttack");
-
-	UBTL_CommandLibraryBase_CacheComboAttack_Params params;
-	params.Attack = Attack;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_CommandLibraryBase.CacheAttackLookupData
-// (Final, Native, Protected, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FName                   Attack                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   RequiredItem                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void UBTL_CommandLibraryBase::CacheAttackLookupData(const struct FName& Attack, const struct FName& RequiredItem)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CommandLibraryBase.CacheAttackLookupData");
-
-	UBTL_CommandLibraryBase_CacheAttackLookupData_Params params;
-	params.Attack = Attack;
-	params.RequiredItem = RequiredItem;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
 // Function BattleLabo.BTL_NPCLODSystem.SetSpline
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USplineComponent*        InSpline                       (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -3347,7 +3008,6 @@ void UBTL_NPCLODSystem::SetSpline(class USplineComponent* InSpline)
 	params.InSpline = InSpline;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3356,7 +3016,7 @@ void UBTL_NPCLODSystem::SetSpline(class USplineComponent* InSpline)
 
 
 // Function BattleLabo.BTL_NPCLODSystem.RegisterNPCs
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<class ABTL_Character*>  NPCs                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -3368,60 +3028,15 @@ void UBTL_NPCLODSystem::RegisterNPCs(TArray<class ABTL_Character*> NPCs)
 	params.NPCs = NPCs;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_NPCLODComponent.GetState
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// EBTL_NPCLODState               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-EBTL_NPCLODState UBTL_NPCLODComponent::GetState()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NPCLODComponent.GetState");
-
-	UBTL_NPCLODComponent_GetState_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_NPCLODComponent.GetSpawnLocation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
-
-struct FVector UBTL_NPCLODComponent::GetSpawnLocation()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NPCLODComponent.GetSpawnLocation");
-
-	UBTL_NPCLODComponent_GetSpawnLocation_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
 // Function BattleLabo.BTL_PawnSeperatorComponent.GetVirtualActorLocation
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -3432,7 +3047,6 @@ struct FVector UBTL_PawnSeperatorComponent::GetVirtualActorLocation()
 	UBTL_PawnSeperatorComponent_GetVirtualActorLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3443,7 +3057,7 @@ struct FVector UBTL_PawnSeperatorComponent::GetVirtualActorLocation()
 
 
 // Function BattleLabo.BTL_PawnSeperatorComponent.FindSeperationFor
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UShapeComponent*         Capsule                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
@@ -3463,7 +3077,6 @@ bool UBTL_PawnSeperatorComponent::FindSeperationFor(class AActor* Other, class U
 	params.PushDirection = PushDirection;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3477,7 +3090,7 @@ bool UBTL_PawnSeperatorComponent::FindSeperationFor(class AActor* Other, class U
 
 
 // Function BattleLabo.BTL_PawnSeperatorComponent.CanLeadSeperationCalc
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3488,7 +3101,6 @@ bool UBTL_PawnSeperatorComponent::CanLeadSeperationCalc()
 	UBTL_PawnSeperatorComponent_CanLeadSeperationCalc_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3499,7 +3111,7 @@ bool UBTL_PawnSeperatorComponent::CanLeadSeperationCalc()
 
 
 // Function BattleLabo.BTL_PawnSeperatorComponent.CalculateActorSeperation
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          MaxDistance                    (Parm, ZeroConstructor, IsPlainOldData)
@@ -3515,7 +3127,6 @@ bool UBTL_PawnSeperatorComponent::CalculateActorSeperation(class AActor* Other, 
 	params.MaxDistance = MaxDistance;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3529,7 +3140,7 @@ bool UBTL_PawnSeperatorComponent::CalculateActorSeperation(class AActor* Other, 
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.SnapActorToPelvis
-// (Final, Native, Protected, BlueprintCallable)
+// ()
 
 void UBTL_RagdollSolverComponent::SnapActorToPelvis()
 {
@@ -3538,7 +3149,6 @@ void UBTL_RagdollSolverComponent::SnapActorToPelvis()
 	UBTL_RagdollSolverComponent_SnapActorToPelvis_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3547,7 +3157,7 @@ void UBTL_RagdollSolverComponent::SnapActorToPelvis()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.ResetReflectTransformCache
-// (Final, Native, Protected, BlueprintCallable)
+// ()
 
 void UBTL_RagdollSolverComponent::ResetReflectTransformCache()
 {
@@ -3556,7 +3166,6 @@ void UBTL_RagdollSolverComponent::ResetReflectTransformCache()
 	UBTL_RagdollSolverComponent_ResetReflectTransformCache_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3565,7 +3174,7 @@ void UBTL_RagdollSolverComponent::ResetReflectTransformCache()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.PreRagdollOverlap
-// (Final, Native, Public, BlueprintCallable, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3576,7 +3185,6 @@ bool UBTL_RagdollSolverComponent::PreRagdollOverlap()
 	UBTL_RagdollSolverComponent_PreRagdollOverlap_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3587,7 +3195,7 @@ bool UBTL_RagdollSolverComponent::PreRagdollOverlap()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.MoveActorSafelyToPelvis
-// (Final, Native, Protected, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3598,7 +3206,6 @@ bool UBTL_RagdollSolverComponent::MoveActorSafelyToPelvis()
 	UBTL_RagdollSolverComponent_MoveActorSafelyToPelvis_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3609,7 +3216,7 @@ bool UBTL_RagdollSolverComponent::MoveActorSafelyToPelvis()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.InitPreRagdollCollision
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<class UPrimitiveComponent*> InCollision                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // int                            InObjectTypes                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -3623,7 +3230,6 @@ void UBTL_RagdollSolverComponent::InitPreRagdollCollision(TArray<class UPrimitiv
 	params.InObjectTypes = InObjectTypes;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3632,7 +3238,7 @@ void UBTL_RagdollSolverComponent::InitPreRagdollCollision(TArray<class UPrimitiv
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.GetWorldSpacePelvisLocation
-// (Final, Native, Protected, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -3643,7 +3249,6 @@ struct FVector UBTL_RagdollSolverComponent::GetWorldSpacePelvisLocation()
 	UBTL_RagdollSolverComponent_GetWorldSpacePelvisLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3654,7 +3259,7 @@ struct FVector UBTL_RagdollSolverComponent::GetWorldSpacePelvisLocation()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.GetVirtualActorLocation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -3665,7 +3270,6 @@ struct FVector UBTL_RagdollSolverComponent::GetVirtualActorLocation()
 	UBTL_RagdollSolverComponent_GetVirtualActorLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3676,7 +3280,7 @@ struct FVector UBTL_RagdollSolverComponent::GetVirtualActorLocation()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.GetIsRagdolling
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3687,7 +3291,6 @@ bool UBTL_RagdollSolverComponent::GetIsRagdolling()
 	UBTL_RagdollSolverComponent_GetIsRagdolling_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3698,7 +3301,7 @@ bool UBTL_RagdollSolverComponent::GetIsRagdolling()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.GetBeingRagdoll
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3709,7 +3312,6 @@ bool UBTL_RagdollSolverComponent::GetBeingRagdoll()
 	UBTL_RagdollSolverComponent_GetBeingRagdoll_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3720,7 +3322,7 @@ bool UBTL_RagdollSolverComponent::GetBeingRagdoll()
 
 
 // Function BattleLabo.BTL_RagdollSolverComponent.EnablePreRagdollCollision
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           Enable                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3732,7 +3334,6 @@ void UBTL_RagdollSolverComponent::EnablePreRagdollCollision(bool Enable)
 	params.Enable = Enable;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3740,8 +3341,252 @@ void UBTL_RagdollSolverComponent::EnablePreRagdollCollision(bool Enable)
 }
 
 
+// Function BattleLabo.BTL_NPCLODComponent.GetState
+// ()
+// Parameters:
+// EBTL_NPCLODState               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+EBTL_NPCLODState UBTL_NPCLODComponent::GetState()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NPCLODComponent.GetState");
+
+	UBTL_NPCLODComponent_GetState_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_NPCLODComponent.GetSpawnLocation
+// ()
+// Parameters:
+// struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FVector UBTL_NPCLODComponent::GetSpawnLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_NPCLODComponent.GetSpawnLocation");
+
+	UBTL_NPCLODComponent_GetSpawnLocation_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeTimeMSCFromFloat
+// ()
+// Parameters:
+// float                          Seconds                        (Parm, ZeroConstructor, IsPlainOldData)
+// struct FBTL_TimeMSC            ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FBTL_TimeMSC UBTL_BattleRallyFunctionLibrary::MakeTimeMSCFromFloat(float Seconds)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeTimeMSCFromFloat");
+
+	UBTL_BattleRallyFunctionLibrary_MakeTimeMSCFromFloat_Params params;
+	params.Seconds = Seconds;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeFloatFromTimeMSC
+// ()
+// Parameters:
+// struct FBTL_TimeMSC            Time                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UBTL_BattleRallyFunctionLibrary::MakeFloatFromTimeMSC(const struct FBTL_TimeMSC& Time)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.MakeFloatFromTimeMSC");
+
+	UBTL_BattleRallyFunctionLibrary_MakeFloatFromTimeMSC_Params params;
+	params.Time = Time;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.IsTimeMSCZero
+// ()
+// Parameters:
+// struct FBTL_TimeMSC            Time                           (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBTL_BattleRallyFunctionLibrary::IsTimeMSCZero(const struct FBTL_TimeMSC& Time)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.IsTimeMSCZero");
+
+	UBTL_BattleRallyFunctionLibrary_IsTimeMSCZero_Params params;
+	params.Time = Time;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateRecordBook
+// ()
+// Parameters:
+// TArray<class UBTL_CourseDataAsset*> Courses                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UBTL_CourseRecordBook*   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UBTL_CourseRecordBook* UBTL_BattleRallyFunctionLibrary::CreateRecordBook(TArray<class UBTL_CourseDataAsset*> Courses)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateRecordBook");
+
+	UBTL_BattleRallyFunctionLibrary_CreateRecordBook_Params params;
+	params.Courses = Courses;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateLeaderboard
+// ()
+// Parameters:
+// struct FName                   Course                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UDataTable*              DataTable                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTL_CourseLeaderboard*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UBTL_CourseLeaderboard* UBTL_BattleRallyFunctionLibrary::CreateLeaderboard(const struct FName& Course, class UDataTable* DataTable)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateLeaderboard");
+
+	UBTL_BattleRallyFunctionLibrary_CreateLeaderboard_Params params;
+	params.Course = Course;
+	params.DataTable = DataTable;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateCourseDataAsset
+// ()
+// Parameters:
+// TArray<struct FDataTableRowHandle> Battles                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UBTL_CourseDataAsset*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UBTL_CourseDataAsset* UBTL_BattleRallyFunctionLibrary::CreateCourseDataAsset(TArray<struct FDataTableRowHandle> Battles)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_BattleRallyFunctionLibrary.CreateCourseDataAsset");
+
+	UBTL_BattleRallyFunctionLibrary_CreateCourseDataAsset_Params params;
+	params.Battles = Battles;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_ReplayRecordComponent.SetReplayRecordTime
+// ()
+// Parameters:
+// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBTL_ReplayRecordComponent::SetReplayRecordTime(float Time)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ReplayRecordComponent.SetReplayRecordTime");
+
+	UBTL_ReplayRecordComponent_SetReplayRecordTime_Params params;
+	params.Time = Time;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_ReplayRecordComponent.GetStartGameTime
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UBTL_ReplayRecordComponent::GetStartGameTime()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ReplayRecordComponent.GetStartGameTime");
+
+	UBTL_ReplayRecordComponent_GetStartGameTime_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_ReplayRecordComponent.GetEndGameTime
+// ()
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UBTL_ReplayRecordComponent::GetEndGameTime()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ReplayRecordComponent.GetEndGameTime");
+
+	UBTL_ReplayRecordComponent_GetEndGameTime_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
 // Function BattleLabo.BTL_ReplaySkeletalMeshComponent.ToggleReplayStopSwitch
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UBTL_ReplaySkeletalMeshComponent::ToggleReplayStopSwitch()
 {
@@ -3750,7 +3595,6 @@ void UBTL_ReplaySkeletalMeshComponent::ToggleReplayStopSwitch()
 	UBTL_ReplaySkeletalMeshComponent_ToggleReplayStopSwitch_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3759,7 +3603,7 @@ void UBTL_ReplaySkeletalMeshComponent::ToggleReplayStopSwitch()
 
 
 // Function BattleLabo.BTL_ReplaySkeletalMeshComponent.StartReplay
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UBTL_ReplayRecordComponent* ReplayRecordComponent          (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          StartGameTime                  (Parm, ZeroConstructor, IsPlainOldData)
@@ -3775,7 +3619,6 @@ void UBTL_ReplaySkeletalMeshComponent::StartReplay(class UBTL_ReplayRecordCompon
 	params.EndGameTime = EndGameTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3784,7 +3627,7 @@ void UBTL_ReplaySkeletalMeshComponent::StartReplay(class UBTL_ReplayRecordCompon
 
 
 // Function BattleLabo.BTL_ReplaySkeletalMeshComponent.ReplayToHead
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UBTL_ReplaySkeletalMeshComponent::ReplayToHead()
 {
@@ -3793,7 +3636,6 @@ void UBTL_ReplaySkeletalMeshComponent::ReplayToHead()
 	UBTL_ReplaySkeletalMeshComponent_ReplayToHead_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3802,7 +3644,7 @@ void UBTL_ReplaySkeletalMeshComponent::ReplayToHead()
 
 
 // Function BattleLabo.BTL_ReplaySkeletalMeshComponent.FinishReplay
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UBTL_ReplaySkeletalMeshComponent::FinishReplay()
 {
@@ -3811,7 +3653,6 @@ void UBTL_ReplaySkeletalMeshComponent::FinishReplay()
 	UBTL_ReplaySkeletalMeshComponent_FinishReplay_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3820,7 +3661,7 @@ void UBTL_ReplaySkeletalMeshComponent::FinishReplay()
 
 
 // Function BattleLabo.BTL_ReplaySkeletalMeshComponent.AddReplayTime
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          AddTime                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3832,7 +3673,6 @@ void UBTL_ReplaySkeletalMeshComponent::AddReplayTime(float AddTime)
 	params.AddTime = AddTime;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3841,7 +3681,7 @@ void UBTL_ReplaySkeletalMeshComponent::AddReplayTime(float AddTime)
 
 
 // Function BattleLabo.BTL_RuntimeAttackDB.SearchMontages
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // struct FName                   SearchTerm                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // TArray<class UAnimMontage*>    Results                        (Parm, OutParm, ZeroConstructor)
@@ -3855,7 +3695,6 @@ bool UBTL_RuntimeAttackDB::SearchMontages(const struct FName& SearchTerm, TArray
 	params.SearchTerm = SearchTerm;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3869,7 +3708,7 @@ bool UBTL_RuntimeAttackDB::SearchMontages(const struct FName& SearchTerm, TArray
 
 
 // Function BattleLabo.BTL_RuntimeAttackDB.LoadMontagesFromDBAsset
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // TArray<struct FName>           Identifiers                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // class UBTL_AttackDBAsset*      DatabaseAsset                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
@@ -3883,7 +3722,6 @@ void UBTL_RuntimeAttackDB::LoadMontagesFromDBAsset(TArray<struct FName> Identifi
 	params.DatabaseAsset = DatabaseAsset;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3892,7 +3730,7 @@ void UBTL_RuntimeAttackDB::LoadMontagesFromDBAsset(TArray<struct FName> Identifi
 
 
 // Function BattleLabo.BTL_RuntimeAttackDB.IsLoading
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -3903,7 +3741,6 @@ bool UBTL_RuntimeAttackDB::IsLoading()
 	UBTL_RuntimeAttackDB_IsLoading_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3914,7 +3751,7 @@ bool UBTL_RuntimeAttackDB::IsLoading()
 
 
 // Function BattleLabo.BTL_SequencePlayer.SetIgnoreUpdateCameraCut
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bNewIgnore                     (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -3926,7 +3763,6 @@ void UBTL_SequencePlayer::SetIgnoreUpdateCameraCut(bool bNewIgnore)
 	params.bNewIgnore = bNewIgnore;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3935,7 +3771,7 @@ void UBTL_SequencePlayer::SetIgnoreUpdateCameraCut(bool bNewIgnore)
 
 
 // Function BattleLabo.BTL_SequencePlayer.RegisterSwitchObject
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 SrcObjectName                  (Parm, ZeroConstructor)
 // class UObject*                 DstObject                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -3950,7 +3786,6 @@ class UBTL_SequencePlayer* UBTL_SequencePlayer::RegisterSwitchObject(const struc
 	params.DstObject = DstObject;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -3961,7 +3796,7 @@ class UBTL_SequencePlayer* UBTL_SequencePlayer::RegisterSwitchObject(const struc
 
 
 // Function BattleLabo.BTL_SequencePlayer.CleanUpInternalSpawnedObjects
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UBTL_SequencePlayer::CleanUpInternalSpawnedObjects()
 {
@@ -3970,87 +3805,21 @@ void UBTL_SequencePlayer::CleanUpInternalSpawnedObjects()
 	UBTL_SequencePlayer_CleanUpInternalSpawnedObjects_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_ReplayRecordComponent.SetReplayRecordTime
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                          Time                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBTL_ReplayRecordComponent::STATIC_SetReplayRecordTime(float Time)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ReplayRecordComponent.SetReplayRecordTime");
-
-	UBTL_ReplayRecordComponent_SetReplayRecordTime_Params params;
-	params.Time = Time;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.BTL_ReplayRecordComponent.GetStartGameTime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UBTL_ReplayRecordComponent::GetStartGameTime()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ReplayRecordComponent.GetStartGameTime");
-
-	UBTL_ReplayRecordComponent_GetStartGameTime_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.BTL_ReplayRecordComponent.GetEndGameTime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UBTL_ReplayRecordComponent::GetEndGameTime()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_ReplayRecordComponent.GetEndGameTime");
-
-	UBTL_ReplayRecordComponent_GetEndGameTime_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
 }
 
 
 // Function BattleLabo.BTL_SplineFunctionLibrary.FindDistanceClosestToWorldLocation
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // class USplineComponent*        spline                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 Location                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBTL_SplineFunctionLibrary::STATIC_FindDistanceClosestToWorldLocation(class USplineComponent* spline, const struct FVector& Location)
+float UBTL_SplineFunctionLibrary::FindDistanceClosestToWorldLocation(class USplineComponent* spline, const struct FVector& Location)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_SplineFunctionLibrary.FindDistanceClosestToWorldLocation");
 
@@ -4059,7 +3828,6 @@ float UBTL_SplineFunctionLibrary::STATIC_FindDistanceClosestToWorldLocation(clas
 	params.Location = Location;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4070,13 +3838,13 @@ float UBTL_SplineFunctionLibrary::STATIC_FindDistanceClosestToWorldLocation(clas
 
 
 // Function BattleLabo.BTL_SplineFunctionLibrary.ConvertInputKeyToDistance
-// (Final, Native, Static, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USplineComponent*        spline                         (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          InputKey                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-float UBTL_SplineFunctionLibrary::STATIC_ConvertInputKeyToDistance(class USplineComponent* spline, float InputKey)
+float UBTL_SplineFunctionLibrary::ConvertInputKeyToDistance(class USplineComponent* spline, float InputKey)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_SplineFunctionLibrary.ConvertInputKeyToDistance");
 
@@ -4085,7 +3853,6 @@ float UBTL_SplineFunctionLibrary::STATIC_ConvertInputKeyToDistance(class USpline
 	params.InputKey = InputKey;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4096,7 +3863,7 @@ float UBTL_SplineFunctionLibrary::STATIC_ConvertInputKeyToDistance(class USpline
 
 
 // Function BattleLabo.BTL_SplineNavigationComponent.GetSplineRightVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -4107,7 +3874,6 @@ struct FVector UBTL_SplineNavigationComponent::GetSplineRightVector()
 	UBTL_SplineNavigationComponent_GetSplineRightVector_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4118,7 +3884,7 @@ struct FVector UBTL_SplineNavigationComponent::GetSplineRightVector()
 
 
 // Function BattleLabo.BTL_SplineNavigationComponent.GetDistanceAlongSpline
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -4129,7 +3895,6 @@ float UBTL_SplineNavigationComponent::GetDistanceAlongSpline()
 	UBTL_SplineNavigationComponent_GetDistanceAlongSpline_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4140,7 +3905,7 @@ float UBTL_SplineNavigationComponent::GetDistanceAlongSpline()
 
 
 // Function BattleLabo.BTL_SplineNavigationComponent.GetDistanceAlongNormal
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -4151,7 +3916,6 @@ float UBTL_SplineNavigationComponent::GetDistanceAlongNormal()
 	UBTL_SplineNavigationComponent_GetDistanceAlongNormal_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4162,7 +3926,7 @@ float UBTL_SplineNavigationComponent::GetDistanceAlongNormal()
 
 
 // Function BattleLabo.BTL_SplineNavigationComponent.GetClosestSplineLocation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -4173,7 +3937,6 @@ struct FVector UBTL_SplineNavigationComponent::GetClosestSplineLocation()
 	UBTL_SplineNavigationComponent_GetClosestSplineLocation_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4184,7 +3947,7 @@ struct FVector UBTL_SplineNavigationComponent::GetClosestSplineLocation()
 
 
 // Function BattleLabo.BTL_SplineNavigationComponent.EstimateLocationAhead
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          Distance                       (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
@@ -4197,7 +3960,6 @@ struct FVector UBTL_SplineNavigationComponent::EstimateLocationAhead(float Dista
 	params.Distance = Distance;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4208,7 +3970,7 @@ struct FVector UBTL_SplineNavigationComponent::EstimateLocationAhead(float Dista
 
 
 // Function BattleLabo.BTL_SplineNavigationComponent.CalculateFollowDirection
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // float                          LookAheadDistance              (Parm, ZeroConstructor, IsPlainOldData)
 // float                          TargetNormalDistance           (Parm, ZeroConstructor, IsPlainOldData)
@@ -4223,7 +3985,6 @@ struct FVector UBTL_SplineNavigationComponent::CalculateFollowDirection(float Lo
 	params.TargetNormalDistance = TargetNormalDistance;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4234,7 +3995,7 @@ struct FVector UBTL_SplineNavigationComponent::CalculateFollowDirection(float Lo
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.TryGetAnchorAngleWS
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -4246,7 +4007,6 @@ bool UBTL_SurroundCoordinator::TryGetAnchorAngleWS(float* Angle)
 	UBTL_SurroundCoordinator_TryGetAnchorAngleWS_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4260,7 +4020,7 @@ bool UBTL_SurroundCoordinator::TryGetAnchorAngleWS(float* Angle)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.TryCalculateDirectionWS
-// (Final, Native, Public, HasOutParms, BlueprintCallable, Const)
+// ()
 // Parameters:
 // class AAIController*           NPC                            (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -4274,7 +4034,6 @@ bool UBTL_SurroundCoordinator::TryCalculateDirectionWS(class AAIController* NPC,
 	params.NPC = NPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4288,7 +4047,7 @@ bool UBTL_SurroundCoordinator::TryCalculateDirectionWS(class AAIController* NPC,
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.SetPlayer
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class ABTL_Character*          Player                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -4300,7 +4059,6 @@ void UBTL_SurroundCoordinator::SetPlayer(class ABTL_Character* Player)
 	params.Player = Player;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4309,7 +4067,7 @@ void UBTL_SurroundCoordinator::SetPlayer(class ABTL_Character* Player)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.SetNewAnchor
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class AAIController*           Item                           (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -4321,7 +4079,6 @@ void UBTL_SurroundCoordinator::SetNewAnchor(class AAIController* Item)
 	params.Item = Item;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4330,7 +4087,7 @@ void UBTL_SurroundCoordinator::SetNewAnchor(class AAIController* Item)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.Reserve
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class AAIController*           Item                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -4344,7 +4101,6 @@ void UBTL_SurroundCoordinator::Reserve(class AAIController* Item, int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4353,7 +4109,7 @@ void UBTL_SurroundCoordinator::Reserve(class AAIController* Item, int Index)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.RemoveNPC
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class AAIController*           NPC                            (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -4365,7 +4121,6 @@ void UBTL_SurroundCoordinator::RemoveNPC(class AAIController* NPC)
 	params.NPC = NPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4374,7 +4129,7 @@ void UBTL_SurroundCoordinator::RemoveNPC(class AAIController* NPC)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.HasReservation
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // class AAIController*           ItemToFind                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -4387,7 +4142,6 @@ bool UBTL_SurroundCoordinator::HasReservation(class AAIController* ItemToFind)
 	params.ItemToFind = ItemToFind;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4398,7 +4152,7 @@ bool UBTL_SurroundCoordinator::HasReservation(class AAIController* ItemToFind)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.GetOffsetForIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -4411,7 +4165,6 @@ float UBTL_SurroundCoordinator::GetOffsetForIndex(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4422,7 +4175,7 @@ float UBTL_SurroundCoordinator::GetOffsetForIndex(int Index)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.GetNPCReservationIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // class AAIController*           ItemToFind                     (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -4435,7 +4188,6 @@ int UBTL_SurroundCoordinator::GetNPCReservationIndex(class AAIController* ItemTo
 	params.ItemToFind = ItemToFind;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4446,7 +4198,7 @@ int UBTL_SurroundCoordinator::GetNPCReservationIndex(class AAIController* ItemTo
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.GetClosestOpenIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // class AAIController*           NPC                            (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -4459,7 +4211,6 @@ int UBTL_SurroundCoordinator::GetClosestOpenIndex(class AAIController* NPC)
 	params.NPC = NPC;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4470,7 +4221,7 @@ int UBTL_SurroundCoordinator::GetClosestOpenIndex(class AAIController* NPC)
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.GetAnchorNPC
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // class AAIController*           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -4481,7 +4232,6 @@ class AAIController* UBTL_SurroundCoordinator::GetAnchorNPC()
 	UBTL_SurroundCoordinator_GetAnchorNPC_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4492,7 +4242,7 @@ class AAIController* UBTL_SurroundCoordinator::GetAnchorNPC()
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.ClearAllReservationsButAnchor
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UBTL_SurroundCoordinator::ClearAllReservationsButAnchor()
 {
@@ -4501,7 +4251,6 @@ void UBTL_SurroundCoordinator::ClearAllReservationsButAnchor()
 	UBTL_SurroundCoordinator_ClearAllReservationsButAnchor_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4510,7 +4259,7 @@ void UBTL_SurroundCoordinator::ClearAllReservationsButAnchor()
 
 
 // Function BattleLabo.BTL_SurroundCoordinator.ClearAllReservations
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void UBTL_SurroundCoordinator::ClearAllReservations()
 {
@@ -4519,7 +4268,6 @@ void UBTL_SurroundCoordinator::ClearAllReservations()
 	UBTL_SurroundCoordinator_ClearAllReservations_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4528,14 +4276,14 @@ void UBTL_SurroundCoordinator::ClearAllReservations()
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.SetupUndulationInfo
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            InfoCount                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            WallPointCount                 (Parm, ZeroConstructor, IsPlainOldData)
 // int                            StepPointCount                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UUndulationInfoFunctionLibrary::STATIC_SetupUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoCount, int WallPointCount, int StepPointCount)
+void UUndulationInfoFunctionLibrary::SetupUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoCount, int WallPointCount, int StepPointCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.SetupUndulationInfo");
 
@@ -4546,7 +4294,6 @@ void UUndulationInfoFunctionLibrary::STATIC_SetupUndulationInfo(const struct FUn
 	params.StepPointCount = StepPointCount;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4555,13 +4302,13 @@ void UUndulationInfoFunctionLibrary::STATIC_SetupUndulationInfo(const struct FUn
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.SetUndulationInfo
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            InfoIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // struct FUndulationInfoParamNative Param                          (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UUndulationInfoFunctionLibrary::STATIC_SetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, const struct FUndulationInfoParamNative& Param)
+void UUndulationInfoFunctionLibrary::SetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, const struct FUndulationInfoParamNative& Param)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.SetUndulationInfo");
 
@@ -4571,7 +4318,6 @@ void UUndulationInfoFunctionLibrary::STATIC_SetUndulationInfo(const struct FUndu
 	params.Param = Param;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4580,7 +4326,7 @@ void UUndulationInfoFunctionLibrary::STATIC_SetUndulationInfo(const struct FUndu
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.SetRaycastHitpointInfo
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            InfoIndex                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -4588,7 +4334,7 @@ void UUndulationInfoFunctionLibrary::STATIC_SetUndulationInfo(const struct FUndu
 // int                            PointIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRaycastHitpointInfoNative Point                          (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UUndulationInfoFunctionLibrary::STATIC_SetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, const struct FRaycastHitpointInfoNative& Point)
+void UUndulationInfoFunctionLibrary::SetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, const struct FRaycastHitpointInfoNative& Point)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.SetRaycastHitpointInfo");
 
@@ -4600,7 +4346,6 @@ void UUndulationInfoFunctionLibrary::STATIC_SetRaycastHitpointInfo(const struct 
 	params.Point = Point;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4609,12 +4354,12 @@ void UUndulationInfoFunctionLibrary::STATIC_SetRaycastHitpointInfo(const struct 
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.GetUndulationInfoCount
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UUndulationInfoFunctionLibrary::STATIC_GetUndulationInfoCount(const struct FUndulationInfoContainer& Container)
+int UUndulationInfoFunctionLibrary::GetUndulationInfoCount(const struct FUndulationInfoContainer& Container)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.GetUndulationInfoCount");
 
@@ -4622,7 +4367,6 @@ int UUndulationInfoFunctionLibrary::STATIC_GetUndulationInfoCount(const struct F
 	params.Container = Container;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4633,7 +4377,7 @@ int UUndulationInfoFunctionLibrary::STATIC_GetUndulationInfoCount(const struct F
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.GetUndulationInfo
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            InfoIndex                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -4641,7 +4385,7 @@ int UUndulationInfoFunctionLibrary::STATIC_GetUndulationInfoCount(const struct F
 // int                            WallRaycastHitpointInfoCount   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            StepRaycastHitpointInfoCount   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UUndulationInfoFunctionLibrary::STATIC_GetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, struct FUndulationInfoParamNative* OutStruct, int* WallRaycastHitpointInfoCount, int* StepRaycastHitpointInfoCount)
+void UUndulationInfoFunctionLibrary::GetUndulationInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, struct FUndulationInfoParamNative* OutStruct, int* WallRaycastHitpointInfoCount, int* StepRaycastHitpointInfoCount)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.GetUndulationInfo");
 
@@ -4650,7 +4394,6 @@ void UUndulationInfoFunctionLibrary::STATIC_GetUndulationInfo(const struct FUndu
 	params.InfoIndex = InfoIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4666,14 +4409,14 @@ void UUndulationInfoFunctionLibrary::STATIC_GetUndulationInfo(const struct FUndu
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.GetRaycastHitpointInfoCount
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            InfoIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // ERaycastHitpointInfoType       Type                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UUndulationInfoFunctionLibrary::STATIC_GetRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type)
+int UUndulationInfoFunctionLibrary::GetRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.GetRaycastHitpointInfoCount");
 
@@ -4683,7 +4426,6 @@ int UUndulationInfoFunctionLibrary::STATIC_GetRaycastHitpointInfoCount(const str
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4694,7 +4436,7 @@ int UUndulationInfoFunctionLibrary::STATIC_GetRaycastHitpointInfoCount(const str
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.GetRaycastHitpointInfo
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            InfoIndex                      (Parm, ZeroConstructor, IsPlainOldData)
@@ -4702,7 +4444,7 @@ int UUndulationInfoFunctionLibrary::STATIC_GetRaycastHitpointInfoCount(const str
 // int                            PointIndex                     (Parm, ZeroConstructor, IsPlainOldData)
 // struct FRaycastHitpointInfoNative OutStruct                      (Parm, OutParm)
 
-void UUndulationInfoFunctionLibrary::STATIC_GetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, struct FRaycastHitpointInfoNative* OutStruct)
+void UUndulationInfoFunctionLibrary::GetRaycastHitpointInfo(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type, int PointIndex, struct FRaycastHitpointInfoNative* OutStruct)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.GetRaycastHitpointInfo");
 
@@ -4713,7 +4455,6 @@ void UUndulationInfoFunctionLibrary::STATIC_GetRaycastHitpointInfo(const struct 
 	params.PointIndex = PointIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4725,14 +4466,14 @@ void UUndulationInfoFunctionLibrary::STATIC_GetRaycastHitpointInfo(const struct 
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.GetEnableRaycastHitpointInfoCount
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 // int                            InfoIndex                      (Parm, ZeroConstructor, IsPlainOldData)
 // ERaycastHitpointInfoType       Type                           (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UUndulationInfoFunctionLibrary::STATIC_GetEnableRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type)
+int UUndulationInfoFunctionLibrary::GetEnableRaycastHitpointInfoCount(const struct FUndulationInfoContainer& Container, int InfoIndex, ERaycastHitpointInfoType Type)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.GetEnableRaycastHitpointInfoCount");
 
@@ -4742,7 +4483,6 @@ int UUndulationInfoFunctionLibrary::STATIC_GetEnableRaycastHitpointInfoCount(con
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4753,11 +4493,11 @@ int UUndulationInfoFunctionLibrary::STATIC_GetEnableRaycastHitpointInfoCount(con
 
 
 // Function BattleLabo.UndulationInfoFunctionLibrary.ClearWorks
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FUndulationInfoContainer Container                      (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UUndulationInfoFunctionLibrary::STATIC_ClearWorks(const struct FUndulationInfoContainer& Container)
+void UUndulationInfoFunctionLibrary::ClearWorks(const struct FUndulationInfoContainer& Container)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.UndulationInfoFunctionLibrary.ClearWorks");
 
@@ -4765,7 +4505,6 @@ void UUndulationInfoFunctionLibrary::STATIC_ClearWorks(const struct FUndulationI
 	params.Container = Container;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4774,7 +4513,7 @@ void UUndulationInfoFunctionLibrary::STATIC_ClearWorks(const struct FUndulationI
 
 
 // Function BattleLabo.BTL_StatusComponent.SetHPFlag
-// (Final, Native, Protected, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           bValue                         (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -4786,7 +4525,6 @@ void UBTL_StatusComponent::SetHPFlag(bool bValue)
 	params.bValue = bValue;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4795,7 +4533,7 @@ void UBTL_StatusComponent::SetHPFlag(bool bValue)
 
 
 // Function BattleLabo.BTL_StatusComponent.IsZeroHP
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           IsZero                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -4806,7 +4544,6 @@ void UBTL_StatusComponent::IsZeroHP(bool* IsZero)
 	UBTL_StatusComponent_IsZeroHP_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4818,7 +4555,7 @@ void UBTL_StatusComponent::IsZeroHP(bool* IsZero)
 
 
 // Function BattleLabo.BTL_StatusComponent.HasHP
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // bool                           IsPositive                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -4829,7 +4566,6 @@ void UBTL_StatusComponent::HasHP(bool* IsPositive)
 	UBTL_StatusComponent_HasHP_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4840,8 +4576,45 @@ void UBTL_StatusComponent::HasHP(bool* IsPositive)
 }
 
 
+// Function BattleLabo.CircleDrawComponent.ClearLength
+// ()
+
+void UCircleDrawComponent::ClearLength()
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.CircleDrawComponent.ClearLength");
+
+	UCircleDrawComponent_ClearLength_Params params;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.CircleDrawComponent.AddLength
+// ()
+// Parameters:
+// float                          Length                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCircleDrawComponent::AddLength(float Length)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.CircleDrawComponent.AddLength");
+
+	UCircleDrawComponent_AddLength_Params params;
+	params.Length = Length;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
 // Function BattleLabo.SquareDrawComponent.ClearSquare
-// (Final, Native, Public, BlueprintCallable)
+// ()
 
 void USquareDrawComponent::ClearSquare()
 {
@@ -4850,7 +4623,6 @@ void USquareDrawComponent::ClearSquare()
 	USquareDrawComponent_ClearSquare_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4859,7 +4631,7 @@ void USquareDrawComponent::ClearSquare()
 
 
 // Function BattleLabo.SquareDrawComponent.AddSquare
-// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector                 LT                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
 // struct FVector                 RT                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData)
@@ -4877,7 +4649,6 @@ void USquareDrawComponent::AddSquare(const struct FVector& LT, const struct FVec
 	params.RB = RB;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4885,53 +4656,521 @@ void USquareDrawComponent::AddSquare(const struct FVector& LT, const struct FVec
 }
 
 
-// Function BattleLabo.CircleDrawComponent.ClearLength
-// (Final, Native, Public, BlueprintCallable)
-
-void UCircleDrawComponent::ClearLength()
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.CircleDrawComponent.ClearLength");
-
-	UCircleDrawComponent_ClearLength_Params params;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.CircleDrawComponent.AddLength
-// (Final, Native, Public, BlueprintCallable)
+// Function BattleLabo.BTL_CourseRecordBook.ReadSaveData
+// ()
 // Parameters:
-// float                          Length                         (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<struct FBTL_CourseSaveData> SaveData                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UCircleDrawComponent::AddLength(float Length)
+void UBTL_CourseRecordBook::ReadSaveData(TArray<struct FBTL_CourseSaveData> SaveData)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.CircleDrawComponent.AddLength");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CourseRecordBook.ReadSaveData");
 
-	UCircleDrawComponent_AddLength_Params params;
-	params.Length = Length;
+	UBTL_CourseRecordBook_ReadSaveData_Params params;
+	params.SaveData = SaveData;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
 	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.BTL_CourseRecordBook.GetLeaderboard
+// ()
+// Parameters:
+// struct FName                   Course                         (Parm, ZeroConstructor, IsPlainOldData)
+// class UBTL_CourseLeaderboard*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UBTL_CourseLeaderboard* UBTL_CourseRecordBook::GetLeaderboard(const struct FName& Course)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CourseRecordBook.GetLeaderboard");
+
+	UBTL_CourseRecordBook_GetLeaderboard_Params params;
+	params.Course = Course;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.BTL_CourseRecordBook.CreatePlayerSaveData
+// ()
+// Parameters:
+// TArray<struct FName>           PlayerCharacters               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FBTL_CourseSaveData> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FBTL_CourseSaveData> UBTL_CourseRecordBook::CreatePlayerSaveData(TArray<struct FName> PlayerCharacters)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.BTL_CourseRecordBook.CreatePlayerSaveData");
+
+	UBTL_CourseRecordBook_CreatePlayerSaveData_Params params;
+	params.PlayerCharacters = PlayerCharacters;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.SwitchKey
+// ()
+// Parameters:
+// struct FName                   A                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName                   B                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UKeyConfig::SwitchKey(const struct FName& A, const struct FName& B)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SwitchKey");
+
+	UKeyConfig_SwitchKey_Params params;
+	params.A = A;
+	params.B = B;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.KeyConfig.SortObject
+// ()
+// Parameters:
+// TArray<class UObject*>         TargetArray                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class USortObjectCompare*      Compare                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKeyConfig::SortObject(class USortObjectCompare* Compare, TArray<class UObject*>* TargetArray)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SortObject");
+
+	UKeyConfig_SortObject_Params params;
+	params.Compare = Compare;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (TargetArray != nullptr)
+		*TargetArray = params.TargetArray;
+}
+
+
+// Function BattleLabo.KeyConfig.SortName
+// ()
+// Parameters:
+// TArray<struct FName>           TargetArray                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class USortNameCompare*        Compare                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKeyConfig::SortName(class USortNameCompare* Compare, TArray<struct FName>* TargetArray)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SortName");
+
+	UKeyConfig_SortName_Params params;
+	params.Compare = Compare;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (TargetArray != nullptr)
+		*TargetArray = params.TargetArray;
+}
+
+
+// Function BattleLabo.KeyConfig.SortActor
+// ()
+// Parameters:
+// TArray<class AActor*>          TargetArray                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class USortActorCompare*       Compare                        (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKeyConfig::SortActor(class USortActorCompare* Compare, TArray<class AActor*>* TargetArray)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SortActor");
+
+	UKeyConfig_SortActor_Params params;
+	params.Compare = Compare;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	if (TargetArray != nullptr)
+		*TargetArray = params.TargetArray;
+}
+
+
+// Function BattleLabo.KeyConfig.SetMontagePosition
+// ()
+// Parameters:
+// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Position                       (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKeyConfig::SetMontagePosition(class UAnimInstance* AnimInstance, class UAnimMontage* Montage, float Position)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SetMontagePosition");
+
+	UKeyConfig_SetMontagePosition_Params params;
+	params.AnimInstance = AnimInstance;
+	params.Montage = Montage;
+	params.Position = Position;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.KeyConfig.SetMontageBlendOutTime
+// ()
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKeyConfig::SetMontageBlendOutTime(class UAnimMontage* Montage, float BlendTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SetMontageBlendOutTime");
+
+	UKeyConfig_SetMontageBlendOutTime_Params params;
+	params.Montage = Montage;
+	params.BlendTime = BlendTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.KeyConfig.SetMontageBlendInTime
+// ()
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKeyConfig::SetMontageBlendInTime(class UAnimMontage* Montage, float BlendTime)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SetMontageBlendInTime");
+
+	UKeyConfig_SetMontageBlendInTime_Params params;
+	params.Montage = Montage;
+	params.BlendTime = BlendTime;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.KeyConfig.ResetAction
+// ()
+// Parameters:
+// struct FKey                    Key                            (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName                   Name                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKeyConfig::ResetAction(const struct FKey& Key, const struct FName& Name)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.ResetAction");
+
+	UKeyConfig_ResetAction_Params params;
+	params.Key = Key;
+	params.Name = Name;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.IsPlayingAttackMontage
+// ()
+// Parameters:
+// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKeyConfig::IsPlayingAttackMontage(class UAnimInstance* AnimInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.IsPlayingAttackMontage");
+
+	UKeyConfig_IsPlayingAttackMontage_Params params;
+	params.AnimInstance = AnimInstance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.GetMontageBlendOutTime
+// ()
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UKeyConfig::GetMontageBlendOutTime(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetMontageBlendOutTime");
+
+	UKeyConfig_GetMontageBlendOutTime_Params params;
+	params.Montage = Montage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.GetMontageBlendInTime
+// ()
+// Parameters:
+// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UKeyConfig::GetMontageBlendInTime(class UAnimMontage* Montage)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetMontageBlendInTime");
+
+	UKeyConfig_GetMontageBlendInTime_Params params;
+	params.Montage = Montage;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.GetKeyArray
+// ()
+// Parameters:
+// struct FName                   Name                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TArray<struct FKey>            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FKey> UKeyConfig::GetKeyArray(const struct FName& Name)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetKeyArray");
+
+	UKeyConfig_GetKeyArray_Params params;
+	params.Name = Name;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.GetFollowingPathLength
+// ()
+// Parameters:
+// class UPathFollowingComponent* PathFollowingComponent         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UKeyConfig::GetFollowingPathLength(class UPathFollowingComponent* PathFollowingComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetFollowingPathLength");
+
+	UKeyConfig_GetFollowingPathLength_Params params;
+	params.PathFollowingComponent = PathFollowingComponent;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.GetCurrentMontagePosition
+// ()
+// Parameters:
+// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UKeyConfig::GetCurrentMontagePosition(class UAnimInstance* AnimInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetCurrentMontagePosition");
+
+	UKeyConfig_GetCurrentMontagePosition_Params params;
+	params.AnimInstance = AnimInstance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.GetCurrentMontagePlayRate
+// ()
+// Parameters:
+// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UKeyConfig::GetCurrentMontagePlayRate(class UAnimInstance* AnimInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetCurrentMontagePlayRate");
+
+	UKeyConfig_GetCurrentMontagePlayRate_Params params;
+	params.AnimInstance = AnimInstance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.EnableNextAttack
+// ()
+// Parameters:
+// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UKeyConfig::EnableNextAttack(class UAnimInstance* AnimInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.EnableNextAttack");
+
+	UKeyConfig_EnableNextAttack_Params params;
+	params.AnimInstance = AnimInstance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.DispCurrentAnimInfo
+// ()
+// Parameters:
+// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UKeyConfig::DispCurrentAnimInfo(class UAnimInstance* AnimInstance)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.DispCurrentAnimInfo");
+
+	UKeyConfig_DispCurrentAnimInfo_Params params;
+	params.AnimInstance = AnimInstance;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+}
+
+
+// Function BattleLabo.KeyConfig.CreateObjectForTemplate
+// ()
+// Parameters:
+// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 Template                       (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UKeyConfig::CreateObjectForTemplate(class UObject* Outer, const struct FName& Name, class UObject* Template)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.CreateObjectForTemplate");
+
+	UKeyConfig_CreateObjectForTemplate_Params params;
+	params.Outer = Outer;
+	params.Name = Name;
+	params.Template = Template;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
+}
+
+
+// Function BattleLabo.KeyConfig.CreateObject
+// ()
+// Parameters:
+// class UClass*                  ObjectClass                    (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UObject* UKeyConfig::CreateObject(class UClass* ObjectClass)
+{
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.CreateObject");
+
+	UKeyConfig_CreateObject_Params params;
+	params.ObjectClass = ObjectClass;
+
+	auto flags = fn->FunctionFlags;
+
+	UObject::ProcessEvent(fn, &params);
+
+	fn->FunctionFlags = flags;
+
+	return params.ReturnValue;
 }
 
 
 // Function BattleLabo.Json.LoadJson
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FString                 Name                           (Parm, ZeroConstructor)
 // struct FJsonData               Data                           (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJson::STATIC_LoadJson(const struct FString& Name, struct FJsonData* Data)
+bool UJson::LoadJson(const struct FString& Name, struct FJsonData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.Json.LoadJson");
 
@@ -4939,7 +5178,6 @@ bool UJson::STATIC_LoadJson(const struct FString& Name, struct FJsonData* Data)
 	params.Name = Name;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4953,14 +5191,14 @@ bool UJson::STATIC_LoadJson(const struct FString& Name, struct FJsonData* Data)
 
 
 // Function BattleLabo.Json.GetString
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FJsonData               JsonData                       (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 Key                            (Parm, ZeroConstructor)
 // struct FString                 String                         (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJson::STATIC_GetString(const struct FJsonData& JsonData, const struct FString& Key, struct FString* String)
+bool UJson::GetString(const struct FJsonData& JsonData, const struct FString& Key, struct FString* String)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.Json.GetString");
 
@@ -4969,7 +5207,6 @@ bool UJson::STATIC_GetString(const struct FJsonData& JsonData, const struct FStr
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -4983,14 +5220,14 @@ bool UJson::STATIC_GetString(const struct FJsonData& JsonData, const struct FStr
 
 
 // Function BattleLabo.Json.GetInt
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FJsonData               JsonData                       (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 Key                            (Parm, ZeroConstructor)
 // int                            Int                            (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJson::STATIC_GetInt(const struct FJsonData& JsonData, const struct FString& Key, int* Int)
+bool UJson::GetInt(const struct FJsonData& JsonData, const struct FString& Key, int* Int)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.Json.GetInt");
 
@@ -4999,7 +5236,6 @@ bool UJson::STATIC_GetInt(const struct FJsonData& JsonData, const struct FString
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5013,14 +5249,14 @@ bool UJson::STATIC_GetInt(const struct FJsonData& JsonData, const struct FString
 
 
 // Function BattleLabo.Json.GetFloat
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FJsonData               JsonData                       (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 Key                            (Parm, ZeroConstructor)
 // float                          Float                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJson::STATIC_GetFloat(const struct FJsonData& JsonData, const struct FString& Key, float* Float)
+bool UJson::GetFloat(const struct FJsonData& JsonData, const struct FString& Key, float* Float)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.Json.GetFloat");
 
@@ -5029,7 +5265,6 @@ bool UJson::STATIC_GetFloat(const struct FJsonData& JsonData, const struct FStri
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5043,14 +5278,14 @@ bool UJson::STATIC_GetFloat(const struct FJsonData& JsonData, const struct FStri
 
 
 // Function BattleLabo.Json.GetData
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FJsonData               JsonData                       (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 Key                            (Parm, ZeroConstructor)
 // struct FJsonData               Data                           (Parm, OutParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJson::STATIC_GetData(const struct FJsonData& JsonData, const struct FString& Key, struct FJsonData* Data)
+bool UJson::GetData(const struct FJsonData& JsonData, const struct FString& Key, struct FJsonData* Data)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.Json.GetData");
 
@@ -5059,7 +5294,6 @@ bool UJson::STATIC_GetData(const struct FJsonData& JsonData, const struct FStrin
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5073,14 +5307,14 @@ bool UJson::STATIC_GetData(const struct FJsonData& JsonData, const struct FStrin
 
 
 // Function BattleLabo.Json.GetBool
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FJsonData               JsonData                       (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 Key                            (Parm, ZeroConstructor)
 // bool                           Bool                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJson::STATIC_GetBool(const struct FJsonData& JsonData, const struct FString& Key, bool* Bool)
+bool UJson::GetBool(const struct FJsonData& JsonData, const struct FString& Key, bool* Bool)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.Json.GetBool");
 
@@ -5089,7 +5323,6 @@ bool UJson::STATIC_GetBool(const struct FJsonData& JsonData, const struct FStrin
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5103,14 +5336,14 @@ bool UJson::STATIC_GetBool(const struct FJsonData& JsonData, const struct FStrin
 
 
 // Function BattleLabo.Json.GetArray
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// ()
 // Parameters:
 // struct FJsonData               JsonData                       (ConstParm, Parm, OutParm, ReferenceParm)
 // struct FString                 Key                            (Parm, ZeroConstructor)
 // TArray<struct FString>         Array                          (Parm, OutParm, ZeroConstructor)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UJson::STATIC_GetArray(const struct FJsonData& JsonData, const struct FString& Key, TArray<struct FString>* Array)
+bool UJson::GetArray(const struct FJsonData& JsonData, const struct FString& Key, TArray<struct FString>* Array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.Json.GetArray");
 
@@ -5119,7 +5352,6 @@ bool UJson::STATIC_GetArray(const struct FJsonData& JsonData, const struct FStri
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5133,7 +5365,7 @@ bool UJson::STATIC_GetArray(const struct FJsonData& JsonData, const struct FStri
 
 
 // Function BattleLabo.MyCharacterMovementComponent.UseRequestedVector
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FVector                 ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
 
@@ -5144,33 +5376,6 @@ struct FVector UMyCharacterMovementComponent::UseRequestedVector()
 	UMyCharacterMovementComponent_UseRequestedVector_Params params;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.SortActorCompare.Compare
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class AActor*                  A                              (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  B                              (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool USortActorCompare::Compare(class AActor* A, class AActor* B)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.SortActorCompare.Compare");
-
-	USortActorCompare_Compare_Params params;
-	params.A = A;
-	params.B = B;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5181,7 +5386,7 @@ bool USortActorCompare::Compare(class AActor* A, class AActor* B)
 
 
 // Function BattleLabo.SortNameCompare.Compare
-// (Native, Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // struct FName                   A                              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FName                   B                              (Parm, ZeroConstructor, IsPlainOldData)
@@ -5196,7 +5401,6 @@ bool USortNameCompare::Compare(const struct FName& A, const struct FName& B)
 	params.B = B;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5207,7 +5411,7 @@ bool USortNameCompare::Compare(const struct FName& A, const struct FName& B)
 
 
 // Function BattleLabo.SortObjectCompare.Compare
-// (Native, Event, Public, BlueprintEvent)
+// ()
 // Parameters:
 // class UObject*                 A                              (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 B                              (Parm, ZeroConstructor, IsPlainOldData)
@@ -5222,7 +5426,6 @@ bool USortObjectCompare::Compare(class UObject* A, class UObject* B)
 	params.B = B;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -5232,457 +5435,22 @@ bool USortObjectCompare::Compare(class UObject* A, class UObject* B)
 }
 
 
-// Function BattleLabo.KeyConfig.SwitchKey
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Function BattleLabo.SortActorCompare.Compare
+// ()
 // Parameters:
-// struct FName                   A                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   B                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor*                  A                              (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  B                              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void UKeyConfig::STATIC_SwitchKey(const struct FName& A, const struct FName& B)
+bool USortActorCompare::Compare(class AActor* A, class AActor* B)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SwitchKey");
+	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.SortActorCompare.Compare");
 
-	UKeyConfig_SwitchKey_Params params;
+	USortActorCompare_Compare_Params params;
 	params.A = A;
 	params.B = B;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.KeyConfig.SortObject
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<class UObject*>         TargetArray                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class USortObjectCompare*      Compare                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKeyConfig::STATIC_SortObject(class USortObjectCompare* Compare, TArray<class UObject*>* TargetArray)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SortObject");
-
-	UKeyConfig_SortObject_Params params;
-	params.Compare = Compare;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (TargetArray != nullptr)
-		*TargetArray = params.TargetArray;
-}
-
-
-// Function BattleLabo.KeyConfig.SortName
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<struct FName>           TargetArray                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class USortNameCompare*        Compare                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKeyConfig::STATIC_SortName(class USortNameCompare* Compare, TArray<struct FName>* TargetArray)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SortName");
-
-	UKeyConfig_SortName_Params params;
-	params.Compare = Compare;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (TargetArray != nullptr)
-		*TargetArray = params.TargetArray;
-}
-
-
-// Function BattleLabo.KeyConfig.SortActor
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<class AActor*>          TargetArray                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class USortActorCompare*       Compare                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKeyConfig::STATIC_SortActor(class USortActorCompare* Compare, TArray<class AActor*>* TargetArray)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SortActor");
-
-	UKeyConfig_SortActor_Params params;
-	params.Compare = Compare;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	if (TargetArray != nullptr)
-		*TargetArray = params.TargetArray;
-}
-
-
-// Function BattleLabo.KeyConfig.SetMontagePosition
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Position                       (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKeyConfig::STATIC_SetMontagePosition(class UAnimInstance* AnimInstance, class UAnimMontage* Montage, float Position)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SetMontagePosition");
-
-	UKeyConfig_SetMontagePosition_Params params;
-	params.AnimInstance = AnimInstance;
-	params.Montage = Montage;
-	params.Position = Position;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.KeyConfig.SetMontageBlendOutTime
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKeyConfig::STATIC_SetMontageBlendOutTime(class UAnimMontage* Montage, float BlendTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SetMontageBlendOutTime");
-
-	UKeyConfig_SetMontageBlendOutTime_Params params;
-	params.Montage = Montage;
-	params.BlendTime = BlendTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.KeyConfig.SetMontageBlendInTime
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          BlendTime                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKeyConfig::STATIC_SetMontageBlendInTime(class UAnimMontage* Montage, float BlendTime)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.SetMontageBlendInTime");
-
-	UKeyConfig_SetMontageBlendInTime_Params params;
-	params.Montage = Montage;
-	params.BlendTime = BlendTime;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.KeyConfig.ResetAction
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FKey                    Key                            (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FName                   Name                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UKeyConfig::STATIC_ResetAction(const struct FKey& Key, const struct FName& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.ResetAction");
-
-	UKeyConfig_ResetAction_Params params;
-	params.Key = Key;
-	params.Name = Name;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.IsPlayingAttackMontage
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UKeyConfig::STATIC_IsPlayingAttackMontage(class UAnimInstance* AnimInstance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.IsPlayingAttackMontage");
-
-	UKeyConfig_IsPlayingAttackMontage_Params params;
-	params.AnimInstance = AnimInstance;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.GetMontageBlendOutTime
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UKeyConfig::STATIC_GetMontageBlendOutTime(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetMontageBlendOutTime");
-
-	UKeyConfig_GetMontageBlendOutTime_Params params;
-	params.Montage = Montage;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.GetMontageBlendInTime
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimMontage*            Montage                        (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UKeyConfig::STATIC_GetMontageBlendInTime(class UAnimMontage* Montage)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetMontageBlendInTime");
-
-	UKeyConfig_GetMontageBlendInTime_Params params;
-	params.Montage = Montage;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.GetKeyArray
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FName                   Name                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// TArray<struct FKey>            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<struct FKey> UKeyConfig::STATIC_GetKeyArray(const struct FName& Name)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetKeyArray");
-
-	UKeyConfig_GetKeyArray_Params params;
-	params.Name = Name;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.GetFollowingPathLength
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UPathFollowingComponent* PathFollowingComponent         (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UKeyConfig::STATIC_GetFollowingPathLength(class UPathFollowingComponent* PathFollowingComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetFollowingPathLength");
-
-	UKeyConfig_GetFollowingPathLength_Params params;
-	params.PathFollowingComponent = PathFollowingComponent;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.GetCurrentMontagePosition
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UKeyConfig::STATIC_GetCurrentMontagePosition(class UAnimInstance* AnimInstance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetCurrentMontagePosition");
-
-	UKeyConfig_GetCurrentMontagePosition_Params params;
-	params.AnimInstance = AnimInstance;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.GetCurrentMontagePlayRate
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float UKeyConfig::STATIC_GetCurrentMontagePlayRate(class UAnimInstance* AnimInstance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.GetCurrentMontagePlayRate");
-
-	UKeyConfig_GetCurrentMontagePlayRate_Params params;
-	params.AnimInstance = AnimInstance;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.EnableNextAttack
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UKeyConfig::STATIC_EnableNextAttack(class UAnimInstance* AnimInstance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.EnableNextAttack");
-
-	UKeyConfig_EnableNextAttack_Params params;
-	params.AnimInstance = AnimInstance;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.DispCurrentAnimInfo
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UAnimInstance*           AnimInstance                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UKeyConfig::STATIC_DispCurrentAnimInfo(class UAnimInstance* AnimInstance)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.DispCurrentAnimInfo");
-
-	UKeyConfig_DispCurrentAnimInfo_Params params;
-	params.AnimInstance = AnimInstance;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-}
-
-
-// Function BattleLabo.KeyConfig.CreateObjectForTemplate
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 Outer                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Template                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UObject* UKeyConfig::STATIC_CreateObjectForTemplate(class UObject* Outer, const struct FName& Name, class UObject* Template)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.CreateObjectForTemplate");
-
-	UKeyConfig_CreateObjectForTemplate_Params params;
-	params.Outer = Outer;
-	params.Name = Name;
-	params.Template = Template;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(fn, &params);
-
-	fn->FunctionFlags = flags;
-
-	return params.ReturnValue;
-}
-
-
-// Function BattleLabo.KeyConfig.CreateObject
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  ObjectClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UObject* UKeyConfig::STATIC_CreateObject(class UClass* ObjectClass)
-{
-	static auto fn = UObject::FindObject<UFunction>("Function BattleLabo.KeyConfig.CreateObject");
-
-	UKeyConfig_CreateObject_Params params;
-	params.ObjectClass = ObjectClass;
-
-	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.ChangeRow
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, Static, Private, Protected, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            RowIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_UI_DressMode_Clothing_C::ChangeRow(int RowIndex)
+void UBPW_UI_DressMode_Clothing_C::STATIC_ChangeRow(int RowIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.ChangeRow");
 
@@ -34,7 +34,7 @@ void UBPW_UI_DressMode_Clothing_C::ChangeRow(int RowIndex)
 
 
 // Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.InitClothingLine
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<int>                    SelectIndex                    (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // struct FName                   MeshName                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -62,7 +62,7 @@ void UBPW_UI_DressMode_Clothing_C::InitClothingLine(const struct FName& MeshName
 
 
 // Function BPW_UI_DressMode_Clothing.BPW_UI_DressMode_Clothing_C.InitIconButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, NetMulticast, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void UBPW_UI_DressMode_Clothing_C::InitIconButton()
 {

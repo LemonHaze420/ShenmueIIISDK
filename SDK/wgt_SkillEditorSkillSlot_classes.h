@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void SetSelect(bool Select);
-	void SetFocus(bool Focus);
-	void SetText(const struct FText& InText);
+	void STATIC_SetSelect(bool Select);
+	void STATIC_SetFocus(bool Focus);
+	void STATIC_SetText(const struct FText& InText);
 };
 
 

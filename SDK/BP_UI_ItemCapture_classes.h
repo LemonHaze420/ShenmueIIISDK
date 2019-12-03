@@ -47,18 +47,18 @@ public:
 	}
 
 
-	void ResetItemCamera();
+	void STATIC_ResetItemCamera();
 	void SetupInterp(const struct FVector& TargetLocation, const struct FVector& PreLocation);
 	void UpdateInterp();
-	void InputAxis_Left(float AxisValue);
-	void UpdateCamera(float DeltaSEcond);
-	void InputAxis_Right(bool Vertical, float AxisValue);
+	void STATIC_InputAxis_Left(float AxisValue);
+	void STATIC_UpdateCamera(float DeltaSecond);
+	void STATIC_InputAxis_Right(bool Vertical, float AxisValue);
 	void SetViewMode(bool IsViewMode);
 	void SetViewMesh(int ItemId);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ReceiveDestroyed();
+	void STATIC_ReceiveDestroyed();
 	void ExecuteUbergraph_BP_UI_ItemCapture(int EntryPoint);
 };
 

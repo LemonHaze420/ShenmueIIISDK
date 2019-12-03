@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Clock.BPF_Clock_C.CheckClockVisibility
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Exec, Native, Event, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ESlateVisibility               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-ESlateVisibility UBPF_Clock_C::STATIC_CheckClockVisibility(class UObject* __WorldContext)
+ESlateVisibility UBPF_Clock_C::CheckClockVisibility(class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Clock.BPF_Clock_C.CheckClockVisibility");
 
@@ -27,6 +27,7 @@ ESlateVisibility UBPF_Clock_C::STATIC_CheckClockVisibility(class UObject* __Worl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,12 +38,12 @@ ESlateVisibility UBPF_Clock_C::STATIC_CheckClockVisibility(class UObject* __Worl
 
 
 // Function BPF_Clock.BPF_Clock_C.SetClockVisibility
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, MulticastDelegate, Private, NetServer, NetClient, Const)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Clock_C::STATIC_SetClockVisibility(bool Visible, class UObject* __WorldContext)
+void UBPF_Clock_C::SetClockVisibility(bool Visible, class UObject* __WorldContext)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Clock.BPF_Clock_C.SetClockVisibility");
 
@@ -51,6 +52,7 @@ void UBPF_Clock_C::STATIC_SetClockVisibility(bool Visible, class UObject* __Worl
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -49,7 +49,7 @@ public:
 	}
 
 
-	class ULevelSequencePlayer* STATIC_CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor);
+	class ULevelSequencePlayer* CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor);
 };
 
 
@@ -69,42 +69,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class LevelSequence.LevelSequenceBurnInInitSettings
-// 0x0000 (0x0028 - 0x0028)
-class ULevelSequenceBurnInInitSettings : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
-		return ptr;
-	}
-
-};
-
-
-// Class LevelSequence.LevelSequenceBurnInOptions
-// 0x0028 (0x0050 - 0x0028)
-class ULevelSequenceBurnInOptions : public UObject
-{
-public:
-	bool                                               bUseBurnIn;                                               // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	struct FSoftClassPath                              BurnInClass;                                              // 0x0030(0x0018) (Edit, BlueprintVisible, Config)
-	class ULevelSequenceBurnInInitSettings*            Settings;                                                 // 0x0048(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
-		return ptr;
-	}
-
-
-	void SetBurnIn(const struct FSoftClassPath& InBurnInClass);
 };
 
 
@@ -142,6 +106,42 @@ public:
 	void RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor);
 	class ULevelSequence* GetSequence(bool bLoad, bool bInitializePlayer);
 	void AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset);
+};
+
+
+// Class LevelSequence.LevelSequenceBurnInOptions
+// 0x0028 (0x0050 - 0x0028)
+class ULevelSequenceBurnInOptions : public UObject
+{
+public:
+	bool                                               bUseBurnIn;                                               // 0x0028(0x0001) (Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+	struct FSoftClassPath                              BurnInClass;                                              // 0x0030(0x0018) (Edit, BlueprintVisible, Config)
+	class ULevelSequenceBurnInInitSettings*            Settings;                                                 // 0x0048(0x0008) (Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInOptions");
+		return ptr;
+	}
+
+
+	void SetBurnIn(const struct FSoftClassPath& InBurnInClass);
+};
+
+
+// Class LevelSequence.LevelSequenceBurnInInitSettings
+// 0x0000 (0x0028 - 0x0028)
+class ULevelSequenceBurnInInitSettings : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("Class LevelSequence.LevelSequenceBurnInInitSettings");
+		return ptr;
+	}
+
 };
 
 

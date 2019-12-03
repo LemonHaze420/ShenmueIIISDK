@@ -41,7 +41,7 @@ public:
 
 	void TryDisableTick();
 	void IgnoreCollision(class AS3Character* Char, bool Ignore);
-	void TestBlockedByNPC(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS);
+	void STATIC_TestBlockedByNPC(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS);
 	void TestAngleBlocked(float Yaw, float Distance, TArray<class AS3Character*>* AddNPCS);
 	void TestNavmeshDistance(float Yaw, float Max, bool* Hit, float* DistanceSqr);
 	void ReceiveBeginPlay();
@@ -50,7 +50,7 @@ public:
 	void StartScanning();
 	void StopScanning();
 	void OnCompletedPositionCollectionWindow();
-	void ExecuteUbergraph_BPC_RadialStuckScanner(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_RadialStuckScanner(int EntryPoint);
 };
 
 

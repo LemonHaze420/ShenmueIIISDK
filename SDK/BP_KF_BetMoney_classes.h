@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_KF_BetMoney(int EntryPoint);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_KF_BetMoney(int EntryPoint);
 };
 
 

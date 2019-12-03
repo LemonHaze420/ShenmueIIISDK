@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function Landscape.LandscapeProxy.SetLandscapeMaterialVectorParameterValue
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
 // struct FLinearColor            Value                          (Parm, IsPlainOldData)
@@ -28,7 +28,6 @@ void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(const struct FNam
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -37,7 +36,7 @@ void ALandscapeProxy::SetLandscapeMaterialVectorParameterValue(const struct FNam
 
 
 // Function Landscape.LandscapeProxy.SetLandscapeMaterialTextureParameterValue
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture*                Value                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -51,7 +50,6 @@ void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(const struct FNa
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -60,7 +58,7 @@ void ALandscapeProxy::SetLandscapeMaterialTextureParameterValue(const struct FNa
 
 
 // Function Landscape.LandscapeProxy.SetLandscapeMaterialScalarParameterValue
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // struct FName                   ParameterName                  (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Value                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -74,7 +72,6 @@ void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(const struct FNam
 	params.Value = Value;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,7 +80,7 @@ void ALandscapeProxy::SetLandscapeMaterialScalarParameterValue(const struct FNam
 
 
 // Function Landscape.LandscapeProxy.EditorSetLandscapeMaterial
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class UMaterialInterface*      NewLandscapeMaterial           (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -95,7 +92,6 @@ void ALandscapeProxy::EditorSetLandscapeMaterial(class UMaterialInterface* NewLa
 	params.NewLandscapeMaterial = NewLandscapeMaterial;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -104,7 +100,7 @@ void ALandscapeProxy::EditorSetLandscapeMaterial(class UMaterialInterface* NewLa
 
 
 // Function Landscape.LandscapeProxy.EditorApplySpline
-// (Final, Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // class USplineComponent*        InSplineComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          StartWidth                     (Parm, ZeroConstructor, IsPlainOldData)
@@ -136,7 +132,6 @@ void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponen
 	params.PaintLayer = PaintLayer;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -145,7 +140,7 @@ void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponen
 
 
 // Function Landscape.LandscapeProxy.ChangeUseTessellationComponentScreenSizeFalloff
-// (Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // bool                           InComponentScreenSizeToUseSubSections (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -157,7 +152,6 @@ void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InCom
 	params.InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +160,7 @@ void ALandscapeProxy::ChangeUseTessellationComponentScreenSizeFalloff(bool InCom
 
 
 // Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSizeFalloff
-// (Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          InUseTessellationComponentScreenSizeFalloff (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -178,7 +172,6 @@ void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTe
 	params.InUseTessellationComponentScreenSizeFalloff = InUseTessellationComponentScreenSizeFalloff;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -187,7 +180,7 @@ void ALandscapeProxy::ChangeTessellationComponentScreenSizeFalloff(float InUseTe
 
 
 // Function Landscape.LandscapeProxy.ChangeTessellationComponentScreenSize
-// (Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          InTessellationComponentScreenSize (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -199,7 +192,6 @@ void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellation
 	params.InTessellationComponentScreenSize = InTessellationComponentScreenSize;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -208,7 +200,7 @@ void ALandscapeProxy::ChangeTessellationComponentScreenSize(float InTessellation
 
 
 // Function Landscape.LandscapeProxy.ChangeLODDistanceFactor
-// (Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          InLODDistanceFactor            (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -220,7 +212,6 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 	params.InLODDistanceFactor = InLODDistanceFactor;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -229,7 +220,7 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 
 
 // Function Landscape.LandscapeProxy.ChangeComponentScreenSizeToUseSubSections
-// (Native, Public, BlueprintCallable)
+// ()
 // Parameters:
 // float                          InComponentScreenSizeToUseSubSections (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -241,7 +232,6 @@ void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponen
 	params.InComponentScreenSizeToUseSubSections = InComponentScreenSizeToUseSubSections;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -250,7 +240,7 @@ void ALandscapeProxy::ChangeComponentScreenSizeToUseSubSections(float InComponen
 
 
 // Function Landscape.LandscapeComponent.GetMaterialInstanceDynamic
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// ()
 // Parameters:
 // int                            InIndex                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstanceDynamic* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -263,7 +253,6 @@ class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(
 	params.InIndex = InIndex;
 
 	auto flags = fn->FunctionFlags;
-	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

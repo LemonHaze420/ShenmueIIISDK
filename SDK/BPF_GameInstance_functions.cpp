@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_GameInstance.BPF_GameInstance_C.getS3GameInstance
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, MulticastDelegate, Public, Protected, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_S3GameInstance_C*    BP_S3GameInstance              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_GameInstance_C::STATIC_getS3GameInstance(class UObject* __WorldContext, class UBP_S3GameInstance_C** BP_S3GameInstance)
+void UBPF_GameInstance_C::getS3GameInstance(class UObject* __WorldContext, class UBP_S3GameInstance_C** BP_S3GameInstance)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_GameInstance.BPF_GameInstance_C.getS3GameInstance");
 
@@ -27,6 +27,7 @@ void UBPF_GameInstance_C::STATIC_getS3GameInstance(class UObject* __WorldContext
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

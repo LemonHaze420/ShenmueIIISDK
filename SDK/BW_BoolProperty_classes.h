@@ -38,7 +38,7 @@ public:
 	struct FText GetParameterName();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void BndEvt__CheckBox_0_K2Node_ComponentBoundEvent_131_OnCheckBoxComponentStateChanged__DelegateSignature(bool bIsChecked);
-	void BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature();
+	void STATIC_BndEvt__S3Button_12_K2Node_ComponentBoundEvent_178_OnButtonClickedEvent__DelegateSignature();
 	void PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_BW_BoolProperty(int EntryPoint);
 	void BoolPropertyChanged__DelegateSignature();

@@ -14,12 +14,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.CheckChinaName
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetRequest, Static, Public, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FString                 inString                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FString                 OutString                      (Parm, OutParm, ZeroConstructor)
 
-void UBPW_SaveLoadData_C::CheckChinaName(const struct FString& inString, struct FString* OutString)
+void UBPW_SaveLoadData_C::STATIC_CheckChinaName(const struct FString& inString, struct FString* OutString)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadData.BPW_SaveLoadData_C.CheckChinaName");
 
@@ -38,11 +38,11 @@ void UBPW_SaveLoadData_C::CheckChinaName(const struct FString& inString, struct 
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.GetIconData
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, Event, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FString                 AreaId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void UBPW_SaveLoadData_C::GetIconData(const struct FString& AreaId)
+void UBPW_SaveLoadData_C::STATIC_GetIconData(const struct FString& AreaId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadData.BPW_SaveLoadData_C.GetIconData");
 
@@ -50,6 +50,7 @@ void UBPW_SaveLoadData_C::GetIconData(const struct FString& AreaId)
 	params.AreaId = AreaId;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +59,7 @@ void UBPW_SaveLoadData_C::GetIconData(const struct FString& AreaId)
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.IsFocus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Public, Private, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // bool                           Focus                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -70,6 +71,7 @@ void UBPW_SaveLoadData_C::IsFocus(bool Focus)
 	params.Focus = Focus;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -78,7 +80,7 @@ void UBPW_SaveLoadData_C::IsFocus(bool Focus)
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.SetData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, HasOutParms, DLLImport, BlueprintEvent)
 // Parameters:
 // struct FString                 Name                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // struct FDateTime               SaveDate                       (BlueprintVisible, BlueprintReadOnly, Parm)
@@ -93,7 +95,7 @@ void UBPW_SaveLoadData_C::IsFocus(bool Focus)
 // int                            Money                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            BetMoney                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPW_SaveLoadData_C::SetData(const struct FString& Name, const struct FDateTime& SaveDate, const struct FDateTime& GameDate, ES3Where Location, int Index, bool Success, float DataSize, int Step, const struct FString& AreaId, const struct FS3BattleStatsSaveData& BattleData, int Money, int BetMoney)
+void UBPW_SaveLoadData_C::STATIC_SetData(const struct FString& Name, const struct FDateTime& SaveDate, const struct FDateTime& GameDate, ES3Where Location, int Index, bool Success, float DataSize, int Step, const struct FString& AreaId, const struct FS3BattleStatsSaveData& BattleData, int Money, int BetMoney)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPW_SaveLoadData.BPW_SaveLoadData_C.SetData");
 
@@ -120,7 +122,7 @@ void UBPW_SaveLoadData_C::SetData(const struct FString& Name, const struct FDate
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.OnLoaded_27F679DB4249387B3159F79A44E9A691
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // class UObject*                 Loaded                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -140,7 +142,7 @@ void UBPW_SaveLoadData_C::OnLoaded_27F679DB4249387B3159F79A44E9A691(class UObjec
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_27_OnButtonHoverEvent__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Native, NetMulticast, Private, Protected, NetServer, NetClient, BlueprintPure)
 
 void UBPW_SaveLoadData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_27_OnButtonHoverEvent__DelegateSignature()
 {
@@ -149,6 +151,7 @@ void UBPW_SaveLoadData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_27_OnButto
 	UBPW_SaveLoadData_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_27_OnButtonHoverEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,7 +160,7 @@ void UBPW_SaveLoadData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_27_OnButto
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature
-// (BlueprintEvent)
+// (Net, Native, NetMulticast, Private, Protected, NetServer, NetClient, BlueprintPure)
 
 void UBPW_SaveLoadData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature()
 {
@@ -166,6 +169,7 @@ void UBPW_SaveLoadData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButton
 	UBPW_SaveLoadData_C_BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButtonReleasedEvent__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -174,7 +178,7 @@ void UBPW_SaveLoadData_C::BndEvt__Button_0_K2Node_ComponentBoundEvent_4_OnButton
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.SetSaveIcon
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetMulticast, MulticastDelegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // struct FString                 AreaId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -194,7 +198,7 @@ void UBPW_SaveLoadData_C::SetSaveIcon(const struct FString& AreaId)
 
 
 // Function BPW_SaveLoadData.BPW_SaveLoadData_C.ExecuteUbergraph_BPW_SaveLoadData
-// (HasDefaults)
+// (NetReliable, NetRequest, Native, Private, Protected, NetServer, DLLImport, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -206,6 +210,7 @@ void UBPW_SaveLoadData_C::ExecuteUbergraph_BPW_SaveLoadData(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function wgt_MemoPage_Row8_2.wgt_MemoPage_Row8_1_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (NetRequest, Exec, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void Uwgt_MemoPage_Row8_1_C::Construct()
 {
@@ -31,7 +31,7 @@ void Uwgt_MemoPage_Row8_1_C::Construct()
 
 
 // Function wgt_MemoPage_Row8_2.wgt_MemoPage_Row8_1_C.PushButton
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector2D               Position                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
@@ -51,11 +51,11 @@ void Uwgt_MemoPage_Row8_1_C::PushButton(const struct FVector2D& Position)
 
 
 // Function wgt_MemoPage_Row8_2.wgt_MemoPage_Row8_1_C.SetPageIndex
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MemoPage_Row8_1_C::SetPageIndex(int PageIndex)
+void Uwgt_MemoPage_Row8_1_C::STATIC_SetPageIndex(int PageIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPage_Row8_2.wgt_MemoPage_Row8_1_C.SetPageIndex");
 
@@ -71,11 +71,11 @@ void Uwgt_MemoPage_Row8_1_C::SetPageIndex(int PageIndex)
 
 
 // Function wgt_MemoPage_Row8_2.wgt_MemoPage_Row8_1_C.ExecuteUbergraph_wgt_MemoPage_Row8_2
-// (HasDefaults)
+// (Net, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, HasOutParms, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void Uwgt_MemoPage_Row8_1_C::ExecuteUbergraph_wgt_MemoPage_Row8_2(int EntryPoint)
+void Uwgt_MemoPage_Row8_1_C::STATIC_ExecuteUbergraph_wgt_MemoPage_Row8_2(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function wgt_MemoPage_Row8_2.wgt_MemoPage_Row8_1_C.ExecuteUbergraph_wgt_MemoPage_Row8_2");
 

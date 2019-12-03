@@ -25,10 +25,10 @@ public:
 	}
 
 
-	void STATIC_BPF_FilterOutBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* TargetList, TArray<TEnumAsByte<EBattleAdvice>>* Remove);
+	void BPF_FilterOutBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* TargetList, TArray<TEnumAsByte<EBattleAdvice>>* Remove);
 	bool STATIC_BPF_IsBattleAdviceRelevant(TEnumAsByte<EBattleAdvice> Advice, class UObject* __WorldContext);
-	void STATIC_BPF_GetRelevantBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* SortedAdvice);
-	void STATIC_BPF_GetMostRelevantBattleAdvice(class UObject* __WorldContext, TEnumAsByte<EBattleAdvice>* newParam);
+	void BPF_GetRelevantBattleAdvice(class UObject* __WorldContext, TArray<TEnumAsByte<EBattleAdvice>>* SortedAdvice);
+	void BPF_GetMostRelevantBattleAdvice(class UObject* __WorldContext, TEnumAsByte<EBattleAdvice>* newParam);
 };
 
 

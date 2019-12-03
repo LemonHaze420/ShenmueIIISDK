@@ -230,7 +230,7 @@ struct UBP_MainFlowSubFunction_C_MfSubFunc_BitCheck_Params
 	int                                                CurFlag;                                                  // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	int                                                MaskFlag;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 	class UObject*                                     __WorldContext;                                           // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
-	bool                                               Bit;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+	bool                                               bit;                                                      // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_MainFlowSubFunction.BP_MainFlowSubFunction_C.MfSubFunc_MakeElapsedTime

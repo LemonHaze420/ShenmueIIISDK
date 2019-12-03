@@ -44,17 +44,17 @@ public:
 	}
 
 
-	void PlayFadeArrowAnim();
+	void STATIC_PlayFadeArrowAnim();
 	void ForceEnabledDirectionArrow();
 	void ReverseArrow();
-	void SetCenterCursorVisible(bool Visibility);
+	void STATIC_SetCenterCursorVisible(bool Visibility);
 	void SetArrowAlpha(float BaseAlpha, float ZoomAlpha);
 	void SetArrowPosition(float OffsetRate);
 	void UpdateVisible(bool Visible);
-	void UpdateDirectionArrow(TArray<struct FName>* VisibleArrowName);
-	void PreConstruct(bool IsDesignTime);
-	void Construct();
-	void ExecuteUbergraph_WBP_EventAttention(int EntryPoint);
+	void STATIC_UpdateDirectionArrow(TArray<struct FName>* VisibleArrowName);
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_Construct();
+	void STATIC_ExecuteUbergraph_WBP_EventAttention(int EntryPoint);
 };
 
 

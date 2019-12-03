@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.Get_PlayerAngle
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Native, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          Angle                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DirectionCheck_C::Get_PlayerAngle(float* Angle)
+void ABP_DirectionCheck_C::STATIC_Get_PlayerAngle(float* Angle)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DirectionCheck.BP_DirectionCheck_C.Get_PlayerAngle");
 
 	ABP_DirectionCheck_C_Get_PlayerAngle_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,7 +37,7 @@ void ABP_DirectionCheck_C::Get_PlayerAngle(float* Angle)
 
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.Get_HitDirection
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Positive_direction             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Impact_dot_Arrow               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -61,7 +62,7 @@ void ABP_DirectionCheck_C::Get_HitDirection(bool* Positive_direction, float* Imp
 
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_DirectionCheck_C::UserConstructionScript()
 {
@@ -78,9 +79,9 @@ void ABP_DirectionCheck_C::UserConstructionScript()
 
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, Static, NetMulticast, MulticastDelegate, Delegate, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_DirectionCheck_C::ReceiveBeginPlay()
+void ABP_DirectionCheck_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_DirectionCheck.BP_DirectionCheck_C.ReceiveBeginPlay");
 
@@ -95,7 +96,7 @@ void ABP_DirectionCheck_C::ReceiveBeginPlay()
 
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_1_ComponentEndOverlapSignature__DelegateSignature
-// (BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -121,7 +122,7 @@ void ABP_DirectionCheck_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent
 
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.BndEvt__CollisionComponent_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (NetReliable, Exec, Native, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UPrimitiveComponent*     OverlappedComponent            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -143,6 +144,7 @@ void ABP_DirectionCheck_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent
 	params.SweepResult = SweepResult;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +153,7 @@ void ABP_DirectionCheck_C::BndEvt__CollisionComponent_K2Node_ComponentBoundEvent
 
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.ExecuteUbergraph_BP_DirectionCheck
-// (HasDefaults)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, Protected, Delegate, NetServer, HasOutParms, BlueprintEvent)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -171,7 +173,7 @@ void ABP_DirectionCheck_C::ExecuteUbergraph_BP_DirectionCheck(int EntryPoint)
 
 
 // Function BP_DirectionCheck.BP_DirectionCheck_C.ChangeDirection__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Positive_direction             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Impact_dot_Arrow               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)

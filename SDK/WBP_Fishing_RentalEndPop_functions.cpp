@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_Fishing_RentalEndPop.WBP_Fishing_RentalEndPop_C.SetText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, NetMulticast, MulticastDelegate, Delegate, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FString                 Str                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
@@ -34,15 +34,16 @@ void UWBP_Fishing_RentalEndPop_C::SetText(const struct FString& Str)
 
 
 // Function WBP_Fishing_RentalEndPop.WBP_Fishing_RentalEndPop_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UWBP_Fishing_RentalEndPop_C::Construct()
+void UWBP_Fishing_RentalEndPop_C::STATIC_Construct()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_RentalEndPop.WBP_Fishing_RentalEndPop_C.Construct");
 
 	UWBP_Fishing_RentalEndPop_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,15 +52,16 @@ void UWBP_Fishing_RentalEndPop_C::Construct()
 
 
 // Function WBP_Fishing_RentalEndPop.WBP_Fishing_RentalEndPop_C.OnAnimFinished
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UWBP_Fishing_RentalEndPop_C::OnAnimFinished()
+void UWBP_Fishing_RentalEndPop_C::STATIC_OnAnimFinished()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_Fishing_RentalEndPop.WBP_Fishing_RentalEndPop_C.OnAnimFinished");
 
 	UWBP_Fishing_RentalEndPop_C_OnAnimFinished_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -68,7 +70,7 @@ void UWBP_Fishing_RentalEndPop_C::OnAnimFinished()
 
 
 // Function WBP_Fishing_RentalEndPop.WBP_Fishing_RentalEndPop_C.ExecuteUbergraph_WBP_Fishing_RentalEndPop
-// ()
+// (Net, NetReliable, Exec, Event, NetMulticast, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_CanExit(class UObject* __WorldContext, bool* CAN);
+	void CanExit(class UObject* __WorldContext, bool* CAN);
 };
 
 

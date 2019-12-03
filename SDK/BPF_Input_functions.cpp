@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Input.BPF_Input_C.BPF_PadIndexToGeneralWindowButton
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, NetClient, BlueprintPure)
 // Parameters:
 // ES3PadButtonIndex              Pad                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -29,6 +29,7 @@ TEnumAsByte<EN_GeneralWindow_Button> UBPF_Input_C::STATIC_BPF_PadIndexToGeneralW
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -39,7 +40,7 @@ TEnumAsByte<EN_GeneralWindow_Button> UBPF_Input_C::STATIC_BPF_PadIndexToGeneralW
 
 
 // Function BPF_Input.BPF_Input_C.BPF_GetCancelPadIndex
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PadButtonIndex              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -62,7 +63,7 @@ ES3PadButtonIndex UBPF_Input_C::STATIC_BPF_GetCancelPadIndex(class UObject* __Wo
 
 
 // Function BPF_Input.BPF_Input_C.BPF_GetConfirmPadIndex
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, NetRequest, Event, Static, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3PadButtonIndex              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

@@ -43,8 +43,8 @@ public:
 
 	void Construct();
 	void PushButton(const struct FVector2D& positiopn);
-	void SetPageIndex(int PageIndex);
-	void ExecuteUbergraph_wgt_MemoPage_EN_1(int EntryPoint);
+	void STATIC_SetPageIndex(int PageIndex);
+	void STATIC_ExecuteUbergraph_wgt_MemoPage_EN_1(int EntryPoint);
 };
 
 

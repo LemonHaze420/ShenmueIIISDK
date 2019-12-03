@@ -61,18 +61,18 @@ public:
 
 
 	void SetMoneyText(int SetValue, int ValueMin, int ValueMax);
-	void SetPos();
-	void SetValueType(TEnumAsByte<EN_ValueType> Index);
-	void GetHaveMoney(int* HaveMoney);
+	void STATIC_SetPos();
+	void STATIC_SetValueType(TEnumAsByte<EN_ValueType> Index);
+	void STATIC_GetHaveMoney(int* HaveMoney);
 	void SetAddMoney(int AddMoney);
-	void SetSubtractMoney(int SubMoney);
+	void STATIC_SetSubtractMoney(int SubMoney);
 	void AddHaveMoney(int AddMoney);
-	void SubtractHaveMoney(int SubMoney);
+	void STATIC_SubtractHaveMoney(int SubMoney);
 	void SetHaveMoney(int HaveMoney, bool NotAnim);
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void Construct();
-	void Reset();
-	void ExecuteUbergraph_wgt_HaveMoney(int EntryPoint);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_Construct();
+	void STATIC_Reset();
+	void STATIC_ExecuteUbergraph_wgt_HaveMoney(int EntryPoint);
 };
 
 

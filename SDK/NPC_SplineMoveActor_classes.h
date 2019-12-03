@@ -31,17 +31,17 @@ public:
 
 
 	int GetNextAvailableWaitPointIndex(int StartSearch);
-	int GetFirstAvailableWaitPointIndex();
+	int STATIC_GetFirstAvailableWaitPointIndex();
 	void GetStartLocationAndRotation(struct FVector* Location, struct FRotator* Rotation);
 	void TryStartWaitPointEvent(int Index, bool* Success);
-	void GetWaitPointActor(int Index, class ABP_NPCLeadWaitPointEvent_C** Actor);
+	void STATIC_GetWaitPointActor(int Index, class ABP_NPCLeadWaitPointEvent_C** Actor);
 	void GetWidthAtSplineDistance(float Distance, float* Width);
-	void GetWaitPointSplineDistance(int PointIndex, float* Next);
+	void STATIC_GetWaitPointSplineDistance(int PointIndex, float* Next);
 	void GetLocationAtDistance(float InDistance, struct FVector* OutLocation);
-	void FindDistanceClosestToLocation(const struct FVector& InLocation, float* OutDistance);
-	void GetNearLength(const struct FVector& pos, struct FVector* NearPos, float* NearLength);
+	void STATIC_FindDistanceClosestToLocation(const struct FVector& InLocation, float* OutDistance);
+	void STATIC_GetNearLength(const struct FVector& pos, struct FVector* NearPos, float* NearLength);
 	void InitSplinePoint();
-	void GetCurrentLocationAndRotation(float NowLength, struct FVector* Location, float* MaxLength, float* RotZ);
+	void STATIC_GetCurrentLocationAndRotation(float NowLength, struct FVector* Location, float* MaxLength, float* RotZ);
 	void UserConstructionScript();
 };
 

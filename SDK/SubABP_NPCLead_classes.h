@@ -28,7 +28,7 @@ public:
 
 
 	bool IsEnableLookAt();
-	void InitFaceMotages(bool* Succsess);
+	void STATIC_InitFaceMotages(bool* Succsess);
 };
 
 

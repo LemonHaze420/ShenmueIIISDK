@@ -30,8 +30,8 @@ public:
 	}
 
 
-	void ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
-	void ExecuteUbergraph_BTT_SetFlag(int EntryPoint);
+	void STATIC_ReceiveExecuteAI(class AAIController* OwnerController, class APawn* ControlledPawn);
+	void STATIC_ExecuteUbergraph_BTT_SetFlag(int EntryPoint);
 };
 
 

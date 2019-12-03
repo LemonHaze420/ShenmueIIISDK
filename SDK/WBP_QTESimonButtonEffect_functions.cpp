@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_QTESimonButtonEffect.WBP_QTESimonButtonEffect_C.SetButtonImage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Static, Public, NetServer, HasDefaults, NetClient, BlueprintPure)
 // Parameters:
 // class UTexture2D*              Image                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UWBP_QTESimonButtonEffect_C::SetButtonImage(class UTexture2D* Image)
+void UWBP_QTESimonButtonEffect_C::STATIC_SetButtonImage(class UTexture2D* Image)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESimonButtonEffect.WBP_QTESimonButtonEffect_C.SetButtonImage");
 
@@ -34,7 +34,7 @@ void UWBP_QTESimonButtonEffect_C::SetButtonImage(class UTexture2D* Image)
 
 
 // Function WBP_QTESimonButtonEffect.WBP_QTESimonButtonEffect_C.PlayInstruction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void UWBP_QTESimonButtonEffect_C::PlayInstruction()
 {
@@ -43,6 +43,7 @@ void UWBP_QTESimonButtonEffect_C::PlayInstruction()
 	UWBP_QTESimonButtonEffect_C_PlayInstruction_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,9 +52,9 @@ void UWBP_QTESimonButtonEffect_C::PlayInstruction()
 
 
 // Function WBP_QTESimonButtonEffect.WBP_QTESimonButtonEffect_C.Reset
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, Private, Delegate, NetServer, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 
-void UWBP_QTESimonButtonEffect_C::Reset()
+void UWBP_QTESimonButtonEffect_C::STATIC_Reset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function WBP_QTESimonButtonEffect.WBP_QTESimonButtonEffect_C.Reset");
 

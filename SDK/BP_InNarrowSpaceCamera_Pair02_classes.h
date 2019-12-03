@@ -30,7 +30,7 @@ public:
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_InNarrowSpaceCamera_Pair02(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_InNarrowSpaceCamera_Pair02(int EntryPoint);
 };
 
 

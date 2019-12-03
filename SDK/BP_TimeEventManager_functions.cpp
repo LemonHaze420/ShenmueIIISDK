@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.IsTimeHasComeFlag
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           flag                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -25,6 +25,7 @@ void ABP_TimeEventManager_C::IsTimeHasComeFlag(bool* flag)
 	ABP_TimeEventManager_C_IsTimeHasComeFlag_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void ABP_TimeEventManager_C::IsTimeHasComeFlag(bool* flag)
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeInit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_TimeEventManager_C::MiniGameTimeInit()
+void ABP_TimeEventManager_C::STATIC_MiniGameTimeInit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeInit");
 
 	ABP_TimeEventManager_C_MiniGameTimeInit_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +55,11 @@ void ABP_TimeEventManager_C::MiniGameTimeInit()
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalcFlagOn
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          TimeMax                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_TimeEventManager_C::MiniGameTimeCalcFlagOn(float TimeMax)
+void ABP_TimeEventManager_C::STATIC_MiniGameTimeCalcFlagOn(float TimeMax)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalcFlagOn");
 
@@ -65,6 +67,7 @@ void ABP_TimeEventManager_C::MiniGameTimeCalcFlagOn(float TimeMax)
 	params.TimeMax = TimeMax;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,9 +76,9 @@ void ABP_TimeEventManager_C::MiniGameTimeCalcFlagOn(float TimeMax)
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalc
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 
-void ABP_TimeEventManager_C::MiniGameTimeCalc()
+void ABP_TimeEventManager_C::STATIC_MiniGameTimeCalc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TimeEventManager.BP_TimeEventManager_C.MiniGameTimeCalc");
 
@@ -90,7 +93,7 @@ void ABP_TimeEventManager_C::MiniGameTimeCalc()
 
 
 // Function BP_TimeEventManager.BP_TimeEventManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetMulticast, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_TimeEventManager_C::UserConstructionScript()
 {

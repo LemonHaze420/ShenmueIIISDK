@@ -25,7 +25,7 @@ public:
 	}
 
 
-	class APawn* STATIC_GetAdventurePlayerPawn(class UObject* __WorldContext, bool* IsValid);
+	class APawn* GetAdventurePlayerPawn(class UObject* __WorldContext, bool* IsValid);
 };
 
 

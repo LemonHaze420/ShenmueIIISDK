@@ -30,12 +30,12 @@ public:
 	}
 
 
-	bool HasStatProgressChange(const struct FST_SparringResultLevelUpData& Data);
+	bool STATIC_HasStatProgressChange(const struct FST_SparringResultLevelUpData& Data);
 	bool HasRecordedProgressChange();
-	void GetLevelUpData(struct FST_SparringResultLevelUpData* Player, struct FST_SparringResultLevelUpData* ATK, struct FST_SparringResultLevelUpData* VIT);
-	bool HasRecordedStatLevelUp(const struct FST_SparringResultLevelUpData& Data);
-	bool HasRecordedLevelUp();
-	void UpdateStatData(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data);
+	void STATIC_GetLevelUpData(struct FST_SparringResultLevelUpData* Player, struct FST_SparringResultLevelUpData* ATK, struct FST_SparringResultLevelUpData* VIT);
+	bool STATIC_HasRecordedStatLevelUp(const struct FST_SparringResultLevelUpData& Data);
+	bool STATIC_HasRecordedLevelUp();
+	void STATIC_UpdateStatData(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data);
 	void RecordCurrentState();
 	void GetInitialStatState(class US3DerivedPlayerLevel* Stat, struct FST_SparringResultLevelUpData* Data);
 	void RecordInitialState();

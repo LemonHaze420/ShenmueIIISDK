@@ -13,17 +13,17 @@ namespace SDK
 // Functions
 //---------------------------------------------------------------------------
 
-// Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.getActionType
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.GetActionType
+// (NetReliable, Event, MulticastDelegate, Public, Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Sight                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<struct FS3DetectActionParam> Params                         (Parm, OutParm, ZeroConstructor)
 
-void UBPC_DoorTalkComponent_C::getActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
+void UBPC_DoorTalkComponent_C::GetActionType(bool Sight, TArray<struct FS3DetectActionParam>* Params)
 {
-	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.getActionType");
+	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.GetActionType");
 
-	UBPC_DoorTalkComponent_C_getActionType_Params params;
+	UBPC_DoorTalkComponent_C_GetActionType_Params params;
 	params.Sight = Sight;
 
 	auto flags = fn->FunctionFlags;
@@ -38,9 +38,9 @@ void UBPC_DoorTalkComponent_C::getActionType(bool Sight, TArray<struct FS3Detect
 
 
 // Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void UBPC_DoorTalkComponent_C::ReceiveBeginPlay()
+void UBPC_DoorTalkComponent_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.ReceiveBeginPlay");
 
@@ -55,15 +55,16 @@ void UBPC_DoorTalkComponent_C::ReceiveBeginPlay()
 
 
 // Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.RunDoorTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetServer)
 
-void UBPC_DoorTalkComponent_C::RunDoorTalk()
+void UBPC_DoorTalkComponent_C::STATIC_RunDoorTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.RunDoorTalk");
 
 	UBPC_DoorTalkComponent_C_RunDoorTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,15 +73,16 @@ void UBPC_DoorTalkComponent_C::RunDoorTalk()
 
 
 // Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.FinishDoorTalk
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, NetServer)
 
-void UBPC_DoorTalkComponent_C::FinishDoorTalk()
+void UBPC_DoorTalkComponent_C::STATIC_FinishDoorTalk()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.FinishDoorTalk");
 
 	UBPC_DoorTalkComponent_C_FinishDoorTalk_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,11 +91,11 @@ void UBPC_DoorTalkComponent_C::FinishDoorTalk()
 
 
 // Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.CustomEvent_2
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, NetMulticast, Public, Private, Protected, NetServer, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorTalkComponent_C::CustomEvent_2(int Index)
+void UBPC_DoorTalkComponent_C::STATIC_CustomEvent_2(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.CustomEvent_2");
 
@@ -101,6 +103,7 @@ void UBPC_DoorTalkComponent_C::CustomEvent_2(int Index)
 	params.Index = Index;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -109,11 +112,11 @@ void UBPC_DoorTalkComponent_C::CustomEvent_2(int Index)
 
 
 // Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.ExecuteUbergraph_BPC_DoorTalkComponent
-// (HasDefaults)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_DoorTalkComponent_C::ExecuteUbergraph_BPC_DoorTalkComponent(int EntryPoint)
+void UBPC_DoorTalkComponent_C::STATIC_ExecuteUbergraph_BPC_DoorTalkComponent(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_DoorTalkComponent.BPC_DoorTalkComponent_C.ExecuteUbergraph_BPC_DoorTalkComponent");
 
@@ -121,6 +124,7 @@ void UBPC_DoorTalkComponent_C::ExecuteUbergraph_BPC_DoorTalkComponent(int EntryP
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

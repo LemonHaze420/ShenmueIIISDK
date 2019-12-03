@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_getS3AdventureHud(class UObject* __WorldContext, class ABP_S3AdventureHUD_C** AdventureHUD);
+	void getS3AdventureHud(class UObject* __WorldContext, class ABP_S3AdventureHUD_C** AdventureHUD);
 };
 
 

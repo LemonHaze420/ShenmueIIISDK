@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void GetGachaID(struct FName* GachaId);
+	void STATIC_GetGachaID(struct FName* GachaId);
 };
 
 

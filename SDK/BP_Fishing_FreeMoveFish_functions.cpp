@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.SetTargetLocation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Event, NetResponse, NetMulticast, Delegate, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                 TargetLocation                 (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Output_Get                     (Parm, OutParm, IsPlainOldData)
@@ -38,7 +38,7 @@ void ABP_Fishing_FreeMoveFish_C::SetTargetLocation(const struct FVector& TargetL
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.MoveToTaget
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Private, Protected, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           InputPin                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -50,6 +50,7 @@ void ABP_Fishing_FreeMoveFish_C::MoveToTaget(bool InputPin)
 	params.InputPin = InputPin;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,17 +59,18 @@ void ABP_Fishing_FreeMoveFish_C::MoveToTaget(bool InputPin)
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.IsNeedTargetUpdate
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Static, NetMulticast, Private, Delegate, NetServer, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           Need                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_FreeMoveFish_C::IsNeedTargetUpdate(bool* Need)
+void ABP_Fishing_FreeMoveFish_C::STATIC_IsNeedTargetUpdate(bool* Need)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.IsNeedTargetUpdate");
 
 	ABP_Fishing_FreeMoveFish_C_IsNeedTargetUpdate_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -80,7 +82,7 @@ void ABP_Fishing_FreeMoveFish_C::IsNeedTargetUpdate(bool* Need)
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UpdateTargetLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, MulticastDelegate, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          AdditiveAngle                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -100,11 +102,11 @@ void ABP_Fishing_FreeMoveFish_C::UpdateTargetLocation(float AdditiveAngle)
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.SetBaseLocation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport)
 // Parameters:
 // struct FVector                 BaseLocation                   (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_Fishing_FreeMoveFish_C::SetBaseLocation(const struct FVector& BaseLocation)
+void ABP_Fishing_FreeMoveFish_C::STATIC_SetBaseLocation(const struct FVector& BaseLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.SetBaseLocation");
 
@@ -112,6 +114,7 @@ void ABP_Fishing_FreeMoveFish_C::SetBaseLocation(const struct FVector& BaseLocat
 	params.BaseLocation = BaseLocation;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -120,9 +123,9 @@ void ABP_Fishing_FreeMoveFish_C::SetBaseLocation(const struct FVector& BaseLocat
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.Initialize
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Static, NetMulticast, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure)
 
-void ABP_Fishing_FreeMoveFish_C::Initialize()
+void ABP_Fishing_FreeMoveFish_C::STATIC_Initialize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.Initialize");
 
@@ -137,11 +140,11 @@ void ABP_Fishing_FreeMoveFish_C::Initialize()
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UpdateMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ForceReplace                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_FreeMoveFish_C::UpdateMove(bool ForceReplace)
+void ABP_Fishing_FreeMoveFish_C::STATIC_UpdateMove(bool ForceReplace)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UpdateMove");
 
@@ -149,6 +152,7 @@ void ABP_Fishing_FreeMoveFish_C::UpdateMove(bool ForceReplace)
 	params.ForceReplace = ForceReplace;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -157,7 +161,7 @@ void ABP_Fishing_FreeMoveFish_C::UpdateMove(bool ForceReplace)
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, NetResponse, Public, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void ABP_Fishing_FreeMoveFish_C::UserConstructionScript()
 {
@@ -174,9 +178,9 @@ void ABP_Fishing_FreeMoveFish_C::UserConstructionScript()
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UpdateFadeTimeLine__FinishedFunc
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fishing_FreeMoveFish_C::UpdateFadeTimeLine__FinishedFunc()
+void ABP_Fishing_FreeMoveFish_C::STATIC_UpdateFadeTimeLine__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UpdateFadeTimeLine__FinishedFunc");
 
@@ -191,9 +195,9 @@ void ABP_Fishing_FreeMoveFish_C::UpdateFadeTimeLine__FinishedFunc()
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UpdateFadeTimeLine__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fishing_FreeMoveFish_C::UpdateFadeTimeLine__UpdateFunc()
+void ABP_Fishing_FreeMoveFish_C::STATIC_UpdateFadeTimeLine__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.UpdateFadeTimeLine__UpdateFunc");
 
@@ -208,11 +212,11 @@ void ABP_Fishing_FreeMoveFish_C::UpdateFadeTimeLine__UpdateFunc()
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Event, NetResponse, Static, Private, Delegate, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Fishing_FreeMoveFish_C::ReceiveTick(float DeltaSeconds)
+void ABP_Fishing_FreeMoveFish_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.ReceiveTick");
 
@@ -228,9 +232,9 @@ void ABP_Fishing_FreeMoveFish_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fishing_FreeMoveFish_C::ReceiveBeginPlay()
+void ABP_Fishing_FreeMoveFish_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.ReceiveBeginPlay");
 
@@ -245,7 +249,7 @@ void ABP_Fishing_FreeMoveFish_C::ReceiveBeginPlay()
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.BndEvt__Capsule_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature
-// (HasOutParms, BlueprintEvent)
+// (Net, Exec, Native, Event, NetMulticast, Public, Private, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UPrimitiveComponent*     HitComponent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class AActor*                  OtherActor                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -265,6 +269,7 @@ void ABP_Fishing_FreeMoveFish_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_Co
 	params.Hit = Hit;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -273,9 +278,9 @@ void ABP_Fishing_FreeMoveFish_C::BndEvt__Capsule_K2Node_ComponentBoundEvent_0_Co
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.DestroyReady
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fishing_FreeMoveFish_C::DestroyReady()
+void ABP_Fishing_FreeMoveFish_C::STATIC_DestroyReady()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.DestroyReady");
 
@@ -290,9 +295,9 @@ void ABP_Fishing_FreeMoveFish_C::DestroyReady()
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.InitializeFadeMaterial
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_Fishing_FreeMoveFish_C::InitializeFadeMaterial()
+void ABP_Fishing_FreeMoveFish_C::STATIC_InitializeFadeMaterial()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.InitializeFadeMaterial");
 
@@ -307,7 +312,7 @@ void ABP_Fishing_FreeMoveFish_C::InitializeFadeMaterial()
 
 
 // Function BP_Fishing_FreeMoveFish.BP_Fishing_FreeMoveFish_C.ExecuteUbergraph_BP_Fishing_FreeMoveFish
-// (HasDefaults)
+// (Net, NetRequest, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

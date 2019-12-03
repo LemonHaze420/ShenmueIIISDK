@@ -28,17 +28,17 @@ public:
 	}
 
 
-	bool IsNPCFadeInProgress();
+	bool STATIC_IsNPCFadeInProgress();
 	void CheckSkip(bool* dummy);
-	void RestoreExtendAttention();
-	void ExtendAttention(class UClass* AttentionControllerClass);
-	void RetryGame();
-	void InitWeather();
-	void UserConstructionScript();
+	void STATIC_RestoreExtendAttention();
+	void STATIC_ExtendAttention(class UClass* AttentionControllerClass);
+	void STATIC_RetryGame();
+	void STATIC_InitWeather();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void CheckTimeManager();
-	void SetSkyManager(class AS3SkyManager* InSkyManager);
-	void ExecuteUbergraph_BP_S3GameMode(int EntryPoint);
+	void STATIC_SetSkyManager(class AS3SkyManager* InSkyManager);
+	void STATIC_ExecuteUbergraph_BP_S3GameMode(int EntryPoint);
 };
 
 

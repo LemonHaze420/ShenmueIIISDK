@@ -43,10 +43,10 @@ public:
 
 
 	void SetBackColor(bool IsSelect);
-	ESlateVisibility GetVisibility_Background();
-	ESlateVisibility GetVisibility_FrameLine();
-	void PreConstruct(bool IsDesignTime);
-	void ExecuteUbergraph_WBP_SkillEditorFrame_Center(int EntryPoint);
+	ESlateVisibility STATIC_GetVisibility_Background();
+	ESlateVisibility STATIC_GetVisibility_FrameLine();
+	void STATIC_PreConstruct(bool IsDesignTime);
+	void STATIC_ExecuteUbergraph_WBP_SkillEditorFrame_Center(int EntryPoint);
 };
 
 

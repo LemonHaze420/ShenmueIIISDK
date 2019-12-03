@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.InitDataTime
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, Public, Private, NetServer, HasDefaults, DLLImport, BlueprintEvent)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ bool ABP_S3WorldTimekeeper_C::InitDataTime()
 	ABP_S3WorldTimekeeper_C_InitDataTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,15 +36,16 @@ bool ABP_S3WorldTimekeeper_C::InitDataTime()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, Public, Delegate, HasOutParms, BlueprintEvent)
 
-void ABP_S3WorldTimekeeper_C::UserConstructionScript()
+void ABP_S3WorldTimekeeper_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.UserConstructionScript");
 
 	ABP_S3WorldTimekeeper_C_UserConstructionScript_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,9 +54,9 @@ void ABP_S3WorldTimekeeper_C::UserConstructionScript()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void ABP_S3WorldTimekeeper_C::ReceiveBeginPlay()
+void ABP_S3WorldTimekeeper_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveBeginPlay");
 
@@ -69,11 +71,11 @@ void ABP_S3WorldTimekeeper_C::ReceiveBeginPlay()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Native, Event, Static, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, NetClient)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3WorldTimekeeper_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_S3WorldTimekeeper_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ReceiveEndPlay");
 
@@ -81,6 +83,7 @@ void ABP_S3WorldTimekeeper_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -89,9 +92,9 @@ void ABP_S3WorldTimekeeper_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.WaitPlay
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Static, MulticastDelegate, Private, Delegate, HasOutParms, BlueprintEvent)
 
-void ABP_S3WorldTimekeeper_C::WaitPlay()
+void ABP_S3WorldTimekeeper_C::STATIC_WaitPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.WaitPlay");
 
@@ -106,7 +109,7 @@ void ABP_S3WorldTimekeeper_C::WaitPlay()
 
 
 // Function BP_S3WorldTimekeeper.BP_S3WorldTimekeeper_C.ExecuteUbergraph_BP_S3WorldTimekeeper
-// ()
+// (Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Private, Protected, BlueprintCallable)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -118,6 +121,7 @@ void ABP_S3WorldTimekeeper_C::ExecuteUbergraph_BP_S3WorldTimekeeper(int EntryPoi
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

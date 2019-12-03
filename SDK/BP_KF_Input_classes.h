@@ -28,16 +28,16 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void InpActEvt_MG_Bottom_K2Node_InputActionEvent_10(const struct FKey& Key);
-	void InpActEvt_MG_Left_K2Node_InputActionEvent_9(const struct FKey& Key);
-	void InpActEvt_MG_Right_K2Node_InputActionEvent_8(const struct FKey& Key);
-	void InpActEvt_MG_Top_K2Node_InputActionEvent_7(const struct FKey& Key);
-	void InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_6(const struct FKey& Key);
-	void InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_5(float AxisValue);
-	void InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_6(float AxisValue);
-	void ReceiveTick(float DeltaSeconds);
-	void ExecuteUbergraph_BP_KF_Input(int EntryPoint);
+	void STATIC_UserConstructionScript();
+	void STATIC_InpActEvt_MG_Bottom_K2Node_InputActionEvent_10(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_Left_K2Node_InputActionEvent_9(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_Right_K2Node_InputActionEvent_8(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_Top_K2Node_InputActionEvent_7(const struct FKey& Key);
+	void STATIC_InpActEvt_MG_ButtonRight_K2Node_InputActionEvent_6(const struct FKey& Key);
+	void STATIC_InpAxisEvt_MG_LeftStickVertical_K2Node_InputAxisEvent_5(float AxisValue);
+	void STATIC_InpAxisEvt_MG_LeftStickHorizontal_K2Node_InputAxisEvent_6(float AxisValue);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_ExecuteUbergraph_BP_KF_Input(int EntryPoint);
 };
 
 

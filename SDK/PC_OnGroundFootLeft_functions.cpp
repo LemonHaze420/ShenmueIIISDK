@@ -14,14 +14,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function PC_OnGroundFootLeft.PC_OnGroundFootLeft_C.Received_NotifyTick
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, NetMulticast, Private, Protected, Delegate, HasOutParms, Const)
 // Parameters:
 // class USkeletalMeshComponent*  MeshComp                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class UAnimSequenceBase*       Animation                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          FrameDeltaTime                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UPC_OnGroundFootLeft_C::Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
+bool UPC_OnGroundFootLeft_C::STATIC_Received_NotifyTick(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, float FrameDeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function PC_OnGroundFootLeft.PC_OnGroundFootLeft_C.Received_NotifyTick");
 
@@ -31,6 +31,7 @@ bool UPC_OnGroundFootLeft_C::Received_NotifyTick(class USkeletalMeshComponent* M
 	params.FrameDeltaTime = FrameDeltaTime;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

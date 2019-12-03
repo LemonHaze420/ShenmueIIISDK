@@ -14,17 +14,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPC_SB_Score.BPC_SB_Score_C.GetScore
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Score                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_SB_Score_C::GetScore(int* Score)
+void UBPC_SB_Score_C::STATIC_GetScore(int* Score)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SB_Score.BPC_SB_Score_C.GetScore");
 
 	UBPC_SB_Score_C_GetScore_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,15 +37,16 @@ void UBPC_SB_Score_C::GetScore(int* Score)
 
 
 // Function BPC_SB_Score.BPC_SB_Score_C.AddScore
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, Static, NetMulticast, Public, Private, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void UBPC_SB_Score_C::AddScore()
+void UBPC_SB_Score_C::STATIC_AddScore()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SB_Score.BPC_SB_Score_C.AddScore");
 
 	UBPC_SB_Score_C_AddScore_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -53,11 +55,11 @@ void UBPC_SB_Score_C::AddScore()
 
 
 // Function BPC_SB_Score.BPC_SB_Score_C.ExecuteUbergraph_BPC_SB_Score
-// ()
+// (Net, Native, NetResponse, Static, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBPC_SB_Score_C::ExecuteUbergraph_BPC_SB_Score(int EntryPoint)
+void UBPC_SB_Score_C::STATIC_ExecuteUbergraph_BPC_SB_Score(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPC_SB_Score.BPC_SB_Score_C.ExecuteUbergraph_BPC_SB_Score");
 
@@ -65,6 +67,7 @@ void UBPC_SB_Score_C::ExecuteUbergraph_BPC_SB_Score(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,7 +76,7 @@ void UBPC_SB_Score_C::ExecuteUbergraph_BPC_SB_Score(int EntryPoint)
 
 
 // Function BPC_SB_Score.BPC_SB_Score_C.OnAddScore__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, Public, NetServer, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            GiveScore                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -85,6 +88,7 @@ void UBPC_SB_Score_C::OnAddScore__DelegateSignature(int GiveScore)
 	params.GiveScore = GiveScore;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

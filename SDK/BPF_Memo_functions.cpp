@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_Memo.BPF_Memo_C.GetS3MemoTextureDataManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_MemoTextureDataManager_C* BP_MemoTextureDataManager      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -38,12 +38,12 @@ void UBPF_Memo_C::STATIC_GetS3MemoTextureDataManager(class UObject* __WorldConte
 
 
 // Function BPF_Memo.BPF_Memo_C.getS3MemopadManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, NetResponse, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3MemopadManager_C*  BPS3MemopadManager             (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBPF_Memo_C::STATIC_getS3MemopadManager(class UObject* __WorldContext, class ABP_S3MemopadManager_C** BPS3MemopadManager)
+void UBPF_Memo_C::getS3MemopadManager(class UObject* __WorldContext, class ABP_S3MemopadManager_C** BPS3MemopadManager)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BPF_Memo.BPF_Memo_C.getS3MemopadManager");
 
@@ -51,6 +51,7 @@ void UBPF_Memo_C::STATIC_getS3MemopadManager(class UObject* __WorldContext, clas
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

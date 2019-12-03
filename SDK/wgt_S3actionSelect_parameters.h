@@ -80,8 +80,8 @@ struct Uwgt_S3actionSelect_C_doCmd_addItem_Params
 	struct FText                                       Text;                                                     // (BlueprintVisible, BlueprintReadOnly, Parm)
 };
 
-// Function wgt_S3actionSelect.wgt_S3actionSelect_C.AddSelectItem
-struct Uwgt_S3actionSelect_C_AddSelectItem_Params
+// Function wgt_S3actionSelect.wgt_S3actionSelect_C.addSelectItem
+struct Uwgt_S3actionSelect_C_addSelectItem_Params
 {
 	int                                                Index;                                                    // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };

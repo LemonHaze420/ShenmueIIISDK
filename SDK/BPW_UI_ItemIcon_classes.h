@@ -48,24 +48,24 @@ public:
 	}
 
 
-	void GetSelectSellItem(int PageIndex, struct FST_SelectSellItem* SelectSellItem);
-	void ResetSelectSellItem();
-	void CalcHaveItemNum(int PageIndex, int* HaveItemNum);
-	void SetSelectSellItem(const struct FST_SelectSellItem& SelectSellItemID);
-	void SetSkillImage();
+	void STATIC_GetSelectSellItem(int PageIndex, struct FST_SelectSellItem* SelectSellItem);
+	void STATIC_ResetSelectSellItem();
+	void STATIC_CalcHaveItemNum(int PageIndex, int* HaveItemNum);
+	void STATIC_SetSelectSellItem(const struct FST_SelectSellItem& SelectSellItemID);
+	void STATIC_SetSkillImage();
 	void SetImageBrightness(bool IsBright);
-	void SetFrameType(TEnumAsByte<EN_IconFramePos> newParam);
-	void ItemImageLight(bool IsLight);
-	void GetItemNum(int* ItemNum);
+	void STATIC_SetFrameType(TEnumAsByte<EN_IconFramePos> newParam);
+	void STATIC_ItemImageLight(bool IsLight);
+	void STATIC_GetItemNum(int* ItemNum);
 	void SetNum(int Num, int PageNum);
-	void GetItemID(int* ItemId);
-	void IconVisibility(ESlateVisibility InVisibility);
+	void STATIC_GetItemID(int* ItemId);
+	void STATIC_IconVisibility(ESlateVisibility InVisibility);
 	void PropotionIconSize(float ItemIconSize);
 	void FocusIcon(bool IsSelect);
 	void SetIcon(int ItemId);
 	void ProportionFontSize(float ItemIconSize);
-	void Construct();
-	void PreConstruct(bool IsDesignTime);
+	void STATIC_Construct();
+	void STATIC_PreConstruct(bool IsDesignTime);
 	void ExecuteUbergraph_BPW_UI_ItemIcon(int EntryPoint);
 };
 

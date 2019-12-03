@@ -27,8 +27,8 @@ public:
 	}
 
 
-	void BuildMenu();
-	void SetInitialFocus();
+	void STATIC_BuildMenu();
+	void STATIC_SetInitialFocus();
 	void OnLevelClicked(class ULevelStreaming* Level);
 	void ExecuteUbergraph_BW_DebugPerfMenu(int EntryPoint);
 };

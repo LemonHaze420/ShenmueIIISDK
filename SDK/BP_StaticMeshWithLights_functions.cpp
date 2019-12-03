@@ -14,9 +14,9 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.UserConstructionScript
-// (Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, Private, Protected, Delegate, HasOutParms, BlueprintEvent, NetValidate)
 
-void ABP_StaticMeshWithLights_C::UserConstructionScript()
+void ABP_StaticMeshWithLights_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.UserConstructionScript");
 
@@ -31,9 +31,9 @@ void ABP_StaticMeshWithLights_C::UserConstructionScript()
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Event, Static, NetMulticast, Protected, Delegate, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, NetValidate)
 
-void ABP_StaticMeshWithLights_C::ReceiveBeginPlay()
+void ABP_StaticMeshWithLights_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ReceiveBeginPlay");
 
@@ -48,7 +48,7 @@ void ABP_StaticMeshWithLights_C::ReceiveBeginPlay()
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.DayTimeEventDispatcher_Event_1
-// (BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // ES3DayTimeEvent                EventType                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -68,14 +68,14 @@ void ABP_StaticMeshWithLights_C::DayTimeEventDispatcher_Event_1(ES3DayTimeEvent 
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.LightSourceChange
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, DLLImport, BlueprintEvent, NetValidate)
 // Parameters:
 // float                          Intensity                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MatID                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UMaterialInstanceDynamic* DMI                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           On                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StaticMeshWithLights_C::LightSourceChange(float Intensity, int MatID, class UMaterialInstanceDynamic* DMI, bool On)
+void ABP_StaticMeshWithLights_C::STATIC_LightSourceChange(float Intensity, int MatID, class UMaterialInstanceDynamic* DMI, bool On)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.LightSourceChange");
 
@@ -86,6 +86,7 @@ void ABP_StaticMeshWithLights_C::LightSourceChange(float Intensity, int MatID, c
 	params.On = On;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,7 +95,7 @@ void ABP_StaticMeshWithLights_C::LightSourceChange(float Intensity, int MatID, c
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.CustomEvent_1
-// (BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // int                            EventIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -114,11 +115,11 @@ void ABP_StaticMeshWithLights_C::CustomEvent_1(int EventIndex)
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.OnSetLightEnable
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // bool                           bNewLightEnable                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StaticMeshWithLights_C::OnSetLightEnable(bool bNewLightEnable)
+void ABP_StaticMeshWithLights_C::STATIC_OnSetLightEnable(bool bNewLightEnable)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.OnSetLightEnable");
 
@@ -126,6 +127,7 @@ void ABP_StaticMeshWithLights_C::OnSetLightEnable(bool bNewLightEnable)
 	params.bNewLightEnable = bNewLightEnable;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -134,11 +136,11 @@ void ABP_StaticMeshWithLights_C::OnSetLightEnable(bool bNewLightEnable)
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.OnSetLightCastShadow
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // bool                           bNewLightCastShadow            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StaticMeshWithLights_C::OnSetLightCastShadow(bool bNewLightCastShadow)
+void ABP_StaticMeshWithLights_C::STATIC_OnSetLightCastShadow(bool bNewLightCastShadow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.OnSetLightCastShadow");
 
@@ -146,6 +148,7 @@ void ABP_StaticMeshWithLights_C::OnSetLightCastShadow(bool bNewLightCastShadow)
 	params.bNewLightCastShadow = bNewLightCastShadow;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -154,11 +157,11 @@ void ABP_StaticMeshWithLights_C::OnSetLightCastShadow(bool bNewLightCastShadow)
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StaticMeshWithLights_C::ReceiveTick(float DeltaSeconds)
+void ABP_StaticMeshWithLights_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ReceiveTick");
 
@@ -166,6 +169,7 @@ void ABP_StaticMeshWithLights_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -174,11 +178,11 @@ void ABP_StaticMeshWithLights_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, NetValidate)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StaticMeshWithLights_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_StaticMeshWithLights_C::STATIC_ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ReceiveEndPlay");
 
@@ -186,6 +190,7 @@ void ABP_StaticMeshWithLights_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndP
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -194,11 +199,11 @@ void ABP_StaticMeshWithLights_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndP
 
 
 // Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ExecuteUbergraph_BP_StaticMeshWithLights
-// (HasDefaults)
+// (Net, NetReliable, Exec, Event, Static, MulticastDelegate, Protected, NetServer, HasOutParms, HasDefaults, NetClient, NetValidate)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_StaticMeshWithLights_C::ExecuteUbergraph_BP_StaticMeshWithLights(int EntryPoint)
+void ABP_StaticMeshWithLights_C::STATIC_ExecuteUbergraph_BP_StaticMeshWithLights(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_StaticMeshWithLights.BP_StaticMeshWithLights_C.ExecuteUbergraph_BP_StaticMeshWithLights");
 

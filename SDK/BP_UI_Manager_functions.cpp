@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_UI_Manager.BP_UI_Manager_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ int ABP_UI_Manager_C::GetPriority()
 	ABP_UI_Manager_C_GetPriority_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ int ABP_UI_Manager_C::GetPriority()
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, MulticastDelegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -56,7 +57,7 @@ TArray<struct FS3DetectActionParam> ABP_UI_Manager_C::GetDetectAction()
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.SetRotateIconVisiblity
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           Visible                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           dummy                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -80,11 +81,11 @@ void ABP_UI_Manager_C::SetRotateIconVisiblity(bool Visible, bool* dummy)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.PlaySE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, Protected, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_ShopSE_List>    SE                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::PlaySE(TEnumAsByte<EN_ShopSE_List> SE)
+void ABP_UI_Manager_C::STATIC_PlaySE(TEnumAsByte<EN_ShopSE_List> SE)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.PlaySE");
 
@@ -100,7 +101,7 @@ void ABP_UI_Manager_C::PlaySE(TEnumAsByte<EN_ShopSE_List> SE)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.GetText
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FName                   Label                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // ES3TextPathType                Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -115,6 +116,7 @@ void ABP_UI_Manager_C::GetText(const struct FName& Label, ES3TextPathType Type, 
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -126,7 +128,7 @@ void ABP_UI_Manager_C::GetText(const struct FName& Label, ES3TextPathType Type, 
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.PushUp_ItemList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBPW_UI_BaseWindow_C*    UI_Widget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -146,11 +148,11 @@ void ABP_UI_Manager_C::PushUp_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.PushDown_ItemList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UBPW_UI_BaseWindow_C*    UI_Widget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_UI_Manager_C::PushDown_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget)
+void ABP_UI_Manager_C::STATIC_PushDown_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.PushDown_ItemList");
 
@@ -158,6 +160,7 @@ void ABP_UI_Manager_C::PushDown_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget)
 	params.UI_Widget = UI_Widget;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,7 +169,7 @@ void ABP_UI_Manager_C::PushDown_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.PushLeft_ItemList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UBPW_UI_BaseWindow_C*    UI_Widget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -186,7 +189,7 @@ void ABP_UI_Manager_C::PushLeft_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.PushRight_ItemList
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UBPW_UI_BaseWindow_C*    UI_Widget                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
@@ -206,18 +209,19 @@ void ABP_UI_Manager_C::PushRight_ItemList(class UBPW_UI_BaseWindow_C* UI_Widget)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.MakeItemList
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, MulticastDelegate, Protected, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // TArray<int>                    ItemIDList                     (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FST_ItemList>    ItemList                       (Parm, OutParm, ZeroConstructor)
+// TArray<struct FST_ItemList>    itemList                       (Parm, OutParm, ZeroConstructor)
 
-void ABP_UI_Manager_C::MakeItemList(TArray<int>* ItemIDList, TArray<struct FST_ItemList>* ItemList)
+void ABP_UI_Manager_C::STATIC_MakeItemList(TArray<int>* ItemIDList, TArray<struct FST_ItemList>* itemList)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.MakeItemList");
 
 	ABP_UI_Manager_C_MakeItemList_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,13 +229,13 @@ void ABP_UI_Manager_C::MakeItemList(TArray<int>* ItemIDList, TArray<struct FST_I
 
 	if (ItemIDList != nullptr)
 		*ItemIDList = params.ItemIDList;
-	if (ItemList != nullptr)
-		*ItemList = params.ItemList;
+	if (itemList != nullptr)
+		*itemList = params.itemList;
 }
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.IsRegistDetectAction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Regist                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -243,6 +247,7 @@ void ABP_UI_Manager_C::IsRegistDetectAction(bool Regist)
 	params.Regist = Regist;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -251,7 +256,7 @@ void ABP_UI_Manager_C::IsRegistDetectAction(bool Regist)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetResponse, MulticastDelegate, Public, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 
 void ABP_UI_Manager_C::UserConstructionScript()
 {
@@ -268,7 +273,7 @@ void ABP_UI_Manager_C::UserConstructionScript()
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -280,6 +285,7 @@ void ABP_UI_Manager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_8(cons
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -288,7 +294,7 @@ void ABP_UI_Manager_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_8(cons
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (Net, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -300,6 +306,7 @@ void ABP_UI_Manager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7(const 
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -308,11 +315,11 @@ void ABP_UI_Manager_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_7(const 
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6
-// (BlueprintEvent)
+// (NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_UI_Manager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
+void ABP_UI_Manager_C::STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6");
 
@@ -320,6 +327,7 @@ void ABP_UI_Manager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6(cons
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -328,11 +336,11 @@ void ABP_UI_Manager_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_6(cons
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5
-// (BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_UI_Manager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5(const struct FKey& Key)
+void ABP_UI_Manager_C::STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5");
 
@@ -340,6 +348,7 @@ void ABP_UI_Manager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5(con
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -348,11 +357,11 @@ void ABP_UI_Manager_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_5(con
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.PushButton
-// (BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TEnumAsByte<EN_UI_Button>      newParam                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::PushButton(TEnumAsByte<EN_UI_Button> newParam)
+void ABP_UI_Manager_C::STATIC_PushButton(TEnumAsByte<EN_UI_Button> newParam)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.PushButton");
 
@@ -360,6 +369,7 @@ void ABP_UI_Manager_C::PushButton(TEnumAsByte<EN_UI_Button> newParam)
 	params.newParam = newParam;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -368,11 +378,11 @@ void ABP_UI_Manager_C::PushButton(TEnumAsByte<EN_UI_Button> newParam)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1(float AxisValue)
+void ABP_UI_Manager_C::STATIC_InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1");
 
@@ -380,6 +390,7 @@ void ABP_UI_Manager_C::InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1(float 
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -388,11 +399,11 @@ void ABP_UI_Manager_C::InpAxisEvt_MG_RightTrigger_K2Node_InputAxisEvent_1(float 
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2(float AxisValue)
+void ABP_UI_Manager_C::STATIC_InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2");
 
@@ -400,6 +411,7 @@ void ABP_UI_Manager_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2(float A
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -408,11 +420,11 @@ void ABP_UI_Manager_C::InpAxisEvt_MG_LeftTrigger_K2Node_InputAxisEvent_2(float A
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(float AxisValue)
+void ABP_UI_Manager_C::STATIC_InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1");
 
@@ -420,6 +432,7 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(f
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -428,11 +441,11 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_RightX_K2Node_InputAxisKeyEvent_1(f
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2
-// (BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2(float AxisValue)
+void ABP_UI_Manager_C::STATIC_InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2");
 
@@ -440,6 +453,7 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2(f
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -448,11 +462,11 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_RightY_K2Node_InputAxisKeyEvent_2(f
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4
-// (BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4(float AxisValue)
+void ABP_UI_Manager_C::STATIC_InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4");
 
@@ -460,6 +474,7 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4(fl
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -468,11 +483,11 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_LeftX_K2Node_InputAxisKeyEvent_4(fl
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7(float AxisValue)
+void ABP_UI_Manager_C::STATIC_InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7(float AxisValue)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7");
 
@@ -480,6 +495,7 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7(fl
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -488,7 +504,7 @@ void ABP_UI_Manager_C::InpAxisKeyEvt_Gamepad_LeftY_K2Node_InputAxisKeyEvent_7(fl
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetResponse, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_Manager_C::ReceiveBeginPlay()
 {
@@ -497,6 +513,7 @@ void ABP_UI_Manager_C::ReceiveBeginPlay()
 	ABP_UI_Manager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -505,7 +522,7 @@ void ABP_UI_Manager_C::ReceiveBeginPlay()
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetResponse, Public, Private, Protected, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_UI_Manager_C::ReceiveDestroyed()
 {
@@ -514,6 +531,7 @@ void ABP_UI_Manager_C::ReceiveDestroyed()
 	ABP_UI_Manager_C_ReceiveDestroyed_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -522,7 +540,7 @@ void ABP_UI_Manager_C::ReceiveDestroyed()
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -534,6 +552,7 @@ void ABP_UI_Manager_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -542,11 +561,11 @@ void ABP_UI_Manager_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_UI_Manager.BP_UI_Manager_C.ExecuteUbergraph_BP_UI_Manager
-// (HasDefaults)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Protected, Delegate, NetServer, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_UI_Manager_C::ExecuteUbergraph_BP_UI_Manager(int EntryPoint)
+void ABP_UI_Manager_C::STATIC_ExecuteUbergraph_BP_UI_Manager(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_UI_Manager.BP_UI_Manager_C.ExecuteUbergraph_BP_UI_Manager");
 

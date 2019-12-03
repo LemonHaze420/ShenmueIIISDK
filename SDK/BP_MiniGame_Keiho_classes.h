@@ -27,7 +27,7 @@ public:
 	class UStaticMeshComponent*                        mokujin;                                                  // 0x0778(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UStaticMeshComponent*                        WoodStick;                                                // 0x0780(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class USkeletalMeshComponent*                      PartnerMesh;                                              // 0x0788(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UChildActorComponent*                        _3DUI;                                                    // 0x0790(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UChildActorComponent*                        _3DUI;                                                     // 0x0790(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	class UDecalComponent*                             Decal;                                                    // 0x0798(0x0008) (BlueprintVisible, ZeroConstructor, InstancedReference, IsPlainOldData)
 	float                                              Timeline_InitPartnerCollision_Rate_4494E622426DB6EEF55AC4A4224B2406;// 0x07A0(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ETimelineDirection>                    Timeline_InitPartnerCollision__Direction_4494E622426DB6EEF55AC4A4224B2406;// 0x07A4(0x0001) (ZeroConstructor, IsPlainOldData)
@@ -83,15 +83,15 @@ public:
 
 
 	class UMeshComponent* GetClothMeshComponent();
-	void UpdateRotateAngle();
+	void STATIC_UpdateRotateAngle();
 	void InitAsyncLoad(bool* dummy);
-	void UpdateSE(bool InRange);
+	void STATIC_UpdateSE(bool InRange);
 	void UpdateKungFuAccumulation(float StickRot);
-	void GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
-	void SetNPCVisible(bool InputPin);
+	void STATIC_GetPlayLabel(TEnumAsByte<E_MiniGame_MahoPartnerState> State, struct FName* labelName);
+	void STATIC_SetNPCVisible(bool InputPin);
 	void UpdatePartnerAnim(float PowerRate);
 	float GetDistanceFromCenter(float Value);
-	void UpdateAddValue();
+	void STATIC_UpdateAddValue();
 	void UpdateDrawLine(float DeltaSeconds);
 	class ABP_MiniGameInputBase_C* SpawnInputControlActor();
 	void UpdateRyoMove();
@@ -105,16 +105,16 @@ public:
 	void ClothesChangedCC(const TScriptInterface<class US3ClothInterface>& Interface, const struct FName& CharaName);
 	void InitPartnerCollision();
 	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
-	void InputRightStickHorizontal(float Value);
-	void InputRightStickVertical(float Value);
+	void STATIC_ReceiveTick(float DeltaSeconds);
+	void STATIC_InputRightStickHorizontal(float Value);
+	void STATIC_InputRightStickVertical(float Value);
 	void StartGame();
-	void InputLeftStickVertical(float InputLeftVertical);
-	void InputLeftStickHorizontal(float InputLeftHorizontal);
+	void STATIC_InputLeftStickVertical(float InputLeftVertical);
+	void STATIC_InputLeftStickHorizontal(float InputLeftHorizontal);
 	void AfterFadeInEvent();
 	void Event_StopRyoMoveForTurn();
-	void Event_OnChangeAnimState(TEnumAsByte<E_MiniGame_MahoPartnerState> State);
-	void SetKungFuDifficulty(int Level);
+	void STATIC_Event_OnChangeAnimState(TEnumAsByte<E_MiniGame_MahoPartnerState> State);
+	void STATIC_SetKungFuDifficulty(int Level);
 	void TimeUpEvent();
 	void EndMiniGame();
 	void OnTimeUp();

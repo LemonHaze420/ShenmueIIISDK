@@ -25,7 +25,7 @@ public:
 	}
 
 
-	void STATIC_CalculateVerticalFOV(float HFOV, float AspectRatio, class UObject* __WorldContext, float* VFOV);
+	void CalculateVerticalFOV(float HFOV, float AspectRatio, class UObject* __WorldContext, float* VFOV);
 	void STATIC_distanceVector(const struct FVector& A, const struct FVector& B, bool Is_Distance_2D, class UObject* __WorldContext, float* Length);
 };
 

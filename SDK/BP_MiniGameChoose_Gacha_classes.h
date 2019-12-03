@@ -28,8 +28,8 @@ public:
 	}
 
 
-	void OverrideGachaPrice();
-	void UserConstructionScript();
+	void STATIC_OverrideGachaPrice();
+	void STATIC_UserConstructionScript();
 	void InpActEvt_MG_Right_K2Node_InputActionEvent_8(const struct FKey& Key);
 	void InpActEvt_MG_Left_K2Node_InputActionEvent_7(const struct FKey& Key);
 	void InpActEvt_MG_LeftStickLeft_K2Node_InputActionEvent_6(const struct FKey& Key);
@@ -38,7 +38,7 @@ public:
 	void DecideDetectAction(ES3ActionIconType Type);
 	void ReceiveTick(float DeltaSeconds);
 	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
-	void ExecuteUbergraph_BP_MiniGameChoose_Gacha(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_MiniGameChoose_Gacha(int EntryPoint);
 };
 
 

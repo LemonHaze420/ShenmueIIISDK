@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsEnableJump
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetMulticast, Public, Private, Protected, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -25,6 +25,7 @@ bool ABP_S3Memopad_book_C::IsEnableJump()
 	ABP_S3Memopad_book_C_IsEnableJump_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ bool ABP_S3Memopad_book_C::IsEnableJump()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsEnableDown
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, NetResponse, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // bool                           A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -48,6 +49,7 @@ bool ABP_S3Memopad_book_C::IsEnableDown(bool A)
 	params.A = A;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,7 +60,7 @@ bool ABP_S3Memopad_book_C::IsEnableDown(bool A)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsEnableUp
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           A                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -81,7 +83,7 @@ bool ABP_S3Memopad_book_C::IsEnableUp(bool A)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetTabJumpPage
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetResponse, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            TabIndex                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            page                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -105,7 +107,7 @@ void ABP_S3Memopad_book_C::GetTabJumpPage(int TabIndex, int* page)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetPageInterval
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Native, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          PageInterval                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -116,6 +118,7 @@ void ABP_S3Memopad_book_C::GetPageInterval(float* PageInterval)
 	ABP_S3Memopad_book_C_GetPageInterval_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -127,7 +130,7 @@ void ABP_S3Memopad_book_C::GetPageInterval(float* PageInterval)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetSubEvntListLength
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Event, NetMulticast, MulticastDelegate, Public, Private, Delegate, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            Length                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -149,7 +152,7 @@ void ABP_S3Memopad_book_C::GetSubEvntListLength(int* Length)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckFirstOpenPage
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3Memopad_book_C::CheckFirstOpenPage()
 {
@@ -158,6 +161,7 @@ void ABP_S3Memopad_book_C::CheckFirstOpenPage()
 	ABP_S3Memopad_book_C_CheckFirstOpenPage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -166,15 +170,16 @@ void ABP_S3Memopad_book_C::CheckFirstOpenPage()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetOpenMainEventPage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, NetResponse, Static, NetMulticast, Private, BlueprintCallable, BlueprintEvent)
 
-void ABP_S3Memopad_book_C::SetOpenMainEventPage()
+void ABP_S3Memopad_book_C::STATIC_SetOpenMainEventPage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetOpenMainEventPage");
 
 	ABP_S3Memopad_book_C_SetOpenMainEventPage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,9 +188,9 @@ void ABP_S3Memopad_book_C::SetOpenMainEventPage()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckSkipSubEvent
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, Protected, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Memopad_book_C::CheckSkipSubEvent()
+void ABP_S3Memopad_book_C::STATIC_CheckSkipSubEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckSkipSubEvent");
 
@@ -200,7 +205,7 @@ void ABP_S3Memopad_book_C::CheckSkipSubEvent()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckSameSpread
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 
 void ABP_S3Memopad_book_C::CheckSameSpread()
 {
@@ -217,9 +222,9 @@ void ABP_S3Memopad_book_C::CheckSameSpread()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.DeleteSubEventList
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Static, Protected, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Memopad_book_C::DeleteSubEventList()
+void ABP_S3Memopad_book_C::STATIC_DeleteSubEventList()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.DeleteSubEventList");
 
@@ -234,17 +239,18 @@ void ABP_S3Memopad_book_C::DeleteSubEventList()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetNowOpenPageIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Protected, NetServer)
 // Parameters:
 // int                            NowOpenPage                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::GetNowOpenPageIndex(int* NowOpenPage)
+void ABP_S3Memopad_book_C::STATIC_GetNowOpenPageIndex(int* NowOpenPage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetNowOpenPageIndex");
 
 	ABP_S3Memopad_book_C_GetNowOpenPageIndex_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -256,7 +262,7 @@ void ABP_S3Memopad_book_C::GetNowOpenPageIndex(int* NowOpenPage)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckSubEventPage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Public, Private, Protected, NetServer, HasOutParms, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::CheckSubEventPage()
 {
@@ -265,6 +271,7 @@ void ABP_S3Memopad_book_C::CheckSubEventPage()
 	ABP_S3Memopad_book_C_CheckSubEventPage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -273,7 +280,7 @@ void ABP_S3Memopad_book_C::CheckSubEventPage()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckOngoingSubEvent
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::CheckOngoingSubEvent()
 {
@@ -282,6 +289,7 @@ void ABP_S3Memopad_book_C::CheckOngoingSubEvent()
 	ABP_S3Memopad_book_C_CheckOngoingSubEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -290,9 +298,9 @@ void ABP_S3Memopad_book_C::CheckOngoingSubEvent()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckUnreadTab
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, Public, Private, Delegate, NetServer, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_S3Memopad_book_C::CheckUnreadTab()
+void ABP_S3Memopad_book_C::STATIC_CheckUnreadTab()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckUnreadTab");
 
@@ -307,7 +315,7 @@ void ABP_S3Memopad_book_C::CheckUnreadTab()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckSubEvntFlg
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetResponse, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3Memopad_book_C::CheckSubEvntFlg()
 {
@@ -316,6 +324,7 @@ void ABP_S3Memopad_book_C::CheckSubEvntFlg()
 	ABP_S3Memopad_book_C_CheckSubEvntFlg_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -324,11 +333,11 @@ void ABP_S3Memopad_book_C::CheckSubEvntFlg()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsPageAnimation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Exec, NetResponse, Static, NetMulticast, Public, Private, Delegate, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           AnimationNow                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::IsPageAnimation(bool* AnimationNow)
+void ABP_S3Memopad_book_C::STATIC_IsPageAnimation(bool* AnimationNow)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsPageAnimation");
 
@@ -346,11 +355,11 @@ void ABP_S3Memopad_book_C::IsPageAnimation(bool* AnimationNow)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.StartMotivationMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::StartMotivationMove(bool Button)
+void ABP_S3Memopad_book_C::STATIC_StartMotivationMove(bool Button)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.StartMotivationMove");
 
@@ -358,6 +367,7 @@ void ABP_S3Memopad_book_C::StartMotivationMove(bool Button)
 	params.Button = Button;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -366,11 +376,11 @@ void ABP_S3Memopad_book_C::StartMotivationMove(bool Button)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckMotivationMovePage
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3Memopad_book_C::CheckMotivationMovePage()
+bool ABP_S3Memopad_book_C::STATIC_CheckMotivationMovePage()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckMotivationMovePage");
 
@@ -387,7 +397,7 @@ bool ABP_S3Memopad_book_C::CheckMotivationMovePage()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsActiveOpenNewPageButton
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Active                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -409,11 +419,11 @@ void ABP_S3Memopad_book_C::IsActiveOpenNewPageButton(bool* Active)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPageContinueTurning
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, Protected, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bRight                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::NextPageContinueTurning(bool bRight)
+void ABP_S3Memopad_book_C::STATIC_NextPageContinueTurning(bool bRight)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPageContinueTurning");
 
@@ -429,12 +439,12 @@ void ABP_S3Memopad_book_C::NextPageContinueTurning(bool bRight)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.ChangeCurrentMapPage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Static, Public, Protected, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnPage                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::ChangeCurrentMapPage(int page, int* ReturnPage)
+void ABP_S3Memopad_book_C::STATIC_ChangeCurrentMapPage(int page, int* ReturnPage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.ChangeCurrentMapPage");
 
@@ -453,7 +463,7 @@ void ABP_S3Memopad_book_C::ChangeCurrentMapPage(int page, int* ReturnPage)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetContinueTurnPageTexture
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UTexture*                Texture                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -475,7 +485,7 @@ void ABP_S3Memopad_book_C::GetContinueTurnPageTexture(class UTexture** Texture)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckPageDataValid
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Native, NetResponse, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            PageIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           DataValid                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -488,6 +498,7 @@ void ABP_S3Memopad_book_C::CheckPageDataValid(int PageIndex, bool* DataValid)
 	params.PageIndex = PageIndex;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -499,15 +510,16 @@ void ABP_S3Memopad_book_C::CheckPageDataValid(int PageIndex, bool* DataValid)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InitTab
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::InitTab()
+void ABP_S3Memopad_book_C::STATIC_InitTab()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InitTab");
 
 	ABP_S3Memopad_book_C_InitTab_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -516,18 +528,19 @@ void ABP_S3Memopad_book_C::InitTab()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsActiveStartEndPage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Native, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           ActiveStart                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ActiveEnd                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::IsActiveStartEndPage(bool* ActiveStart, bool* ActiveEnd)
+void ABP_S3Memopad_book_C::STATIC_IsActiveStartEndPage(bool* ActiveStart, bool* ActiveEnd)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsActiveStartEndPage");
 
 	ABP_S3Memopad_book_C_IsActiveStartEndPage_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -541,7 +554,7 @@ void ABP_S3Memopad_book_C::IsActiveStartEndPage(bool* ActiveStart, bool* ActiveE
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetLastPage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_S3Memopad_book_C::GetLastPage()
 {
@@ -558,11 +571,11 @@ void ABP_S3Memopad_book_C::GetLastPage()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetAlready
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, Static, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::SetAlready(int page)
+void ABP_S3Memopad_book_C::STATIC_SetAlready(int page)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetAlready");
 
@@ -570,6 +583,7 @@ void ABP_S3Memopad_book_C::SetAlready(int page)
 	params.page = page;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -578,7 +592,7 @@ void ABP_S3Memopad_book_C::SetAlready(int page)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetCaptureMempPAdPart
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::SetCaptureMempPAdPart()
 {
@@ -595,7 +609,7 @@ void ABP_S3Memopad_book_C::SetCaptureMempPAdPart()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetText
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTextureRenderTarget2D*  RenderF                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -604,7 +618,7 @@ void ABP_S3Memopad_book_C::SetCaptureMempPAdPart()
 // class ABP_S3Memopad_page_C*    PageR                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          LastUpdateDelayTime            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::SetText(int page, class UTextureRenderTarget2D* RenderF, class UTextureRenderTarget2D* RenderR, class ABP_S3Memopad_page_C* PageF, class ABP_S3Memopad_page_C* PageR, float LastUpdateDelayTime)
+void ABP_S3Memopad_book_C::STATIC_SetText(int page, class UTextureRenderTarget2D* RenderF, class UTextureRenderTarget2D* RenderR, class ABP_S3Memopad_page_C* PageF, class ABP_S3Memopad_page_C* PageR, float LastUpdateDelayTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetText");
 
@@ -625,7 +639,7 @@ void ABP_S3Memopad_book_C::SetText(int page, class UTextureRenderTarget2D* Rende
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetPhoto
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, MulticastDelegate, Public, Protected, NetServer)
 // Parameters:
 // class UTextureRenderTarget2D*  RenderTexture                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture*                Photo                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -639,7 +653,7 @@ void ABP_S3Memopad_book_C::SetText(int page, class UTextureRenderTarget2D* Rende
 // int                            Index                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3Memopad_page_C*    page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::SetPhoto(class UTextureRenderTarget2D* RenderTexture, class UTexture* Photo, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoodinatePosition, const struct FVector2D& CoodinateSize, float Rotation, const struct FVector2D& PivotPoint, bool Right, int Index, class ABP_S3Memopad_page_C* page)
+void ABP_S3Memopad_book_C::STATIC_SetPhoto(class UTextureRenderTarget2D* RenderTexture, class UTexture* Photo, const struct FVector2D& ScreenPosition, const struct FVector2D& ScreenSize, const struct FVector2D& CoodinatePosition, const struct FVector2D& CoodinateSize, float Rotation, const struct FVector2D& PivotPoint, bool Right, int Index, class ABP_S3Memopad_page_C* page)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetPhoto");
 
@@ -657,6 +671,7 @@ void ABP_S3Memopad_book_C::SetPhoto(class UTextureRenderTarget2D* RenderTexture,
 	params.page = page;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -665,7 +680,7 @@ void ABP_S3Memopad_book_C::SetPhoto(class UTextureRenderTarget2D* RenderTexture,
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetMapTexture
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Static, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UTextureRenderTarget2D*  RenderTarget_Left              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTextureRenderTarget2D*  RenderTarget_Right             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -673,7 +688,7 @@ void ABP_S3Memopad_book_C::SetPhoto(class UTextureRenderTarget2D* RenderTexture,
 // class ABP_S3Memopad_page_C*    Page_Right                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Right                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::SetMapTexture(class UTextureRenderTarget2D* RenderTarget_Left, class UTextureRenderTarget2D* RenderTarget_Right, class ABP_S3Memopad_page_C* Page_Left, class ABP_S3Memopad_page_C* Page_Right, bool Right)
+void ABP_S3Memopad_book_C::STATIC_SetMapTexture(class UTextureRenderTarget2D* RenderTarget_Left, class UTextureRenderTarget2D* RenderTarget_Right, class ABP_S3Memopad_page_C* Page_Left, class ABP_S3Memopad_page_C* Page_Right, bool Right)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetMapTexture");
 
@@ -693,11 +708,11 @@ void ABP_S3Memopad_book_C::SetMapTexture(class UTextureRenderTarget2D* RenderTar
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetPageCountMax
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, Static, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            targetPage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::SetPageCountMax(int targetPage)
+void ABP_S3Memopad_book_C::STATIC_SetPageCountMax(int targetPage)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetPageCountMax");
 
@@ -705,6 +720,7 @@ void ABP_S3Memopad_book_C::SetPageCountMax(int targetPage)
 	params.targetPage = targetPage;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -713,7 +729,7 @@ void ABP_S3Memopad_book_C::SetPageCountMax(int targetPage)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetOpenPageIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            targetPage                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            OpenPage                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -737,12 +753,12 @@ void ABP_S3Memopad_book_C::GetOpenPageIndex(int targetPage, int* OpenPage)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetNextTabIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           UpPush                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsNextTab                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::SetNextTabIndex(bool UpPush, bool* IsNextTab)
+void ABP_S3Memopad_book_C::STATIC_SetNextTabIndex(bool UpPush, bool* IsNextTab)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetNextTabIndex");
 
@@ -761,7 +777,7 @@ void ABP_S3Memopad_book_C::SetNextTabIndex(bool UpPush, bool* IsNextTab)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckTabVisible
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, NetResponse, MulticastDelegate, Public, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::CheckTabVisible()
 {
@@ -770,6 +786,7 @@ void ABP_S3Memopad_book_C::CheckTabVisible()
 	ABP_S3Memopad_book_C_CheckTabVisible_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -778,7 +795,7 @@ void ABP_S3Memopad_book_C::CheckTabVisible()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetLastMemoNoInPage
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetRequest, Exec, Event, NetMulticast, Public, Private, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            PageNo                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            MemoNo                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -802,7 +819,7 @@ void ABP_S3Memopad_book_C::GetLastMemoNoInPage(int PageNo, int* MemoNo)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::CheckButton()
 {
@@ -819,7 +836,7 @@ void ABP_S3Memopad_book_C::CheckButton()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.IsActiveOpenMotivationPageButton
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // bool                           Active                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -830,6 +847,7 @@ void ABP_S3Memopad_book_C::IsActiveOpenMotivationPageButton(bool* Active)
 	ABP_S3Memopad_book_C_IsActiveOpenMotivationPageButton_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -841,12 +859,12 @@ void ABP_S3Memopad_book_C::IsActiveOpenMotivationPageButton(bool* Active)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetPageTextureRFIndex
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Static, NetMulticast, MulticastDelegate, Protected, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            PageR                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            PageF                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::GetPageTextureRFIndex(int* PageR, int* PageF)
+void ABP_S3Memopad_book_C::STATIC_GetPageTextureRFIndex(int* PageR, int* PageF)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetPageTextureRFIndex");
 
@@ -866,7 +884,7 @@ void ABP_S3Memopad_book_C::GetPageTextureRFIndex(int* PageR, int* PageF)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.StopAllActor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, NetMulticast, Public, Private, Delegate, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3Memopad_book_C::StopAllActor()
 {
@@ -875,6 +893,7 @@ void ABP_S3Memopad_book_C::StopAllActor()
 	ABP_S3Memopad_book_C_StopAllActor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -883,7 +902,7 @@ void ABP_S3Memopad_book_C::StopAllActor()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.TabCheck
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Protected, Delegate, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            TagIndex                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
@@ -907,9 +926,9 @@ void ABP_S3Memopad_book_C::TabCheck(int page, int* TagIndex)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetPageData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Memopad_book_C::GetPageData()
+void ABP_S3Memopad_book_C::STATIC_GetPageData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetPageData");
 
@@ -924,7 +943,7 @@ void ABP_S3Memopad_book_C::GetPageData()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetIsAnimation
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           isAnim                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -935,6 +954,7 @@ void ABP_S3Memopad_book_C::GetIsAnimation(bool* isAnim)
 	ABP_S3Memopad_book_C_GetIsAnimation_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -946,14 +966,14 @@ void ABP_S3Memopad_book_C::GetIsAnimation(bool* isAnim)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetRenderItem
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer)
 // Parameters:
 // bool                           IsLast                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTextureRenderTarget2D*  Texture_1                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // class UTextureRenderTarget2D*  Texture_2                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::GetRenderItem(bool IsLast, class UTextureRenderTarget2D** Texture_1, class UTextureRenderTarget2D** Texture_2, int* Index)
+void ABP_S3Memopad_book_C::STATIC_GetRenderItem(bool IsLast, class UTextureRenderTarget2D** Texture_1, class UTextureRenderTarget2D** Texture_2, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.GetRenderItem");
 
@@ -976,9 +996,9 @@ void ABP_S3Memopad_book_C::GetRenderItem(bool IsLast, class UTextureRenderTarget
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetPageStatus
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Memopad_book_C::SetPageStatus()
+void ABP_S3Memopad_book_C::STATIC_SetPageStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetPageStatus");
 
@@ -993,11 +1013,11 @@ void ABP_S3Memopad_book_C::SetPageStatus()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckCoverAnim
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, MulticastDelegate, Public, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::CheckCoverAnim(float DeltaTime)
+void ABP_S3Memopad_book_C::STATIC_CheckCoverAnim(float DeltaTime)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.CheckCoverAnim");
 
@@ -1013,14 +1033,14 @@ void ABP_S3Memopad_book_C::CheckCoverAnim(float DeltaTime)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetCoverAnim
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3Memopad_page_C*    page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          WaitTime                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            AnimId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Reverse                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::SetCoverAnim(class ABP_S3Memopad_page_C* page, float WaitTime, int AnimId, bool Reverse)
+void ABP_S3Memopad_book_C::STATIC_SetCoverAnim(class ABP_S3Memopad_page_C* page, float WaitTime, int AnimId, bool Reverse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetCoverAnim");
 
@@ -1039,7 +1059,7 @@ void ABP_S3Memopad_book_C::SetCoverAnim(class ABP_S3Memopad_page_C* page, float 
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetCoverOffset
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, NetServer, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UChildActorComponent*    Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          Offset                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1061,7 +1081,7 @@ void ABP_S3Memopad_book_C::SetCoverOffset(class UChildActorComponent* Component,
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.AddPage
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, NetResponse, Public, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // TArray<class ABP_S3Memopad_page_C*> PageArray                      (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           bRight                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1088,12 +1108,12 @@ void ABP_S3Memopad_book_C::AddPage(bool bRight, TArray<class ABP_S3Memopad_page_
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           bRight                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsLast                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::NextPage(bool bRight, bool IsLast)
+void ABP_S3Memopad_book_C::STATIC_NextPage(bool bRight, bool IsLast)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPage");
 
@@ -1110,7 +1130,7 @@ void ABP_S3Memopad_book_C::NextPage(bool bRight, bool IsLast)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.TurnedPage
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetMulticast, Protected, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class ABP_S3Memopad_page_C*    page                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           LastPage                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1132,11 +1152,11 @@ void ABP_S3Memopad_book_C::TurnedPage(class ABP_S3Memopad_page_C* page, bool Las
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CloseBook
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, Static, NetMulticast, MulticastDelegate, Private, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Finish                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::CloseBook(bool Finish)
+void ABP_S3Memopad_book_C::STATIC_CloseBook(bool Finish)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.CloseBook");
 
@@ -1152,15 +1172,16 @@ void ABP_S3Memopad_book_C::CloseBook(bool Finish)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.OpenBook
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 
-void ABP_S3Memopad_book_C::OpenBook()
+void ABP_S3Memopad_book_C::STATIC_OpenBook()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.OpenBook");
 
 	ABP_S3Memopad_book_C_OpenBook_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1169,7 +1190,7 @@ void ABP_S3Memopad_book_C::OpenBook()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.CreateBook
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetMulticast, Protected, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::CreateBook()
 {
@@ -1186,9 +1207,9 @@ void ABP_S3Memopad_book_C::CreateBook()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.doCmd_screenOut
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::doCmd_screenOut()
+void ABP_S3Memopad_book_C::STATIC_doCmd_screenOut()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.doCmd_screenOut");
 
@@ -1203,7 +1224,7 @@ void ABP_S3Memopad_book_C::doCmd_screenOut()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::UserConstructionScript()
 {
@@ -1220,9 +1241,9 @@ void ABP_S3Memopad_book_C::UserConstructionScript()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove1__FinishedFunc
-// (BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::tl_PageMove1__FinishedFunc()
+void ABP_S3Memopad_book_C::STATIC_tl_PageMove1__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove1__FinishedFunc");
 
@@ -1237,9 +1258,9 @@ void ABP_S3Memopad_book_C::tl_PageMove1__FinishedFunc()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove1__UpdateFunc
-// (BlueprintEvent)
+// (NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::tl_PageMove1__UpdateFunc()
+void ABP_S3Memopad_book_C::STATIC_tl_PageMove1__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove1__UpdateFunc");
 
@@ -1254,9 +1275,9 @@ void ABP_S3Memopad_book_C::tl_PageMove1__UpdateFunc()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove2__FinishedFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::tl_PageMove2__FinishedFunc()
+void ABP_S3Memopad_book_C::STATIC_tl_PageMove2__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove2__FinishedFunc");
 
@@ -1271,9 +1292,9 @@ void ABP_S3Memopad_book_C::tl_PageMove2__FinishedFunc()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove2__UpdateFunc
-// (BlueprintEvent)
+// (Net, NetReliable, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::tl_PageMove2__UpdateFunc()
+void ABP_S3Memopad_book_C::STATIC_tl_PageMove2__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.tl_PageMove2__UpdateFunc");
 
@@ -1288,9 +1309,9 @@ void ABP_S3Memopad_book_C::tl_PageMove2__UpdateFunc()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.fade__FinishedFunc
-// (BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::fade__FinishedFunc()
+void ABP_S3Memopad_book_C::STATIC_fade__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.fade__FinishedFunc");
 
@@ -1305,9 +1326,9 @@ void ABP_S3Memopad_book_C::fade__FinishedFunc()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.fade__UpdateFunc
-// (BlueprintEvent)
+// (NetReliable, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::fade__UpdateFunc()
+void ABP_S3Memopad_book_C::STATIC_fade__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.fade__UpdateFunc");
 
@@ -1322,13 +1343,13 @@ void ABP_S3Memopad_book_C::fade__UpdateFunc()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.򠪦􆖐񍳔_
-// (BlueprintEvent)
+// (Net, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::UnknownFunc01()
+void ABP_S3Memopad_book_C::STATIC__UnknownFunc01()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.򠪦􆖐񍳔_");
 
-	ABP_S3Memopad_book_C_UnknownFunc01__Params params;
+	ABP_S3Memopad_book_C__UnknownFunc01__Params params;
 
 	auto flags = fn->FunctionFlags;
 
@@ -1339,11 +1360,11 @@ void ABP_S3Memopad_book_C::UnknownFunc01()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKeyEvent_2
-// (BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKeyEvent_2(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKeyEvent_2(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKeyEvent_2");
 
@@ -1351,6 +1372,7 @@ void ABP_S3Memopad_book_C::InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKe
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1359,11 +1381,11 @@ void ABP_S3Memopad_book_C::InpActEvt_Ctrl_Gamepad_RightThumbstick_K2Node_InputKe
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_20
-// (BlueprintEvent)
+// (Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_20(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_20(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_20");
 
@@ -1371,6 +1393,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_2
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1379,11 +1402,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_2
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_19
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_19(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchRightSelect_K2Node_InputActionEvent_19(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_19");
 
@@ -1391,6 +1414,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_1
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1399,11 +1423,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchRightSelect_K2Node_InputActionEvent_1
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18");
 
@@ -1411,6 +1435,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1419,11 +1444,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_18
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17");
 
@@ -1431,6 +1456,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1439,11 +1465,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_17
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16");
 
@@ -1451,6 +1477,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(c
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1459,11 +1486,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_16(c
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15
-// (BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15");
 
@@ -1471,6 +1498,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(c
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1479,11 +1507,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchUpSelect_K2Node_InputActionEvent_15(c
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14
-// (BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14");
 
@@ -1491,6 +1519,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1499,11 +1528,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_14
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13");
 
@@ -1511,6 +1540,7 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1519,11 +1549,11 @@ void ABP_S3Memopad_book_C::InpActEvt_SearchDownSelect_K2Node_InputActionEvent_13
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12
-// (BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12");
 
@@ -1531,6 +1561,7 @@ void ABP_S3Memopad_book_C::InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12(con
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1539,11 +1570,11 @@ void ABP_S3Memopad_book_C::InpActEvt_MenuPageLeft_K2Node_InputActionEvent_12(con
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_MenuPageRight_K2Node_InputActionEvent_11
-// (BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::InpActEvt_MenuPageRight_K2Node_InputActionEvent_11(const struct FKey& Key)
+void ABP_S3Memopad_book_C::STATIC_InpActEvt_MenuPageRight_K2Node_InputActionEvent_11(const struct FKey& Key)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InpActEvt_MenuPageRight_K2Node_InputActionEvent_11");
 
@@ -1551,6 +1582,7 @@ void ABP_S3Memopad_book_C::InpActEvt_MenuPageRight_K2Node_InputActionEvent_11(co
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1559,9 +1591,9 @@ void ABP_S3Memopad_book_C::InpActEvt_MenuPageRight_K2Node_InputActionEvent_11(co
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetReliable, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::ReceiveBeginPlay()
+void ABP_S3Memopad_book_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.ReceiveBeginPlay");
 
@@ -1576,9 +1608,9 @@ void ABP_S3Memopad_book_C::ReceiveBeginPlay()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.doCmd_screenIn
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::doCmd_screenIn()
+void ABP_S3Memopad_book_C::STATIC_doCmd_screenIn()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.doCmd_screenIn");
 
@@ -1593,9 +1625,9 @@ void ABP_S3Memopad_book_C::doCmd_screenIn()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.ReceiveDestroyed
-// (Event, Public, BlueprintEvent)
+// (Net, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::ReceiveDestroyed()
+void ABP_S3Memopad_book_C::STATIC_ReceiveDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.ReceiveDestroyed");
 
@@ -1610,11 +1642,11 @@ void ABP_S3Memopad_book_C::ReceiveDestroyed()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetReliable, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::ReceiveTick(float DeltaSeconds)
+void ABP_S3Memopad_book_C::STATIC_ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.ReceiveTick");
 
@@ -1622,6 +1654,7 @@ void ABP_S3Memopad_book_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1630,11 +1663,11 @@ void ABP_S3Memopad_book_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.PlayCoverAnim
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FMemopadCoverAnim       Info                           (BlueprintVisible, BlueprintReadOnly, Parm)
 
-void ABP_S3Memopad_book_C::PlayCoverAnim(const struct FMemopadCoverAnim& Info)
+void ABP_S3Memopad_book_C::STATIC_PlayCoverAnim(const struct FMemopadCoverAnim& Info)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.PlayCoverAnim");
 
@@ -1642,6 +1675,7 @@ void ABP_S3Memopad_book_C::PlayCoverAnim(const struct FMemopadCoverAnim& Info)
 	params.Info = Info;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1650,9 +1684,9 @@ void ABP_S3Memopad_book_C::PlayCoverAnim(const struct FMemopadCoverAnim& Info)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPageLeft
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::NextPageLeft()
+void ABP_S3Memopad_book_C::STATIC_NextPageLeft()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPageLeft");
 
@@ -1667,9 +1701,9 @@ void ABP_S3Memopad_book_C::NextPageLeft()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPageRight
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::NextPageRight()
+void ABP_S3Memopad_book_C::STATIC_NextPageRight()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextPageRight");
 
@@ -1684,9 +1718,9 @@ void ABP_S3Memopad_book_C::NextPageRight()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.Destroy
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::Destroy()
+void ABP_S3Memopad_book_C::STATIC_Destroy()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.Destroy");
 
@@ -1701,9 +1735,9 @@ void ABP_S3Memopad_book_C::Destroy()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.BackTab
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::BackTab()
+void ABP_S3Memopad_book_C::STATIC_BackTab()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.BackTab");
 
@@ -1718,9 +1752,9 @@ void ABP_S3Memopad_book_C::BackTab()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextTab
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::NextTab()
+void ABP_S3Memopad_book_C::STATIC_NextTab()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.NextTab");
 
@@ -1735,15 +1769,16 @@ void ABP_S3Memopad_book_C::NextTab()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetTabSize
-// (BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::SetTabSize()
+void ABP_S3Memopad_book_C::STATIC_SetTabSize()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.SetTabSize");
 
 	ABP_S3Memopad_book_C_SetTabSize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1752,9 +1787,9 @@ void ABP_S3Memopad_book_C::SetTabSize()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.InitPageTexture
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::InitPageTexture()
+void ABP_S3Memopad_book_C::STATIC_InitPageTexture()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.InitPageTexture");
 
@@ -1769,11 +1804,11 @@ void ABP_S3Memopad_book_C::InitPageTexture()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.PushNewPage
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Static, NetMulticast, Private, Delegate, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           IsR2                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3Memopad_book_C::PushNewPage(bool IsR2)
+void ABP_S3Memopad_book_C::STATIC_PushNewPage(bool IsR2)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.PushNewPage");
 
@@ -1781,6 +1816,7 @@ void ABP_S3Memopad_book_C::PushNewPage(bool IsR2)
 	params.IsR2 = IsR2;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1789,9 +1825,9 @@ void ABP_S3Memopad_book_C::PushNewPage(bool IsR2)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.PushPageEndButton
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::PushPageEndButton()
+void ABP_S3Memopad_book_C::STATIC_PushPageEndButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.PushPageEndButton");
 
@@ -1806,9 +1842,9 @@ void ABP_S3Memopad_book_C::PushPageEndButton()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.PushPageStartButton
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::PushPageStartButton()
+void ABP_S3Memopad_book_C::STATIC_PushPageStartButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.PushPageStartButton");
 
@@ -1823,9 +1859,9 @@ void ABP_S3Memopad_book_C::PushPageStartButton()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.PermissionDetectIcon
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Protected, NetServer)
 
-void ABP_S3Memopad_book_C::PermissionDetectIcon()
+void ABP_S3Memopad_book_C::STATIC_PermissionDetectIcon()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3Memopad_book.BP_S3Memopad_book_C.PermissionDetectIcon");
 
@@ -1840,7 +1876,7 @@ void ABP_S3Memopad_book_C::PermissionDetectIcon()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.OnPageUpdateEnd
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Native, Event, NetMulticast, MulticastDelegate, Public, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1854,6 +1890,7 @@ void ABP_S3Memopad_book_C::OnPageUpdateEnd(class AActor* Actor, TEnumAsByte<EEnd
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1862,7 +1899,7 @@ void ABP_S3Memopad_book_C::OnPageUpdateEnd(class AActor* Actor, TEnumAsByte<EEnd
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.ExecuteUbergraph_BP_S3Memopad_book
-// (HasDefaults)
+// (MulticastDelegate, Private, Delegate, HasOutParms, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1882,7 +1919,7 @@ void ABP_S3Memopad_book_C::ExecuteUbergraph_BP_S3Memopad_book(int EntryPoint)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.DoUseStartEndPageButton__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Active_StartPage               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Active_EndPage                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1904,7 +1941,7 @@ void ABP_S3Memopad_book_C::DoUseStartEndPageButton__DelegateSignature(bool Activ
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.DoButtonCheck__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           cancel                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           BookMark                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1930,7 +1967,7 @@ void ABP_S3Memopad_book_C::DoButtonCheck__DelegateSignature(bool cancel, bool Bo
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.DoUseNewPageButton__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Use                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1950,7 +1987,7 @@ void ABP_S3Memopad_book_C::DoUseNewPageButton__DelegateSignature(bool Use)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.DoUseCancelButton__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           bUse                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1970,7 +2007,7 @@ void ABP_S3Memopad_book_C::DoUseCancelButton__DelegateSignature(bool bUse)
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.onEndScreenOut__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::onEndScreenOut__DelegateSignature()
 {
@@ -1987,7 +2024,7 @@ void ABP_S3Memopad_book_C::onEndScreenOut__DelegateSignature()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.onEndScreenIn__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::onEndScreenIn__DelegateSignature()
 {
@@ -2004,7 +2041,7 @@ void ABP_S3Memopad_book_C::onEndScreenIn__DelegateSignature()
 
 
 // Function BP_S3Memopad_book.BP_S3Memopad_book_C.command_screenOut__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, NetResponse, NetMulticast, MulticastDelegate, BlueprintEvent, BlueprintPure)
 
 void ABP_S3Memopad_book_C::command_screenOut__DelegateSignature()
 {

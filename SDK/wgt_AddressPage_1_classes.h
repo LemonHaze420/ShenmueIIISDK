@@ -51,7 +51,7 @@ public:
 	void Construct();
 	void PushButton(const struct FVector2D& positiopn);
 	void SetPageIndex(int PageIndex);
-	void ExecuteUbergraph_wgt_AddressPage_1(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_AddressPage_1(int EntryPoint);
 };
 
 

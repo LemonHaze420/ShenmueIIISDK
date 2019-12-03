@@ -20,6 +20,12 @@ struct UBP_AnimNotifyTrigger_AnimChainPoint_C_GetNotifyName_Params
 	struct FString                                     ReturnValue;                                              // (Parm, OutParm, ZeroConstructor, ReturnParm)
 };
 
+// Function BP_AnimNotifyTrigger_AnimChainPoint.BP_AnimNotifyTrigger_AnimChainPoint_C.GetNotifyID
+struct UBP_AnimNotifyTrigger_AnimChainPoint_C_GetNotifyID_Params
+{
+	struct FName                                       NotifyID;                                                 // (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+};
+
 }
 
 #ifdef _MSC_VER

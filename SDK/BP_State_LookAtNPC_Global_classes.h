@@ -25,8 +25,8 @@ public:
 	}
 
 
-	void StateUpdate(float Delta, bool* bDummy);
-	void CheckNPCLocomationState();
+	void STATIC_StateUpdate(float Delta, bool* bDummy);
+	void STATIC_CheckNPCLocomationState();
 };
 
 

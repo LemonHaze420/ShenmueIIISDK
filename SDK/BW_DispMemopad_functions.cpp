@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BW_DispMemopad.BW_DispMemopad_C.SetRightVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Visibility                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DispMemopad_C::SetRightVisibility(bool Visibility)
+void UBW_DispMemopad_C::STATIC_SetRightVisibility(bool Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DispMemopad.BW_DispMemopad_C.SetRightVisibility");
 
@@ -34,11 +34,11 @@ void UBW_DispMemopad_C::SetRightVisibility(bool Visibility)
 
 
 // Function BW_DispMemopad.BW_DispMemopad_C.SetLeftVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Visibility                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DispMemopad_C::SetLeftVisibility(bool Visibility)
+void UBW_DispMemopad_C::STATIC_SetLeftVisibility(bool Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DispMemopad.BW_DispMemopad_C.SetLeftVisibility");
 
@@ -54,11 +54,11 @@ void UBW_DispMemopad_C::SetLeftVisibility(bool Visibility)
 
 
 // Function BW_DispMemopad.BW_DispMemopad_C.CursorFadeAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Native, Static, NetMulticast, Public, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           FadeIn                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DispMemopad_C::CursorFadeAnim(bool FadeIn)
+void UBW_DispMemopad_C::STATIC_CursorFadeAnim(bool FadeIn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DispMemopad.BW_DispMemopad_C.CursorFadeAnim");
 
@@ -66,6 +66,7 @@ void UBW_DispMemopad_C::CursorFadeAnim(bool FadeIn)
 	params.FadeIn = FadeIn;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -74,11 +75,11 @@ void UBW_DispMemopad_C::CursorFadeAnim(bool FadeIn)
 
 
 // Function BW_DispMemopad.BW_DispMemopad_C.FadeAnim
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, Private, NetServer, HasOutParms, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Reverse                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DispMemopad_C::FadeAnim(bool Reverse)
+void UBW_DispMemopad_C::STATIC_FadeAnim(bool Reverse)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DispMemopad.BW_DispMemopad_C.FadeAnim");
 
@@ -94,7 +95,7 @@ void UBW_DispMemopad_C::FadeAnim(bool Reverse)
 
 
 // Function BW_DispMemopad.BW_DispMemopad_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, NetMulticast, Public, Protected, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FGeometry               MyGeometry                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          InDeltaTime                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -116,7 +117,7 @@ void UBW_DispMemopad_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTi
 
 
 // Function BW_DispMemopad.BW_DispMemopad_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Public, Protected, NetServer, BlueprintCallable, BlueprintEvent, BlueprintPure)
 
 void UBW_DispMemopad_C::Construct()
 {
@@ -125,6 +126,7 @@ void UBW_DispMemopad_C::Construct()
 	UBW_DispMemopad_C_Construct_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -133,11 +135,11 @@ void UBW_DispMemopad_C::Construct()
 
 
 // Function BW_DispMemopad.BW_DispMemopad_C.ExecuteUbergraph_BW_DispMemopad
-// (HasDefaults)
+// (Net, NetRequest, Exec, Native, Static, Protected, Delegate, NetClient, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBW_DispMemopad_C::ExecuteUbergraph_BW_DispMemopad(int EntryPoint)
+void UBW_DispMemopad_C::STATIC_ExecuteUbergraph_BW_DispMemopad(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BW_DispMemopad.BW_DispMemopad_C.ExecuteUbergraph_BW_DispMemopad");
 
@@ -145,6 +147,7 @@ void UBW_DispMemopad_C::ExecuteUbergraph_BW_DispMemopad(int EntryPoint)
 	params.EntryPoint = EntryPoint;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

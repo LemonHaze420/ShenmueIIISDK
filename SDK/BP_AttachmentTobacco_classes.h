@@ -26,7 +26,7 @@ public:
 	}
 
 
-	void CreateSmoke();
+	void STATIC_CreateSmoke();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_AttachmentTobacco(int EntryPoint);

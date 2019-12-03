@@ -14,11 +14,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_State_Follow_Base.BP_State_Follow_Base_C.GetPawn
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, NetRequest, Static, MulticastDelegate, Private, NetServer, HasOutParms, Const)
 // Parameters:
 // class ABP_NPC_Lead_C*          Pawn                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_Base_C::GetPawn(class ABP_NPC_Lead_C** Pawn)
+void UBP_State_Follow_Base_C::STATIC_GetPawn(class ABP_NPC_Lead_C** Pawn)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_Base.BP_State_Follow_Base_C.GetPawn");
 
@@ -36,7 +36,7 @@ void UBP_State_Follow_Base_C::GetPawn(class ABP_NPC_Lead_C** Pawn)
 
 
 // Function BP_State_Follow_Base.BP_State_Follow_Base_C.IsDebugDrawingEnabled
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (NetReliable, Native, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           DrawDebug                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -47,6 +47,7 @@ void UBP_State_Follow_Base_C::IsDebugDrawingEnabled(bool* DrawDebug)
 	UBP_State_Follow_Base_C_IsDebugDrawingEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,11 +59,11 @@ void UBP_State_Follow_Base_C::IsDebugDrawingEnabled(bool* DrawDebug)
 
 
 // Function BP_State_Follow_Base.BP_State_Follow_Base_C.UpdateTransitions
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_Base_C::UpdateTransitions(float DeltaSeconds)
+void UBP_State_Follow_Base_C::STATIC_UpdateTransitions(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_Base.BP_State_Follow_Base_C.UpdateTransitions");
 
@@ -78,11 +79,11 @@ void UBP_State_Follow_Base_C::UpdateTransitions(float DeltaSeconds)
 
 
 // Function BP_State_Follow_Base.BP_State_Follow_Base_C.IsCurrentState
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Static, MulticastDelegate, Private, NetServer, HasOutParms, Const)
 // Parameters:
 // bool                           bIsCurrent                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_State_Follow_Base_C::IsCurrentState(bool* bIsCurrent)
+void UBP_State_Follow_Base_C::STATIC_IsCurrentState(bool* bIsCurrent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_State_Follow_Base.BP_State_Follow_Base_C.IsCurrentState");
 
@@ -100,7 +101,7 @@ void UBP_State_Follow_Base_C::IsCurrentState(bool* bIsCurrent)
 
 
 // Function BP_State_Follow_Base.BP_State_Follow_Base_C.StateOnInitialize
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, NetResponse, MulticastDelegate, Public, Private, Protected, Delegate, NetServer, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
 void UBP_State_Follow_Base_C::StateOnInitialize()
 {
@@ -109,6 +110,7 @@ void UBP_State_Follow_Base_C::StateOnInitialize()
 	UBP_State_Follow_Base_C_StateOnInitialize_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -117,7 +119,7 @@ void UBP_State_Follow_Base_C::StateOnInitialize()
 
 
 // Function BP_State_Follow_Base.BP_State_Follow_Base_C.ExecuteUbergraph_BP_State_Follow_Base
-// ()
+// (Exec, Event, NetResponse, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

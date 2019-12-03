@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_AdventurePlayerDialog.BPF_AdventurePlayerDialog_C.BPF_StopAdventurePlayerDialog
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, Static, Private, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -34,7 +34,7 @@ void UBPF_AdventurePlayerDialog_C::STATIC_BPF_StopAdventurePlayerDialog(class UO
 
 
 // Function BPF_AdventurePlayerDialog.BPF_AdventurePlayerDialog_C.BPF_GetAdventurePlayerDialogComponent
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -48,6 +48,7 @@ bool UBPF_AdventurePlayerDialog_C::STATIC_BPF_GetAdventurePlayerDialogComponent(
 	params.__WorldContext = __WorldContext;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

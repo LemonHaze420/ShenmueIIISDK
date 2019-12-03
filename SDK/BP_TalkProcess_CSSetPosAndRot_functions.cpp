@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_TalkProcess_CSSetPosAndRot.BP_TalkProcess_CSSetPosAndRot_C.Activate
-// (Event, Public, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void UBP_TalkProcess_CSSetPosAndRot_C::Activate()
 {
@@ -31,11 +31,11 @@ void UBP_TalkProcess_CSSetPosAndRot_C::Activate()
 
 
 // Function BP_TalkProcess_CSSetPosAndRot.BP_TalkProcess_CSSetPosAndRot_C.ExecuteUbergraph_BP_TalkProcess_CSSetPosAndRot
-// (HasDefaults)
+// (Event, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_TalkProcess_CSSetPosAndRot_C::ExecuteUbergraph_BP_TalkProcess_CSSetPosAndRot(int EntryPoint)
+void UBP_TalkProcess_CSSetPosAndRot_C::STATIC_ExecuteUbergraph_BP_TalkProcess_CSSetPosAndRot(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_TalkProcess_CSSetPosAndRot.BP_TalkProcess_CSSetPosAndRot_C.ExecuteUbergraph_BP_TalkProcess_CSSetPosAndRot");
 

@@ -28,11 +28,11 @@ public:
 	}
 
 
-	void CalcUniqueCamera();
+	void STATIC_CalcUniqueCamera();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
-	void SetEnabledHelp(bool Condition);
-	void ExecuteUbergraph_BP_S3PamphletItemSpawner(int EntryPoint);
+	void STATIC_SetEnabledHelp(bool Condition);
+	void STATIC_ExecuteUbergraph_BP_S3PamphletItemSpawner(int EntryPoint);
 };
 
 

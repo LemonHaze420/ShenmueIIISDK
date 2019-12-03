@@ -26,7 +26,7 @@ public:
 	}
 
 
-	class ABP_MiniGameChoose_C* SpawnMiniGameChooseActor(ES3MiniGameCategory Category, bool ManualCamera);
+	class ABP_MiniGameChoose_C* STATIC_SpawnMiniGameChooseActor(ES3MiniGameCategory Category, bool ManualCamera);
 };
 
 

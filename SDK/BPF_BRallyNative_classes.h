@@ -25,8 +25,8 @@ public:
 	}
 
 
-	bool STATIC_BPF_IsBattleRallyGamemode(class UObject* __WorldContext);
-	class US3_BRallyAwardSystem* STATIC_BPF_GetBRallyAwardComponent(class UObject* __WorldContext);
+	bool BPF_IsBattleRallyGamemode(class UObject* __WorldContext);
+	class US3_BRallyAwardSystem* BPF_GetBRallyAwardComponent(class UObject* __WorldContext);
 };
 
 

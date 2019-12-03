@@ -50,7 +50,7 @@ public:
 	void ListenerIsTaller(bool* Result);
 	void ReceiveBeginPlay();
 	void Update();
-	void ExecuteUbergraph_BPC_AutoRefineShoulderCut(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BPC_AutoRefineShoulderCut(int EntryPoint);
 };
 
 

@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ReceiveTick(float DeltaSeconds);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ReceiveTick(float DeltaSeconds);
 	void ExecuteUbergraph_BP_TalkCamera_SBU_F_01(int EntryPoint);
 };
 

@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BPF_SaveLoad.BPF_SaveLoad_C.GetS3SaveLoadManager
-// (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, Static, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable)
 // Parameters:
 // class UObject*                 __WorldContext                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UBP_S3SaveLoadManager_C* newParam                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)

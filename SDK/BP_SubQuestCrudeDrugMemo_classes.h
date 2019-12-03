@@ -34,18 +34,18 @@ public:
 	}
 
 
-	void CheckItemGetNum(const struct FString& ItemId, bool* PlayAc);
-	void CheckPlayAc(bool* enable_play);
+	void STATIC_CheckItemGetNum(const struct FString& ItemId, bool* PlayAc);
+	void STATIC_CheckPlayAc(bool* enable_play);
 	void CheckAllGetItem(bool* AllGet);
 	void GetItemNum(int ID, int* Count);
-	void SetCrudeDrugGlobalFlag(int FlagID, int FlagValue, bool* set_is_done);
-	void isEnableEvent(bool* Enable);
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void StartEvent(int ArrayIndex, int SetFlags);
-	void LoadStartIn();
-	void ItemChange(const struct FName& ItemId, int NewNum, int OldItem);
-	void ExecuteUbergraph_BP_SubQuestCrudeDrugMemo(int EntryPoint);
+	void STATIC_SetCrudeDrugGlobalFlag(int FlagID, int FlagValue, bool* set_is_done);
+	void STATIC_isEnableEvent(bool* Enable);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_StartEvent(int ArrayIndex, int SetFlags);
+	void STATIC_LoadStartIn();
+	void STATIC_ItemChange(const struct FName& ItemId, int NewNum, int OldItem);
+	void STATIC_ExecuteUbergraph_BP_SubQuestCrudeDrugMemo(int EntryPoint);
 };
 
 

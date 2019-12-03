@@ -69,7 +69,7 @@ public:
 	class UMeshComponent* GetClothMeshComponent();
 	void Zoom();
 	void SetShowObjeectScale(float Scale);
-	void CacheFingerLocationAndRotation(const struct FString& soketName, int Length, TArray<struct FVector>* FingerLocations, TArray<struct FRotator>* FingerRotations);
+	void STATIC_CacheFingerLocationAndRotation(const struct FString& soketName, int Length, TArray<struct FVector>* FingerLocations, TArray<struct FRotator>* FingerRotations);
 	void UserConstructionScript();
 	void SetTargetShowCamera();
 	void Reset(bool bNewVisibility);
@@ -79,7 +79,7 @@ public:
 	void Input_Wait_Update();
 	void InpAxisEvt_MoveRight_K2Node_InputAxisEvent_10(float AxisValue);
 	void InpAxisEvt_MoveForward_K2Node_InputAxisEvent_6(float AxisValue);
-	void ExecuteUbergraph_BP_PlayerShowObject(int EntryPoint);
+	void STATIC_ExecuteUbergraph_BP_PlayerShowObject(int EntryPoint);
 	void OnCalcFinishedDispatcher__DelegateSignature();
 };
 

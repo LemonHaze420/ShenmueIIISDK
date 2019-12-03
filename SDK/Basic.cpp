@@ -3,6 +3,8 @@
 #include <Windows.h>
 #include <cassert>
 
+#include "MinHook.h"
+
 // Name: Shenmue3, Version: 1.0.2
 
 #ifdef _MSC_VER
@@ -11,12 +13,13 @@
 
 namespace SDK
 {
+
 	TNameEntryArray* FName::GNames = nullptr;
 	FUObjectArray* UObject::GObjects = nullptr;
 
 	ProcessEvent_t ProcessEventOriginal;
 
-	inline void CreateProcessEventHook(std::string hookName, std::string functionName, ProcessEvent_t hook) {
+	void CreateProcessEventHook(std::string hookName, std::string functionName, ProcessEvent_t hook) {
 		ProcessEventUserHook tmpHook;
 		tmpHook.hookName = hookName;
 		tmpHook.hookFunction = functionName;
@@ -72,10 +75,16 @@ namespace SDK
 	Version determineVersion()
 	{
 		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V102), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
-			printf("Detected full game - v1.02\n"); return V102;
+#ifdef _DEBUG
+			printf("Detected full game - v1.02\n"); 
+#endif
+			return V102;
 		}
 		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V10201), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
-			printf("Detected full game - v1.02.01\n"); return V10201;
+#ifdef _DEBUG
+			printf("Detected full game - v1.02.01\n"); 
+#endif
+			return V10201;
 		}
 		printf("Couldn't detect version.\n");
 		return INVALID;
@@ -91,10 +100,10 @@ namespace SDK
 		printf("Allocated console\n");
 #endif
 
-		MODULEINFO mi	= GetModuleInfo();
-		g_ModuleName	= (ModuleName.empty() ? "Shenmue3-Win64-Shipping.exe" : ModuleName);
-		g_BaseAddress	= ((DWORD_PTR)mi.lpBaseOfDll == 0 ? (DWORD_PTR)GetModuleHandleA(NULL) : (DWORD_PTR)mi.lpBaseOfDll);
-		g_Size			= mi.SizeOfImage;
+		MODULEINFO mi = GetModuleInfo();
+		g_ModuleName = (ModuleName.empty() ? "Shenmue3-Win64-Shipping.exe" : ModuleName);
+		g_BaseAddress = ((DWORD_PTR)mi.lpBaseOfDll == 0 ? (DWORD_PTR)GetModuleHandleA(NULL) : (DWORD_PTR)mi.lpBaseOfDll);
+		g_Size = mi.SizeOfImage;
 
 		// Detect version and set offsets
 		Version ver = determineVersion();
@@ -104,7 +113,7 @@ namespace SDK
 			MessageBoxA(NULL, "Error detecting game version. Exiting.", "Shenmue III SDK", MB_OK);
 			return -1;
 		}
-		else if(objectsOffs == g_BaseAddress) {
+		else if (objectsOffs == g_BaseAddress) {
 			MessageBoxA(NULL, "Invalid GObjects offset. Exiting.", "Shenmue III SDK", MB_OK);
 			return -1;
 		}
@@ -132,7 +141,9 @@ namespace SDK
 
 			MH_CreateHook(reinterpret_cast<void**>(processEventAddr), ProcessEventHook, reinterpret_cast<void**>(&ProcessEventOriginal));
 			mhStatus = MH_EnableHook(reinterpret_cast<void*>(processEventAddr));
+#ifdef _DEBUG
 			printf("processEventHook returned 0x%X\n", mhStatus);
+#endif
 			if (mhStatus != MH_OK) {
 				MessageBoxA(NULL, "Unable to hook ProcessEvent. Exiting.", "Shenmue III SDK", MB_OK);
 				return -1;
@@ -145,6 +156,9 @@ namespace SDK
 			printf("baseAddr      =    0x%I64X\n", g_BaseAddress);
 			printf("objectsAddr   =    0x%I64X\n", objectsOffs);
 			printf("nameAddr      =    0x%I64X\n", nameOffs);
+			printf("GObjects Num:      %d\n", (int)UObject::GetGlobalObjects().Num());
+			printf("GNames Num:        %d\n", (int)FName::GetGlobalNames().Num());
+
 			printf("First GName:  '%s'\n", FName::GetGlobalNames()[0]->AnsiName);
 			printf("Second GName: '%s'\n", FName::GetGlobalNames()[1]->AnsiName);
 			printf("Initialized.\n");
@@ -152,42 +166,42 @@ namespace SDK
 		}
 		return 1;
 	}
-//---------------------------------------------------------------------------
-bool FWeakObjectPtr::IsValid() const
-{
-	if (ObjectSerialNumber == 0)
+	//---------------------------------------------------------------------------
+	bool FWeakObjectPtr::IsValid() const
 	{
-		return false;
-	}
-	if (ObjectIndex < 0)
-	{
-		return false;
-	}
-	auto ObjectItem = UObject::GetGlobalObjects().GetItemByIndex(ObjectIndex);
-	if (!ObjectItem)
-	{
-		return false;
-	}
-	if (!SerialNumbersMatch(ObjectItem))
-	{
-		return false;
-	}
-	return !(ObjectItem->IsUnreachable() || ObjectItem->IsPendingKill());
-}
-//---------------------------------------------------------------------------
-UObject* FWeakObjectPtr::Get() const
-{
-	if (IsValid())
-	{
-		auto ObjectItem = UObject::GetGlobalObjects().GetItemByIndex(ObjectIndex);
-		if (ObjectItem)
+		if (ObjectSerialNumber == 0)
 		{
-			return ObjectItem->Object;
+			return false;
 		}
+		if (ObjectIndex < 0)
+		{
+			return false;
+		}
+		auto ObjectItem = UObject::GetGlobalObjects().GetItemByIndex(ObjectIndex);
+		if (!ObjectItem)
+		{
+			return false;
+		}
+		if (!SerialNumbersMatch(ObjectItem))
+		{
+			return false;
+		}
+		return !(ObjectItem->IsUnreachable() || ObjectItem->IsPendingKill());
 	}
-	return nullptr;
-}
-//---------------------------------------------------------------------------
+	//---------------------------------------------------------------------------
+	UObject* FWeakObjectPtr::Get() const
+	{
+		if (IsValid())
+		{
+			auto ObjectItem = UObject::GetGlobalObjects().GetItemByIndex(ObjectIndex);
+			if (ObjectItem)
+			{
+				return ObjectItem->Object;
+			}
+		}
+		return nullptr;
+	}
+	//---------------------------------------------------------------------------
 }
 
 #ifdef _MSC_VER

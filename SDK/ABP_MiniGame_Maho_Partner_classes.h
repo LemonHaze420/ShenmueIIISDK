@@ -49,13 +49,13 @@ public:
 
 
 	void SetAnimState(TEnumAsByte<E_MiniGame_MahoPartnerState> State);
-	void Initialize();
+	void STATIC_Initialize();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MiniGame_Maho_Partner_AnimGraphNode_BlendListByEnum_8D85DCA8407CB992FD18FB8DDDD876DF();
-	void BlueprintUpdateAnimation(float DeltaTimeX);
-	void ExecuteUbergraph_ABP_MiniGame_Maho_Partner(int EntryPoint);
+	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
+	void STATIC_ExecuteUbergraph_ABP_MiniGame_Maho_Partner(int EntryPoint);
 	void ChangeAnimState__DelegateSignature(TEnumAsByte<E_MiniGame_MahoPartnerState> State);
-	void TransEndFallDownDispacher__DelegateSignature();
-	void ReStartPlayingDispacher__DelegateSignature();
+	void STATIC_TransEndFallDownDispacher__DelegateSignature();
+	void STATIC_ReStartPlayingDispacher__DelegateSignature();
 };
 
 

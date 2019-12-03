@@ -34,22 +34,22 @@ public:
 
 
 	void IsVisibleRStickCenterPos(bool* IsCenter);
-	void CheckClothItemNum(ES3ItemDataGroup CurrentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List);
+	void CheckClothItemNum(ES3ItemDataGroup currentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List);
 	bool IsVisibleRStickOnlyViewMode();
 	void CheckEnabledByArea(const struct FName& ItemLabel, bool* Enabled);
 	void CheckItemGroup(int item_id, ES3ItemDataGroup* Group);
-	void CheckRewardGacha(ES3ItemDataGroup CurrentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List);
-	void CheckClothItem(ES3ItemDataGroup CurrentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List);
+	void CheckRewardGacha(ES3ItemDataGroup currentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List);
+	void CheckClothItem(ES3ItemDataGroup currentCategory, ES3ItemDataGroup ItemListGroup, bool* Add_List);
 	void GetItem();
-	void SetPrice();
+	void STATIC_SetPrice();
 	void SetRightWindow();
 	void RightWindowChange();
 	void MakeItemDataList();
 	void PawnshUpdateItemIDList();
-	void PawnshChangePage(int Value);
-	void MakeItemIDList();
+	void STATIC_PawnshChangePage(int Value);
+	void MakeItemIdList();
 	void InitItemDataLength();
-	void UserConstructionScript();
+	void STATIC_UserConstructionScript();
 	void ReceiveBeginPlay();
 	void ReceiveTick(float DeltaSeconds);
 	void CheckVisibleAddButton();
@@ -57,7 +57,7 @@ public:
 	void ChangePage(int Value);
 	void UpdateItemIDList();
 	void MoveCategoryFocusAfter();
-	void CustomEvent_2();
+	void STATIC_CustomEvent_2();
 	void PushCheckDialog(TEnumAsByte<EN_UI_Button> PushButton);
 	void CustomEvent();
 	void SetSkillWindow();

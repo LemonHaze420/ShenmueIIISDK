@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_GamePadShoulderSetAsset.BP_GamePadShoulderSetAsset_C.GetImage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// (NetRequest, Native, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Protected, BlueprintCallable)
 // Parameters:
 // TEnumAsByte<EGamepadShoulder>  Button                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UTexture2D*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -27,6 +27,7 @@ class UTexture2D* UBP_GamePadShoulderSetAsset_C::GetImage(TEnumAsByte<EGamepadSh
 	params.Button = Button;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 

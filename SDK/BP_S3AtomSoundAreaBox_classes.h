@@ -30,12 +30,12 @@ public:
 	}
 
 
-	void IsDisable(bool* Disabled);
+	void STATIC_IsDisable(bool* Disabled);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature();
-	void BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature();
-	void ExecuteUbergraph_BP_S3AtomSoundAreaBox(int EntryPoint);
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_0_S3SoundAreaCallback__DelegateSignature();
+	void STATIC_BndEvt__S3SoundArea_K2Node_ComponentBoundEvent_1_S3SoundAreaCallback__DelegateSignature();
+	void STATIC_ExecuteUbergraph_BP_S3AtomSoundAreaBox(int EntryPoint);
 };
 
 

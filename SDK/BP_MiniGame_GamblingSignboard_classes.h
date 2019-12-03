@@ -39,13 +39,13 @@ public:
 	}
 
 
-	void InitializeViewMeshComponent(int ViewMeshNum, class UBPC_MiniGameBoardNum_C* Component);
+	void STATIC_InitializeViewMeshComponent(int ViewMeshNum, class UBPC_MiniGameBoardNum_C* Component);
 	void OnObjectLoaded(const struct FString& LoadId, class UObject* LoadedObject);
 	void SetNumberPos();
-	void SetBoardInfoOnePlay(TEnumAsByte<E_MiniGameGambleType> Index, int OnePlayPrice, bool IsKihuda);
+	void STATIC_SetBoardInfoOnePlay(TEnumAsByte<E_MiniGameGambleType> Index, int OnePlayPrice, bool IsKihuda);
 	void SetBoardInfo(TEnumAsByte<E_MiniGameGambleType> Index, int MinNum, int MaxNum, int OddNum);
 	void UserConstructionScript();
-	void ReceiveBeginPlay();
+	void STATIC_ReceiveBeginPlay();
 	void ExecuteUbergraph_BP_MiniGame_GamblingSignboard(int EntryPoint);
 };
 

@@ -55,17 +55,17 @@ public:
 	}
 
 
-	void SetLocalizeInfoText(const struct FString& ExploitsText, const struct FString& EarningsText);
-	void DeleteAllFishData();
-	void AddFishData(const struct FString& ArgMainName, const struct FString& ArgSubName, int ArgCm, int ArgGram0);
+	void STATIC_SetLocalizeInfoText(const struct FString& ExploitsText, const struct FString& EarningsText);
+	void STATIC_DeleteAllFishData();
+	void STATIC_AddFishData(const struct FString& ArgMainName, const struct FString& ArgSubName, int ArgCm, int ArgGram0);
 	struct FText GetLocalizeFishNameText();
 	struct FText GetFishGramText();
-	void SetImagePositionY(class UImage* ArgImage, float ArgPosY);
+	void STATIC_SetImagePositionY(class UImage* ArgImage, float ArgPosY);
 	struct FText GetFishScaleText();
 	struct FText GetFishNameText();
 	void Construct();
-	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
-	void ExecuteUbergraph_WBP_Fishing_ShopResult(int EntryPoint);
+	void STATIC_Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
+	void STATIC_ExecuteUbergraph_WBP_Fishing_ShopResult(int EntryPoint);
 };
 
 

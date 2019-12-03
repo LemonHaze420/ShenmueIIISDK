@@ -26,9 +26,9 @@ public:
 	}
 
 
-	void UserConstructionScript();
-	void ReceiveBeginPlay();
-	void ExecuteUbergraph_BP_ScheduleNPCAI(int EntryPoint);
+	void STATIC_UserConstructionScript();
+	void STATIC_ReceiveBeginPlay();
+	void STATIC_ExecuteUbergraph_BP_ScheduleNPCAI(int EntryPoint);
 };
 
 

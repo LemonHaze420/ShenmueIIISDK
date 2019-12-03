@@ -37,8 +37,8 @@ struct ABP_UI_GiftManager_C_InitItemDataLength_Params
 {
 };
 
-// Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeItemIDList
-struct ABP_UI_GiftManager_C_MakeItemIDList_Params
+// Function BP_UI_GiftManager.BP_UI_GiftManager_C.MakeItemIdList
+struct ABP_UI_GiftManager_C_MakeItemIdList_Params
 {
 };
 
@@ -93,7 +93,7 @@ struct ABP_UI_GiftManager_C_ExecuteUbergraph_BP_UI_GiftManager_Params
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.INFO_SuccessItem__DelegateSignature
 struct ABP_UI_GiftManager_C_INFO_SuccessItem__DelegateSignature_Params
 {
-	int                                                ItemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+	int                                                itemList;                                                 // (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 };
 
 // Function BP_UI_GiftManager.BP_UI_GiftManager_C.ED_UseItem__DelegateSignature

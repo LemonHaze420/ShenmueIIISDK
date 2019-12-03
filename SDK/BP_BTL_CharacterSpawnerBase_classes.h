@@ -26,10 +26,10 @@ public:
 	}
 
 
-	bool isPlayer();
-	bool IsEnabled();
+	bool STATIC_isPlayer();
+	bool STATIC_IsEnabled();
 	void GetSpawnInfo(class UObject* Outer, class UBTL_Launch_NPC_C** LaunchInfo);
-	void GetID(struct FName* Identifier);
+	void STATIC_GetID(struct FName* Identifier);
 	void UserConstructionScript();
 };
 

@@ -40,11 +40,11 @@ public:
 
 
 	struct FName GetRandomScript();
-	void IsLooking(bool* Look);
+	void STATIC_IsLooking(bool* Look);
 	void UserConstructionScript();
 	void UniqueActionOnFind();
 	void ForceFindSelf();
-	void SetEnabledHelp(bool Condition);
+	void STATIC_SetEnabledHelp(bool Condition);
 	void UpdateEffect(float Value, bool Current);
 	void CreateEffect();
 	void ReceiveBeginPlay();

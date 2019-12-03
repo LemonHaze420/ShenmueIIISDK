@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.DisableCheckSuspendTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Native, NetResponse, MulticastDelegate, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
 void ABP_MiniGame_FishingManager_C::DisableCheckSuspendTime()
 {
@@ -23,6 +23,7 @@ void ABP_MiniGame_FishingManager_C::DisableCheckSuspendTime()
 	ABP_MiniGame_FishingManager_C_DisableCheckSuspendTime_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -31,11 +32,11 @@ void ABP_MiniGame_FishingManager_C::DisableCheckSuspendTime()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SetEnabledPlayFishing
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           bEnabledPlayFishing            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingManager_C::SetEnabledPlayFishing(bool bEnabledPlayFishing)
+void ABP_MiniGame_FishingManager_C::STATIC_SetEnabledPlayFishing(bool bEnabledPlayFishing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SetEnabledPlayFishing");
 
@@ -43,6 +44,7 @@ void ABP_MiniGame_FishingManager_C::SetEnabledPlayFishing(bool bEnabledPlayFishi
 	params.bEnabledPlayFishing = bEnabledPlayFishing;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -51,17 +53,18 @@ void ABP_MiniGame_FishingManager_C::SetEnabledPlayFishing(bool bEnabledPlayFishi
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.GetEnabledPlayFishing
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           bEnabled                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingManager_C::GetEnabledPlayFishing(bool* bEnabled)
+void ABP_MiniGame_FishingManager_C::STATIC_GetEnabledPlayFishing(bool* bEnabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.GetEnabledPlayFishing");
 
 	ABP_MiniGame_FishingManager_C_GetEnabledPlayFishing_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -73,15 +76,16 @@ void ABP_MiniGame_FishingManager_C::GetEnabledPlayFishing(bool* bEnabled)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.UpdateLimitTIme
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Event, Static, Private, Protected, NetClient, Const)
 
-void ABP_MiniGame_FishingManager_C::UpdateLimitTIme()
+void ABP_MiniGame_FishingManager_C::STATIC_UpdateLimitTIme()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.UpdateLimitTIme");
 
 	ABP_MiniGame_FishingManager_C_UpdateLimitTIme_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,9 +94,9 @@ void ABP_MiniGame_FishingManager_C::UpdateLimitTIme()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ResetRentalData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, Static, MulticastDelegate, Public, Private, Protected, Delegate, HasDefaults, NetClient, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MiniGame_FishingManager_C::ResetRentalData()
+void ABP_MiniGame_FishingManager_C::STATIC_ResetRentalData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ResetRentalData");
 
@@ -107,9 +111,9 @@ void ABP_MiniGame_FishingManager_C::ResetRentalData()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.InitializeRentalData
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, Static, Delegate, NetClient, Const)
 
-void ABP_MiniGame_FishingManager_C::InitializeRentalData()
+void ABP_MiniGame_FishingManager_C::STATIC_InitializeRentalData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.InitializeRentalData");
 
@@ -124,7 +128,7 @@ void ABP_MiniGame_FishingManager_C::InitializeRentalData()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SetEnabledPlayerControl
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -144,15 +148,16 @@ void ABP_MiniGame_FishingManager_C::SetEnabledPlayerControl(bool Condition)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.CreateReatalEndPop
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Static, NetMulticast, MulticastDelegate, Public, Protected, NetServer, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 
-void ABP_MiniGame_FishingManager_C::CreateReatalEndPop()
+void ABP_MiniGame_FishingManager_C::STATIC_CreateReatalEndPop()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.CreateReatalEndPop");
 
 	ABP_MiniGame_FishingManager_C_CreateReatalEndPop_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -161,15 +166,16 @@ void ABP_MiniGame_FishingManager_C::CreateReatalEndPop()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ResetTimeLimit
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_MiniGame_FishingManager_C::ResetTimeLimit()
+void ABP_MiniGame_FishingManager_C::STATIC_ResetTimeLimit()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ResetTimeLimit");
 
 	ABP_MiniGame_FishingManager_C_ResetTimeLimit_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -178,7 +184,7 @@ void ABP_MiniGame_FishingManager_C::ResetTimeLimit()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.StartUpdateResult
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, NetMulticast, MulticastDelegate, Protected, Delegate, NetServer, Const)
 // Parameters:
 // TArray<struct FST_Fishing_ResultFishData> result_fish_array              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
@@ -189,6 +195,7 @@ void ABP_MiniGame_FishingManager_C::StartUpdateResult(TArray<struct FST_Fishing_
 	ABP_MiniGame_FishingManager_C_StartUpdateResult_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -200,11 +207,11 @@ void ABP_MiniGame_FishingManager_C::StartUpdateResult(TArray<struct FST_Fishing_
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SetResultFishArray
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // TArray<struct FST_Fishing_ResultFishData> result_fish_array              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_MiniGame_FishingManager_C::SetResultFishArray(TArray<struct FST_Fishing_ResultFishData>* result_fish_array)
+void ABP_MiniGame_FishingManager_C::STATIC_SetResultFishArray(TArray<struct FST_Fishing_ResultFishData>* result_fish_array)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SetResultFishArray");
 
@@ -222,9 +229,9 @@ void ABP_MiniGame_FishingManager_C::SetResultFishArray(TArray<struct FST_Fishing
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SetNowShopData
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_FishingManager_C::SetNowShopData()
+void ABP_MiniGame_FishingManager_C::STATIC_SetNowShopData()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SetNowShopData");
 
@@ -239,7 +246,7 @@ void ABP_MiniGame_FishingManager_C::SetNowShopData()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.SpawnSequenceActor
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, HasDefaults, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class ULevelSequence*          Sequence                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  AttachParent                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -265,7 +272,7 @@ void ABP_MiniGame_FishingManager_C::SpawnSequenceActor(class ULevelSequence* Seq
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.GetSellPosition
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // struct FVector                 pos                            (Parm, OutParm, IsPlainOldData)
 
@@ -287,11 +294,11 @@ void ABP_MiniGame_FishingManager_C::GetSellPosition(struct FVector* pos)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.GetResultRank
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, NetRequest, NetResponse, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, NetClient, DLLImport, BlueprintCallable, BlueprintPure)
 // Parameters:
 // int                            Rank                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingManager_C::GetResultRank(int* Rank)
+void ABP_MiniGame_FishingManager_C::STATIC_GetResultRank(int* Rank)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.GetResultRank");
 
@@ -309,15 +316,16 @@ void ABP_MiniGame_FishingManager_C::GetResultRank(int* Rank)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.CreateShopResult
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Native, Static, NetMulticast, MulticastDelegate, Private, Protected, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_MiniGame_FishingManager_C::CreateShopResult()
+void ABP_MiniGame_FishingManager_C::STATIC_CreateShopResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.CreateShopResult");
 
 	ABP_MiniGame_FishingManager_C_CreateShopResult_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -326,9 +334,9 @@ void ABP_MiniGame_FishingManager_C::CreateShopResult()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.UpdateShopResult
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, Static, Public, Protected, Delegate, NetClient, Const)
 
-void ABP_MiniGame_FishingManager_C::UpdateShopResult()
+void ABP_MiniGame_FishingManager_C::STATIC_UpdateShopResult()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.UpdateShopResult");
 
@@ -343,7 +351,7 @@ void ABP_MiniGame_FishingManager_C::UpdateShopResult()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.IsPlayingFishing
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, HasOutParms, HasDefaults, NetClient, Const)
 // Parameters:
 // bool                           IsFishing                      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -365,13 +373,13 @@ void ABP_MiniGame_FishingManager_C::IsPlayingFishing(bool* IsFishing)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.LoadFishingACScript
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, Private, Delegate, NetServer, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            ShopIndex                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            ResultRank                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Success                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingManager_C::LoadFishingACScript(int ShopIndex, int ResultRank, bool* Success)
+void ABP_MiniGame_FishingManager_C::STATIC_LoadFishingACScript(int ShopIndex, int ResultRank, bool* Success)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.LoadFishingACScript");
 
@@ -380,6 +388,7 @@ void ABP_MiniGame_FishingManager_C::LoadFishingACScript(int ShopIndex, int Resul
 	params.ResultRank = ResultRank;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -391,7 +400,7 @@ void ABP_MiniGame_FishingManager_C::LoadFishingACScript(int ShopIndex, int Resul
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.GetCurrentShopID
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, Native, Public, Private, HasDefaults, NetClient, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            shop_id                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -402,6 +411,7 @@ void ABP_MiniGame_FishingManager_C::GetCurrentShopID(int* shop_id)
 	ABP_MiniGame_FishingManager_C_GetCurrentShopID_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -413,7 +423,7 @@ void ABP_MiniGame_FishingManager_C::GetCurrentShopID(int* shop_id)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, NetMulticast, Public, Private, Protected, NetClient, Const)
 
 void ABP_MiniGame_FishingManager_C::UserConstructionScript()
 {
@@ -430,15 +440,16 @@ void ABP_MiniGame_FishingManager_C::UserConstructionScript()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, Static, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_MiniGame_FishingManager_C::ReceiveBeginPlay()
+void ABP_MiniGame_FishingManager_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ReceiveBeginPlay");
 
 	ABP_MiniGame_FishingManager_C_ReceiveBeginPlay_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -447,7 +458,7 @@ void ABP_MiniGame_FishingManager_C::ReceiveBeginPlay()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -459,6 +470,7 @@ void ABP_MiniGame_FishingManager_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -467,7 +479,7 @@ void ABP_MiniGame_FishingManager_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ResetToolsData
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_MiniGame_FishingManager_C::ResetToolsData()
 {
@@ -484,7 +496,7 @@ void ABP_MiniGame_FishingManager_C::ResetToolsData()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.Event_JumpToShopResult
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_MiniGame_FishingManager_C::Event_JumpToShopResult()
 {
@@ -501,12 +513,12 @@ void ABP_MiniGame_FishingManager_C::Event_JumpToShopResult()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.OnEndJumpToShop
-// (BlueprintCallable, BlueprintEvent)
+// (Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingManager_C::OnEndJumpToShop(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGame_FishingManager_C::STATIC_OnEndJumpToShop(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.OnEndJumpToShop");
 
@@ -523,12 +535,12 @@ void ABP_MiniGame_FishingManager_C::OnEndJumpToShop(class AActor* Actor, TEnumAs
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.OnEndJumpToSavePos
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingManager_C::OnEndJumpToSavePos(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
+void ABP_MiniGame_FishingManager_C::STATIC_OnEndJumpToSavePos(class AActor* Actor, TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.OnEndJumpToSavePos");
 
@@ -545,7 +557,7 @@ void ABP_MiniGame_FishingManager_C::OnEndJumpToSavePos(class AActor* Actor, TEnu
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ReturnFishingTools
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // bool                           UseDialog                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -557,6 +569,7 @@ void ABP_MiniGame_FishingManager_C::ReturnFishingTools(bool UseDialog)
 	params.UseDialog = UseDialog;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -565,7 +578,7 @@ void ABP_MiniGame_FishingManager_C::ReturnFishingTools(bool UseDialog)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.DialogInputTimeOut
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_MiniGame_FishingManager_C::DialogInputTimeOut()
 {
@@ -582,7 +595,7 @@ void ABP_MiniGame_FishingManager_C::DialogInputTimeOut()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.EndFishing
-// (BlueprintCallable, BlueprintEvent)
+// (NetMulticast, MulticastDelegate, Public, Private, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_MiniGame_FishingManager_C::EndFishing()
 {
@@ -599,7 +612,7 @@ void ABP_MiniGame_FishingManager_C::EndFishing()
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.PlayShopAC
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            ResultRank                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -611,6 +624,7 @@ void ABP_MiniGame_FishingManager_C::PlayShopAC(int ResultRank)
 	params.ResultRank = ResultRank;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -619,7 +633,7 @@ void ABP_MiniGame_FishingManager_C::PlayShopAC(int ResultRank)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.OnInputButton
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class AActor*                  Actor                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -631,6 +645,7 @@ void ABP_MiniGame_FishingManager_C::OnInputButton(class AActor* Actor)
 	params.Actor = Actor;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -639,7 +654,7 @@ void ABP_MiniGame_FishingManager_C::OnInputButton(class AActor* Actor)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.OnLoadACScript
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FString                 LoadId                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // class UObject*                 LoadedObject                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -653,6 +668,7 @@ void ABP_MiniGame_FishingManager_C::OnLoadACScript(const struct FString& LoadId,
 	params.LoadedObject = LoadedObject;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -661,12 +677,12 @@ void ABP_MiniGame_FishingManager_C::OnLoadACScript(const struct FString& LoadId,
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.FlagChanged
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int                            ArrayIndex                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // int                            SetFlags                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_MiniGame_FishingManager_C::FlagChanged(int ArrayIndex, int SetFlags)
+void ABP_MiniGame_FishingManager_C::STATIC_FlagChanged(int ArrayIndex, int SetFlags)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.FlagChanged");
 
@@ -683,7 +699,7 @@ void ABP_MiniGame_FishingManager_C::FlagChanged(int ArrayIndex, int SetFlags)
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.OnFinishedSequence
-// (BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Event, NetMulticast, MulticastDelegate, Public, Private, Protected, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class ULevelSequencePlayer*    LevelSequencePlayer            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -695,6 +711,7 @@ void ABP_MiniGame_FishingManager_C::OnFinishedSequence(class ULevelSequencePlaye
 	params.LevelSequencePlayer = LevelSequencePlayer;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -703,7 +720,7 @@ void ABP_MiniGame_FishingManager_C::OnFinishedSequence(class ULevelSequencePlaye
 
 
 // Function BP_MiniGame_FishingManager.BP_MiniGame_FishingManager_C.ExecuteUbergraph_BP_MiniGame_FishingManager
-// (HasDefaults)
+// (NetReliable, MulticastDelegate, Private, Protected, Delegate, HasOutParms, HasDefaults, NetClient, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

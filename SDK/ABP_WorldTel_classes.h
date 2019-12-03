@@ -36,7 +36,7 @@ public:
 	}
 
 
-	void BlueprintUpdateAnimation(float DeltaTimeX);
+	void STATIC_BlueprintUpdateAnimation(float DeltaTimeX);
 	void TelEnd();
 	void TelStart();
 	void AnimNotify_Talk_Start();
@@ -46,7 +46,7 @@ public:
 	void AnimNotify_Sound_Take();
 	void AnimNotify_Sound_ButtonPush();
 	void AnimNotify_Sound_end();
-	void ExecuteUbergraph_ABP_WorldTel(int EntryPoint);
+	void STATIC_ExecuteUbergraph_ABP_WorldTel(int EntryPoint);
 };
 
 

@@ -59,18 +59,18 @@ public:
 	}
 
 
-	void DestroyCaptureItem();
-	void SetItemCapture(const struct FString& RodId, const struct FString& LureID);
+	void STATIC_DestroyCaptureItem();
+	void STATIC_SetItemCapture(const struct FString& RodId, const struct FString& LureID);
 	void SetPayButtonVisible(bool Visible);
 	void PagePrev();
 	void PageNext();
-	void ResetDialog();
-	void PushDialogLeft();
-	void PushDialogRight();
+	void STATIC_ResetDialog();
+	void STATIC_PushDialogLeft();
+	void STATIC_PushDialogRight();
 	void Construct();
 	void Tick(const struct FGeometry& MyGeometry, float InDeltaTime);
 	void FinishMeshLoad();
-	void ExecuteUbergraph_wgt_FishingRodList(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_FishingRodList(int EntryPoint);
 };
 
 

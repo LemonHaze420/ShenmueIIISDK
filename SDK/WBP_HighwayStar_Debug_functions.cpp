@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function WBP_HighwayStar_Debug.WBP_HighwayStar_Debug_C.GetText_1
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetReliable, Exec, Native, Event, MulticastDelegate, Public, Private, Protected, Delegate, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
 
@@ -25,6 +25,7 @@ struct FText UWBP_HighwayStar_Debug_C::GetText_1()
 	UWBP_HighwayStar_Debug_C_GetText_1_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -35,7 +36,7 @@ struct FText UWBP_HighwayStar_Debug_C::GetText_1()
 
 
 // Function WBP_HighwayStar_Debug.WBP_HighwayStar_Debug_C.SetScore
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Event, NetMulticast, MulticastDelegate, Public, Protected, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure)
 // Parameters:
 // int                            Score                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 

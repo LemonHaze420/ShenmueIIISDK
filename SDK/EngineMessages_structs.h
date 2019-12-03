@@ -12,14 +12,6 @@ namespace SDK
 // Script Structs
 //---------------------------------------------------------------------------
 
-// ScriptStruct EngineMessages.EngineServiceNotification
-// 0x0018
-struct FEngineServiceNotification
-{
-	struct FString                                     Text;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
-	double                                             TimeSeconds;                                              // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct EngineMessages.EngineServiceTerminate
 // 0x0010
 struct FEngineServiceTerminate
@@ -51,6 +43,13 @@ struct FEngineServiceAuthDeny
 	struct FString                                     UserToDeny;                                               // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct EngineMessages.EngineServicePing
+// 0x0001
+struct FEngineServicePing
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct EngineMessages.EngineServicePong
 // 0x0050
 struct FEngineServicePong
@@ -66,11 +65,12 @@ struct FEngineServicePong
 	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 };
 
-// ScriptStruct EngineMessages.EngineServicePing
-// 0x0001
-struct FEngineServicePing
+// ScriptStruct EngineMessages.EngineServiceNotification
+// 0x0018
+struct FEngineServiceNotification
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	struct FString                                     Text;                                                     // 0x0000(0x0010) (Edit, ZeroConstructor)
+	double                                             TimeSeconds;                                              // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 }

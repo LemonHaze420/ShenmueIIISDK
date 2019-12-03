@@ -25,9 +25,9 @@ public:
 	}
 
 
-	void STATIC_CreateFadeMaterial(class UMaterialInterface* Source, class UObject* __WorldContext, class UMaterialInstanceDynamic** FadeMaterial);
+	void CreateFadeMaterial(class UMaterialInterface* Source, class UObject* __WorldContext, class UMaterialInstanceDynamic** FadeMaterial);
 	class UMaterialInstanceDynamic* STATIC_SimpleDuplicateMatParams(class UMaterialInterface* MaterialInstance, class UMaterialInterface* FadeMatTemplate, class UObject* __WorldContext);
-	void STATIC_SwitchToFadeMaterial(class USkeletalMeshComponent* Component, class UObject* __WorldContext, TArray<class UMaterialInterface*>* Materials);
+	void SwitchToFadeMaterial(class USkeletalMeshComponent* Component, class UObject* __WorldContext, TArray<class UMaterialInterface*>* Materials);
 };
 
 

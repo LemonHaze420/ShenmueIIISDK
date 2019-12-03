@@ -66,15 +66,15 @@ public:
 	void IsErrorStopping(bool* IsStopping);
 	void PlayHitFallSE();
 	void PlayHitWallSE();
-	void CheckAllVelocity(bool* result1);
-	void SaveVelocity();
-	void SetFallArea(bool bInFallArea);
+	void STATIC_CheckAllVelocity(bool* result1);
+	void STATIC_SaveVelocity();
+	void STATIC_SetFallArea(bool bInFallArea);
 	void IsFinished(bool* bStop);
 	void UserConstructionScript();
 	void ReceiveTick(float DeltaSeconds);
 	void BndEvt__Mesh_Ball_K2Node_ComponentBoundEvent_0_ComponentHitSignature__DelegateSignature(class UPrimitiveComponent* HitComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& NormalImpulse, const struct FHitResult& Hit);
-	void DelayedStopCheckLocation();
-	void ExecuteUbergraph_BP_OD_ball_Test(int EntryPoint);
+	void STATIC_DelayedStopCheckLocation();
+	void STATIC_ExecuteUbergraph_BP_OD_ball_Test(int EntryPoint);
 };
 
 

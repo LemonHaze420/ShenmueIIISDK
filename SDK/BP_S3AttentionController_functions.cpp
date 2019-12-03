@@ -14,7 +14,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.GetPriority
-// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -35,7 +35,7 @@ int ABP_S3AttentionController_C::GetPriority()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.GetDetectAction
-// (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, Event, MulticastDelegate, Public, Private, Protected, Delegate, NetClient, Const)
 // Parameters:
 // TArray<struct FS3DetectActionParam> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
@@ -56,9 +56,9 @@ TArray<struct FS3DetectActionParam> ABP_S3AttentionController_C::GetDetectAction
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateButton
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, MulticastDelegate, Public, Protected, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3AttentionController_C::UpdateButton()
+void ABP_S3AttentionController_C::STATIC_UpdateButton()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateButton");
 
@@ -73,15 +73,16 @@ void ABP_S3AttentionController_C::UpdateButton()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ResetLevelState
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, Event, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_S3AttentionController_C::ResetLevelState()
+void ABP_S3AttentionController_C::STATIC_ResetLevelState()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.ResetLevelState");
 
 	ABP_S3AttentionController_C_ResetLevelState_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -90,7 +91,7 @@ void ABP_S3AttentionController_C::ResetLevelState()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsStartAC
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                           StartAC                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -112,7 +113,7 @@ void ABP_S3AttentionController_C::IsStartAC(bool* StartAC)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.OnAttentionLevelUnloaded
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetMulticast, NetServer, NetClient)
 // Parameters:
 // bool                           NeetFade                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -134,15 +135,16 @@ void ABP_S3AttentionController_C::OnAttentionLevelUnloaded(bool* NeetFade)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateVisibleActorControl
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, NetResponse, Static, NetMulticast, MulticastDelegate, Public, Protected, Delegate, NetServer, DLLImport, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3AttentionController_C::UpdateVisibleActorControl()
+void ABP_S3AttentionController_C::STATIC_UpdateVisibleActorControl()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateVisibleActorControl");
 
 	ABP_S3AttentionController_C_UpdateVisibleActorControl_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -151,7 +153,7 @@ void ABP_S3AttentionController_C::UpdateVisibleActorControl()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SetActorVisibleControl
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, NetResponse, MulticastDelegate, Public, Private, Delegate, HasOutParms, NetClient, Const)
 // Parameters:
 // bool                           Condition                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -163,6 +165,7 @@ void ABP_S3AttentionController_C::SetActorVisibleControl(bool Condition)
 	params.Condition = Condition;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -171,12 +174,12 @@ void ABP_S3AttentionController_C::SetActorVisibleControl(bool Condition)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CheckCameraHit
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, Static, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector                 MoveVec                        (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           bHit                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::CheckCameraHit(const struct FVector& MoveVec, bool* bHit)
+void ABP_S3AttentionController_C::STATIC_CheckCameraHit(const struct FVector& MoveVec, bool* bHit)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.CheckCameraHit");
 
@@ -184,6 +187,7 @@ void ABP_S3AttentionController_C::CheckCameraHit(const struct FVector& MoveVec, 
 	params.MoveVec = MoveVec;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -195,12 +199,12 @@ void ABP_S3AttentionController_C::CheckCameraHit(const struct FVector& MoveVec, 
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CheckDirection
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Native, Static, NetMulticast, Private, NetServer, NetClient, Const)
 // Parameters:
 // class US3AttentionComponent*   Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           bFind                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::CheckDirection(class US3AttentionComponent* Component, bool* bFind)
+void ABP_S3AttentionController_C::STATIC_CheckDirection(class US3AttentionComponent* Component, bool* bFind)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.CheckDirection");
 
@@ -208,6 +212,7 @@ void ABP_S3AttentionController_C::CheckDirection(class US3AttentionComponent* Co
 	params.Component = Component;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -219,7 +224,7 @@ void ABP_S3AttentionController_C::CheckDirection(class US3AttentionComponent* Co
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ClearEmaSubtitles
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, NetServer, NetClient)
 
 void ABP_S3AttentionController_C::ClearEmaSubtitles()
 {
@@ -236,7 +241,7 @@ void ABP_S3AttentionController_C::ClearEmaSubtitles()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.DrawEmaSubtitles
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Exec, Event, NetResponse, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3AttentionController_C::DrawEmaSubtitles()
 {
@@ -253,7 +258,7 @@ void ABP_S3AttentionController_C::DrawEmaSubtitles()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsEnabledAttention
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // class US3AttentionComponent*   Target                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
@@ -276,7 +281,7 @@ bool ABP_S3AttentionController_C::IsEnabledAttention(class US3AttentionComponent
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.PlayBGMwithManager
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, MulticastDelegate, Public, Delegate, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // class USoundAtomCue*           Cue                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class ABP_S3AttentionManager_C* Manager                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -298,7 +303,7 @@ void ABP_S3AttentionController_C::PlayBGMwithManager(class USoundAtomCue* Cue, c
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SetEnabledTimerEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, NetMulticast, NetServer, NetClient)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -318,7 +323,7 @@ void ABP_S3AttentionController_C::SetEnabledTimerEvent(bool Enabled)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateTimerEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, NetResponse, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3AttentionController_C::UpdateTimerEvent()
 {
@@ -327,6 +332,7 @@ void ABP_S3AttentionController_C::UpdateTimerEvent()
 	ABP_S3AttentionController_C_UpdateTimerEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -335,7 +341,7 @@ void ABP_S3AttentionController_C::UpdateTimerEvent()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ForceExecConditionEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, NetResponse, NetMulticast, MulticastDelegate, Private, NetServer, NetClient, Const)
 
 void ABP_S3AttentionController_C::ForceExecConditionEvent()
 {
@@ -352,7 +358,7 @@ void ABP_S3AttentionController_C::ForceExecConditionEvent()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ExecConditionEvent
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, NetResponse, Private, Protected, Delegate, NetClient, Const)
 
 void ABP_S3AttentionController_C::ExecConditionEvent()
 {
@@ -361,6 +367,7 @@ void ABP_S3AttentionController_C::ExecConditionEvent()
 	ABP_S3AttentionController_C_ExecConditionEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -369,7 +376,7 @@ void ABP_S3AttentionController_C::ExecConditionEvent()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsStepEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Event, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -390,7 +397,7 @@ bool ABP_S3AttentionController_C::IsStepEvent()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.StopGameTime
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetResponse, NetMulticast, MulticastDelegate, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // bool                           Stop                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -402,6 +409,7 @@ void ABP_S3AttentionController_C::StopGameTime(bool Stop)
 	params.Stop = Stop;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -410,7 +418,7 @@ void ABP_S3AttentionController_C::StopGameTime(bool Stop)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsDisableAttentionState
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -431,11 +439,11 @@ bool ABP_S3AttentionController_C::IsDisableAttentionState()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SetSearchStateEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::SetSearchStateEnabled(bool Enabled)
+void ABP_S3AttentionController_C::STATIC_SetSearchStateEnabled(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.SetSearchStateEnabled");
 
@@ -451,17 +459,18 @@ void ABP_S3AttentionController_C::SetSearchStateEnabled(bool Enabled)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsBackerACEvent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// (Native, Static, MulticastDelegate, Public, Protected, Delegate, NetServer, HasOutParms, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::IsBackerACEvent(bool* Return)
+void ABP_S3AttentionController_C::STATIC_IsBackerACEvent(bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.IsBackerACEvent");
 
 	ABP_S3AttentionController_C_IsBackerACEvent_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -473,17 +482,18 @@ void ABP_S3AttentionController_C::IsBackerACEvent(bool* Return)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsInputActionEnabled
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetReliable, Exec, Native, Event, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3AttentionController_C::IsInputActionEnabled()
+bool ABP_S3AttentionController_C::STATIC_IsInputActionEnabled()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.IsInputActionEnabled");
 
 	ABP_S3AttentionController_C_IsInputActionEnabled_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -494,17 +504,18 @@ bool ABP_S3AttentionController_C::IsInputActionEnabled()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsEffectEnd
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Net, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3AttentionController_C::IsEffectEnd()
+bool ABP_S3AttentionController_C::STATIC_IsEffectEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.IsEffectEnd");
 
 	ABP_S3AttentionController_C_IsEffectEnd_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -515,9 +526,9 @@ bool ABP_S3AttentionController_C::IsEffectEnd()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.EndAttention
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Exec, NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 
-void ABP_S3AttentionController_C::EndAttention()
+void ABP_S3AttentionController_C::STATIC_EndAttention()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.EndAttention");
 
@@ -532,11 +543,11 @@ void ABP_S3AttentionController_C::EndAttention()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SetInputActionEnabled
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, Event, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // bool                           Enabled                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::SetInputActionEnabled(bool Enabled)
+void ABP_S3AttentionController_C::STATIC_SetInputActionEnabled(bool Enabled)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.SetInputActionEnabled");
 
@@ -544,6 +555,7 @@ void ABP_S3AttentionController_C::SetInputActionEnabled(bool Enabled)
 	params.Enabled = Enabled;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -552,7 +564,7 @@ void ABP_S3AttentionController_C::SetInputActionEnabled(bool Enabled)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.NotificationEvent
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ScriptLabel                    (Parm, OutParm, ZeroConstructor)
 
@@ -574,17 +586,18 @@ void ABP_S3AttentionController_C::NotificationEvent(struct FString* ScriptLabel)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CalcFrontVector
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector                 FrontVec                       (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3AttentionController_C::CalcFrontVector(struct FVector* FrontVec)
+void ABP_S3AttentionController_C::STATIC_CalcFrontVector(struct FVector* FrontVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.CalcFrontVector");
 
 	ABP_S3AttentionController_C_CalcFrontVector_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -596,11 +609,11 @@ void ABP_S3AttentionController_C::CalcFrontVector(struct FVector* FrontVec)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SetAdjacentComponent
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, NetMulticast, Protected, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class US3AttentionComponent*   AdjacentComponent              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_S3AttentionController_C::SetAdjacentComponent(class US3AttentionComponent* AdjacentComponent)
+void ABP_S3AttentionController_C::STATIC_SetAdjacentComponent(class US3AttentionComponent* AdjacentComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.SetAdjacentComponent");
 
@@ -616,11 +629,11 @@ void ABP_S3AttentionController_C::SetAdjacentComponent(class US3AttentionCompone
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.TraceRotateTarget
-// (Protected, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Event, Static, NetMulticast, Private, NetServer, NetClient, Const)
 // Parameters:
 // TEnumAsByte<ECarouselRotate>   Direction                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::TraceRotateTarget(TEnumAsByte<ECarouselRotate> Direction)
+void ABP_S3AttentionController_C::STATIC_TraceRotateTarget(TEnumAsByte<ECarouselRotate> Direction)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.TraceRotateTarget");
 
@@ -636,12 +649,12 @@ void ABP_S3AttentionController_C::TraceRotateTarget(TEnumAsByte<ECarouselRotate>
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SetAttentionComponent
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Event, NetResponse, Static, Public, Delegate, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class US3AttentionComponent*   AttentionComponent             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // class US3AttentionComponent*   Output                         (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_S3AttentionController_C::SetAttentionComponent(class US3AttentionComponent* AttentionComponent, class US3AttentionComponent** Output)
+void ABP_S3AttentionController_C::STATIC_SetAttentionComponent(class US3AttentionComponent* AttentionComponent, class US3AttentionComponent** Output)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.SetAttentionComponent");
 
@@ -660,15 +673,16 @@ void ABP_S3AttentionController_C::SetAttentionComponent(class US3AttentionCompon
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateCursor
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Native, Event, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 
-void ABP_S3AttentionController_C::UpdateCursor()
+void ABP_S3AttentionController_C::STATIC_UpdateCursor()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateCursor");
 
 	ABP_S3AttentionController_C_UpdateCursor_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -677,9 +691,9 @@ void ABP_S3AttentionController_C::UpdateCursor()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ResetEffectEndFlag
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 
-void ABP_S3AttentionController_C::ResetEffectEndFlag()
+void ABP_S3AttentionController_C::STATIC_ResetEffectEndFlag()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.ResetEffectEndFlag");
 
@@ -694,9 +708,9 @@ void ABP_S3AttentionController_C::ResetEffectEndFlag()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.DrawAttentionEffect
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Static, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3AttentionController_C::DrawAttentionEffect()
+void ABP_S3AttentionController_C::STATIC_DrawAttentionEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.DrawAttentionEffect");
 
@@ -711,11 +725,11 @@ void ABP_S3AttentionController_C::DrawAttentionEffect()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SetPlayerVisibility
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Exec, Native, Event, Static, HasOutParms, HasDefaults, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           Visibility                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::SetPlayerVisibility(bool Visibility)
+void ABP_S3AttentionController_C::STATIC_SetPlayerVisibility(bool Visibility)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.SetPlayerVisibility");
 
@@ -723,6 +737,7 @@ void ABP_S3AttentionController_C::SetPlayerVisibility(bool Visibility)
 	params.Visibility = Visibility;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -731,11 +746,11 @@ void ABP_S3AttentionController_C::SetPlayerVisibility(bool Visibility)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateZoomRate
-// (Protected, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, Static, Public, Private, NetServer, NetClient, Const)
 // Parameters:
 // float                          CameraZoomOffset               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::UpdateZoomRate(float* CameraZoomOffset)
+void ABP_S3AttentionController_C::STATIC_UpdateZoomRate(float* CameraZoomOffset)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.UpdateZoomRate");
 
@@ -753,19 +768,19 @@ void ABP_S3AttentionController_C::UpdateZoomRate(float* CameraZoomOffset)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.MultiCapsuleTrace
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FVector                 Start                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 End                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // float                          Radius                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // float                          HalfHeight                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class AActor*>          ignoreActors                   (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// bool                           Debug                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           DEBUG                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class UPrimitiveComponent*     HitComponent                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 // struct FVector                 MoveVec                        (Parm, OutParm, IsPlainOldData)
 
-bool ABP_S3AttentionController_C::MultiCapsuleTrace(const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, bool Debug, TArray<class AActor*>* ignoreActors, class UPrimitiveComponent** HitComponent, struct FVector* MoveVec)
+bool ABP_S3AttentionController_C::MultiCapsuleTrace(const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, bool DEBUG, TArray<class AActor*>* ignoreActors, class UPrimitiveComponent** HitComponent, struct FVector* MoveVec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.MultiCapsuleTrace");
 
@@ -774,7 +789,7 @@ bool ABP_S3AttentionController_C::MultiCapsuleTrace(const struct FVector& Start,
 	params.End = End;
 	params.Radius = Radius;
 	params.HalfHeight = HalfHeight;
-	params.Debug = Debug;
+	params.DEBUG = DEBUG;
 
 	auto flags = fn->FunctionFlags;
 
@@ -794,7 +809,7 @@ bool ABP_S3AttentionController_C::MultiCapsuleTrace(const struct FVector& Start,
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CapsuleTrace
-// (Protected, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Static, NetMulticast, MulticastDelegate, Public, Delegate, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector                 Start                          (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 End                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
@@ -804,7 +819,7 @@ bool ABP_S3AttentionController_C::MultiCapsuleTrace(const struct FVector& Start,
 // class UPrimitiveComponent*     HitComponent                   (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_S3AttentionController_C::CapsuleTrace(const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TArray<class AActor*>* ignoreActors, class UPrimitiveComponent** HitComponent)
+bool ABP_S3AttentionController_C::STATIC_CapsuleTrace(const struct FVector& Start, const struct FVector& End, float Radius, float HalfHeight, TArray<class AActor*>* ignoreActors, class UPrimitiveComponent** HitComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.CapsuleTrace");
 
@@ -830,7 +845,7 @@ bool ABP_S3AttentionController_C::CapsuleTrace(const struct FVector& Start, cons
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ResetCamera
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, MulticastDelegate, Public, Private, Protected, HasOutParms, DLLImport, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // float                          BlendTime                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -850,9 +865,9 @@ void ABP_S3AttentionController_C::ResetCamera(float BlendTime)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ExitAttentionRequest
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetRequest, Event, NetResponse, Static, MulticastDelegate, Protected, Delegate, NetServer, Const)
 
-void ABP_S3AttentionController_C::ExitAttentionRequest()
+void ABP_S3AttentionController_C::STATIC_ExitAttentionRequest()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.ExitAttentionRequest");
 
@@ -867,7 +882,7 @@ void ABP_S3AttentionController_C::ExitAttentionRequest()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ExitAttention
-// (Protected, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetResponse, NetMulticast, Public, Private, NetServer, HasOutParms, NetClient, Const)
 
 void ABP_S3AttentionController_C::ExitAttention()
 {
@@ -884,7 +899,7 @@ void ABP_S3AttentionController_C::ExitAttention()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.PlayGetSE
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 
 void ABP_S3AttentionController_C::PlayGetSE()
 {
@@ -901,7 +916,7 @@ void ABP_S3AttentionController_C::PlayGetSE()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InputAction
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Event, Private, Protected, Delegate, HasOutParms, NetClient, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -921,13 +936,13 @@ void ABP_S3AttentionController_C::InputAction(ES3ActionIconType Type)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.IsLookActor
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // struct FVector                 StartTrace                     (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 EndTrace                       (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // bool                           Look                           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::IsLookActor(const struct FVector& StartTrace, const struct FVector& EndTrace, bool* Look)
+void ABP_S3AttentionController_C::STATIC_IsLookActor(const struct FVector& StartTrace, const struct FVector& EndTrace, bool* Look)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.IsLookActor");
 
@@ -947,9 +962,9 @@ void ABP_S3AttentionController_C::IsLookActor(const struct FVector& StartTrace, 
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SearchReset
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Static, Private, Protected, Delegate, HasDefaults, NetClient, Const)
 
-void ABP_S3AttentionController_C::SearchReset()
+void ABP_S3AttentionController_C::STATIC_SearchReset()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.SearchReset");
 
@@ -964,12 +979,12 @@ void ABP_S3AttentionController_C::SearchReset()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.StartAttention
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, Delegate, HasDefaults, NetClient, Const)
 // Parameters:
 // class US3AttentionComponent*   InAttentionComponent           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 InHitLocation                  (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_S3AttentionController_C::StartAttention(class US3AttentionComponent* InAttentionComponent, const struct FVector& InHitLocation)
+void ABP_S3AttentionController_C::STATIC_StartAttention(class US3AttentionComponent* InAttentionComponent, const struct FVector& InHitLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.StartAttention");
 
@@ -986,7 +1001,7 @@ void ABP_S3AttentionController_C::StartAttention(class US3AttentionComponent* In
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.SearchTarget
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Event, NetResponse, NetMulticast, MulticastDelegate, Protected, Delegate, HasOutParms, NetClient, Const)
 
 void ABP_S3AttentionController_C::SearchTarget()
 {
@@ -1003,7 +1018,7 @@ void ABP_S3AttentionController_C::SearchTarget()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.FreeMove
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Event, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
 void ABP_S3AttentionController_C::FreeMove()
 {
@@ -1020,11 +1035,11 @@ void ABP_S3AttentionController_C::FreeMove()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CheckNeighbourTarget
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, Private, NetServer, NetClient, Const)
 // Parameters:
 // class US3AttentionComponent*   Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_S3AttentionController_C::CheckNeighbourTarget(class US3AttentionComponent* Component)
+void ABP_S3AttentionController_C::STATIC_CheckNeighbourTarget(class US3AttentionComponent* Component)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.CheckNeighbourTarget");
 
@@ -1040,11 +1055,11 @@ void ABP_S3AttentionController_C::CheckNeighbourTarget(class US3AttentionCompone
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.DrawArrow
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetResponse, Static, NetMulticast, MulticastDelegate, Public, NetServer, NetClient, Const)
 // Parameters:
 // struct FVector                 Vec                            (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 
-void ABP_S3AttentionController_C::DrawArrow(const struct FVector& Vec)
+void ABP_S3AttentionController_C::STATIC_DrawArrow(const struct FVector& Vec)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.DrawArrow");
 
@@ -1060,15 +1075,16 @@ void ABP_S3AttentionController_C::DrawArrow(const struct FVector& Vec)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.DrawNextDirection
-// (Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, Exec, Native, NetResponse, Static, NetMulticast, Delegate, NetClient, Const)
 
-void ABP_S3AttentionController_C::DrawNextDirection()
+void ABP_S3AttentionController_C::STATIC_DrawNextDirection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.DrawNextDirection");
 
 	ABP_S3AttentionController_C_DrawNextDirection_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1077,11 +1093,11 @@ void ABP_S3AttentionController_C::DrawNextDirection()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InputKey
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Exec, Event, NetResponse, Static, NetMulticast, Protected, NetServer, NetClient, Const)
 // Parameters:
 // struct FName                   KeyName                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::InputKey(const struct FName& KeyName)
+void ABP_S3AttentionController_C::STATIC_InputKey(const struct FName& KeyName)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.InputKey");
 
@@ -1097,7 +1113,7 @@ void ABP_S3AttentionController_C::InputKey(const struct FName& KeyName)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CheckCondition
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (Net, NetResponse, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // int                            Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
@@ -1119,15 +1135,16 @@ void ABP_S3AttentionController_C::CheckCondition(int* Result)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CameraSetting
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Native, Static, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
-void ABP_S3AttentionController_C::CameraSetting()
+void ABP_S3AttentionController_C::STATIC_CameraSetting()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.CameraSetting");
 
 	ABP_S3AttentionController_C_CameraSetting_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1136,9 +1153,9 @@ void ABP_S3AttentionController_C::CameraSetting()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.MoveCamera
-// (Private, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 
-void ABP_S3AttentionController_C::MoveCamera()
+void ABP_S3AttentionController_C::STATIC_MoveCamera()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.MoveCamera");
 
@@ -1153,7 +1170,7 @@ void ABP_S3AttentionController_C::MoveCamera()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ChangeTarget
-// (Public, BlueprintCallable, BlueprintEvent)
+// (NetRequest, Exec, Native, NetMulticast, MulticastDelegate, Public, Private, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 
 void ABP_S3AttentionController_C::ChangeTarget()
 {
@@ -1162,6 +1179,7 @@ void ABP_S3AttentionController_C::ChangeTarget()
 	ABP_S3AttentionController_C_ChangeTarget_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1170,13 +1188,13 @@ void ABP_S3AttentionController_C::ChangeTarget()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.CalcNormal
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Net, Static, NetMulticast, MulticastDelegate, Delegate, NetServer, HasOutParms, HasDefaults, Const)
 // Parameters:
 // class US3AttentionComponent*   Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FVector                 HitLocation                    (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData)
 // struct FVector                 Normal                         (Parm, OutParm, IsPlainOldData)
 
-void ABP_S3AttentionController_C::CalcNormal(class US3AttentionComponent* Component, const struct FVector& HitLocation, struct FVector* Normal)
+void ABP_S3AttentionController_C::STATIC_CalcNormal(class US3AttentionComponent* Component, const struct FVector& HitLocation, struct FVector* Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.CalcNormal");
 
@@ -1196,14 +1214,14 @@ void ABP_S3AttentionController_C::CalcNormal(class US3AttentionComponent* Compon
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.TraceNextTarget
-// (Private, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Static, NetMulticast, Protected, NetServer, NetClient, Const)
 // Parameters:
 // class US3AttentionComponent*   Component                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // struct FName                   KeyName                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Add                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // class US3AttentionComponent*   NextComponent                  (Parm, OutParm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ABP_S3AttentionController_C::TraceNextTarget(class US3AttentionComponent* Component, const struct FName& KeyName, bool Add, class US3AttentionComponent** NextComponent)
+void ABP_S3AttentionController_C::STATIC_TraceNextTarget(class US3AttentionComponent* Component, const struct FName& KeyName, bool Add, class US3AttentionComponent** NextComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.TraceNextTarget");
 
@@ -1224,14 +1242,14 @@ void ABP_S3AttentionController_C::TraceNextTarget(class US3AttentionComponent* C
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.PlayScript
-// (Private, HasOutParms, BlueprintCallable, BlueprintEvent)
+// (NetReliable, Event, Static, Private, Protected, HasDefaults, NetClient, DLLImport, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // struct FString                 ScriptLabel                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 // bool                           DisableButton                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Once                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Playing                        (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::PlayScript(const struct FString& ScriptLabel, bool DisableButton, bool Once, bool* Playing)
+void ABP_S3AttentionController_C::STATIC_PlayScript(const struct FString& ScriptLabel, bool DisableButton, bool Once, bool* Playing)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.PlayScript");
 
@@ -1252,9 +1270,9 @@ void ABP_S3AttentionController_C::PlayScript(const struct FString& ScriptLabel, 
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 
-void ABP_S3AttentionController_C::UserConstructionScript()
+void ABP_S3AttentionController_C::STATIC_UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.UserConstructionScript");
 
@@ -1269,7 +1287,7 @@ void ABP_S3AttentionController_C::UserConstructionScript()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InpActEvt_SearchUpSelect_K2Node_InputActionEvent_8
-// (BlueprintEvent)
+// (NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1281,6 +1299,7 @@ void ABP_S3AttentionController_C::InpActEvt_SearchUpSelect_K2Node_InputActionEve
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1289,7 +1308,7 @@ void ABP_S3AttentionController_C::InpActEvt_SearchUpSelect_K2Node_InputActionEve
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InpActEvt_SearchDownSelect_K2Node_InputActionEvent_7
-// (BlueprintEvent)
+// (NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1301,6 +1320,7 @@ void ABP_S3AttentionController_C::InpActEvt_SearchDownSelect_K2Node_InputActionE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1309,7 +1329,7 @@ void ABP_S3AttentionController_C::InpActEvt_SearchDownSelect_K2Node_InputActionE
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InpActEvt_SearchRightSelect_K2Node_InputActionEvent_6
-// (BlueprintEvent)
+// (Net, NetReliable, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1321,6 +1341,7 @@ void ABP_S3AttentionController_C::InpActEvt_SearchRightSelect_K2Node_InputAction
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1329,7 +1350,7 @@ void ABP_S3AttentionController_C::InpActEvt_SearchRightSelect_K2Node_InputAction
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InpActEvt_SearchLeftSelect_K2Node_InputActionEvent_5
-// (BlueprintEvent)
+// (NetReliable, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // struct FKey                    Key                            (BlueprintVisible, BlueprintReadOnly, Parm)
 
@@ -1341,6 +1362,7 @@ void ABP_S3AttentionController_C::InpActEvt_SearchLeftSelect_K2Node_InputActionE
 	params.Key = Key;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1349,9 +1371,9 @@ void ABP_S3AttentionController_C::InpActEvt_SearchLeftSelect_K2Node_InputActionE
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ReceiveBeginPlay
-// (Event, Protected, BlueprintEvent)
+// (Net, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_S3AttentionController_C::ReceiveBeginPlay()
+void ABP_S3AttentionController_C::STATIC_ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.ReceiveBeginPlay");
 
@@ -1366,7 +1388,7 @@ void ABP_S3AttentionController_C::ReceiveBeginPlay()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          DeltaSeconds                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1378,6 +1400,7 @@ void ABP_S3AttentionController_C::ReceiveTick(float DeltaSeconds)
 	params.DeltaSeconds = DeltaSeconds;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1386,7 +1409,7 @@ void ABP_S3AttentionController_C::ReceiveTick(float DeltaSeconds)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InpAxisEvt_MoveForward_K2Node_InputAxisEvent_80
-// (BlueprintEvent)
+// (Net, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1398,6 +1421,7 @@ void ABP_S3AttentionController_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_8
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1406,7 +1430,7 @@ void ABP_S3AttentionController_C::InpAxisEvt_MoveForward_K2Node_InputAxisEvent_8
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InpAxisEvt_MoveRight_K2Node_InputAxisEvent_91
-// (BlueprintEvent)
+// (Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1418,6 +1442,7 @@ void ABP_S3AttentionController_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_91(
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1426,15 +1451,16 @@ void ABP_S3AttentionController_C::InpAxisEvt_MoveRight_K2Node_InputAxisEvent_91(
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.DelayStartAttention
-// (BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, Native, Event, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_S3AttentionController_C::DelayStartAttention()
+void ABP_S3AttentionController_C::STATIC_DelayStartAttention()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.DelayStartAttention");
 
 	ABP_S3AttentionController_C_DelayStartAttention_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1443,9 +1469,9 @@ void ABP_S3AttentionController_C::DelayStartAttention()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.DelayEndAttention
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_S3AttentionController_C::DelayEndAttention()
+void ABP_S3AttentionController_C::STATIC_DelayEndAttention()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.DelayEndAttention");
 
@@ -1460,9 +1486,9 @@ void ABP_S3AttentionController_C::DelayEndAttention()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.AxisToDirection
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, NetResponse, Static, MulticastDelegate, Delegate, NetServer, NetClient, Const)
 
-void ABP_S3AttentionController_C::AxisToDirection()
+void ABP_S3AttentionController_C::STATIC_AxisToDirection()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.AxisToDirection");
 
@@ -1477,7 +1503,7 @@ void ABP_S3AttentionController_C::AxisToDirection()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.InpAxisEvt_ZoomAxis_K2Node_InputAxisEvent_61
-// (BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // float                          AxisValue                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1489,6 +1515,7 @@ void ABP_S3AttentionController_C::InpAxisEvt_ZoomAxis_K2Node_InputAxisEvent_61(f
 	params.AxisValue = AxisValue;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1497,7 +1524,7 @@ void ABP_S3AttentionController_C::InpAxisEvt_ZoomAxis_K2Node_InputAxisEvent_61(f
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.DecideDetectAction
-// (Event, Public, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // ES3ActionIconType              Type                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1509,6 +1536,7 @@ void ABP_S3AttentionController_C::DecideDetectAction(ES3ActionIconType Type)
 	params.Type = Type;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1517,7 +1545,7 @@ void ABP_S3AttentionController_C::DecideDetectAction(ES3ActionIconType Type)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.StartACEvent
-// (BlueprintCallable, BlueprintEvent)
+// (NetReliable, NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // class UTalkScript*             ACEventScript                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1529,6 +1557,7 @@ void ABP_S3AttentionController_C::StartACEvent(class UTalkScript* ACEventScript)
 	params.ACEventScript = ACEventScript;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1537,7 +1566,7 @@ void ABP_S3AttentionController_C::StartACEvent(class UTalkScript* ACEventScript)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.Event_CameraZoomAxis
-// (BlueprintCallable, BlueprintEvent)
+// (Net, Exec, Native, MulticastDelegate, Private, Delegate, HasOutParms, DLLImport, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                          Axis                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Force                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
@@ -1551,6 +1580,7 @@ void ABP_S3AttentionController_C::Event_CameraZoomAxis(float Axis, bool Force)
 	params.Force = Force;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1559,7 +1589,7 @@ void ABP_S3AttentionController_C::Event_CameraZoomAxis(float Axis, bool Force)
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
+// (Net, NetRequest, Native, Event, MulticastDelegate, Private, NetServer, HasOutParms, NetClient, Const)
 // Parameters:
 // TEnumAsByte<EEndPlayReason>    EndPlayReason                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1571,6 +1601,7 @@ void ABP_S3AttentionController_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 	params.EndPlayReason = EndPlayReason;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1579,7 +1610,7 @@ void ABP_S3AttentionController_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.ExecuteUbergraph_BP_S3AttentionController
-// (HasDefaults)
+// (NetReliable, Event, NetResponse, NetMulticast, MulticastDelegate, HasDefaults, NetClient, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // int                            EntryPoint                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1599,15 +1630,16 @@ void ABP_S3AttentionController_C::ExecuteUbergraph_BP_S3AttentionController(int 
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.OnExitAttentin__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 
-void ABP_S3AttentionController_C::OnExitAttentin__DelegateSignature()
+void ABP_S3AttentionController_C::STATIC_OnExitAttentin__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.OnExitAttentin__DelegateSignature");
 
 	ABP_S3AttentionController_C_OnExitAttentin__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1616,15 +1648,16 @@ void ABP_S3AttentionController_C::OnExitAttentin__DelegateSignature()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.OnEndAttention__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 
-void ABP_S3AttentionController_C::OnEndAttention__DelegateSignature()
+void ABP_S3AttentionController_C::STATIC_OnEndAttention__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.OnEndAttention__DelegateSignature");
 
 	ABP_S3AttentionController_C_OnEndAttention__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1633,15 +1666,16 @@ void ABP_S3AttentionController_C::OnEndAttention__DelegateSignature()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.OnStartAttention__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Native, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 
-void ABP_S3AttentionController_C::OnStartAttention__DelegateSignature()
+void ABP_S3AttentionController_C::STATIC_OnStartAttention__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.OnStartAttention__DelegateSignature");
 
 	ABP_S3AttentionController_C_OnStartAttention__DelegateSignature_Params params;
 
 	auto flags = fn->FunctionFlags;
+	fn->FunctionFlags |= 0x400;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -1650,11 +1684,11 @@ void ABP_S3AttentionController_C::OnStartAttention__DelegateSignature()
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.OnFindNPC__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // class ABP_ScheduleNPC_C*       NPC                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_S3AttentionController_C::OnFindNPC__DelegateSignature(class ABP_ScheduleNPC_C* NPC)
+void ABP_S3AttentionController_C::STATIC_OnFindNPC__DelegateSignature(class ABP_ScheduleNPC_C* NPC)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.OnFindNPC__DelegateSignature");
 
@@ -1670,11 +1704,11 @@ void ABP_S3AttentionController_C::OnFindNPC__DelegateSignature(class ABP_Schedul
 
 
 // Function BP_S3AttentionController.BP_S3AttentionController_C.OnAccordCondition__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetRequest, Exec, NetResponse, Static, NetMulticast, Public, Private, Protected, NetClient, Const)
 // Parameters:
 // struct FString                 EventId                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor)
 
-void ABP_S3AttentionController_C::OnAccordCondition__DelegateSignature(const struct FString& EventId)
+void ABP_S3AttentionController_C::STATIC_OnAccordCondition__DelegateSignature(const struct FString& EventId)
 {
 	static auto fn = UObject::FindObject<UFunction>("Function BP_S3AttentionController.BP_S3AttentionController_C.OnAccordCondition__DelegateSignature");
 

@@ -29,12 +29,12 @@ public:
 	}
 
 
-	void SetFontSize(class UTextBlock* Text, class UTextBlock** PlaceNameText);
-	void SetPageIndex(int PageIndex);
+	void STATIC_SetFontSize(class UTextBlock* Text, class UTextBlock** PlaceNameText);
+	void STATIC_SetPageIndex(int PageIndex);
 	void Construct();
-	void SetSlotContent(int Index, class US3MemopadTextWidget* Widget);
+	void STATIC_SetSlotContent(int Index, class US3MemopadTextWidget* Widget);
 	void SetSlotHiddenFlag(int Index, bool flag);
-	void ExecuteUbergraph_wgt_MemoPageBase(int EntryPoint);
+	void STATIC_ExecuteUbergraph_wgt_MemoPageBase(int EntryPoint);
 	void ED_LoadFinish__DelegateSignature();
 };
 
