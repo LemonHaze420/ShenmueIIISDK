@@ -1099,12 +1099,12 @@ public:
 class UPlayer : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	//unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 	class APlayerController*                           PlayerController;                                         // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	int                                                CurrentNetSpeed;                                          // 0x0038(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                ConfiguredInternetSpeed;                                  // 0x003C(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
 	int                                                ConfiguredLanSpeed;                                       // 0x0040(0x0004) (ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
+	//unsigned char                                      UnknownData01[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -3946,7 +3946,8 @@ public:
 class USpringArmComponent : public USceneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0240(0x0008) MISSED OFFSET
+	float TargetArmLength;
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0240(0x0008) MISSED OFFSET
 	struct FVector                                     TargetOffset;                                             // 0x0248(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 	float                                              ProbeSize;                                                // 0x0254(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ECollisionChannel>                     ProbeChannel;                                             // 0x0258(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -11246,9 +11247,7 @@ public:
 	TArray<struct FName>                               StreamingLevelNames;                                      // 0x0360(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst)
 	unsigned char                                      bEditorPreVisOnly : 1;                                    // 0x0370(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bDisabled : 1;                                            // 0x0370(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0371(0x0003) MISSED OFFSET
 	TEnumAsByte<EStreamingVolumeUsage>                 StreamingUsage;                                           // 0x0374(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0375(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

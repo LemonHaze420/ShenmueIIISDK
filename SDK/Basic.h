@@ -14,8 +14,10 @@
 #include <set>
 #include <Windows.h>
 #include <Psapi.h>
-
-
+#include <iostream>
+#include <ostream>
+#include <fstream>
+#include <stdlib.h>
 // Name: Shenmue3, Version: 1.0.2
 
 #ifdef _MSC_VER
@@ -106,7 +108,7 @@ namespace SDK
 	{
 		enum
 		{
-			NumElementsPerChunk = 64 * 1024,
+			NumElementsPerChunk = 64 * 1040, //64 * 1024,
 		};
 	public:
 		inline int32_t Num() const
