@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 // Name: Shenmue3, Version: 1.0.2
 
@@ -3622,18 +3622,25 @@ class APlayerCameraManager : public AActor
 public:
 	class APlayerController*                           PCOwner;                                                  // 0x0328(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class USceneComponent*                             TransformComponent;                                       // 0x0330(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0338(0x0008) MISSED OFFSET
+	FName											   CameraStyle;												 // 0x0338(0x0008) MISSED OFFSET
 	float                                              DefaultFOV;                                               // 0x0340(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0344(0x0004) MISSED OFFSET
+	float											   LockedFOV;												 // 0x0344(0x0004) MISSED OFFSET
 	float                                              DefaultOrthoWidth;                                        // 0x0348(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x034C(0x0004) MISSED OFFSET
+	float		                                       LockedOrthoWidth;										 // 0x034C(0x0004) MISSED OFFSET
 	float                                              DefaultAspectRatio;                                       // 0x0350(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4C];                                      // 0x0354(0x004C) MISSED OFFSET
+	FLinearColor									   FadeColor;                                      // 0x0354(0x004C) MISSED OFFSET
+	float											   FadeAmount;
+	FVector											   ColorScale;
+	FVector											   DesiredColorScale;
+	FVector											   OriginalColorScale;
+	float											   ColorScaleInterpDuration;
+	float											   ColorScaleInterpStartTime;
 	struct FCameraCacheEntry                           CameraCache;                                              // 0x03A0(0x0590) (Transient)
 	struct FCameraCacheEntry                           LastFrameCameraCache;                                     // 0x0930(0x0590) (Transient)
 	struct FTViewTarget                                ViewTarget;                                               // 0x0EC0(0x05A0) (Transient)
 	struct FTViewTarget                                PendingViewTarget;                                        // 0x1460(0x05A0) (Transient)
-	unsigned char                                      UnknownData04[0x20];                                      // 0x1A00(0x0020) MISSED OFFSET
+	float											   BlendTimeToGo;                                      // 0x1A00(0x0020) MISSED OFFSET
+	struct FViewTargetTransitionParams				   BlendParams;
 	struct FCameraCacheEntry                           CameraCachePrivate;                                       // 0x1A20(0x0590) (Transient)
 	struct FCameraCacheEntry                           LastFrameCameraCachePrivate;                              // 0x1FB0(0x0590) (Transient)
 	TArray<class UCameraModifier*>                     ModifierList;                                             // 0x2540(0x0010) (ZeroConstructor, Transient)
@@ -3641,23 +3648,34 @@ public:
 	float                                              FreeCamDistance;                                          // 0x2560(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FVector                                     FreeCamOffset;                                            // 0x2564(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
 	struct FVector                                     ViewTargetOffset;                                         // 0x2570(0x000C) (Edit, BlueprintVisible, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x14];                                      // 0x257C(0x0014) MISSED OFFSET
+	FVector2D										   FadeAlpha;
+	float											   FadeTime;
+	float											   FadeTimeRemaining;
+	//unsigned char                                      UnknownData05[0x14];                                      // 0x257C(0x0014) MISSED OFFSET
 	TArray<class AEmitterCameraLensEffectBase*>        CameraLensEffects;                                        // 0x2590(0x0010) (ZeroConstructor, Transient)
 	class UCameraModifier_CameraShake*                 CachedCameraShakeMod;                                     // 0x25A0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UCameraAnimInst*                             AnimInstPool[0x8];                                        // 0x25A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TArray<struct FPostProcessSettings>                PostProcessBlendCache;                                    // 0x25E8(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData06[0x10];                                      // 0x25F8(0x0010) MISSED OFFSET
+	TArray<float> PostProcessBlendCacheWeights;
+	//unsigned char                                      UnknownData06[0x10];                                      // 0x25F8(0x0010) MISSED OFFSET
 	TArray<class UCameraAnimInst*>                     ActiveAnims;                                              // 0x2608(0x0010) (ZeroConstructor, Transient)
 	TArray<class UCameraAnimInst*>                     FreeAnims;                                                // 0x2618(0x0010) (ZeroConstructor, Transient)
 	class ACameraActor*                                AnimCameraActor;                                          // 0x2628(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      bIsOrthographic : 1;                                      // 0x2630(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bDefaultConstrainAspectRatio : 1;                         // 0x2630(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData07 : 4;                                        // 0x2630(0x0001)
+	unsigned char									   bEnableFading : 1;
+	unsigned char									   bFadeAudio : 1;
+	unsigned char									   bEnableColorScaling : 1;
+	unsigned char									   bEnableColorScaleInterp : 1;
 	unsigned char                                      bClientSimulatingViewTarget : 1;                          // 0x2630(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bUseClientSideCameraUpdates : 1;                          // 0x2630(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData08 : 2;                                        // 0x2631(0x0001)
+	unsigned char									   bDebugClientSideCamera : 1;
+	unsigned char									   bShouldSendClientSideCameraUpdate : 1;
 	unsigned char                                      bGameCameraCutThisFrame : 1;                              // 0x2631(0x0001) (BlueprintVisible, BlueprintReadOnly, Transient)
-	unsigned char                                      UnknownData09[0x2];                                       // 0x2632(0x0002) MISSED OFFSET
+	unsigned char									   bHoldFadeWhenFinished : 1;
+	unsigned char									   bAutoAnimateFade : 1;
+	unsigned char									   bAlwaysApplyModifiers : 1;
+	//unsigned char                                      UnknownData09[0x2];                                       // 0x2632(0x0002) MISSED OFFSET
 	float                                              ViewPitchMin;                                             // 0x2634(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ViewPitchMax;                                             // 0x2638(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ViewYawMin;                                               // 0x263C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
