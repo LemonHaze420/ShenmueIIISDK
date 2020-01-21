@@ -6,6 +6,7 @@
 
 #define UE4_VERSTRING_V102			0x22EF8F0
 #define UE4_VERSTRING_V10201		0x22EF7F0
+#define UE4_VERSTRING_V10401		0x22EF140
 
 #define WIN32_LEAN_AND_MEAN         // Exclude rarely-used stuff from Windows headers
 
@@ -36,6 +37,7 @@ namespace SDK
 
 	typedef void(__thiscall* ProcessEvent_t)(class UObject* _this, class UFunction* a2, void* pParms);
 	extern ProcessEvent_t ProcessEventOriginal;
+	extern void customPECall(UObject* _this, UFunction* pFunction, void* pParms);
 
 	struct ProcessEventUserHook {
 		std::string hookFunction;
@@ -51,8 +53,13 @@ namespace SDK
 		*	v1.02.01
 					Version:	1.02.01
 					Build:		02805
+
+		*	v1.04.01
+					Version:	1.04.01
+					Build:		02947
 	*/
 	enum Version {
+		V10401,
 		V102,
 		V10201,
 		INVALID

@@ -44,9 +44,7 @@ namespace SDK
 		}
 		if (!bCalledHook)
 			ProcessEventOriginal(_this, pFunction, pParms);
-#ifdef _DEBUG
-		printf("[ProcessEvent] %s\n", pFunction->GetFullName().c_str());
-#endif
+		customPECall(_this, pFunction, pParms);
 	}
 	//---------------------------------------------------------------------------
 	bool Match(const BYTE* pData, const BYTE* bMask, const char* szMask) {
@@ -74,6 +72,12 @@ namespace SDK
 	//---------------------------------------------------------------------------
 	Version determineVersion()
 	{
+		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V10401), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
+#ifdef _DEBUG
+			printf("Detected full game - v1.04.01\n");
+#endif
+			return V10401;
+		}
 		if (!memcmp((void*)(g_BaseAddress + UE4_VERSTRING_V102), "\x2B\x00\x2B\x00\x55\x00\x45\x00\x34\x00\x2B\x00\x52\x00\x65\x00", 16)) {		// "++UE4+Release-4.20"
 #ifdef _DEBUG
 			printf("Detected full game - v1.02\n"); 
@@ -108,7 +112,7 @@ namespace SDK
 		// Detect version and set offsets
 		Version ver = determineVersion();
 		auto objectsOffs = g_BaseAddress, nameOffs = g_BaseAddress;
-		if (ver == V102 || ver == V10201)	objectsOffs += GOBJECTS_OFFSET_V102, nameOffs += GNAMES_OFFSET_V102;
+		if (ver == V102 || ver == V10201 || ver == V10401)	objectsOffs += GOBJECTS_OFFSET_V102, nameOffs += GNAMES_OFFSET_V102;
 		else if (ver == INVALID) {
 			MessageBoxA(NULL, "Error detecting game version. Exiting.", "Shenmue III SDK", MB_OK);
 			return -1;
